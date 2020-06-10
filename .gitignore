@@ -1,0 +1,8 @@
+config.py
+venv/
+__pycache__/
+.pytest_cache/
+tests/.pytest_cache/
+tests/pytest/
+tests/unit/__pycache__/
+tests/__pycache__/
