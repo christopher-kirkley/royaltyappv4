@@ -1,7 +1,9 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
+from royaltyapp.models import Artist
 
 home = Blueprint('home', __name__)
 
 @home.route('/')
 def index():
-    return 'No'
+    result = Artist.query.all()
+    return jsonify(result)

@@ -14,9 +14,12 @@ def test_client():
     ctx = flask_app.app_context()
     ctx.push()
     
-    db.create_all()
 
     yield testing_client  # this is where the testing happens!
+
+    db.session.remove()
+    db.drop_all()
+    
 
     ctx.pop()
 

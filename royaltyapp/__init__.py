@@ -13,7 +13,9 @@ def create_app(config_class=None):
     db.init_app(royaltyapp)
 
     from royaltyapp.home.routes import home
+    from royaltyapp.artists.routes import artists
     royaltyapp.register_blueprint(home)
+    royaltyapp.register_blueprint(artists)
     
     with royaltyapp.app_context():
         db.create_all()
