@@ -1,10 +1,13 @@
 import pytest
 from royaltyapp import create_app
-from royaltyapp.models import db
 
 @pytest.fixture(scope='module')
-def test_client():
+def flask_app():
     flask_app = create_app('config.TestConfig')
+    yield flask_app
+
+@pytest.fixture(scope='module')
+def test_client(flask_app):
 
     # Flask provides a way to test your application by exposing the Werkzeug test Client
     # and handling the context locals for you.
@@ -14,12 +17,18 @@ def test_client():
     ctx = flask_app.app_context()
     ctx.push()
     
-
     yield testing_client  # this is where the testing happens!
 
+    ctx.pop()
+
+@pytest.fixture
+def db(flask_app):
+    from royaltyapp.models import db
+    with flask_app.app_context():
+        db.create_all()
+    yield db
     db.session.remove()
     db.drop_all()
+        
     
-
-    ctx.pop()
 
