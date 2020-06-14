@@ -1,6 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 
 db = SQLAlchemy()
+ma = Marshmallow()
 
 class Artist(db.Model):
     __tablename__ = 'artist'
@@ -17,4 +19,10 @@ class Catalog(db.Model):
     catalog_number = db.Column(db.String(100))
     catalog_name = db.Column(db.String)
     artist_id = db.Column(db.Integer)
+
+class ArtistSchema(ma.Schema):
+    class Meta:
+        fields = ("artist_name", "prenom", "surnom")
+
+
 

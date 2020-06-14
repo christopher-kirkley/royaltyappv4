@@ -1,14 +1,16 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Artist
-
+from royaltyapp.models import db, Artist, ArtistSchema
+import json
 
 artists = Blueprint('artists', __name__)
 
 @artists.route('/artists', methods=['GET'])
 def all_artists():
     result = Artist.query.all()
-    return jsonify(result)
+    artist_schema = ArtistSchema()
+    artists_schema = ArtistSchema(many=True)
+    return artists_schema.dumps(result)
 
 @artists.route('/artists', methods=['PUT'])
 def edit_artist():

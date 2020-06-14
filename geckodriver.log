@@ -137,3 +137,59 @@ console.warn: services.settings: main/whats-new-panel sync interrupted by shutdo
 1592163430968	Marionette	INFO	Listening on port 59386
 1592163431030	Marionette	WARN	TLS certificate errors will be ignored for this session
 1592163433731	Marionette	INFO	Stopped listening on port 59386
+1592164954283	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2knrSE"
+1592164957043	Marionette	INFO	Listening on port 60179
+1592164957054	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592164959850	Marionette	INFO	Stopped listening on port 60179
+1592165267075	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegwAlBr"
+1592165269787	Marionette	INFO	Listening on port 61058
+1592165269838	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592165272571	Marionette	INFO	Stopped listening on port 61058
+1592165817810	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileL0i2UZ"
+1592165820631	Marionette	INFO	Listening on port 63389
+1592165820681	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+1592165823484	Marionette	INFO	Stopped listening on port 63389
+1592167077496	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZOQR3l"
+1592167080604	Marionette	INFO	Listening on port 64230
+1592167080700	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+1592167083469	Marionette	INFO	Stopped listening on port 64230
+1592171638793	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePnHwKu"
+1592171641739	Marionette	INFO	Listening on port 56172
+1592171641786	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592171642255	Marionette	INFO	Stopped listening on port 56172
+1592171658479	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoW2pSZ"
+1592171661251	Marionette	INFO	Listening on port 56252
+1592171661372	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592171661724	Marionette	INFO	Stopped listening on port 56252
+1592171750469	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileffhwLX"
+1592171753197	Marionette	INFO	Listening on port 56349
+1592171753255	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592171753693	Marionette	INFO	Stopped listening on port 56349
+1592171816759	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9I0iub"
+1592171819520	Marionette	INFO	Listening on port 56437
+1592171819581	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+1592171882737	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletsqwRz"
+1592171885823	Marionette	INFO	Listening on port 56520
+1592171885917	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+JavaScript error: http://localhost:5000/, line 26: SyntaxError: unexpected token: identifier
+1592171888565	Marionette	INFO	Stopped listening on port 56520
+1592173799231	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIlYVRm"
+1592173802173	Marionette	INFO	Listening on port 63500
+1592173802199	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592173802634	Marionette	INFO	Stopped listening on port 63500
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1592173884836	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledF8eEX"
+1592173887697	Marionette	INFO	Listening on port 63929
+1592173887728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592173888178	Marionette	INFO	Stopped listening on port 63929
+1592173983269	Marionette	INFO	Stopped listening on port 56379
+1592173984578	Marionette	INFO	Stopped listening on port 56437

@@ -1,5 +1,6 @@
 import pytest
 import json
+from flask import jsonify
 
 from royaltyapp.models import Artist
 
@@ -14,7 +15,14 @@ def add_one_artist(db):
 def test_can_get_all_artists(test_client, db):
     response = test_client.get('/artists')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 0
+    add_one_artist(db)
+    response = test_client.get('/artists')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [{"artist_name": "Amanar",
+                                        "prenom": "Ahmed",
+                                        "surnom": "Ag Kaedi",
+                                        }]
+
 
 def test_can_add_artist(test_client, db):
     data = {'artist_name': 'Amanar',

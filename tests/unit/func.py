@@ -7,9 +7,10 @@ import json
 import time
 
 @pytest.fixture
-def browser():
+def browser(db):
     browser = webdriver.Firefox()
     yield browser
+    db.session.rollback()
     browser.quit()
 
 

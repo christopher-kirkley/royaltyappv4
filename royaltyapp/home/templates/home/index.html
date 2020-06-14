@@ -13,8 +13,21 @@
 			<th>Prenom</th>
 			<th>Surnom</th>
 		</thead>
+		<tbody id="rows">
+		</tbody>
 	</table>
 </body>
 
-needs to make an AJAX query to JSON route, and fill table
+	<script>
+	fetch('http://localhost:5000/artists')
+		.then(response => response.json())
+		.then(data => create_table(data));
+
+	func create_table(){
+	var rows = document.querySelector('#rows');
+	var row = document.createElement('tr');
+	row.innerHTML = data;
+	rows.appendChild(row)
+	}
+	</script>
 
