@@ -43,5 +43,25 @@ def test_can_delete_artist(test_client, db):
     assert len(result) == 0
     assert json.loads(resp.data) == {'success': 'true'}
 
+def test_can_update_artists(test_client, db):
+    add_one_artist(db)
+    q = db.session.query(Artist).first()
+    assert q.artist_name == 'Amanar'
+    # Change first name
+    data = {'id': '1',
+            'artist_name': 'Bobo',
+            'prenom': 'Tom',
+            'surnom': 'Jones',
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/artists', data=json_data)
+    assert response.status_code == 200
+    q = db.session.query(Artist).first()
+    assert q.artist_name == 'Bobo'
+    assert q.prenom == 'Tom'
+    assert q.surnom == 'Jones'
+    
+
+
     
 

@@ -14,10 +14,12 @@ def create_app(config_class=None):
 
     from royaltyapp.home.routes import home
     from royaltyapp.artists.routes import artists
+    from royaltyapp.catalog.routes import catalog
     royaltyapp.register_blueprint(home)
     royaltyapp.register_blueprint(artists)
+    royaltyapp.register_blueprint(catalog)
     
-    with royaltyapp.app_context():
-        db.create_all()
+    # with royaltyapp.app_context():
+    #     db.create_all()
 
     return royaltyapp

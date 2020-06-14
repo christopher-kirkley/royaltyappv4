@@ -10,6 +10,21 @@ def all_artists():
     result = Artist.query.all()
     return jsonify(result)
 
+@artists.route('/artists', methods=['PUT'])
+def edit_artist():
+    data = request.get_json(force=True)
+    id_to_edit = data['id']
+    obj = db.session.query(Artist).get(id_to_edit)
+
+    if data['artist_name']:
+        obj.artist_name = data['artist_name']
+    if data['prenom']:
+        obj.prenom = data['prenom']
+    if data['surnom']:
+        obj.surnom = data['surnom']
+
+    return jsonify({'success': 'true'})
+
 @artists.route('/artists', methods=['POST'])
 def add_artist():
     data = request.get_json(force=True)
@@ -26,14 +41,8 @@ def add_artist():
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
-@artists.route('/temp', methods=['GET', 'POST'])
-def temp():
-    new_artist = Artist(
-                    artist_name=235423,
-                    prenom='chaewraew',
-                    surnom='aerewr'
-                    )
-    db.session.add(new_artist)
-    db.session.commit()
+@artists.route('/artists/delete/<id>', methods=['DELETE'])
+def delete_artist(id):
+    db.session.query(Artist).filter(Artist.id==id).delete()
+    return jsonify({'success': 'true'})
 
-    return 'yaya'

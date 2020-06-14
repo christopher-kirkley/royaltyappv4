@@ -1,0 +1,28 @@
+1592157431032	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileaCUAa7"
+1592157433701	Marionette	INFO	Listening on port 56532
+1592157433737	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592157434419	Marionette	INFO	Stopped listening on port 56532
+1592157612068	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile4uxLW2"
+1592157614969	Marionette	INFO	Listening on port 56660
+1592157615060	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592157615478	Marionette	INFO	Stopped listening on port 56660
+1592157665574	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileb0alUG"
+1592157668298	Marionette	INFO	Listening on port 56735
+1592157668336	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592157668646	Marionette	INFO	Stopped listening on port 56735
+1592157965261	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile231Xd0"
+1592157967919	Marionette	INFO	Listening on port 56824
+1592157967944	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592157968424	Marionette	INFO	Stopped listening on port 56824
+1592158034018	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6MazdU"
+1592158036858	Marionette	INFO	Listening on port 56898
+1592158036905	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592158038528	Marionette	INFO	Stopped listening on port 56898
+1592158076599	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2z7v2d"
+1592158079211	Marionette	INFO	Listening on port 56973
+1592158079280	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592158080903	Marionette	INFO	Stopped listening on port 56973
+1592158148845	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileqOvsge"
+1592158151546	Marionette	INFO	Listening on port 57052
+1592158151624	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592158152044	Marionette	INFO	Stopped listening on port 57052
