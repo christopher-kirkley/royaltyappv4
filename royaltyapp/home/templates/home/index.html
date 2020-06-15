@@ -18,16 +18,34 @@
 	</table>
 </body>
 
-	<script>
-	fetch('http://localhost:5000/artists')
+<script>
+
+function create_table(data){
+	var rows = document.querySelector('#rows');
+	data.forEach(function (r) {
+		var row = document.createElement('tr');
+		var td = document.createElement('td');
+		td.innerHTML = r['artist_name'];
+		row.appendChild(td);
+		var td = document.createElement('td');
+		td.innerHTML = r['prenom'];
+		row.appendChild(td);
+		rows.appendChild(row)
+		var td = document.createElement('td');
+		td.innerHTML = r['surnom'];
+		row.appendChild(td);
+		rows.appendChild(row)
+	});
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	console.log('ahefas');
+
+	fetch('http://127.0.0.1:5000/artists')
 		.then(response => response.json())
 		.then(data => create_table(data));
+});
 
-	func create_table(){
-	var rows = document.querySelector('#rows');
-	var row = document.createElement('tr');
-	row.innerHTML = data;
-	rows.appendChild(row)
-	}
-	</script>
+</script>
 

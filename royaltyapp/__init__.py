@@ -1,10 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 from royaltyapp.models import db, ma
 
 
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
+    CORS(royaltyapp)
     
     if config_class==None:
         royaltyapp.config.from_object('config.Config')
@@ -21,7 +23,6 @@ def create_app(config_class=None):
     royaltyapp.register_blueprint(catalog)
     
     with royaltyapp.app_context():
-        db.create_all()
         ma.init_app(royaltyapp)
 
     return royaltyapp

@@ -1,7 +1,8 @@
 from royaltyapp import create_app
+
 import os
 
-app = create_app()
+app = create_app('config.TestConfig')
 
 """Conditional to run the application."""
 if __name__ == '__main__':

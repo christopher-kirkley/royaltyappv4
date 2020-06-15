@@ -25,6 +25,7 @@ def test_client(flask_app):
 def db(flask_app):
     from royaltyapp.models import db
     with flask_app.app_context():
+        db.drop_all()
         db.create_all()
     yield db
     db.session.remove()

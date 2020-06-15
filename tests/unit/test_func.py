@@ -6,6 +6,8 @@ import json
 
 import time
 
+from royaltyapp.models import Artist
+
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
@@ -37,7 +39,7 @@ def test_returns(browser, test_client, db):
     prenom.send_keys('Ahmed')
     surnom.send_keys('Ag Kaedi')
     submit.click()
-    time.sleep(1)
+    time.sleep(2)
 
     """ User returns to main artist page """
     assert browser.title == 'Artists'
@@ -45,8 +47,11 @@ def test_returns(browser, test_client, db):
     """ User can now see that artist was added. """
     table = browser.find_element_by_id('artist_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) > 1
-    
+    assert len(db.session.query(Artist).all()) == 1
+    tds = rows[1].find_elements_by_tag_name('td');
+    assert tds[0].text == 'Amanar'
+    assert tds[1].text == 'Ahmed'
+    assert tds[2].text == 'Ag Kaedi'
 
     
 
