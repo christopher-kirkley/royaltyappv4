@@ -18,7 +18,9 @@ def test_can_get_all_artists(test_client, db):
     add_one_artist(db)
     response = test_client.get('/artists')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{"artist_name": "Amanar",
+    assert json.loads(response.data) == [{
+                                        "id": 1, 
+                                        "artist_name": "Amanar",
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
                                         }]
@@ -69,7 +71,16 @@ def test_can_update_artists(test_client, db):
     assert q.prenom == 'Tom'
     assert q.surnom == 'Jones'
     
-
+def test_can_get_one_artist(test_client, db):
+    add_one_artist(db)
+    response = test_client.get('/artists/1')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {
+                                        "id": 1,
+                                        "artist_name": "Amanar",
+                                        "prenom": "Ahmed",
+                                        "surnom": "Ag Kaedi",
+                                        }
 
     
 

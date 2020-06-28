@@ -14,17 +14,17 @@ def browser(db):
     db.session.rollback()
     browser.quit()
 
-
 def test_returns(browser, test_client, db):
     """ User goes to homepage """ 
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
     
     """ User navigates to artist page """
-    artist = browser.find_element_by_id('artist')
+    artist = browser.find_element_by_id('artists')
     artist.click()
 
-    """ User sees an empty list, clicks on button to add artist """
+    """ User sees an empty table, clicks on button to add artist """
+    assert browser.find_element_by_id("artist_table")
     add_artist = browser.find_element_by_id('add_artist')
     add_artist.click()
     time.sleep(1)
@@ -39,11 +39,8 @@ def test_returns(browser, test_client, db):
     prenom.send_keys('Ahmed')
     surnom.send_keys('Ag Kaedi')
     submit.click()
-    time.sleep(2)
+    time.sleep(1)
 
-    """ User returns to main artist page """
-    assert browser.title == 'Artists'
-    
     """ User can now see that artist was added. """
     table = browser.find_element_by_id('artist_table')
     rows = table.find_elements_by_tag_name('tr')
@@ -53,8 +50,23 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == 'Ahmed'
     assert tds[2].text == 'Ag Kaedi'
 
-    
+    """ User clicks on artist detail and goes to artist page """
+    artist_detail = browser.find_element_by_id('artist-detail')
+    artist_detail.click()
+    assert browser.find_element_by_id('prenom')
+    heading = browser.find_element_by_id('heading')
+    assert heading.text == 'Artist Detail'
+    assert browser.find_element_by_id('artist_name').get_attribute("value") == 'Amanar'
+    assert browser.find_element_by_id('prenom').get_attribute("value") == 'Ahmed'
+    assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedi'
 
-
+    """ User realizes they made a mistake in the name,
+    and updates spelling"""
+    surnom = browser.find_element_by_id('surnom')
+    surnom.click()
+    surnom.send_keys('Ag Kaedy')
+    update = browser.find_element_by_id('update')
+    update.click()
+    assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedy'
     
     

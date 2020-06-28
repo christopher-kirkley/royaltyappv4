@@ -12,6 +12,12 @@ def all_artists():
     artists_schema = ArtistSchema(many=True)
     return artists_schema.dumps(result)
 
+@artists.route('/artists/<id>', methods=['GET'])
+def one_artist(id):
+    result = db.session.query(Artist).filter(Artist.id==id).one()
+    artist_schema = ArtistSchema()
+    return artist_schema.dumps(result)
+
 @artists.route('/artists', methods=['PUT'])
 def edit_artist():
     data = request.get_json(force=True)

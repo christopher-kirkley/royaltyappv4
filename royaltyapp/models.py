@@ -22,7 +22,7 @@ class Catalog(db.Model):
 
 class ArtistSchema(ma.Schema):
     class Meta:
-        fields = ("artist_name", "prenom", "surnom")
+        fields = ("id", "artist_name", "prenom", "surnom")
 
 
 

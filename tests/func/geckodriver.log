@@ -51,3 +51,154 @@ TimedPromise@chrome://marionette/content/sync.js:230:10
 interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
 webdriverClickElement@chrome://marionette/content/interaction.js:182:31
 1592259621202	Marionette	INFO	Stopped listening on port 57677
+1592341010293	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZSfcQP"
+1592341013149	Marionette	INFO	Listening on port 65240
+1592341013199	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592341014296	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1592341014976	Marionette	INFO	Stopped listening on port 65240
+1592341071176	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexVFwbh"
+1592341073809	Marionette	INFO	Listening on port 65317
+1592341073844	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592341075030	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1592341075713	Marionette	INFO	Stopped listening on port 65317
+1592459635145	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQ6JUDa"
+1592459637984	Marionette	INFO	Listening on port 60645
+1592459638041	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592459642110	Marionette	INFO	Stopped listening on port 60645
+1592459748095	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenLFRrm"
+1592459750826	Marionette	INFO	Listening on port 60738
+1592459750873	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592459754952	Marionette	INFO	Stopped listening on port 60738
+1592459777632	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNkUb32"
+1592459780544	Marionette	INFO	Listening on port 60816
+1592459780603	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592459784908	Marionette	INFO	Stopped listening on port 60816
+1592460088968	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilelSKxmf"
+1592460091640	Marionette	INFO	Listening on port 60914
+1592460091755	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 236: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/Artist.js: JSX value should be either an expression or a quoted JSX text (51:47)
+
+[0m [90m 49 | [39m								[33m<[39m[33mtd[39m[33m>[39m{artists[33m.[39mprenom}[33m<[39m[33m/[39m[33mtd[39m[33m>[39m[0m
+[0m [90m 50 | [39m								[33m<[39m[33mtd[39m[33m>[39m{artists[33m.[39msurnom}[33m<[39m[33m/[39m[33mtd[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 51 | [39m								[33m<[39m[33mtd[39m[33m>[39m[33m<[39m[33mButton[39m id[33m=[39m[32m"artist_detail"[39m onClick[33m=[39m(() [33m=>[39m alert([32m'heyo'[39m))[33m>[39m[33mDetail[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mtd[39m[33m>[39m[0m
+[0m [90m    | [39m								                                       [31m[1m^[22m[39m[0m
+[0m [90m 52 | [39m							[33m<[39m[33m/[39m[33mtr[39m[33m>[39m[0m
+[0m [90m 53 | [39m						)[0m
+[0m [90m 54 | [39m					})}[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.jsxParseAttributeValue (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4469:20)
+    at Object.jsxParseAttribute (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4507:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4527:28)
+    at Object.jsxParseOpeningElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4520:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4552:33)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+1592460092425	Marionette	INFO	Stopped listening on port 60914
+1592460115741	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileB8G60V"
+1592460118386	Marionette	INFO	Listening on port 60991
+1592460118467	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592460122637	Marionette	INFO	Stopped listening on port 60991
+JavaScript error: chrome://marionette/content/proxy.js, line 287: NS_ERROR_NOT_INITIALIZED: 
+1592460761205	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2z4DMt"
+1592460763983	Marionette	INFO	Listening on port 61139
+1592460764002	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 236: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/Artist.js: Unexpected token, expected "," (40:44)
+
+[0m [90m 38 | [39m	[36mfunction[39m handleClick(e) {[0m
+[0m [90m 39 | [39m		e[33m.[39mpreventDefault()[0m
+[0m[31m[1m>[22m[39m[90m 40 | [39m		fetch([32m'http://localhost:5000/artists/'[39m [33m+[39m ${id}[33m,[39m {[0m
+[0m [90m    | [39m		                                          [31m[1m^[22m[39m[0m
+[0m [90m 41 | [39m			method[33m:[39m [32m'GET'[39m[33m,[39m[0m
+[0m [90m 42 | [39m		})[33m.[39mthen(setClick([36mtrue[39m))[0m
+[0m [90m 43 | [39m	}[33m;[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8807:16)
+    at Object.expect (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8793:28)
+    at Object.parseCallExpressionArguments (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9830:14)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9750:31)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3384:18)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9679:19)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3347:18)
+1592460765841	Marionette	INFO	Stopped listening on port 61139
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1592460785887	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6VTFDM"
+1592460788573	Marionette	INFO	Listening on port 61218
+1592460788625	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 236: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/Artist.js: Unexpected token, expected "," (40:44)
+
+[0m [90m 38 | [39m	[36mfunction[39m handleClick(e) {[0m
+[0m [90m 39 | [39m		e[33m.[39mpreventDefault()[0m
+[0m[31m[1m>[22m[39m[90m 40 | [39m		fetch([32m'http://localhost:5000/artists/'[39m [33m+[39m ${id}[33m,[39m {[0m
+[0m [90m    | [39m		                                          [31m[1m^[22m[39m[0m
+[0m [90m 41 | [39m			method[33m:[39m [32m'GET'[39m[33m,[39m[0m
+[0m [90m 42 | [39m		})[33m.[39mthen(setClick([36mtrue[39m))[0m
+[0m [90m 43 | [39m	}[33m;[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8807:16)
+    at Object.expect (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8793:28)
+    at Object.parseCallExpressionArguments (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9830:14)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9750:31)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3384:18)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9679:19)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3347:18)
+1592460789388	Marionette	INFO	Stopped listening on port 61218
+1592461213527	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezktZcR"
+1592461216247	Marionette	INFO	Listening on port 61357
+1592461216315	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592461217113	Marionette	INFO	Stopped listening on port 61357
+1592461587466	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0g1oCO"
+1592461590123	Marionette	INFO	Listening on port 61475
+1592461590157	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592461590994	Marionette	INFO	Stopped listening on port 61475
+1592461735362	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9qtbPo"
+1592461737987	Marionette	INFO	Listening on port 61600
+1592461738067	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 289: TypeError: e is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 289: TypeError: e is undefined
+1592461742063	Marionette	INFO	Stopped listening on port 61600
+1592462126637	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGK60Z6"
+1592462129683	Marionette	INFO	Listening on port 61764
+1592462129713	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462133783	Marionette	INFO	Stopped listening on port 61764
+1592462337927	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeCzYsy"
+1592462340553	Marionette	INFO	Listening on port 61882
+1592462340625	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462344629	Marionette	INFO	Stopped listening on port 61882
+1592462453530	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7JNtoP"
+1592462456178	Marionette	INFO	Listening on port 61974
+1592462456216	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462460357	Marionette	INFO	Stopped listening on port 61974
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1592462630371	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFRPMli"
+1592462633022	Marionette	INFO	Listening on port 62059
+1592462633051	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462637258	Marionette	INFO	Stopped listening on port 62059
+1592462703917	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZveI8A"
+1592462706626	Marionette	INFO	Listening on port 62136
+1592462706681	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462710863	Marionette	INFO	Stopped listening on port 62136
+1592462739919	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileo0zxOe"
+1592462742568	Marionette	INFO	Listening on port 62217
+1592462742590	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592462746726	Marionette	INFO	Stopped listening on port 62217
