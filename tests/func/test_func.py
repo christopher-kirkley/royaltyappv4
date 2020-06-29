@@ -24,7 +24,7 @@ def test_returns(browser, test_client, db):
     artist.click()
 
     """ User sees an empty table, clicks on button to add artist """
-    assert browser.find_element_by_id("artist_table")
+    assert browser.find_element_by_id("artist-table")
     add_artist = browser.find_element_by_id('add_artist')
     add_artist.click()
     time.sleep(1)
@@ -42,7 +42,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ User can now see that artist was added. """
-    table = browser.find_element_by_id('artist_table')
+    table = browser.find_element_by_id('artist-table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(db.session.query(Artist).all()) == 1
     tds = rows[1].find_elements_by_tag_name('td');
@@ -63,10 +63,30 @@ def test_returns(browser, test_client, db):
     """ User realizes they made a mistake in the name,
     and updates spelling"""
     surnom = browser.find_element_by_id('surnom')
-    surnom.click()
+    surnom.clear()
     surnom.send_keys('Ag Kaedy')
     update = browser.find_element_by_id('update')
     update.click()
     assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedy'
     
+    """ User returns to main page and verifies change."""
+    artist = browser.find_element_by_id('artists')
+    artist.click()
+    time.sleep(1)
+    table = browser.find_element_by_id('artist-table')
+    rows = table.find_elements_by_tag_name('tr')
+    tds = rows[1].find_elements_by_tag_name('td');
+    assert tds[2].text == 'Ag Kaedy'
+
+    """ User goes to the catalog view """
+    catalog = browser.find_element_by_id('catalog')
+    catalog.click()
+    assert browser.find_element_by_id('header').text == 'Catalog'
+
+    """ User clicks to add a new catalog item """
+    add_catalog = browser.find_element_by_id('add-catalog-item')
+    add_catalog.click()
+
+    """ User sees they are on the page to add something to the catalog """
+    assert browser.find_element_by_id('header').text == 'Add Catalog Item'
     

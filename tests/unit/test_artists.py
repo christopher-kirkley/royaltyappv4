@@ -58,13 +58,13 @@ def test_can_update_artists(test_client, db):
     q = db.session.query(Artist).first()
     assert q.artist_name == 'Amanar'
     # Change first name
-    data = {'id': '1',
+    data = {
             'artist_name': 'Bobo',
             'prenom': 'Tom',
             'surnom': 'Jones',
             }
     json_data = json.dumps(data)
-    response = test_client.put('/artists', data=json_data)
+    response = test_client.put('/artists/1', data=json_data)
     assert response.status_code == 200
     q = db.session.query(Artist).first()
     assert q.artist_name == 'Bobo'

@@ -18,11 +18,10 @@ def one_artist(id):
     artist_schema = ArtistSchema()
     return artist_schema.dumps(result)
 
-@artists.route('/artists', methods=['PUT'])
-def edit_artist():
+@artists.route('/artists/<id>', methods=['PUT'])
+def edit_artist(id):
     data = request.get_json(force=True)
-    id_to_edit = data['id']
-    obj = db.session.query(Artist).get(id_to_edit)
+    obj = db.session.query(Artist).get(id)
 
     if data['artist_name']:
         obj.artist_name = data['artist_name']
@@ -31,6 +30,7 @@ def edit_artist():
     if data['surnom']:
         obj.surnom = data['surnom']
 
+    db.session.commit()
     return jsonify({'success': 'true'})
 
 @artists.route('/artists', methods=['POST'])
