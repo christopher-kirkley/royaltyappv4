@@ -12,6 +12,7 @@ def add_one_artist(db):
     db.session.commit()
 
 def add_one_catalog(db):
+    add_one_artist(db)
     new_catalog = Catalog(catalog_number='SS-001',
                         catalog_name='Ishilan N-Tenere',
                         artist_id='1',
@@ -19,12 +20,18 @@ def add_one_catalog(db):
     db.session.add(new_catalog)
     db.session.commit()
 
+
 def test_can_get_all_catalog(test_client, db):
     response = test_client.get('/catalog')
     assert response.status_code == 200
     assert len(json.loads(response.data)) == 0
+    add_one_catalog(db)
+    response = test_client.get('/catalog')
+    assert response.status_code == 200
+    assert len(json.loads(response.data)) == 1
 
 def test_can_add_catalog(test_client, db):
+    add_one_artist(db)
     data = {'catalog_number': 'SS-001',
             'catalog_name': 'Ishilan N-Tenere',
             'artist_id': 1
@@ -36,4 +43,25 @@ def test_can_add_catalog(test_client, db):
     assert len(result) == 1
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_delete_catalog(test_client, db):
+    add_one_catalog(db)
+    response = test_client.delete('/catalog/1')
+    assert response.status_code == 200
+    result = Catalog.query.all()
+    assert len(result) == 0
+    assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_get_all_catalogs_by_artist(test_client, db):
+    add_one_catalog(db)
+    new_catalog = Catalog(catalog_number='SS-002',
+                        catalog_name='Tacos for Sale',
+                        artist_id='1',
+                        )
+    db.session.add(new_catalog)
+    db.session.commit()
+    result = Catalog.query.all()
+    assert len(result) == 2
+    response = test_client.get('/artists/1')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    
