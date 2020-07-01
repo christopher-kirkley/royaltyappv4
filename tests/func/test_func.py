@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 
 import pytest
 import json
@@ -89,4 +90,32 @@ def test_returns(browser, test_client, db):
 
     """ User sees they are on the page to add something to the catalog """
     assert browser.find_element_by_id('header').text == 'Add Catalog Item'
+
+    """ User fills out catalog info. """
+    catalog_number = browser.find_element_by_id('catalog_number')
+    catalog_number.send_keys('SS-050')
+    catalog_name = browser.find_element_by_id('catalog_name')
+    catalog_name.send_keys('Akaline Kidal')
+    select = Select(browser.find_element_by_name('artist_id'))
+    select.select_by_visible_text('Amanar')
+    submit = browser.find_element_by_id('submit')
+    submit.click()
+    
+    """ User sees Catalog item in table. """
+    catalog_table = browser.find_element_by_id('catalog_table')
+    rows = catalog_table.find_elements_by_tag_name('tr')
+    tds = rows[1].find_elements_by_tag_name('td');
+    assert tds[0].text == 'SS-050'
+    assert tds[1].text == 'Amanar'
+    assert tds[2].text == 'Akaline Kidal'
+    
+    """ Navigate to catalog detail page. """
+    catalog_detail = browser.find_element_by_id('catalog_detail')
+    catalog_detail.click()
+    time.sleep(200)
+    assert browser.find_element_by_id('catalog_number')
+    assert browser.find_element_by_id('catalog_name')
+    assert browser.find_element_by_id('artist_name')
+
+
     
