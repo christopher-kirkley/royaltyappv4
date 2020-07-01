@@ -784,3 +784,129 @@ Exiting due to channel error.
 1593622443898	Marionette	INFO	Listening on port 62592
 1593622443937	Marionette	WARN	TLS certificate errors will be ignored for this session
 1593622450975	Marionette	INFO	Stopped listening on port 62592
+1593633536684	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexzBrIK"
+1593633539417	Marionette	INFO	Listening on port 52207
+1593633539441	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1593633542475	Marionette	INFO	Stopped listening on port 52207
+1593633557570	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9wgsi0"
+1593633560355	Marionette	INFO	Listening on port 52292
+1593633560449	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1593633951355	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFuSEkV"
+1593633954099	Marionette	INFO	Listening on port 52616
+1593633954135	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1593633970660	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiley4iiU0"
+1593633973458	Marionette	INFO	Listening on port 52705
+1593633973535	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593633979955	Marionette	INFO	Stopped listening on port 52705
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1593634007956	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexO7Qa2"
+1593634010635	Marionette	INFO	Listening on port 52796
+1593634010651	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593634017274	Marionette	INFO	Stopped listening on port 52796
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1593634081294	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9BM455"
+1593634084081	Marionette	INFO	Listening on port 52903
+1593634084170	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593634091132	Marionette	INFO	Stopped listening on port 52903
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1593635031973	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePiaezC"
+1593635034985	Marionette	INFO	Listening on port 53135
+1593635035085	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593635041505	Marionette	INFO	Stopped listening on port 53135
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1593635262500	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecNMcag"
+1593635265524	Marionette	INFO	Listening on port 53242
+1593635265570	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2121: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/VersionTable.js: Unexpected token (57:4)
+
+[0m [90m 55 | [39m				[90m// 	)[39m[0m
+[0m [90m 56 | [39m				[90m// })}[39m[0m
+[0m[31m[1m>[22m[39m[90m 57 | [39m			[33m<[39m[33m/[39m[33mTableBody[39m[33m>[39m[0m
+[0m [90m    | [39m			 [31m[1m^[22m[39m[0m
+[0m [90m 58 | [39m			[33m<[39m[33m/[39m[33mTable[39m[33m>[39m[0m
+[0m [90m 59 | [39m			[33m<[39m[33m/[39m[33mTableContainer[39m[33m>[39m[0m
+[0m [90m 60 | [39m		[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8807:16)
+    at Object.jsxParseIdentifier (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4412:12)
+    at Object.jsxParseNamespacedName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4422:23)
+    at Object.jsxParseElementName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4433:21)
+    at Object.jsxParseOpeningElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4519:22)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4552:33)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4626:17)
+1593635266495	Marionette	INFO	Stopped listening on port 53242
+1593635285981	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQs61GC"
+1593635288906	Marionette	INFO	Listening on port 53319
+1593635288952	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593635295739	Marionette	INFO	Stopped listening on port 53319
+1593635331721	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledgxCZi"
+1593635334451	Marionette	INFO	Listening on port 53418
+1593635334495	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593636341195	Marionette	INFO	Stopped listening on port 53418
+1593636891780	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefcYdDP"
+1593636895175	Marionette	INFO	Listening on port 54137
+1593636895272	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2139: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/VersionTable.js: Expected corresponding JSX closing tag for <input> (50:5)
+
+[0m [90m 48 | [39m					[33m<[39m[33mTableCell[39m[33m>[39m[0m
+[0m [90m 49 | [39m					[33m<[39m[33minput[39m type[33m=[39m[32m"text"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 50 | [39m					[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+[0m [90m    | [39m					[31m[1m^[22m[39m[0m
+[0m [90m 51 | [39m					[33m<[39m[33mTableCell[39m[33m>[39m[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+[0m [90m 52 | [39m					[33m<[39m[33mTableCell[39m[33m>[39m[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+[0m [90m 53 | [39m					[33m<[39m[33mTableCell[39m[33m>[39m[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4600:16)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4568:32)
+1593636896104	Marionette	INFO	Stopped listening on port 54137
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1593636945352	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVMP73j"
+1593636948174	Marionette	INFO	Listening on port 54245
+1593636948230	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+1593637955014	Marionette	INFO	Stopped listening on port 54245
+1593637960900	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCJ57Wj"
+1593637963808	Marionette	INFO	Listening on port 54636
+1593637963882	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

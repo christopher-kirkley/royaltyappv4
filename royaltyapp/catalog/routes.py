@@ -66,20 +66,19 @@ def get_version(id):
 
     
 
-# @artists.route('/artists', methods=['PUT'])
-# def edit_artist():
-#     data = request.get_json(force=True)
-#     id_to_edit = data['id']
-#     obj = db.session.query(Artist).get(id_to_edit)
+@catalog.route('/catalog/<id>', methods=['PUT'])
+def edit_catalog(id):
+    data = request.get_json(force=True)
+    obj = db.session.query(Catalog).get(id)
 
-#     if data['artist_name']:
-#         obj.artist_name = data['artist_name']
-#     if data['prenom']:
-#         obj.prenom = data['prenom']
-#     if data['surnom']:
-#         obj.surnom = data['surnom']
-
-#     return jsonify({'success': 'true'})
+    if data['catalog_number']:
+        obj.catalog_number = data['catalog_number']
+    if data['catalog_name']:
+        obj.catalog_name = data['catalog_name']
+    if data['artist_id']:
+        obj.surnom = data['artist_id']
+    db.session.commit()
+    return jsonify({'success': 'true'})
 
 # @artists.route('/artists', methods=['POST'])
 # def add_artist():

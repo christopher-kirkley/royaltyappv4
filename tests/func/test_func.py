@@ -40,7 +40,6 @@ def test_returns(browser, test_client, db):
     prenom.send_keys('Ahmed')
     surnom.send_keys('Ag Kaedi')
     submit.click()
-    time.sleep(1)
 
     """ User can now see that artist was added. """
     table = browser.find_element_by_id('artist-table')
@@ -82,14 +81,11 @@ def test_returns(browser, test_client, db):
     """ User goes to the catalog view """
     catalog = browser.find_element_by_id('catalog')
     catalog.click()
-    assert browser.find_element_by_id('header').text == 'Catalog'
+    assert browser.find_element_by_id('header').text == 'All Catalog'
 
     """ User clicks to add a new catalog item """
     add_catalog = browser.find_element_by_id('add-catalog-item')
     add_catalog.click()
-
-    """ User sees they are on the page to add something to the catalog """
-    assert browser.find_element_by_id('header').text == 'Add Catalog Item'
 
     """ User fills out catalog info. """
     catalog_number = browser.find_element_by_id('catalog_number')
@@ -102,6 +98,8 @@ def test_returns(browser, test_client, db):
     submit.click()
     
     """ User sees Catalog item in table. """
+    catalog = browser.find_element_by_id('catalog')
+    catalog.click()
     catalog_table = browser.find_element_by_id('catalog_table')
     rows = catalog_table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
@@ -112,9 +110,27 @@ def test_returns(browser, test_client, db):
     """ Navigate to catalog detail page. """
     catalog_detail = browser.find_element_by_id('catalog_detail')
     catalog_detail.click()
-    assert browser.find_element_by_id('catalog_number')
-    assert browser.find_element_by_id('catalog_name')
-    assert browser.find_element_by_id('artist_name')
+    assert browser.find_element_by_id('catalog_number').get_attribute("value") == 'SS-050'
+    assert browser.find_element_by_id('catalog_name').get_attribute("value") == 'Akaline Kidal'
+    assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
+
+    """ Click to add a version. """
+    version_table = browser.find_element_by_id('version_table')
+    time.sleep(1000)
+    add_version = browser.find_element_by_id('add_version')
+    add_version.click()
+    version_number = browser.find_element_by_id('version_number')
+    version_number.send_keys('SS-050lp')
+    upc = browser.find_element_by_id('upc')
+    upc.send_keys('123456')
+    format = browser.find_element_by_id('format')
+    format.send_keys('LP')
+    version_name = browser.find_element_by_id('version_name')
+    version_name.send_keys('Limited Edition Vinyl')
+    submit = browser.find_element_by_id('submit')
+    submit.click()
 
 
-    
+
+
+

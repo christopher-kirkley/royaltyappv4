@@ -81,7 +81,6 @@ def test_can_get_all_versions_by_catalog(test_client, db):
     assert response.status_code == 200
     json_resp = json.loads(response.data)['version']
     assert len(json_resp) == 1
-    
 
 def test_can_get_one_catalog_item(test_client, db):
     add_one_version(db)
@@ -89,3 +88,15 @@ def test_can_get_one_catalog_item(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data)['artist']
 
+def test_can_update_catalog(test_client, db):
+    add_one_version(db)
+    q = db.session.query(Catalog).first()
+    data = {'catalog_number': 'SS-002',
+            'catalog_name': 'Ishilan N-Tenere',
+            'artist_id': 1
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/catalog/1', data=json_data)
+    assert response.status_code == 200
+    q = db.session.query(Catalog).first()
+    assert q.catalog_number == 'SS-002'
