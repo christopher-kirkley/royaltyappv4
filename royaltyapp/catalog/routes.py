@@ -1,14 +1,16 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Catalog
-
+from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
+        VersionSchema
 
 catalog = Blueprint('catalog', __name__)
 
 @catalog.route('/catalog', methods=['GET'])
 def all_catalog():
     result = Catalog.query.all()
-    return jsonify(result)
+    catalog_schema = CatalogSchema()
+    catalogs_schema = CatalogSchema(many=True)
+    return catalogs_schema.dumps(result)
 
 @catalog.route('/catalog', methods=['POST'])
 def add_catalog():
@@ -25,6 +27,44 @@ def add_catalog():
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
+
+@catalog.route('/catalog/<id>', methods=['GET'])
+def get_catalog(id):
+    result = db.session.query(Catalog).filter(Catalog.id==id).one()
+    catalog_schema = CatalogSchema()
+    return catalog_schema.dumps(result)
+
+@catalog.route('/catalog/<id>', methods=['DELETE'])
+def delete_catalog(id):
+    db.session.query(Catalog).filter(Catalog.id==id).delete()
+    return jsonify({'success': 'true'})
+
+@catalog.route('/version', methods=['POST'])
+def add_version():
+    data = request.get_json(force=True)
+    try:
+        new_version = Version(
+                        version_number=data['version_number'],
+                        version_name=data['version_name'],
+                        upc=data['upc'],
+                        format=data['format'],
+                        catalog_id=data['catalog_id']
+                        )
+        db.session.add(new_version)
+        db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
+
+@catalog.route('/version/<id>', methods=['GET'])
+def get_version(id):
+    result = db.session.query(Version).filter(Version.id==id).one()
+    version_schema = VersionSchema()
+    return version_schema.dumps(result)
+
+
+    
 
 # @artists.route('/artists', methods=['PUT'])
 # def edit_artist():
@@ -57,10 +97,6 @@ def add_catalog():
 #         return jsonify({'success': 'false'})
 #     return jsonify({'success': 'true'})
 
-# @artists.route('/artists/delete/<id>', methods=['DELETE'])
-# def delete_artist(id):
-#     db.session.query(Artist).filter(Artist.id==id).delete()
-#     return jsonify({'success': 'true'})
 
 # @artists.route('/temp', methods=['GET', 'POST'])
 # def temp():

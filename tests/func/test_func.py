@@ -112,7 +112,6 @@ def test_returns(browser, test_client, db):
     """ Navigate to catalog detail page. """
     catalog_detail = browser.find_element_by_id('catalog_detail')
     catalog_detail.click()
-    time.sleep(200)
     assert browser.find_element_by_id('catalog_number')
     assert browser.find_element_by_id('catalog_name')
     assert browser.find_element_by_id('artist_name')

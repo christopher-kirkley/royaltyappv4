@@ -12,6 +12,8 @@ def test_can_get_all_catalog(test_client, db):
     response = test_client.get('/catalog')
     assert response.status_code == 200
     assert len(json.loads(response.data)) == 1
+    assert json.loads(response.data)[0]['artist']
+    
 
 def test_can_add_catalog(test_client, db):
     add_one_artist(db)
@@ -81,6 +83,9 @@ def test_can_get_all_versions_by_catalog(test_client, db):
     assert len(json_resp) == 1
     
 
-
-
+def test_can_get_one_catalog_item(test_client, db):
+    add_one_version(db)
+    response = test_client.get('/catalog/1')
+    assert response.status_code == 200
+    assert json.loads(response.data)['artist']
 
