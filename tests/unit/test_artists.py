@@ -23,6 +23,7 @@ def test_can_get_all_artists(test_client, db):
                                         "artist_name": "Amanar",
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
+                                        "catalog": [],
                                         }]
 
 
@@ -80,6 +81,7 @@ def test_can_get_one_artist(test_client, db):
                                         "artist_name": "Amanar",
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
+                                        "catalog": []
                                         }
 
     
