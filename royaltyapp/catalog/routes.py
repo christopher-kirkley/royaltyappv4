@@ -42,16 +42,18 @@ def delete_catalog(id):
 @catalog.route('/version', methods=['POST'])
 def add_version():
     data = request.get_json(force=True)
+    catalog_id = data['catalog']
     try:
-        new_version = Version(
-                        version_number=data['version_number'],
-                        version_name=data['version_name'],
-                        upc=data['upc'],
-                        format=data['format'],
-                        catalog_id=data['catalog_id']
-                        )
-        db.session.add(new_version)
-        db.session.commit()
+        for version in data['version']:
+            new_version = Version(
+                            version_number=version['version_number'],
+                            version_name=version['version_name'],
+                            upc=version['upc'],
+                            format=version['format'],
+                            catalog_id=catalog_id
+                            )
+            db.session.add(new_version)
+            db.session.commit()
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
@@ -63,8 +65,6 @@ def get_version(id):
     version_schema = VersionSchema()
     return version_schema.dumps(result)
 
-
-    
 
 @catalog.route('/catalog/<id>', methods=['PUT'])
 def edit_catalog(id):

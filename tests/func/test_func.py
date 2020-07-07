@@ -115,20 +115,21 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
 
     """ Click to add a version. """
-    version_table = browser.find_element_by_id('version_table')
-    time.sleep(1000)
     add_version = browser.find_element_by_id('add_version')
     add_version.click()
-    version_number = browser.find_element_by_id('version_number')
+    version_number = browser.find_element_by_name('version[0].version_number')
     version_number.send_keys('SS-050lp')
-    upc = browser.find_element_by_id('upc')
+    upc = browser.find_element_by_name('version[0].upc')
     upc.send_keys('123456')
-    format = browser.find_element_by_id('format')
+    format = browser.find_element_by_name('version[0].format')
     format.send_keys('LP')
-    version_name = browser.find_element_by_id('version_name')
+    version_name = browser.find_element_by_name('version[0].version_name')
     version_name.send_keys('Limited Edition Vinyl')
     submit = browser.find_element_by_id('submit')
     submit.click()
+    version_number = browser.find_element_by_name('version[0].version_number')
+    assert version_number.get_attribute("value") == 'SS-050lp'
+
 
 
 

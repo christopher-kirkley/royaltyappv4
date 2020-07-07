@@ -910,3 +910,512 @@ Exiting due to channel error.
 Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
+1593966897993	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevX1tYg"
+1593966901886	Marionette	INFO	Listening on port 62662
+1593966901933	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593966909096	Marionette	INFO	Stopped listening on port 62662
+1593966954747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVy2qWe"
+1593966957355	Marionette	INFO	Listening on port 62776
+1593966957413	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593966964005	Marionette	INFO	Stopped listening on port 62776
+1593966975395	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGSv2tM"
+1593966978131	Marionette	INFO	Listening on port 62863
+1593966978165	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 82078: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 82078: TypeError: data.slice is not a function
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594136329292	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1gBDP6"
+1594136333208	Marionette	INFO	Listening on port 63023
+1594136333254	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594136336112	Marionette	INFO	Stopped listening on port 63023
+1594136366929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDoH5nB"
+1594136369484	Marionette	INFO	Listening on port 63119
+1594136369501	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594137124869	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUbdT80"
+1594137127551	Marionette	INFO	Listening on port 63414
+1594137127569	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1707: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/VersionForm.js: Unexpected token, expected "," (19:24)
+
+[0m [90m 17 | [39m		fetch([32m`http://localhost:5000/catalog/${id}`[39m)[0m
+[0m [90m 18 | [39m		[33m.[39mthen(res [33m=>[39m res[33m.[39mjson())[0m
+[0m[31m[1m>[22m[39m[90m 19 | [39m		[33m.[39mthen(data[[32m'version'[39m] [33m=>[39m console[33m.[39mlog(data))[0m
+[0m [90m    | [39m		                      [31m[1m^[22m[39m[0m
+[0m [90m 20 | [39m		[90m// .then(data => data['version'])[39m[0m
+[0m [90m 21 | [39m		[90m// .then(json => setVersion(json))[39m[0m
+[0m [90m 22 | [39m	}[33m,[39m [])[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8807:16)
+    at Object.expect (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8793:28)
+    at Object.parseCallExpressionArguments (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9830:14)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9750:31)
+    at Object.parseSubscript (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3384:18)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9679:19)
+    at Object.parseSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3347:18)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594138134409	Marionette	INFO	Stopped listening on port 63414
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594139030489	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeCXN3H"
+1594139033238	Marionette	INFO	Listening on port 63948
+1594139033315	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594140040146	Marionette	INFO	Stopped listening on port 63948
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594140045055	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXS2vSF"
+1594140048136	Marionette	INFO	Listening on port 64391
+1594140048231	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1594141055125	Marionette	INFO	Stopped listening on port 64391
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594142764922	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTMQSBp"
+1594142768755	Marionette	INFO	Listening on port 49158
+1594142768845	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1594143775778	Marionette	INFO	Stopped listening on port 49158
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594143792738	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6tYhXJ"
+1594143795535	Marionette	INFO	Listening on port 49519
+1594143795616	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1736: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1736: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 81463: TypeError: can't convert undefined to object
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81456: TypeError: name.match is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 81463: TypeError: can't convert undefined to object
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81463: TypeError: can't convert undefined to object
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81456: TypeError: name.match is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81456: TypeError: name.match is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1726: ReferenceError: can't access lexical declaration `temp' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1726: ReferenceError: can't access lexical declaration `temp' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1733: ReferenceError: can't access lexical declaration `version' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1733: ReferenceError: can't access lexical declaration `version' before initialization
+1594144802449	Marionette	INFO	Stopped listening on port 49519
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594144806548	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile24Rdui"
+1594144809396	Marionette	INFO	Listening on port 49908
+1594144809437	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1734: ReferenceError: can't access lexical declaration `version' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1734: ReferenceError: can't access lexical declaration `version' before initialization
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1889: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1889: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {catalog_number, catalog_name, artist, version, id}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm.js:115)
+    in div (at VersionForm.js:46)
+    in VersionForm (at VersionInfo.js:15)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:13)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {catalog_number, catalog_name, artist, version, id}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm.js:115)
+    in div (at VersionForm.js:46)
+    in VersionForm (at VersionInfo.js:15)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:13)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {catalog_number, catalog_name, artist, version, id}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm.js:47)
+    in div (at VersionForm.js:46)
+    in VersionForm (at VersionInfo.js:15)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:13)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {catalog_number, catalog_name, artist, version, id}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm.js:47)
+    in div (at VersionForm.js:46)
+    in VersionForm (at VersionInfo.js:15)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:13)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 68341: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 68341: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+1594145816358	Marionette	INFO	Stopped listening on port 49908
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594145825274	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletyar2F"
+1594145829541	Marionette	INFO	Listening on port 50302
+1594145829591	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1738: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1738: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1738: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1738: ReferenceError: can't access lexical declaration `reset' before initialization
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594146837326	Marionette	INFO	Stopped listening on port 50302
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594150652074	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6o8bpk"
+1594150655738	Marionette	INFO	Listening on port 52873
+1594150655831	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594151662691	Marionette	INFO	Stopped listening on port 52873
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594151669729	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSVGnZz"
+1594151672642	Marionette	INFO	Listening on port 53214
+1594151672727	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+1594152679225	Marionette	INFO	Stopped listening on port 53214
+1594152684018	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileX9mD1e"
+1594152686924	Marionette	INFO	Listening on port 53582
+1594152687006	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+1594152692272	Marionette	INFO	Stopped listening on port 53582
+1594152774961	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJTcAQL"
+1594152777643	Marionette	INFO	Listening on port 53703
+1594152777736	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version.map is not a function
+1594152784286	Marionette	INFO	Stopped listening on port 53703
+1594152824313	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJ93TZU"
+1594152827002	Marionette	INFO	Listening on port 53800
+1594152827102	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+1594152833900	Marionette	INFO	Stopped listening on port 53800
+1594152924867	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilej5nwlE"
+1594152927537	Marionette	INFO	Listening on port 53897
+1594152927628	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1780: TypeError: version is undefined
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594153933860	Marionette	INFO	Stopped listening on port 53897
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594153939362	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefPzqC7"
+1594153942012	Marionette	INFO	Listening on port 54208
+1594153942035	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594154505315	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileClxonP"
+1594154508033	Marionette	INFO	Listening on port 54380
+1594154508091	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594155515875	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekBEKxx"
+1594155519087	Marionette	INFO	Listening on port 54770
+1594155519153	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1979: ReferenceError: version is not defined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1979: ReferenceError: version is not defined
+JavaScript warning: https://www.robinwieruch.de/component---src-templates-post-js-bad9a75101a8acb90c01.js, line 685: unreachable code after return statement
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594156525468	Marionette	INFO	Stopped listening on port 54770
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594156529578	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJIzLkz"
+1594156532478	Marionette	INFO	Listening on port 55052
+1594156532553	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594156926442	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoPSxwy"
+1594156929017	Marionette	INFO	Listening on port 55250
+1594156929120	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594157830662	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileE7EOa5"
+1594157833431	Marionette	INFO	Listening on port 55539
+1594157833524	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594158036236	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2v5oKm"
+1594158039037	Marionette	INFO	Listening on port 55711
+1594158039110	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594158065140	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCe22ke"
+1594158067786	Marionette	INFO	Listening on port 55806
+1594158067812	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594158074195	Marionette	INFO	Stopped listening on port 55806
+1594158154994	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9wIstb"
+1594158157653	Marionette	INFO	Listening on port 55900
+1594158157673	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594158164132	Marionette	INFO	Stopped listening on port 55900
+1594158206626	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilemoIwqZ"
+1594158209299	Marionette	INFO	Listening on port 55991
+1594158209392	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594158215855	Marionette	INFO	Stopped listening on port 55991
+1594158341344	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebvZuhS"
+1594158344348	Marionette	INFO	Listening on port 56085
+1594158344425	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 139: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1594159005824	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileYGJwZU"
+1594159008509	Marionette	INFO	Listening on port 56371
+1594159008584	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159015459	Marionette	INFO	Stopped listening on port 56371
+1594159153607	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiles3WQ7w"
+1594159156352	Marionette	INFO	Listening on port 56464
+1594159156397	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159163366	Marionette	INFO	Stopped listening on port 56464
+1594159265369	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9XVdV5"
+1594159268081	Marionette	INFO	Listening on port 56560
+1594159268133	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159275131	Marionette	INFO	Stopped listening on port 56560
+1594159352836	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiFujAy"
+1594159355545	Marionette	INFO	Listening on port 56656
+1594159355606	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159362404	Marionette	INFO	Stopped listening on port 56656
+1594159381520	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePmvpQ5"
+1594159384182	Marionette	INFO	Listening on port 56747
+1594159384272	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159391713	Marionette	INFO	Stopped listening on port 56747
+1594159457796	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOvwDei"
+1594159460414	Marionette	INFO	Listening on port 56842
+1594159460461	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594159468168	Marionette	INFO	Stopped listening on port 56842

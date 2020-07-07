@@ -14,7 +14,6 @@ def test_can_get_all_catalog(test_client, db):
     assert len(json.loads(response.data)) == 1
     assert json.loads(response.data)[0]['artist']
     
-
 def test_can_add_catalog(test_client, db):
     add_one_artist(db)
     data = {'catalog_number': 'SS-001',
@@ -53,22 +52,48 @@ def test_can_get_all_catalogs_by_artist(test_client, db):
 
 def test_can_add_version(test_client, db):
     add_one_catalog(db)
-    data = {'upc': '123456',
-            'version_number': 'SS-001lp',
-            'version_name': 'Limited Edition',
-            'format': 'LP',
-            'catalog_id': '1'
+    data = {'catalog': '1',
+            'version': [
+                {'upc': '123456',
+                'version_number': 'SS-001lp',
+                'version_name': 'Limited Edition',
+                'format': 'LP',
+                }
+                ]
+        }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_add_multiple_version(test_client, db):
+    add_one_catalog(db)
+    data = {'catalog': '1',
+            'version': [
+                {'upc': '123456',
+                'version_number': 'SS-001lp',
+                'version_name': 'Limited Edition',
+                'format': 'LP',
+                },
+                {'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
             }
     json_data = json.dumps(data)
     response = test_client.post('/version', data=json_data)
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
 
+
 def test_can_get_version(test_client, db):
     add_one_version(db)
     response = test_client.get('/version/1')
     assert response.status_code == 200
-    assert json.loads(response.data) == {'format': 'LP',
+    assert json.loads(response.data) == {
+            'format': 'LP',
             'catalog_id': 1,
             'id': 1, 
             'version_number': 'SS-001lp', 
