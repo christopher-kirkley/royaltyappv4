@@ -87,6 +87,86 @@ def test_can_add_multiple_version(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_edit_versions(test_client, db):
+    """Using post to accomplish both edit and post
+    though it might be best practice to break these into two methods"""
+
+    add_one_catalog(db)
+    data = {'catalog': '1',
+            'version': [
+                {'upc': '123456',
+                'version_number': 'SS-001lp',
+                'version_name': 'Limited Edition',
+                'format': 'LP',
+                },
+                {'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    data = {'catalog': '1',
+            'version': [
+                {
+                'id': '1',
+                'upc': '333333',
+                'version_number': 'SS-001cd',
+                'version_name': 'Compact Disc',
+                'format': 'CD',
+                },
+                {
+                'id': '2',
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    q = db.session.query(Version).order_by(Version.id).all()
+    assert len(q) == 2
+    assert q[0].upc == '333333'
+    assert q[0].id == 1
+    assert q[0].version_number == 'SS-001cd'
+    data = {'catalog': '1',
+            'version': [
+                {
+                'id': '1',
+                'upc': '333333',
+                'version_number': 'SS-001cd',
+                'version_name': 'Compact Disc',
+                'format': 'CD',
+                },
+                {
+                'id': '2',
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                },
+                {
+                'upc': '898098',
+                'version_number': 'SS-001tomato',
+                'version_name': 'Limited Tomato',
+                'format': 'Fruit',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    q = db.session.query(Version).all()
+    assert len(q) == 3
 
 def test_can_get_version(test_client, db):
     add_one_version(db)

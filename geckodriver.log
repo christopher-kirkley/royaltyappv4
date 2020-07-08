@@ -1753,3 +1753,49 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 1594240608354	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1594240617686	Marionette	INFO	Stopped listening on port 59517
+1594240998117	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRVQQxB"
+1594241000805	Marionette	INFO	Listening on port 59684
+1594241000869	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1833: TypeError: json is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1844: TypeError: data.splice is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1798: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/VersionForm.js: Unexpected token (52:3)
+
+[0m [90m 50 | [39m		[90m// 		{'catalog': id,[39m[0m
+[0m [90m 51 | [39m		[90m// 		'version': newData['version']})[39m[0m
+[0m[31m[1m>[22m[39m[90m 52 | [39m		})[0m
+[0m [90m    | [39m		 [31m[1m^[22m[39m[0m
+[0m [90m 53 | [39m		[33m.[39mthen(res [33m=>[39m res[33m.[39mjson())[0m
+[0m [90m 54 | [39m	}[0m
+[0m [90m 55 | [39m		[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8807:16)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10130:20)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4638:20)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9656:23)
+    at Object.parseMaybeUnary (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9636:21)
+    at Object.parseExprOps (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9506:23)
+    at Object.parseMaybeConditional (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9479:23)
+JavaScript error: https://eus.rubiconproject.com/usync.html?gdpr=0&gdpr_consent=BO2Pib_O2Pib_DlDLAENDR-AAAAwyAAA&us_privacy=1---, line 12: SecurityError: The operation is insecure.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

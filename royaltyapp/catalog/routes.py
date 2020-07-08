@@ -45,14 +45,26 @@ def add_version():
     catalog_id = data['catalog']
     try:
         for version in data['version']:
-            new_version = Version(
-                            version_number=version['version_number'],
-                            version_name=version['version_name'],
-                            upc=version['upc'],
-                            format=version['format'],
-                            catalog_id=catalog_id
-                            )
-            db.session.add(new_version)
+            if 'id' in version:
+                """Update if posting version id"""
+                id = version['id']
+                new_version = db.session.query(Version).get(id)
+                new_version.upc = version['upc']
+                new_version.version_number = version['version_number']
+                new_version.version_name = version['version_name']
+                new_version.format = version['format']
+            else:
+                new_version = Version(
+                                version_number=version['version_number'],
+                                version_name=version['version_name'],
+                                upc=version['upc'],
+                                format=version['format'],
+                                catalog_id=catalog_id
+                                )
+                db.session.add(new_version)
+
+                
+                
             db.session.commit()
     except exc.DataError:
         db.session.rollback()

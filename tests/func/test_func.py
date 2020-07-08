@@ -131,7 +131,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050lp'
-    
+    time.sleep(10000)
 
 
 
