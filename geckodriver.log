@@ -1419,3 +1419,337 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: resource://gre/modules/NetworkGeolocationProvider.jsm, line 555: TypeError: xhr.response.location is undefined
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1594159468168	Marionette	INFO	Stopped listening on port 56842
+1594181769591	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWPySVH"
+1594181772745	Marionette	INFO	Listening on port 49717
+1594181772847	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594182560111	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilen2ltcG"
+1594182562781	Marionette	INFO	Listening on port 50000
+1594182562871	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1855: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/TrackInfo.js: Identifier 'TrackInfo' has already been declared (5:9)
+
+[0m [90m 3 | [39m[36mimport[39m [33mTrackInfo[39m from [32m'./TrackInfo'[39m[0m
+[0m [90m 4 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 5 | [39m[36mfunction[39m [33mTrackInfo[39m() {[0m
+[0m [90m   | [39m         [31m[1m^[22m[39m[0m
+[0m [90m 6 | [39m	[36mreturn[39m ([0m
+[0m [90m 7 | [39m		[33m<[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 8 | [39m		[33m<[39m[33mh2[39m[33m>[39m[33mTrack[39m [33mInfo[39m[33m<[39m[33m/[39m[33mh2[39m[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at ScopeHandler.checkRedeclarationInScope (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4793:12)
+    at ScopeHandler.declareName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4759:12)
+    at Object.registerFunctionStatementId (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11901:16)
+    at Object.parseFunction (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11877:12)
+    at Object.parseFunctionStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11502:17)
+    at Object.parseStatementContent (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11194:21)
+    at Object.parseStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11156:17)
+1594182563858	Marionette	INFO	Stopped listening on port 50000
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+1594182671236	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileobbcx2"
+1594182673925	Marionette	INFO	Listening on port 50115
+1594182674025	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1931: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1931: TypeError: version is undefined
+1594182679495	Marionette	INFO	Stopped listening on port 50115
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1594182815723	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMbr0l9"
+1594182818317	Marionette	INFO	Listening on port 50228
+1594182818394	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 82112: TypeError: (destructured parameter) is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 82112: TypeError: (destructured parameter) is undefined
+1594182824926	Marionette	INFO	Stopped listening on port 50228
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1594182854083	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSVdybp"
+1594182856692	Marionette	INFO	Listening on port 50313
+1594182856739	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594222953456	Marionette	INFO	Stopped listening on port 50313
+1594234920562	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileh5pLpL"
+1594234924901	Marionette	INFO	Listening on port 56266
+1594234924928	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2227: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2227: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2227: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2227: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2225: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2225: TypeError: version.map is not a function
+JavaScript warning: https://code.createjs.com/createjs-2015.11.26.min.js, line 13: Script terminated by timeout at:
+b.updateContext@https://code.createjs.com/createjs-2015.11.26.min.js:13:1
+b.draw@https://code.createjs.com/createjs-2015.11.26.min.js:13:7855
+c.draw@https://code.createjs.com/createjs-2015.11.26.min.js:14:366
+b.draw@https://code.createjs.com/createjs-2015.11.26.min.js:13:7874
+c.draw@https://code.createjs.com/createjs-2015.11.26.min.js:14:366
+b.draw@https://code.createjs.com/createjs-2015.11.26.min.js:13:7874
+b.update@https://code.createjs.com/createjs-2015.11.26.min.js:13:13841
+b.handleEvent@https://code.createjs.com/createjs-2015.11.26.min.js:13:14159
+b._dispatchEvent@https://code.createjs.com/createjs-2015.11.26.min.js:12:3663
+b.dispatchEvent@https://code.createjs.com/createjs-2015.11.26.min.js:12:3056
+a._tick@https://code.createjs.com/createjs-2015.11.26.min.js:12:6852
+a._handleTimeout@https://code.createjs.com/createjs-2015.11.26.min.js:12:6140
+
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 68341: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 68341: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2234: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2234: TypeError: version.map is not a function
+JavaScript error: https://a.clickcertain.com/px/pid/s/?c=a96d6ede47e8&pdid=9StF3yUB-2d6daee996bfe56d51dbc188b8469f2f, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://dco-assets.everestads.net/ics-campaign//5031/t/7938/1/z160x600.html, line 91: ReferenceError: adURL is not defined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2234: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2234: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {format, catalog_id, upc, id, version_name, version_number}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:47)
+    in div (at VersionForm2.js:46)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {format, catalog_id, upc, id, version_name, version_number}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:47)
+    in div (at VersionForm2.js:46)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: https://cdn.flashtalking.com/xre/426/4264198/2966946/js/j-4264198-2966946.js, line 383: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101, line 6: Script terminated by timeout at:
+ub@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:6770
+dg/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:46259
+$f/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:45459
+Zf@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:45352
+$f@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:45440
+dg@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:46227
+l.Da@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:49378
+Nf@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:42768
+ch@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:59032
+$g.prototype.zb@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:58760
+Ve/a.a<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:33454
+ce/</<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26579
+$d/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26121
+Jd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23543
+$d@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26429
+ce/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26552
+Jd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23543
+Jd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23587
+
+JavaScript error: https://eus.rubiconproject.com/usync.html?gdpr=0&gdpr_consent=BO2PWXOO2PWXODlDLAENDR-AAAAwyAAA&us_privacy=1---, line 12: SecurityError: The operation is insecure.
+JavaScript error: https://route.carambo.la/inimage/getlayer?pid=sngl16&did=113074&wid=0&rdn=764, line 12: SecurityError: Permission denied to access property "scrollY" on cross-origin object
+JavaScript error: https://cdn.adpushup.com/40792/adpushup.js, line 1: TypeError: window.adpushup.adpTags is undefined
+JavaScript error: https://cdn.adpushup.com/40792/adpushup.js, line 1: TypeError: adp.config is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2243: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2243: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2334: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2334: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2332: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2332: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2332: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2332: TypeError: newVersion.push is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:48)
+    in div (at VersionForm2.js:47)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:48)
+    in div (at VersionForm2.js:47)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:48)
+    in div (at VersionForm2.js:47)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 66956: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in h1 (at VersionForm2.js:48)
+    in div (at VersionForm2.js:47)
+    in VersionForm (at VersionInfo.js:35)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at VersionInfo.js:33)
+    in VersionInfo (at CatalogItem.js:18)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:15)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:93)
+    in Switch (at Main.js:88)
+    in div (at Main.js:47)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:46)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2223: TypeError: version[2] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2223: TypeError: version[2] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2223: TypeError: version[1] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2223: TypeError: version[1] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2230: TypeError: version.map is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594240002427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKxWP6e"
+1594240005510	Marionette	INFO	Listening on port 58556
+1594240005650	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594240174593	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileI3S7TD"
+1594240177173	Marionette	INFO	Listening on port 58663
+1594240177254	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594240229414	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6xeODy"
+1594240232085	Marionette	INFO	Listening on port 58789
+1594240232234	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240240732	Marionette	INFO	Stopped listening on port 58789
+1594240256879	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebBfcHW"
+1594240259536	Marionette	INFO	Listening on port 58890
+1594240259549	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240269793	Marionette	INFO	Stopped listening on port 58890
+1594240352731	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNOoE8B"
+1594240355380	Marionette	INFO	Listening on port 58996
+1594240355400	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240364632	Marionette	INFO	Stopped listening on port 58996
+1594240377179	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJUD4r0"
+1594240379858	Marionette	INFO	Listening on port 59092
+1594240379958	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594240467860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileibWsyQ"
+1594240470462	Marionette	INFO	Listening on port 59211
+1594240470530	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594240510250	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJKyraz"
+1594240512907	Marionette	INFO	Listening on port 59319
+1594240513009	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240520407	Marionette	INFO	Stopped listening on port 59319
+1594240548093	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1HBFx2"
+1594240550661	Marionette	INFO	Listening on port 59415
+1594240550813	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240558899	Marionette	INFO	Stopped listening on port 59415
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594240605481	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRVH0y3"
+1594240608306	Marionette	INFO	Listening on port 59517
+1594240608354	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594240617686	Marionette	INFO	Stopped listening on port 59517

@@ -125,10 +125,13 @@ def test_returns(browser, test_client, db):
     format.send_keys('LP')
     version_name = browser.find_element_by_name('version[0].version_name')
     version_name.send_keys('Limited Edition Vinyl')
-    submit = browser.find_element_by_id('submit')
-    submit.click()
+    version_submit = browser.find_element_by_id('version_submit')
+    version_submit.click()
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(1)
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050lp'
+    
 
 
 
