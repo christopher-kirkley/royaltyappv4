@@ -45,7 +45,7 @@ def add_version():
     catalog_id = data['catalog']
     try:
         for version in data['version']:
-            if 'id' in version:
+            if version['id'] != '':
                 """Update if posting version id"""
                 id = version['id']
                 new_version = db.session.query(Version).get(id)

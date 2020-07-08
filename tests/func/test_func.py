@@ -127,12 +127,26 @@ def test_returns(browser, test_client, db):
     version_name.send_keys('Limited Edition Vinyl')
     version_submit = browser.find_element_by_id('version_submit')
     version_submit.click()
-    browser.get('http://localhost:3000/catalog/1')
-    time.sleep(1)
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050lp'
-    time.sleep(10000)
 
+    """ Adds another version """
+    add_version.click()
+    time.sleep(1)
+    version_number = browser.find_element_by_name('version[1].version_number')
+    version_number.send_keys('SS-050cd')
+    upc = browser.find_element_by_name('version[1].upc')
+    upc.send_keys('678910')
+    format = browser.find_element_by_name('version[1].format')
+    format.send_keys('CD')
+    version_name = browser.find_element_by_name('version[1].version_name')
+    version_name.send_keys('Limited Edition CD')
+    version_submit = browser.find_element_by_id('version_submit')
+    version_submit.click()
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(10000)
+    version_number = browser.find_element_by_name('version[1].version_number')
+    assert version_number.get_attribute("value") == 'SS-050cd'
 
 
 

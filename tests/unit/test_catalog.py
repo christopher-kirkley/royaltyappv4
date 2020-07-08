@@ -54,7 +54,9 @@ def test_can_add_version(test_client, db):
     add_one_catalog(db)
     data = {'catalog': '1',
             'version': [
-                {'upc': '123456',
+                {
+                'id': '',
+                'upc': '123456',
                 'version_number': 'SS-001lp',
                 'version_name': 'Limited Edition',
                 'format': 'LP',
@@ -70,12 +72,16 @@ def test_can_add_multiple_version(test_client, db):
     add_one_catalog(db)
     data = {'catalog': '1',
             'version': [
-                {'upc': '123456',
+                {
+                'id': '',
+                'upc': '123456',
                 'version_number': 'SS-001lp',
                 'version_name': 'Limited Edition',
                 'format': 'LP',
                 },
-                {'upc': '7891011',
+                {
+                'id': '',
+                'upc': '7891011',
                 'version_number': 'SS-001cass',
                 'version_name': 'Limited Cassette',
                 'format': 'Cassette',
@@ -94,12 +100,16 @@ def test_can_edit_versions(test_client, db):
     add_one_catalog(db)
     data = {'catalog': '1',
             'version': [
-                {'upc': '123456',
+                {
+                'id': '',
+                'upc': '123456',
                 'version_number': 'SS-001lp',
                 'version_name': 'Limited Edition',
                 'format': 'LP',
                 },
-                {'upc': '7891011',
+                {
+                'id': '',
+                'upc': '7891011',
                 'version_number': 'SS-001cass',
                 'version_name': 'Limited Cassette',
                 'format': 'Cassette',
@@ -154,6 +164,7 @@ def test_can_edit_versions(test_client, db):
                 'format': 'Cassette',
                 },
                 {
+                'id': '',
                 'upc': '898098',
                 'version_number': 'SS-001tomato',
                 'version_name': 'Limited Tomato',
