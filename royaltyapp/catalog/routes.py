@@ -45,26 +45,32 @@ def add_version():
     catalog_id = data['catalog']
     try:
         for version in data['version']:
-            if version['id'] != '':
-                """Update if posting version id"""
-                id = version['id']
-                new_version = db.session.query(Version).get(id)
-                new_version.upc = version['upc']
-                new_version.version_number = version['version_number']
-                new_version.version_name = version['version_name']
-                new_version.format = version['format']
-            else:
-                new_version = Version(
-                                version_number=version['version_number'],
-                                version_name=version['version_name'],
-                                upc=version['upc'],
-                                format=version['format'],
-                                catalog_id=catalog_id
-                                )
-                db.session.add(new_version)
+            new_version = Version(
+                            version_number=version['version_number'],
+                            version_name=version['version_name'],
+                            upc=version['upc'],
+                            format=version['format'],
+                            catalog_id=catalog_id
+                            )
+            db.session.add(new_version)
+            db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
 
-                
-                
+@catalog.route('/version', methods=['PUT'])
+def edit_version():
+    data = request.get_json(force=True)
+    catalog_id = data['catalog']
+    try:
+        for version in data['version']:
+            id = version['id']
+            new_version = db.session.query(Version).get(id)
+            new_version.upc = version['upc']
+            new_version.version_number = version['version_number']
+            new_version.version_name = version['version_name']
+            new_version.format = version['format']
             db.session.commit()
     except exc.DataError:
         db.session.rollback()

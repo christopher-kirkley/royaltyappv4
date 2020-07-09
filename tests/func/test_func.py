@@ -117,13 +117,13 @@ def test_returns(browser, test_client, db):
     """ Click to add a version. """
     add_version = browser.find_element_by_id('add_version')
     add_version.click()
-    version_number = browser.find_element_by_name('version[0].version_number')
+    version_number = browser.find_element_by_name('addVersion[0].version_number')
     version_number.send_keys('SS-050lp')
-    upc = browser.find_element_by_name('version[0].upc')
+    upc = browser.find_element_by_name('addVersion[0].upc')
     upc.send_keys('123456')
-    format = browser.find_element_by_name('version[0].format')
+    format = browser.find_element_by_name('addVersion[0].format')
     format.send_keys('LP')
-    version_name = browser.find_element_by_name('version[0].version_name')
+    version_name = browser.find_element_by_name('addVersion[0].version_name')
     version_name.send_keys('Limited Edition Vinyl')
     version_submit = browser.find_element_by_id('version_submit')
     version_submit.click()
@@ -133,21 +133,47 @@ def test_returns(browser, test_client, db):
     """ Adds another version """
     add_version.click()
     time.sleep(1)
-    version_number = browser.find_element_by_name('version[1].version_number')
+    version_number = browser.find_element_by_name('addVersion[0].version_number')
     version_number.send_keys('SS-050cd')
-    upc = browser.find_element_by_name('version[1].upc')
+    upc = browser.find_element_by_name('addVersion[0].upc')
     upc.send_keys('678910')
-    format = browser.find_element_by_name('version[1].format')
+    format = browser.find_element_by_name('addVersion[0].format')
     format.send_keys('CD')
-    version_name = browser.find_element_by_name('version[1].version_name')
+    version_name = browser.find_element_by_name('addVersion[0].version_name')
     version_name.send_keys('Limited Edition CD')
     version_submit = browser.find_element_by_id('version_submit')
     version_submit.click()
     browser.get('http://localhost:3000/catalog/1')
-    time.sleep(10000)
+    time.sleep(1)
     version_number = browser.find_element_by_name('version[1].version_number')
     assert version_number.get_attribute("value") == 'SS-050cd'
+    
+    """ User goes to edit versions """
+    upc = browser.find_element_by_name('version[0].upc')
+    version_number = browser.find_element_by_name('version[0].version_number')
+    version_name = browser.find_element_by_name('version[0].version_name')
+    format = browser.find_element_by_name('version[0].format')
 
+    upc.clear()
+    upc.send_keys('11111')
+    version_number.clear()
+    version_number.send_keys('SS-050cass')
+    version_name.clear()
+    version_name.send_keys('Limited Cassette')
+    format.clear()
+    format.send_keys('Cassette')
+    version_submit = browser.find_element_by_id('version_submit')
+    version_submit.click()
+    
+    """ Checks that versions have been updated """
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(1)
+    upc = browser.find_element_by_name('version[0].upc')
+    assert upc.get_attribute("value") == '11111'
+
+
+    
+    
 
 
 
