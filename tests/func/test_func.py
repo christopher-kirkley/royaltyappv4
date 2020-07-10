@@ -65,9 +65,10 @@ def test_returns(browser, test_client, db):
     surnom = browser.find_element_by_id('surnom')
     surnom.clear()
     surnom.send_keys('Ag Kaedy')
-    update = browser.find_element_by_id('update')
-    update.click()
-    assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedy'
+    submit = browser.find_element_by_id('submit')
+    submit.click()
+    # time.sleep(5)
+    # assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedy'
     
     """ User returns to main page and verifies change."""
     artist = browser.find_element_by_id('artists')
@@ -170,11 +171,3 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     upc = browser.find_element_by_name('version[0].upc')
     assert upc.get_attribute("value") == '11111'
-
-
-    
-    
-
-
-
-
