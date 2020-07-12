@@ -1,4 +1,4 @@
-from royaltyapp.models import Artist, Catalog, Version
+from royaltyapp.models import Artist, Catalog, Version, Track
 
 def add_one_artist(db):
     new_artist = Artist(artist_name='Amanar',
@@ -27,6 +27,17 @@ def add_one_version(db):
                         catalog_id=1
                         )
     db.session.add(new_version)
+    db.session.commit()
+
+def add_one_track(db):
+    add_one_catalog(db)
+    obj = db.session.query(Catalog).first()
+    new_track = Track(
+                    track_number='123456',
+                    track_name='SS-001lp',
+                    isrc='Limited Vinyl',
+                    )
+    obj.track_catalog.append(new_track)
     db.session.commit()
 
 

@@ -181,6 +181,8 @@ def test_returns(browser, test_client, db):
     isrc.send_keys('qwerty123')
     track_submit = browser.find_element_by_id('track_submit')
     track_submit.click()
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(1000)
     track_number = browser.find_element_by_name('addTrack[0].track_number')
     assert track_number.get_attribute("value") == '1'
     assert track_name.get_attribute("value") == 'Tacos for Sale'

@@ -2717,3 +2717,87 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
 1594584271517	Marionette	INFO	Stopped listening on port 63823
+1594589956592	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKFV902"
+1594589963002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEF8kNV"
+1594589973839	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecI2dK7"
+1594589987047	Marionette	INFO	Listening on port 64690
+1594589987114	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1594590363491	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileo5FfOX"
+JavaScript error: resource://gre/modules/SearchService.jsm, line 680: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:680:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:3009:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:3160:17
+keywordToURI@resource://gre/modules/URIFixup.jsm:456:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.jsm:671:41
+keywordURIFixup@resource://gre/modules/URIFixup.jsm:999:12
+getFixupURIInfo@resource://gre/modules/URIFixup.jsm:379:26
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.jsm:131:35
+_formatURL@resource:///modules/UrlbarValueFormatter.jsm:226:28
+update@resource:///modules/UrlbarValueFormatter.jsm:65:36
+formatValue@resource:///modules/UrlbarInput.jsm:230:27
+_on_blur@resource:///modules/UrlbarInput.jsm:1893:10
+handleEvent@resource:///modules/UrlbarInput.jsm:372:23
+
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 456: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:680:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:3009:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:3160:17
+keywordToURI@resource://gre/modules/URIFixup.jsm:456:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.jsm:671:41
+keywordURIFixup@resource://gre/modules/URIFixup.jsm:999:12
+getFixupURIInfo@resource://gre/modules/URIFixup.jsm:379:26
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.jsm:131:35
+_formatURL@resource:///modules/UrlbarValueFormatter.jsm:226:28
+update@resource:///modules/UrlbarValueFormatter.jsm:65:36
+formatValue@resource:///modules/UrlbarInput.jsm:230:27
+_on_blur@resource:///modules/UrlbarInput.jsm:1893:10
+handleEvent@resource:///modules/UrlbarInput.jsm:372:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 680}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:680:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:3009:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:3160:17
+keywordToURI@resource://gre/modules/URIFixup.jsm:456:1
+tryKeywordFixupForURIInfo@resource://gre/modules/URIFixup.jsm:671:41
+keywordURIFixup@resource://gre/modules/URIFixup.jsm:999:12
+getFixupURIInfo@resource://gre/modules/URIFixup.jsm:379:26
+_getUrlMetaData@resource:///modules/UrlbarValueFormatter.jsm:131:35
+_formatURL@resource:///modules/UrlbarValueFormatter.jsm:226:28
+update@resource:///modules/UrlbarValueFormatter.jsm:65:36
+formatValue@resource:///modules/UrlbarInput.jsm:230:27
+_on_blur@resource:///modules/UrlbarInput.jsm:1893:10
+handleEvent@resource:///modules/UrlbarInput.jsm:372:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 680}]' when calling method: [nsISearchService::defaultEngine]
+1594590366308	Marionette	INFO	Listening on port 65054
+1594590366401	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594590376476	Marionette	INFO	Stopped listening on port 65054
+Exiting due to channel error.
+1594590381233	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileLgYGew"
+1594590384034	Marionette	INFO	Listening on port 65132
+1594590384123	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1594590398823	Marionette	INFO	Stopped listening on port 65132
+1594590562758	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileK1bFxk"
+1594590565791	Marionette	INFO	Listening on port 65258
+1594590565838	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

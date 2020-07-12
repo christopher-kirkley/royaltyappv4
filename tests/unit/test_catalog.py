@@ -2,7 +2,8 @@ import pytest
 import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track
-from .helpers import add_one_artist, add_one_catalog, add_one_version
+from .helpers import add_one_artist, add_one_catalog, add_one_version,\
+        add_one_track
 
 def test_can_get_all_catalog(test_client, db):
     response = test_client.get('/catalog')
@@ -202,4 +203,13 @@ def test_can_add_track(test_client, db):
     assert tracks[0].track_number == 1
     assert tracks[0].track_name == 'Beans'
     assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_get_catalog_tracks(test_client, db):
+    add_one_track(db)
+    response = test_client.get('/catalog/1')
+    assert response.status_code == 200
+    json_resp = json.loads(response.data)
+    assert json_resp == ''
+    
+    
 

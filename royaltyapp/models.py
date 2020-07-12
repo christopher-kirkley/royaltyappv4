@@ -61,12 +61,13 @@ class Track(db.Model):
 
 class TrackSchema(ma.Schema):
     class Meta:
-        fields = ('id',
-                'track_number',
-                'track_name',
-                'isrc',
-                )
-        sqla_session = db.session
+        model = Track
+        # fields = ('id',
+        #         'track_number',
+        #         'track_name',
+        #         'isrc',
+        #         )
+        # sqla_session = db.session
 
 class VersionSchema(ma.Schema):
     class Meta:
@@ -80,16 +81,18 @@ class VersionSchema(ma.Schema):
 
 class CatalogSchema(ma.Schema):
     version = ma.Nested(VersionSchema(many=True))
+    track = ma.Nested(TrackSchema(many=True))
     artist = ma.Nested("ArtistSchema", exclude=("catalog",))
-    track_catalog = ma.Nested("TrackSchema")
+    # track_catalog = ma.Nested("TrackSchema")
 
     class Meta:
-        fields = ("id",
-                "version",
-                "catalog_number",
-                "catalog_name",
-                "artist",
-                "track_catalog")
+        model = Catalog
+        # fields = ("id",
+        #         "version",
+        #         "catalog_number",
+        #         "catalog_name",
+        #         "artist",
+        #         "track_catalog")
 
 class ArtistSchema(ma.Schema):
     class Meta:
