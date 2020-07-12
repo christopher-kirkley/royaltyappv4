@@ -206,6 +206,8 @@ def test_can_add_track(test_client, db):
 
 def test_can_get_catalog_tracks(test_client, db):
     add_one_track(db)
+    tracks = db.session.query(Track).all()
+    assert len(tracks) == 1
     response = test_client.get('/catalog/1')
     assert response.status_code == 200
     json_resp = json.loads(response.data)
