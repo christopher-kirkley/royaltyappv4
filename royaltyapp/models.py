@@ -4,6 +4,10 @@ from flask_marshmallow import Marshmallow
 db = SQLAlchemy()
 ma = Marshmallow()
 
+TrackCatalogTable = db.Table('track_catalog_table',
+                    db.Column('track_id', db.Integer, db.ForeignKey('track.id')),
+                    db.Column('catalog_id', db.Integer, db.ForeignKey('catalog.id')))
+
 class Artist(db.Model):
     __tablename__ = 'artist'
 
@@ -13,6 +17,7 @@ class Artist(db.Model):
     surnom = db.Column(db.String)
 
     catalog = db.relationship('Catalog', backref='artist')
+    track = db.relationship('Track', backref='artist')
 
 
 class Catalog(db.Model):
@@ -24,6 +29,9 @@ class Catalog(db.Model):
 
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
     version = db.relationship('Version', backref='catalog')
+    track_catalog = db.relationship("Track",
+                                  secondary=TrackCatalogTable,
+                                  back_populates="catalog_track")
 
 class Version(db.Model):
     __tablename__ = 'version'
@@ -35,6 +43,30 @@ class Version(db.Model):
     format = db.Column(db.String(30)) 
     
     catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
+
+class Track(db.Model):
+    __tablename__ = 'track'
+
+    id = db.Column(db.Integer, primary_key=True)
+    track_number = db.Column(db.Integer)
+    track_name = db.Column(db.String(200))
+    isrc = db.Column(db.String(30))
+
+    artist_id = db.Column(db.Integer, db.ForeignKey('artist.id', ondelete='CASCADE'))
+    catalog_track = db.relationship("Catalog",
+                                  secondary=TrackCatalogTable,
+                                  back_populates="track_catalog")
+    
+
+
+class TrackSchema(ma.Schema):
+    class Meta:
+        fields = ('id',
+                'track_number',
+                'track_name',
+                'isrc',
+                )
+        sqla_session = db.session
 
 class VersionSchema(ma.Schema):
     class Meta:
@@ -49,10 +81,15 @@ class VersionSchema(ma.Schema):
 class CatalogSchema(ma.Schema):
     version = ma.Nested(VersionSchema(many=True))
     artist = ma.Nested("ArtistSchema", exclude=("catalog",))
+    track_catalog = ma.Nested("TrackSchema")
 
     class Meta:
-        fields = ("id", "catalog_number", "catalog_name", "version", "artist")
-
+        fields = ("id",
+                "version",
+                "catalog_number",
+                "catalog_name",
+                "artist",
+                "track_catalog")
 
 class ArtistSchema(ma.Schema):
     class Meta:

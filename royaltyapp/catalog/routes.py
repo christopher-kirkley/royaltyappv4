@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
 from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
-        VersionSchema
+        VersionSchema, Track, TrackCatalogTable
 
 catalog = Blueprint('catalog', __name__)
 
@@ -96,6 +96,26 @@ def edit_catalog(id):
     if data['artist_id']:
         obj.surnom = data['artist_id']
     db.session.commit()
+    return jsonify({'success': 'true'})
+
+@catalog.route('/track', methods=['POST'])
+def add_track():
+    data = request.get_json(force=True)
+    catalog_id = data['catalog']
+    obj = db.session.query(Catalog).get(catalog_id)
+    try:
+        for track in data['track']:
+            # add to track table
+            new_track = Track(
+                            track_number=track['track_number'],
+                            track_name=track['track_name'],
+                            isrc=track['isrc'],
+                            )
+            obj.track_catalog.append(new_track)
+            db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
 # @artists.route('/artists', methods=['POST'])

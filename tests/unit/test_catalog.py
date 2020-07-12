@@ -1,7 +1,7 @@
 import pytest
 import json
 
-from royaltyapp.models import Artist, Catalog, Version
+from royaltyapp.models import Artist, Catalog, Version, Track
 from .helpers import add_one_artist, add_one_catalog, add_one_version
 
 def test_can_get_all_catalog(test_client, db):
@@ -111,6 +111,7 @@ def test_can_edit_versions(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/version', data=json_data)
     assert response.status_code == 200
+    assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     data = {'catalog': '1',
             'version': [
@@ -177,3 +178,28 @@ def test_can_update_catalog(test_client, db):
     assert response.status_code == 200
     q = db.session.query(Catalog).first()
     assert q.catalog_number == 'SS-002'
+
+def test_can_add_track(test_client, db):
+    add_one_catalog(db)
+    data = {
+            'catalog': '1',
+            'track': [
+                {'track_number': '1',
+                'track_name': 'Beans',
+                'isrc': 'abc'
+                }]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/track', data=json_data)
+    assert response.status_code == 200
+    q = db.session.query(Track).first()
+    assert q.track_number == 1
+    assert q.track_name == 'Beans'
+    assert q.isrc == 'abc'
+    q = db.session.query(Catalog).first()
+    tracks = q.track_catalog
+    assert len(tracks) == 1
+    assert tracks[0].track_number == 1
+    assert tracks[0].track_name == 'Beans'
+    assert json.loads(response.data) == {'success': 'true'}
+

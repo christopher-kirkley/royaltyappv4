@@ -171,3 +171,18 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     upc = browser.find_element_by_name('version[0].upc')
     assert upc.get_attribute("value") == '11111'
+
+    """ Adds some tracks. """
+    add_track = browser.find_element_by_id('add_track')
+    add_track.click()
+    track_name = browser.find_element_by_name('addTrack[0].track_name')
+    track_name.send_keys('Tacos for Sale')
+    isrc = browser.find_element_by_name('addTrack[0].isrc')
+    isrc.send_keys('qwerty123')
+    track_submit = browser.find_element_by_id('track_submit')
+    track_submit.click()
+    track_number = browser.find_element_by_name('addTrack[0].track_number')
+    assert track_number.get_attribute("value") == '1'
+    assert track_name.get_attribute("value") == 'Tacos for Sale'
+    assert isrc.get_attribute("value") == 'qwerty123'
+
