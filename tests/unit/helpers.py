@@ -33,11 +33,11 @@ def add_one_track(db):
     add_one_catalog(db)
     obj = db.session.query(Catalog).first()
     new_track = Track(
-                    track_number='123456',
-                    track_name='SS-001lp',
-                    isrc='Limited Vinyl',
+                    track_number='1',
+                    track_name='Potatoes for Sale',
+                    isrc='abc123',
                     )
-    obj.track_catalog.append(new_track)
+    obj.tracks.append(new_track)
     db.session.commit()
 
 

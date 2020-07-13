@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
+
 db = SQLAlchemy()
 ma = Marshmallow()
 
@@ -29,9 +30,9 @@ class Catalog(db.Model):
 
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
     version = db.relationship('Version', backref='catalog')
-    track_catalog = db.relationship("Track",
+    tracks = db.relationship("Track",
                                   secondary=TrackCatalogTable,
-                                  back_populates="catalog_track")
+                                  back_populates="catalog")
 
 class Version(db.Model):
     __tablename__ = 'version'
@@ -53,47 +54,70 @@ class Track(db.Model):
     isrc = db.Column(db.String(30))
 
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id', ondelete='CASCADE'))
-    catalog_track = db.relationship("Catalog",
+    catalog = db.relationship("Catalog",
                                   secondary=TrackCatalogTable,
-                                  back_populates="track_catalog")
+                                  back_populates="tracks")
     
 
 
 
-class TrackSchema(ma.Schema):
+class TrackSchema(ma.SQLAlchemySchema):
     class Meta:
         model = 'Track'
-
-class VersionSchema(ma.Schema):
-    class Meta:
-        fields = ('id',
-                'version_number',
-                'version_name',
-                'upc',
-                'format',
-                'catalog_id',
+        fields = ('track_number',
+                'track_name',
+                'isrc',
                 )
 
-class CatalogSchema(ma.Schema):
+class VersionSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Version
+        # include_relationships = True
+
+        id = ma.auto_field()
+        version_number = ma.auto_field()
+        version_name = ma.auto_field()
+        upc = ma.auto_field()
+        format = ma.auto_field()
+        # catalog = ma.auto_field("catalog_id", dump_only=True)
+    catalog_id = ma.auto_field("catalog") 
+
+        # fields = ('id',
+        #         'version_number',
+        #         'version_name',
+        #         'upc',
+        #         'format',
+        #         'catalog_id',
+        #         )
+
+class CatalogSchema(ma.SQLAlchemyAutoSchema):
     version = ma.Nested(VersionSchema(many=True))
     artist = ma.Nested("ArtistSchema", exclude=("catalog",))
+    tracks = ma.Nested("TrackSchema", many=True)
+    
 
     class Meta:
+        model = Catalog
+        # include_relationships = True
+
+        # id = ma.auto_field()
+      # catalog_name = ma.auto_field()
+        # catalog_number = ma.auto_field()
         fields = ("id",
                 "version",
                 "catalog_number",
                 "catalog_name",
                 "artist",
+                "tracks",
                 )
 
+    def _custom_serializer(self, obj):
+        return 'adfas'
 
-class ArtistSchema(ma.Schema):
+class ArtistSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         fields = ("id", "artist_name", "prenom", "surnom", "catalog")
+        include_relationships = True
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
-
-
-
-
 

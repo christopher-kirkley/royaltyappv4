@@ -111,7 +111,7 @@ def add_track():
                             track_name=track['track_name'],
                             isrc=track['isrc'],
                             )
-            obj.track_catalog.append(new_track)
+            obj.tracks.append(new_track)
             db.session.commit()
     except exc.DataError:
         db.session.rollback()
