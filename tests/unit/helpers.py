@@ -36,6 +36,7 @@ def add_one_track(db):
                     track_number='1',
                     track_name='Potatoes for Sale',
                     isrc='abc123',
+                    artist_id='1'
                     )
     obj.tracks.append(new_track)
     db.session.commit()

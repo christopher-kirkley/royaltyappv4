@@ -110,6 +110,7 @@ def add_track():
                             track_number=track['track_number'],
                             track_name=track['track_name'],
                             isrc=track['isrc'],
+                            artist_id=track['artist_id']
                             )
             obj.tracks.append(new_track)
             db.session.commit()

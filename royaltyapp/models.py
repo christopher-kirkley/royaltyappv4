@@ -67,6 +67,7 @@ class TrackSchema(ma.SQLAlchemySchema):
         fields = ('track_number',
                 'track_name',
                 'isrc',
+                'artist_id',
                 )
 
 class VersionSchema(ma.SQLAlchemyAutoSchema):
@@ -107,8 +108,8 @@ class CatalogSchema(ma.SQLAlchemyAutoSchema):
                 "version",
                 "catalog_number",
                 "catalog_name",
-                "artist",
                 "tracks",
+                "artist"
                 )
 
     def _custom_serializer(self, obj):

@@ -187,7 +187,8 @@ def test_can_add_track(test_client, db):
             'track': [
                 {'track_number': '1',
                 'track_name': 'Beans',
-                'isrc': 'abc'
+                'isrc': 'abc',
+                'artist_id': 1
                 }]
             }
     json_data = json.dumps(data)
@@ -197,11 +198,13 @@ def test_can_add_track(test_client, db):
     assert q.track_number == 1
     assert q.track_name == 'Beans'
     assert q.isrc == 'abc'
+    assert q.artist_id == 1
     q = db.session.query(Catalog).first()
     query_tracks = q.tracks
     assert len(query_tracks) == 1
     assert query_tracks[0].track_number == 1
     assert query_tracks[0].track_name == 'Beans'
+    assert query_tracks[0].artist_id == 1
     assert json.loads(response.data) == {'success': 'true'}
 
 def test_can_get_catalog_tracks(test_client, db):
@@ -215,7 +218,8 @@ def test_can_get_catalog_tracks(test_client, db):
     assert len(track_result) == 1
     assert track_result[0] == {'track_number': 1,
                                 'track_name': 'Potatoes for Sale',
-                                'isrc': 'abc123'
+                                'isrc': 'abc123',
+                                'artist_id': 1
                                 }
     
 
