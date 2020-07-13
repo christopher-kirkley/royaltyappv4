@@ -119,31 +119,20 @@ def add_track():
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
-# @artists.route('/artists', methods=['POST'])
-# def add_artist():
-#     data = request.get_json(force=True)
-#     try:
-#         new_artist = Artist(
-#                         artist_name=data['artist_name'],
-#                         prenom=data['prenom'],
-#                         surnom=data['surnom'],
-#                         )
-#         db.session.add(new_artist)
-#         db.session.commit()
-#     except exc.DataError:
-#         db.session.rollback()
-#         return jsonify({'success': 'false'})
-#     return jsonify({'success': 'true'})
+@catalog.route('/track', methods=['PUT'])
+def edit_track():
+    data = request.get_json(force=True)
+    catalog_id = data['catalog']
+    try:
+        for track in data['tracks']:
+            id = track['id']
+            new_track = db.session.query(Track).get(id)
+            new_track.track_number = track['track_number']
+            new_track.track_name = track['track_name']
+            new_track.track_name = track['track_name']
+            db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
 
-
-# @artists.route('/temp', methods=['GET', 'POST'])
-# def temp():
-#     new_artist = Artist(
-#                     artist_name=235423,
-#                     prenom='chaewraew',
-#                     surnom='aerewr'
-#                     )
-#     db.session.add(new_artist)
-#     db.session.commit()
-
-#     return 'yaya'

@@ -189,8 +189,42 @@ def test_returns(browser, test_client, db):
     track_name = browser.find_element_by_name('tracks[0].track_name')
     isrc = browser.find_element_by_name('tracks[0].isrc')
     artist = browser.find_element_by_name('tracks[0].artist_id')
+    track_id = browser.find_element_by_name('tracks[0].id')
     assert track_number.get_attribute("value") == '1'
     assert track_name.get_attribute("value") == 'Tacos for Sale'
     assert isrc.get_attribute("value") == 'qwerty123'
     assert artist.get_attribute("value") == '1'
+    assert track_id.get_attribute("value") == '1'
+    add_track = browser.find_element_by_id('add_track')
+    add_track.click()
+    track_name = browser.find_element_by_name('addTrack[0].track_name')
+    track_name.send_keys('Burritos for Rent')
+    isrc = browser.find_element_by_name('addTrack[0].isrc')
+    isrc.send_keys('uiop1234')
+    select = Select(browser.find_element_by_name('artist_id'))
+    select.select_by_visible_text('Amanar')
+    track_submit = browser.find_element_by_id('track_submit')
+    track_submit.click()
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(1)
+    track_number = browser.find_element_by_name('tracks[1].track_number')
+    track_name = browser.find_element_by_name('tracks[1].track_name')
+    isrc = browser.find_element_by_name('tracks[1].isrc')
+    artist = browser.find_element_by_name('tracks[1].artist_id')
+    assert track_number.get_attribute("value") == '2'
+    assert track_name.get_attribute("value") == 'Burritos for Rent'
+    assert isrc.get_attribute("value") == 'uiop1234'
+    assert artist.get_attribute("value") == '1'
+
+    """ User edits the first track and changes the name. """
+    track_name = browser.find_element_by_name('tracks[0].track_name')
+    track_name.clear()
+    track_name.send_keys('Tacos for President')
+    track_submit = browser.find_element_by_id('track_submit')
+    track_submit.click()
+    browser.get('http://localhost:3000/catalog/1')
+    track_name = browser.find_element_by_name('tracks[0].track_name')
+    assert track_name.get_attribute("value") == 'Tacos for President'
+
+
 

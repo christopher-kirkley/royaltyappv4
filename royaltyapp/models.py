@@ -68,6 +68,7 @@ class TrackSchema(ma.SQLAlchemySchema):
                 'track_name',
                 'isrc',
                 'artist_id',
+                'id'
                 )
 
 class VersionSchema(ma.SQLAlchemyAutoSchema):
