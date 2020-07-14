@@ -1,4 +1,9 @@
+import os
+import pandas as pd
+
 from royaltyapp.models import Artist, Catalog, Version, Track
+from royaltyapp.catalog.helpers import clean_df
+
 
 def add_one_artist(db):
     new_artist = Artist(artist_name='Amanar',
@@ -41,4 +46,10 @@ def add_one_track(db):
     obj.tracks.append(new_track)
     db.session.commit()
 
+def make_pending(db):
+    path = os.getcwd() + "/tests/files/one_catalog.csv"
+    df = pd.read_csv(path)
+    df = clean_df(df)
+    df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
+    return True
 
