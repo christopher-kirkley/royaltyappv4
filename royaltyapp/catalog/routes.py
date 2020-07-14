@@ -3,6 +3,10 @@ from sqlalchemy import exc
 from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
         VersionSchema, Track, TrackCatalogTable
 
+import pandas as pd
+
+from .helpers import clean_df
+
 catalog = Blueprint('catalog', __name__)
 
 @catalog.route('/catalog', methods=['GET'])
@@ -135,4 +139,13 @@ def edit_track():
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
+
+@catalog.route('/catalog/import-catalog', methods=['POST'])
+def import_catalog():
+    data = request.get_json(force=True)
+    df = pd.read_csv(data['body'])
+    df = clean_df(df)
+    df.to_sql('pending', con=engine, if_exists='append', index_label='id')
+    return jsonify({'success': 'true'})
+
 

@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-
+from sqlalchemy import create_engine
 
 db = SQLAlchemy()
 ma = Marshmallow()
@@ -123,3 +123,16 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
 
+
+# try to refactor to make this a temp table using ORM core
+class Pending(db.Model):
+    __tablename__ = 'pending_works'
+
+    id = db.Column(db.Integer, primary_key=True)
+    isrc = db.Column(db.String(255))
+    track_artist = db.Column(db.String(255))
+    track_name = db.Column(db.String(255))
+    track_number = db.Column(db.Integer)
+    catalog_number = db.Column(db.String(255))
+    catalog_name = db.Column(db.String(255))
+    catalog_artist = db.Column(db.String(255))
