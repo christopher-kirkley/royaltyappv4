@@ -223,8 +223,10 @@ def test_returns(browser, test_client, db):
     track_submit = browser.find_element_by_id('track_submit')
     track_submit.click()
     browser.get('http://localhost:3000/catalog/1')
+    time.sleep(1)
     track_name = browser.find_element_by_name('tracks[0].track_name')
     assert track_name.get_attribute("value") == 'Tacos for President'
+    time.sleep(1000)
 
-
+    
 
