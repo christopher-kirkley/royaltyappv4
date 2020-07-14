@@ -3481,3 +3481,170 @@ SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalt
 1594685467888	Marionette	INFO	Listening on port 52523
 1594685467964	Marionette	WARN	TLS certificate errors will be ignored for this session
 1594685472701	Marionette	INFO	Stopped listening on port 52523
+1594763886002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDtlML7"
+1594763889815	Marionette	INFO	Listening on port 58861
+1594763889870	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594763890354	Marionette	INFO	Stopped listening on port 58861
+1594763968084	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevf5TIL"
+1594763970911	Marionette	INFO	Listening on port 58949
+1594763970970	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594763971354	Marionette	INFO	Stopped listening on port 58949
+1594763998215	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2vcYte"
+1594764001565	Marionette	INFO	Listening on port 59031
+1594764001609	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764006430	Marionette	INFO	Stopped listening on port 59031
+1594764135688	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6RZJKw"
+1594764138652	Marionette	INFO	Listening on port 59127
+1594764138694	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764143530	Marionette	INFO	Stopped listening on port 59127
+1594764232607	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGBgVpR"
+1594764235430	Marionette	INFO	Listening on port 59213
+1594764235513	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764241496	Marionette	INFO	Stopped listening on port 59213
+1594764251770	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebRo3ho"
+1594764254731	Marionette	INFO	Listening on port 59296
+1594764254790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764259606	Marionette	INFO	Stopped listening on port 59296
+1594764329795	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilelSm2wl"
+1594764332643	Marionette	INFO	Listening on port 59377
+1594764332681	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764337344	Marionette	INFO	Stopped listening on port 59377
+1594764666082	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileACJ5wx"
+1594764669271	Marionette	INFO	Listening on port 59586
+1594764669442	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764674116	Marionette	INFO	Stopped listening on port 59586
+1594764695170	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIe2YkL"
+1594764697913	Marionette	INFO	Listening on port 59669
+1594764697972	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764702647	Marionette	INFO	Stopped listening on port 59669
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594764908161	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRP5Rq6"
+1594764911031	Marionette	INFO	Listening on port 59787
+1594764911060	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764912130	Marionette	INFO	Stopped listening on port 59787
+1594764970395	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileN51awR"
+1594764973392	Marionette	INFO	Listening on port 60005
+1594764973481	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594764978347	Marionette	INFO	Stopped listening on port 60005
+1594765061109	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilelaRQB1"
+1594765063893	Marionette	INFO	Listening on port 60096
+1594765063926	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765068730	Marionette	INFO	Stopped listening on port 60096
+1594765535425	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile59KOD0"
+1594765538275	Marionette	INFO	Listening on port 60258
+1594765538298	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765543035	Marionette	INFO	Stopped listening on port 60258
+1594765724462	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletdGUdX"
+1594765727154	Marionette	INFO	Listening on port 60365
+1594765727233	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765732015	Marionette	INFO	Stopped listening on port 60365
+1594765754342	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejM1c64"
+1594765757132	Marionette	INFO	Listening on port 60443
+1594765757203	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765763184	Marionette	INFO	Stopped listening on port 60443
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1594765786860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3aBdw0"
+1594765789785	Marionette	INFO	Listening on port 60523
+1594765789850	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765794630	Marionette	INFO	Stopped listening on port 60523
+1594765832870	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJ7WzCH"
+1594765835726	Marionette	INFO	Listening on port 60603
+1594765835749	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765841758	Marionette	INFO	Stopped listening on port 60603
+1594765922121	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilen5KX03"
+1594765924841	Marionette	INFO	Listening on port 60693
+1594765924922	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594765929692	Marionette	INFO	Stopped listening on port 60693
+1594766108824	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile4GOZyM"
+1594766111942	Marionette	INFO	Listening on port 60826
+1594766112015	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1594766217598	Marionette	INFO	Stopped listening on port 60826
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594766220853	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEfn7sO"
+1594766223712	Marionette	INFO	Listening on port 60931
+1594766223745	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1594766328770	Marionette	INFO	Stopped listening on port 60931
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594766342228	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5Mpc12"
+1594766345672	Marionette	INFO	Listening on port 61021
+1594766345721	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+objc[34774]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fffa03663d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x2d8e3df50). One of the two will be used. Which one is undefined.
+1594766450702	Marionette	INFO	Stopped listening on port 61021
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594766463855	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileza4S1B"
+1594766466870	Marionette	INFO	Listening on port 61146
+1594766466930	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+objc[34827]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fffa03663d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12716bf50). One of the two will be used. Which one is undefined.
+1594766571672	Marionette	INFO	Stopped listening on port 61146
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594766710587	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepelclN"
+1594766713454	Marionette	INFO	Listening on port 61305
+1594766713474	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594766777418	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekCGJw6"
+1594766780273	Marionette	INFO	Listening on port 61414
+1594766780332	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[34907]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fffa03663d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x1283c2f50). One of the two will be used. Which one is undefined.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1594766885323	Marionette	INFO	Stopped listening on port 61414
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1594766891733	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefRtQ7a"
+1594766894597	Marionette	INFO	Listening on port 61529
+1594766894623	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+objc[34944]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fffa03663d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x123681f50). One of the two will be used. Which one is undefined.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594767005884	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilehbpPED"
+1594767008644	Marionette	INFO	Listening on port 61646
+1594767008680	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594767014745	Marionette	INFO	Stopped listening on port 61646
+1594767052368	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7zd4K3"
+1594767055053	Marionette	INFO	Listening on port 61729
+1594767055151	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594767160170	Marionette	INFO	Stopped listening on port 61729
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1594767321147	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledZcpgo"
+1594767324157	Marionette	INFO	Listening on port 61910
+1594767324187	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594767328961	Marionette	INFO	Stopped listening on port 61910
+1594767366148	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileBfMO5s"
+1594767369038	Marionette	INFO	Listening on port 61994
+1594767369125	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594767458343	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIthdQb"
+1594767461159	Marionette	INFO	Listening on port 62104
+1594767461220	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1594767484241	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFuEL2M"
+1594767487120	Marionette	INFO	Listening on port 62192
+1594767487146	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

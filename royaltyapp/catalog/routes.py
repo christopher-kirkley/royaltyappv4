@@ -142,8 +142,8 @@ def edit_track():
 
 @catalog.route('/catalog/import-catalog', methods=['POST'])
 def import_catalog():
-    data = request.get_json(force=True)
-    df = pd.read_csv(data['body'])
+    file = request.files['CSV']
+    df = pd.read_csv(file.stream)
     df = clean_df(df)
     df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
     pending_to_artist(db)

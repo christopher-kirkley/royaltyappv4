@@ -45,3 +45,5 @@ def pending_to_catalog(db):
     JOIN track ON pending.isrc = track.isrc
     JOIN catalog ON pending.catalog_number = catalog.catalog_number;
     """)
+    db.session.commit()
+    return True
