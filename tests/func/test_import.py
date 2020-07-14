@@ -28,7 +28,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_catalog').click()
 
     """ User clicks to upload catalog. """
-    path = os.getcwd() + "/tests/files/full_catalog.csv"
+    path = os.getcwd() + "/tests/files/one_catalog.csv"
     browser.find_element_by_id('file_to_upload').send_keys(path)
     time.sleep(2)
     browser.find_element_by_id('submit').click()
@@ -37,7 +37,7 @@ def test_returns(browser, test_client, db):
 
     """ User returns to catalog and sees it has worked. """
     browser.find_element_by_id('catalog').click()
-    time.sleep(1)
+    time.sleep(100)
     catalog_table = browser.find_element_by_id('catalog_table')
     rows = catalog_table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
