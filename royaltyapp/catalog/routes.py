@@ -5,7 +5,7 @@ from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 
 import pandas as pd
 
-from .helpers import clean_df
+from .helpers import clean_df, pending_to_artist, pending_to_catalog
 
 catalog = Blueprint('catalog', __name__)
 
@@ -146,6 +146,8 @@ def import_catalog():
     df = pd.read_csv(data['body'])
     df = clean_df(df)
     df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
+    pending_to_artist(db)
+    pending_to_catalog(db)
     return jsonify({'success': 'true'})
 
 
