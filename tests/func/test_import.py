@@ -28,7 +28,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_catalog').click()
 
     """ User clicks to upload catalog. """
-    path = os.getcwd() + "/tests/func/test_files/full_catalog.csv"
+    path = os.getcwd() + "/tests/files/full_catalog.csv"
     browser.find_element_by_id('file_to_upload').send_keys(path)
     time.sleep(2)
     browser.find_element_by_id('submit').click()
