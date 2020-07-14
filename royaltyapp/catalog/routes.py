@@ -145,7 +145,7 @@ def import_catalog():
     data = request.get_json(force=True)
     df = pd.read_csv(data['body'])
     df = clean_df(df)
-    df.to_sql('pending', con=engine, if_exists='append', index_label='id')
+    df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
     return jsonify({'success': 'true'})
 
 

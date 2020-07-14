@@ -126,7 +126,7 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
 
 # try to refactor to make this a temp table using ORM core
 class Pending(db.Model):
-    __tablename__ = 'pending_works'
+    __tablename__ = 'pending'
 
     id = db.Column(db.Integer, primary_key=True)
     isrc = db.Column(db.String(255))
