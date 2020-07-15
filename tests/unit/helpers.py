@@ -59,4 +59,19 @@ def make_pending_version(db):
     df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
     return True
 
+def build_catalog(db):
+    path = os.getcwd() + "/tests/files/one_catalog.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-catalog',
+            data=data)
+    path = os.getcwd() + "/tests/files/one_version.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-version',
+            data=data)
 
