@@ -229,9 +229,9 @@ def test_can_edit_track(test_client, db):
     data = {'catalog': '1',
             'tracks': [
                 {'id': 1,
-                'track_number': 1,
+                'track_number': 2,
                 'track_name': 'Tacos for Sale',
-                'isrc': 'abc123',
+                'isrc': 'qwe123',
                 'artist_id': 1
                                 }
                 ]
@@ -242,4 +242,6 @@ def test_can_edit_track(test_client, db):
     assert json.loads(response.data) == {'success': 'true'}
     q = db.session.query(Track).first()
     assert q.track_name == 'Tacos for Sale'
+    assert q.isrc == 'qwe123'
+    assert q.track_number == 2
 

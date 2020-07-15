@@ -136,3 +136,13 @@ class Pending(db.Model):
     catalog_number = db.Column(db.String(255))
     catalog_name = db.Column(db.String(255))
     catalog_artist = db.Column(db.String(255))
+
+class PendingVersion(db.Model):
+    __tablename__ = 'pending_version'
+
+    id = db.Column(db.Integer, primary_key=True)
+    version_number = db.Column(db.String(255))
+    version_name = db.Column(db.String(255))
+    upc = db.Column(db.String(255))
+    format = db.Column(db.String(255))
+    catalog_number = db.Column(db.String(255))

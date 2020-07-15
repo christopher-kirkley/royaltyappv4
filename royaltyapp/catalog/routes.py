@@ -5,7 +5,7 @@ from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 
 import pandas as pd
 
-from .helpers import clean_df, pending_to_artist, pending_to_catalog
+from .helpers import clean_df, pending_to_artist, pending_to_catalog, pending_version_to_version
 
 catalog = Blueprint('catalog', __name__)
 
@@ -133,7 +133,7 @@ def edit_track():
             new_track = db.session.query(Track).get(id)
             new_track.track_number = track['track_number']
             new_track.track_name = track['track_name']
-            new_track.track_name = track['track_name']
+            new_track.isrc = track['isrc']
             db.session.commit()
     except exc.DataError:
         db.session.rollback()
@@ -149,5 +149,14 @@ def import_catalog():
     pending_to_artist(db)
     pending_to_catalog(db)
     return jsonify({'success': 'true'})
+
+@catalog.route('/catalog/import-version', methods=['POST'])
+def import_version():
+    file = request.files['CSV']
+    df = pd.read_csv(file.stream)
+    df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
+    pending_version_to_version(db)
+    return jsonify({'success': 'true'})
+
 
 
