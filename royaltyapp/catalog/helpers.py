@@ -1,7 +1,7 @@
 from sqlalchemy import select
 import pandas
 
-from royaltyapp.models import Pending, Artist, db
+from royaltyapp.models import Pending, Artist, db, PendingVersion, Catalog, Version
 
 def clean_df(df):
     df['track_artist'] = df['track_artist'].str.replace("’", "'")
@@ -47,3 +47,22 @@ def pending_to_catalog(db):
     """)
     db.session.commit()
     return True
+
+def pending_version_to_version(db):
+    """ Import from pending version table to versions. """
+    sel = (db.session.query(PendingVersion.version_number,
+            PendingVersion.version_name,
+            PendingVersion.upc,
+            PendingVersion.format,
+            Catalog.id))
+    sel = (sel.join(Catalog,
+        Catalog.catalog_number==PendingVersion.catalog_number)
+        .distinct(PendingVersion.version_number)
+        )
+    ins = Version.__table__.insert().from_select(['version_number',
+        'version_name',
+        'upc',
+        'format',
+        'catalog_id'], sel)
+    db.session.execute(ins)
+    db.session.commit()

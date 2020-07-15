@@ -2,20 +2,23 @@ import pytest
 import json
 
 import os
+import io
+
 import pandas as pd
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending
-from .helpers import add_one_artist, add_one_catalog, add_one_version, add_one_track, make_pending
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion
+from .helpers import add_one_artist, add_one_catalog, add_one_version, add_one_track, make_pending, make_pending_version
 
-from royaltyapp.catalog.helpers import clean_df, pending_to_artist, pending_to_catalog
+from royaltyapp.catalog.helpers import clean_df, pending_to_artist, pending_to_catalog, pending_version_to_version
 
 def test_can_import_catalog(test_client, db):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
+    f = open(path, 'rb')
     data = {
-            'body': path
+            'CSV': f
             }
-    json_data = json.dumps(data)
-    response = test_client.post('/catalog/import-catalog', data=json_data)
+    response = test_client.post('/catalog/import-catalog',
+            data=data)
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     query = db.session.query(Pending).all()
@@ -53,4 +56,23 @@ def test_can_process_df(db):
     assert len(query) == 2
     assert query[0].catalog_name == 'Akaline Kidal'
     
+def test_can_import_version(test_client, db):
+    make_pending(db)
+    pending_to_artist(db)
+    pending_to_catalog(db)
+    path = os.getcwd() + "/tests/files/one_version.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-version',
+            data=data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    query = db.session.query(PendingVersion).all()
+    assert len(query) != 0
+    query = db.session.query(PendingVersion).first()
+    assert query.version_number == 'SS-050cass'
+    query = db.session.query(Catalog).first()
+    assert len(query.version) == 3
 

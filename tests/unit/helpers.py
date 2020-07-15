@@ -53,3 +53,10 @@ def make_pending(db):
     df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
     return True
 
+def make_pending_version(db):
+    path = os.getcwd() + "/tests/files/one_version.csv"
+    df = pd.read_csv(path)
+    df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
+    return True
+
+

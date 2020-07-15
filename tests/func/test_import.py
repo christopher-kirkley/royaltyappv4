@@ -29,22 +29,37 @@ def test_returns(browser, test_client, db):
 
     """ User clicks to upload catalog. """
     path = os.getcwd() + "/tests/files/one_catalog.csv"
-    browser.find_element_by_id('file_to_upload').send_keys(path)
+    browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(2)
-    browser.find_element_by_id('submit').click()
+    browser.find_element_by_id('catalog_upload').click()
     msg = browser.find_element_by_id('msg')
     assert msg.text == '1 file uploaded'
 
     """ User returns to catalog and sees it has worked. """
     browser.find_element_by_id('catalog').click()
-    time.sleep(100)
     catalog_table = browser.find_element_by_id('catalog_table')
     rows = catalog_table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
     assert tds[0].text == 'SS-050'
-    assert tds[1].text == 'Amanar'
+    assert tds[1].text == 'Ahmed Ag Kaedy'
     assert tds[2].text == 'Akaline Kidal'
+
+    """ User uploads version CSV. """
+    browser.find_element_by_id('import_catalog').click()
+    time.sleep(1)
+    path = os.getcwd() + "/tests/files/one_version.csv"
+    browser.find_element_by_id('version_to_upload').send_keys(path)
+    time.sleep(2)
+    browser.find_element_by_id('version_upload').click()
+    msg = browser.find_element_by_id('version_msg')
+    assert msg.text == '1 file uploaded'
     
+    """ User goes to Catalog Detail page and see the results. """
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(2)
+    version_number = browser.find_element_by_name('version[0].version_number')
+    assert version_number.get_attribute("value") == 'SS-050cass'
+
 
     
 
