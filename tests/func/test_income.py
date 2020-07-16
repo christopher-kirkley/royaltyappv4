@@ -37,8 +37,21 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('version_upload').click()
     msg = browser.find_element_by_id('version_msg')
 
-    """ User goes to income page. """
+    """ User goes to income page and uploads a file."""
     browser.find_element_by_id('income').click()
+    time.sleep(1)
+    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    browser.find_element_by_id('select_statement').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('bandcamp').click()
+    
+    # select = Select(browser.find_element_by_id('source_statement'))
+    # select.select_by_visible_text('Bandcamp')
+    browser.find_element_by_id('upload_statement').click()
+    msg = browser.find_element_by_id('statement_message')
+    assert msg.text == "Uploaded!"
+
+
 
 
 
