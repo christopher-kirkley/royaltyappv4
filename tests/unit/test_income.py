@@ -1,78 +1,41 @@
 import pytest
 import json
+import datetime
 
 import os
 import io
 
 import pandas as pd
+import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion
-from .helpers import add_one_artist, add_one_catalog, add_one_version, add_one_track, make_pending, make_pending_version
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending
 
-from royaltyapp.catalog.helpers import clean_df, pending_to_artist, pending_to_catalog, pending_version_to_version
+from royaltyapp.income.helpers import StatementFactory
 
-def test_can_import_catalog(test_client, db):
-    path = os.getcwd() + "/tests/files/one_catalog.csv"
-    f = open(path, 'rb')
+def test_can_import_bandcamp_sales(test_client, db):
+    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
     data = {
-            'CSV': f
+            'statement_source': 'bandcamp'
             }
-    response = test_client.post('/catalog/import-catalog',
-            data=data)
+    data['file'] = (path, 'bandcamp_test.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
     assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 732
+    first = db.session.query(IncomePending).first()
+    assert first.date == datetime.date(2020, 1, 1)
+    assert first.upc_id == '602318 137111'
     assert json.loads(response.data) == {'success': 'true'}
-    query = db.session.query(Pending).all()
-    assert len(query) != 0
-    query = db.session.query(Pending).first()
-    assert query.track_artist == 'Ahmed Ag Kaedy'
-    query = db.session.query(Artist).first()
-    assert query.artist_name == 'Ahmed Ag Kaedy'
-    query = db.session.query(Catalog).first()
-    assert query.catalog_name == 'Akaline Kidal'
-
-def test_can_clean_csv(test_client):
-    path = os.getcwd() + "/tests/files/one_catalog.csv"
-    df = pd.read_csv(path)
-    assert len(df) != 0
-    df = clean_df(df)
-    assert df['track_artist'][0] == "Ahmed Ag Kaedy"
-    # write some tests for edge cases here
-
-def test_can_load_database(db):
-    query = db.session.query(Pending).all()
-    assert len(query) == 0
-
-def test_can_process_df(db):
-    make_pending(db)
-    query = db.session.query(Pending).all()
-    assert len(query) != 0
-    pending_to_artist(db)
-    query = db.session.query(Artist).all()
-    assert len(query) == 3
-    assert query[0].artist_name == 'Ahmed Ag Kaedy'
-    assert query[2].artist_name == 'Various Artist'
-    pending_to_catalog(db)
-    query = db.session.query(Catalog).all()
-    assert len(query) == 2
-    assert query[0].catalog_name == 'Akaline Kidal'
+    # result = db.session.query(IncomePending).filter(IncomePending.upc_id == None).all()
+    # assert len(result) > 0
     
-def test_can_import_version(test_client, db):
-    make_pending(db)
-    pending_to_artist(db)
-    pending_to_catalog(db)
-    path = os.getcwd() + "/tests/files/one_version.csv"
-    f = open(path, 'rb')
-    data = {
-            'CSV': f
-            }
-    response = test_client.post('/catalog/import-version',
-            data=data)
-    assert response.status_code == 200
-    assert json.loads(response.data) == {'success': 'true'}
-    query = db.session.query(PendingVersion).all()
-    assert len(query) != 0
-    query = db.session.query(PendingVersion).first()
-    assert query.version_number == 'SS-050cass'
-    query = db.session.query(Catalog).first()
-    assert len(query.version) == 3
-
+# def test_can_use_bandcamp_statement_factory(test_client, db):
+    # path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    # file = dict(file=path, filename='bandcamp_test.csv')
+    # statement = StatementFactory.get_statement(path, 'bandcamp')
+    # statement.create_df()
+    # assert statement.file == file
+    # statement.clean()
+    # statement.modify_columns()
+    # assert list(statement.df.columns) == statement.columns_for_db

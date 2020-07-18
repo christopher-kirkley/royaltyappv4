@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track
 from royaltyapp.catalog.helpers import clean_df

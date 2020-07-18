@@ -9,6 +9,7 @@ TrackCatalogTable = db.Table('track_catalog_table',
                     db.Column('track_id', db.Integer, db.ForeignKey('track.id')),
                     db.Column('catalog_id', db.Integer, db.ForeignKey('catalog.id')))
 
+
 class Artist(db.Model):
     __tablename__ = 'artist'
 
@@ -34,6 +35,7 @@ class Catalog(db.Model):
                                   secondary=TrackCatalogTable,
                                   back_populates="catalog")
 
+
 class Version(db.Model):
     __tablename__ = 'version'
 
@@ -44,6 +46,7 @@ class Version(db.Model):
     format = db.Column(db.String(30)) 
     
     catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
+
 
 class Track(db.Model):
     __tablename__ = 'track'
@@ -92,6 +95,7 @@ class VersionSchema(ma.SQLAlchemyAutoSchema):
         #         'catalog_id',
         #         )
 
+
 class CatalogSchema(ma.SQLAlchemyAutoSchema):
     version = ma.Nested(VersionSchema(many=True))
     artist = ma.Nested("ArtistSchema", exclude=("catalog",))
@@ -116,6 +120,7 @@ class CatalogSchema(ma.SQLAlchemyAutoSchema):
     def _custom_serializer(self, obj):
         return 'adfas'
 
+
 class ArtistSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         fields = ("id", "artist_name", "prenom", "surnom", "catalog")
@@ -137,6 +142,7 @@ class Pending(db.Model):
     catalog_name = db.Column(db.String(255))
     catalog_artist = db.Column(db.String(255))
 
+
 class PendingVersion(db.Model):
     __tablename__ = 'pending_version'
 
@@ -146,3 +152,46 @@ class PendingVersion(db.Model):
     upc = db.Column(db.String(255))
     format = db.Column(db.String(255))
     catalog_number = db.Column(db.String(255))
+
+
+class IncomePending(db.Model):
+    __tablename__ = 'income_pending'
+
+    id = db.Column(db.Integer, primary_key=True)
+    statement = db.Column(db.String(255))
+    distributor = db.Column(db.String(255))
+    date = db.Column(db.Date)
+    order_id = db.Column(db.String(255))
+    upc_id = db.Column(db.String(255))
+    isrc_id = db.Column(db.String(255))
+    version_number = db.Column(db.String(255))
+    catalog_id = db.Column(db.String(255))
+    album_name = db.Column(db.String(255))
+    track_name = db.Column(db.String(255))
+    quantity = db.Column(db.Integer)
+    amount = db.Column(db.Numeric(23, 18))
+    label_fee = db.Column(db.Numeric(8, 2))
+    label_net = db.Column(db.Numeric(23, 8))
+    customer = db.Column(db.String(255))
+    city = db.Column(db.String(255))
+    region = db.Column(db.String(255))
+    country = db.Column(db.String(255))
+    type = db.Column(db.String(255))
+    medium = db.Column(db.String(255))
+    product = db.Column(db.String(255))
+    description = db.Column(db.String(255))
+    tracks_id = db.Column(db.Integer)
+    version_id = db.Column(db.Integer)
+    distributor_id = db.Column(db.Integer)
+    statement_id = db.Column(db.Integer)
+
+
+# class IncomeDistributor(db.Model):
+#     __tablename__ = 'income_distributor'
+#     id = Column(Integer, primary_key=True)
+#     distributor_name = Column(String(255), unique=True)
+#     distributor_statement = Column(String(255), unique=True)
+
+#     income_total = relationship('IncomeTotal', backref='income_distributor')
+#     imported_statement = relationship('ImportedStatement', backref='income_distributor', passive_deletes=True)
+

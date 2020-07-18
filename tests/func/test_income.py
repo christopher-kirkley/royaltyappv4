@@ -48,12 +48,12 @@ def test_returns(browser, test_client, db):
     # select = Select(browser.find_element_by_id('source_statement'))
     # select.select_by_visible_text('Bandcamp')
     browser.find_element_by_id('upload_statement').click()
+    time.sleep(1)
     msg = browser.find_element_by_id('statement_message')
     assert msg.text == "Uploaded!"
 
-
-
-
-
+    """ User sees prompt for errors, and clicks to fix matching errors. """
+    browser.find_element_by_id('fix_errors').click()
 
     
+
