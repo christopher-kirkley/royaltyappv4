@@ -30,6 +30,21 @@ def test_can_import_bandcamp_sales(test_client, db):
     # result = db.session.query(IncomePending).filter(IncomePending.upc_id == None).all()
     # assert len(result) > 0
     
+def test_can_get_matching_errors(test_client, db):
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'errors': 0}
+    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'bandcamp_test.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'errors': 732}
+
 # def test_can_use_bandcamp_statement_factory(test_client, db):
     # path = os.getcwd() + "/tests/files/bandcamp_test.csv"
     # file = dict(file=path, filename='bandcamp_test.csv')

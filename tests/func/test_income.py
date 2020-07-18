@@ -53,7 +53,12 @@ def test_returns(browser, test_client, db):
     assert msg.text == "Uploaded!"
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
+    # assert browser.find_element_by_id('error_msg').text != "Error!"
+    assert browser.find_element_by_id('matching_errors').text == "You have 732 matching errors."
     browser.find_element_by_id('fix_errors').click()
+    time.sleep(1)
 
+    """ User loads matching error page. """
+    assert browser.find_element_by_id('header').text == "Matching Errors"
     
 

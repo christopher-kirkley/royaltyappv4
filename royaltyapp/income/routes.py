@@ -5,6 +5,7 @@ from sqlalchemy import exc
 
 import pandas as pd
 
+from royaltyapp.models import db, IncomePending, Version
 from .helpers import StatementFactory
 
 income = Blueprint('income', __name__)
@@ -21,3 +22,10 @@ def import_sales():
     statement.insert_to_db()
     return jsonify({'success': 'true'})
 
+@income.route('/income/matching-errors', methods=['GET'])
+def get_matching_errors():
+    sel = db.session.query(IncomePending, Version)
+    sel = sel.outerjoin(Version, Version.upc == IncomePending.upc_id).all()
+    # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
+    # sel = sel.filter(Version.version_number == None, Bundle.bundle_number == None).order_by(IncomePending.catalog_id).all()
+    return jsonify({'errors': len(sel)})
