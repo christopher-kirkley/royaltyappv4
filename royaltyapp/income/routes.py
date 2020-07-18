@@ -5,8 +5,9 @@ from sqlalchemy import exc
 
 import pandas as pd
 
-from royaltyapp.models import db, IncomePending, Version
-from .helpers import StatementFactory
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema
+
+from .helpers import StatementFactory, find_distinct_matching_errors
 
 income = Blueprint('income', __name__)
 
@@ -25,7 +26,13 @@ def import_sales():
 @income.route('/income/matching-errors', methods=['GET'])
 def get_matching_errors():
     sel = db.session.query(IncomePending, Version)
-    sel = sel.outerjoin(Version, Version.upc == IncomePending.upc_id).all()
+    sel = sel.outerjoin(Version, Version.upc == IncomePending.upc_id)
     # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
-    # sel = sel.filter(Version.version_number == None, Bundle.bundle_number == None).order_by(IncomePending.catalog_id).all()
-    return jsonify({'errors': len(sel)})
+    sel = sel.filter(Version.upc == None).order_by(IncomePending.catalog_id).all()
+
+    query = find_distinct_matching_errors().all()
+    income_pendings_schema = IncomePendingSchema(many=True)
+    matching_errors = income_pendings_schema.dumps(query)
+
+    return matching_errors
+
