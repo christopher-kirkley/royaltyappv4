@@ -40,7 +40,7 @@ def test_returns(browser, test_client, db):
     """ User goes to income page and uploads a file."""
     browser.find_element_by_id('income').click()
     time.sleep(1)
-    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    path = os.getcwd() + "/tests/files/one_bandcamp_test.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
@@ -54,11 +54,22 @@ def test_returns(browser, test_client, db):
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
     # assert browser.find_element_by_id('error_msg').text != "Error!"
-    assert browser.find_element_by_id('matching_errors').text == "You have 732 matching errors."
+    assert browser.find_element_by_id('matching_errors').text == "You have 1 matching errors."
     browser.find_element_by_id('fix_errors').click()
     time.sleep(1)
 
     """ User loads matching error page. """
     assert browser.find_element_by_id('header').text == "Matching Errors"
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    tds = rows[1].find_elements_by_tag_name('td');
+    time.sleep(1000)
+    assert tds[0].text == 'bandcamp'
+    assert tds[1].text == ''
+    assert tds[2].text == ''
+    assert tds[3].text == 'SS-050-cass'
+    assert tds[4].text == 'SS-050'
+
+    assert rows[0] == ''
     
 
