@@ -10,7 +10,7 @@ import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending
 
-from royaltyapp.income.helpers import StatementFactory
+from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors
 
 def test_can_import_bandcamp_sales(test_client, db):
     path = os.getcwd() + "/tests/files/bandcamp_test.csv"
@@ -25,7 +25,7 @@ def test_can_import_bandcamp_sales(test_client, db):
     assert len(result) == 732
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '602318 137111'
+    assert first.upc_id == '602318137111'
     assert json.loads(response.data) == {'success': 'true'}
     # result = db.session.query(IncomePending).filter(IncomePending.upc_id == None).all()
     # assert len(result) > 0
@@ -33,17 +33,29 @@ def test_can_import_bandcamp_sales(test_client, db):
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == {'errors': 0}
-    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    assert json.loads(response.data) == []
+    path = os.getcwd() + "/tests/files/one_bandcamp_test.csv"
     data = {
             'statement_source': 'bandcamp'
             }
-    data['file'] = (path, 'bandcamp_test.csv')
+    data['file'] = (path, 'one_bandcamp_test.csv')
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == {'errors': 732}
+    assert db.session.query(IncomePending).all() != 0
+    assert db.session.query(IncomePending).first().distributor == 'bandcamp'
+    assert db.session.query(IncomePending).first().upc_id == '602318136817'
+    assert db.session.query(IncomePending).first().catalog_id == 'SS-050'
+    assert db.session.query(IncomePending).first().version_id == None
+
+    """check function"""
+    query = find_distinct_matching_errors()
+    res = query.first()
+    assert res.distributor == 'bandcamp'
+    assert res.upc_id == '602318136817'
+
+    assert len(json.loads(response.data)) == 4
 
 # def test_can_use_bandcamp_statement_factory(test_client, db):
     # path = os.getcwd() + "/tests/files/bandcamp_test.csv"

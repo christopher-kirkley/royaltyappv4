@@ -129,6 +129,9 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
 
 
+
+
+
 # try to refactor to make this a temp table using ORM core
 class Pending(db.Model):
     __tablename__ = 'pending'
@@ -185,6 +188,20 @@ class IncomePending(db.Model):
     distributor_id = db.Column(db.Integer)
     statement_id = db.Column(db.Integer)
 
+class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = ("id",
+                "distributor",
+                "isrc_id",
+                "upc_id",
+                "version_number",
+                "catalog_id",
+                "album_name",
+                "track_name",
+                "type",
+                "medium",
+                "description")
+        include_relationships = True
 
 # class IncomeDistributor(db.Model):
 #     __tablename__ = 'income_distributor'
