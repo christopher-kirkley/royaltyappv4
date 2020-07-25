@@ -12,6 +12,8 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors
 
+from .helpers import build_catalog, add_bandcamp_sales
+
 def test_can_import_bandcamp_sales(test_client, db):
     path = os.getcwd() + "/tests/files/bandcamp_test.csv"
     data = {
@@ -27,8 +29,6 @@ def test_can_import_bandcamp_sales(test_client, db):
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == '602318137111'
     assert json.loads(response.data) == {'success': 'true'}
-    # result = db.session.query(IncomePending).filter(IncomePending.upc_id == None).all()
-    # assert len(result) > 0
     
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
@@ -54,8 +54,23 @@ def test_can_get_matching_errors(test_client, db):
     res = query.first()
     assert res.distributor == 'bandcamp'
     assert res.upc_id == '602318136817'
-
     assert len(json.loads(response.data)) == 4
+
+def test_can_update_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    data = {
+            'id': 4,
+            'upc_id': '111'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    query = (db.session.query(IncomePending)
+                .filter(IncomePending.id == 4)
+                .first()
+                )
+    assert query.upc_id == '111'
+    assert json.loads(response.data) == {'success': 'true'}
 
 
 
