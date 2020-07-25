@@ -67,9 +67,13 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == ''
     assert tds[2].text == 'SS-050-cass'
     assert tds[3].text == 'SS-050'
+    browser.find_element_by_id('new_upc').click()
     browser.find_element_by_id('SS-050cass').click()
-    time.sleep(1) 
-    assert not browser.find_element_by_id('matching_error_table')
+    browser.find_element_by_id('update').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
 
     
 

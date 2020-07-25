@@ -60,7 +60,7 @@ def make_pending_version(db):
     df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
     return True
 
-def build_catalog(db):
+def build_catalog(db, test_client):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
     f = open(path, 'rb')
     data = {
@@ -75,4 +75,13 @@ def build_catalog(db):
             }
     response = test_client.post('/catalog/import-version',
             data=data)
+
+def add_bandcamp_sales(test_client):
+    path = os.getcwd() + "/tests/files/one_bandcamp_test.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'one_bandcamp_test.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
 

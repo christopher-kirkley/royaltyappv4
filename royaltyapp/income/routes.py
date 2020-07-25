@@ -33,6 +33,18 @@ def get_matching_errors():
     query = find_distinct_matching_errors().all()
     income_pendings_schema = IncomePendingSchema(many=True)
     matching_errors = income_pendings_schema.dumps(query)
-
     return matching_errors
+
+@income.route('/income/update-errors', methods=['PUT'])
+def update_errors():
+    data = request.get_json(force=True)
+    try:
+        id = data['id']
+        new_entry = db.session.query(IncomePending).get(id)
+        new_entry.upc_id = data['upc_id']
+        db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
 
