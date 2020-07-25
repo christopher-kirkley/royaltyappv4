@@ -60,7 +60,7 @@ def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
     data = {
-            'id': 4,
+            'version_number': 'SS-050-cass',
             'upc_id': '111'
             }
     json_data = json.dumps(data)
