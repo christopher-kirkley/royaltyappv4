@@ -80,8 +80,8 @@ class BandcampStatement(Statement):
         catalog_df = pd.read_sql_table('catalog', db.engine)
         self.df = self.df.join(catalog_df.set_index('catalog_name'), on='item name')
 
-        self.df['sku'] = np.where(self.df['item type'] == 'digital', self.df['catalog number'] + 'digi', self.df['sku'])
-        self.df['sku'] = np.where((self.df['item type'] == 'digital') & (self.df['catalog number'].isnull()), self.df['catalog_number'] + 'digi', self.df['sku'])
+        # self.df['sku'] = np.where(self.df['item type'] == 'digital', self.df['catalog number'] + 'digi', self.df['sku'])
+        # self.df['sku'] = np.where((self.df['item type'] == 'digital') & (self.df['catalog number'].isnull()), self.df['catalog_number'] + 'digi', self.df['sku'])
         self.df['date'] = pd.to_datetime(self.df['date'])
         self.df['date'] = self.df['date'].dt.strftime('%Y-%m-%d')
         self.df['upc'] = self.df['upc'].str.replace(' ', '')

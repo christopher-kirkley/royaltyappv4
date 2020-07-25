@@ -25,11 +25,6 @@ def import_sales():
 
 @income.route('/income/matching-errors', methods=['GET'])
 def get_matching_errors():
-    sel = db.session.query(IncomePending, Version)
-    sel = sel.outerjoin(Version, Version.upc == IncomePending.upc_id)
-    # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
-    sel = sel.filter(Version.upc == None).order_by(IncomePending.catalog_id).all()
-
     query = find_distinct_matching_errors().all()
     income_pendings_schema = IncomePendingSchema(many=True)
     matching_errors = income_pendings_schema.dumps(query)
@@ -39,9 +34,13 @@ def get_matching_errors():
 def update_errors():
     data = request.get_json(force=True)
     try:
-        id = data['id']
-        new_entry = db.session.query(IncomePending).get(id)
-        new_entry.upc_id = data['upc_id']
+        sel = find_distinct_matching_errors()
+        if data['version_number']:
+            sel = sel.filter(IncomePending.version_number == data['version_number'])
+        temp = sel.subquery()
+        (db.session.query(IncomePending)
+            .filter(IncomePending.id == temp.c.id)
+            .update({IncomePending.upc_id : data['upc_id']}))
         db.session.commit()
     except exc.DataError:
         db.session.rollback()
