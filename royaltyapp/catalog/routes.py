@@ -158,5 +158,14 @@ def import_version():
     pending_version_to_version(db)
     return jsonify({'success': 'true'})
 
-
+@catalog.route('/version', methods=['GET'])
+def get_versions():
+    result = Version.query.all()
+    version_schema = VersionSchema()
+    versions_schema = VersionSchema(many=True)
+    return versions_schema.dumps(result)
+    # file = request.files['CSV']
+    # df = pd.read_csv(file.stream)
+    # df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
+    # pending_version_to_version(db)
 

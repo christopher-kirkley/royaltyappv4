@@ -4490,3 +4490,164 @@ SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalt
 console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
 1595135593904	Marionette	INFO	Stopped listening on port 49824
 console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595172494209	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilem35F1H"
+1595172498589	Marionette	INFO	Listening on port 54235
+1595172498620	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1595172509147	Marionette	INFO	Stopped listening on port 54235
+1595172524629	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileECZqc8"
+1595172527599	Marionette	INFO	Listening on port 54341
+1595172527695	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 759: Error: The 'TableEditColumn' plugin requires 'EditingState' to be defined before it.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 2918: TypeError: addedRows is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 2912: TypeError: tableRows is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 2912: TypeError: tableRows is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 1383: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 1383: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 1383: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 1383: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 1383: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 1383: TypeError: rows is undefined
+1595173539617	Marionette	INFO	Stopped listening on port 54341
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595173545754	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0zAekO"
+1595173548692	Marionette	INFO	Listening on port 54631
+1595173548718	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1595174560559	Marionette	INFO	Stopped listening on port 54631
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595174565930	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilem6F1pO"
+1595174568914	Marionette	INFO	Listening on port 54994
+1595174568941	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1595175580646	Marionette	INFO	Stopped listening on port 54994
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595176095627	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilec3iT0H"
+1595176098561	Marionette	INFO	Listening on port 55524
+1595176098596	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101, line 6: Script terminated by timeout at:
+Ug@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:57770
+Tg@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:57934
+Qg.prototype.zb@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:57734
+Ke/a.a<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:32937
+Sd/</<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26062
+Pd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:25604
+yd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23024
+Pd@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:25912
+Sd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:26035
+yd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23024
+yd/<@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:23068
+
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+1595177110636	Marionette	INFO	Stopped listening on port 55524
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595177169861	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3Q2INw"
+1595177172721	Marionette	INFO	Listening on port 55989
+1595177172811	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3702: TypeError: e.target.distributor is undefined
+1595179726980	Marionette	INFO	Stopped listening on port 55989
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1595179733433	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewS5D7z"
+1595179736290	Marionette	INFO	Listening on port 56255
+1595179736389	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3748: TypeError: rows is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3678: TypeError: versions is undefined
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3678: TypeError: versions is undefined
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3678: TypeError: versions is undefined
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3678: TypeError: invalid assignment to const `versions'
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3678: TypeError: invalid assignment to const `versions'
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3679: TypeError: invalid assignment to const `versions'
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3679: TypeError: invalid assignment to const `versions'
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1595180748218	Marionette	INFO	Stopped listening on port 56255
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1595700340199	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUxvIBE"
+1595700345897	Marionette	INFO	Listening on port 60993
+1595700383783	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilea3UlMe"
+1595700386662	Marionette	INFO	Listening on port 61067
+1595700386733	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1595701303364	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilec3hcGz"
+1595701306344	Marionette	INFO	Listening on port 61368
+1595701306424	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595701318087	Marionette	INFO	Stopped listening on port 61368
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1595701543860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOupuUK"
+1595701546635	Marionette	INFO	Listening on port 61476
+1595701546722	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1595702074986	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9JiZaa"
+1595702077989	Marionette	INFO	Listening on port 61647
+1595702078056	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595702089675	Marionette	INFO	Stopped listening on port 61647
+1595702117789	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerKam7h"
+1595702120569	Marionette	INFO	Listening on port 61736
+1595702120660	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595702132381	Marionette	INFO	Stopped listening on port 61736
+1595702240768	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTxyPgK"
+1595702243798	Marionette	INFO	Listening on port 61839
+1595702243847	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1595703656951	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIV0B6w"
+1595703659965	Marionette	INFO	Listening on port 62094
+1595703660012	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1595703670420	Marionette	INFO	Stopped listening on port 62094
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1595703686938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQGRuWn"
+1595703690199	Marionette	INFO	Listening on port 62198
+1595703690208	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1595704155833	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeHQlVW"
+1595704158755	Marionette	INFO	Listening on port 62418
+1595704158839	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595704171760	Marionette	INFO	Stopped listening on port 62418

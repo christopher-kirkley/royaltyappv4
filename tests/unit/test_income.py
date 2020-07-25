@@ -57,6 +57,8 @@ def test_can_get_matching_errors(test_client, db):
 
     assert len(json.loads(response.data)) == 4
 
+
+
 # def test_can_use_bandcamp_statement_factory(test_client, db):
     # path = os.getcwd() + "/tests/files/bandcamp_test.csv"
     # file = dict(file=path, filename='bandcamp_test.csv')

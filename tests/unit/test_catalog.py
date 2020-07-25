@@ -245,3 +245,11 @@ def test_can_edit_track(test_client, db):
     assert q.isrc == 'qwe123'
     assert q.track_number == 2
 
+def test_can_get_all_versions(test_client, db):
+    add_one_version(db)
+    response = test_client.get('/version')
+    assert response.status_code == 200
+    json_resp = json.loads(response.data)
+    assert len(json_resp) == 1
+    assert json_resp == ''
+
