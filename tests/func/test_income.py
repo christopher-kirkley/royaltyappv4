@@ -63,13 +63,13 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
-    time.sleep(1000)
     assert tds[0].text == 'bandcamp'
     assert tds[1].text == ''
-    assert tds[2].text == ''
-    assert tds[3].text == 'SS-050-cass'
-    assert tds[4].text == 'SS-050'
+    assert tds[2].text == 'SS-050-cass'
+    assert tds[3].text == 'SS-050'
+    browser.find_element_by_id('SS-050cass').click()
+    time.sleep(1) 
+    assert not browser.find_element_by_id('matching_error_table')
 
-    assert rows[0] == ''
     
 
