@@ -60,8 +60,9 @@ def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
     data = {
-            'version_number': 'SS-050-cass',
-            'upc_id': '111'
+            'upc_id': '111',
+            'data_to_match' :
+                [{'version_number': 'SS-050-cass'}]
             }
     json_data = json.dumps(data)
     response = test_client.put('/income/update-errors', data=json_data)
