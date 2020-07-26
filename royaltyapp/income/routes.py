@@ -35,8 +35,9 @@ def update_errors():
     data = request.get_json(force=True)
     try:
         sel = find_distinct_matching_errors()
-        if data['version_number']:
-            sel = sel.filter(IncomePending.version_number == data['version_number'])
+        for item in data['data_to_match']:
+            if item['version_number']:
+                sel = sel.filter(IncomePending.version_number == item['version_number'])
         temp = sel.subquery()
         (db.session.query(IncomePending)
             .filter(IncomePending.id == temp.c.id)
