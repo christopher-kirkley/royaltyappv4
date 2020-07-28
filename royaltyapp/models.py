@@ -192,6 +192,7 @@ class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         fields = ("id",
                 "distributor",
+                "statement",
                 "isrc_id",
                 "upc_id",
                 "version_number",
@@ -202,6 +203,7 @@ class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
                 "medium",
                 "description")
         include_relationships = True
+
 
 # class IncomeDistributor(db.Model):
 #     __tablename__ = 'income_distributor'
