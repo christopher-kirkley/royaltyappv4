@@ -90,6 +90,7 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     rows[1].find_element_by_id('version_number').click()
+    rows[1].find_element_by_id('medium').click()
     browser.find_element_by_id('new_upc').click()
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('update').click()
@@ -97,6 +98,7 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 3
+
 
     # """ User updates on version number submits. """
     # browser.find_element_by_id('new_upc').click()

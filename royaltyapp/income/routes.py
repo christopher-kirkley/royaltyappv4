@@ -36,8 +36,14 @@ def update_errors():
     try:
         sel = find_distinct_matching_errors()
         for item in data['data_to_match']:
-            if item['version_number']:
+            if item.get('version_number'):
                 sel = sel.filter(IncomePending.version_number == item['version_number'])
+            if item.get('album_name'):
+                sel = sel.filter(IncomePending.album_name == item['album_name'])
+            if item.get('medium'):
+                sel = sel.filter(IncomePending.medium == item['medium'])
+            if item.get('description'):
+                sel = sel.filter(IncomePending.medium == item['description'])
         temp = sel.subquery()
         (db.session.query(IncomePending)
             .filter(IncomePending.id == temp.c.id)
