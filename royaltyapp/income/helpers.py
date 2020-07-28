@@ -292,3 +292,11 @@ def find_distinct_matching_errors():
     # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
     sel = sel.filter(Version.upc == None).order_by(IncomePending.catalog_id)
     return sel
+
+def process_pending_statements():
+    return 's'
+
+
+
+
+

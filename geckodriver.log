@@ -5277,3 +5277,45 @@ Exiting due to channel error.
 1595958180018	Marionette	INFO	Listening on port 57149
 1595958180058	Marionette	WARN	TLS certificate errors will be ignored for this session
 1595958194353	Marionette	INFO	Stopped listening on port 57149
+1595960911297	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDKkzJu"
+1595960915454	Marionette	INFO	Listening on port 57532
+1595960915537	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595960932100	Marionette	INFO	Stopped listening on port 57532
+1595960975046	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeaOj6z"
+1595960977776	Marionette	INFO	Listening on port 57662
+1595960977799	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595960994625	Marionette	INFO	Stopped listening on port 57662
+1595961392449	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileYdySFT"
+1595961395276	Marionette	INFO	Listening on port 57867
+1595961395328	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1595961405823	Marionette	INFO	Stopped listening on port 57867
+1595963989417	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileW1GHkZ"
+1595963992787	Marionette	INFO	Listening on port 58943
+1595963992889	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595964009925	Marionette	INFO	Stopped listening on port 58943
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1595964048479	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0iZg2j"
+1595964051307	Marionette	INFO	Listening on port 59060
+1595964051355	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595964068209	Marionette	INFO	Stopped listening on port 59060
+1595964103139	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1YkojE"
+1595964106019	Marionette	INFO	Listening on port 59144
+1595964106111	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595964122943	Marionette	INFO	Stopped listening on port 59144
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1595964204403	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQawI66"
+1595964207185	Marionette	INFO	Listening on port 59256
+1595964207277	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1595964225531	Marionette	INFO	Stopped listening on port 59256
+1595964379260	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeZSHYe"
+1595964382056	Marionette	INFO	Listening on port 59469
+1595964382115	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1595964400408	Marionette	INFO	Stopped listening on port 59469

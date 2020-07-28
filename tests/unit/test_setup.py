@@ -6,10 +6,13 @@ import io
 
 import pandas as pd
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomeDistributor
+
 from .helpers import add_one_artist, add_one_catalog, add_one_version, add_one_track, make_pending, make_pending_version
 
 from royaltyapp.catalog.helpers import clean_df, pending_to_artist, pending_to_catalog, pending_version_to_version
+
+from royaltyapp.models import insert_initial_values
 
 def test_can_import_catalog(test_client, db):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
@@ -75,4 +78,8 @@ def test_can_import_version(test_client, db):
     assert query.version_number == 'SS-050cass'
     query = db.session.query(Catalog).first()
     assert len(query.version) == 3
+
+def test_income_distributors_populated(test_client, db):
+    query = db.session.query(IncomeDistributor).all()
+    assert len(query) == 6
 

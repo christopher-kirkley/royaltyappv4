@@ -2,6 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy import create_engine
 
+
 db = SQLAlchemy()
 ma = Marshmallow()
 
@@ -183,7 +184,7 @@ class IncomePending(db.Model):
     medium = db.Column(db.String(255))
     product = db.Column(db.String(255))
     description = db.Column(db.String(255))
-    tracks_id = db.Column(db.Integer)
+    track_id = db.Column(db.Integer)
     version_id = db.Column(db.Integer)
     distributor_id = db.Column(db.Integer)
     statement_id = db.Column(db.Integer)
@@ -205,12 +206,67 @@ class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
         include_relationships = True
 
 
-# class IncomeDistributor(db.Model):
-#     __tablename__ = 'income_distributor'
-#     id = Column(Integer, primary_key=True)
-#     distributor_name = Column(String(255), unique=True)
-#     distributor_statement = Column(String(255), unique=True)
+class IncomeDistributor(db.Model):
+    __tablename__ = 'income_distributor'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    distributor_name = db.Column(db.String(255), unique=True)
+    distributor_statement = db.Column(db.String(255), unique=True)
+    # income_total = relationship('IncomeTotal', backref='income_distributor')
+    imported_statement = db.relationship('ImportedStatement',
+                                        backref='income_distributor',
+                                        passive_deletes=True)
 
-#     income_total = relationship('IncomeTotal', backref='income_distributor')
-#     imported_statement = relationship('ImportedStatement', backref='income_distributor', passive_deletes=True)
+class ImportedStatement(db.Model):
+    __tablename__ = 'imported_statement'
+
+    id = db.Column(db.Integer, primary_key=True)
+    statement_name = db.Column(db.String(255), unique=True)
+    transaction_type = db.Column(db.String(255))
+
+    income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
+
+    # expense_total = relationship('ExpenseTotal', backref='imported_statement', passive_deletes=True)
+    # income_total = relationship('IncomeTotal', backref='imported_statement', passive_deletes=True)
+
+# class IncomeTotal(db.Model):
+#     __tablename__ = 'income_total'
+
+#     id = db.Column(db.Integer, primary_key=True)
+#     date = db.Column(db.Date)
+#     quantity = db.Column(db.Integer)
+#     amount = db.Column(db.Numeric(23, 18))
+#     label_fee = db.Column(db.Numeric(7, 2))
+#     label_net = db.Column(db.Numeric(23, 18))
+#     type = db.Column(db.String(255))
+#     medium = db.Column(db.String(255))
+#     customer = db.Column(db.String(255))
+#     city = db.Column(db.String(255))
+#     region = db.Column(db.String(255))
+#     country = db.Column(db.String(255))
+#     transaction_type = db.Column(db.String(255), default='income')
+
+#     imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
+#     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
+#     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
+#     tracks_id = db.Column(db.Integer, db.ForeignKey('tracks.id'))
+def insert_initial_values(db):
+    """Initialize distributor table."""
+    statements_to_insert = [
+        IncomeDistributor(distributor_statement='bandcamp_statement',
+                          distributor_name='bandcamp'),
+        IncomeDistributor(distributor_statement='shopify_statement',
+                          distributor_name = 'shopify'),
+        IncomeDistributor(distributor_statement='sdphysical_statement',
+                          distributor_name = 'sdphysical'),
+        IncomeDistributor(distributor_statement='sddigital_statement',
+                          distributor_name='sddigital'),
+        IncomeDistributor(distributor_statement='quickbooks_statement',
+                          distributor_name='quickbooks'),
+        IncomeDistributor(distributor_statement='sds_statement',
+                          distributor_name='sds'),
+    ]
+    db.session.bulk_save_objects(statements_to_insert)
+    db.session.commit()
+
 

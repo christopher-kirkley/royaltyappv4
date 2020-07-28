@@ -8,9 +8,9 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement
 
-from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors
+from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
 from .helpers import build_catalog, add_bandcamp_sales
 
@@ -105,3 +105,9 @@ def test_can_list_pending_statements(test_client, db):
                                         'statement': 'one_bandcamp_test.csv'
                                         }]
 
+def test_can_return_imported_statements(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    # process_pending_statements()
+    # query = db.session.query(ImportedStatement).all()
+    # assert len(query) != 0

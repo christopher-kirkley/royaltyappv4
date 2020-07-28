@@ -4,6 +4,8 @@ from flask_cors import CORS
 from royaltyapp.models import db, ma
 
 
+
+
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
     CORS(royaltyapp)
@@ -23,8 +25,11 @@ def create_app(config_class=None):
     royaltyapp.register_blueprint(artists)
     royaltyapp.register_blueprint(catalog)
     royaltyapp.register_blueprint(income)
+
     
     with royaltyapp.app_context():
         ma.init_app(royaltyapp)
 
     return royaltyapp
+
+
