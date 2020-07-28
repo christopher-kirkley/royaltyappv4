@@ -112,4 +112,17 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 2
 
+    """ User returns to page and tries to process payments. """
+    browser.find_element_by_id('income').click()
+    time.sleep(1)
+    browser.find_element_by_id('process_statements').click()
+    time.sleep(1)
+
+    """ User goes to view imported income. """
+    browser.find_element_by_id('view_imported_income').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_income_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_tag_name('td')[0] == 'bandcamp_test_2.csv'
+
 
