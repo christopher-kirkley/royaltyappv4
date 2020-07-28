@@ -54,3 +54,10 @@ def update_errors():
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
+@income.route('/income/pending-statements', methods=['GET'])
+def get_pending_statements():
+    query = db.session.query(IncomePending.statement, IncomePending.distributor).distinct(IncomePending.statement).all()
+    income_pendings_schema = IncomePendingSchema(many=True)
+    pending_statements = income_pendings_schema.dumps(query)
+    return pending_statements
+

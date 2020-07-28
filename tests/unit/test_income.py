@@ -96,14 +96,12 @@ def test_can_update_pending_table(test_client, db):
     assert query.upc_id == '111'
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_list_pending_statements(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    response = test_client.get('/income/pending-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [{'distributor' : 'bandcamp',
+                                        'statement': 'one_bandcamp_test.csv'
+                                        }]
 
-
-# def test_can_use_bandcamp_statement_factory(test_client, db):
-    # path = os.getcwd() + "/tests/files/bandcamp_test.csv"
-    # file = dict(file=path, filename='bandcamp_test.csv')
-    # statement = StatementFactory.get_statement(path, 'bandcamp')
-    # statement.create_df()
-    # assert statement.file == file
-    # statement.clean()
-    # statement.modify_columns()
-    # assert list(statement.df.columns) == statement.columns_for_db

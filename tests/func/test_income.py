@@ -80,17 +80,20 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
     browser.find_element_by_id('upload_statement').click()
+    time.sleep(1)
+
+    """ User sees statement added to the list of pending statements. """
+    pending_statement = browser.find_element_by_id('pending_statement')
+    assert pending_statement.text == 'bandcamp_test_2.csv'
     
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('matching_errors').text == "You have 4 matching errors."
     browser.find_element_by_id('fix_errors').click()
-    time.sleep(1)
 
     """ User updates version number. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     rows[1].find_element_by_id('version_number').click()
-    rows[1].find_element_by_id('medium').click()
     browser.find_element_by_id('new_upc').click()
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('update').click()
@@ -99,13 +102,14 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 3
 
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    rows[1].find_element_by_id('medium').click()
+    browser.find_element_by_id('SS-050cass').click()
+    browser.find_element_by_id('update').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
 
-    # """ User updates on version number submits. """
-    # browser.find_element_by_id('new_upc').click()
-    # browser.find_element_by_id('SS-050cass').click()
-    # browser.find_element_by_id('update').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 1
 
