@@ -54,7 +54,7 @@ def test_can_get_matching_errors(test_client, db):
     res = query.first()
     assert res.distributor == 'bandcamp'
     assert res.upc_id == '602318136817'
-    assert len(json.loads(response.data)) == 4
+    assert len(json.loads(response.data)) == 6
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
@@ -62,12 +62,35 @@ def test_can_update_pending_table(test_client, db):
     data = {
             'upc_id': '111',
             'data_to_match' :
-                [{'version_number': 'SS-050-cass'}]
+                [
+                    {'version_number': 'no sku',
+                    'medium': 'physical'}
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    data = {
+            'upc_id': '111',
+            'data_to_match' :
+                [
+                    {'album_name': 'no album name'}
+                ]
             }
     json_data = json.dumps(data)
     response = test_client.put('/income/update-errors', data=json_data)
     query = (db.session.query(IncomePending)
+
                 .filter(IncomePending.id == 4)
+                .first()
+                )
+    assert query.upc_id == '111'
+    query = (db.session.query(IncomePending)
+                .filter(IncomePending.id == 6)
+                .first()
+                )
+    assert query.upc_id == 'noupc'
+    query = (db.session.query(IncomePending)
+                .filter(IncomePending.id == 5)
                 .first()
                 )
     assert query.upc_id == '111'
