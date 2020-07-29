@@ -135,3 +135,25 @@ def test_can_add_order_setting(test_client, db):
     assert res.distributor_id == 1
     assert res.order_percentage == .20
     assert res.order_fee == 2.00
+
+def test_can_edit_order_setting(test_client, db):
+    data = {
+            'distributor_id' : 1,
+            'order_percentage' : .20,
+            'order_fee' : 2.00
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/income/order-settings', data=json_data)
+    data = {
+            'distributor_id' : 1,
+            'order_percentage' : .40,
+            'order_fee' : 2.50
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/order-settings', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(OrderSettings).first()
+    assert res.distributor_id == 1
+    assert res.order_percentage == .40
+    assert res.order_fee == 2.50
