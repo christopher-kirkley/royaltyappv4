@@ -8,7 +8,7 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
@@ -105,13 +105,6 @@ def test_can_list_pending_statements(test_client, db):
                                         'statement': 'one_bandcamp_test.csv'
                                         }]
 
-def test_can_return_imported_statements(test_client, db):
-    build_catalog(db, test_client)
-    add_bandcamp_sales(test_client)
-    # process_pending_statements()
-    # query = db.session.query(ImportedStatement).all()
-    # assert len(query) != 0
-
 def test_income_distributors_populated(test_client, db):
     query = db.session.query(IncomeDistributor).all()
     assert len(query) == 6
@@ -157,3 +150,25 @@ def test_can_edit_order_setting(test_client, db):
     assert res.distributor_id == 1
     assert res.order_percentage == .40
     assert res.order_fee == 2.50
+
+def test_can_process_pending_income(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    response = test_client.post('/income/process-pending')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(IncomeTotal).all()
+    assert len(res) == 7
+
+def test_can_view_imported_statements(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    response = test_client.post('/income/process-pending')
+    response = test_client.get('/income/imported-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [{
+                                        'id' : 1,
+                                        'income_distributor_id' : 1,
+                                        'statement_name' : 'one_bandcamp_test.csv',
+                                        'transaction_type' : 'income'
+                                        }]

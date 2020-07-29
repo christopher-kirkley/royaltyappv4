@@ -8,7 +8,7 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, IncomeTotal
 
 from royaltyapp.income.util import process_income as pi
 
@@ -104,3 +104,30 @@ def test_can_divide_fees_over_order_items(test_client, db):
     res = db.session.query(IncomePending).first()
     assert float(res.label_fee) == 0.73
     assert float(res.label_net) == 5.53
+
+def test_zero_out_label_fees(test_client, db):
+    build_catalog(db, test_client)
+    add_two_bandcamp_sales(test_client)
+    add_order_settings(db)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    assert pi.calculate_adjusted_amount() == True
+    res = db.session.query(IncomePending).filter(IncomePending.order_id == '2').first()
+    assert res.label_fee == 0
+    res = db.session.query(IncomePending).filter(IncomePending.order_id == '3').first()
+    assert res.label_fee == 0
+
+def test_can_insert_into_total(test_client, db):
+    build_catalog(db, test_client)
+    add_two_bandcamp_sales(test_client)
+    res = db.session.query(IncomePending).all()
+    add_order_settings(db)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    pi.move_from_pending_income_to_total()
+    res = db.session.query(IncomeTotal).all()
+    assert len(res) == 5    
