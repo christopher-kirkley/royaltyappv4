@@ -211,29 +211,38 @@ class ImportedStatement(db.Model):
     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
 
     # expense_total = relationship('ExpenseTotal', backref='imported_statement', passive_deletes=True)
-    # income_total = relationship('IncomeTotal', backref='imported_statement', passive_deletes=True)
+    income_total = db.relationship('IncomeTotal', backref='imported_statement', passive_deletes=True)
 
-# class IncomeTotal(db.Model):
-#     __tablename__ = 'income_total'
+class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = ("id",
+                "statement_name",
+                "income_distributor_id",
+                "transaction_type")
+        include_relationships = True
 
-#     id = db.Column(db.Integer, primary_key=True)
-#     date = db.Column(db.Date)
-#     quantity = db.Column(db.Integer)
-#     amount = db.Column(db.Numeric(23, 18))
-#     label_fee = db.Column(db.Numeric(7, 2))
-#     label_net = db.Column(db.Numeric(23, 18))
-#     type = db.Column(db.String(255))
-#     medium = db.Column(db.String(255))
-#     customer = db.Column(db.String(255))
-#     city = db.Column(db.String(255))
-#     region = db.Column(db.String(255))
-#     country = db.Column(db.String(255))
-#     transaction_type = db.Column(db.String(255), default='income')
+class IncomeTotal(db.Model):
+    __tablename__ = 'income_total'
 
-#     imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
-#     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
-#     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
-#     tracks_id = db.Column(db.Integer, db.ForeignKey('tracks.id'))
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date)
+    quantity = db.Column(db.Integer)
+    amount = db.Column(db.Numeric(23, 18))
+    label_fee = db.Column(db.Numeric(7, 2))
+    label_net = db.Column(db.Numeric(23, 18))
+    type = db.Column(db.String(255))
+    medium = db.Column(db.String(255))
+    customer = db.Column(db.String(255))
+    city = db.Column(db.String(255))
+    region = db.Column(db.String(255))
+    country = db.Column(db.String(255))
+    transaction_type = db.Column(db.String(255), default='income')
+
+    imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
+    income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
+    version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
+    track_id = db.Column(db.Integer, db.ForeignKey('track.id'))
+
 def insert_initial_values(db):
     """Initialize distributor table."""
     statements_to_insert = [

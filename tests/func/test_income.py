@@ -123,6 +123,6 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     table = browser.find_element_by_id('imported_income_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_element_by_tag_name('td')[0] == 'bandcamp_test_2.csv'
+    assert rows[1].find_elements_by_tag_name('td')[0].text == 'bandcamp_test_2.csv'
 
 

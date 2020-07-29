@@ -5,7 +5,7 @@ from sqlalchemy import exc
 
 import pandas as pd
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema
 
 from .helpers import StatementFactory, find_distinct_matching_errors
 
@@ -105,4 +105,11 @@ def process_pending_income():
     pi.insert_into_imported_statements()
     pi.move_from_pending_income_to_total()
     return jsonify({'success': 'true'})
+
+@income.route('/income/imported-statements', methods=['GET'])
+def get_imported_statements():
+    query = db.session.query(ImportedStatement).all()
+    imported_statement_schema = ImportedStatementSchema(many=True)
+    statements = imported_statement_schema.dumps(query)
+    return statements
 
