@@ -1,6 +1,6 @@
 from sqlalchemy import exc, func, cast
 
-from royaltyapp.models import db, IncomePending, ImportedStatement, OrderSettings
+from royaltyapp.models import db, IncomePending, ImportedStatement, OrderSettings, IncomeTotal
 
 def normalize_distributor():
     db.session.execute("""
@@ -112,3 +112,43 @@ def calculate_adjusted_amount():
     db.session.execute(update)
     db.session.commit()
     return True
+
+def move_from_pending_income_to_total():
+    sel = db.session.query(IncomePending.date,
+    IncomePending.quantity,
+    IncomePending.amount,
+    IncomePending.label_fee,
+    IncomePending.label_net,
+    IncomePending.track_id,
+    IncomePending.version_id,
+    IncomePending.medium,
+    IncomePending.type,
+    IncomePending.statement_id,
+    IncomePending.distributor_id,
+    IncomePending.customer,
+    IncomePending.city,
+    IncomePending.region,
+    IncomePending.country)
+
+    ins = IncomeTotal.__table__.insert().from_select(['date',
+    'quantity',
+    'amount',
+    'label_fee',
+    'label_net',
+    'track_id',
+    'version_id',
+    'medium',
+    'type',
+    'imported_statement_id',
+    'income_distributor_id',
+    'customer',
+    'city',
+    'region',
+    'country'],
+     sel)
+    db.session.execute(ins)
+    db.session.commit()
+
+    i = IncomePending.__table__.delete()
+    db.session.execute(i)
+    db.session.commit()
