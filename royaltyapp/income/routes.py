@@ -80,4 +80,18 @@ def add_order_fees():
     db.session.commit()
     return jsonify({'success': 'true'})
 
+@income.route('/income/order-settings', methods=['PUT'])
+def edit_order_fee():
+    data = request.get_json(force=True)
+    distributor_id = data['distributor_id']
+    res = db.session.query(OrderSettings).filter(OrderSettings.distributor_id == distributor_id).first()
+    if res == None:
+        return jsonify({'success': 'false'})
+    id = res.id
+    order_setting = db.session.query(OrderSettings).get(id)
+    order_setting.order_percentage = data['order_percentage']
+    order_setting.order_fee = data['order_fee']
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
 

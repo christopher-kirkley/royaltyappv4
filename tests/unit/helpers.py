@@ -2,7 +2,8 @@ import os
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track
+from royaltyapp.models import Artist, Catalog, Version, Track, OrderSettings
+
 from royaltyapp.catalog.helpers import clean_df
 
 
@@ -84,4 +85,23 @@ def add_bandcamp_sales(test_client):
     data['file'] = (path, 'one_bandcamp_test.csv')
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
+
+def add_two_bandcamp_sales(test_client):
+    path = os.getcwd() + "/tests/files/two_bandcamp_test.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'two_bandcamp_test.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+
+def add_order_settings(db):
+    new_order_setting = OrderSettings(
+                    distributor_id = 1,
+                    order_percentage = 0.01,
+                    order_fee = 2.00
+                    )
+    db.session.add(new_order_setting)
+    db.session.commit()
+
 
