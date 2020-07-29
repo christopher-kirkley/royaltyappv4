@@ -47,3 +47,14 @@ def insert_into_imported_statements():
             db.session.rollback()
             return f"Failed on {item.statement}, already in total sales."
     return True
+
+
+def normalize_statement_id():
+    db.session.execute("""
+    UPDATE income_pending
+    SET statement_id = imported_statement.id
+    FROM imported_statement
+    WHERE income_pending.statement = imported_statement.statement_name;
+    """)
+    db.session.commit()
+    return True

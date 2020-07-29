@@ -78,23 +78,14 @@ class TrackSchema(ma.SQLAlchemySchema):
 class VersionSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Version
-        # include_relationships = True
 
         id = ma.auto_field()
         version_number = ma.auto_field()
         version_name = ma.auto_field()
         upc = ma.auto_field()
         format = ma.auto_field()
-        # catalog = ma.auto_field("catalog_id", dump_only=True)
     catalog_id = ma.auto_field("catalog") 
 
-        # fields = ('id',
-        #         'version_number',
-        #         'version_name',
-        #         'upc',
-        #         'format',
-        #         'catalog_id',
-        #         )
 
 
 class CatalogSchema(ma.SQLAlchemyAutoSchema):
@@ -105,11 +96,6 @@ class CatalogSchema(ma.SQLAlchemyAutoSchema):
 
     class Meta:
         model = Catalog
-        # include_relationships = True
-
-        # id = ma.auto_field()
-      # catalog_name = ma.auto_field()
-        # catalog_number = ma.auto_field()
         fields = ("id",
                 "version",
                 "catalog_number",
@@ -128,8 +114,6 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
         include_relationships = True
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
-
-
 
 
 
@@ -269,4 +253,19 @@ def insert_initial_values(db):
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()
 
+
+
+class OrderSettings(db.Model):
+    __tablename__ = 'order_settings'
+
+    id = db.Column(db.Integer, primary_key=True)
+    order_percentage = db.Column(db.Float)
+    order_fee = db.Column(db.Numeric(8, 2))
+
+    distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'), unique=True)
+
+class OrderSettingsSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = ("id", "order_percentage", "order_fee", "distributor_id")
+        include_relationships = True
 
