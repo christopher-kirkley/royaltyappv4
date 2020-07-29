@@ -12,7 +12,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.income.util import process_income as pi
 
-from .helpers import build_catalog, add_bandcamp_sales
+from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_two_bandcamp_sales
 
 def test_can_normalize_distributor(test_client, db):
     build_catalog(db, test_client)
@@ -79,8 +79,28 @@ def test_can_calculate_adjusted_label_amount(test_client, db):
     pi.normalize_track()
     pi.insert_into_imported_statements()
     assert pi.calculate_adjusted_amount() == True
-    res = db.session.query(IncomePending).first()
-    assert res.distributor == 'bandcamp'
-    assert res.label_fee != None
-    assert res.label_net != None
+    res = db.session.query(IncomePending).filter(IncomePending.id == 4).first()
+    assert res.id == 4
+    assert res.label_fee == 0
+    assert float(res.label_net) == 6.26
+    add_order_settings(db)
+    assert pi.calculate_adjusted_amount() == True
+    res = db.session.query(IncomePending).filter(IncomePending.id == 4).first()
+    assert res.id == 4
+    assert float(res.label_fee) == 2.06
+    assert float(res.label_net) == 4.20
 
+def test_can_divide_fees_over_order_items(test_client, db):
+    build_catalog(db, test_client)
+    add_two_bandcamp_sales(test_client)
+    res = db.session.query(IncomePending).all()
+    assert len(res) != 0
+    add_order_settings(db)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    assert pi.calculate_adjusted_amount() == True
+    res = db.session.query(IncomePending).first()
+    assert float(res.label_fee) == 0.73
+    assert float(res.label_net) == 5.53
