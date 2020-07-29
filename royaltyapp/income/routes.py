@@ -9,6 +9,9 @@ from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, O
 
 from .helpers import StatementFactory, find_distinct_matching_errors
 
+from .util import process_income as pi
+
+
 income = Blueprint('income', __name__)
 
 @income.route('/income/import-sales', methods=['POST'])
@@ -94,4 +97,12 @@ def edit_order_fee():
     db.session.commit()
     return jsonify({'success': 'true'})
 
+@income.route('/income/process-pending', methods=['POST'])
+def process_pending_income():
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    pi.move_from_pending_income_to_total()
+    return jsonify({'success': 'true'})
 
