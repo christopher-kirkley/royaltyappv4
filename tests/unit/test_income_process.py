@@ -71,4 +71,16 @@ def test_can_normalize_statement_id(test_client, db):
     res = db.session.query(IncomePending).first()
     assert res.statement_id == new_statement_id
 
+def test_can_calculate_adjusted_label_amount(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    assert pi.calculate_adjusted_amount() == True
+    res = db.session.query(IncomePending).first()
+    assert res.distributor == 'bandcamp'
+    assert res.label_fee != None
+    assert res.label_net != None
 
