@@ -58,3 +58,17 @@ def test_can_insert_into_imported_statements_table(test_client, db):
     assert res.statement_name == 'one_bandcamp_test.csv'
     assert res.transaction_type == 'income'
     assert res.income_distributor_id == 1
+
+def test_can_normalize_statement_id(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    assert pi.normalize_statement_id() == True
+    new_statement_id = db.session.query(ImportedStatement).first().id
+    res = db.session.query(IncomePending).first()
+    assert res.statement_id == new_statement_id
+
+

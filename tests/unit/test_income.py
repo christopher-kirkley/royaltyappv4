@@ -8,7 +8,7 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
@@ -54,7 +54,7 @@ def test_can_get_matching_errors(test_client, db):
     res = query.first()
     assert res.distributor == 'bandcamp'
     assert res.upc_id == '602318136817'
-    assert len(json.loads(response.data)) == 6
+    assert len(json.loads(response.data)) == 7
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
@@ -111,3 +111,27 @@ def test_can_return_imported_statements(test_client, db):
     # process_pending_statements()
     # query = db.session.query(ImportedStatement).all()
     # assert len(query) != 0
+
+def test_income_distributors_populated(test_client, db):
+    query = db.session.query(IncomeDistributor).all()
+    assert len(query) == 6
+
+def test_can_get_order_settings(test_client, db):
+    response = test_client.get('/income/order-settings')
+    assert response.status_code == 200
+    assert json.loads(response.data) == []
+
+def test_can_add_order_setting(test_client, db):
+    data = {
+            'distributor_id' : 1,
+            'order_percentage' : .20,
+            'order_fee' : 2.00
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/income/order-settings', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(OrderSettings).first()
+    assert res.distributor_id == 1
+    assert res.order_percentage == .20
+    assert res.order_fee == 2.00

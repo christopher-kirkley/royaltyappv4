@@ -79,7 +79,7 @@ def test_can_import_version(test_client, db):
     query = db.session.query(Catalog).first()
     assert len(query.version) == 3
 
-def test_income_distributors_populated(test_client, db):
-    query = db.session.query(IncomeDistributor).all()
-    assert len(query) == 6
+
+
+
 

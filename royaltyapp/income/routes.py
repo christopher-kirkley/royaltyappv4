@@ -5,7 +5,7 @@ from sqlalchemy import exc
 
 import pandas as pd
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema
 
 from .helpers import StatementFactory, find_distinct_matching_errors
 
@@ -60,4 +60,24 @@ def get_pending_statements():
     income_pendings_schema = IncomePendingSchema(many=True)
     pending_statements = income_pendings_schema.dumps(query)
     return pending_statements
+
+@income.route('/income/order-settings', methods=['GET'])
+def get_order_fees():
+    query = db.session.query(OrderSettings).all()
+    order_settings_schema = OrderSettingsSchema(many=True)
+    settings = order_settings_schema.dumps(query)
+    return settings
+    
+@income.route('/income/order-settings', methods=['POST'])
+def add_order_fees():
+    data = request.get_json(force=True)
+    new_order_setting = OrderSettings(
+            distributor_id = data['distributor_id'],
+            order_percentage = data['order_percentage'],
+            order_fee = data['order_fee']
+            )
+    db.session.add(new_order_setting)
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
 
