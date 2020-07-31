@@ -196,7 +196,7 @@ class IncomeDistributor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     distributor_name = db.Column(db.String(255), unique=True)
     distributor_statement = db.Column(db.String(255), unique=True)
-    # income_total = relationship('IncomeTotal', backref='income_distributor')
+    income_total = db.relationship('IncomeTotal', backref='income_distributor')
     imported_statement = db.relationship('ImportedStatement',
                                         backref='income_distributor',
                                         passive_deletes=True)
@@ -242,6 +242,18 @@ class IncomeTotal(db.Model):
     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
     track_id = db.Column(db.Integer, db.ForeignKey('track.id'))
+
+class IncomeTotalSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = (
+                "date",
+                "quantity",
+                "type",
+                "medium",
+                "version_name",
+                "track_name"
+                )
+        include_relationships = True
 
 def insert_initial_values(db):
     """Initialize distributor table."""

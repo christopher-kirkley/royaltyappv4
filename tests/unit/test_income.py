@@ -172,3 +172,18 @@ def test_can_view_imported_statements(test_client, db):
                                         'statement_name' : 'one_bandcamp_test.csv',
                                         'transaction_type' : 'income'
                                         }]
+
+
+def test_can_view_imported_statement_detail(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    response = test_client.post('/income/process-pending')
+    response = test_client.get('/income/statements/1')
+    assert response.status_code == 200
+    res = db.session.query(IncomeTotal).all()
+    assert res != 0
+    res = db.session.query(ImportedStatement).first()
+    assert res.id == 1
+    res = db.session.query(IncomeTotal).first()
+    assert res.imported_statement_id == 1
+    assert len(json.loads(response.data)) != 0

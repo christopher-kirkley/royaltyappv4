@@ -118,11 +118,20 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('process_statements').click()
     time.sleep(1)
 
-    """ User goes to view imported income. """
+    """ User goes to view imported income statements. """
     browser.find_element_by_id('view_imported_income').click()
     time.sleep(1)
     table = browser.find_element_by_id('imported_income_table')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_elements_by_tag_name('td')[0].text == 'bandcamp_test_2.csv'
+    browser.find_element_by_id('1').click()
+    
+    """ User goes to imported income statement detail."""
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1]
+    
+
 
 

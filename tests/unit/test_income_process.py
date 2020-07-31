@@ -128,6 +128,11 @@ def test_can_insert_into_total(test_client, db):
     pi.normalize_version()
     pi.normalize_track()
     pi.insert_into_imported_statements()
+    pi.normalize_statement_id()
     pi.move_from_pending_income_to_total()
     res = db.session.query(IncomeTotal).all()
     assert len(res) == 5    
+    res = db.session.query(IncomeTotal).first()
+    assert res.id == 1
+    assert res.income_distributor_id == 1
+    assert res.imported_statement_id == 1
