@@ -154,3 +154,11 @@ def get_imported_statement_detail(id):
                     'physical': json.loads(physical_versions_res)
                     }])
 
+@income.route('/income/statements/<id>', methods=['DELETE'])
+def delete_income_statement(id):
+    i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
+    db.session.execute(i)
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
+
