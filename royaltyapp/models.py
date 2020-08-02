@@ -1,5 +1,8 @@
+import simplejson
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from marshmallow import fields
 from sqlalchemy import create_engine
 
 
@@ -243,17 +246,25 @@ class IncomeTotal(db.Model):
     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
     track_id = db.Column(db.Integer, db.ForeignKey('track.id'))
 
-class IncomeTotalSchema(ma.SQLAlchemyAutoSchema):
+class IncomeTotalSchema(ma.SQLAlchemySchema):
     class Meta:
+        json_module = simplejson
         fields = (
                 "date",
                 "quantity",
                 "type",
                 "medium",
                 "version_name",
-                "track_name"
+                "track_name",
+                "label_fee",
+                "label_net",
+                "amount"
                 )
         include_relationships = True
+    amount = fields.Decimal()
+    label_fee = fields.Decimal()
+    label_net = fields.Decimal()
+
 
 def insert_initial_values(db):
     """Initialize distributor table."""

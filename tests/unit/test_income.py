@@ -186,4 +186,10 @@ def test_can_view_imported_statement_detail(test_client, db):
     assert res.id == 1
     res = db.session.query(IncomeTotal).first()
     assert res.imported_statement_id == 1
-    assert len(json.loads(response.data)) != 0
+    result = json.loads(response.data)
+    assert result['number_of_records'] == 7
+    assert result['amount'] == 31.33
+    assert result['label_fee'] == 0
+    assert result['label_net'] == 31.33
+
+    assert len(result['data']) != 0

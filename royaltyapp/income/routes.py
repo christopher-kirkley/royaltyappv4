@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from sqlalchemy import exc
+from sqlalchemy import exc, func, cast, Numeric
 # from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 #         VersionSchema, Track, TrackCatalogTable
 
@@ -117,8 +117,20 @@ def get_imported_statements():
 
 @income.route('/income/statements/<id>', methods=['GET'])
 def get_imported_statement_detail(id):
-    query = db.session.query(IncomeTotal).filter(IncomeTotal.imported_statement_id == id).all()
     income_total_schema = IncomeTotalSchema(many=True)
-    statement = income_total_schema.dumps(query)
-    return statement
+
+    number_of_records = (db.session.query(func.count(IncomeTotal.id).label('count')).filter(IncomeTotal.imported_statement_id == id).first()).count
+
+    total_income = (db.session.query(cast(func.sum(IncomeTotal.label_net), Numeric(8, 2)).label('label_net'), cast(func.sum(IncomeTotal.amount), Numeric(8, 2)).label('amount'), cast(func.sum(IncomeTotal.label_fee), Numeric(8, 2)).label('label_fee')).filter(IncomeTotal.imported_statement_id == id)
+                    .first())
+
+    total_income_res = income_total_schema.dumps(total_income)
+
+    query = db.session.query(IncomeTotal).filter(IncomeTotal.imported_statement_id == id).all()
+    statement_detail = income_total_schema.dumps(query)
+    return jsonify({'number_of_records': number_of_records,
+                    'amount': total_income.amount,
+                    'label_fee': total_income.label_fee,
+                    'label_net': total_income.label_net,
+                    'data': statement_detail})
 
