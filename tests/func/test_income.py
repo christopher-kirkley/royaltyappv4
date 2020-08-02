@@ -127,6 +127,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('1').click()
     
     """ User goes to imported income statement detail."""
+    time.sleep(2000)
     time.sleep(1)
     table = browser.find_element_by_id('imported_statement_table')
     rows = table.find_elements_by_tag_name('tr')

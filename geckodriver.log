@@ -5494,3 +5494,96 @@ Exiting due to channel error.
 1596389364818	Marionette	INFO	Listening on port 65483
 1596389364836	Marionette	WARN	TLS certificate errors will be ignored for this session
 1596389384198	Marionette	INFO	Stopped listening on port 65483
+1596401662297	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileAYA2Tz"
+1596401666311	Marionette	INFO	Listening on port 50746
+1596401666383	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1596401669607	Marionette	INFO	Stopped listening on port 50746
+1596402388169	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexyrfMr"
+1596402391277	Marionette	INFO	Listening on port 51054
+1596402391373	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1596402399093	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2aozBa"
+1596402402390	Marionette	INFO	Listening on port 51136
+1596402402484	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+1596402422033	Marionette	INFO	Stopped listening on port 51136
+1596402454569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezCM8DS"
+1596402457285	Marionette	INFO	Listening on port 51242
+1596402457383	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.data is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.data is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.amount is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.amount is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3569: TypeError: statement.amount is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3569: TypeError: statement.amount is undefined
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1596403709295	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVNGW5w"
+1596403712066	Marionette	INFO	Listening on port 51834
+1596403712164	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1596403722522	Marionette	INFO	Stopped listening on port 51834
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1596403731510	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileadOgt9"
+1596403734233	Marionette	INFO	Listening on port 51936
+1596403734298	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.map is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.data is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement.data is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Unable to read VR Path Registry from /Users/ck/Library/Application Support/OpenVR/.openvr/openvrpaths.vrpath
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3514: TypeError: json[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3514: TypeError: json is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3514: TypeError: json[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3568: TypeError: statement is undefined
+1596405753912	Marionette	INFO	Stopped listening on port 51936
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1596405760184	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileP6ZHTz"
+1596405762895	Marionette	INFO	Listening on port 52821
+1596405762953	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596405764230	Marionette	INFO	Stopped listening on port 52821
+1596405787766	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiDSNqS"
+1596405790603	Marionette	INFO	Listening on port 52900
+1596405790631	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

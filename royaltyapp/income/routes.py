@@ -4,6 +4,7 @@ from sqlalchemy import exc, func, cast, Numeric
 #         VersionSchema, Track, TrackCatalogTable
 
 import pandas as pd
+import json
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema
 
@@ -126,11 +127,30 @@ def get_imported_statement_detail(id):
 
     total_income_res = income_total_schema.dumps(total_income)
 
+    versions_sold = (db.session.query
+            (func.sum(IncomeTotal.amount).label('amount'),
+            func.sum(IncomeTotal.quantity).label('quantity'),
+            Version.version_number)
+    .join(Version, IncomeTotal.version_id == Version.id)
+    .filter(IncomeTotal.imported_statement_id == id)
+    .group_by(Version.version_number)
+    )
+    physical_versions = versions_sold.filter(IncomeTotal.medium == 'physical').all()
+    digital_versions = versions_sold.filter(IncomeTotal.medium == 'digital').all()
+
+    digital_versions_res = income_total_schema.dumps(digital_versions)
+    physical_versions_res = income_total_schema.dumps(physical_versions)
+ 
+
     query = db.session.query(IncomeTotal).filter(IncomeTotal.imported_statement_id == id).all()
     statement_detail = income_total_schema.dumps(query)
-    return jsonify({'number_of_records': number_of_records,
+
+    return jsonify([{'number_of_records': number_of_records,
                     'amount': total_income.amount,
                     'label_fee': total_income.label_fee,
                     'label_net': total_income.label_net,
-                    'data': statement_detail})
+                    'data': json.loads(statement_detail),
+                    'digital': json.loads(digital_versions_res),
+                    'physical': json.loads(physical_versions_res)
+                    }])
 
