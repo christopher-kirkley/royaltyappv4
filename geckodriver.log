@@ -5587,3 +5587,54 @@ Exiting due to channel error.
 Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
+1596407907956	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIcNWH5"
+1596407911452	Marionette	INFO	Listening on port 53389
+1596407911489	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1596407922387	Marionette	INFO	Stopped listening on port 53389
+1596407930520	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTgZAWy"
+1596407933475	Marionette	INFO	Listening on port 53492
+1596407933491	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3992: TypeError: props.summary is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3955: TypeError: props.type.upper is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3955: TypeError: props.type.upper is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3955: TypeError: props.type.upper is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1596408754541	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMFwsVN"
+1596408757649	Marionette	INFO	Listening on port 53775
+1596408757676	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1596408768186	Marionette	INFO	Stopped listening on port 53775
+1596408774582	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXHNTK8"
+1596408777359	Marionette	INFO	Listening on port 53874
+1596408777386	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1596409079312	Marionette	INFO	Stopped listening on port 53874
+1596409385781	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileER0ysM"
+1596409388571	Marionette	INFO	Listening on port 54093
+1596409388663	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596409408208	Marionette	INFO	Stopped listening on port 54093
+1596409557736	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevQGV5J"
+1596409560733	Marionette	INFO	Listening on port 54202
+1596409560821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1596409580314	Marionette	INFO	Stopped listening on port 54202
+1596409606446	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileL60tY0"
+1596409609201	Marionette	INFO	Listening on port 54305
+1596409609251	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596409628666	Marionette	INFO	Stopped listening on port 54305
