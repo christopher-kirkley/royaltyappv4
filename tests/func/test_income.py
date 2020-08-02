@@ -128,10 +128,21 @@ def test_returns(browser, test_client, db):
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
-
-    """ User decides to go back and delete this statement. """
     assert browser.find_element_by_id('statement_summary')
     assert browser.find_element_by_id('number_of_records').text == '4'
+
+    """ User decides to go back and delete this statement. """
+    browser.find_element_by_id('view_imported_income').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_income_table')
+    rows = table.find_elements_by_tag_name('tr')
+    rows[1].find_element_by_id("delete").click()
+
+    """ Statement dissapears from page. """
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_income_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
     
 
 
