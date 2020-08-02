@@ -1,5 +1,7 @@
 import simplejson
 
+from sqlalchemy import func
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from marshmallow import fields
@@ -258,7 +260,8 @@ class IncomeTotalSchema(ma.SQLAlchemySchema):
                 "track_name",
                 "label_fee",
                 "label_net",
-                "amount"
+                "version_number",
+                "amount",
                 )
         include_relationships = True
     amount = fields.Decimal()

@@ -12,7 +12,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales
+from .helpers import build_catalog, add_bandcamp_sales, add_order_settings
 
 def test_can_import_bandcamp_sales(test_client, db):
     path = os.getcwd() + "/tests/files/bandcamp_test.csv"
@@ -177,6 +177,7 @@ def test_can_view_imported_statements(test_client, db):
 def test_can_view_imported_statement_detail(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
+    add_order_settings(db)
     response = test_client.post('/income/process-pending')
     response = test_client.get('/income/statements/1')
     assert response.status_code == 200
@@ -186,10 +187,9 @@ def test_can_view_imported_statement_detail(test_client, db):
     assert res.id == 1
     res = db.session.query(IncomeTotal).first()
     assert res.imported_statement_id == 1
-    result = json.loads(response.data)
+    result = json.loads(response.data)[0]
     assert result['number_of_records'] == 7
     assert result['amount'] == 31.33
-    assert result['label_fee'] == 0
-    assert result['label_net'] == 31.33
-
-    assert len(result['data']) != 0
+    assert result['label_fee'] == 6.22
+    assert result['label_net'] == 25.11
+    assert len(result['digital']) != 0
