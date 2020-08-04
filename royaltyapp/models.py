@@ -308,7 +308,7 @@ class ExpensePending(db.Model):
     __tablename__ = 'expense_pending'
 
     id = db.Column(db.Integer, primary_key=True)
-    statement_name = db.Column(db.String(255))
+    statement = db.Column(db.String(255))
     date = db.Column(db.Date)
     artist_name = db.Column(db.String(255))
     catalog_number = db.Column(db.String(255))
@@ -321,3 +321,12 @@ class ExpensePending(db.Model):
     catalog_id = db.Column(db.Integer)
     expense_type_id = db.Column(db.Integer)
     imported_statement_id = db.Column(db.Integer)
+
+class ExpensePendingSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = ("id",
+                "statement",
+                "description")
+        include_relationships = True
+
+

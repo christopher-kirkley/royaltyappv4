@@ -104,4 +104,11 @@ def add_order_settings(db):
     db.session.add(new_order_setting)
     db.session.commit()
 
+def add_artist_expense(test_client): 
+    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    data = {
+            'file': (path, 'expense_artist.csv')
+            }
+    response = test_client.post('/expense/import-statement',
+            data=data, content_type="multipart/form-data")
 
