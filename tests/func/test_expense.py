@@ -40,7 +40,7 @@ def test_returns(browser, test_client, db):
     """ User goes to expense page and uploads a file."""
     browser.find_element_by_id('expense').click()
     time.sleep(1)
-    path = os.getcwd() + "/tests/files/expense_catalog.csv"
+    path = os.getcwd() + "/tests/files/expense_artist.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
@@ -49,7 +49,7 @@ def test_returns(browser, test_client, db):
 
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
-    assert pending_statement.text == 'expense_catalog.csv'
+    assert pending_statement.text == 'expense_artist.csv'
     
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('matching_errors').text == "You have 2 matching errors."
