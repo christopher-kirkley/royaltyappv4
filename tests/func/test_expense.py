@@ -47,6 +47,10 @@ def test_returns(browser, test_client, db):
     msg = browser.find_element_by_id('statement_message')
     assert msg.text == "Uploaded!"
 
+    """ User sees statement added to the list of pending statements. """
+    pending_statement = browser.find_element_by_id('pending_statement')
+    assert pending_statement.text == 'expense_catalog.csv'
+    
     # """ User sees prompt for errors, and clicks to fix matching errors. """
     # assert browser.find_element_by_id('matching_errors').text == "You have 1 matching errors."
     # browser.find_element_by_id('fix_errors').click()
@@ -80,10 +84,6 @@ def test_returns(browser, test_client, db):
     # browser.find_element_by_id('upload_statement').click()
     # time.sleep(1)
 
-    # """ User sees statement added to the list of pending statements. """
-    # pending_statement = browser.find_element_by_id('pending_statement')
-    # assert pending_statement.text == 'bandcamp_test_2.csv'
-    
     # """ User sees prompt for errors, and clicks to fix matching errors. """
     # assert browser.find_element_by_id('matching_errors').text == "You have 4 matching errors."
     # browser.find_element_by_id('fix_errors').click()

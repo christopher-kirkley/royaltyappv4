@@ -8,11 +8,11 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings
+from .helpers import build_catalog, add_artist_expense, add_order_settings
 
 def test_can_import_artist_expense(test_client, db):
     path = os.getcwd() + "/tests/files/expense_artist.csv"
@@ -29,8 +29,18 @@ def test_can_import_artist_expense(test_client, db):
     assert first.description == 'Money Transfer'
     assert str(first.net) == '100.00'
     assert first.item_type == 'Credit'
+    assert first.statement == 'expense_artist.csv'
     assert json.loads(response.data) == {'success': 'true'}
     
+def test_can_list_pending_statements(test_client, db):
+    build_catalog(db, test_client)
+    add_artist_expense(test_client)
+    response = test_client.get('/expense/pending-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [{
+                'statement': 'expense_artist.csv'
+                                        }]
+
 # def test_can_get_matching_errors(test_client, db):
 #     response = test_client.get('/income/matching-errors')
 #     assert response.status_code == 200
@@ -97,14 +107,6 @@ def test_can_import_artist_expense(test_client, db):
 #     assert query.upc_id == '111'
 #     assert json.loads(response.data) == {'success': 'true'}
 
-# def test_can_list_pending_statements(test_client, db):
-#     build_catalog(db, test_client)
-#     add_bandcamp_sales(test_client)
-#     response = test_client.get('/income/pending-statements')
-#     assert response.status_code == 200
-#     assert json.loads(response.data) == [{'distributor' : 'bandcamp',
-#                                         'statement': 'one_bandcamp_test.csv'
-#                                         }]
 
 # def test_income_distributors_populated(test_client, db):
 #     query = db.session.query(IncomeDistributor).all()
