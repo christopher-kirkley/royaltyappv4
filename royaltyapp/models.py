@@ -304,3 +304,20 @@ class OrderSettingsSchema(ma.SQLAlchemyAutoSchema):
         fields = ("id", "order_percentage", "order_fee", "distributor_id")
         include_relationships = True
 
+class ExpensePending(db.Model):
+    __tablename__ = 'expense_pending'
+
+    id = db.Column(db.Integer, primary_key=True)
+    statement_name = db.Column(db.String(255))
+    date = db.Column(db.Date)
+    artist_name = db.Column(db.String(255))
+    catalog_number = db.Column(db.String(255))
+    vendor = db.Column(db.String(255))
+    expense_type = db.Column(db.String(255))
+    description = db.Column(db.String(255))
+    net = db.Column(db.Numeric(10, 2))
+    item_type = db.Column(db.String(255))
+    artist_id = db.Column(db.Integer)
+    catalog_id = db.Column(db.Integer)
+    expense_type_id = db.Column(db.Integer)
+    imported_statement_id = db.Column(db.Integer)

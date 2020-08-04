@@ -161,4 +161,3 @@ def delete_income_statement(id):
     db.session.commit()
     return jsonify({'success': 'true'})
 
-

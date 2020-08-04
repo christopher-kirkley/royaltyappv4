@@ -143,6 +143,9 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('imported_income_table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 1
+
+    """ User navigates to add Expenses. """
+    time.sleep(3000)
     
 
 

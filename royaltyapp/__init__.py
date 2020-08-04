@@ -21,10 +21,12 @@ def create_app(config_class=None):
     from royaltyapp.artists.routes import artists
     from royaltyapp.catalog.routes import catalog
     from royaltyapp.income.routes import income
+    from royaltyapp.expense.routes import expense
     royaltyapp.register_blueprint(home)
     royaltyapp.register_blueprint(artists)
     royaltyapp.register_blueprint(catalog)
     royaltyapp.register_blueprint(income)
+    royaltyapp.register_blueprint(expense)
 
     
     with royaltyapp.app_context():
