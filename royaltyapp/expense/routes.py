@@ -8,7 +8,7 @@ import json
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema
 
-from .helpers import StatementFactory, find_distinct_matching_errors
+from .helpers import expense_matching_errors
 
 # from .util import process_income as pi
 
@@ -37,19 +37,21 @@ def import_statement():
         ]
     df.reindex(columns=columns_for_expense)
     df.to_sql('expense_pending', con=db.engine, if_exists='append', index=False)
-    # statement = StatementFactory.get_statement(file, statement_source)
-    # statement.create_df()
-    # statement.clean()
-    # statement.modify_columns()
-    # statement.insert_to_db()
     return jsonify({'success': 'true'})
 
-# @income.route('/income/matching-errors', methods=['GET'])
-# def get_matching_errors():
-#     query = find_distinct_matching_errors().all()
-#     income_pendings_schema = IncomePendingSchema(many=True)
-#     matching_errors = income_pendings_schema.dumps(query)
-#     return matching_errors
+@expense.route('/expense/pending-statements', methods=['GET'])
+def get_pending_statements():
+    query = db.session.query(ExpensePending.statement).distinct(ExpensePending.statement).all()
+    expense_pending_schema = ExpensePendingSchema(many=True)
+    pending_statements = expense_pending_schema.dumps(query)
+    return pending_statements
+
+@expense.route('/expense/matching-errors', methods=['GET'])
+def get_matching_errors():
+    query = expense_matching_errors()
+    expense_pending_schema = ExpensePendingSchema(many=True)
+    matching_errors = expense_pending_schema.dumps(query)
+    return matching_errors
 
 # @income.route('/income/update-errors', methods=['PUT'])
 # def update_errors():
@@ -75,12 +77,6 @@ def import_statement():
 #         return jsonify({'success': 'false'})
 #     return jsonify({'success': 'true'})
 
-@expense.route('/expense/pending-statements', methods=['GET'])
-def get_pending_statements():
-    query = db.session.query(ExpensePending.statement).distinct(ExpensePending.statement).all()
-    expense_pending_schema = ExpensePendingSchema(many=True)
-    pending_statements = expense_pending_schema.dumps(query)
-    return pending_statements
 
 # @income.route('/income/order-settings', methods=['GET'])
 # def get_order_fees():

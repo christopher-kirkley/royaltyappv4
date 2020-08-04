@@ -41,31 +41,22 @@ def test_can_list_pending_statements(test_client, db):
                 'statement': 'expense_artist.csv'
                                         }]
 
-# def test_can_get_matching_errors(test_client, db):
-#     response = test_client.get('/income/matching-errors')
-#     assert response.status_code == 200
-#     assert json.loads(response.data) == []
-#     path = os.getcwd() + "/tests/files/one_bandcamp_test.csv"
-#     data = {
-#             'statement_source': 'bandcamp'
-#             }
-#     data['file'] = (path, 'one_bandcamp_test.csv')
-#     response = test_client.post('/income/import-sales',
-#             data=data, content_type="multipart/form-data")
-#     response = test_client.get('/income/matching-errors')
-#     assert response.status_code == 200
-#     assert db.session.query(IncomePending).all() != 0
-#     assert db.session.query(IncomePending).first().distributor == 'bandcamp'
-#     assert db.session.query(IncomePending).first().upc_id == '602318136817'
-#     assert db.session.query(IncomePending).first().catalog_id == 'SS-050'
-#     assert db.session.query(IncomePending).first().version_id == None
+def test_can_get_matching_errors(test_client, db):
+    response = test_client.get('/expense/matching-errors')
+    assert response.status_code == 200
+    assert json.loads(response.data) == []
+    add_artist_expense(test_client)
+    response = test_client.get('/expense/matching-errors')
+    assert response.status_code == 200
+    assert db.session.query(ExpensePending).all() != 0
+    assert db.session.query(ExpensePending).first().statement == 'expense_artist.csv'
+    assert len(json.loads(response.data)) == 4
+    build_catalog(db, test_client)
+    response = test_client.get('/expense/matching-errors')
+    assert response.status_code == 200
+    assert len(json.loads(response.data)) == 2
 
-#     """check function"""
-#     query = find_distinct_matching_errors()
-#     res = query.first()
-#     assert res.distributor == 'bandcamp'
-#     assert res.upc_id == '602318136817'
-#     assert len(json.loads(response.data)) == 7
+
 
 # def test_can_update_pending_table(test_client, db):
 #     build_catalog(db, test_client)

@@ -326,7 +326,18 @@ class ExpensePendingSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         fields = ("id",
                 "statement",
+                "catalog_id",
+                "catalog_number",
+                "artist_name",
+                "artist_id",
                 "description")
         include_relationships = True
 
 
+class ExpenseType(db.Model):
+    __tablename__ = 'expense_type'
+
+    id = db.Column(db.Integer, primary_key=True)
+    expense_type = db.Column(db.String(255), unique=True)
+
+    # expense_total = db.relationship('ExpenseTotal', backref='expense_type', passive_deletes=True)
