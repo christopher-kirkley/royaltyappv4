@@ -330,6 +330,9 @@ class ExpensePendingSchema(ma.SQLAlchemyAutoSchema):
                 "catalog_number",
                 "artist_name",
                 "artist_id",
+                "expense_type",
+                "item_type",
+                "vendor",
                 "description")
         include_relationships = True
 
