@@ -56,23 +56,26 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('fix_errors').click()
     time.sleep(1)
 
-    # """ User loads matching error page. """
-    # assert browser.find_element_by_id('header').text == "Matching Errors"
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # tds = rows[1].find_elements_by_tag_name('td');
-    # assert tds[0].text == 'bandcamp'
-    # assert tds[1].text == ''
-    # assert tds[2].text == 'SS-050-cass'
-    # assert tds[3].text == 'SS-050'
+    """ User loads matching error page. """
+    assert browser.find_element_by_id('header').text == "Expense Matching Errors"
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    tds = rows[1].find_elements_by_tag_name('td');
+    assert tds[0].text == 'Les Filles de Illighadad'
+    assert tds[1].text == ''
+    assert tds[2].text == '10% of Tour – paid out of tour money'
+    assert tds[3].text == 'Payout'
+    assert tds[4].text == 'Advance'
     
-    # """ User fixes errors and submits. """
-    # browser.find_element_by_id('new_upc').click()
-    # browser.find_element_by_id('SS-050cass').click()
-    # browser.find_element_by_id('update').click()
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 1
+    """ User updates artist errors and submits. """
+    browser.find_element_by_id('new_artist').click()
+    browser.find_element_by_id('Ahmed Ag Kaedy').click()
+    browser.find_element_by_id('update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
+    
+    """Finish"""
 
     # """ User checks another test file. """
     # browser.find_element_by_id('income').click()

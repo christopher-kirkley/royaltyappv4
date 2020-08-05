@@ -53,29 +53,23 @@ def get_matching_errors():
     matching_errors = expense_pending_schema.dumps(query)
     return matching_errors
 
-# @income.route('/income/update-errors', methods=['PUT'])
-# def update_errors():
-#     data = request.get_json(force=True)
-#     try:
-#         sel = find_distinct_matching_errors()
-#         for item in data['data_to_match']:
-#             if item.get('version_number'):
-#                 sel = sel.filter(IncomePending.version_number == item['version_number'])
-#             if item.get('album_name'):
-#                 sel = sel.filter(IncomePending.album_name == item['album_name'])
-#             if item.get('medium'):
-#                 sel = sel.filter(IncomePending.medium == item['medium'])
-#             if item.get('description'):
-#                 sel = sel.filter(IncomePending.medium == item['description'])
-#         temp = sel.subquery()
-#         (db.session.query(IncomePending)
-#             .filter(IncomePending.id == temp.c.id)
-#             .update({IncomePending.upc_id : data['upc_id']}))
-#         db.session.commit()
-#     except exc.DataError:
-#         db.session.rollback()
-#         return jsonify({'success': 'false'})
-#     return jsonify({'success': 'true'})
+@expense.route('/expense/update-errors', methods=['PUT'])
+def update_errors():
+    data = request.get_json(force=True)
+    try:
+        sel = expense_matching_errors()
+        for item in data['data_to_match']:
+            if item.get('artist_name'):
+                sel = sel.filter(ExpensePending.artist_name == item['artist_name'])
+        temp = sel.subquery()
+        (db.session.query(ExpensePending)
+            .filter(ExpensePending.id == temp.c.id)
+            .update({ExpensePending.artist_name : data['artist_name']}))
+        db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
 
 
 # @income.route('/income/order-settings', methods=['GET'])
