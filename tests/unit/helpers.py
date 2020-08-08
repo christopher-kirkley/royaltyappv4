@@ -112,3 +112,11 @@ def add_artist_expense(test_client):
     response = test_client.post('/expense/import-statement',
             data=data, content_type="multipart/form-data")
 
+def add_catalog_expense(test_client): 
+    path = os.getcwd() + "/tests/files/expense_catalog.csv"
+    data = {
+            'file': (path, 'expense_catalog.csv')
+            }
+    response = test_client.post('/expense/import-statement',
+            data=data, content_type="multipart/form-data")
+

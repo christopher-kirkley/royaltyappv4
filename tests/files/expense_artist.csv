@@ -1,5 +1,5 @@
-date,artist_name,catalog_number,vendor,expense_type,description,net,item_type
-2019-10-21,Ahmed Ag Kaedy,,Artists:Ahmed Ag Kaedy,Advance,Money Transfer,100,Credit
-2019-07-17,Ahmed Ag Kaedy,,Xoom.com,Advance,Money Transfer,897.96,Payout
-2019-07-17,Les Filles de Illighadad,,Les Filles de Illighadad,Advance,10% of Tour – paid out of tour money,673.47,Payout
-2019-07-26,Hama,,Xoom.com,Advance,Xoom.com,404.99,Payout
+date,artist_name,vendor,description,net,item_type
+2019-10-21,Ahmed Ag Kaedy,Artists:Ahmed Ag Kaedy,Money Transfer,100,Credit
+2019-07-17,Ahmed Ag Kaedy,Xoom.com,Money Transfer,897.96,Payout
+2019-07-17,Les Filles de Illighadad,Les Filles de Illighadad,10% of Tour – paid out of tour money,673.47,Payout
+2019-07-26,Hama,Xoom.com,Xoom.com,404.99,Payout
