@@ -40,8 +40,10 @@ def test_returns(browser, test_client, db):
     """ User goes to expense page and uploads a file."""
     browser.find_element_by_id('expense').click()
     time.sleep(1)
-    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    path = os.getcwd() + "/tests/files/expense_catalog.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('catalog_source').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
     msg = browser.find_element_by_id('statement_message')
@@ -49,31 +51,30 @@ def test_returns(browser, test_client, db):
 
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
-    assert pending_statement.text == 'expense_artist.csv'
+    assert pending_statement.text == 'expense_catalog.csv'
     
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('matching_errors').text == "You have 2 matching errors."
     browser.find_element_by_id('fix_errors').click()
     time.sleep(1)
 
-    """ User loads matching error page. """
-    assert browser.find_element_by_id('header').text == "Expense Matching Errors"
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    tds = rows[1].find_elements_by_tag_name('td');
-    assert tds[0].text == 'Les Filles de Illighadad'
-    assert tds[1].text == ''
-    assert tds[2].text == '10% of Tour – paid out of tour money'
-    assert tds[3].text == 'Payout'
-    assert tds[4].text == 'Advance'
+    # """ User loads matching error page. """
+    # assert browser.find_element_by_id('header').text == "Expense Matching Errors"
+    # table = browser.find_element_by_id('matching_error_table')
+    # rows = table.find_elements_by_tag_name('tr')
+    # tds = rows[1].find_elements_by_tag_name('td');
+    # assert tds[0].text == 'Les Filles de Illighadad'
+    # assert tds[1].text == ''
+    # assert tds[2].text == '10% of Tour – paid out of tour money'
+    # assert tds[3].text == 'Payout'
     
-    """ User updates artist errors and submits. """
-    browser.find_element_by_id('new_artist').click()
-    browser.find_element_by_id('Ahmed Ag Kaedy').click()
-    browser.find_element_by_id('update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 2
+    # """ User updates artist errors and submits. """
+    # browser.find_element_by_id('new_artist').click()
+    # browser.find_element_by_id('Ahmed Ag Kaedy').click()
+    # browser.find_element_by_id('update').click()
+    # table = browser.find_element_by_id('matching_error_table')
+    # rows = table.find_elements_by_tag_name('tr')
+    # assert len(rows) == 2
     
     """Finish"""
 
