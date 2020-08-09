@@ -8,7 +8,7 @@ import json
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema
 
-from .helpers import expense_matching_errors, artist_matching_errors, catalog_matching_errors
+from .helpers import expense_matching_errors, artist_matching_errors, catalog_matching_errors, expense_type_matching_errors
 
 # from .util import process_income as pi
 
@@ -53,10 +53,13 @@ def get_matching_errors():
     artist_errors = expense_pending_schema.dumps(query)
     query = catalog_matching_errors()
     catalog_errors = expense_pending_schema.dumps(query)
+    query = expense_type_matching_errors()
+    type_errors = expense_pending_schema.dumps(query)
     return jsonify([{
                     'total_matching_errors': 2,
                     'artist_matching_errors': json.loads(artist_errors),
-                    'catalog_matching_errors': json.loads(catalog_errors)
+                    'catalog_matching_errors': json.loads(catalog_errors),
+                    'type_matching_errors': json.loads(type_errors)
                     }])
     return matching_errors
 
@@ -79,6 +82,9 @@ def update_errors():
                 (db.session.query(ExpensePending)
                     .filter(ExpensePending.id == temp.c.id)
                     .update({ExpensePending.catalog_number : data['catalog_number']}))
+            if item.get('id'):
+                sel = db.session.query(ExpensePending).filter(ExpensePending.id==item['id'])
+                sel.update({ExpensePending.expense_type : data['expense_type']})
         db.session.commit()
     except exc.DataError:
         db.session.rollback()
