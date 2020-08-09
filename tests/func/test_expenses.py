@@ -77,17 +77,53 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('header').text == "Expense Matching Errors"
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 5   
-    time.sleep(1000)
     
-    # """ User updates artist errors and submits. """
-    # browser.find_element_by_id('new_artist').click()
-    # browser.find_element_by_id('Ahmed Ag Kaedy').click()
-    # browser.find_element_by_id('update').click()
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 2
+    """ User updates type errors and submits. """
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('advance').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 10
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('recoupable').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 9
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('recoupable').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 8
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('recoupable').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 7
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('recoupable').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 6
+    browser.find_element_by_id('new_expense_type').click()
+    browser.find_element_by_id('recoupable').click()
+    browser.find_element_by_id('type_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 5
+    browser.find_element_by_id('artist_update').click()
+    browser.find_element_by_id('artist_update').click()
+    browser.find_element_by_id('catalog_update').click()
+    browser.find_element_by_id('catalog_update').click()
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
     
+
     """Finish"""
 
     # """ User checks another test file. """
