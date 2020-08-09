@@ -269,24 +269,6 @@ class IncomeTotalSchema(ma.SQLAlchemySchema):
     label_net = fields.Decimal()
 
 
-def insert_initial_values(db):
-    """Initialize distributor table."""
-    statements_to_insert = [
-        IncomeDistributor(distributor_statement='bandcamp_statement',
-                          distributor_name='bandcamp'),
-        IncomeDistributor(distributor_statement='shopify_statement',
-                          distributor_name = 'shopify'),
-        IncomeDistributor(distributor_statement='sdphysical_statement',
-                          distributor_name = 'sdphysical'),
-        IncomeDistributor(distributor_statement='sddigital_statement',
-                          distributor_name='sddigital'),
-        IncomeDistributor(distributor_statement='quickbooks_statement',
-                          distributor_name='quickbooks'),
-        IncomeDistributor(distributor_statement='sds_statement',
-                          distributor_name='sds'),
-    ]
-    db.session.bulk_save_objects(statements_to_insert)
-    db.session.commit()
 
 
 
@@ -344,3 +326,26 @@ class ExpenseType(db.Model):
     expense_type = db.Column(db.String(255), unique=True)
 
     # expense_total = db.relationship('ExpenseTotal', backref='expense_type', passive_deletes=True)
+
+def insert_initial_values(db):
+    """Initialize distributor table."""
+    statements_to_insert = [
+        IncomeDistributor(distributor_statement='bandcamp_statement',
+                          distributor_name='bandcamp'),
+        IncomeDistributor(distributor_statement='shopify_statement',
+                          distributor_name = 'shopify'),
+        IncomeDistributor(distributor_statement='sdphysical_statement',
+                          distributor_name = 'sdphysical'),
+        IncomeDistributor(distributor_statement='sddigital_statement',
+                          distributor_name='sddigital'),
+        IncomeDistributor(distributor_statement='quickbooks_statement',
+                          distributor_name='quickbooks'),
+        IncomeDistributor(distributor_statement='sds_statement',
+                          distributor_name='sds'),
+        ExpenseType(id=1,
+                    expense_type='advance'),
+        ExpenseType(id=2,
+                    expense_type='recoupable'),
+    ]
+    db.session.bulk_save_objects(statements_to_insert)
+    db.session.commit()

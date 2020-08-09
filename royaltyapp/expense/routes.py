@@ -8,7 +8,7 @@ import json
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema
 
-from .helpers import expense_matching_errors
+from .helpers import expense_matching_errors, artist_matching_errors, catalog_matching_errors
 
 # from .util import process_income as pi
 
@@ -57,20 +57,26 @@ def get_matching_errors():
 def update_errors():
     data = request.get_json(force=True)
     try:
-        sel = expense_matching_errors()
         for item in data['data_to_match']:
             if item.get('artist_name'):
+                sel = artist_matching_errors()
                 sel = sel.filter(ExpensePending.artist_name == item['artist_name'])
-        temp = sel.subquery()
-        (db.session.query(ExpensePending)
-            .filter(ExpensePending.id == temp.c.id)
-            .update({ExpensePending.artist_name : data['artist_name']}))
+                temp = sel.subquery()
+                (db.session.query(ExpensePending)
+                    .filter(ExpensePending.id == temp.c.id)
+                    .update({ExpensePending.artist_name : data['artist_name']}))
+            if item.get('catalog_number'):
+                sel = catalog_matching_errors()
+                sel = sel.filter(ExpensePending.catalog_number == item['catalog_number'])
+                temp = sel.subquery()
+                (db.session.query(ExpensePending)
+                    .filter(ExpensePending.id == temp.c.id)
+                    .update({ExpensePending.catalog_number : data['catalog_number']}))
         db.session.commit()
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
-
 
 # @income.route('/income/order-settings', methods=['GET'])
 # def get_order_fees():

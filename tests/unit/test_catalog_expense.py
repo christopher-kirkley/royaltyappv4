@@ -8,7 +8,7 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema
+from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
@@ -42,7 +42,9 @@ def test_can_list_pending_statements(test_client, db):
                 'statement': 'expense_catalog.csv'
                                         }]
 
-def test_can_get_matching_errors(test_client, db):
+def test_can_get_catalog_matching_errors(test_client, db):
+    res = db.session.query(ExpenseType).all()
+    assert len(res) != 0
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
     assert json.loads(response.data) == []
@@ -57,27 +59,26 @@ def test_can_get_matching_errors(test_client, db):
     assert response.status_code == 200
     assert len(json.loads(response.data)) == 2
 
-
-# def test_can_update_pending_table(test_client, db):
-#     build_catalog(db, test_client)
-#     add_artist_expense(test_client)
-#     data = {
-#             'artist_name': 'Tooboo',
-#             'data_to_match' :
-#                 [
-#                     {
-#                         'artist_name': 'Les Filles de Illighadad',
-#                     }
-#                 ]
-#             }
-#     json_data = json.dumps(data)
-#     response = test_client.put('/expense/update-errors', data=json_data)
-#     query = (db.session.query(ExpensePending)
-#                 .filter(ExpensePending.id == 3)
-#                 .first()
-#                 )
-#     assert query.artist_name == 'Tooboo'
-#     assert json.loads(response.data) == {'success': 'true'}
+def test_can_update_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_catalog_expense(test_client)
+    data = {
+            'catalog_number': 'SS-050',
+            'data_to_match' :
+                [
+                    {
+                        'catalog_number': 'SS-011',
+                    }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/expense/update-errors', data=json_data)
+    query = (db.session.query(ExpensePending)
+                .filter(ExpensePending.id == 3)
+                .first()
+                )
+    assert query.catalog_number == 'SS-050'
+    # assert json.loads(response.data) == {'success': 'true'}
 
 
 # # def test_income_distributors_populated(test_client, db):
