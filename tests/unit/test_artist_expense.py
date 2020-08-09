@@ -46,18 +46,20 @@ def test_can_list_pending_statements(test_client, db):
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == []
+    assert json.loads(response.data) == [{'artist_matching_errors': [],
+                                        'catalog_matching_errors': []}]
     add_artist_expense(test_client)
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
     assert db.session.query(ExpensePending).all() != 0
     assert db.session.query(ExpensePending).first().statement == 'expense_artist.csv'
-    assert len(json.loads(response.data)) == 4
+    res = json.loads(response.data)[0]['artist_matching_errors']
+    assert len(res) == 4
     build_catalog(db, test_client)
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 2
-
+    res = json.loads(response.data)[0]['artist_matching_errors']
+    assert len(res) == 2
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
