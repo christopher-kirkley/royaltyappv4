@@ -6437,3 +6437,114 @@ JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: In
 1597007081763	Marionette	INFO	Listening on port 49320
 1597007081819	Marionette	WARN	TLS certificate errors will be ignored for this session
 1597007094213	Marionette	INFO	Stopped listening on port 49320
+1597008398670	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezJ6zO4"
+1597008402428	Marionette	INFO	Listening on port 49559
+1597008402446	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4282: TypeError: e.target.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4282: TypeError: e.target.new_expense_type is undefined
+1597009417512	Marionette	INFO	Stopped listening on port 49559
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597009522791	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledfUuym"
+1597009525981	Marionette	INFO	Listening on port 51788
+1597009525991	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.target.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4277: TypeError: e.currentTarget.new_expense_type is undefined
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1597010543543	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexFs4Kg"
+1597010547233	Marionette	INFO	Listening on port 56331
+1597010547288	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4531: TypeError: typeMatchingErrors is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4531: TypeError: typeMatchingErrors is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4531: TypeError: typeMatchingErrors is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1597011151752	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHjFGnF"
+1597011155199	Marionette	INFO	Listening on port 59190
+1597011155260	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597011170671	Marionette	INFO	Stopped listening on port 59190
+1597011184677	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilemylzHK"
+1597011188268	Marionette	INFO	Listening on port 59423
+1597011188292	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597011204042	Marionette	INFO	Stopped listening on port 59423
+1597011249427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesi6yNS"
+1597011252793	Marionette	INFO	Listening on port 59774
+1597011252826	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597011269181	Marionette	INFO	Stopped listening on port 59774
+1597011304772	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepaBONN"
+1597011308064	Marionette	INFO	Listening on port 60093
+1597011308096	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597011325848	Marionette	INFO	Stopped listening on port 60093
+1597011355133	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7JQxfV"
+1597011358480	Marionette	INFO	Listening on port 60404
+1597011358559	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1597011418117	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1YVQvm"
+1597011421391	Marionette	INFO	Listening on port 60761
+1597011421427	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1597011486002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5QvFHv"
+1597011489350	Marionette	INFO	Listening on port 61137
+1597011489411	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597011515110	Marionette	INFO	Stopped listening on port 61137
+1597011545006	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2Y3toI"
+1597011548281	Marionette	INFO	Listening on port 61478
+1597011548325	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1597011858168	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHP5hqh"
+1597011861470	Marionette	INFO	Listening on port 62854
+1597011861574	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 285: TypeError: InspectorUtils.removeContentState: Argument 1 is not an object.
+1597011896359	Marionette	INFO	Stopped listening on port 62854
+1597012040502	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepfYw06"
+1597012043915	Marionette	INFO	Listening on port 63737
+1597012044021	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597012061725	Marionette	INFO	Stopped listening on port 63737
+1597012087118	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVs79qU"
+1597012090384	Marionette	INFO	Listening on port 64032
+1597012090426	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597012109616	Marionette	INFO	Stopped listening on port 64032
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597012216077	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile27dvTJ"
+1597012219399	Marionette	INFO	Listening on port 64652
+1597012219493	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597012239493	Marionette	INFO	Stopped listening on port 64652
