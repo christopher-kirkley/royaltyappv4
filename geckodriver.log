@@ -6157,3 +6157,134 @@ Exiting due to channel error.
 1596993291358	Marionette	INFO	Listening on port 60672
 1596993291461	Marionette	WARN	TLS certificate errors will be ignored for this session
 1596993304853	Marionette	INFO	Stopped listening on port 60672
+1596993468829	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileR5nwMM"
+1596993471547	Marionette	INFO	Listening on port 60798
+1596993471637	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596993483259	Marionette	INFO	Stopped listening on port 60798
+1596993537068	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDyVy5A"
+1596993539831	Marionette	INFO	Listening on port 60884
+1596993539841	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596993551671	Marionette	INFO	Stopped listening on port 60884
+1596994184356	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileBZGqWg"
+1596994187686	Marionette	INFO	Listening on port 61018
+1596994187782	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596994197059	Marionette	INFO	Stopped listening on port 61018
+1596994346810	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5iKVfJ"
+1596994349631	Marionette	INFO	Listening on port 61115
+1596994349703	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596994358803	Marionette	INFO	Stopped listening on port 61115
+1596994537316	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXXe6b6"
+1596994540213	Marionette	INFO	Listening on port 61213
+1596994540289	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596994552668	Marionette	INFO	Stopped listening on port 61213
+1596994937112	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKAWAhY"
+1596994940029	Marionette	INFO	Listening on port 61323
+1596994940117	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596994952522	Marionette	INFO	Stopped listening on port 61323
+1596995042436	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepIAt30"
+1596995045330	Marionette	INFO	Listening on port 61417
+1596995045410	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596995057732	Marionette	INFO	Stopped listening on port 61417
+1596995155040	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoxllPc"
+1596995157902	Marionette	INFO	Listening on port 61519
+1596995157936	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 85964: Error: Objects are not valid as a React child (found: object with keys {Errors}). If you meant to render a collection of children, use an array instead.
+    in ArtistMatchingErrors (at ExpenseTable.js:48)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at ExpenseTable.js:40)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseTable.js:39)
+    in ExpenseTable (at ExpenseMatchingErrors.js:37)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseMatchingErrors.js:35)
+    in ExpenseMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:154)
+    in Switch (at Main.js:141)
+    in div (at Main.js:64)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:63)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 85964: Error: Objects are not valid as a React child (found: object with keys {Errors}). If you meant to render a collection of children, use an array instead.
+    in ArtistMatchingErrors (at ExpenseTable.js:48)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at ExpenseTable.js:40)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseTable.js:39)
+    in ExpenseTable (at ExpenseMatchingErrors.js:37)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseMatchingErrors.js:35)
+    in ExpenseMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:154)
+    in Switch (at Main.js:141)
+    in div (at Main.js:64)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:63)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 85964: Error: Objects are not valid as a React child (found: object with keys {errorRows}). If you meant to render a collection of children, use an array instead.
+    in ArtistMatchingErrors (at ExpenseTable.js:48)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at ExpenseTable.js:40)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseTable.js:39)
+    in ExpenseTable (at ExpenseMatchingErrors.js:37)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseMatchingErrors.js:35)
+    in ExpenseMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:154)
+    in Switch (at Main.js:141)
+    in div (at Main.js:64)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:63)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 85964: Error: Objects are not valid as a React child (found: object with keys {errorRows}). If you meant to render a collection of children, use an array instead.
+    in ArtistMatchingErrors (at ExpenseTable.js:48)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at ExpenseTable.js:40)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseTable.js:39)
+    in ExpenseTable (at ExpenseMatchingErrors.js:37)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseMatchingErrors.js:35)
+    in ExpenseMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:154)
+    in Switch (at Main.js:141)
+    in div (at Main.js:64)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:63)
+    in Main (at src/index.js:10)
+1596996170365	Marionette	INFO	Stopped listening on port 61519
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1596996212415	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePuiM9V"
+1596996215339	Marionette	INFO	Listening on port 61732
+1596996215402	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

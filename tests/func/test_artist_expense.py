@@ -43,7 +43,7 @@ def test_returns(browser, test_client, db):
     path = os.getcwd() + "/tests/files/expense_artist.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('source_statement').click()
-    browser.find_element_by_id('artist').click()
+    browser.find_element_by_id('artist_source').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
     msg = browser.find_element_by_id('statement_message')
@@ -74,6 +74,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('update').click()
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
+    time.sleep(1000)
     assert len(rows) == 2
     
     """Finish"""

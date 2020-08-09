@@ -48,9 +48,15 @@ def get_pending_statements():
 
 @expense.route('/expense/matching-errors', methods=['GET'])
 def get_matching_errors():
-    query = expense_matching_errors()
+    query = artist_matching_errors()
     expense_pending_schema = ExpensePendingSchema(many=True)
-    matching_errors = expense_pending_schema.dumps(query)
+    artist_errors = expense_pending_schema.dumps(query)
+    query = catalog_matching_errors()
+    catalog_errors = expense_pending_schema.dumps(query)
+    return jsonify([{
+                    'artist_matching_errors': json.loads(artist_errors),
+                    'catalog_matching_errors': json.loads(catalog_errors)
+                    }])
     return matching_errors
 
 @expense.route('/expense/update-errors', methods=['PUT'])
