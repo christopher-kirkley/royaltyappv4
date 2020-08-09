@@ -74,7 +74,6 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('update').click()
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    time.sleep(1000)
     assert len(rows) == 2
     
     """Finish"""
