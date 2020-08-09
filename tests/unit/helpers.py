@@ -120,3 +120,11 @@ def add_catalog_expense(test_client):
     response = test_client.post('/expense/import-statement',
             data=data, content_type="multipart/form-data")
 
+def add_type_expense(test_client): 
+    path = os.getcwd() + "/tests/files/expense_type.csv"
+    data = {
+            'file': (path, 'expense_type.csv')
+            }
+    response = test_client.post('/expense/import-statement',
+            data=data, content_type="multipart/form-data")
+
