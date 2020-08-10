@@ -6,7 +6,7 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema, ExpenseTotalSchema, ExpenseTotal
 
 from .helpers import expense_matching_errors, artist_matching_errors, catalog_matching_errors, expense_type_matching_errors
 
@@ -107,3 +107,24 @@ def get_imported_statements():
     imported_statement_schema = ImportedStatementSchema(many=True)
     statements = imported_statement_schema.dumps(query)
     return statements
+
+@expense.route('/expense/statements/<id>', methods=['GET'])
+def get_imported_statement_detail(id):
+    expense_total_schema = ExpenseTotalSchema(many=True)
+
+    number_of_records = (db.session.query(func.count(ExpenseTotal.id).label('count')).filter(ExpenseTotal.imported_statement_id == id).first()).count
+ 
+    query = db.session.query(ExpenseTotal).filter(ExpenseTotal.imported_statement_id == id).all()
+    statement_detail = expense_total_schema.dumps(query)
+
+    return jsonify([{'number_of_records': number_of_records,
+                    'data': json.loads(statement_detail),
+                    }])
+
+# @expense.route('/income/statements/<id>', methods=['DELETE'])
+# def delete_expense_statement(id):
+#     i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
+#     db.session.execute(i)
+#     db.session.commit()
+#     return jsonify({'success': 'true'})
+

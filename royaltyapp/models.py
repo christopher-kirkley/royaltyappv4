@@ -270,8 +270,6 @@ class IncomeTotalSchema(ma.SQLAlchemySchema):
 
 
 
-
-
 class OrderSettings(db.Model):
     __tablename__ = 'order_settings'
 
@@ -341,7 +339,30 @@ class ExpenseTotal(db.Model):
     imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
     catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
+    artist = db.relationship(Artist, primaryjoin=artist_id == Artist.id)
+    catalog = db.relationship(Catalog, primaryjoin=catalog_id == Catalog.id)
     expense_type_id = db.Column(db.Integer, db.ForeignKey('expense_type.id'))
+
+class ExpenseTotalSchema(ma.SQLAlchemyAutoSchema):
+    artist = ma.Nested("ArtistSchema", exclude=('catalog','prenom', 'surnom'))
+    catalog = ma.Nested("CatalogSchema", exclude=('artist', 'tracks', 'version'))
+    
+    class Meta:
+        json_module = simplejson
+        fields = (
+                "id",
+                "date",
+                "catalog",
+                "artist",
+                "vendor",
+                "description",
+                "net",
+                "item_type",
+                "transaction_type",
+                )
+        include_relationships = True
+    net = fields.Decimal()
+
 
 def insert_initial_values(db):
     """Initialize distributor table."""
