@@ -1,6 +1,6 @@
 from sqlalchemy import exc, func, cast
 
-from royaltyapp.models import db, ExpensePending, Artist, Catalog, ExpenseType, ImportedStatement
+from royaltyapp.models import db, ExpensePending, Artist, Catalog, ExpenseType, ImportedStatement, ExpenseTotal
 
 def normalize_artist():
     update = (
@@ -59,6 +59,37 @@ def normalize_statement_id():
     )
     db.session.execute(update)
     return True
+
+def move_from_pending_expense_to_total():
+    sel = db.session.query(ExpensePending.date,
+    ExpensePending.vendor,
+    ExpensePending.description,
+    ExpensePending.net,
+    ExpensePending.artist_id,
+    ExpensePending.catalog_id,
+    ExpensePending.imported_statement_id,
+    ExpensePending.expense_type_id,
+    ExpensePending.item_type,
+    )
+
+    ins = ExpenseTotal.__table__.insert().from_select(['date',
+    'vendor',
+    'description',
+    'net',
+    'artist_id',
+    'catalog_id',
+    'imported_statement_id',
+    'expense_type_id',
+    'item_type',
+    ], sel)
+    db.session.execute(ins)
+
+    """Clean up pending table."""
+    i = ExpensePending.__table__.delete()
+    db.session.execute(i)
+
+    db.session.commit()
+
 
 # def calculate_adjusted_amount():
 #     sel = (

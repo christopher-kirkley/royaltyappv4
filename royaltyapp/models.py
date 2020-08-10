@@ -327,6 +327,22 @@ class ExpenseType(db.Model):
 
     # expense_total = db.relationship('ExpenseTotal', backref='expense_type', passive_deletes=True)
 
+
+class ExpenseTotal(db.Model):
+    __tablename__ = 'expense_total'
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date)
+    vendor = db.Column(db.String(255))
+    description = db.Column(db.String(255))
+    net = db.Column(db.Numeric(10, 2))
+    item_type = db.Column(db.String(255))
+    transaction_type = db.Column(db.String(255), default='expense')
+
+    imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
+    catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
+    artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
+    expense_type_id = db.Column(db.Integer, db.ForeignKey('expense_type.id'))
+
 def insert_initial_values(db):
     """Initialize distributor table."""
     statements_to_insert = [

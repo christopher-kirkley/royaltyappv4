@@ -98,6 +98,12 @@ def process_pending():
     pe.normalize_expense_type()
     pe.insert_into_imported_statements()
     pe.normalize_statement_id()
+    pe.move_from_pending_expense_to_total()
     return jsonify({'success': 'true'})
 
-
+@expense.route('/expense/imported-statements', methods=['GET'])
+def get_imported_statements():
+    query = db.session.query(ImportedStatement).all()
+    imported_statement_schema = ImportedStatementSchema(many=True)
+    statements = imported_statement_schema.dumps(query)
+    return statements
