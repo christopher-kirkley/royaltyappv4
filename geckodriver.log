@@ -6548,3 +6548,48 @@ JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: In
 1597012219493	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
 1597012239493	Marionette	INFO	Stopped listening on port 64652
+1597013080888	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWFcIsv"
+1597013084679	Marionette	INFO	Listening on port 51988
+1597013084769	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597013104763	Marionette	INFO	Stopped listening on port 51988
+1597013120427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexDdAkk"
+1597013123801	Marionette	INFO	Listening on port 52269
+1597013123888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597013134858	Marionette	INFO	Stopped listening on port 52269
+1597013162900	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileaoZKQA"
+1597013166223	Marionette	INFO	Listening on port 52531
+1597013166324	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597013177188	Marionette	INFO	Stopped listening on port 52531
+1597013267413	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMl2X5W"
+1597013270580	Marionette	INFO	Listening on port 53046
+1597013270625	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597013281767	Marionette	INFO	Stopped listening on port 53046
+1597013287158	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCUKGyY"
+1597013290447	Marionette	INFO	Listening on port 53216
+1597013290477	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597013312104	Marionette	INFO	Stopped listening on port 53216
+1597013351692	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZCWIcb"
+1597013354996	Marionette	INFO	Listening on port 53591
+1597013355040	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597013376636	Marionette	INFO	Stopped listening on port 53591
+1597013516121	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileU6matc"
+1597013519367	Marionette	INFO	Listening on port 54381
+1597013519465	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597013542452	Marionette	INFO	Stopped listening on port 54381
+1597013566986	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile24B15V"
+1597013570196	Marionette	INFO	Listening on port 54704
+1597013570296	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597013593424	Marionette	INFO	Stopped listening on port 54704
+1597013937372	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXGY2Od"
+1597013940597	Marionette	INFO	Listening on port 56359
+1597013940630	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4741: Error: Cannot find module './ImportedIncomeTable'
+1597013941817	Marionette	INFO	Stopped listening on port 56359
+1597014472941	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3vkFnO"
+1597014476234	Marionette	INFO	Listening on port 57724
+1597014476312	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1597014499430	Marionette	INFO	Stopped listening on port 57724

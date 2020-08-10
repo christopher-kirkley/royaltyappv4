@@ -68,6 +68,7 @@ def test_returns(browser, test_client, db):
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'expense_artist.csv'
+
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('matching_errors').text == "You have 2 matching errors."
     browser.find_element_by_id('fix_errors').click()
@@ -123,58 +124,21 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 1
     
+    """ User goes to expense page and uploads a file."""
+    browser.find_element_by_id('expense').click()
+    time.sleep(1)
+    browser.find_element_by_id('process_statements').click()
 
     """Finish"""
-
-    # """ User checks another test file. """
-    # browser.find_element_by_id('income').click()
-    # time.sleep(1)
-    # path = os.getcwd() + "/tests/files/bandcamp_test_2.csv"
-    # browser.find_element_by_id('select_statement').send_keys(path)
-    # browser.find_element_by_id('source_statement').click()
-    # browser.find_element_by_id('bandcamp').click()
-    # browser.find_element_by_id('upload_statement').click()
-    # time.sleep(1)
-
-    # """ User sees prompt for errors, and clicks to fix matching errors. """
-    # assert browser.find_element_by_id('matching_errors').text == "You have 4 matching errors."
-    # browser.find_element_by_id('fix_errors').click()
-
-    # """ User updates version number. """
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # rows[1].find_element_by_id('version_number').click()
-    # browser.find_element_by_id('new_upc').click()
-    # browser.find_element_by_id('SS-050cass').click()
-    # browser.find_element_by_id('update').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 3
-
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # rows[1].find_element_by_id('medium').click()
-    # browser.find_element_by_id('SS-050cass').click()
-    # browser.find_element_by_id('update').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('matching_error_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 2
-
-    # """ User returns to page and tries to process payments. """
-    # browser.find_element_by_id('income').click()
-    # time.sleep(1)
-    # browser.find_element_by_id('process_statements').click()
-    # time.sleep(1)
-
-    # """ User goes to view imported income statements. """
-    # browser.find_element_by_id('view_imported_income').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('imported_income_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_elements_by_tag_name('td')[0].text == 'bandcamp_test_2.csv'
-    # browser.find_element_by_id('1').click()
+    
+    """ User goes to view imported income statements. """
+    browser.find_element_by_id('view_imported_expense').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_expense_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_elements_by_tag_name('td')[0].text == 'expense_catalog.csv'
+    browser.find_element_by_id('1').click()
+    time.sleep(1000)
     
     # """ User goes to imported income statement detail to view summa to view summary."""
     # time.sleep(1)
