@@ -10,7 +10,7 @@ from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, O
 
 from .helpers import expense_matching_errors, artist_matching_errors, catalog_matching_errors, expense_type_matching_errors
 
-# from .util import process_income as pi
+from .util import process_expense as pe
 
 expense = Blueprint('expense', __name__)
 
@@ -90,4 +90,14 @@ def update_errors():
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
+
+@expense.route('/expense/process-pending', methods=['POST'])
+def process_pending():
+    pe.normalize_artist()
+    pe.normalize_catalog()
+    pe.normalize_expense_type()
+    pe.insert_into_imported_statements()
+    pe.normalize_statement_id()
+    return jsonify({'success': 'true'})
+
 

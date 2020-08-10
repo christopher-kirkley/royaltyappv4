@@ -129,8 +129,6 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     browser.find_element_by_id('process_statements').click()
 
-    """Finish"""
-    
     """ User goes to view imported income statements. """
     browser.find_element_by_id('view_imported_expense').click()
     time.sleep(1)
