@@ -37,25 +37,65 @@ def test_can_view_imported_statements(test_client, db):
                                         }]
 
 
-# def test_can_view_imported_statement_detail(test_client, db):
-#     build_catalog(db, test_client)
-#     add_bandcamp_sales(test_client)
-#     add_order_settings(db)
-#     response = test_client.post('/income/process-pending')
-#     response = test_client.get('/income/statements/1')
-#     assert response.status_code == 200
-#     res = db.session.query(IncomeTotal).all()
-#     assert res != 0
-#     res = db.session.query(ImportedStatement).first()
-#     assert res.id == 1
-#     res = db.session.query(IncomeTotal).first()
-#     assert res.imported_statement_id == 1
-#     result = json.loads(response.data)[0]
-#     assert result['number_of_records'] == 7
-#     assert result['amount'] == 31.33
-#     assert result['label_fee'] == 6.22
-#     assert result['label_net'] == 25.11
-#     assert len(result['digital']) != 0
+def test_can_view_imported_statement_detail_artist(test_client, db):
+    build_catalog(db, test_client)
+    add_artist_expense(test_client)
+    response = test_client.post('/expense/process-pending')
+    response = test_client.get('/expense/statements/1')
+    assert response.status_code == 200
+    res = db.session.query(ExpenseTotal).all()
+    assert res != 0
+    res = db.session.query(ImportedStatement).first()
+    assert res.id == 1
+    res = db.session.query(ExpenseTotal).first()
+    assert res.imported_statement_id == 1
+    result = json.loads(response.data)[0]
+    assert result['number_of_records'] == 4 
+    assert result['data'][0] == {
+            'id': 1,
+            'date': '2019-10-21',
+            'description': 'Money Transfer',
+            'item_type': 'Credit',
+            'net': 100.0,
+            'transaction_type': 'expense',
+            'vendor': 'Artists:Ahmed Ag Kaedy',
+            'artist': {'artist_name': 'Ahmed Ag Kaedy',
+                        'id': 1,
+                        },
+            'catalog': None,
+            }
+
+def test_can_view_imported_statement_detail_catalog(test_client, db):
+    build_catalog(db, test_client)
+    add_catalog_expense(test_client)
+    response = test_client.post('/expense/process-pending')
+    response = test_client.get('/expense/statements/1')
+    assert response.status_code == 200
+    res = db.session.query(ExpenseTotal).all()
+    assert res != 0
+    res = db.session.query(ImportedStatement).first()
+    assert res.id == 1
+    res = db.session.query(ExpenseTotal).first()
+    assert res.imported_statement_id == 1
+    result = json.loads(response.data)[0]
+    assert result['number_of_records'] == 4 
+    assert result['data'][0] == {
+            'id': 1,
+            'date': '2019-09-26',
+            'description': 'SS-050cd - 1049',
+            'item_type': 'Manufacturing',
+            'net': 1398.06,
+            'transaction_type': 'expense',
+            'vendor': 'A to Z',
+            'artist': None,
+            'catalog': {
+                'catalog_name': 'Akaline Kidal',
+                'catalog_number': 'SS-050',
+                'id': 1,
+                }
+            }
+            
+
 
 # def test_can_delete_imported_statement(test_client, db):
 #     build_catalog(db, test_client)

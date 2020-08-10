@@ -28,12 +28,12 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_catalog').click()
     path = os.getcwd() + "/tests/files/one_catalog.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
-    time.sleep(2)
+    time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
     msg = browser.find_element_by_id('msg')
     path = os.getcwd() + "/tests/files/one_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
-    time.sleep(2)
+    time.sleep(1)
     browser.find_element_by_id('version_upload').click()
     msg = browser.find_element_by_id('version_msg')
 
@@ -136,12 +136,14 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_elements_by_tag_name('td')[0].text == 'expense_catalog.csv'
     browser.find_element_by_id('1').click()
-    time.sleep(1000)
     
-    # """ User goes to imported income statement detail to view summa to view summary."""
-    # time.sleep(1)
-    # assert browser.find_element_by_id('statement_summary')
-    # assert browser.find_element_by_id('number_of_records').text == '4'
+    """ User goes to imported statement detail. """
+    time.sleep(1)
+    time.sleep(1000)
+    assert browser.find_element_by_id('header').text == "Detail Imported Expense"
+    table = browser.find_element_by_id('imported_expense_table')
+    rows = table.find_elements_by_id('tr')
+    assert len(rows) > 1
 
     # """ User decides to go back and delete this statement. """
     # browser.find_element_by_id('view_imported_income').click()
