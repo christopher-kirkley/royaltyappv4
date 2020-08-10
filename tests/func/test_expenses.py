@@ -153,18 +153,18 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 5
 
-    # """ User decides to go back and delete this statement. """
-    # browser.find_element_by_id('view_imported_income').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('imported_income_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # rows[1].find_element_by_id("delete").click()
+    """ User decides to go back and delete this statement. """
+    browser.find_element_by_id('view_imported_expense').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_expense_table')
+    rows = table.find_elements_by_tag_name('tr')
+    rows[1].find_element_by_id("delete").click()
 
-    # """ Statement dissapears from page. """
-    # time.sleep(1)
-    # table = browser.find_element_by_id('imported_income_table')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert len(rows) == 1
+    """ Statement dissapears from page. """
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_expense_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
 
     # """ User navigates to add Expenses. """
     # time.sleep(3000)

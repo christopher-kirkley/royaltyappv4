@@ -6762,3 +6762,21 @@ JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: In
 1597086294622	Marionette	INFO	Listening on port 50157
 1597086294696	Marionette	WARN	TLS certificate errors will be ignored for this session
 1597086317091	Marionette	INFO	Stopped listening on port 50157
+1597086367130	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3CsYgV"
+1597086369855	Marionette	INFO	Listening on port 50284
+1597086369913	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597086394964	Marionette	INFO	Stopped listening on port 50284
+1597086411339	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilep3kcDj"
+1597086414033	Marionette	INFO	Listening on port 50404
+1597086414125	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597086439330	Marionette	INFO	Stopped listening on port 50404
+1597086584606	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEaaLeD"
+1597086587304	Marionette	INFO	Listening on port 50579
+1597086587396	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597086612495	Marionette	INFO	Stopped listening on port 50579
+1597086633325	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileU0nXc5"
+1597086636032	Marionette	INFO	Listening on port 50702
+1597086636096	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597086661079	Marionette	INFO	Stopped listening on port 50702
