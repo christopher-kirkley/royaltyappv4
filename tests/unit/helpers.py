@@ -6,6 +6,10 @@ from royaltyapp.models import Artist, Catalog, Version, Track, OrderSettings
 
 from royaltyapp.catalog.helpers import clean_df
 
+from royaltyapp.income.util import process_income as pi
+
+from royaltyapp.expense.util import process_expense as pe
+
 
 def add_one_artist(db):
     new_artist = Artist(artist_name='Amanar',
@@ -127,4 +131,17 @@ def add_type_expense(test_client):
             }
     response = test_client.post('/expense/import-statement',
             data=data, content_type="multipart/form-data")
+
+def add_processed_income(test_client, db):
+    add_bandcamp_sales(test_client)
+    add_order_settings(db)
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    pi.normalize_statement_id()
+    pi.move_from_pending_income_to_total()
+
+def add_processed_expense(test_client, db):
+    add_artist_expense(test_client)
 

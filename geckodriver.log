@@ -6780,3 +6780,85 @@ JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: In
 1597086636096	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
 1597086661079	Marionette	INFO	Stopped listening on port 50702
+1597090034285	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilep6GBC3"
+1597090037285	Marionette	INFO	Listening on port 51162
+1597090037369	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597090043620	Marionette	INFO	Stopped listening on port 51162
+1597090121159	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilec1Lomz"
+1597090123963	Marionette	INFO	Listening on port 51257
+1597090124033	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597090128707	Marionette	INFO	Stopped listening on port 51257
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597090169020	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebCU9nG"
+1597090171752	Marionette	INFO	Listening on port 51348
+1597090171798	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597090176588	Marionette	INFO	Stopped listening on port 51348
+1597090248594	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDhOuiH"
+1597090251429	Marionette	INFO	Listening on port 51434
+1597090251465	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597090256542	Marionette	INFO	Stopped listening on port 51434
+1597090282148	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNJDOYo"
+1597090285351	Marionette	INFO	Listening on port 51523
+1597090285366	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+1597090290256	Marionette	INFO	Stopped listening on port 51523
+1597091209311	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0xTIgp"
+1597091212694	Marionette	INFO	Listening on port 51908
+1597091212768	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597091217785	Marionette	INFO	Stopped listening on port 51908
+1597091266640	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileySm5Dw"
+1597091269748	Marionette	INFO	Listening on port 52036
+1597091269825	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597091274833	Marionette	INFO	Stopped listening on port 52036
+1597091291682	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevHwRLz"
+1597091294895	Marionette	INFO	Listening on port 52127
+1597091294957	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597091300191	Marionette	INFO	Stopped listening on port 52127
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597091312860	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTpZzpD"
+1597091315561	Marionette	INFO	Listening on port 52227
+1597091315660	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597091320580	Marionette	INFO	Stopped listening on port 52227
+1597097892657	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileI0gnIp"
+1597097896642	Marionette	INFO	Listening on port 53254
+1597097896707	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597097901843	Marionette	INFO	Stopped listening on port 53254
+1597098004235	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekLeSG6"
+1597098007155	Marionette	INFO	Listening on port 53362
+1597098007229	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597098012249	Marionette	INFO	Stopped listening on port 53362
+1597098017643	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilen1AmvU"
+1597098020468	Marionette	INFO	Listening on port 53451
+1597098020545	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1597099025732	Marionette	INFO	Stopped listening on port 53451
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1597099032928	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePs2k6a"
+1597099036209	Marionette	INFO	Listening on port 53976
+1597099036305	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597099037718	Marionette	INFO	Stopped listening on port 53976
+1597099065900	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileG3mXUv"
+1597099068727	Marionette	INFO	Listening on port 54084
+1597099068763	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: e.target.start_date is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

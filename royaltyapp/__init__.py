@@ -4,8 +4,6 @@ from flask_cors import CORS
 from royaltyapp.models import db, ma
 
 
-
-
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
     CORS(royaltyapp)
@@ -22,11 +20,13 @@ def create_app(config_class=None):
     from royaltyapp.catalog.routes import catalog
     from royaltyapp.income.routes import income
     from royaltyapp.expense.routes import expense
+    from royaltyapp.statements.routes import statements
     royaltyapp.register_blueprint(home)
     royaltyapp.register_blueprint(artists)
     royaltyapp.register_blueprint(catalog)
     royaltyapp.register_blueprint(income)
     royaltyapp.register_blueprint(expense)
+    royaltyapp.register_blueprint(statements)
 
     
     with royaltyapp.app_context():
