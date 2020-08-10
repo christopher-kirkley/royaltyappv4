@@ -121,10 +121,10 @@ def get_imported_statement_detail(id):
                     'data': json.loads(statement_detail),
                     }])
 
-# @expense.route('/income/statements/<id>', methods=['DELETE'])
-# def delete_expense_statement(id):
-#     i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
-#     db.session.execute(i)
-#     db.session.commit()
-#     return jsonify({'success': 'true'})
+@expense.route('/expense/statements/<id>', methods=['DELETE'])
+def delete_expense_statement(id):
+    i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
+    db.session.execute(i)
+    db.session.commit()
+    return jsonify({'success': 'true'})
 

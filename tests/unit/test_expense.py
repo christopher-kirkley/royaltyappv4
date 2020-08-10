@@ -94,25 +94,14 @@ def test_can_view_imported_statement_detail_catalog(test_client, db):
                 'id': 1,
                 }
             }
-            
 
-
-# def test_can_delete_imported_statement(test_client, db):
-#     build_catalog(db, test_client)
-#     add_bandcamp_sales(test_client)
-#     add_order_settings(db)
-#     response = test_client.post('/income/process-pending')
-#     response = test_client.get('/income/imported-statements')
-#     assert response.status_code == 200
-#     assert json.loads(response.data) == [{
-#                                         'id' : 1,
-#                                         'income_distributor_id' : 1,
-#                                         'statement_name' : 'one_bandcamp_test.csv',
-#                                         'transaction_type' : 'income'
-#                                         }]
-#     response = test_client.delete('/income/statements/1')
-#     assert response.status_code == 200
-#     assert json.loads(response.data) == {'success': 'true'}
-#     res = db.session.query(IncomeTotal).all()
-#     assert len(res) == 0
+def test_can_delete_imported_statement(test_client, db):
+    build_catalog(db, test_client)
+    add_catalog_expense(test_client)
+    response = test_client.post('/expense/process-pending')
+    response = test_client.delete('/expense/statements/1')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(ExpenseTotal).all()
+    assert len(res) == 0
 
