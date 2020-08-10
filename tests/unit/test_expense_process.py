@@ -14,18 +14,6 @@ from royaltyapp.expense.util import process_expense as pe
 
 from .helpers import build_catalog, add_artist_expense, add_catalog_expense, add_type_expense
 
-# def test_can_normalize_distributor(test_client, db):
-#     build_catalog(db, test_client)
-#     add_artist_expense(test_client)
-#     add_catalog_expense(test_client)
-#     res = db.session.query(ExpensePending).all()
-#     assert len(res) == 8
-    # query = db.session.query(IncomeDistributor).all()
-    # assert len(query) != 0
-    # pi.normalize_distributor()
-    # res = db.session.query(IncomePending).first()
-    # assert res.distributor_id == 1
-
 def test_can_normalize_artist(test_client, db):
     build_catalog(db, test_client)
     add_artist_expense(test_client)
@@ -71,17 +59,17 @@ def test_can_insert_into_imported_statements_table(test_client, db):
     assert res.statement_name == 'expense_artist.csv'
     assert res.transaction_type == 'expense'
 
-# def test_can_normalize_statement_id(test_client, db):
-    # build_catalog(db, test_client)
-    # add_bandcamp_sales(test_client)
-    # pi.normalize_distributor()
-    # pi.normalize_version()
-    # pi.normalize_track()
-    # pi.insert_into_imported_statements()
-    # assert pi.normalize_statement_id() == True
-    # new_statement_id = db.session.query(ImportedStatement).first().id
-    # res = db.session.query(IncomePending).first()
-    # assert res.statement_id == new_statement_id
+def test_can_normalize_statement_id(test_client, db):
+    build_catalog(db, test_client)
+    add_artist_expense(test_client)
+    pe.normalize_artist()
+    pe.normalize_catalog()
+    pe.normalize_expense_type()
+    pe.insert_into_imported_statements()
+    assert pe.normalize_statement_id() == True
+    new_statement_id = db.session.query(ImportedStatement).first().id
+    res = db.session.query(ExpensePending).first()
+    assert res.imported_statement_id == new_statement_id
 
 # def test_can_calculate_adjusted_label_amount(test_client, db):
     # build_catalog(db, test_client)

@@ -50,15 +50,15 @@ def insert_into_imported_statements():
     return True
 
 
-# def normalize_statement_id():
-#     db.session.execute("""
-#     UPDATE income_pending
-#     SET statement_id = imported_statement.id
-#     FROM imported_statement
-#     WHERE income_pending.statement = imported_statement.statement_name;
-#     """)
-#     db.session.commit()
-#     return True
+def normalize_statement_id():
+    update = (
+    ExpensePending.__table__
+    .update()
+    .where(ExpensePending.statement == ImportedStatement.statement_name)
+    .values(imported_statement_id=ImportedStatement.id)
+    )
+    db.session.execute(update)
+    return True
 
 # def calculate_adjusted_amount():
 #     sel = (
