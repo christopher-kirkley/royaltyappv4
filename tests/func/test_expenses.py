@@ -166,8 +166,6 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 2
 
-    # """ User navigates to add Expenses. """
-    # time.sleep(3000)
     
 
 

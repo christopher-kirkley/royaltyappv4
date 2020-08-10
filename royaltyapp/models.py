@@ -363,6 +363,24 @@ class ExpenseTotalSchema(ma.SQLAlchemyAutoSchema):
         include_relationships = True
     net = fields.Decimal()
 
+class StatementGenerated(db.Model):
+    __tablename__ = 'statement_generated'
+
+    id = db.Column(db.Integer, primary_key=True)
+    statement_name = db.Column(db.String(255), unique=True)
+
+class StatementBalanceGenerated(db.Model):
+        __tablename__ = 'statement_balance_generated'
+
+        id = db.Column(db.Integer, primary_key=True)
+        statement_balance_name = db.Column(db.String(255), unique=True)
+
+class StatementBalanceGeneratedSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = (
+                "id",
+                "statement_balance_name",
+                )
 
 def insert_initial_values(db):
     """Initialize distributor table."""
