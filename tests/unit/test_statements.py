@@ -8,13 +8,13 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance
+from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
 from royaltyapp.statements.helpers import define_artist_statement_table
 
 from royaltyapp.statements.util import generate_statement as ge
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement
+from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement, setup_test1
 
 
 def test_can_list_statements(test_client, db):
@@ -28,12 +28,15 @@ def test_can_list_statements(test_client, db):
         'statement_balance_name': 'None'
         }]
 
-def test_can_add_statement(test_client, db):
+def test_can_generate_statement(test_client, db):
+    setup_test1(test_client, db)
     data = {
             'previous_balance_id': 1,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
+    start_date = data['start_date']
+    end_date = data['end_date']
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
     assert response.status_code == 200
@@ -44,7 +47,12 @@ def test_can_add_statement(test_client, db):
     assert len(res) == 2
     res = db.session.query(StatementBalance).all()
     assert len(res) == 1
-
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+    ge.insert_into_table(start_date, end_date, table)
+    res = db.session.query(table).all()
+    assert len(res) != 0
+    
 def test_can_create_new_statement_table(test_client, db):
     date_range = '2020_01_01_2020_01_31'
     table = ge.create_statement_table(date_range)
@@ -114,81 +122,68 @@ def test_can_list_generated_statements(test_client, db):
         'statement_name': 'statement_2020_01_01_2020_01_31'
         }]
 
+def test_statement_generated(test_client, db):
+    setup_test1(test_client, db)
+    generate_statement(test_client)
+    response = test_client.get('/statements/1')
+    assert response.status_code == 200
 
+def test_can_find_track_percentage(test_client, db):
+    setup_test1(test_client, db)
+    assert len(db.session.query(Version).all()) > 0
+    assert len(db.session.query(Catalog).all()) > 0
+    assert len(db.session.query(Track).all()) > 0
+    assert len(db.session.query(TrackCatalogTable).all()) > 0
+    assert len(db.session.query(IncomeTotal).all()) > 0
+    artist_catalog_percentage = ge.find_track_percentage()
+    assert len(db.session.query(artist_catalog_percentage).all()) == 1
 
-# def test_can_view_imported_statements(test_client, db):
-#     build_catalog(db, test_client)
-#     add_artist_expense(test_client)
-#     response = test_client.post('/expense/process-pending')
-#     response = test_client.get('/expense/imported-statements')
-#     assert response.status_code == 200
+def test_can_find_artist_total(test_client, db):
+    start_date = '2020-01-01'
+    end_date = '2020-01-31'
+    setup_test1(test_client, db)
+    artist_catalog_percentage = ge.find_track_percentage()
+    artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
+    assert len(artist_total.all()) > 0
 
+def test_setup_test(test_client, db):
+    assert db.session.query(IncomePending).all() == []
+    setup_test1(test_client, db)
+    assert len(db.session.query(IncomeTotal).all()) > 0
 
-# def test_can_view_imported_statement_detail_artist(test_client, db):
-#     build_catalog(db, test_client)
-#     add_artist_expense(test_client)
-#     response = test_client.post('/expense/process-pending')
-#     response = test_client.get('/expense/statements/1')
-#     assert response.status_code == 200
-#     res = db.session.query(ExpenseTotal).all()
-#     assert res != 0
-#     res = db.session.query(ImportedStatement).first()
-#     assert res.id == 1
-#     res = db.session.query(ExpenseTotal).first()
-#     assert res.imported_statement_id == 1
-#     result = json.loads(response.data)[0]
-#     assert result['number_of_records'] == 4 
-#     assert result['data'][0] == {
-#             'id': 1,
-#             'date': '2019-10-21',
-#             'description': 'Money Transfer',
-#             'item_type': 'Credit',
-#             'net': 100.0,
-#             'transaction_type': 'expense',
-#             'vendor': 'Artists:Ahmed Ag Kaedy',
-#             'artist': {'artist_name': 'Ahmed Ag Kaedy',
-#                         'id': 1,
-#                         },
-#             'catalog': None,
-#             }
+def test_can_insert_into_table(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+    artist_catalog_percentage = ge.find_track_percentage()
+    artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
+    ge.insert_into_table(artist_total, table)
+    res = db.session.query(table).all()
+    assert len(res) != 0
 
-# def test_can_view_imported_statement_detail_catalog(test_client, db):
-#     build_catalog(db, test_client)
-#     add_catalog_expense(test_client)
-#     response = test_client.post('/expense/process-pending')
-#     response = test_client.get('/expense/statements/1')
-#     assert response.status_code == 200
-#     res = db.session.query(ExpenseTotal).all()
-#     assert res != 0
-#     res = db.session.query(ImportedStatement).first()
-#     assert res.id == 1
-#     res = db.session.query(ExpenseTotal).first()
-#     assert res.imported_statement_id == 1
-#     result = json.loads(response.data)[0]
-#     assert result['number_of_records'] == 4 
-#     assert result['data'][0] == {
-#             'id': 1,
-#             'date': '2019-09-26',
-#             'description': 'SS-050cd - 1049',
-#             'item_type': 'Manufacturing',
-#             'net': 1398.06,
-#             'transaction_type': 'expense',
-#             'vendor': 'A to Z',
-#             'artist': None,
-#             'catalog': {
-#                 'catalog_name': 'Akaline Kidal',
-#                 'catalog_number': 'SS-050',
-#                 'id': 1,
-#                 }
-#             }
-
-# def test_can_delete_imported_statement(test_client, db):
-#     build_catalog(db, test_client)
-#     add_catalog_expense(test_client)
-#     response = test_client.post('/expense/process-pending')
-#     response = test_client.delete('/expense/statements/1')
-#     assert response.status_code == 200
-#     assert json.loads(response.data) == {'success': 'true'}
-#     res = db.session.query(ExpenseTotal).all()
-#     assert len(res) == 0
-
+def test_can_find_expense_total(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+    artist_catalog_percentage = ge.find_track_percentage()
+    expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
+    assert len(expense_total.all()) > 0
+    
