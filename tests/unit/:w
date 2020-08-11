@@ -8,7 +8,7 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance
+from royaltyapp.models import StatementGenerated
 
 from royaltyapp.statements.helpers import define_artist_statement_table
 
@@ -23,14 +23,11 @@ def test_can_list_statements(test_client, db):
     add_processed_expense(test_client, db)
     response = test_client.get('/statements/view')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{
-        'id': 1,
-        'statement_balance_name': 'None'
-        }]
+    assert json.loads(response.data) == []
 
 def test_can_add_statement(test_client, db):
     data = {
-            'previous_balance_id': 1,
+            'statement_name': None,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -41,8 +38,6 @@ def test_can_add_statement(test_client, db):
     res = db.session.query(StatementGenerated).all()
     assert len(res) == 1
     res = db.session.query(StatementBalanceGenerated).all()
-    assert len(res) == 2
-    res = db.session.query(StatementBalance).all()
     assert len(res) == 1
 
 def test_can_create_new_statement_table(test_client, db):
@@ -53,53 +48,15 @@ def test_can_create_new_statement_table(test_client, db):
 def test_can_add_statement_to_index(test_client, db):
     date_range = '2020_01_01_2020_01_31'
     table = ge.create_statement_table(date_range)
-    statement_generated = ge.add_statement_to_index(table)
-    assert statement_generated.id == 1
+    ge.add_statement_to_index(table)
     res = db.session.query(StatementGenerated).all()
     assert len(res) == 1
 
 def test_can_create_new_statement_balance_table(test_client, db):
     date_range = '2020_01_01_2020_01_31'
     table = ge.create_statement_table(date_range)
-    statement_generated = ge.add_statement_to_index(table)
-    assert statement_generated.id == 1
+    ge.add_statement_to_index(table)
     statement_balance_table = ge.create_statement_balance_table(table)
-    assert statement_balance_table.__tablename__ == 'statement_2020_01_01_2020_01_31_balance'
-
-def test_can_add_statement_balance_to_index(test_client, db):
-    date_range = '2020_01_01_2020_01_31'
-    table = ge.create_statement_table(date_range)
-    statement_generated = ge.add_statement_to_index(table)
-    assert statement_generated.id == 1
-    statement_balance_table = ge.create_statement_balance_table(table)
-    assert statement_balance_table.__tablename__ == 'statement_2020_01_01_2020_01_31_balance'
-    res = db.session.query(StatementBalanceGenerated).all()
-    assert len(res) == 1
-    # statement_balance_name = statement_balance_table.__tablename__
-    # statement_balance_generated = StatementBalanceGenerated(
-    #         statement_balance_name=statement_balance_name)
-    # db.session.add(statement_balance_generated)
-    # db.session.commit()
-
-    statement_balance_generated = ge.add_statement_balance_to_index(statement_balance_table)
-    assert statement_balance_generated.id == 2
-    res = db.session.query(StatementBalanceGenerated).all()
-    assert len(res) == 2
-    
-def test_can_populate_relationship_table(test_client, db):
-    date_range = '2020_01_01_2020_01_31'
-    table = ge.create_statement_table(date_range)
-    statement_index = ge.add_statement_to_index(table)
-    statement_balance_table = ge.create_statement_balance_table(table)
-    statement_balance_index = ge.add_statement_balance_to_index(statement_balance_table)
-    assert statement_balance_index.id == 2
-    ge.populate_balance_relationship_table(
-            statement_index,
-            statement_balance_index,
-            1)
-    res = db.session.query(StatementBalance).all()
-    assert len(res) == 1
-
 
 
 # def test_can_view_imported_statements(test_client, db):

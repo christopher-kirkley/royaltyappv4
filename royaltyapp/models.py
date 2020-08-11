@@ -382,6 +382,16 @@ class StatementBalanceGeneratedSchema(ma.SQLAlchemyAutoSchema):
                 "statement_balance_name",
                 )
 
+class StatementBalance(db.Model):
+    """Table to link generated statements to current balance and previous balance."""
+    __tablename__ = 'statement_balance'
+    id = db.Column(db.Integer, primary_key=True)
+    statement_id = db.Column(db.Integer, db.ForeignKey('statement_generated.id', ondelete='CASCADE'))
+    current_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
+    previous_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
+    current_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[current_balance_id], passive_deletes=True)
+    previous_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[previous_balance_id], passive_deletes=True)
+
 def insert_initial_values(db):
     """Initialize distributor table."""
     statements_to_insert = [
@@ -401,6 +411,8 @@ def insert_initial_values(db):
                     expense_type='advance'),
         ExpenseType(id=2,
                     expense_type='recoupable'),
+        StatementBalanceGenerated(
+                    statement_balance_name='None'),
     ]
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()
