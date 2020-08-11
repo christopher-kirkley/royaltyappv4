@@ -104,11 +104,11 @@ def test_can_list_generated_statements(test_client, db):
     build_catalog(db, test_client)
     add_processed_income(test_client, db)
     add_processed_expense(test_client, db)
-    response = test_client.get('/statements/generated')
+    response = test_client.get('/statements/view')
     assert response.status_code == 200
     assert json.loads(response.data) == []
     generate_statement(test_client)
-    response = test_client.get('/statements/generated')
+    response = test_client.get('/statements/view')
     assert json.loads(response.data) == [{
         'id': 1,
         'statement_name': 'statement_2020_01_01_2020_01_31'

@@ -36,7 +36,7 @@ def generate_statement():
             previous_balance_id)
     return json.dumps({'success': 'true'})
 
-@statements.route('/statements/generated', methods=['GET'])
+@statements.route('/statements/view', methods=['GET'])
 def get_generated_statements():
     query = db.session.query(
             StatementGenerated.id,
