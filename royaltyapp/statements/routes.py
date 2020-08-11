@@ -17,3 +17,6 @@ def get_statements():
     statements = statement_balance_generated_schema.dumps(query)
     return statements
 
+@statements.route('/statements/generate', methods=['POST'])
+def generate_statement():
+    return json.dumps({'success': 'true'})

@@ -22,7 +22,16 @@ def test_can_list_statements(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == []
 
-    # assert json.loads(response.data) == {'success': 'true'}
+def test_can_add_statement(test_client, db):
+    data = {
+            'statement_name': None,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
     # res = db.session.query(ExpenseTotal).all()
     # assert len(res) == 4
 
