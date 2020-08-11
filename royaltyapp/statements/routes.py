@@ -45,3 +45,6 @@ def get_generated_statements():
     statements = statement_generated_schema.dumps(query)
     return statements
 
+@statements.route('/statements/<id>', methods=['GET'])
+def statement_detail():
+    return 'x'

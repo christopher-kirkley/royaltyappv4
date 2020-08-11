@@ -156,3 +156,50 @@ def generate_statement(test_client):
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
 
+def setup_test1(test_client, db):
+    path = os.getcwd() + "/tests/files/test1_catalog.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-catalog',
+            data=data)
+    path = os.getcwd() + "/tests/files/test1_version.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-version',
+            data=data)
+    path = os.getcwd() + "/tests/files/test1_bandcamp.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'test1_bandcamp.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    add_order_settings(db)
+    path = os.getcwd() + "/tests/files/test1_expense_artist.csv"
+    data = {
+            'file': (path, 'test1_expense_artist.csv')
+            }
+    response = test_client.post('/expense/import-statement',
+            data=data, content_type="multipart/form-data")
+    path = os.getcwd() + "/tests/files/test1_expense_catalog.csv"
+    data = {
+            'file': (path, 'test1_expense_catalog.csv')
+            }
+    response = test_client.post('/expense/import-statement',
+            data=data, content_type="multipart/form-data")
+    pi.normalize_distributor()
+    pi.normalize_version()
+    pi.normalize_track()
+    pi.insert_into_imported_statements()
+    pi.normalize_statement_id()
+    pi.move_from_pending_income_to_total()
+    pe.normalize_artist()
+    pe.normalize_catalog()
+    pe.normalize_expense_type()
+    pe.insert_into_imported_statements()
+    pe.normalize_statement_id()
+    pe.move_from_pending_expense_to_total()

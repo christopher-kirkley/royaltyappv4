@@ -65,4 +65,10 @@ def test_returns(browser, test_client, db):
     """ User goes to view statement. """
     browser.find_element_by_id('statements_view').click()
     assert browser.find_element_by_id('header').text == 'View Statements'
-    
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
+
+    """ User navigates to first statement to view. """
+    browser.find_element_by_id('1').click()
+    assert browser.find_element_by_id('header').text == 'Statement'
