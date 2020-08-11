@@ -56,6 +56,9 @@ def test_returns(browser, test_client, db):
     """ User goes to generate statement. """
     browser.find_element_by_id('statements_generate').click()
     assert browser.find_element_by_id('header').text == 'Generate Statement'
-    time.sleep(1000)
+    browser.find_element_by_id('previous_balance_id').click()
+    browser.find_element_by_id('None').click()
+    browser.find_element_by_id('submit').click()
+    time.sleep(1)
+    assert browser.find_element_by_id('message').text == 'Uploaded!'
     
-
