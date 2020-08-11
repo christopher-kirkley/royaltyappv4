@@ -4,13 +4,13 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated
+from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema
 
 from royaltyapp.statements.util import generate_statement as ge
 
 statements = Blueprint('statements', __name__)
 
-@statements.route('/statements/view', methods=['GET'])
+@statements.route('/statements/view-balances', methods=['GET'])
 def get_statements():
     query = db.session.query(
             StatementBalanceGenerated.id,
@@ -35,3 +35,13 @@ def generate_statement():
             statement_balance_index,
             previous_balance_id)
     return json.dumps({'success': 'true'})
+
+@statements.route('/statements/generated', methods=['GET'])
+def get_generated_statements():
+    query = db.session.query(
+            StatementGenerated.id,
+            StatementGenerated.statement_name).all()
+    statement_generated_schema = StatementGeneratedSchema(many=True)
+    statements = statement_generated_schema.dumps(query)
+    return statements
+

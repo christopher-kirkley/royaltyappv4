@@ -61,4 +61,8 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('submit').click()
     time.sleep(1)
     assert browser.find_element_by_id('message').text == 'Uploaded!'
+
+    """ User goes to view statement. """
+    browser.find_element_by_id('statements_view').click()
+    assert browser.find_element_by_id('header').text == 'View Statements'
     

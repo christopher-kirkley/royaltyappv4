@@ -14,14 +14,14 @@ from royaltyapp.statements.helpers import define_artist_statement_table
 
 from royaltyapp.statements.util import generate_statement as ge
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense
+from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement
 
 
 def test_can_list_statements(test_client, db):
     build_catalog(db, test_client)
     add_processed_income(test_client, db)
     add_processed_expense(test_client, db)
-    response = test_client.get('/statements/view')
+    response = test_client.get('/statements/view-balances')
     assert response.status_code == 200
     assert json.loads(response.data) == [{
         'id': 1,
@@ -99,6 +99,20 @@ def test_can_populate_relationship_table(test_client, db):
             1)
     res = db.session.query(StatementBalance).all()
     assert len(res) == 1
+
+def test_can_list_generated_statements(test_client, db):
+    build_catalog(db, test_client)
+    add_processed_income(test_client, db)
+    add_processed_expense(test_client, db)
+    response = test_client.get('/statements/generated')
+    assert response.status_code == 200
+    assert json.loads(response.data) == []
+    generate_statement(test_client)
+    response = test_client.get('/statements/generated')
+    assert json.loads(response.data) == [{
+        'id': 1,
+        'statement_name': 'statement_2020_01_01_2020_01_31'
+        }]
 
 
 
