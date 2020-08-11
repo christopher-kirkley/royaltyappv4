@@ -27,6 +27,7 @@ def generate_statement():
     previous_balance_id = data['previous_balance_id']
     date_range = (str(start_date) + '_' + str(end_date)).replace('-', '_')
     table = ge.create_statement_table(date_range)
+    table_obj = table.__table__
     statement_index = ge.add_statement_to_index(table)
     statement_balance_table = ge.create_statement_balance_table(table)
     statement_balance_index = ge.add_statement_balance_to_index(statement_balance_table)
@@ -34,6 +35,12 @@ def generate_statement():
             statement_index,
             statement_balance_index,
             previous_balance_id)
+    artist_catalog_percentage = ge.find_track_percentage()
+    artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
+    ge.insert_into_table(artist_total, table_obj)
+    expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
+    ge.insert_expense_into_total(expense_total, table_obj)
+
     return json.dumps({'success': 'true'})
 
 @statements.route('/statements/view', methods=['GET'])
