@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
+import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track, OrderSettings
 
@@ -144,4 +145,14 @@ def add_processed_income(test_client, db):
 
 def add_processed_expense(test_client, db):
     add_artist_expense(test_client)
+
+def generate_statement(test_client):
+    date_range = '2020_01_01_2020_01_31'
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
 
