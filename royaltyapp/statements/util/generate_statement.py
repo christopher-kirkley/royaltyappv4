@@ -252,4 +252,19 @@ def find_expense_total(start_date, end_date, artist_catalog_percentage):
 
     return artist_expense_total
 
-
+def insert_expense_into_total(expense_total, statement_table):
+    """Populate variable table with query result."""
+    ins = (
+            statement_table.insert().from_select(['transaction_type',
+                                  'description',
+                                  'artist_net',
+                                  'artist_id',
+                                  'customer',
+                                  'date',
+                                  'expense_type_id',
+                                  'item_type',
+                                  'catalog_id',
+                                  ]
+                                 , expense_total))
+    db.session.execute(ins)
+    db.session.commit()

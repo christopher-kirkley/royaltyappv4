@@ -49,7 +49,6 @@ def test_can_generate_statement(test_client, db):
     assert len(res) == 1
     metadata = db.MetaData(db.engine, reflect=True)
     table = metadata.tables.get('statement_2020_01_01_2020_01_31')
-    ge.insert_into_table(start_date, end_date, table)
     res = db.session.query(table).all()
     assert len(res) != 0
     
@@ -187,3 +186,20 @@ def test_can_find_expense_total(test_client, db):
     expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
     assert len(expense_total.all()) > 0
     
+def test_can_insert_expense_into_total(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+    artist_catalog_percentage = ge.find_track_percentage()
+    expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
+    ge.insert_expense_into_total(expense_total, table)
+
