@@ -4,9 +4,10 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema
+from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema
 
 from royaltyapp.statements.util import generate_statement as ge
+from royaltyapp.statements.util import generate_artist_statement as ga
 
 statements = Blueprint('statements', __name__)
 
@@ -53,5 +54,53 @@ def get_generated_statements():
     return statements
 
 @statements.route('/statements/<id>', methods=['GET'])
-def statement_detail():
-    return 'x'
+def statement_detail(id):
+    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
+    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
+    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
+    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
+    statement_by_artist = ga.create_statement_by_artist_subquery(
+                                                        statement_previous_balance_by_artist,
+                                                        statement_sales_by_artist,
+                                                        statement_advances_by_artist,
+                                                        statement_recoupables_by_artist)
+    statement_total = (
+        db.session.query(
+            func.coalesce(
+                func.sum(statement_by_artist.c.balance_forward), 0
+            )
+                .label('total'))
+            .filter(statement_by_artist.c.balance_forward > 50)
+            .first())
+
+    statement_for_all_artists = (
+        db.session.query(Artist, statement_by_artist)
+            .join(Artist, Artist.id == statement_by_artist.c.artist_id)
+            .all()
+    ) 
+    
+    summary = {
+            'statement_total': statement_total.total
+            }
+
+    artist_totals = []
+    
+    for row in statement_for_all_artists:
+        obj = {
+                'artist_id': row.artist_id,
+                'total_previous_balance': row.total_previous_balance,
+                'total_sales': row.total_sales,
+                'total_recoupable': row.total_recoupable,
+                'total_advance': row.total_advance,
+                'total_to_split': row.total_to_split,
+                'split': row.split,
+                'balance_forward': row.balance_forward,
+                }
+        artist_totals.append(obj)
+
+    json_res = {
+            'summary': summary,
+            'artist_totals': artist_totals
+            }
+
+    return jsonify(json_res)
