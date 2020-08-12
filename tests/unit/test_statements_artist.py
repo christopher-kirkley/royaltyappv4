@@ -28,8 +28,8 @@ def test_can_find_statement_table(test_client, db):
 
 def test_can_get_statement_previous_balance_subquery(test_client, db):
     setup_statement(test_client, db)
-    statement_previous_balance = ga.create_statement_previous_balance_subquery(1)
-    assert db.session.query(statement_previous_balance).all() == []
+    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
+    assert db.session.query(statement_previous_balance_by_artist).all() == []
 
 def test_can_get_statement_sales_by_artist_subquery(test_client, db):
     setup_statement(test_client, db)
@@ -39,5 +39,38 @@ def test_can_get_statement_sales_by_artist_subquery(test_client, db):
 def test_can_get_statement_advances_by_artist_subquery(test_client, db):
     setup_statement(test_client, db)
     statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
-    time.sleep(1000)
-    assert db.session.query(statement_advances_by_artist).all() == [(1, Decimal('997.96'))]
+    assert db.session.query(statement_advances_by_artist).all() == [
+            (1, Decimal('9542.63')),
+            (None, Decimal('1078.46'))
+            ]
+
+def test_can_get_statement_recoupables_by_artist_subquery(test_client, db):
+    setup_statement(test_client, db)
+    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
+    assert db.session.query(statement_recoupables_by_artist).all() == [
+            (1, Decimal('1398.06')),
+            ]
+
+def test_can_get_statement_by_artist_subquery(test_client, db):
+    setup_statement(test_client, db)
+    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
+    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
+    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
+    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
+    statement_by_artist = ga.create_statement_by_artist_subquery(
+                                                        statement_previous_balance_by_artist,
+                                                        statement_sales_by_artist,
+                                                        statement_advances_by_artist,
+                                                        statement_recoupables_by_artist)
+    assert len(db.session.query(statement_by_artist).all()) > 0
+    assert db.session.query(statement_by_artist).all() == [
+            (
+                1, # artist_id
+                Decimal('0'), # previous_balance 
+                Decimal('24.95'), # sales 
+                Decimal('1398.06'), # recoupable
+                Decimal('9542.63'), # advance
+                Decimal('-1373.11'), # total to split
+                Decimal('-686.56'), # sales - recoupable / 2
+                Decimal('-10229.19'), # balance forward
+                )]
