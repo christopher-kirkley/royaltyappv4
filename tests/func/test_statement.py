@@ -25,18 +25,18 @@ def test_returns(browser, test_client, db):
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
     browser.find_element_by_id('import_catalog').click()
-    path = os.getcwd() + "/tests/files/one_catalog.csv"
+    path = os.getcwd() + "/tests/files/test1_catalog.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     browser.find_element_by_id('catalog_upload').click()
     msg = browser.find_element_by_id('msg')
-    path = os.getcwd() + "/tests/files/one_version.csv"
+    path = os.getcwd() + "/tests/files/test1_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     browser.find_element_by_id('version_upload').click()
     msg = browser.find_element_by_id('version_msg')
 
     """ User uploads income file. """
     browser.find_element_by_id('income').click()
-    path = os.getcwd() + "/tests/files/bandcamp_test_2.csv"
+    path = os.getcwd() + "/tests/files/test1_bandcamp.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
@@ -45,7 +45,7 @@ def test_returns(browser, test_client, db):
 
     """ User goes to expense file."""
     browser.find_element_by_id('expense').click()
-    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    path = os.getcwd() + "/tests/files/test1_expense_artist.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('artist_source').click()

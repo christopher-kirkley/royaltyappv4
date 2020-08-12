@@ -26,11 +26,13 @@ def test_client(flask_app):
 def db(flask_app):
     from royaltyapp.models import db
     with flask_app.app_context():
+        db.reflect()
         db.drop_all()
         db.create_all()
     insert_initial_values(db)
     yield db
     db.session.remove()
+    db.reflect()
     db.drop_all()
         
     
