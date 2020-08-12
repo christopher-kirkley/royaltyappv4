@@ -399,6 +399,13 @@ class StatementBalance(db.Model):
     current_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[current_balance_id], passive_deletes=True)
     previous_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[previous_balance_id], passive_deletes=True)
 
+class StatementBalanceForward(db.Model):
+    __tablename__ = 'none_balance'
+    __table_args__ = {'extend_existing': True}
+    id = db.Column(db.Integer, primary_key=True)
+    artist_name = db.Column(db.String(255))
+    balance_forward = db.Column(db.Numeric(8, 2))
+
 def insert_initial_values(db):
     """Initialize distributor table."""
     statements_to_insert = [
@@ -419,7 +426,7 @@ def insert_initial_values(db):
         ExpenseType(id=2,
                     expense_type='recoupable'),
         StatementBalanceGenerated(
-                    statement_balance_name='None'),
+                    statement_balance_name='none_balance'),
     ]
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()

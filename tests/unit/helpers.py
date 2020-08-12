@@ -99,6 +99,15 @@ def add_two_bandcamp_sales(test_client):
     data['file'] = (path, 'two_bandcamp_test.csv')
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
+    
+def add_test1_bandcamp_sales(test_client):
+    path = os.getcwd() + "/tests/files/test1_bandcamp.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'test1_bandcamp.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
 
 def add_order_settings(db):
     new_order_setting = OrderSettings(
@@ -110,7 +119,7 @@ def add_order_settings(db):
     db.session.commit()
 
 def add_artist_expense(test_client): 
-    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    path = os.getcwd() + "/tests/files/test1_expense_artist.csv"
     data = {
             'file': (path, 'expense_artist.csv')
             }
@@ -196,6 +205,7 @@ def setup_test1(test_client, db):
     pi.normalize_track()
     pi.insert_into_imported_statements()
     pi.normalize_statement_id()
+    pi.calculate_adjusted_amount()
     pi.move_from_pending_income_to_total()
     pe.normalize_artist()
     pe.normalize_catalog()
@@ -203,3 +213,16 @@ def setup_test1(test_client, db):
     pe.insert_into_imported_statements()
     pe.normalize_statement_id()
     pe.move_from_pending_expense_to_total()
+
+def setup_statement(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+

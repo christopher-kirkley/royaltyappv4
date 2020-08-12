@@ -49,7 +49,6 @@ def insert_into_imported_statements():
             return f"Failed on {item.statement}, already in total sales."
     return True
 
-
 def normalize_statement_id():
     update = (
     ExpensePending.__table__

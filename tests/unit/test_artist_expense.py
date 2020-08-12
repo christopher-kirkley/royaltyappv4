@@ -17,7 +17,7 @@ from royaltyapp.expense.helpers import expense_matching_errors
 from .helpers import build_catalog, add_artist_expense, add_order_settings
 
 def test_can_import_artist_expense(test_client, db):
-    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    path = os.getcwd() + "/tests/files/test1_expense_artist.csv"
     data = {
             'file': (path, 'expense_artist.csv')
             }
@@ -31,6 +31,7 @@ def test_can_import_artist_expense(test_client, db):
     assert first.description == 'Money Transfer'
     assert str(first.net) == '100.00'
     assert first.item_type == 'Credit'
+    assert first.expense_type == 'Advance'
     assert first.statement == 'expense_artist.csv'
     assert json.loads(response.data) == {'success': 'true'}
     
@@ -46,8 +47,12 @@ def test_can_list_pending_statements(test_client, db):
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{'artist_matching_errors': [],
-                                        'catalog_matching_errors': []}]
+    assert json.loads(response.data) == [{
+        'total_matching_errors': 2,
+        'artist_matching_errors': [],
+        'catalog_matching_errors': [],
+        'type_matching_errors': []
+        }]
     add_artist_expense(test_client)
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200

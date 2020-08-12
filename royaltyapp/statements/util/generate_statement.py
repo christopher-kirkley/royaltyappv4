@@ -45,6 +45,8 @@ def create_statement_table(date_range):
 
     return ArtistStatement
 
+
+
 def add_statement_to_index(statement_table):
     try:
         """Add statement name to table."""
@@ -59,12 +61,13 @@ def add_statement_to_index(statement_table):
 
 def create_statement_balance_table(statement_table):
 
-    statement_name = statement_table.__tablename__
+    statement_name = statement_table.__table__
+    print(statement_name)
 
-    class StatementBalance(db.Model):
+    class StatementBalanceForward(db.Model):
         __tablename__ = f'{statement_name}_balance'
         __table_args__ = {'extend_existing': True}
-        id = Column(db.Integer, primary_key=True)
+        id = db.Column(db.Integer, primary_key=True)
         artist_name = db.Column(db.String(255))
         balance_forward = db.Column(db.Numeric(8, 2))
 
@@ -76,7 +79,7 @@ def create_statement_balance_table(statement_table):
         db.session.rollback()
         return "already exists"
 
-    return StatementBalance
+    return StatementBalanceForward
 
 def add_statement_balance_to_index(statement_balance_table):
     try:
@@ -268,3 +271,16 @@ def insert_expense_into_total(expense_total, statement_table):
                                  , expense_total))
     db.session.execute(ins)
     db.session.commit()
+
+# def create_empty_balance_table():
+#     check_statement_none = (db.session.query(StatementBalanceGenerated)
+#             .filter(StatementBalanceGenerated.statement_balance_name == 'statement_balance_none')
+#             .all())
+
+#     if len(check_statement_none) == 0:
+#         create_statement_balance_table('none')
+#         db.Model.metadata.create_all(bind=db.engine)
+#         statement_balance_generated = StatementBalanceGenerated(statement_balance_name='statement_balance_none')
+#         db.session.add(statement_balance_generated)
+#         db.session.commit()
+
