@@ -8,11 +8,13 @@ import io
 import pandas as pd
 import numpy as np
 
+import time
+
 from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, IncomeTotal
 
 from royaltyapp.income.util import process_income as pi
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_two_bandcamp_sales
+from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_two_bandcamp_sales, add_test1_bandcamp_sales
 
 def test_can_normalize_distributor(test_client, db):
     build_catalog(db, test_client)
@@ -121,7 +123,7 @@ def test_zero_out_label_fees(test_client, db):
 
 def test_can_insert_into_total(test_client, db):
     build_catalog(db, test_client)
-    add_two_bandcamp_sales(test_client)
+    add_test1_bandcamp_sales(test_client)
     res = db.session.query(IncomePending).all()
     add_order_settings(db)
     pi.normalize_distributor()
@@ -129,10 +131,14 @@ def test_can_insert_into_total(test_client, db):
     pi.normalize_track()
     pi.insert_into_imported_statements()
     pi.normalize_statement_id()
+    pi.calculate_adjusted_amount()
     pi.move_from_pending_income_to_total()
     res = db.session.query(IncomeTotal).all()
-    assert len(res) == 5    
+    assert len(res) == 7
     res = db.session.query(IncomeTotal).first()
     assert res.id == 1
     assert res.income_distributor_id == 1
     assert res.imported_statement_id == 1
+    assert float(res.amount) == 6.26
+    assert float(res.label_fee) == 2.06
+    assert float(res.label_net) == 4.20

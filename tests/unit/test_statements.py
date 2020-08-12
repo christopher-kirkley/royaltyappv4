@@ -8,6 +8,8 @@ import io
 import pandas as pd
 import numpy as np
 
+import time
+
 from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
 from royaltyapp.statements.helpers import define_artist_statement_table
@@ -25,7 +27,7 @@ def test_can_list_statements(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == [{
         'id': 1,
-        'statement_balance_name': 'None'
+        'statement_balance_name': 'none_balance'
         }]
 
 def test_can_generate_statement(test_client, db):
@@ -150,7 +152,7 @@ def test_setup_test(test_client, db):
     setup_test1(test_client, db)
     assert len(db.session.query(IncomeTotal).all()) > 0
 
-def test_can_insert_into_table(test_client, db):
+def test_can_insert_income_into_table(test_client, db):
     setup_test1(test_client, db)
     data = {
             'previous_balance_id': 1,
@@ -179,27 +181,21 @@ def test_can_find_expense_total(test_client, db):
     start_date = data['start_date']
     end_date = data['end_date']
     json_data = json.dumps(data)
-    response = test_client.post('/statements/generate', data=json_data)
+    previous_balance_id = data['previous_balance_id']
+    date_range = (str(start_date) + '_' + str(end_date)).replace('-', '_')
+    table = ge.create_statement_table(date_range)
+    table_obj = table.__table__
+    artist_catalog_percentage = ge.find_track_percentage()
     metadata = db.MetaData(db.engine, reflect=True)
     table = metadata.tables.get('statement_2020_01_01_2020_01_31')
     artist_catalog_percentage = ge.find_track_percentage()
     expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
     assert len(expense_total.all()) > 0
-    
-def test_can_insert_expense_into_total(test_client, db):
-    setup_test1(test_client, db)
-    data = {
-            'previous_balance_id': 1,
-            'start_date': '2020-01-01',
-            'end_date': '2020-01-31'
-            }
-    start_date = data['start_date']
-    end_date = data['end_date']
-    json_data = json.dumps(data)
-    response = test_client.post('/statements/generate', data=json_data)
-    metadata = db.MetaData(db.engine, reflect=True)
-    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
-    artist_catalog_percentage = ge.find_track_percentage()
-    expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
-    ge.insert_expense_into_total(expense_total, table)
+    ge.insert_expense_into_total(expense_total, table_obj)
+    advances = db.session.query(table).filter(table.c.expense_type_id == 1).all()
+    recoupables = db.session.query(table).filter(table.c.expense_type_id == 2).all()
+    assert len(advances) == 5
+    assert len(recoupables) == 1
 
+
+    
