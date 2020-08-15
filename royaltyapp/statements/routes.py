@@ -83,11 +83,12 @@ def statement_detail(id):
             'statement_total': statement_total.total
             }
 
-    artist_totals = []
+    detail = []
     
     for row in statement_for_all_artists:
         obj = {
-                'artist_id': row.artist_id,
+                'id': row.Artist.id, 
+                'artist_name': row.Artist.artist_name,
                 'total_previous_balance': row.total_previous_balance,
                 'total_sales': row.total_sales,
                 'total_recoupable': row.total_recoupable,
@@ -96,11 +97,11 @@ def statement_detail(id):
                 'split': row.split,
                 'balance_forward': row.balance_forward,
                 }
-        artist_totals.append(obj)
+        detail.append(obj)
 
     json_res = {
             'summary': summary,
-            'artist_totals': artist_totals
+            'detail': detail
             }
 
     return jsonify(json_res)
