@@ -8,6 +8,7 @@ from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGen
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
+from royaltyapp.statements.util import view_artist_statement as va
 
 statements = Blueprint('statements', __name__)
 
@@ -105,3 +106,25 @@ def statement_detail(id):
             }
 
     return jsonify(json_res)
+
+@statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
+def statement_detail_artist(id, artist_id):
+    table = ga.get_statement_table(id)
+    income_summary = va.get_income_summary(table, artist_id)
+
+    income = []
+
+    for row in income_summary:
+        obj = {
+                'combined_net': row.combined_net,
+                'physical_net': row.physical_net,
+                'digital_net': row.digital_net,
+                }
+        income.append(obj)
+
+    json_res = {
+            'income': income,
+            }
+
+    return jsonify(json_res)
+
