@@ -48,8 +48,21 @@ def test_can_view_statement_artist_detail(test_client, db):
     assert json.loads(response.data) == {
             'income':
                 [{
+                    'catalog_name': 'Akaline Kidal',
                     'combined_net': 24.15,
                     'digital_net': 0,
                     'physical_net': 24.15,
                     }],
-            }
+            'expense':
+                [{
+                    'date': '2020-01-01',
+                    'detail': 'SS-050cd - 1049',
+                    'expense': 1398.06,
+                    'item': 'Manufacturing',
+                    'vendor': 'A to Z'
+                    }]
+                }
+
+
+
+
