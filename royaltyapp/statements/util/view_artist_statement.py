@@ -75,3 +75,20 @@ def get_album_sales_detail(statement_table, artist_id):
         .filter(statement_table.c.transaction_type == 'income').all())
 
     return album_sales_detail
+
+def get_track_sales_detail(statement_table, artist_id):
+    income_track_detail = (
+        db.session.query(
+        cast(func.sum(statement_table.c.artist_net), Numeric(8, 2)).label('net'),
+        Track.track_name.label('track_name'),
+        func.sum(statement_table.c.quantity).label('quantity'),
+        )
+        .join(Track, statement_table.c.track_id == Track.id)
+        .group_by(Track.track_name)
+        .filter(statement_table.c.artist_id == artist_id)
+    )
+
+    track_sales_detail = (income_track_detail.filter(statement_table.c.type != 'album')
+        .filter(statement_table.c.transaction_type == 'income').all())
+
+    return track_sales_detail
