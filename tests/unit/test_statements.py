@@ -60,7 +60,31 @@ def test_can_view_statement_artist_detail(test_client, db):
                     'expense': 1398.06,
                     'item': 'Manufacturing',
                     'vendor': 'A to Z'
-                    }]
+                    }],
+            'advance':
+                [
+                    {
+                    'date': '2020-01-01',
+                    'detail': 'Money Transfer',
+                    'expense': 897.96,
+                    'item': 'Payout',
+                    'vendor': 'Xoom.com'
+                    }, 
+                    {
+                    'date': '2020-01-01',
+                    'detail': 'SS-050lp - 2042',
+                    'expense': 8544.67,
+                    'item': 'Manufacturing',
+                    'vendor': 'A to Z'
+                    },
+                    {
+                    'date': '2020-01-01',
+                    'detail': 'Money Transfer',
+                    'expense': 100.00,
+                    'item': 'Credit',
+                    'vendor': 'Artists:Ahmed Ag Kaedy'
+                    },
+                ],
                 }
 
 
