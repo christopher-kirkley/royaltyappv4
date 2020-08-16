@@ -50,6 +50,11 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('artist_source').click()
     browser.find_element_by_id('upload_statement').click()
+    path = os.getcwd() + "/tests/files/test1_expense_catalog.csv"
+    browser.find_element_by_id('select_statement').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('catalog_source').click()
+    browser.find_element_by_id('upload_statement').click()
     msg = browser.find_element_by_id('statement_message')
     browser.find_element_by_id('process_statements').click()
 
@@ -76,12 +81,20 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('statement_summary_table')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('artist_name').text == 'Ahmed Ag Kaedy'
-    assert rows[1].find_element_by_id('balance_forward').text == '-982.34'
+    assert rows[1].find_element_by_id('balance_forward').text == '-10226.04'
 
     """ User navigates to artist statement detail. """
     browser.find_element_by_id('1').click()
     assert browser.find_element_by_id('header').text == 'Statement Detail'
+    time.sleep(1)
+    table = browser.find_element_by_id('artist-statement-income')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('catalog_name').text == 'Akaline Kidal'
+    assert rows[1].find_element_by_id('digital_net').text == '0'
+    assert rows[1].find_element_by_id('physical_net').text == '30.45'
+    assert rows[1].find_element_by_id('combined_net').text == '30.45'
 
-
-    
+    table = browser.find_element_by_id('artist-statement-expense')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('date').text == '2020-01-01'
     

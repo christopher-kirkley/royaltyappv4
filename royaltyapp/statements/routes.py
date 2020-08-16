@@ -110,20 +110,33 @@ def statement_detail(id):
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
 def statement_detail_artist(id, artist_id):
     table = ga.get_statement_table(id)
+    
     income_summary = va.get_income_summary(table, artist_id)
-
     income = []
-
     for row in income_summary:
         obj = {
+                'catalog_name': row.catalog_name,
                 'combined_net': row.combined_net,
                 'physical_net': row.physical_net,
                 'digital_net': row.digital_net,
                 }
         income.append(obj)
 
+    expense_detail = va.get_expense_detail(table, artist_id)
+    expense = []
+    for row in expense_detail:
+        obj = {
+                'date': row.date.strftime("%Y-%m-%d"),
+                'item': row.item_type,
+                'vendor': row.customer,
+                'detail': row.description,
+                'expense': row.artist_net,
+                }
+        expense.append(obj)
+
     json_res = {
             'income': income,
+            'expense': expense,
             }
 
     return jsonify(json_res)
