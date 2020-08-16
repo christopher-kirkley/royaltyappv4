@@ -92,18 +92,29 @@ def test_can_view_statement_artist_detail(test_client, db):
                     'version_number': 'SS-050cass',
                     'format': 'cass',
                     'quantity': 1,
+                    'net': 8.05,
                     },
                 {
                     'catalog_name': 'Akaline Kidal',
                     'version_number': 'SS-050digi',
                     'format': 'digital',
                     'quantity': 1,
+                    'net': 8.05,
                     },
                 {
                     'catalog_name': 'Akaline Kidal',
                     'version_number': 'SS-050lp',
                     'format': 'lp',
                     'quantity': 1,
+                    'net': 8.05,
+                    },
+                ],
+            'track_sales':
+                [
+                {
+                    'track_name': 'Adounia',
+                    'quantity': 1,
+                    'net': 0.8,
                     },
                 ],
 

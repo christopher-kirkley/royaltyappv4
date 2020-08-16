@@ -7642,3 +7642,17 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 1597612842149	Marionette	INFO	Listening on port 60481
 1597612842167	Marionette	WARN	TLS certificate errors will be ignored for this session
 1597612853715	Marionette	INFO	Stopped listening on port 60481
+1597612945100	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHcWe3n"
+1597612947948	Marionette	INFO	Listening on port 60597
+1597612947984	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597612959687	Marionette	INFO	Stopped listening on port 60597
+1597613017461	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesNuUqq"
+1597613020391	Marionette	INFO	Listening on port 60706
+1597613020473	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597613021579	Marionette	INFO	Stopped listening on port 60706
+1597614189084	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0sQq1y"
+1597614192042	Marionette	INFO	Listening on port 60941
+1597614192064	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 285: TypeError: InspectorUtils.removeContentState: Argument 1 is not an object.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7532: TypeError: trackSales is undefined
+1597614203721	Marionette	INFO	Stopped listening on port 60941

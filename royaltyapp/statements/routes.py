@@ -159,13 +159,26 @@ def statement_detail_artist(id, artist_id):
                 'version_number': row.version_number,
                 'format': row.format,
                 'quantity': row.quantity,
+                'net': row.net,
                 }
         album_sales.append(obj)
+
+    track_sales_detail = va.get_track_sales_detail(table, artist_id)
+    track_sales = []
+    for row in track_sales_detail:
+        obj = {
+                'track_name': row.track_name,
+                'quantity': row.quantity,
+                'net': row.net,
+                }
+        track_sales.append(obj)
+
     json_res = {
             'income': income,
             'expense': expense,
             'advance': advance,
             'album_sales': album_sales,
+            'track_sales': track_sales,
             }
 
     return jsonify(json_res)
