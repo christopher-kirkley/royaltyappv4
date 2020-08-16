@@ -55,3 +55,23 @@ def get_advance_detail(statement_table, artist_id):
     
     return advances
 
+def get_album_sales_detail(statement_table, artist_id):
+    income_detail = (
+        db.session.query(
+        cast(func.sum(statement_table.c.artist_net), Numeric(8, 2)).label('net'),
+        Catalog.catalog_name.label('catalog_name'),
+        Version.version_number.label('version_number'),
+        Version.format.label('format'),
+        func.sum(statement_table.c.quantity).label('quantity'),
+    )
+    .join(Version, statement_table.c.version_id == Version.id)
+    .join(Catalog, Version.catalog_id == Catalog.id)
+    .group_by(Catalog.catalog_name, Version.version_number, Version.format)
+    .filter(statement_table.c.artist_id == artist_id)
+    .order_by(Catalog.catalog_name)
+    )
+
+    album_sales_detail = (income_detail.filter(statement_table.c.type == 'album')
+        .filter(statement_table.c.transaction_type == 'income').all())
+
+    return album_sales_detail

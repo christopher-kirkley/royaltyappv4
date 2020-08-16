@@ -85,7 +85,29 @@ def test_can_view_statement_artist_detail(test_client, db):
                     'vendor': 'Artists:Ahmed Ag Kaedy'
                     },
                 ],
-                }
+            'album_sales':
+                [
+                {
+                    'catalog_name': 'Akaline Kidal',
+                    'version_number': 'SS-050cass',
+                    'format': 'cass',
+                    'quantity': 1,
+                    },
+                {
+                    'catalog_name': 'Akaline Kidal',
+                    'version_number': 'SS-050digi',
+                    'format': 'digital',
+                    'quantity': 1,
+                    },
+                {
+                    'catalog_name': 'Akaline Kidal',
+                    'version_number': 'SS-050lp',
+                    'format': 'lp',
+                    'quantity': 1,
+                    },
+                ],
+
+            }
 
 
 
