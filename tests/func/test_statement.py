@@ -57,7 +57,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('statements_generate').click()
     assert browser.find_element_by_id('header').text == 'Generate Statement'
     browser.find_element_by_id('previous_balance_id').click()
-    browser.find_element_by_id('None').click()
+    browser.find_element_by_id('none_balance').click()
     browser.find_element_by_id('submit').click()
     time.sleep(1)
     assert browser.find_element_by_id('message').text == 'Uploaded!'
@@ -69,6 +69,19 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 2
 
-    """ User navigates to first statement to view. """
+    """ User navigates to first statement to view main statement."""
     browser.find_element_by_id('1').click()
-    assert browser.find_element_by_id('header').text == 'Statement'
+    time.sleep(2)
+    assert browser.find_element_by_id('header').text == 'Statement Summary'
+    table = browser.find_element_by_id('statement_summary_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('artist_name').text == 'Ahmed Ag Kaedy'
+    assert rows[1].find_element_by_id('balance_forward').text == '-982.34'
+
+    """ User navigates to artist statement detail. """
+    browser.find_element_by_id('1').click()
+    assert browser.find_element_by_id('header').text == 'Statement Detail'
+
+
+    
+    
