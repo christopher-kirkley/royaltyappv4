@@ -7598,3 +7598,11 @@ Exiting due to channel error.
 1597609411580	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
 1597609423075	Marionette	INFO	Stopped listening on port 59081
+1597610798766	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileon6LiF"
+1597610802716	Marionette	INFO	Listening on port 59471
+1597610802736	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597610814240	Marionette	INFO	Stopped listening on port 59471
+1597611101609	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3kpSpu"
+1597611104596	Marionette	INFO	Listening on port 59649
+1597611104615	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597611116109	Marionette	INFO	Stopped listening on port 59649
