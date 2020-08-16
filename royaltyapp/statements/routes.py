@@ -151,5 +151,22 @@ def statement_detail_artist(id, artist_id):
             'advance': advance,
             }
 
+    album_sales_detail = va.get_album_sales_detail(table, artist_id)
+    album_sales = []
+    for row in album_sales_detail:
+        obj = {
+                'catalog_name': row.catalog_name,
+                'version_number': row.version_number,
+                'format': row.format,
+                'quantity': row.quantity,
+                }
+        album_sales.append(obj)
+    json_res = {
+            'income': income,
+            'expense': expense,
+            'advance': advance,
+            'album_sales': album_sales,
+            }
+
     return jsonify(json_res)
 

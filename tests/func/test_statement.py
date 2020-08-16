@@ -97,8 +97,13 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('artist-statement-expense')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('date').text == '2020-01-01'
+
     table = browser.find_element_by_id('artist-statement-advance')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('date').text == '2020-01-01'
+
+    table = browser.find_element_by_id('album-sales')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('catalog_name').text == 'Akaline Kidal'
 
     
