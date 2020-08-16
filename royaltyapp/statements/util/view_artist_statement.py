@@ -35,7 +35,7 @@ def get_income_summary(statement_table, artist_id):
     return artist_income
 
 def get_expense_detail(statement_table, artist_id):
-    expense = (db.session.query(statement_table,
+    expenses = (db.session.query(statement_table,
         cast(statement_table.c.artist_net, Numeric(8, 2)).label('artist_net'))
         .filter(statement_table.c.artist_id == artist_id)
         .filter(statement_table.c.expense_type_id == 2)
@@ -43,5 +43,15 @@ def get_expense_detail(statement_table, artist_id):
     ).all()
 
     
-    return expense
+    return expenses
+
+def get_advance_detail(statement_table, artist_id):
+    advances = (db.session.query(
+        statement_table,
+        cast(statement_table.c.artist_net, Numeric(8, 2)).label('artist_net'))
+        .filter(statement_table.c.artist_id == artist_id)
+        .filter(statement_table.c.expense_type_id == 1)
+        .order_by(statement_table.c.date)).all()
+    
+    return advances
 

@@ -134,9 +134,21 @@ def statement_detail_artist(id, artist_id):
                 }
         expense.append(obj)
 
+    advance_detail = va.get_advance_detail(table, artist_id)
+    advance = []
+    for row in advance_detail:
+        obj = {
+                'date': row.date.strftime("%Y-%m-%d"),
+                'item': row.item_type,
+                'vendor': row.customer,
+                'detail': row.description,
+                'expense': row.artist_net,
+                }
+        advance.append(obj)
     json_res = {
             'income': income,
             'expense': expense,
+            'advance': advance,
             }
 
     return jsonify(json_res)
