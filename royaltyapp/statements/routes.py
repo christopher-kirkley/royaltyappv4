@@ -74,57 +74,106 @@ def get_statement_summary(id):
     """lookup statement summary table in index table with statement summary id"""
     statement_summary_table = ga.lookup_statement_summary_table(id)
 
+    statement_for_all_artists = (
+        db.session.query(statement_summary_table.c.artist_id,
+                         statement_summary_table.c.previous_balance,
+                         statement_summary_table.c.sales,
+                         statement_summary_table.c.recoupables,
+                         statement_summary_table.c.advances,
+                         (statement_summary_table.c.sales - statement_summary_table.c.recoupables).label('total_to_split'),
+                         cast(
+                             ((statement_summary_table.c.sales - statement_summary_table.c.recoupables)/2),
+                             Numeric(8, 2))
+                         .label('split'),
+                         cast(
+                             ((statement_summary_table.c.sales - statement_summary_table.c.recoupables)/2 - statement_summary_table.c.advances + statement_summary_table.c.previous_balance),
+                             Numeric(8, 2))
+                         .label('balance_forward')
+                         )
+    ).subquery()
 
-    return 'ya'
-    # statement_total = (
-    #     db.session.query(
-    #         func.coalesce(
-    #             func.sum(statement_by_artist.c.balance_forward), 0
-    #         )
-    #             .label('total'))
-    #         .filter(statement_by_artist.c.balance_forward > 50)
-    #         .first())
+    statement_total = (db.session.query(
+            func.coalesce(
+                func.sum(statement_for_all_artists.c.balance_forward), 0
+                )
+            .label('total'))
+    .filter(statement_for_all_artists.c.balance_forward > 50)
+    .first())
 
-    # statement_for_all_artists = (
-    #     db.session.query(Artist, statement_by_artist)
-    #         .join(Artist, Artist.id == statement_by_artist.c.artist_id)
-    #         .all()
-    # ) 
+    statement_for_artist = (
+        db.session.query(Artist, statement_for_all_artists)
+            .join(Artist, Artist.id == statement_for_all_artists.c.artist_id)
+            .all()
+    ) 
     
-    # summary = {
-    #         'statement_total': statement_total.total
-    #         }
+    summary = {
+            'statement_total': statement_total.total
+            }
 
-    # detail = []
+    detail = []
     
-    # for row in statement_for_all_artists:
-    #     obj = {
-    #             'id': row.Artist.id, 
-    #             'artist_name': row.Artist.artist_name,
-    #             'total_previous_balance': row.total_previous_balance,
-    #             'total_sales': row.total_sales,
-    #             'total_recoupable': row.total_recoupable,
-    #             'total_advance': row.total_advance,
-    #             'total_to_split': row.total_to_split,
-    #             'split': row.split,
-    #             'balance_forward': row.balance_forward,
-    #             }
-    #     detail.append(obj)
+    for row in statement_for_artist:
+        obj = {
+                'id': row.Artist.id, 
+                'artist_name': row.Artist.artist_name,
+                'total_previous_balance': row.previous_balance,
+                'total_sales': row.sales,
+                'total_recoupable': row.recoupables,
+                'total_advance': row.advances,
+                'total_to_split': row.total_to_split,
+                'split': row.split,
+                'balance_forward': row.balance_forward,
+                }
+        detail.append(obj)
 
-    # json_res = {
-    #         'summary': summary,
-    #         'detail': detail
-    #         }
+    json_res = {
+            'summary': summary,
+            'detail': detail,
+            }
 
-    # return jsonify(json_res)
+    return jsonify(json_res)
 
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
 def statement_detail_artist(id, artist_id):
+    statement_summary_table = ga.lookup_statement_summary_table(id)
+
+    statement_for_artist = (
+        db.session.query(statement_summary_table.c.artist_id,
+                         statement_summary_table.c.previous_balance,
+                         statement_summary_table.c.sales,
+                         statement_summary_table.c.recoupables,
+                         statement_summary_table.c.advances,
+                         (statement_summary_table.c.sales - statement_summary_table.c.recoupables).label('total_to_split'),
+                         cast(
+                             ((statement_summary_table.c.sales - statement_summary_table.c.recoupables)/2),
+                             Numeric(8, 2))
+                         .label('split'),
+                         cast(
+                             ((statement_summary_table.c.sales - statement_summary_table.c.recoupables)/2 - statement_summary_table.c.advances + statement_summary_table.c.previous_balance),
+                             Numeric(8, 2))
+                         .label('balance_forward')
+                         )
+    ).filter(artist_id == artist_id)
+
+    summary = []
+    
+    for row in statement_for_artist:
+        obj = {
+                'previous_balance': row.previous_balance,
+                'sales': row.sales,
+                'recoupables': row.recoupables,
+                'advances': row.advances,
+                'total_to_split': row.total_to_split,
+                'split': row.split,
+                'balance_forward': row.balance_forward,
+                }
+        summary.append(obj)
+
     table = ga.get_statement_table(id)
 
     artist_name = db.session.query(Artist).filter(Artist.id == artist_id).first().artist_name
 
-    statement_name = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_name
+    statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
     
     income_summary = va.get_income_summary(table, artist_id)
     income = []
@@ -190,7 +239,8 @@ def statement_detail_artist(id, artist_id):
 
     json_res = {
             'artist': artist_name,
-            'statement': statement_name,
+            'statement': statement_detail_table,
+            'summary': summary,
             'income': income,
             'expense': expense,
             'advance': advance,

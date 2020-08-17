@@ -146,26 +146,6 @@ def insert_into_statement_summary(
     db.session.execute(ins)
     db.session.commit()
 
-    # statement_for_all_artists = (
-    #     db.session.query(sel.c.artist_id,
-    #                      sel.c.statement_previous_balance_by_artist.label('total_previous_balance'),
-    #                      sel.c.statement_sales_by_artist.label('total_sales'),
-    #                      sel.c.statement_recoupables_by_artist.label('total_recoupable'),
-    #                      sel.c.statement_advances_by_artist.label('total_advance'),
-    #                      (sel.c.statement_sales_by_artist - sel.c.statement_recoupables_by_artist).label('total_to_split'),
-    #                      cast(
-    #                          ((sel.c.statement_sales_by_artist - sel.c.statement_recoupables_by_artist)/2),
-    #                          Numeric(8, 2))
-    #                      .label('split'),
-    #                      cast(
-    #                          ((sel.c.statement_sales_by_artist - sel.c.statement_recoupables_by_artist)/2 - sel.c.statement_advances_by_artist + sel.c.statement_previous_balance_by_artist),
-    #                          Numeric(8, 2))
-    #                      .label('balance_forward')
-    #                      )
-    # )
-
-    # statement = statement_for_all_artists.subquery()
-    # db.session.commit()
     
     return True
 

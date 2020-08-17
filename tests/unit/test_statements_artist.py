@@ -65,7 +65,7 @@ def test_can_get_statement_by_artist_subquery(test_client, db):
     statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
     date_range = '2020_01_01_2020_01_31'
     table = ga.create_statement_summary_table(date_range)
-    assert len(db.session.query(table).all()) == 0
+    assert len(db.session.query(table).all()) == 1
     assert table.__tablename__ == 'statement_summary_2020_01_01_2020_01_31'
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,

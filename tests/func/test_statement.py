@@ -64,7 +64,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('previous_balance_id').click()
     browser.find_element_by_id('none_balance').click()
     browser.find_element_by_id('submit').click()
-    time.sleep(1)
+    time.sleep(3)
     assert browser.find_element_by_id('message').text == 'Uploaded!'
 
     """ User goes to view statement. """
@@ -110,6 +110,8 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('track_name').text == 'Adounia'
 
-    time.sleep(2000)
+    table = browser.find_element_by_id('artist-statement-summary')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('track_name').text == 'Adounia'
 
     
