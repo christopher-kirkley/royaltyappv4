@@ -110,6 +110,10 @@ def statement_detail(id):
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
 def statement_detail_artist(id, artist_id):
     table = ga.get_statement_table(id)
+
+    artist_name = db.session.query(Artist).filter(Artist.id == artist_id).first().artist_name
+
+    statement_name = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_name
     
     income_summary = va.get_income_summary(table, artist_id)
     income = []
@@ -174,6 +178,8 @@ def statement_detail_artist(id, artist_id):
         track_sales.append(obj)
 
     json_res = {
+            'artist': artist_name,
+            'statement': statement_name,
             'income': income,
             'expense': expense,
             'advance': advance,

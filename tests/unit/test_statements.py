@@ -46,6 +46,8 @@ def test_can_view_statement_artist_detail(test_client, db):
     response = test_client.get('/statements/1/artist/1')
     assert response.status_code == 200
     assert json.loads(response.data) == {
+            'artist': 'Ahmed Ag Kaedy',
+            'statement': 'statement_2020_01_01_2020_01_31',
             'income':
                 [{
                     'catalog_name': 'Akaline Kidal',
