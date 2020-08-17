@@ -7814,3 +7814,53 @@ Exiting due to channel error.
 Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
+1597646488617	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletGvMwE"
+1597646491949	Marionette	INFO	Listening on port 51706
+1597646492020	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7288: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/statements/StatementDetail.js: Identifier directly after number (185:28)
+
+[0m [90m 183 | [39m				[33m<[39m[33mHeader[39m name[33m=[39m[32m'Statement Detail'[39m[33m/[39m[33m>[39m[0m
+[0m [90m 184 | [39m				[33m<[39m[33mGrid[39m container spacing[33m=[39m{[35m3[39m}[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 185 | [39m					[33m<[39m[33mGrid[39m item xs[33m=[39m{[35m12[39m} mt[33m=[39m[35m5[39mpx align[33m=[39m[32m"center"[39m[33m>[39m[0m
+[0m [90m     | [39m					                       [31m[1m^[22m[39m[0m
+[0m [90m 186 | [39m						[33m<[39m[33mTypography[39m component[33m=[39m[32m"h5"[39m variant[33m=[39m[32m"h5"[39m color[33m=[39m[32m"primary"[39m[33m>[39m{ artistName }[33m<[39m[33m/[39m[33mTypography[39m[33m>[39m[0m
+[0m [90m 187 | [39m						[33m<[39m[33mTypography[39m component[33m=[39m[32m"h5"[39m variant[33m=[39m[32m"h5"[39m color[33m=[39m[32m"primary"[39m[33m>[39m{ statementName }[33m<[39m[33m/[39m[33mTypography[39m[33m>[39m[0m
+[0m [90m 188 | [39m					[33m<[39m[33m/[39m[33mGrid[39m[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.readNumber (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8365:18)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8066:14)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4670:18)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:2865:20)
+    at Object.nextToken (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7598:12)
+    at Object.next (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7526:10)
+    at Object.eat (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7531:12)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7288: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/statements/StatementDetail.js: Identifier directly after number (185:28)
+
+[0m [90m 183 | [39m				[33m<[39m[33mHeader[39m name[33m=[39m[32m'Statement Detail'[39m[33m/[39m[33m>[39m[0m
+[0m [90m 184 | [39m				[33m<[39m[33mGrid[39m container spacing[33m=[39m{[35m3[39m}[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 185 | [39m					[33m<[39m[33mGrid[39m item xs[33m=[39m{[35m12[39m} mt[33m=[39m[35m5[39mpx align[33m=[39m[32m"center"[39m[33m>[39m[0m
+[0m [90m     | [39m					                       [31m[1m^[22m[39m[0m
+[0m [90m 186 | [39m						[33m<[39m[33mTypography[39m component[33m=[39m[32m"h5"[39m variant[33m=[39m[32m"h5"[39m color[33m=[39m[32m"primary"[39m[33m>[39m{ artistName }[33m<[39m[33m/[39m[33mTypography[39m[33m>[39m[0m
+[0m [90m 187 | [39m						[33m<[39m[33mTypography[39m component[33m=[39m[32m"h5"[39m variant[33m=[39m[32m"h5"[39m color[33m=[39m[32m"primary"[39m[33m>[39m{ statementName }[33m<[39m[33m/[39m[33mTypography[39m[33m>[39m[0m
+[0m [90m 188 | [39m					[33m<[39m[33m/[39m[33mGrid[39m[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.readNumber (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8365:18)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8066:14)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4670:18)
+    at Object.getTokenFromCode (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:2865:20)
+    at Object.nextToken (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7598:12)
+    at Object.next (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7526:10)
+    at Object.eat (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:7531:12)
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

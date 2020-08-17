@@ -46,12 +46,14 @@ def create_statement_table(date_range):
     return ArtistStatement
 
 
-
-def add_statement_to_index(statement_table):
+def add_statement_to_index(statement_detail_table, statement_summary_table):
     try:
         """Add statement name to table."""
-        statement_name = statement_table.__tablename__
-        statement_generated = StatementGenerated(statement_name=statement_name)
+        statement_detail_table = statement_detail_table.__tablename__
+        statement_summary_table = statement_summary_table.__tablename__
+        statement_generated = StatementGenerated(
+                statement_detail_table=statement_detail_table,
+                statement_summary_table=statement_summary_table)
         db.session.add(statement_generated)
         db.session.commit()
     except exc.SQLAlchemyError:
@@ -62,7 +64,6 @@ def add_statement_to_index(statement_table):
 def create_statement_balance_table(statement_table):
 
     statement_name = statement_table.__table__
-    print(statement_name)
 
     class StatementBalanceForward(db.Model):
         __tablename__ = f'{statement_name}_balance'
@@ -271,6 +272,8 @@ def insert_expense_into_total(expense_total, statement_table):
                                  , expense_total))
     db.session.execute(ins)
     db.session.commit()
+
+
 
 # def create_empty_balance_table():
 #     check_statement_none = (db.session.query(StatementBalanceGenerated)

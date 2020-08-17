@@ -367,13 +367,15 @@ class StatementGenerated(db.Model):
     __tablename__ = 'statement_generated'
 
     id = db.Column(db.Integer, primary_key=True)
-    statement_name = db.Column(db.String(255), unique=True)
+    statement_detail_table = db.Column(db.String(255), unique=True)
+    statement_summary_table = db.Column(db.String(255), unique=True)
 
 class StatementGeneratedSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         fields = (
                 "id",
-                "statement_name",
+                "statement_detail_table",
+                "statement_summary_table",
                 )
 
 class StatementBalanceGenerated(db.Model):
