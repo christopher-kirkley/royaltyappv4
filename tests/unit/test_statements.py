@@ -30,21 +30,21 @@ def test_can_view_statement_summary(test_client, db):
     setup_statement(test_client, db)
     response = test_client.get('/statements/1')
     assert response.status_code == 200
-    # assert json.loads(response.data) == {
-    #         'summary': {'statement_total': 0},
-    #         'detail':
-    #             [{
-    #                 'id': 1,
-    #                 'artist_name': 'Ahmed Ag Kaedy',
-    #                 'balance_forward': -10229.19,
-    #                 'split': -686.56,
-    #                 'total_advance': 9542.63,
-    #                 'total_previous_balance': 0,
-    #                 'total_recoupable': 1398.06,
-    #                 'total_sales': 24.95,
-    #                 'total_to_split': -1373.11
-    #                 }],
-    #         }
+    assert json.loads(response.data) == {
+            'summary': {'statement_total': 0},
+            'detail':
+                [{
+                    'id': 1,
+                    'artist_name': 'Ahmed Ag Kaedy',
+                    'balance_forward': -10229.19,
+                    'split': -686.56,
+                    'total_advance': 9542.63,
+                    'total_previous_balance': 0,
+                    'total_recoupable': 1398.06,
+                    'total_sales': 24.95,
+                    'total_to_split': -1373.11
+                    }],
+            }
 
 def test_can_view_statement_artist_detail(test_client, db):
     setup_statement(test_client, db)
@@ -53,6 +53,15 @@ def test_can_view_statement_artist_detail(test_client, db):
     assert json.loads(response.data) == {
             'artist': 'Ahmed Ag Kaedy',
             'statement': 'statement_2020_01_01_2020_01_31',
+            'summary': [{
+                'balance_forward': -10229.19,
+                'previous_balance': 0,
+                'sales': 24.95,
+                'split': -686.56,
+                'advances': 9542.63,
+                'recoupables': 1398.06,
+                'total_to_split': -1373.11
+                }],
             'income':
                 [{
                     'catalog_name': 'Akaline Kidal',
