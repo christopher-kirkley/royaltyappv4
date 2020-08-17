@@ -7656,3 +7656,161 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: resource://gre/actors/SelectChild.jsm, line 285: TypeError: InspectorUtils.removeContentState: Argument 1 is not an object.
 JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7532: TypeError: trackSales is undefined
 1597614203721	Marionette	INFO	Stopped listening on port 60941
+1597614794567	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilea9mjrC"
+1597614797966	Marionette	INFO	Listening on port 61121
+1597614797989	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1597614804456	Marionette	INFO	Stopped listening on port 61121
+1597614809661	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileqNhR5Y"
+1597614812786	Marionette	INFO	Listening on port 61234
+1597614812890	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597614824792	Marionette	INFO	Stopped listening on port 61234
+1597614843410	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile4nBd0F"
+1597614846422	Marionette	INFO	Listening on port 61336
+1597614846508	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597614858261	Marionette	INFO	Stopped listening on port 61336
+1597614887210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7imXZ3"
+1597614890056	Marionette	INFO	Listening on port 61435
+1597614890110	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597614901632	Marionette	INFO	Stopped listening on port 61435
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597614945415	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekcIdBp"
+1597614949875	Marionette	INFO	Listening on port 61538
+1597614949970	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1597615776501	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJEe68w"
+1597615779536	Marionette	INFO	Listening on port 61765
+1597615779570	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+1597616635325	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileLTjb16"
+1597616638686	Marionette	INFO	Listening on port 61944
+1597616638726	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://jetpack.wordpress.com/jetpack-comment/?blogid=162246063&postid=613233&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=8.8.2&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=474e31acc294b4c45f16370d8f671600e56f355e#parent=https%3A%2F%2Fsacramento.cbslocal.com%2F2019%2F10%2F14%2Ffolsom-lake-remains-oleg-zhelezniko%2F, line 25: NS_ERROR_FAILURE: 
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/27_6_25/infra/cmTagCUSTOM.js, line 5: TypeError: e is undefined
+JavaScript error: https://vidstat.taboola.com/vpaid/units/28_1_27/infra/cmTagFEED_MANAGER.js, line 5: TypeError: e is undefined
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+1597617650464	Marionette	INFO	Stopped listening on port 61944
+1597617657319	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerTmcJB"
+1597617660102	Marionette	INFO	Listening on port 62771
+1597617660196	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597618447298	Marionette	INFO	Stopped listening on port 62771
+1597636449034	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesZN0SR"
+1597636452840	Marionette	INFO	Listening on port 64418
+1597636452886	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1597636459235	Marionette	INFO	Stopped listening on port 64418
+1597636473592	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0LTSfV"
+1597636476784	Marionette	INFO	Listening on port 64519
+1597636476804	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1597636483352	Marionette	INFO	Stopped listening on port 64519
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597636493192	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9OPKoX"
+1597636496206	Marionette	INFO	Listening on port 64634
+1597636496288	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597636507893	Marionette	INFO	Stopped listening on port 64634
+1597636522602	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekBqsDJ"
+1597636525366	Marionette	INFO	Listening on port 64735
+1597636525463	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597638546747	Marionette	INFO	Stopped listening on port 64735
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597640303277	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiled5FbB1"
+1597640307218	Marionette	INFO	Listening on port 65299
+1597640307273	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597643744176	Marionette	INFO	Stopped listening on port 65299
+1597643756989	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileR1d2me"
+1597643760257	Marionette	INFO	Listening on port 50930
+1597643760289	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.

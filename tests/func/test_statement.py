@@ -108,6 +108,8 @@ def test_returns(browser, test_client, db):
 
     table = browser.find_element_by_id('track-sales')
     rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_element_by_id('track_name').text == ''
+    assert rows[1].find_element_by_id('track_name').text == 'Adounia'
+
+    time.sleep(2000)
 
     
