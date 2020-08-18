@@ -36,7 +36,7 @@ def test_can_generate_statement(test_client, db):
     data = {
             'previous_balance_id': 1,
             'start_date': '2020-01-01',
-            'end_date': '2020-01-31'
+            'end_date': '2020-01-31',
             }
     start_date = data['start_date']
     end_date = data['end_date']
@@ -88,11 +88,6 @@ def test_can_add_statement_balance_to_index(test_client, db):
     assert statement_balance_table.__tablename__ == 'statement_2020_01_01_2020_01_31_balance'
     res = db.session.query(StatementBalanceGenerated).all()
     assert len(res) == 1
-    # statement_balance_name = statement_balance_table.__tablename__
-    # statement_balance_generated = StatementBalanceGenerated(
-    #         statement_balance_name=statement_balance_name)
-    # db.session.add(statement_balance_generated)
-    # db.session.commit()
 
     statement_balance_generated = ge.add_statement_balance_to_index(statement_balance_table)
     assert statement_balance_generated.id == 2
@@ -198,5 +193,3 @@ def test_can_find_expense_total(test_client, db):
     assert len(advances) == 5
     assert len(recoupables) == 1
 
-
-    

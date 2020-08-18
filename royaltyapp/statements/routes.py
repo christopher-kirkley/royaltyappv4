@@ -4,7 +4,7 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema
+from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog  
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
@@ -27,6 +27,7 @@ def generate_statement():
     start_date = data['start_date']
     end_date = data['end_date']
     previous_balance_id = data['previous_balance_id']
+
     date_range = (str(start_date) + '_' + str(end_date)).replace('-', '_')
     table = ge.create_statement_table(date_range)
     table_obj = table.__table__
@@ -74,6 +75,10 @@ def get_statement_summary(id):
     """lookup statement summary table in index table with statement summary id"""
     statement_summary_table = ga.lookup_statement_summary_table(id)
 
+    statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
+
+    previous_statement_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
+
     statement_for_all_artists = (
         db.session.query(statement_summary_table.c.artist_id,
                          statement_summary_table.c.previous_balance,
@@ -107,7 +112,9 @@ def get_statement_summary(id):
     ) 
     
     summary = {
-            'statement_total': statement_total.total
+            'statement_total': statement_total.total,
+            'previous_balance': '',
+            'statement': statement_detail_table,
             }
 
     detail = []
@@ -228,7 +235,9 @@ def statement_detail_artist(id, artist_id):
         album_sales.append(obj)
 
     track_sales_detail = va.get_track_sales_detail(table, artist_id)
+    
     track_sales = []
+
     for row in track_sales_detail:
         obj = {
                 'track_name': row.track_name,
@@ -249,4 +258,43 @@ def statement_detail_artist(id, artist_id):
             }
 
     return jsonify(json_res)
+
+@statements.route('/statements/<id>/versions', methods=['GET'])
+def statement_versions(id):
+    statement_detail_table = ga.get_statement_table(1)
+    
+    query = (
+        db.session.query(Version.id.label('id'),
+                         Version.version_number.label('version_number'),
+                         Version.format.label('format'),
+                         Catalog.catalog_name.label('catalog_name'))
+            .join(statement_detail_table, Version.id == statement_detail_table.c.version_id)
+            .join(Catalog, Version.catalog_id == Catalog.id)
+            .group_by(Version.id, Version.version_number, Version.format, Catalog.catalog_name)
+            .order_by(Version.version_number)
+            .all()
+        )
+
+    versions = []
+
+    for row in query:
+        obj = {
+                'id': row.id,
+                'version_number': row.version_number,
+                'format': row.format,
+                'catalog_name': row.catalog_name,
+                }
+        versions.append(obj)
+
+    json_res = ({'versions': versions})
+
+    return jsonify(json_res)
+    
+@statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
+def delete_statement_versions(id, version_id):
+    statement_detail_table = ga.get_statement_table(id)
+    i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
+    db.session.execute(i)
+    db.session.commit()
+    return jsonify({'success': 'true'})
 
