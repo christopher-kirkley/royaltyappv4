@@ -225,4 +225,5 @@ def setup_statement(test_client, db):
     end_date = data['end_date']
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
+    response = test_client.post('/statements/1/generate-summary', data=json_data)
 

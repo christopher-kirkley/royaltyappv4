@@ -135,7 +135,7 @@ def insert_into_statement_summary(
         ):
 
     ins = (
-            statement_summary_table.__table__.insert().from_select([
+            statement_summary_table.insert().from_select([
                 'artist_id',
                 'previous_balance',
                 'recoupables',
