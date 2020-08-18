@@ -129,6 +129,12 @@ def test_returns(browser, test_client, db):
     table = browser.find_element_by_id('edit-statement')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('version_number').text == 'SS-050digi'
+
+    browser.find_element_by_id('update').click()
+
+    """ User returns to statement and sees it has been updated. """
+    
+    time.sleep(1000)
     
 
 

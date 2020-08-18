@@ -43,7 +43,8 @@ def test_can_generate_statement(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
     assert response.status_code == 200
-    assert json.loads(response.data) == {'success': 'true'}
+    assert json.loads(response.data) == {'success': 'True',
+                                        'statement_index': 1}
     res = db.session.query(StatementGenerated).all()
     assert len(res) == 1
     res = db.session.query(StatementBalanceGenerated).all()

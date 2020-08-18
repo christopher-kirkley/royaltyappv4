@@ -58,15 +58,21 @@ def test_can_create_statement_summary_table(test_client, db):
     assert table.__tablename__ == 'statement_summary_2020_01_01_2020_01_31'
 
 def test_can_get_statement_by_artist_subquery(test_client, db):
-    setup_statement(test_client, db)
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
     statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
     statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
     statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
     statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
     date_range = '2020_01_01_2020_01_31'
-    table = ga.create_statement_summary_table(date_range)
-    assert len(db.session.query(table).all()) == 1
-    assert table.__tablename__ == 'statement_summary_2020_01_01_2020_01_31'
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,
                                                         statement_sales_by_artist,
@@ -83,19 +89,30 @@ def test_can_get_statement_by_artist_subquery(test_client, db):
                 )]
 
 def test_can_insert_statement_summary_data_into_table(test_client, db):
-    setup_statement(test_client, db)
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
     statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
     statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
     statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
     statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
     date_range = '2020_01_01_2020_01_31'
     table = ga.create_statement_summary_table(date_range)
+    statement_summary_table = table.__table__
+    print(table)
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,
                                                         statement_sales_by_artist,
                                                         statement_advances_by_artist,
                                                         statement_recoupables_by_artist)
-    ga.insert_into_statement_summary(statement_by_artist, table)
+    ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
     assert len(db.session.query(table).all()) > 0
     res = db.session.query(table).first()
     assert res.id == 1

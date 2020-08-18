@@ -46,10 +46,19 @@ def generate_statement():
     expense_total = ge.find_expense_total(start_date, end_date, artist_catalog_percentage)
     ge.insert_expense_into_total(expense_total, table_obj)
 
-    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
-    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
-    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
-    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(1)
+    return json.dumps({'success': 'True', 'statement_index': statement_index.id})
+
+@statements.route('/statements/<id>/generate-summary', methods=['POST'])
+def generate_statement_summary(id):
+    statement_summary_table = ga.lookup_statement_summary_table(id)
+    i = statement_summary_table.delete()
+    db.session.execute(i)
+    db.session.commit()
+
+    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(id)
+    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(id)
+    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(id)
+    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(id)
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,
                                                         statement_sales_by_artist,
@@ -57,8 +66,8 @@ def generate_statement():
                                                         statement_recoupables_by_artist,
                                                         )
     ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
-
     return json.dumps({'success': 'true'})
+
 
 @statements.route('/statements/view', methods=['GET'])
 def get_generated_statements():
