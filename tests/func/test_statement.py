@@ -78,6 +78,8 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('1').click()
     time.sleep(2)
     assert browser.find_element_by_id('header').text == 'Statement Summary'
+    assert browser.find_element_by_id('statement-name').text == 'statement_2020_01_01_2020_01_31'
+    assert browser.find_element_by_id('current-owed').text == 'Current Owed: 0'
     table = browser.find_element_by_id('statement_summary_table')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_element_by_id('artist_name').text == 'Ahmed Ag Kaedy'
@@ -111,7 +113,23 @@ def test_returns(browser, test_client, db):
     assert rows[1].find_element_by_id('track_name').text == 'Adounia'
 
     table = browser.find_element_by_id('artist-statement-summary')
+
+    """ User goes to edit statement. """
+    browser.find_element_by_id('statements_view').click()
+    browser.find_element_by_id('edit').click()
+    assert browser.find_element_by_id('header').text == 'Edit Statement'
+
+    time.sleep(2)
+    table = browser.find_element_by_id('edit-statement')
     rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_element_by_id('track_name').text == 'Adounia'
+    assert rows[1].find_element_by_id('version_number').text == 'SS-050cass'
+    
+    rows[1].find_element_by_id('1').click()
+    time.sleep(1)
+    table = browser.find_element_by_id('edit-statement')
+    rows = table.find_elements_by_tag_name('tr')
+    assert rows[1].find_element_by_id('version_number').text == 'SS-050digi'
+    
+
 
     

@@ -31,7 +31,11 @@ def test_can_view_statement_summary(test_client, db):
     response = test_client.get('/statements/1')
     assert response.status_code == 200
     assert json.loads(response.data) == {
-            'summary': {'statement_total': 0},
+            'summary': {
+                'statement_total': 0,
+                'previous_balance': '',
+                'statement': 'statement_2020_01_01_2020_01_31',
+                },
             'detail':
                 [{
                     'id': 1,
@@ -136,6 +140,27 @@ def test_can_view_statement_artist_detail(test_client, db):
 
             }
 
+def test_can_edit_statement_versions(test_client, db):
+    setup_statement(test_client, db)
+    response = test_client.get('/statements/1/versions')
+    assert response.status_code == 200
+    assert len(response.data) > 0
+    versions = json.loads(response.data)['versions']
+    first_version = versions[0]
+    assert first_version['catalog_name'] == 'Akaline Kidal'
+    assert first_version['format'] == 'cass'
+    assert first_version['version_number'] == 'SS-050cass'
 
-
-
+def test_can_delete_statement_versions(test_client, db):
+    setup_statement(test_client, db)
+    response = test_client.get('/statements/1/versions')
+    assert response.status_code == 200
+    versions = json.loads(response.data)['versions']
+    assert len(versions) == 3
+    response = test_client.delete('/statements/1/versions/1')
+    assert response.status_code == 200
+    response = test_client.get('/statements/1/versions')
+    assert response.status_code == 200
+    versions = json.loads(response.data)['versions']
+    assert len(versions) == 2
+ 
