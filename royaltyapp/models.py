@@ -369,6 +369,8 @@ class StatementGenerated(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     statement_detail_table = db.Column(db.String(255), unique=True)
     statement_summary_table = db.Column(db.String(255), unique=True)
+    statement_balance_table = db.Column(db.String(255), unique=True)
+    previous_balance_id = db.Column(db.Integer)
 
 class StatementGeneratedSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
@@ -376,37 +378,46 @@ class StatementGeneratedSchema(ma.SQLAlchemyAutoSchema):
                 "id",
                 "statement_detail_table",
                 "statement_summary_table",
+                "statement_balance_table",
+                "previous_balance_id",
                 )
 
-class StatementBalanceGenerated(db.Model):
-        __tablename__ = 'statement_balance_generated'
-
-        id = db.Column(db.Integer, primary_key=True)
-        statement_balance_name = db.Column(db.String(255), unique=True)
-
-class StatementBalanceGeneratedSchema(ma.SQLAlchemyAutoSchema):
-    class Meta:
-        fields = (
-                "id",
-                "statement_balance_name",
-                )
-
-class StatementBalance(db.Model):
-    """Table to link generated statements to current balance and previous balance."""
-    __tablename__ = 'statement_balance'
-    id = db.Column(db.Integer, primary_key=True)
-    statement_id = db.Column(db.Integer, db.ForeignKey('statement_generated.id', ondelete='CASCADE'))
-    current_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
-    previous_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
-    current_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[current_balance_id], passive_deletes=True)
-    previous_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[previous_balance_id], passive_deletes=True)
-
-class StatementBalanceForward(db.Model):
-    __tablename__ = 'none_balance'
+class StatementBalanceNone(db.Model):
+    __tablename__ = 'statement_balance_none'
     __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     artist_name = db.Column(db.String(255))
     balance_forward = db.Column(db.Numeric(8, 2))
+
+# class StatementBalanceGenerated(db.Model):
+#         __tablename__ = 'statement_balance_generated'
+
+#         id = db.Column(db.Integer, primary_key=True)
+#         statement_balance_name = db.Column(db.String(255), unique=True)
+
+# class StatementBalanceGeneratedSchema(ma.SQLAlchemyAutoSchema):
+#     class Meta:
+#         fields = (
+#                 "id",
+#                 "statement_balance_name",
+#                 )
+
+# class StatementBalance(db.Model):
+#     """Table to link generated statements to current balance and previous balance."""
+#     __tablename__ = 'statement_balance'
+#     id = db.Column(db.Integer, primary_key=True)
+#     statement_id = db.Column(db.Integer, db.ForeignKey('statement_generated.id', ondelete='CASCADE'))
+#     current_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
+#     previous_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
+#     current_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[current_balance_id], passive_deletes=True)
+#     previous_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[previous_balance_id], passive_deletes=True)
+
+# class StatementBalanceForward(db.Model):
+#     __tablename__ = 'none_balance'
+#     __table_args__ = {'extend_existing': True}
+#     id = db.Column(db.Integer, primary_key=True)
+#     artist_name = db.Column(db.String(255))
+#     balance_forward = db.Column(db.Numeric(8, 2))
 
 def insert_initial_values(db):
     """Initialize distributor table."""
@@ -427,8 +438,6 @@ def insert_initial_values(db):
                     expense_type='advance'),
         ExpenseType(id=2,
                     expense_type='recoupable'),
-        StatementBalanceGenerated(
-                    statement_balance_name='none_balance'),
     ]
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()

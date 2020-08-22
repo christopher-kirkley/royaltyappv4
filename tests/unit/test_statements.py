@@ -12,7 +12,7 @@ from decimal import Decimal
 
 import time
 
-from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
+from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
 from royaltyapp.statements.helpers import define_artist_statement_table
 
@@ -33,7 +33,7 @@ def test_can_view_statement_summary(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 0,
-                'previous_balance': '',
+                'previous_balance': None,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
@@ -163,4 +163,22 @@ def test_can_delete_statement_versions(test_client, db):
     assert response.status_code == 200
     versions = json.loads(response.data)['versions']
     assert len(versions) == 2
- 
+
+def test_can_view_previous_balances(test_client, db):
+    setup_statement(test_client, db)
+    response = test_client.get('/statements/previous')
+    assert response.status_code == 200
+
+def test_can_update_statement(test_client, db):
+    setup_statement(test_client, db)
+    data = {
+            'previous_balance_id': 1
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/statements/1', data=json_data)
+    assert response.status_code == 200
+    res = db.session.query(StatementGenerated).filter(StatementGenerated.id == 1).first()
+    assert res.id == 1
+    assert res.previous_balance_id == 1
+    assert json.loads(response.data) == {'success': 'true'}
+

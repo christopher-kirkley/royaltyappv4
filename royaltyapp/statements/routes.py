@@ -4,7 +4,7 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, StatementBalanceGenerated, StatementBalanceGeneratedSchema, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog  
+from royaltyapp.models import db, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog  
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
@@ -15,10 +15,10 @@ statements = Blueprint('statements', __name__)
 @statements.route('/statements/view-balances', methods=['GET'])
 def get_statements():
     query = db.session.query(
-            StatementBalanceGenerated.id,
-            StatementBalanceGenerated.statement_balance_name).all()
-    statement_balance_generated_schema = StatementBalanceGeneratedSchema(many=True)
-    statements = statement_balance_generated_schema.dumps(query)
+            StatementGenerated.id,
+            StatementGenerated.statement_balance_table).all()
+    statement_generated_schema = StatementGeneratedSchema(many=True)
+    statements = statement_generated_schema.dumps(query)
     return statements
 
 @statements.route('/statements/generate', methods=['POST'])
@@ -35,11 +35,8 @@ def generate_statement():
     statement_index = ge.add_statement_to_index(table, statement_summary_table)
     
     statement_balance_table = ge.create_statement_balance_table(table)
-    statement_balance_index = ge.add_statement_balance_to_index(statement_balance_table)
-    ge.populate_balance_relationship_table(
-            statement_index,
-            statement_balance_index,
-            previous_balance_id)
+    ge.add_statement_balance_to_index(statement_index.id, statement_balance_table)
+
     artist_catalog_percentage = ge.find_track_percentage()
     artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
     ge.insert_into_table(artist_total, table_obj)
@@ -86,7 +83,7 @@ def get_statement_summary(id):
 
     statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
 
-    previous_statement_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
+    previous_balance_id = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().previous_balance_id
 
     statement_for_all_artists = (
         db.session.query(statement_summary_table.c.artist_id,
@@ -122,7 +119,7 @@ def get_statement_summary(id):
     
     summary = {
             'statement_total': statement_total.total,
-            'previous_balance': '',
+            'previous_balance': previous_balance_id,
             'statement': statement_detail_table,
             }
 
@@ -306,4 +303,17 @@ def delete_statement_versions(id, version_id):
     db.session.execute(i)
     db.session.commit()
     return jsonify({'success': 'true'})
+
+@statements.route('/statements/previous', methods=['GET'])
+def get_previous_balances():
+    return jsonify({'success': 'true'})
+
+@statements.route('/statements/<id>', methods=['PUT'])
+def edit_statement(id):
+    data = request.get_json(force=True)
+    statement_generated_obj = db.session.query(StatementGenerated).get(id)
+    statement_generated_obj.previous_balance_id = data['previous_balance_id']
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
 

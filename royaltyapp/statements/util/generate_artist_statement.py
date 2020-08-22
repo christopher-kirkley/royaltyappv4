@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECIMAL, Date, Numeric
 
-from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, StatementBalanceGenerated, Version, Catalog, StatementBalance, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
+from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
 
 from sqlalchemy import MetaData, cast, func, exc
 
@@ -28,15 +28,18 @@ def lookup_statement_summary_table(statement_id):
     return table
 
 def create_statement_previous_balance_by_artist_subquery(statement_id):
-    previous_balance_id = (db.session.query(StatementBalance.previous_balance_id)
-                           .filter(StatementBalance.statement_id == statement_id)
+    previous_balance_id = (db.session.query(StatementGenerated.previous_balance_id)
+                           .filter(StatementGenerated.id == statement_id)
                            .first()
                            ).previous_balance_id
 
-    previous_balance_name = (db.session.query(StatementBalanceGenerated)
-                              .filter(StatementBalanceGenerated.id == previous_balance_id)
+    if previous_balance_id == None:
+        previous_balance_name = 'statement_balance_none'
+    else:
+        previous_balance_name = (db.session.query(StatementGenerated)
+                              .filter(StatementGenerated.id == previous_balance_id)
                               .first()
-                              ).statement_balance_name
+                              ).statement_balance_table
 
     metadata = MetaData(db.engine, reflect=True)
 

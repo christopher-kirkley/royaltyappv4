@@ -62,7 +62,8 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('statements_generate').click()
     assert browser.find_element_by_id('header').text == 'Generate Statement'
     browser.find_element_by_id('previous_balance_id').click()
-    browser.find_element_by_id('none_balance').click()
+    time.sleep(1)
+    browser.find_element_by_id('none').click()
     browser.find_element_by_id('submit').click()
     time.sleep(3)
     assert browser.find_element_by_id('message').text == 'Uploaded!'
@@ -134,7 +135,7 @@ def test_returns(browser, test_client, db):
 
     """ User returns to statement and sees it has been updated. """
     
-    time.sleep(1000)
+    time.sleep(5000)
     
 
 
