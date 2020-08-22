@@ -106,7 +106,6 @@ def test_can_insert_statement_summary_data_into_table(test_client, db):
     date_range = '2020_01_01_2020_01_31'
     table = ga.create_statement_summary_table(date_range)
     statement_summary_table = table.__table__
-    print(table)
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,
                                                         statement_sales_by_artist,
@@ -121,4 +120,30 @@ def test_can_insert_statement_summary_data_into_table(test_client, db):
     assert res.recoupables == Decimal('1398.06')
     assert res.advances == Decimal('9542.63')
     assert res.sales == Decimal('24.95')
+
+
+def test_can_generate_statement_summary(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    response = test_client.post('/statements/1/generate-summary')
+    assert response.status_code == 200
+
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
+    res = db.session.query(table).all()
+    assert len(res) != 0
+    
+    metadata = db.MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_summary_2020_01_01_2020_01_31')
+    res = db.session.query(table).first()
+    assert res.previous_balance == ''
+
 

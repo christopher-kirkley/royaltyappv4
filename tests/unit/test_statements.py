@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 
 from decimal import Decimal
+from sqlalchemy import MetaData
 
 import time
 
@@ -169,7 +170,7 @@ def test_can_view_previous_balances(test_client, db):
     response = test_client.get('/statements/previous')
     assert response.status_code == 200
 
-def test_can_update_statement(test_client, db):
+def test_can_update_previous_balance(test_client, db):
     setup_statement(test_client, db)
     data = {
             'previous_balance_id': 1
@@ -181,4 +182,33 @@ def test_can_update_statement(test_client, db):
     assert res.id == 1
     assert res.previous_balance_id == 1
     assert json.loads(response.data) == {'success': 'true'}
+
+    ga.insert_into_balance_table(1)
+
+    metadata = MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
+    res = db.session.query(table).all()
+    assert len(res) != 0
+
+
+def test_can_update_previous_balance(test_client, db):
+    setup_statement(test_client, db)
+    data = {
+            'previous_balance_id': 1
+            }
+
+    json_data = json.dumps(data)
+    response = test_client.put('/statements/1', data=json_data)
+    assert response.status_code == 200
+    res = db.session.query(StatementGenerated).filter(StatementGenerated.id == 1).first()
+    assert res.id == 1
+    assert res.previous_balance_id == 1
+    assert json.loads(response.data) == {'success': 'true'}
+
+    ga.insert_into_balance_table(1)
+
+    metadata = MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
+    res = db.session.query(table).all()
+    assert len(res) != 0
 

@@ -69,7 +69,7 @@ def create_statement_balance_table(statement_table):
         __tablename__ = f'{statement_name}_balance'
         __table_args__ = {'extend_existing': True}
         id = db.Column(db.Integer, primary_key=True)
-        artist_name = db.Column(db.String(255))
+        artist_id = db.Column(db.String(255))
         balance_forward = db.Column(db.Numeric(8, 2))
 
         # artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))

@@ -148,7 +148,30 @@ def insert_into_statement_summary(
 
     db.session.execute(ins)
     db.session.commit()
-
     
     return True
 
+def insert_into_balance_table(statement_id): 
+    statement_index = db.session.query(StatementGenerated).filter(StatementGenerated.id == statement_id).first()
+    # lookup balance statement
+    metadata = MetaData(db.engine, reflect=True)
+    statement_balance_table = metadata.tables.get(statement_index.statement_balance_table)
+    statement_summary_table = metadata.tables.get(statement_index.statement_summary_table)
+
+    entries_to_delete = statement_balance_table.delete()
+    db.session.execute(entries_to_delete)
+    db.session.commit()
+
+    sel = db.session.query(
+            statement_summary_table.c.artist_id,
+            statement_summary_table.c.previous_balance + statement_summary_table.c.sales - statement_summary_table.c.recoupables/2 - statement_summary_table.c.advances)
+    ins = (statement_balance_table
+           .insert().from_select(['artist_id',
+                                  'balance_forward'],
+                                 sel)
+           )
+
+    db.session.execute(ins)
+    db.session.commit()
+
+    
