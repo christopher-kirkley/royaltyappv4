@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECIMAL, Date, Numeric
 
-from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, StatementBalanceGenerated, Version, Catalog, StatementBalance, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
+from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
 
 from sqlalchemy import MetaData, cast, func, exc
 
@@ -82,26 +82,27 @@ def create_statement_balance_table(statement_table):
 
     return StatementBalanceForward
 
-def add_statement_balance_to_index(statement_balance_table):
+def add_statement_balance_to_index(id, statement_balance_table):
     try:
+        statement_generated_obj = db.session.query(StatementGenerated).get(id)
         statement_balance_name = statement_balance_table.__tablename__
-        statement_balance_generated = StatementBalanceGenerated(statement_balance_name=statement_balance_name)
-        db.session.add(statement_balance_generated)
+
+        statement_generated_obj.statement_balance_table = statement_balance_name
         db.session.commit()
     except exc.SQLAlchemyError:
         db.session.rollback()
         return "already exists"
-    return statement_balance_generated
+    return statement_generated_obj
 
-def populate_balance_relationship_table(statement_index, statement_balance_index, previous_balance_id):
-    statement_index_id = statement_index.id
-    statement_balance_index_id = statement_balance_index.id
-    balance_relationship = StatementBalance(
-                        statement_id=statement_index_id,
-                        current_balance_id=statement_balance_index_id,
-                        previous_balance_id=previous_balance_id)
-    db.session.add(balance_relationship)
-    db.session.commit()
+# def populate_balance_relationship_table(statement_index, statement_balance_index, previous_balance_id):
+#     statement_index_id = statement_index.id
+#     statement_balance_index_id = statement_balance_index.id
+#     balance_relationship = StatementBalance(
+#                         statement_id=statement_index_id,
+#                         current_balance_id=statement_balance_index_id,
+#                         previous_balance_id=previous_balance_id)
+#     db.session.add(balance_relationship)
+#     db.session.commit()
 
 def find_track_percentage():
     """Find percentages of tracks in each catalog."""

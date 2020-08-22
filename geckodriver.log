@@ -8294,3 +8294,246 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1598106717822	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewzVs2A"
+1598106722056	Marionette	INFO	Listening on port 63001
+1598106722140	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598109153139	Marionette	INFO	Stopped listening on port 63001
+1598109435971	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletbq3vl"
+1598109439223	Marionette	INFO	Listening on port 63447
+1598109439242	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97437: Error: Objects are not valid as a React child (found: object with keys {previous_balance, statement, statement_total}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at StatementEdit.js:124)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at StatementEdit.js:122)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at StatementEdit.js:121)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at StatementEdit.js:119)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:118)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:117)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at StatementEdit.js:115)
+    in StatementEdit (created by Context.Consumer)
+    in Route (at Main.js:196)
+    in Switch (at Main.js:177)
+    in div (at Main.js:76)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:75)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97437: Error: Objects are not valid as a React child (found: object with keys {previous_balance, statement, statement_total}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at StatementEdit.js:124)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at StatementEdit.js:122)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at StatementEdit.js:121)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at StatementEdit.js:119)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:118)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:117)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at StatementEdit.js:115)
+    in StatementEdit (created by Context.Consumer)
+    in Route (at Main.js:196)
+    in Switch (at Main.js:177)
+    in div (at Main.js:76)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:75)
+    in Main (at src/index.js:10)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598110457046	Marionette	INFO	Stopped listening on port 63447
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1598110486869	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileuL42rN"
+1598110489852	Marionette	INFO	Listening on port 63798
+1598110489871	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1598118950092	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeqCgCD"
+1598118953869	Marionette	INFO	Listening on port 64687
+1598118953916	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598118960223	Marionette	INFO	Stopped listening on port 64687
+1598118964886	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile30Kdgi"
+1598118967682	Marionette	INFO	Listening on port 64810
+1598118967776	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598118973953	Marionette	INFO	Stopped listening on port 64810
+1598119185893	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilehtzRfe"
+1598119188753	Marionette	INFO	Listening on port 64907
+1598119188847	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119194967	Marionette	INFO	Stopped listening on port 64907
+1598119220385	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5bfdOA"
+1598119223274	Marionette	INFO	Listening on port 65002
+1598119223370	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119229648	Marionette	INFO	Stopped listening on port 65002
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1598119263321	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerWO0ur"
+1598119266200	Marionette	INFO	Listening on port 65094
+1598119266227	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119272453	Marionette	INFO	Stopped listening on port 65094
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1598119309900	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeXhO3G"
+1598119313080	Marionette	INFO	Listening on port 65185
+1598119313095	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119319993	Marionette	INFO	Stopped listening on port 65185
+1598119362373	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezRbz0a"
+1598119365412	Marionette	INFO	Listening on port 65287
+1598119365476	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119372736	Marionette	INFO	Stopped listening on port 65287
+1598119405770	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOfuZbY"
+1598119408613	Marionette	INFO	Listening on port 65380
+1598119408653	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598119415994	Marionette	INFO	Stopped listening on port 65380
+1598119421648	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSJGS4I"
+1598119424978	Marionette	INFO	Listening on port 65473
+1598119425073	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97437: Error: Objects are not valid as a React child (found: object with keys {success}). If you meant to render a collection of children, use an array instead.
+    in select (at StatementEdit.js:148)
+    in form (at StatementEdit.js:147)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at StatementEdit.js:145)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:144)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:129)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at StatementEdit.js:127)
+    in StatementEdit (created by Context.Consumer)
+    in Route (at Main.js:196)
+    in Switch (at Main.js:177)
+    in div (at Main.js:76)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:75)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97437: Error: Objects are not valid as a React child (found: object with keys {success}). If you meant to render a collection of children, use an array instead.
+    in select (at StatementEdit.js:148)
+    in form (at StatementEdit.js:147)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at StatementEdit.js:145)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:144)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at StatementEdit.js:129)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at StatementEdit.js:127)
+    in StatementEdit (created by Context.Consumer)
+    in Route (at Main.js:196)
+    in Switch (at Main.js:177)
+    in div (at Main.js:76)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:75)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8465: TypeError: previousBalances.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8473: TypeError: previousBalance.statement_balance_table is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8473: TypeError: previousBalance.statement_balance_table is undefined
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1598122591533	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0h7N0R"
+1598122594705	Marionette	INFO	Listening on port 49732
+1598122594723	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8453: TypeError: e.target.previousStatement is undefined
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1598124891166	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile63F17W"
+1598124894587	Marionette	INFO	Listening on port 50426
+1598124894668	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1598124908314	Marionette	INFO	Stopped listening on port 50426
+1598124912437	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileq74wJd"
+1598124915564	Marionette	INFO	Listening on port 50553
+1598124915619	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1598125594852	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9xPGyZ"
+1598125598045	Marionette	INFO	Listening on port 50802
+1598125598138	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1598126745831	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilelg2C8v"
+1598126748689	Marionette	INFO	Listening on port 51320
+1598126748736	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

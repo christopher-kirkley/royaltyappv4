@@ -1,7 +1,7 @@
 
 from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECIMAL, Date, Numeric
 
-from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, StatementBalanceGenerated, Version, Catalog
+from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog
 
 from sqlalchemy import MetaData, cast, func, exc
 

@@ -217,7 +217,7 @@ def setup_test1(test_client, db):
 def setup_statement(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': None,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }

@@ -12,7 +12,7 @@ from decimal import Decimal
 
 import time
 
-from royaltyapp.models import StatementGenerated, StatementBalanceGenerated, StatementBalance, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
+from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
 from royaltyapp.statements.helpers import define_artist_statement_table
 
@@ -60,7 +60,7 @@ def test_can_create_statement_summary_table(test_client, db):
 def test_can_get_statement_by_artist_subquery(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': '',
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
