@@ -26,7 +26,6 @@ def generate_statement():
     data = request.get_json(force=True)
     start_date = data['start_date']
     end_date = data['end_date']
-    previous_balance_id = data['previous_balance_id']
 
     date_range = (str(start_date) + '_' + str(end_date)).replace('-', '_')
     table = ge.create_statement_table(date_range)
@@ -63,6 +62,7 @@ def generate_statement_summary(id):
                                                         statement_recoupables_by_artist,
                                                         )
     ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
+    ga.insert_into_balance_table(id)
     return json.dumps({'success': 'true'})
 
 

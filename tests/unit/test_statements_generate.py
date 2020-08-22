@@ -32,7 +32,7 @@ def test_can_list_statements(test_client, db):
 def test_can_generate_statement(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': '',
+            'previous_balance_id': 1,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31',
             }
@@ -95,20 +95,6 @@ def test_can_add_statement_balance_to_index(test_client, db):
     assert res.id == 1
     assert res.statement_balance_table == 'statement_2020_01_01_2020_01_31_balance'
     
-# def test_can_populate_relationship_table(test_client, db):
-#     date_range = '2020_01_01_2020_01_31'
-#     table = ge.create_statement_table(date_range)
-#     statement_summary_table = ga.create_statement_summary_table(date_range)
-#     statement_index = ge.add_statement_to_index(table, statement_summary_table)
-#     statement_balance_table = ge.create_statement_balance_table(table)
-#     statement_balance_index = ge.add_statement_balance_to_index(statement_balance_table)
-#     assert statement_balance_index.id == 2
-#     ge.populate_balance_relationship_table(
-#             statement_index,
-#             statement_balance_index,
-#             1)
-#     res = db.session.query(StatementBalance).all()
-#     assert len(res) == 1
 
 def test_can_list_generated_statements(test_client, db):
     build_catalog(db, test_client)
