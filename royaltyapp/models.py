@@ -389,35 +389,6 @@ class StatementBalanceNone(db.Model):
     artist_name = db.Column(db.String(255))
     balance_forward = db.Column(db.Numeric(8, 2))
 
-# class StatementBalanceGenerated(db.Model):
-#         __tablename__ = 'statement_balance_generated'
-
-#         id = db.Column(db.Integer, primary_key=True)
-#         statement_balance_name = db.Column(db.String(255), unique=True)
-
-# class StatementBalanceGeneratedSchema(ma.SQLAlchemyAutoSchema):
-#     class Meta:
-#         fields = (
-#                 "id",
-#                 "statement_balance_name",
-#                 )
-
-# class StatementBalance(db.Model):
-#     """Table to link generated statements to current balance and previous balance."""
-#     __tablename__ = 'statement_balance'
-#     id = db.Column(db.Integer, primary_key=True)
-#     statement_id = db.Column(db.Integer, db.ForeignKey('statement_generated.id', ondelete='CASCADE'))
-#     current_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
-#     previous_balance_id = db.Column(db.Integer, db.ForeignKey('statement_balance_generated.id', ondelete='CASCADE'))
-#     current_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[current_balance_id], passive_deletes=True)
-#     previous_balance = db.relationship('StatementBalanceGenerated', foreign_keys=[previous_balance_id], passive_deletes=True)
-
-# class StatementBalanceForward(db.Model):
-#     __tablename__ = 'none_balance'
-#     __table_args__ = {'extend_existing': True}
-#     id = db.Column(db.Integer, primary_key=True)
-#     artist_name = db.Column(db.String(255))
-#     balance_forward = db.Column(db.Numeric(8, 2))
 
 def insert_initial_values(db):
     """Initialize distributor table."""
