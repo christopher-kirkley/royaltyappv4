@@ -171,6 +171,14 @@ def test_can_view_previous_balances(test_client, db):
 
 def test_can_update_previous_balance(test_client, db):
     setup_statement(test_client, db)
+    
+    """Check current balance forward correct."""
+    assert db.session.query(StatementGenerated).first().previous_balance_id == None
+    metadata = MetaData(db.engine, reflect=True)
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
+    assert db.session.query(table).first().balance_forward == Decimal('-10216.71')
+    
+    """Modify previous balance."""
     data = {
             'previous_balance_id': 1
             }
@@ -182,32 +190,12 @@ def test_can_update_previous_balance(test_client, db):
     assert res.previous_balance_id == 1
     assert json.loads(response.data) == {'success': 'true'}
 
-    ga.insert_into_balance_table(1)
+    """Regenerate Summary."""
+    response = test_client.post('/statements/1/generate-summary')
 
+    """Confirm previous balance updated."""
     metadata = MetaData(db.engine, reflect=True)
-    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
-    res = db.session.query(table).all()
-    assert len(res) != 0
+    table = metadata.tables.get('statement_summary_2020_01_01_2020_01_31')
 
-
-def test_can_update_previous_balance(test_client, db):
-    setup_statement(test_client, db)
-    data = {
-            'previous_balance_id': 1
-            }
-
-    json_data = json.dumps(data)
-    response = test_client.put('/statements/1', data=json_data)
-    assert response.status_code == 200
-    res = db.session.query(StatementGenerated).filter(StatementGenerated.id == 1).first()
-    assert res.id == 1
-    assert res.previous_balance_id == 1
-    assert json.loads(response.data) == {'success': 'true'}
-
-    ga.insert_into_balance_table(1)
-
-    metadata = MetaData(db.engine, reflect=True)
-    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
-    res = db.session.query(table).all()
-    assert len(res) != 0
+    assert db.session.query(table).first().previous_balance == Decimal('-10216.71') 
 

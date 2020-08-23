@@ -33,7 +33,7 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
                            .first()
                            ).previous_balance_id
 
-    if previous_balance_id == None:
+    if previous_balance_id == 0:
         previous_balance_name = 'statement_balance_none'
     else:
         previous_balance_name = (db.session.query(StatementGenerated)
