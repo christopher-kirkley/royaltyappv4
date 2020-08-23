@@ -86,7 +86,6 @@ def add_statement_balance_to_index(id, statement_balance_table):
     try:
         statement_generated_obj = db.session.query(StatementGenerated).get(id)
         statement_balance_name = statement_balance_table.__tablename__
-
         statement_generated_obj.statement_balance_table = statement_balance_name
         db.session.commit()
     except exc.SQLAlchemyError:

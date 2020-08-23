@@ -28,6 +28,20 @@ def test_can_list_statements(test_client, db):
     assert json.loads(response.data) == [
         ]
 
+def test_can_generate_statement_with_no_previous_balance(test_client, db):
+    setup_test1(test_client, db)
+    data = {
+            'previous_balance_id': 0,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31',
+            }
+    start_date = data['start_date']
+    end_date = data['end_date']
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    response = test_client.post('/statements/1/generate-summary', data=json_data)
+    assert response.status_code == 200
+
 def test_can_generate_statement(test_client, db):
     setup_test1(test_client, db)
     data = {
