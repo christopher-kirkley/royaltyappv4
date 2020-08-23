@@ -15,7 +15,6 @@ import time
 
 from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
-from royaltyapp.statements.helpers import define_artist_statement_table
 
 from royaltyapp.statements.util import generate_artist_statement as ga
 

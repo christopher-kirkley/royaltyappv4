@@ -12,7 +12,6 @@ import time
 
 from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
-from royaltyapp.statements.helpers import define_artist_statement_table
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
@@ -94,6 +93,17 @@ def test_can_add_statement_balance_to_index(test_client, db):
     res = db.session.query(StatementGenerated).filter(StatementGenerated.id == 1).first()
     assert res.id == 1
     assert res.statement_balance_table == 'statement_2020_01_01_2020_01_31_balance'
+    
+def test_can_add_previous_balance_id_to_index(test_client, db):
+    date_range = '2020_01_01_2020_01_31'
+    table = ge.create_statement_table(date_range)
+    statement_summary_table = ga.create_statement_summary_table(date_range)
+    statement_generated = ge.add_statement_to_index(table, statement_summary_table)
+    statement_balance_table = ge.create_statement_balance_table(table)
+    statement_balance_generated = ge.add_statement_balance_to_index(1, statement_balance_table)
+    statement_balance_generated = ge.add_previous_balance_id_to_index(1, 1)
+    res = db.session.query(StatementGenerated).first()
+    assert res.previous_balance_id == 1
     
 
 def test_can_list_generated_statements(test_client, db):
