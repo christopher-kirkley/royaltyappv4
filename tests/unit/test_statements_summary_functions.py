@@ -14,7 +14,6 @@ import time
 
 from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
-from royaltyapp.statements.helpers import define_artist_statement_table
 
 from royaltyapp.statements.util import generate_artist_statement as ga
 
@@ -60,7 +59,7 @@ def test_can_create_statement_summary_table(test_client, db):
 def test_can_get_statement_by_artist_subquery(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': '',
+            'previous_balance_id': None,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -121,29 +120,46 @@ def test_can_insert_statement_summary_data_into_table(test_client, db):
     assert res.advances == Decimal('9542.63')
     assert res.sales == Decimal('24.95')
 
-
-def test_can_generate_statement_summary(test_client, db):
+def test_can_link_previous_balance(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': None,
             'start_date': '2020-01-01',
-            'end_date': '2020-01-31'
+            'end_date': '2020-01-15'
             }
-    start_date = data['start_date']
-    end_date = data['end_date']
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
     response = test_client.post('/statements/1/generate-summary')
     assert response.status_code == 200
 
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-16',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    response = test_client.post('/statements/2/generate-summary')
+    assert response.status_code == 200
+
+    res = db.session.query(StatementGenerated)
+    assert len(res.all()) == 2
+    assert res.all()[0].previous_balance_id == None
+    assert res.all()[1].previous_balance_id == 1
+
     metadata = db.MetaData(db.engine, reflect=True)
-    table = metadata.tables.get('statement_2020_01_01_2020_01_31_balance')
+    table = metadata.tables.get('statement_2020_01_01_2020_01_15_balance')
     res = db.session.query(table).all()
-    assert len(res) != 0
+    assert len(res) == 1
+    res = db.session.query(table).first()
+    assert res.balance_forward == Decimal('-10216.71')
     
     metadata = db.MetaData(db.engine, reflect=True)
-    table = metadata.tables.get('statement_summary_2020_01_01_2020_01_31')
+    table = metadata.tables.get('statement_2020_01_16_2020_01_31')
+    res = db.session.query(table).all()
+    assert len(res) == 0
+    table = metadata.tables.get('statement_summary_2020_01_16_2020_01_31')
     res = db.session.query(table).first()
-    assert res.previous_balance == ''
+    assert res.previous_balance == Decimal('-10216.71')
 
 

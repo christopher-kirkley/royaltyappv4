@@ -94,6 +94,11 @@ def add_statement_balance_to_index(id, statement_balance_table):
         return "already exists"
     return statement_generated_obj
 
+def add_previous_balance_id_to_index(id, previous_balance_id):
+    statement_generated_obj = db.session.query(StatementGenerated).get(id)
+    statement_generated_obj.previous_balance_id = previous_balance_id
+    db.session.commit()
+
 # def populate_balance_relationship_table(statement_index, statement_balance_index, previous_balance_id):
 #     statement_index_id = statement_index.id
 #     statement_balance_index_id = statement_balance_index.id
