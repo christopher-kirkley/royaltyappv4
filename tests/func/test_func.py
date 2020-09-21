@@ -20,12 +20,14 @@ def test_returns(browser, test_client, db):
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
     
-    """ User navigates to artist page """
+    """ User navigates to view artist page """
     artist = browser.find_element_by_id('artists')
+    artist.click()
+    artist = browser.find_element_by_id('view_artists')
     artist.click()
 
     """ User sees an empty table, clicks on button to add artist """
-    assert browser.find_element_by_id("artist-table")
+    assert browser.find_element_by_id("artists-data").text == 'No data'
     add_artist = browser.find_element_by_id('add_artist')
     add_artist.click()
     time.sleep(1)
@@ -54,7 +56,7 @@ def test_returns(browser, test_client, db):
     artist_detail = browser.find_element_by_id('artist-detail')
     artist_detail.click()
     assert browser.find_element_by_id('prenom')
-    heading = browser.find_element_by_id('heading')
+    heading = browser.find_element_by_id('header')
     assert heading.text == 'Artist Detail'
     assert browser.find_element_by_id('artist_name').get_attribute("value") == 'Amanar'
     assert browser.find_element_by_id('prenom').get_attribute("value") == 'Ahmed'
@@ -62,6 +64,8 @@ def test_returns(browser, test_client, db):
 
     """ User realizes they made a mistake in the name,
     and updates spelling"""
+    browser.find_element_by_id('edit').click()
+
     surnom = browser.find_element_by_id('surnom')
     surnom.clear()
     surnom.send_keys('Ag Kaedy')
@@ -80,12 +84,13 @@ def test_returns(browser, test_client, db):
     assert tds[2].text == 'Ag Kaedy'
 
     """ User goes to the catalog view """
-    catalog = browser.find_element_by_id('catalog')
-    catalog.click()
-    assert browser.find_element_by_id('header').text == 'All Catalog'
+    browser.find_element_by_id('catalog').click()
+    browser.find_element_by_id('view_catalog').click()
+
+    assert browser.find_element_by_id('header').text == 'Catalog Items'
 
     """ User clicks to add a new catalog item """
-    add_catalog = browser.find_element_by_id('add-catalog-item')
+    add_catalog = browser.find_element_by_id('add_catalog')
     add_catalog.click()
 
     """ User fills out catalog info. """
@@ -93,14 +98,15 @@ def test_returns(browser, test_client, db):
     catalog_number.send_keys('SS-050')
     catalog_name = browser.find_element_by_id('catalog_name')
     catalog_name.send_keys('Akaline Kidal')
-    select = Select(browser.find_element_by_name('artist_id'))
-    select.select_by_visible_text('Amanar')
+
+    browser.find_element_by_id('artist_name').click()
+    browser.find_element_by_id('1').click()
+
     submit = browser.find_element_by_id('submit')
     submit.click()
-    
+
     """ User sees Catalog item in table. """
-    catalog = browser.find_element_by_id('catalog')
-    catalog.click()
+    browser.find_element_by_id('view_catalog').click()
     catalog_table = browser.find_element_by_id('catalog_table')
     rows = catalog_table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
@@ -130,6 +136,8 @@ def test_returns(browser, test_client, db):
     version_submit.click()
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050lp'
+
+    time.sleep(10000)
 
     """ Adds another version """
     add_version.click()

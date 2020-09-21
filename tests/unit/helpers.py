@@ -20,6 +20,14 @@ def add_one_artist(db):
     db.session.add(new_artist)
     db.session.commit()
 
+def add_second_artist(db):
+    new_artist = Artist(artist_name='Bobo',
+                        prenom='Bob',
+                        surnom='Jones',
+                        )
+    db.session.add(new_artist)
+    db.session.commit()
+
 def add_one_catalog(db):
     add_one_artist(db)
     new_catalog = Catalog(catalog_number='SS-001',

@@ -98,7 +98,7 @@ def edit_catalog(id):
     if data['catalog_name']:
         obj.catalog_name = data['catalog_name']
     if data['artist_id']:
-        obj.surnom = data['artist_id']
+        obj.artist_id = data['artist_id']
     db.session.commit()
     return jsonify({'success': 'true'})
 

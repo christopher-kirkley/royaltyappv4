@@ -3,7 +3,7 @@ import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track
 from .helpers import add_one_artist, add_one_catalog, add_one_version,\
-        add_one_track
+        add_one_track, add_second_artist
 
 def test_can_get_all_catalog(test_client, db):
     response = test_client.get('/catalog')
@@ -169,16 +169,20 @@ def test_can_get_one_catalog_item(test_client, db):
 
 def test_can_update_catalog(test_client, db):
     add_one_version(db)
+    add_second_artist(db)
     q = db.session.query(Catalog).first()
+
     data = {'catalog_number': 'SS-002',
-            'catalog_name': 'Ishilan N-Tenere',
-            'artist_id': 1
+            'catalog_name': 'Ishilan Jones',
+            'artist_id': 2
             }
     json_data = json.dumps(data)
     response = test_client.put('/catalog/1', data=json_data)
     assert response.status_code == 200
     q = db.session.query(Catalog).first()
     assert q.catalog_number == 'SS-002'
+    assert q.catalog_name == 'Ishilan Jones'
+    assert q.artist_id == 2
 
 def test_can_add_track(test_client, db):
     add_one_catalog(db)
