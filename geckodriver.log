@@ -9417,3 +9417,1543 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1598203984470	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3BbKzg"
+1598203987757	Marionette	INFO	Listening on port 58109
+1598203987851	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1598204109907	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6ZqPMR"
+1598204113125	Marionette	INFO	Listening on port 58238
+1598204113221	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599425130039	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledQue7I"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425136502	Marionette	INFO	Listening on port 49482
+1599425157950	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileYGP6Or"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425160955	Marionette	INFO	Listening on port 49540
+1599425161059	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425162781	Marionette	INFO	Stopped listening on port 49540
+1599425206169	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMQxbXw"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425209126	Marionette	INFO	Listening on port 49633
+1599425209435	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425211126	Marionette	INFO	Stopped listening on port 49633
+1599425458489	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIdThD5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425461486	Marionette	INFO	Listening on port 49812
+1599425461602	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425465944	Marionette	INFO	Stopped listening on port 49812
+1599425624430	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledGVyzz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425627737	Marionette	INFO	Listening on port 49983
+1599425627746	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425632124	Marionette	INFO	Stopped listening on port 49983
+1599425681579	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKiNes0"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425684501	Marionette	INFO	Listening on port 50089
+1599425684584	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425688438	Marionette	INFO	Stopped listening on port 50089
+1599425742814	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXv0UX1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425745694	Marionette	INFO	Listening on port 50212
+1599425745703	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425751487	Marionette	INFO	Stopped listening on port 50212
+1599425811032	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKYyV8G"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425813705	Marionette	INFO	Listening on port 50320
+1599425813728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425819574	Marionette	INFO	Stopped listening on port 50320
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xB000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1599425865752	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileAUQSkD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425868483	Marionette	INFO	Listening on port 50436
+1599425868540	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599425874597	Marionette	INFO	Stopped listening on port 50436
+1599425914424	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTNQNw1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425917241	Marionette	INFO	Listening on port 50533
+1599425917332	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599425925917	Marionette	INFO	Stopped listening on port 50533
+1599425991190	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledQ0LdM"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599425994267	Marionette	INFO	Listening on port 50648
+1599425994358	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599426001998	Marionette	INFO	Stopped listening on port 50648
+1599426034850	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6Kt99J"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599426037581	Marionette	INFO	Listening on port 50756
+1599426037627	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599427044967	Marionette	INFO	Stopped listening on port 50756
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1599427135384	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezsr2s0"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599427138520	Marionette	INFO	Listening on port 51221
+1599427138613	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 113057: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 113057: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 113057: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 113057: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 111085: TypeError: path is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599427897099	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefgj3A3"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599427900023	Marionette	INFO	Listening on port 51699
+1599427900088	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599427921944	Marionette	INFO	Stopped listening on port 51699
+1599428344747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0150nl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599428347782	Marionette	INFO	Listening on port 51956
+1599428348086	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599428371341	Marionette	INFO	Stopped listening on port 51956
+1599428406333	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilev0btKX"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599428409478	Marionette	INFO	Listening on port 52108
+1599428409526	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599429417687	Marionette	INFO	Stopped listening on port 52108
+1599429429661	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0C31Z6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599429432671	Marionette	INFO	Listening on port 52523
+1599429432720	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599429436915	Marionette	INFO	Stopped listening on port 52523
+1599429458002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerJFuWb"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599429461014	Marionette	INFO	Listening on port 52603
+1599429461100	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599429465247	Marionette	INFO	Stopped listening on port 52603
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599429535227	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSz8Eg5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599429538567	Marionette	INFO	Listening on port 52680
+1599429538743	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: resource://devtools/client/fronts/walker.js, line 159: Error: The ValueGrip passed could not be translated to a NodeFront
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599430527736	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6GrZMx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599430530653	Marionette	INFO	Listening on port 52999
+1599430530740	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599430619113	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileePgr1m"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599430622547	Marionette	INFO	Listening on port 53100
+1599430622652	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599430758447	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileYm7CCr"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599430761275	Marionette	INFO	Listening on port 53240
+1599430761339	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599430767613	Marionette	INFO	Stopped listening on port 53240
+1599430852896	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoyXDMD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599430855759	Marionette	INFO	Listening on port 53321
+1599430855810	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+1599431864239	Marionette	INFO	Stopped listening on port 53321
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"ContentParent: id=12a822000","state":{"remoteTypePrefix":"web"},"filename":"/builds/worker/checkouts/gecko/dom/ipc/ContentParent.cpp","lineNumber":3236,"stack":["resource://gre/modules/nsAsyncShutdown.jsm:addBlocker:162"]}] Barrier: profile-before-change
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1599431898363	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekIq75J"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599431901397	Marionette	INFO	Listening on port 53775
+1599431901450	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599433682179	Marionette	INFO	Stopped listening on port 53775
+1599433782841	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiaQSUI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599433786055	Marionette	INFO	Listening on port 54282
+1599433786149	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599433793711	Marionette	INFO	Stopped listening on port 54282
+1599433860504	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5UTc4L"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599433863696	Marionette	INFO	Listening on port 54379
+1599433863793	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599433870909	Marionette	INFO	Stopped listening on port 54379
+1599434008938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefqiz5K"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434012226	Marionette	INFO	Listening on port 54497
+1599434012239	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599434019509	Marionette	INFO	Stopped listening on port 54497
+1599434053847	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenkHBhU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434056783	Marionette	INFO	Listening on port 54588
+1599434056839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599434064660	Marionette	INFO	Stopped listening on port 54588
+1599434285794	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileN6mB5y"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434288864	Marionette	INFO	Listening on port 54688
+1599434288929	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599434296496	Marionette	INFO	Stopped listening on port 54688
+1599434331358	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTdHSCU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434334516	Marionette	INFO	Listening on port 54781
+1599434334546	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599434342326	Marionette	INFO	Stopped listening on port 54781
+1599434357731	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezgcITS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434361672	Marionette	INFO	Listening on port 54874
+1599434361726	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599434475502	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJgMaQL"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599434478803	Marionette	INFO	Listening on port 55015
+1599434478808	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 248: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+1599435486470	Marionette	INFO	Stopped listening on port 55015
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1599435493377	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSCQRG6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599435496306	Marionette	INFO	Listening on port 55400
+1599435496369	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599435502866	Marionette	INFO	Stopped listening on port 55400
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599435509054	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0jjJ7F"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599435511999	Marionette	INFO	Listening on port 55486
+1599435512031	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2063: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2063: TypeError: catalog.artist is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599435518909	Marionette	INFO	Stopped listening on port 55486
+1599435531885	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXEs6EW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599435534606	Marionette	INFO	Listening on port 55572
+1599435534679	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599436541567	Marionette	INFO	Stopped listening on port 55572
+1599436577563	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevmFHxM"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599436580829	Marionette	INFO	Listening on port 56061
+1599436580841	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599448586420	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezaP1xx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599448589249	Marionette	INFO	Listening on port 56865
+1599448589325	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599452507953	Marionette	INFO	Stopped listening on port 56865
+1599452611095	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiler62GLQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599452613955	Marionette	INFO	Listening on port 57259
+1599452613977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2071: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2072: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2072: TypeError: catalog.artist is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+1599453620851	Marionette	INFO	Stopped listening on port 57259
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1599453625661	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeX0M8t"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599453628507	Marionette	INFO	Listening on port 57718
+1599453628533	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599453635427	Marionette	INFO	Stopped listening on port 57718
+1599453651488	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCYXD7e"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599453654208	Marionette	INFO	Listening on port 57808
+1599453654267	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599453661199	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599454661610	Marionette	INFO	Stopped listening on port 57808
+1599454667064	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilei5j4IR"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454670193	Marionette	INFO	Listening on port 58199
+1599454670232	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599454677640	Marionette	INFO	Stopped listening on port 58199
+1599454682844	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileuIN5fd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454685687	Marionette	INFO	Listening on port 58293
+1599454685741	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599454688789	Marionette	INFO	Stopped listening on port 58293
+1599454693805	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3o2Zxs"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454696652	Marionette	INFO	Listening on port 58366
+1599454696751	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599454707319	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5JX5T5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454710052	Marionette	INFO	Listening on port 58442
+1599454710146	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599454717358	Marionette	INFO	Stopped listening on port 58442
+1599454728671	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileC4GqIh"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454731362	Marionette	INFO	Listening on port 58527
+1599454731423	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599454738422	Marionette	INFO	Stopped listening on port 58527
+1599454753716	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileR4BrVH"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454756394	Marionette	INFO	Listening on port 58611
+1599454756487	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599454763763	Marionette	INFO	Stopped listening on port 58611
+1599454782191	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledrFQma"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454784828	Marionette	INFO	Listening on port 58693
+1599454784857	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2538: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2538: TypeError: catalogitem.artist is null
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2541: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2541: TypeError: catalogitem.artist is null
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599454907639	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7mBGWd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454910325	Marionette	INFO	Listening on port 58844
+1599454910392	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2541: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2541: TypeError: catalogitem.artist is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599454992353	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQ5skRk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599454995046	Marionette	INFO	Listening on port 58942
+1599454995125	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2517: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2517: TypeError: catalogitem.artist is null
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599455031055	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebDWRpm"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455034009	Marionette	INFO	Listening on port 59033
+1599455034036	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2517: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2517: TypeError: catalogitem.artist is null
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2513: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2513: TypeError: catalogitem.artist is null
+Exiting due to channel error.
+Exiting due to channel error.
+1599455254528	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewsgK6N"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455257248	Marionette	INFO	Listening on port 59213
+1599455257288	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599455264612	Marionette	INFO	Stopped listening on port 59213
+1599455298591	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTDPmy4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455301294	Marionette	INFO	Listening on port 59297
+1599455301351	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599455702648	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilephmvlR"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455705669	Marionette	INFO	Listening on port 59506
+1599455705730	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599455709196	Marionette	INFO	Stopped listening on port 59506
+1599455725734	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejh6QL5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455728462	Marionette	INFO	Listening on port 59585
+1599455728526	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599455735624	Marionette	INFO	Stopped listening on port 59585
+1599455760008	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepuPlO8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599455762684	Marionette	INFO	Listening on port 59672
+1599455762783	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599456769873	Marionette	INFO	Stopped listening on port 59672
+console.warn: "IGNORED REDUX ACTION:" ({type:"AUTOCOMPLETE_CLEAR"})
+1599456775079	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiles0yhuM"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599456778501	Marionette	INFO	Listening on port 60140
+1599456778569	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599456785505	Marionette	INFO	Stopped listening on port 60140
+1599456809385	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesv5eWl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599456812199	Marionette	INFO	Listening on port 60231
+1599456812265	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599456889803	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerfTlTU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599456892475	Marionette	INFO	Listening on port 60336
+1599456892562	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1599457367307	Marionette	INFO	Stopped listening on port 60336
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599495997586	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7fORn8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599496001454	Marionette	INFO	Listening on port 62339
+1599496001517	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599503100013	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMtCDTT"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503108051	Marionette	INFO	Listening on port 49606
+1599503108069	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599503114702	Marionette	INFO	Stopped listening on port 49606
+1599503151908	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUSdh8x"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503154644	Marionette	INFO	Listening on port 49759
+1599503154702	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599503188784	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1Y4RvK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503191641	Marionette	INFO	Listening on port 49848
+1599503191661	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599503199392	Marionette	INFO	Stopped listening on port 49848
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599503248603	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilez6BNZJ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503251451	Marionette	INFO	Listening on port 49926
+1599503251490	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599503258406	Marionette	INFO	Stopped listening on port 49926
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599503284225	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenRXfJS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503287186	Marionette	INFO	Listening on port 50019
+1599503287225	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599503342446	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileAWYUF5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503345272	Marionette	INFO	Listening on port 50154
+1599503345308	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599503377164	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVu8Zi2"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503379885	Marionette	INFO	Listening on port 50246
+1599503379984	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599503402394	Marionette	INFO	Stopped listening on port 50246
+1599503435171	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0xz8Ze"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599503438179	Marionette	INFO	Listening on port 50388
+1599503438246	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 107513: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 107513: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599507157952	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8tbRsl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599507161149	Marionette	INFO	Listening on port 53479
+1599507161157	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599509279398	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJ9MARR"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599509282667	Marionette	INFO	Listening on port 54920
+1599509282683	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599509291677	Marionette	INFO	Stopped listening on port 54920
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599509438200	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileO1LFtI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599509441061	Marionette	INFO	Listening on port 55033
+1599509441084	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599509482582	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile4I6e5h"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599509485560	Marionette	INFO	Listening on port 55137
+1599509485571	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599536820864	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0xBTQp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599536824523	Marionette	INFO	Listening on port 58834
+1599536824553	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599626415062	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepCZwqB"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599626420474	Marionette	INFO	Listening on port 55530
+1599626420543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2881: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/TrackForm.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (116:3)
+
+[0m [90m 114 | [39m				[33m/[39m[33m>[39m[0m
+[0m [90m 115 | [39m			[33m<[39m[33m/[39m[33mGrid[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 116 | [39m			[33m<[39m[33mGrid[39m item xs[33m=[39m{[35m1[39m}[33m>[39m[0m
+[0m [90m     | [39m			[31m[1m^[22m[39m[0m
+[0m [90m 117 | [39m				[33m<[39m[33mController[39m[0m
+[0m [90m 118 | [39m					as[33m=[39m{[33mTextField[39m}[0m
+[0m [90m 119 | [39m					control[33m=[39m{control}[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4616:18)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4626:17)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4633:19)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9656:23)
+    at Object.parseMaybeUnary (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9636:21)
+    at Object.parseExprOps (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9506:23)
+    at Object.parseMaybeConditional (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9479:23)
+JavaScript error: https://ec-ns.sascdn.com/diff/rtb/handler/st.min.html?%7b%22bid%22%3a%22395295700480617579%22%2c%22adomain%22%3a%22progressive.com%22%2c%22page%22%3a%221170905%22%2c%22format%22%3a%2276022%22%2c%22crid%22%3a%22206_148934%22%2c%22dsp%22%3a%2231%22%2c%22buyer%22%3a%2210226%22%2c%22cid%22%3a%2236957%22%2c%22adid%22%3a%22206_148934%22%2c%22hash%22%3a%224629745249627890990%22%7d, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627369479&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627369548&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627369778&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627370997&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627413184&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627413235&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627414564&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627414837&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627415442&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627416962&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627457571&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627458945&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627458946&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627459447&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627459692&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627460078&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627502943&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627503532&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/sync, line 78: TypeError: this.ctInstance is undefined
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627503999&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627504877&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627504006&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627505017&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627547216&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627548500&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627548632&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627549986&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627549522&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627549549&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627593909&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627595796&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627596366&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627597251&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627597382&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627599425&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627636462&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627638268&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627638631&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627639826&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627647982&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627650218&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627650487&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627651940&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627651948&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&627652474&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript warning: https://fusion.ddmcdn.com/app/eos-usnets/3653/vendors/verizon/02.00.18061400/uplynk-adaptive.js, line 0: Successfully compiled asm.js code (total compilation time 532ms)
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6C0029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1599717754979	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledwatej"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599717759029	Marionette	INFO	Listening on port 53137
+1599717759066	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3054: ReferenceError: Typography is not defined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3054: ReferenceError: Typography is not defined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3056: RangeError: invalid array length
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3056: RangeError: invalid array length
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://s0.2mdn.net/ads/richmedia/studio/pv2/61518709/20200730115953660/AwarenessDADAPT_300x600_0408_04_V1_HTML5.html?e=69&leftOffset=0&topOffset=0&c=rOSv2TZLaI&t=4&renderingType=2, line 21: TypeError: this.gotoAndPlay is not a function
+JavaScript error: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/16238671205622817695/Hefty_football_300x600_V3/Hefty_football_300x600_V3.html#t=8880954353823812009&p=https%3A%2F%2F2431043ce3f2e798247e24ab58b656f9.safeframe.googlesyndication.com, line 1: ReferenceError: init is not defined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1599759420501	Marionette	INFO	Stopped listening on port 53137
+1599857230217	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile87V6jy"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599857234481	Marionette	INFO	Listening on port 64438
+1599857234508	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600016472550	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilehY8185"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600016476617	Marionette	INFO	Listening on port 59155
+1600016476693	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/d7c6188171bcf89b2c38742a7bbe072d.js?tag=video_mra/hulk_v3, line 269: SecurityError: The operation is insecure.
+JavaScript error: https://www.gstatic.com/mysidia/d7c6188171bcf89b2c38742a7bbe072d.js?tag=video_mra/hulk_v3, line 269: SecurityError: The operation is insecure.
+JavaScript warning: https://cdn.ndtv.com/static/js/common_script.js?ver-20200907.01, line 27: unreachable code after return statement
+JavaScript warning: https://cdn.ndtv.com/static/js/main.js?ver-20200907.01, line 310: unreachable code after return statement
+JavaScript error: https://edata.ndtv.com/js/breaking_pushalert_revised.js, line 37: TypeError: brkApp.firestore is not a function
+JavaScript warning: https://static.social.ndtv.com/javascript/jquery.min.js, line 3: unreachable code after return statement
+JavaScript warning: https://static.social.ndtv.com/javascript/Widget/comment/comments-2-0-17.js?v17=5.29, line 1: unreachable code after return statement
+JavaScript error: https://cdn.gadgets360.com/pricee/assets/affiliate/js/common.min.js?ver=2020913, line 2: TypeError: o is null
+JavaScript error: https://cdn.gadgets360.com/pricee/assets/affiliate/js/common.min.js?ver=2020913, line 2: TypeError: o is null
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: b is undefined
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+objc[13479]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8e2f53d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12f598f50). One of the two will be used. Which one is undefined.
+1600026486330	Marionette	INFO	Stopped listening on port 59155
+1600026493436	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRGaUgk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600026496321	Marionette	INFO	Listening on port 61730
+1600026496419	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600026502481	Marionette	INFO	Stopped listening on port 61730
+1600026537961	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekZ2mDV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600026540815	Marionette	INFO	Listening on port 61828
+1600026540873	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 110707: TypeError: path is undefined
+objc[14389]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8e2f53d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x16065cf50). One of the two will be used. Which one is undefined.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6385: TypeError: file is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 110707: TypeError: path is undefined
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6383: TypeError: data.upload is undefined
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 112679: TypeError: methods is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600030979680	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIMlNDw"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600030982664	Marionette	INFO	Listening on port 63135
+1600030982672	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[14880]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8e2f53d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12da76f50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600031179852	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileizPRaa"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600031182563	Marionette	INFO	Listening on port 63296
+1600031182629	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[14924]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8e2f53d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x120ce4f50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600056561337	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecXw4Ej"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600056564291	Marionette	INFO	Listening on port 64597
+1600056564312	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600056564785	Marionette	INFO	Stopped listening on port 64597
+1600056598107	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletWv4qu"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600056602862	Marionette	INFO	Listening on port 64679
+1600056602902	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript warning: , line 0: Script terminated by timeout at:
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+1600095161630	Marionette	INFO	Stopped listening on port 64679
+1600100988098	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileg6L1BU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600100991501	Marionette	INFO	Listening on port 51308
+1600100991591	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/UrlbarInput.jsm, line 2187: TypeError: event.target.closest is not a function
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=168a5a800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=157f07400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=157f07400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=157f07400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=15583ac00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 17764, MediaDecoderStateMachine #1] WARNING: Decoder=15583ac00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600186615413	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileaSI3pA"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600186618975	Marionette	INFO	Listening on port 57981
+1600186619041	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53353: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+`color.main` should be a string, but `{"50":"#f3e5f5","100":"#e1bee7","200":"#ce93d8","300":"#ba68c8","400":"#ab47bc","500":"#9c27b0","600":"#8e24aa","700":"#7b1fa2","800":"#6a1b9a","900":"#4a148c","A100":"#ea80fc","A200":"#e040fb","A400":"#d500f9","A700":"#aa00ff"}` was provided instead.
+
+Did you intend to use one of the following approaches?
+
+import { green } from "@material-ui/core/colors";
+
+const theme1 = createMuiTheme({ palette: {
+  primary: green,
+} });
+
+const theme2 = createMuiTheme({ palette: {
+  primary: { main: green[500] },
+} });
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53353: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+`color.main` should be a string, but `{"50":"#f3e5f5","100":"#e1bee7","200":"#ce93d8","300":"#ba68c8","400":"#ab47bc","500":"#9c27b0","600":"#8e24aa","700":"#7b1fa2","800":"#6a1b9a","900":"#4a148c","A100":"#ea80fc","A200":"#e040fb","A400":"#d500f9","A700":"#aa00ff"}` was provided instead.
+
+Did you intend to use one of the following approaches?
+
+import { green } from "@material-ui/core/colors";
+
+const theme1 = createMuiTheme({ palette: {
+  primary: green,
+} });
+
+const theme2 = createMuiTheme({ palette: {
+  primary: { main: green[500] },
+} });
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 53353: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+`color.main` should be a string, but `{"50":"#e8f5e9","100":"#c8e6c9","200":"#a5d6a7","300":"#81c784","400":"#66bb6a","500":"#4caf50","600":"#43a047","700":"#388e3c","800":"#2e7d32","900":"#1b5e20","A100":"#b9f6ca","A200":"#69f0ae","A400":"#00e676","A700":"#00c853"}` was provided instead.
+
+Did you intend to use one of the following approaches?
+
+import { green } from "@material-ui/core/colors";
+
+const theme1 = createMuiTheme({ palette: {
+  primary: green,
+} });
+
+const theme2 = createMuiTheme({ palette: {
+  primary: { main: green[500] },
+} });
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 53353: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+`color.main` should be a string, but `{"50":"#e8f5e9","100":"#c8e6c9","200":"#a5d6a7","300":"#81c784","400":"#66bb6a","500":"#4caf50","600":"#43a047","700":"#388e3c","800":"#2e7d32","900":"#1b5e20","A100":"#b9f6ca","A200":"#69f0ae","A400":"#00e676","A700":"#00c853"}` was provided instead.
+
+Did you intend to use one of the following approaches?
+
+import { green } from "@material-ui/core/colors";
+
+const theme1 = createMuiTheme({ palette: {
+  primary: green,
+} });
+
+const theme2 = createMuiTheme({ palette: {
+  primary: { main: green[500] },
+} });
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 52690: Error: Material-UI: Unsupported `green` color.
+We support the following formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla().
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 52690: Error: Material-UI: Unsupported `green` color.
+We support the following formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla().
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 127: ReferenceError: can't access lexical declaration 'useStyles' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 127: ReferenceError: can't access lexical declaration 'useStyles' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 127: ReferenceError: can't access lexical declaration 'useStyles' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 127: ReferenceError: can't access lexical declaration 'useStyles' before initialization
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+1600217202387	Marionette	INFO	Stopped listening on port 57981
+1600530750367	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile30t1u0"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600530754185	Marionette	INFO	Listening on port 56514
+1600530754222	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+1600619167524	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEL9dTQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600619171693	Marionette	INFO	Listening on port 64878
+1600619171756	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 53314: Error: Material-UI: The color provided to augmentColor(color) is invalid.
+The color object needs to have a `main` property or a `500` property.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript warning: https://ad.doubleclick.net/ddm/adj/N572608.468584AMNETGROUP/B24341733.275909002;dc_ver=63.176;dc_eid=40004000;sz=300x250;u_sd=1;dc_adk=1703036017;ord=vk0op2;click=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%3Fxai%3DAKAOjsuNve8JYrNX4Z7GARNITIcjhSAHEPYvrLZMYOGZjZ3bahXsUeNm1BYzI8Ih_E9JQz72wQwz6ej1xhSlB9L2K0TRWBs93lerCLHA3w1yrdSVZJDKjhlp3EaaINS1sLYXVeUFI_5LlayhsSrZEJerQVxofRLYnJzOi3WTJBklpu62R3dZ4r2o9YRtfbl6V-A-qoQFI4faEg02CDJk9w1ipJDZyznlAbGUA2W7hzVHF4ibSs4SKs-5AItuYyZ4PZgPCtcxEBDX7n2R9XiYgpXVb_TNG4-TW57Wqf1RbILBhNu6w5OMaw8k%26sai%3DAMfl-YR6JpEuh6CHkvh1CAAkfd_ip_WsWQO1fM6sxIc0hgpVn-bQecqcWIyqW66ky7Jn67uyzlni5Oy9WgHR7qEPU6LsNk8N9Ec-pf8dyU9T20S7rl-EXbF-cYfslEhFgKwc%26sig%3DCg0ArKJSzOzQwvN3qFCxEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DCOhKQJY9nX_6XIs62iAP5mpLYBqCA3Ktc-q22heoGwI23ARABIABgyY71i8yk2BmCARdjYS1wdWItNjYwNTEyMzEyMzUxODUyMMgBCeACAKgDAaoE2wJP0BYrdZUiK_6NlsyayMAj3nuj0rk3WzgkK-vVTDqUXndkzwKa6lQf0K5U6VsPywlm9ezItlWjpsYxdAfCkdct1MUFRyu9yMay-pxpsUr8wnA4zO4VPPRNzzYRLD4DZT_vNxvSd0O9pjPjpS49Ejk7HTEuSGRNsrJamxv6Rw9W6U_eO3vSVP6TdJXZtgFX_0aXSbr8oyXzMGucEje_tOa7vqrF4O2LOWRcQTq7cBlh5llq2vrIup4-q-O1y6oMPlSrQeoV6r100gLyMXt-4dwQTODJk_l_1dqD9r-bcy7y2anS1_qpc-bK_pDdBk5nvBVKBtZw3alMVOexsDQTUEkE5CGmtZyx5LaiG7B25bij_vNC6cr5-_O06TV7wpGyHB3WOlciaR7xMiDduRcVXTMlNrqgs8_kzsb1vdtYhEJ6ZvyFDY2x4A8s0s5CcFkUP0vddY7fI2U1T9576-AEAYAGobOvjLnxxsXqAaAGIagHpr4bqAfw2RuoB_LZG6gH7NUbqAeW2BuoB-TgG6gHwtob2AcA8gcCIAHSCAcIgOGAQBAB-gsCCAGADAE%26num%3D1%26sig%3DAOD64_1ncXfzL9mCeDIsOr-EVx72LwWaFQ%26client%3Dca-pub-6605123123518520%26adurl%3Dhttps%3A%2F%2Fpr.ybp.yahoo.com%2Fcj%2Fcd%2FYMFbEWCyJ_MTMbXbu6lt1XRP7spZPpzMrrBPiJsSIcGGAWNjrIzuSsHfhtqzOcswgQOVsa33Bby6i2-84QGSS23VzyDx4IskXhtl9FORf6Q4LBeQF7B8U-Fc0metEO9v4BusdvapTxxb2I7qgSMD370kbKm61__pNN4SRbl5S2O8UAlK9VMz84qPyN4h34WJ2h2ev6iGaHR4RJYY50rdj4LbC6qRHsfX1tqB6YmYP_E%2Frurl%2F;dcopt=rcl;dc_rfl=1,https%3A%2F%2Fstackoverflow.com%2F$0;xdt=1;crlt=3pkVhv31iz;osda=2;sttr=19;prcl=s, line 1: Script terminated by timeout at:
+q@https://ad.doubleclick.net/ddm/adj/N572608.468584AMNETGROUP/B24341733.275909002;dc_ver=63.176;dc_eid=40004000;sz=300x250;u_sd=1;dc_adk=1703036017;ord=vk0op2;click=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%3Fxai%3DAKAOjsuNve8JYrNX4Z7GARNITIcjhSAHEPYvrLZMYOGZjZ3bahXsUeNm1BYzI8Ih_E9JQz72wQwz6ej1xhSlB9L2K0TRWBs93lerCLHA3w1yrdSVZJDKjhlp3EaaINS1sLYXVeUFI_5LlayhsSrZEJerQVxofRLYnJzOi3WTJBklpu62R3dZ4r2o9YRtfbl6V-A-qoQFI4faEg02CDJk9w1ipJDZyznlAbGUA2W7hzVHF4ibSs4SKs-5AItuYyZ4PZgPCtcxEBDX7n2R9XiYgpXVb_TNG4-TW57Wqf1RbILBhNu6w5OMaw8k%26sai%3DAMfl-YR6JpEuh6CHkvh1CAAkfd_ip_WsWQO1fM6sxIc0hgpVn-bQecqcWIyqW66ky7Jn67uyzlni5Oy9WgHR7qEPU6LsNk8N9Ec-pf8dyU9T20S7rl-EXbF-cYfslEhFgKwc%26sig%3DCg0ArKJSzOzQwvN3qFCxEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DCOhKQJY9nX_6XIs62iAP5mpLYBqCA3Ktc-q22heoGwI23ARABIABgyY71i8yk2BmCARdjYS1wdWItNjYwNTEyMzEyMzUxODUyMMgBCeACAKgDAaoE2wJP0BYrdZUiK_6NlsyayMAj3nuj0rk3WzgkK-vVTDqUXndkzwKa6lQf0K5U6VsPywlm9ezItlWjpsYxdAfCkdct1MUFRyu9yMay-pxpsUr8wnA4zO4VPPRNzzYRLD4DZT_vNxvSd0O9pjPjpS49Ejk7HTEuSGRNsrJamxv6Rw9W6U_eO3vSVP6TdJXZtgFX_0aXSbr8oyXzMGucEje_tOa7vqrF4O2LOWRcQTq7cBlh5llq2vrIup4-q-O1y6oMPlSrQeoV6r100gLyMXt-4dwQTODJk_l_1dqD9r-bcy7y2anS1_qpc-bK_pDdBk5nvBVKBtZw3alMVOexsDQTUEkE5CGmtZyx5LaiG7B25bij_vNC6cr5-_O06TV7wpGyHB3WOlciaR7xMiDduRcVXTMlNrqgs8_kzsb1vdtYhEJ6ZvyFDY2x4A8s0s5CcFkUP0vddY7fI2U1T9576-AEAYAGobOvjLnxxsXqAaAGIagHpr4bqAfw2RuoB_LZG6gH7NUbqAeW2BuoB-TgG6gHwtob2AcA8gcCIAHSCAcIgOGAQBAB-gsCCAGADAE%26num%3D1%26sig%3DAOD64_1ncXfzL9mCeDIsOr-EVx72LwWaFQ%26client%3Dca-pub-6605123123518520%26adurl%3Dhttps%3A%2F%2Fpr.ybp.yahoo.com%2Fcj%2Fcd%2FYMFbEWCyJ_MTMbXbu6lt1XRP7spZPpzMrrBPiJsSIcGGAWNjrIzuSsHfhtqzOcswgQOVsa33Bby6i2-84QGSS23VzyDx4IskXhtl9FORf6Q4LBeQF7B8U-Fc0metEO9v4BusdvapTxxb2I7qgSMD370kbKm61__pNN4SRbl5S2O8UAlK9VMz84qPyN4h34WJ2h2ev6iGaHR4RJYY50rdj4LbC6qRHsfX1tqB6YmYP_E%2Frurl%2F;dcopt=rcl;dc_rfl=1,https%3A%2F%2Fstackoverflow.com%2F$0;xdt=1;crlt=3pkVhv31iz;osda=2;sttr=19;prcl=s:1:1
+window.clsn/<@https://ad.doubleclick.net/ddm/adj/N572608.468584AMNETGROUP/B24341733.275909002;dc_ver=63.176;dc_eid=40004000;sz=300x250;u_sd=1;dc_adk=1703036017;ord=vk0op2;click=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%3Fxai%3DAKAOjsuNve8JYrNX4Z7GARNITIcjhSAHEPYvrLZMYOGZjZ3bahXsUeNm1BYzI8Ih_E9JQz72wQwz6ej1xhSlB9L2K0TRWBs93lerCLHA3w1yrdSVZJDKjhlp3EaaINS1sLYXVeUFI_5LlayhsSrZEJerQVxofRLYnJzOi3WTJBklpu62R3dZ4r2o9YRtfbl6V-A-qoQFI4faEg02CDJk9w1ipJDZyznlAbGUA2W7hzVHF4ibSs4SKs-5AItuYyZ4PZgPCtcxEBDX7n2R9XiYgpXVb_TNG4-TW57Wqf1RbILBhNu6w5OMaw8k%26sai%3DAMfl-YR6JpEuh6CHkvh1CAAkfd_ip_WsWQO1fM6sxIc0hgpVn-bQecqcWIyqW66ky7Jn67uyzlni5Oy9WgHR7qEPU6LsNk8N9Ec-pf8dyU9T20S7rl-EXbF-cYfslEhFgKwc%26sig%3DCg0ArKJSzOzQwvN3qFCxEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DCOhKQJY9nX_6XIs62iAP5mpLYBqCA3Ktc-q22heoGwI23ARABIABgyY71i8yk2BmCARdjYS1wdWItNjYwNTEyMzEyMzUxODUyMMgBCeACAKgDAaoE2wJP0BYrdZUiK_6NlsyayMAj3nuj0rk3WzgkK-vVTDqUXndkzwKa6lQf0K5U6VsPywlm9ezItlWjpsYxdAfCkdct1MUFRyu9yMay-pxpsUr8wnA4zO4VPPRNzzYRLD4DZT_vNxvSd0O9pjPjpS49Ejk7HTEuSGRNsrJamxv6Rw9W6U_eO3vSVP6TdJXZtgFX_0aXSbr8oyXzMGucEje_tOa7vqrF4O2LOWRcQTq7cBlh5llq2vrIup4-q-O1y6oMPlSrQeoV6r100gLyMXt-4dwQTODJk_l_1dqD9r-bcy7y2anS1_qpc-bK_pDdBk5nvBVKBtZw3alMVOexsDQTUEkE5CGmtZyx5LaiG7B25bij_vNC6cr5-_O06TV7wpGyHB3WOlciaR7xMiDduRcVXTMlNrqgs8_kzsb1vdtYhEJ6ZvyFDY2x4A8s0s5CcFkUP0vddY7fI2U1T9576-AEAYAGobOvjLnxxsXqAaAGIagHpr4bqAfw2RuoB_LZG6gH7NUbqAeW2BuoB-TgG6gHwtob2AcA8gcCIAHSCAcIgOGAQBAB-gsCCAGADAE%26num%3D1%26sig%3DAOD64_1ncXfzL9mCeDIsOr-EVx72LwWaFQ%26client%3Dca-pub-6605123123518520%26adurl%3Dhttps%3A%2F%2Fpr.ybp.yahoo.com%2Fcj%2Fcd%2FYMFbEWCyJ_MTMbXbu6lt1XRP7spZPpzMrrBPiJsSIcGGAWNjrIzuSsHfhtqzOcswgQOVsa33Bby6i2-84QGSS23VzyDx4IskXhtl9FORf6Q4LBeQF7B8U-Fc0metEO9v4BusdvapTxxb2I7qgSMD370kbKm61__pNN4SRbl5S2O8UAlK9VMz84qPyN4h34WJ2h2ev6iGaHR4RJYY50rdj4LbC6qRHsfX1tqB6YmYP_E%2Frurl%2F;dcopt=rcl;dc_rfl=1,https%3A%2F%2Fstackoverflow.com%2F$0;xdt=1;crlt=3pkVhv31iz;osda=2;sttr=19;prcl=s:1:1641
+
+JavaScript warning: https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js, line 1: Script terminated by timeout at:
+Va@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:680988
+Ha@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:680948
+za@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:677901
+Na@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:676472
+_o/<@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:638726
+./node_modules/scheduler/cjs/scheduler.production.min.js/t.unstable_runWithPriority@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:811716
+ho@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:638454
+_o@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:638673
+bo@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:638606
+Ma@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:675463
+enqueueSetState@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:643419
+./node_modules/react/cjs/react.production.min.js/j.prototype.setState@https://www.redditstatic.com/desktop2x/vendors~Chat~Governance~Reddit.ff95511db55e74a5bdca.js:1:755137
+Xe/this.sendTransformedMetadata@https://www.redditstatic.com/desktop2x/CollectionCommentsPage~CommentsPage~FramedGild~GildModal~GovernanceReleaseNotesModal~InFeedChaining~~a66c4d66.663e11e146cf1b44bc5e.js:1:40936
+componentDidMount/e.onloadedmetadata@https://www.redditstatic.com/desktop2x/CollectionCommentsPage~CommentsPage~FramedGild~GildModal~GovernanceReleaseNotesModal~InFeedChaining~~a66c4d66.663e11e146cf1b44bc5e.js:1:44065
+
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript warning: https://codesandbox.io/static/js/sandbox.6079041c3.js, line 1: Script terminated by timeout at:
+e@https://codesandbox.io/static/js/sandbox.6079041c3.js:1:108912
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript warning: https://code.createjs.com/1.0.0/createjs.min.js, line 14: Script terminated by timeout at:
+c._resolveState@https://code.createjs.com/1.0.0/createjs.min.js:14:29549
+b.setPosition@https://code.createjs.com/1.0.0/createjs.min.js:19:1503
+c._updateTimeline@https://code.createjs.com/1.0.0/createjs.min.js:14:29260
+c.advance@https://code.createjs.com/1.0.0/createjs.min.js:14:28504
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28796
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28821
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28821
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+b.tick@https://code.createjs.com/1.0.0/createjs.min.js:13:14742
+b.update@https://code.createjs.com/1.0.0/createjs.min.js:13:14088
+b.handleEvent@https://code.createjs.com/1.0.0/createjs.min.js:13:14830
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4075
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4158
+b.dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:3479
+a._tick@https://code.createjs.com/1.0.0/createjs.min.js:12:7459
+a._handleTimeout@https://code.createjs.com/1.0.0/createjs.min.js:12:6772
+
+JavaScript warning: https://code.createjs.com/1.0.0/createjs.min.js, line 12: Script terminated by timeout at:
+b.draw@https://code.createjs.com/1.0.0/createjs.min.js:12:22980
+b.draw@https://code.createjs.com/1.0.0/createjs.min.js:14:20101
+b.draw@https://code.createjs.com/1.0.0/createjs.min.js:13:8379
+c.draw@https://code.createjs.com/1.0.0/createjs.min.js:14:28037
+b._drawToCache@https://code.createjs.com/1.0.0/createjs.min.js:15:11822
+b.update@https://code.createjs.com/1.0.0/createjs.min.js:15:8711
+b.define@https://code.createjs.com/1.0.0/createjs.min.js:15:8221
+b.cache@https://code.createjs.com/1.0.0/createjs.min.js:13:3419
+lib.arrow_design/this.frame_0@https://dco-assets.everestads.net/ics-campaign//5031/t/7168/12/300x250.js?1528375974214:2880:14
+d._runActionsRange@https://code.createjs.com/1.0.0/createjs.min.js:19:7215
+b._runActions@https://code.createjs.com/1.0.0/createjs.min.js:19:3229
+b._runActionsRange@https://code.createjs.com/1.0.0/createjs.min.js:19:10055
+b._runActions@https://code.createjs.com/1.0.0/createjs.min.js:19:3229
+b.setPosition@https://code.createjs.com/1.0.0/createjs.min.js:19:1519
+c._updateTimeline@https://code.createjs.com/1.0.0/createjs.min.js:14:29260
+c.advance@https://code.createjs.com/1.0.0/createjs.min.js:14:28504
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28796
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28821
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+c._tick@https://code.createjs.com/1.0.0/createjs.min.js:14:28821
+b._tick@https://code.createjs.com/1.0.0/createjs.min.js:13:11081
+b.tick@https://code.createjs.com/1.0.0/createjs.min.js:13:14742
+b.update@https://code.createjs.com/1.0.0/createjs.min.js:13:14088
+b.handleEvent@https://code.createjs.com/1.0.0/createjs.min.js:13:14830
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4075
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4158
+b.dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:3479
+a._tick@https://code.createjs.com/1.0.0/createjs.min.js:12:7459
+a._handleTimeout@https://code.createjs.com/1.0.0/createjs.min.js:12:6772
+
+JavaScript error: resource:///modules/UrlbarInput.jsm, line 2187: TypeError: event.target.closest is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 98064: Error: EditButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 98064: Error: EditButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript warning: http://localhost:3000/main.b3be74aeca921690e469.hot-update.js, line 109: unreachable code after return statement
+JavaScript warning: https://code.createjs.com/1.0.0/createjs.min.js, line 13: Script terminated by timeout at:
+b.draw@https://code.createjs.com/1.0.0/createjs.min.js:13:8313
+c.draw@https://code.createjs.com/1.0.0/createjs.min.js:14:28037
+b.draw@https://code.createjs.com/1.0.0/createjs.min.js:13:8379
+b.update@https://code.createjs.com/1.0.0/createjs.min.js:13:14512
+tick@https://dco-assets.everestads.net/ics-campaign//5031/t/7168/12/300x250.js?1528375974214:3430:32
+b.on/<@https://code.createjs.com/1.0.0/createjs.min.js:12:2604
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4090
+b._dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:4158
+b.dispatchEvent@https://code.createjs.com/1.0.0/createjs.min.js:12:3479
+a._tick@https://code.createjs.com/1.0.0/createjs.min.js:12:7459
+a._handleTimeout@https://code.createjs.com/1.0.0/createjs.min.js:12:6772
+
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 112679: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 107513: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 107513: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+1600629258341	Marionette	INFO	Stopped listening on port 64878
+1600629276864	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2QoDFz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600629279877	Marionette	INFO	Listening on port 51565
+1600629279943	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600629285514	Marionette	INFO	Stopped listening on port 51565
+1600629335965	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJpdGZd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600629338875	Marionette	INFO	Listening on port 51643
+1600629338954	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600629344568	Marionette	INFO	Stopped listening on port 51643
+1600629365142	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8Xnda8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600629368069	Marionette	INFO	Listening on port 51719
+1600629368120	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600632709320	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile27UJ9W"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600632713035	Marionette	INFO	Listening on port 52040
+1600632713103	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600632906365	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0milqZ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600632909153	Marionette	INFO	Listening on port 52225
+1600632909245	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600632931981	Marionette	INFO	Stopped listening on port 52225
+1600632959325	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9IRKT7"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600632962020	Marionette	INFO	Listening on port 52370
+1600632962104	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600633373764	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecI27hr"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600633376699	Marionette	INFO	Listening on port 52522
+1600633376741	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600633378397	Marionette	INFO	Stopped listening on port 52522
+1600633403364	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileBOJvTu"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600633406064	Marionette	INFO	Listening on port 52595
+1600633406138	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600633407745	Marionette	INFO	Stopped listening on port 52595
+1600633462641	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9M13J1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600633465454	Marionette	INFO	Listening on port 52667
+1600633465508	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600633467105	Marionette	INFO	Stopped listening on port 52667
+1600633502003	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRQ0TMc"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600633504837	Marionette	INFO	Listening on port 52744
+1600633504889	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600634145715	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileb9nDJl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600634148931	Marionette	INFO	Listening on port 52999
+1600634149017	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 98064: Error: ConditionalButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 98064: Error: ConditionalButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 98064: Error: ConditionalButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 98064: Error: ConditionalButton(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97146: Error: Objects are not valid as a React child (found: object with keys {props}). If you meant to render a collection of children, use an array instead.
+    in h1 (at ConditionalButton.js:14)
+    in ConditionalButton (at CatalogInfo.js:143)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogInfo.js:142)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogInfo.js:97)
+    in form (at CatalogInfo.js:96)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogInfo.js:94)
+    in CatalogInfo (at CatalogItem.js:36)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at CatalogItem.js:35)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogItem.js:34)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogItem.js:29)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:27)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:299)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97146: Error: Objects are not valid as a React child (found: object with keys {props}). If you meant to render a collection of children, use an array instead.
+    in h1 (at ConditionalButton.js:14)
+    in ConditionalButton (at CatalogInfo.js:143)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogInfo.js:142)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogInfo.js:97)
+    in form (at CatalogInfo.js:96)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogInfo.js:94)
+    in CatalogInfo (at CatalogItem.js:36)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at CatalogItem.js:35)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogItem.js:34)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogItem.js:29)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogItem.js:27)
+    in CatalogItem (created by Context.Consumer)
+    in Route (at Main.js:299)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2641: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2651: TypeError: catalogitem.artist is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1600637118487	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoGnZ5Z"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600637121192	Marionette	INFO	Listening on port 53991
+1600637121292	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3741: TypeError: setEdit(...) is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1600640680000	Marionette	INFO	Stopped listening on port 53991
