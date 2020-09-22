@@ -12,7 +12,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense
+from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales
 
 def test_can_process_pending_expense(test_client, db):
     build_catalog(db, test_client)
@@ -25,8 +25,10 @@ def test_can_process_pending_expense(test_client, db):
 
 def test_can_view_imported_statements(test_client, db):
     build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
     add_artist_expense(test_client)
     response = test_client.post('/expense/process-pending')
+    response = test_client.post('/income/process-pending')
     response = test_client.get('/expense/imported-statements')
     assert response.status_code == 200
     assert json.loads(response.data) == [{

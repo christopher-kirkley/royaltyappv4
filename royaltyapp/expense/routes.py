@@ -106,7 +106,10 @@ def process_pending():
 
 @expense.route('/expense/imported-statements', methods=['GET'])
 def get_imported_statements():
-    query = db.session.query(ImportedStatement).all()
+    query = (db.session.query(ImportedStatement)
+            .filter(ImportedStatement.transaction_type == 'expense')
+            .all()
+            )
     imported_statement_schema = ImportedStatementSchema(many=True)
     statements = imported_statement_schema.dumps(query)
     return statements
