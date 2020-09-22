@@ -258,7 +258,5 @@ def test_returns(browser, test_client, db):
     isrc = browser.find_element_by_name('tracks[0].isrc')
     assert isrc.get_attribute("value") == '1800beansforsale'
 
-    time.sleep(10000)
-
     
 
