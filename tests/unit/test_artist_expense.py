@@ -27,7 +27,7 @@ def test_can_import_artist_expense(test_client, db):
     result = db.session.query(ExpensePending).all()
     assert len(result) == 4
     first = db.session.query(ExpensePending).first()
-    assert first.date == datetime.date(2019, 10, 21)
+    assert first.date == datetime.date(2020, 1, 1)
     assert first.description == 'Money Transfer'
     assert str(first.net) == '100.00'
     assert first.item_type == 'Credit'
@@ -48,7 +48,7 @@ def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/expense/matching-errors')
     assert response.status_code == 200
     assert json.loads(response.data) == [{
-        'total_matching_errors': 2,
+        'total_matching_errors': [],
         'artist_matching_errors': [],
         'catalog_matching_errors': [],
         'type_matching_errors': []
@@ -65,6 +65,9 @@ def test_can_get_matching_errors(test_client, db):
     assert response.status_code == 200
     res = json.loads(response.data)[0]['artist_matching_errors']
     assert len(res) == 2
+    res = json.loads(response.data)[0]['total_matching_errors']
+    assert len(res) == 2
+
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
