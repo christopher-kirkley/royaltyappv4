@@ -111,7 +111,10 @@ def process_pending_income():
 
 @income.route('/income/imported-statements', methods=['GET'])
 def get_imported_statements():
-    query = db.session.query(ImportedStatement).all()
+    query = (db.session.query(ImportedStatement)
+                .filter(ImportedStatement.transaction_type == 'income')
+                .all()
+                )
     imported_statement_schema = ImportedStatementSchema(many=True)
     statements = imported_statement_schema.dumps(query)
     return statements
