@@ -11067,3 +11067,199 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1600721370468	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledtxu4J"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600721374365	Marionette	INFO	Listening on port 61383
+1600721374427	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[5551]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12662df50). One of the two will be used. Which one is undefined.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1600724983887	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMIus5A"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600724986784	Marionette	INFO	Listening on port 62692
+1600724986793	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[5847]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12b9caf50). One of the two will be used. Which one is undefined.
+JavaScript error: resource:///modules/UrlbarInput.jsm, line 2187: TypeError: event.target.closest is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5B0005,name=PHttpChannel::Msg_Cancel) Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600726818829	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilea6KZuy"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600726821734	Marionette	INFO	Listening on port 63291
+1600726821765	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[5996]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x132bf1f50). One of the two will be used. Which one is undefined.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97726: Error: Objects are not valid as a React child (found: object with keys {pendingList}). If you meant to render a collection of children, use an array instead.
+    in ul (created by ForwardRef(List))
+    in ForwardRef(List) (created by WithStyles(ForwardRef(List)))
+    in WithStyles(ForwardRef(List)) (at UploadedStatements.js:64)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:63)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:62)
+    in UploadedStatements (at Income.js:85)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:84)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:83)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:75)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:73)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:300)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 97726: Error: Objects are not valid as a React child (found: object with keys {pendingList}). If you meant to render a collection of children, use an array instead.
+    in ul (created by ForwardRef(List))
+    in ForwardRef(List) (created by WithStyles(ForwardRef(List)))
+    in WithStyles(ForwardRef(List)) (at UploadedStatements.js:64)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:63)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:62)
+    in UploadedStatements (at Income.js:85)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:84)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:83)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:75)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:73)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:300)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 97726: Error: Objects are not valid as a React child (found: object with keys {pendingList}). If you meant to render a collection of children, use an array instead.
+    in ul (created by ForwardRef(List))
+    in ForwardRef(List) (created by WithStyles(ForwardRef(List)))
+    in WithStyles(ForwardRef(List)) (at UploadedStatements.js:64)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:63)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:62)
+    in UploadedStatements (at Income.js:85)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:84)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:83)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:75)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:73)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:300)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 97726: Error: Objects are not valid as a React child (found: object with keys {pendingList}). If you meant to render a collection of children, use an array instead.
+    in ul (created by ForwardRef(List))
+    in ForwardRef(List) (created by WithStyles(ForwardRef(List)))
+    in WithStyles(ForwardRef(List)) (at UploadedStatements.js:64)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:63)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at UploadedStatements.js:62)
+    in UploadedStatements (at Income.js:85)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:84)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:83)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:75)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:73)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:300)
+    in Switch (at Main.js:292)
+    in div (at Main.js:118)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:117)
+    in ThemeProvider (at Main.js:116)
+    in Main (at src/index.js:10)
+JavaScript warning: https://www.robinwieruch.de/component---src-templates-post-js-bad9a75101a8acb90c01.js, line 446: unreachable code after return statement
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=, line 1: SyntaxError: illegal character
+JavaScript error: https://s.update.3lift.com/2/4.76.1/main.js, line 1: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.6.0/otBannerSdk.js, line 7: TypeError: Re.preferenceCenterGroup is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600744670238	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegbJ5C2"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600744673258	Marionette	INFO	Listening on port 64615
+1600744673323	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[6373]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x136afaf50). One of the two will be used. Which one is undefined.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600749227754	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePuHL3O"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600749231235	Marionette	INFO	Listening on port 50149
+1600749231249	Marionette	WARN	TLS certificate errors will be ignored for this session
+2020-09-21 21:34:27.748 firefox-bin[6995:467174] [QL] After retry, preview for <QLPreview 0x12b9ebbe0 311831 file:///Users/ck/Desktop/inbox/income_statements_2020A/expense_catalog_2020A.csv> can't be progressive on retry
+objc[6995]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x13848bf50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

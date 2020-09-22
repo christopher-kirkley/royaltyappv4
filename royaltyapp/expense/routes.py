@@ -55,8 +55,11 @@ def get_matching_errors():
     catalog_errors = expense_pending_schema.dumps(query)
     query = expense_type_matching_errors()
     type_errors = expense_pending_schema.dumps(query)
+    total_matching_errors = json.loads(artist_errors) + json.loads(type_errors) + json.loads(catalog_errors)
+    print(catalog_errors)
+    # total_matching_errors = artist_errors + catalog_errors + type_errors
     return jsonify([{
-                    'total_matching_errors': 2,
+                    'total_matching_errors': total_matching_errors,
                     'artist_matching_errors': json.loads(artist_errors),
                     'catalog_matching_errors': json.loads(catalog_errors),
                     'type_matching_errors': json.loads(type_errors)
