@@ -23,8 +23,6 @@ def test_returns(browser, test_client, db):
     """ User navigates to view artist page """
     artist = browser.find_element_by_id('artists')
     artist.click()
-    artist = browser.find_element_by_id('view_artists')
-    artist.click()
 
     """ User sees an empty table, clicks on button to add artist """
     assert browser.find_element_by_id("artists-data").text == 'No data'
@@ -257,6 +255,8 @@ def test_returns(browser, test_client, db):
     assert track_name.get_attribute("value") == 'Tacos for President'
     isrc = browser.find_element_by_name('tracks[0].isrc')
     assert isrc.get_attribute("value") == '1800beansforsale'
+    
+    time.sleep(10000)
 
     
 
