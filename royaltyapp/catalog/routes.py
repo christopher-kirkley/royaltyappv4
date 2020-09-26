@@ -30,7 +30,8 @@ def add_catalog():
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
+    return jsonify({'success': 'true',
+                    'id': new_catalog.id })
 
 @catalog.route('/catalog/<id>', methods=['GET'])
 def get_catalog(id):
