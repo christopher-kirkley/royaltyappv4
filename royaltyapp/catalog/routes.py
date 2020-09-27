@@ -68,6 +68,15 @@ def add_version():
 def edit_version():
     data = request.get_json(force=True)
     catalog_id = data['catalog']
+
+    # remove versions
+    version_list = [version for version, in db.session.query(Version.id).all()]
+    new_version_list = [int(version['id']) for version in data['version']]
+    ids_to_remove = set(version_list) - set(new_version_list)
+    for id in ids_to_remove:
+        db.session.query(Version).filter(Version.id==id).delete()
+        db.session.commit()
+    
     try:
         for version in data['version']:
             id = version['id']
@@ -77,6 +86,7 @@ def edit_version():
             new_version.version_name = version['version_name']
             new_version.format = version['format']
             db.session.commit()
+
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})

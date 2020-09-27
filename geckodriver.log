@@ -11284,3 +11284,1767 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1600751448033	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileU196Bb"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600751450998	Marionette	INFO	Listening on port 50999
+1600751451015	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1600751454543	Marionette	INFO	Stopped listening on port 50999
+1600751461399	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileha5wvM"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600751464092	Marionette	INFO	Listening on port 51080
+1600751464192	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1600751467736	Marionette	INFO	Stopped listening on port 51080
+1600751505669	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenoqkC8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600751508448	Marionette	INFO	Listening on port 51171
+1600751508470	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1600751512203	Marionette	INFO	Stopped listening on port 51171
+1600751521344	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileM3MInz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600751524038	Marionette	INFO	Listening on port 51254
+1600751524117	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[7537]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x125ebff50). One of the two will be used. Which one is undefined.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9993: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9995: TypeError: e.target.previous_balance_id is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9995: TypeError: e.target.previous_balance_id is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600789391857	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXRD1hE"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600789396243	Marionette	INFO	Listening on port 53564
+1600789396250	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9938: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/statements/StatementGenerate.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (122:6)
+
+[0m [90m 120 | [39m									          }}[0m
+[0m [90m 121 | [39m		        [33m/[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 122 | [39m						[33m<[39m[33m/[39m[33mGrid[39m[33m>[39m[0m
+[0m [90m     | [39m						[31m[1m^[22m[39m[0m
+[0m [90m 123 | [39m						[33m<[39m[33mGrid[39m item xs[33m=[39m{[35m5[39m}[33m>[39m[0m
+[0m [90m 124 | [39m		        [33m<[39m[33mKeyboardDatePicker[39m[0m
+[0m [90m 125 | [39m		          disableToolbar[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:746:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:739:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:733:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4616:18)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4626:17)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4633:19)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9656:23)
+    at Object.parseMaybeUnary (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9636:21)
+    at Object.parseExprOps (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9506:23)
+    at Object.parseMaybeConditional (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9479:23)
+JavaScript error: https://recirculation.spot.im/spot/sp_UfHlXOBE, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://recirculation.spot.im/spot/sp_UfHlXOBE, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.6.0/otBannerSdk.js, line 7: TypeError: o is undefined
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://recirculation.spot.im/spot/sp_UfHlXOBE, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.permutive.com/3d2fb0bd-52fc-4b75-aaf5-2d436c172540-web.js, line 1: TypeError: (destructured parameter) is null
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://recirculation.spot.im/spot/sp_UfHlXOBE, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.permutive.com/3d2fb0bd-52fc-4b75-aaf5-2d436c172540-web.js, line 1: TypeError: (destructured parameter) is null
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.permutive.com/3d2fb0bd-52fc-4b75-aaf5-2d436c172540-web.js, line 1: TypeError: (destructured parameter) is null
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://recirculation.spot.im/spot/sp_UfHlXOBE, line 1: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.permutive.com/3d2fb0bd-52fc-4b75-aaf5-2d436c172540-web.js, line 1: TypeError: (destructured parameter) is null
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.permutive.com/3d2fb0bd-52fc-4b75-aaf5-2d436c172540-web.js, line 1: TypeError: (destructured parameter) is null
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: https://js-cdn.music.apple.com/musickit/v1/musickit.js, line 1: QUOTA_EXCEEDED: No Reason Phrase
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 54: TypeError: docShell is null
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 113259: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 113259: TypeError: methods is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 114: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+2020-09-22 09:21:38.264 plugin-container[8693:551518] PLClientLogging: unknown permission type 2
+console.error: "Error writing response to: querySelector"
+console.error: "Error while calling actor 'domwalker's method 'querySelector'" "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIEventListenerService.getListenerInfoFor]"
+console.error: "getDOMListeners@resource://devtools/server/actors/inspector/event-collector.js:266:22\ngetListeners@resource://devtools/server/actors/inspector/event-collector.js:334:28\nhasListeners@resource://devtools/server/actors/inspector/event-collector.js:227:17\nhasEventListeners@resource://devtools/server/actors/inspector/event-collector.js:800:21\nget _hasEventListeners@resource://devtools/server/actors/inspector/node.js:459:33\nform@resource://devtools/server/actors/inspector/node.js:262:7\nwrite@resource://devtools/shared/protocol/types.js:363:32\ntypes.addArrayType/write/<@resource://devtools/shared/protocol/types.js:220:33\nwrite@resource://devtools/shared/protocol/types.js:220:16\nwrite@resource://devtools/shared/protocol/types.js:268:39\nwrite@resource://devtools/shared/protocol/Response.js:102:22\nwrite@resource://devtools/shared/protocol/Response.js:47:28\nsendReturn@resource://devtools/shared/protocol/Actor.js:172:38\n"
+console.error: (new Error("Protocol error (NS_ERROR_ILLEGAL_VALUE): Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIEventListenerService.getListenerInfoFor] from: server0.conn0.child2/domwalker24 (resource://devtools/server/actors/inspector/event-collector.js:266:0)", "resource://devtools/shared/protocol/Front.js", 323))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:864:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:639:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:113:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:417:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 113, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 113))
+objc[8377]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x14dae8f50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600795871569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilercynxm"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600795875460	Marionette	INFO	Listening on port 55994
+1600795899432	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVBvIsV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600795902239	Marionette	INFO	Listening on port 56036
+1600795902309	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 281: TypeError: InspectorUtils.setContentState: Argument 1 is not an object.
+objc[9359]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x126c3ff50). One of the two will be used. Which one is undefined.
+2020-09-22 10:35:49.211 firefox-bin[9359:590645] [QL] After retry, preview for <QLPreview 0x121f10b60 230179 file:///Users/ck/Desktop/inbox/income_statements_2020A/expense_artist_2020A.csv> can't be progressive on retry
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600796581444	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVVjXEg"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600796584353	Marionette	INFO	Listening on port 56423
+1600796584529	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript error: resource://gre/modules/Prompter.jsm, line 1081: AbortError: Actor 'Prompt' destroyed before query 'Prompt:Open' was resolved
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+1600805489243	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileYHKGYI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805492309	Marionette	INFO	Listening on port 58127
+1600805492319	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600805564126	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOL1aKh"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805566779	Marionette	INFO	Listening on port 58284
+1600805566787	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600805569110	Marionette	INFO	Stopped listening on port 58284
+1600805657640	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNhfDoi"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805660613	Marionette	INFO	Listening on port 58488
+1600805660657	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600805667032	Marionette	INFO	Stopped listening on port 58488
+1600805919957	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0BhjBg"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805923031	Marionette	INFO	Listening on port 59720
+1600805923056	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600805929339	Marionette	INFO	Stopped listening on port 59720
+1600805934288	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSTbqok"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805937114	Marionette	INFO	Listening on port 59854
+1600805937170	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600805940341	Marionette	INFO	Stopped listening on port 59854
+1600805962563	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejB3NBa"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600805965454	Marionette	INFO	Listening on port 60060
+1600805965467	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600805968143	Marionette	INFO	Stopped listening on port 60060
+1600806117929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFXRK4r"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806121015	Marionette	INFO	Listening on port 60794
+1600806121106	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806129764	Marionette	INFO	Stopped listening on port 60794
+1600806134194	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewLpFoI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806137033	Marionette	INFO	Listening on port 60945
+1600806137083	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806143640	Marionette	INFO	Stopped listening on port 60945
+1600806147431	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJ2HBzK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806150222	Marionette	INFO	Listening on port 61075
+1600806150316	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806155795	Marionette	INFO	Stopped listening on port 61075
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1600806290531	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepIDKOQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806293572	Marionette	INFO	Listening on port 61737
+1600806293605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806299235	Marionette	INFO	Stopped listening on port 61737
+1600806320335	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile295l2v"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806323197	Marionette	INFO	Listening on port 61939
+1600806323208	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806331027	Marionette	INFO	Stopped listening on port 61939
+1600806356823	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMexrL3"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806359565	Marionette	INFO	Listening on port 62164
+1600806359600	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806363306	Marionette	INFO	Stopped listening on port 62164
+1600806373832	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFGJhzt"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806376686	Marionette	INFO	Listening on port 62311
+1600806376711	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806380415	Marionette	INFO	Stopped listening on port 62311
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1600806403902	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCCNwSG"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806406693	Marionette	INFO	Listening on port 62516
+1600806406779	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806410417	Marionette	INFO	Stopped listening on port 62516
+1600806421741	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledUJ4sd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806424490	Marionette	INFO	Listening on port 62672
+1600806424511	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600806428097	Marionette	INFO	Stopped listening on port 62672
+1600806437562	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeSSDDO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806440290	Marionette	INFO	Listening on port 62814
+1600806440342	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 78837: Error: Objects are not valid as a React child (found: object with keys {artist_id, artist_name, catalog_id, catalog_number, description, expense_type, id, item_type, statement, vendor}). If you meant to render a collection of children, use an array instead.
+    in h1 (at Expense.js:83)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Expense.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Expense.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Expense.js:72)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Expense.js:70)
+    in Expense (created by Context.Consumer)
+    in Route (at Main.js:303)
+    in Switch (at Main.js:291)
+    in div (at Main.js:117)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:116)
+    in ThemeProvider (at Main.js:115)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 78837: Error: Objects are not valid as a React child (found: object with keys {artist_id, artist_name, catalog_id, catalog_number, description, expense_type, id, item_type, statement, vendor}). If you meant to render a collection of children, use an array instead.
+    in h1 (at Expense.js:83)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Expense.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Expense.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Expense.js:72)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Expense.js:70)
+    in Expense (created by Context.Consumer)
+    in Route (at Main.js:303)
+    in Switch (at Main.js:291)
+    in div (at Main.js:117)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:116)
+    in ThemeProvider (at Main.js:115)
+    in Main (at src/index.js:10)
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600806942378	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOH7nXW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806945313	Marionette	INFO	Listening on port 65083
+1600806945353	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600806978962	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenkpiIg"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600806981687	Marionette	INFO	Listening on port 65338
+1600806981782	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600807001329	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9NIduz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807004269	Marionette	INFO	Listening on port 65513
+1600807004358	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600807008033	Marionette	INFO	Stopped listening on port 65513
+1600807094329	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefwMoNn"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807097350	Marionette	INFO	Listening on port 49603
+1600807097433	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600807101913	Marionette	INFO	Stopped listening on port 49603
+1600807135472	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilemeTSXq"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807138292	Marionette	INFO	Listening on port 49855
+1600807138340	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1600807381077	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileRzUOGo"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807383871	Marionette	INFO	Listening on port 51030
+1600807383892	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600807388575	Marionette	INFO	Stopped listening on port 51030
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1600807416002	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewbQUe2"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807418841	Marionette	INFO	Listening on port 51256
+1600807418920	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600807423386	Marionette	INFO	Stopped listening on port 51256
+1600807469008	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileqOAjST"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600807471787	Marionette	INFO	Listening on port 51555
+1600807471805	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+1600838448298	Marionette	INFO	Stopped listening on port 55994
+1600920860229	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFyRELQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600920864077	Marionette	INFO	Listening on port 50774
+1600920864152	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600920888087	Marionette	INFO	Stopped listening on port 50774
+1600920897541	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWdQcfD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600920899967	Marionette	INFO	Listening on port 50936
+1600920899997	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/main.01dcc9fbc8d4ad8aade4.hot-update.js, line 124: unreachable code after return statement
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js, line 1: Script terminated by timeout at:
+mt@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:17920
+A@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:118866
+V@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:2351
+Jt@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:23953
+Zt@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:23171
+UdKW/t.unstable_runWithPriority@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:132213
+jl@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:45421
+F@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:118642
+Xt@https://material-ui.com/_next/static/chunks/framework.d983eebf0681311852d1.js:1:22986
+
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1893: TypeError: props.handleSubmit is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1893: TypeError: props.handleSubmit is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1894: TypeError: props.handleSubmit is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1894: TypeError: props.handleSubmit is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 100221: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2196: TypeError: props.handleEdit is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2196: TypeError: props.handleEdit is not a function
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+1600930059418	Marionette	INFO	Stopped listening on port 50936
+1600961931419	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiler2Zr96"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600961934171	Marionette	INFO	Listening on port 55851
+1600961934243	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600961935369	Marionette	INFO	Stopped listening on port 55851
+1600962024946	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5RpU0D"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600962027827	Marionette	INFO	Listening on port 56117
+1600962027906	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600962029234	Marionette	INFO	Stopped listening on port 56117
+1600962090859	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8uRG1g"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600962093462	Marionette	INFO	Listening on port 56218
+1600962093508	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600962097187	Marionette	INFO	Stopped listening on port 56218
+1600962164649	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewzLeCI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600962167233	Marionette	INFO	Listening on port 56303
+1600962167304	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: "Got a mutation for an unexpected actor: server0.conn0.child2/domnode1640, please file a bug on bugzilla.mozilla.org!"
+console.trace: 
+resource://devtools/client/fronts/walker.js 285 getMutations
+JavaScript error: https://ec-ns.sascdn.com/diff/rtb/handler/st.min.html?%7b%22bid%22%3a%22379814664353020273%22%2c%22adomain%22%3a%22aerisfusioniotnetwork.com%22%2c%22page%22%3a%22932545%22%2c%22format%22%3a%2262362%22%2c%22crid%22%3a%22147-561383_4_S%22%2c%22dsp%22%3a%22349%22%2c%22buyer%22%3a%22137998%22%2c%22cid%22%3a%22147-561383%22%2c%22adid%22%3a%22a438401d3533%22%2c%22hash%22%3a%22-2486966103247315423%22%7d, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963914140&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963914254&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963914258&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963959625&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963960796&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&963960904&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964003673&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964005634&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964005911&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964050488&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964050486&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&964050634&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1600964104664	Marionette	INFO	Stopped listening on port 56303
+1600996452367	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOzL00z"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996456690	Marionette	INFO	Listening on port 53433
+1600996456769	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1600996463295	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevKAfeJ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996466229	Marionette	INFO	Listening on port 53527
+1600996466255	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600996468954	Marionette	INFO	Stopped listening on port 53527
+1600996485476	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZE1Q14"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996487914	Marionette	INFO	Listening on port 53605
+1600996487931	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600996490646	Marionette	INFO	Stopped listening on port 53605
+1600996495170	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejNDJnJ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996498108	Marionette	INFO	Listening on port 53676
+1600996498124	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600996500909	Marionette	INFO	Stopped listening on port 53676
+1600996580941	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilef4O3zC"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996583664	Marionette	INFO	Listening on port 53941
+1600996583690	Marionette	WARN	TLS certificate errors will be ignored for this session
+1600996586367	Marionette	INFO	Stopped listening on port 53941
+1600996611202	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilehYgVzs"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1600996613979	Marionette	INFO	Listening on port 54021
+1600996614069	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601004093077	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevybBLQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601004101702	Marionette	INFO	Listening on port 57400
+1601004101795	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601004112349	Marionette	INFO	Stopped listening on port 57400
+1601004141521	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1Fd3im"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601004150335	Marionette	INFO	Listening on port 57564
+1601004150366	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601004157456	Marionette	INFO	Stopped listening on port 57564
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1601004228939	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerQTBei"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601004231875	Marionette	INFO	Listening on port 57773
+1601004231937	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601004238168	Marionette	INFO	Stopped listening on port 57773
+1601004264616	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileY4VpZd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601004267324	Marionette	INFO	Listening on port 57863
+1601004267382	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601004273464	Marionette	INFO	Stopped listening on port 57863
+1601004302113	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiQVYdR"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601004304779	Marionette	INFO	Listening on port 58052
+1601004304794	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601013582611	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekvCAox"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601013586080	Marionette	INFO	Listening on port 51132
+1601013586123	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601013591315	Marionette	INFO	Stopped listening on port 51132
+1601013612205	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletRNr4g"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601013614794	Marionette	INFO	Listening on port 51333
+1601013614897	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601014195581	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenaz8NX"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601014198252	Marionette	INFO	Listening on port 52255
+1601014198342	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2932: TypeError: catalogitem.artist is null
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2271))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2271))
+console.warn: "Got a mutation for an unexpected actor: server0.conn0.child2/domnode411, please file a bug on bugzilla.mozilla.org!"
+console.trace: 
+resource://devtools/client/fronts/walker.js 285 getMutations
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2931: TypeError: catalogitem.artist is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2931: TypeError: catalogitem.artist is null
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601015192330	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenYdfRd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601015195004	Marionette	INFO	Listening on port 53514
+1601015195098	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 70633: Error: input is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.
+    in input (at VersionDisplay.js:50)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at VersionDisplay.js:49)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at VersionDisplay.js:32)
+    in VersionDisplay (at CatalogAdd.js:83)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at CatalogAdd.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:71)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogAdd.js:64)
+    in CatalogAdd (created by Context.Consumer)
+    in Route (at Main.js:254)
+    in Switch (at Main.js:249)
+    in div (at Main.js:119)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:118)
+    in ThemeProvider (at Main.js:117)
+    in Main (at src/index.js:10)
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+Exiting due to channel error.
+Exiting due to channel error.
+1601048224972	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileyfNz4r"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601048228892	Marionette	INFO	Listening on port 58868
+1601048228969	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 17716: TypeError: props.children.props is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 17716: TypeError: props.children.props is undefined
+JavaScript warning: https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851, line 184: Script terminated by timeout at:
+s__ba@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:184:227
+s_wb/<@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:30:350
+s_sh@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:429:93
+s_xb.prototype.Ha@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:429:161
+s_Xha@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:286:254
+s_Vha@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:287:249
+s_Tha/b<@https://www.google.com/xjs/_/js/k=xjs.s.en_US.S2UUsf31k-k.O/ck=xjs.s.1teV5GITBM0.L.F4.O/m=IvlUe,MC8mtf,MkHyGd,RMhBfe,RqxLvf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,ws9Tlc,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAxAC/d=1/dg=2/ct=zgms/rs=ACT90oFVz44UNFGsZcoTt0HvWWOzUA26Cg?cb=4430851:283:277
+
+JavaScript error: resource://gre/actors/ControllersChild.jsm, line 30: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDocShell.doCommandWithParams]
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601049809404	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOzs6SD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601049812366	Marionette	INFO	Listening on port 61169
+1601049812419	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94476: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94476: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4433: TypeError: handleSubmit1 is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4433: TypeError: handleSubmit1 is not a function
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914, line 6: Script terminated by timeout at:
+v@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:3139
+nh@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:67721
+l.na/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:65367
+be/</<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26151
+Zd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25696
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22575
+Zd@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25998
+be/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26124
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22620
+
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2623: ReferenceError: can't access lexical declaration 'control' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2623: ReferenceError: can't access lexical declaration 'control' before initialization
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94451: TypeError: (destructured parameter) is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94451: TypeError: (destructured parameter) is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2995: TypeError: fields.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2995: TypeError: fields.map is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79070910&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79071283&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79072802&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79074412&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79074502&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&79074544&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://route.carambo.la/inimage/getlayer?pid=sngl16&did=113074&wid=2&rdn=194, line 12: SecurityError: Permission denied to access property "scrollY" on cross-origin object
+JavaScript error: https://route.carambo.la/inimage/getlayer?pid=sngl16&did=113074&wid=0&rdn=644, line 12: SecurityError: Permission denied to access property "scrollY" on cross-origin object
+JavaScript warning: https://wesbos.com/component---src-templates-post-js-92646041a36dff1f77d5.js, line 314: unreachable code after return statement
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+1601092639819	Marionette	INFO	Stopped listening on port 61169
+1601092646557	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1HDA0A"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601092650627	Marionette	INFO	Listening on port 57636
+1601092650645	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79295: Error: Objects are not valid as a React child (found: object with keys {value}). If you meant to render a collection of children, use an array instead.
+    in form (at CatalogForm.js:138)
+    in CatalogForm (at CatalogAdd.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:76)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogAdd.js:69)
+    in CatalogAdd (created by Context.Consumer)
+    in Route (at Main.js:254)
+    in Switch (at Main.js:249)
+    in div (at Main.js:119)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:118)
+    in ThemeProvider (at Main.js:117)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79295: Error: Objects are not valid as a React child (found: object with keys {value}). If you meant to render a collection of children, use an array instead.
+    in form (at CatalogForm.js:138)
+    in CatalogForm (at CatalogAdd.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:76)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogAdd.js:69)
+    in CatalogAdd (created by Context.Consumer)
+    in Route (at Main.js:254)
+    in Switch (at Main.js:249)
+    in div (at Main.js:119)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:118)
+    in ThemeProvider (at Main.js:117)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79295: Error: Objects are not valid as a React child (found: object with keys {value}). If you meant to render a collection of children, use an array instead.
+    in h1 (at CatalogForm.js:174)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at CatalogForm.js:151)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogForm.js:150)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogForm.js:139)
+    in form (at CatalogForm.js:138)
+    in CatalogForm (at CatalogAdd.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:76)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogAdd.js:69)
+    in CatalogAdd (created by Context.Consumer)
+    in Route (at Main.js:254)
+    in Switch (at Main.js:249)
+    in div (at Main.js:119)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:118)
+    in ThemeProvider (at Main.js:117)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79295: Error: Objects are not valid as a React child (found: object with keys {value}). If you meant to render a collection of children, use an array instead.
+    in h1 (at CatalogForm.js:174)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at CatalogForm.js:151)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogForm.js:150)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogForm.js:139)
+    in form (at CatalogForm.js:138)
+    in CatalogForm (at CatalogAdd.js:82)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:81)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at CatalogAdd.js:76)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at CatalogAdd.js:69)
+    in CatalogAdd (created by Context.Consumer)
+    in Route (at Main.js:254)
+    in Switch (at Main.js:249)
+    in div (at Main.js:119)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:118)
+    in ThemeProvider (at Main.js:117)
+    in Main (at src/index.js:10)
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript error: https://codesandbox.io/public/14/vs/editor/editor.main.js, line 146: Error: this.fs is undefined
+
+p</t.prototype.syncFile@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2975093
+t/<@https://codesandbox.io/public/14/vs/language/typescript/tsWorker.js:7:2973823
+v</t.prototype.acceptRemovedModel/<@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:690
+v</t.prototype.acceptRemovedModel@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:147:663
+f</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:579
+handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:196
+l</e.prototype._handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:104:402
+l</e.prototype.handleMessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:103:975
+f</e.prototype.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:106:275
+self.onmessage/</</</self.onmessage@https://codesandbox.io/public/14/vs/base/worker/workerMain.js#typescript:148:326
+
+JavaScript warning: https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/exm=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,csi,d,hsm,iDPoPb,jsa,mvYTse,tg8oTe/ed=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw/m=MB3mMb,MkHyGd,NBZ7u,OG6ZHd,RMhBfe,RqxLvf,T7XTS,TxZWcc,URQPYc,XMgU6d,aCZVp,aa,aam1T,abd,async,bgd,dvl,eN4qad,foot,iD8Yk,kyn,lli,lu,m,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,qik19b,rHjpXd,sb_wiz,sf,tl,uiNkee,vs,xiqEse,xz7cCd,zbML3c?xjs=s1, line 336: Script terminated by timeout at:
+s_Vig@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/exm=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,csi,d,hsm,iDPoPb,jsa,mvYTse,tg8oTe/ed=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw/m=MB3mMb,MkHyGd,NBZ7u,OG6ZHd,RMhBfe,RqxLvf,T7XTS,TxZWcc,URQPYc,XMgU6d,aCZVp,aa,aam1T,abd,async,bgd,dvl,eN4qad,foot,iD8Yk,kyn,lli,lu,m,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,qik19b,rHjpXd,sb_wiz,sf,tl,uiNkee,vs,xiqEse,xz7cCd,zbML3c?xjs=s1:336:136
+s_Tig.prototype.Ta@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/exm=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,csi,d,hsm,iDPoPb,jsa,mvYTse,tg8oTe/ed=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw/m=MB3mMb,MkHyGd,NBZ7u,OG6ZHd,RMhBfe,RqxLvf,T7XTS,TxZWcc,URQPYc,XMgU6d,aCZVp,aa,aam1T,abd,async,bgd,dvl,eN4qad,foot,iD8Yk,kyn,lli,lu,m,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,qik19b,rHjpXd,sb_wiz,sf,tl,uiNkee,vs,xiqEse,xz7cCd,zbML3c?xjs=s1:337:305
+s_.mca@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/m=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw:427:210
+s_.dispatchEvent@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/m=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw:425:386
+s_iP.prototype.Ba@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/exm=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,csi,d,hsm,iDPoPb,jsa,mvYTse,tg8oTe/ed=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw/m=MB3mMb,MkHyGd,NBZ7u,OG6ZHd,RMhBfe,RqxLvf,T7XTS,TxZWcc,URQPYc,XMgU6d,aCZVp,aa,aam1T,abd,async,bgd,dvl,eN4qad,foot,iD8Yk,kyn,lli,lu,m,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,qik19b,rHjpXd,sb_wiz,sf,tl,uiNkee,vs,xiqEse,xz7cCd,zbML3c?xjs=s1:321:221
+s__ha@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/m=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw:287:254
+s_Yha@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/m=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw:288:249
+s_Wha/b<@https://www.google.com/xjs/_/js/k=xjs.s.en_US.NpHXx3LUUqM.O/ck=xjs.s.oZrWRbOClqo.L.F4.O/m=IvlUe,MC8mtf,TJw5qb,Y33vzc,ZyRBae,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,d,csi/am=AAAAAABAAAAAwBIwdwOA4z8IgLvgEgcAAAAAEqAlQWOBFEJCQgACAAAAZ6EEAIAAAAg/d=1/dg=2/ct=zgms/rs=ACT90oE_w4FyXNbAxPVP2Xlqw2k4efIbSw:284:277
+
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914, line 6: Script terminated by timeout at:
+Ee@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:29928
+og@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:59925
+pg.prototype.a@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:50686
+bg/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:46399
+v@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:3206
+bg@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:46372
+Og/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:58011
+v@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:3206
+Og@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:57918
+Mg@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:54966
+Jg.prototype.tb@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:54634
+Xe/a.a<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:33620
+be/</<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26151
+Zd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25696
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22575
+Zd@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25998
+be/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26124
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22575
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22620
+
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94828: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4636: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4636: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4627: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4627: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4613: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4606: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4606: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4606: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4606: TypeError: props.fields is undefined
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4623: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4623: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4629: TypeError: props.fields is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4629: TypeError: props.fields is undefined
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+1601122450496	Marionette	INFO	Stopped listening on port 57636
+1601146871980	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7S8t9C"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601146876079	Marionette	INFO	Listening on port 58610
+1601146876170	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: "Got a mutation for an unexpected actor: server0.conn0.child2/domnode33, please file a bug on bugzilla.mozilla.org!"
+console.trace: 
+resource://devtools/client/fronts/walker.js 285 getMutations
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2093: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/CatalogAdd.js: Unexpected token (52:29)
+
+[0m [90m 50 | [39m								method[33m:[39m [32m'POST'[39m[33m,[39m[0m
+[0m [90m 51 | [39m								body[33m:[39m [33mJSON[39m[33m.[39mstringify([0m
+[0m[31m[1m>[22m[39m[90m 52 | [39m													{[32m'catalog'[39m[33m:[39m id[33m,[39m [33m**[39m[33m**[39m[33mTHIS[39m [33mRIGHT[39m [33mHERE[39m[33m**[39m[33m*[39m[0m
+[0m [90m    | [39m													                [31m[1m^[22m[39m[0m
+[0m [90m 53 | [39m																		[32m'version'[39m[33m:[39m data[[32m'addVersion'[39m]})[0m
+[0m [90m 54 | [39m							})[0m
+[0m [90m 55 | [39m				[90m// .then(res => res.json())[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8966:16)
+    at Object.parseIdentifierName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11086:18)
+    at Object.parseIdentifier (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11059:23)
+    at Object.parseMaybePrivateName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10363:19)
+    at Object.parsePropertyName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10854:155)
+    at Object.parsePropertyName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3076:23)
+    at Object.parsePropertyDefinition (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10747:22)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2173: TypeError: res is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601158729528	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilem9fiX3"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601158732479	Marionette	INFO	Listening on port 63928
+1601158732495	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601158764381	Marionette	INFO	Stopped listening on port 63928
+1601158771395	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8b9dYa"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601158774081	Marionette	INFO	Listening on port 64030
+1601158774141	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2173: TypeError: res is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/actors/ControllersChild.jsm, line 30: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDocShell.doCommandWithParams]
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1601177943680	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezMmQCi"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601177947648	Marionette	INFO	Listening on port 50891
+1601177947674	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: , line 0: TypeError: ServiceWorker script at https://spectrum.chat/sw.js for scope https://spectrum.chat/ encountered an error during installation.
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js is being assigned a //# sourceMappingURL, but already has one
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016 is being assigned a //# sourceMappingURL, but already has one
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js,dataTables_bs,fed-assets_datepicker,knockout, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js,dataTables_bs,fed-assets_datepicker,knockout is being assigned a //# sourceMappingURL, but already has one
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016 is being assigned a //# sourceMappingURL, but already has one
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=jquery,moment.js is being assigned a //# sourceMappingURL, but already has one
+JavaScript warning: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016, line 0: https://apps.oregon.gov/Application/CDN/Assets/bundle.min.js?b=twitter-bootstrap,modernizr,jasny-bootstrap,js.cookie,outdated-browser,statewide-links,helpful-page-poll_an_bs,sp_2016 is being assigned a //# sourceMappingURL, but already has one
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20200923/r20110914/client/qs_click_protection_fy2019.js, line 14: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101, line 6: Script terminated by timeout at:
+w@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:2152
+@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:58277
+@https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101:6:73526
+
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94446: TypeError: data.slice is not a function
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: resource://devtools/client/shared/telemetry.js, line 98: Error: TelemetryStopwatch: key "DEVTOOLS_FLEXBOX_HIGHLIGHTER_TIME_ACTIVE_SECONDS" was already initialized
+JavaScript error: resource://devtools/client/shared/telemetry.js, line 98: Error: TelemetryStopwatch: key "DEVTOOLS_FLEXBOX_HIGHLIGHTER_TIME_ACTIVE_SECONDS" was already initialized
+JavaScript error: resource://devtools/client/shared/telemetry.js, line 98: Error: TelemetryStopwatch: key "DEVTOOLS_FLEXBOX_HIGHLIGHTER_TIME_ACTIVE_SECONDS" was already initialized
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ec-ns.sascdn.com/diff/rtb/handler/st.min.html?%7b%22bid%22%3a%22392762530305198591%22%2c%22adomain%22%3a%22genomind.com%22%2c%22page%22%3a%22932547%22%2c%22format%22%3a%2262370%22%2c%22crid%22%3a%22147-538387_3_S%22%2c%22dsp%22%3a%22349%22%2c%22buyer%22%3a%22137998%22%2c%22cid%22%3a%22147-538387%22%2c%22adid%22%3a%22c2dbb571be66%22%2c%22hash%22%3a%222426572467421263786%22%7d, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223672806&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223672906&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223673283&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223673350&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223675875&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223675889&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223713579&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223715103&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223716455&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223716481&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223716590&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223716742&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223758679&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223759156&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223760660&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223760644&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223761802&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223761950&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223803864&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223805429&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223805493&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223806567&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223806768&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223807038&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223848357&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223849867&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223850011&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223850241&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223850252&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223851591&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223893322&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223895943&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223895246&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223896545&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223897743&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223897946&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223939083&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223940410&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223940458&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223940627&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223984075&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&223986687&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224028182&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224029504&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224030846&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224032470&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224075410&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224077999&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224078400&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224120008&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224120040&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224121543&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4413: TypeError: props.setVersion is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4413: TypeError: props.setVersion is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224162624&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224164096&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&224167294&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914, line 6: Script terminated by timeout at:
+fg@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:47909
+og@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:59283
+pg.prototype.a@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:50686
+bg/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:46399
+v@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:3206
+bg@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:46372
+Og/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:58011
+v@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:3206
+Og@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:57918
+Mg@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:54966
+Jg.prototype.tb@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:54634
+Xe/a.a<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:33620
+be/</<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26151
+Zd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25696
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22575
+Zd@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:25998
+be/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:26124
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22575
+Cd/<@https://www.googletagservices.com/activeview/js/current/osd_listener.js?cache=r20110914:6:22620
+
+JavaScript warning: https://www.robinwieruch.de/component---src-templates-post-js-bad9a75101a8acb90c01.js, line 157: unreachable code after return statement
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80709: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80709: Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4434: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4434: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4434: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4434: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4438: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4438: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4438: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4438: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4439: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4439: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4437: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4437: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4436: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4436: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4437: TypeError: version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4437: TypeError: version is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4413: TypeError: props.cloneVersion is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4413: TypeError: props.cloneVersion is undefined
+console.error: (new TypeError("state is null", "resource://devtools/client/inspector/shared/highlighters-overlay.js", 844))
+1601225329307	Marionette	INFO	Stopped listening on port 50891
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+1601225337576	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZUGDhF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601225340996	Marionette	INFO	Listening on port 56134
+1601225341077	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601226474977	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVwtcaO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226478067	Marionette	INFO	Listening on port 58034
+1601226478165	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601226647108	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileb13ZXx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226649998	Marionette	INFO	Listening on port 58309
+1601226650140	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601226654928	Marionette	INFO	Stopped listening on port 58309
+1601226676772	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilemy5V3t"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226679643	Marionette	INFO	Listening on port 58403
+1601226679746	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601226684680	Marionette	INFO	Stopped listening on port 58403
+1601226754486	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevTFw4x"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226757324	Marionette	INFO	Listening on port 58493
+1601226757378	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601226764575	Marionette	INFO	Stopped listening on port 58493
+1601226789144	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilev5I6Va"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226791789	Marionette	INFO	Listening on port 58593
+1601226791817	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601226798464	Marionette	INFO	Stopped listening on port 58593
+1601226826479	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletzsmdD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226829496	Marionette	INFO	Listening on port 58689
+1601226829524	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601226836822	Marionette	INFO	Stopped listening on port 58689
+1601226877079	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6BdxhK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601226879877	Marionette	INFO	Listening on port 58979
+1601226879890	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2315: TypeError: props is undefined
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2315: TypeError: props is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2321: TypeError: data.newVersion is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+JavaScript error: https://www.gstatic.com/mysidia/40b83293e978f3384c7d4517a94e2061.js?tag=video_mra/web_fig_och, line 177: SecurityError: The operation is insecure.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601236673026	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVjPXwd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601236676727	Marionette	INFO	Listening on port 52919
+1601236676791	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601236679951	Marionette	INFO	Stopped listening on port 52919
+1601236689276	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejD3kvJ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601236691941	Marionette	INFO	Listening on port 53118
+1601236692030	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601236698751	Marionette	INFO	Stopped listening on port 53118
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1601236705844	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiley3c93J"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601236708698	Marionette	INFO	Listening on port 53303
+1601236708921	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601236715625	Marionette	INFO	Stopped listening on port 53303
+1601236835648	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilen8Jl9Z"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601236838521	Marionette	INFO	Listening on port 53451
+1601236838531	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601237140791	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKYUC8T"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601237143428	Marionette	INFO	Listening on port 53941
+1601237143460	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1601237146628	Marionette	INFO	Stopped listening on port 53941
+1601237155982	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenKzapd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601237158662	Marionette	INFO	Listening on port 54098
+1601237158672	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2360: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2360: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2360: TypeError: res is undefined
+JavaScript error: https://www.geeksforgeeks.org/how-to-wait-for-a-promise-to-finish-before-returning-the-variable-of-a-function/ line 1 > injectedScript, line 1: TypeError: e is not a function
+JavaScript error: https://cdn.adpushup.com/40792/adpushup.js, line 1: TypeError: window.adpushup.eventLogger is undefined
+JavaScript error: https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js, line 1: TypeError: u is undefined
+console.warn: "Got a mutation for an unexpected actor: server0.conn0.child2/domnode2897, please file a bug on bugzilla.mozilla.org!"
+console.trace: 
+resource://devtools/client/fronts/walker.js 285 getMutations
+JavaScript warning: https://www.robinwieruch.de/component---src-templates-post-js-bad9a75101a8acb90c01.js, line 480: unreachable code after return statement
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2263: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/CatalogDetail.js: Unexpected token (93:21)
+
+[0m [90m 91 | [39m		})[0m
+[0m [90m 92 | [39m		[33m.[39mthen(res [33m=>[39m { [36mif[39m (res[33m.[39mok) {[0m
+[0m[31m[1m>[22m[39m[90m 93 | [39m			[36mreturn[39m res[33m.[39mjson()})[0m
+[0m [90m    | [39m			                  [31m[1m^[22m[39m[0m
+[0m [90m 94 | [39m		[33m.[39mthen(res [33m=>[39m updateVersion(data))[0m
+[0m [90m 95 | [39m		[90m// .then(res => (console.log(data), updateVersion(data)))[39m[0m
+[0m [90m 96 | [39m		[90m// .then(res => (console.log(data), addVersion(data)))[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8966:16)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10282:20)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4718:20)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9844:23)
+    at Object.parseUpdate (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9824:21)
+    at Object.parseMaybeUnary (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9813:17)
+    at Object.parseExprOps (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9683:23)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2365: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2367: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2373: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2373: TypeError: res is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/main.d357a4414f119ec9de53.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.d357a4414f119ec9de53.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.804a09a4c4f7d8db7c59.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.804a09a4c4f7d8db7c59.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.74841000e2867e36ca2a.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.74841000e2867e36ca2a.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.74841000e2867e36ca2a.hot-update.js, line 76: unreachable code after return statement
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2263: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/catalog/CatalogDetail.js: 'return' outside of function (86:1)
+
+[0m [90m 84 | [39m	}[0m
+[0m [90m 85 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 86 | [39m	[36mreturn[39m ([0m
+[0m [90m    | [39m	[31m[1m^[22m[39m[0m
+[0m [90m 87 | [39m		[33m<[39m[33mContainer[39m[33m>[39m[0m
+[0m [90m 88 | [39m			[33m<[39m[33mHeader[39m name[33m=[39m[32m'Catalog Item'[39m[33m/[39m[33m>[39m[0m
+[0m [90m 89 | [39m			[33m<[39m[33mGrid[39m container justify[33m=[39m[32m"space-between"[39m style[33m=[39m{{marginBottom[33m:[39m [35m20[39m}}[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.parseReturnStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11792:12)
+    at Object.parseStatementContent (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11479:21)
+    at Object.parseStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11431:17)
+    at Object.parseStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:2590:26)
+    at Object.parseBlockOrModuleBlockBody (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:12013:25)
+    at Object.parseBlockBody (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11999:10)
+    at Object.parseTopLevel (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11362:10)
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript warning: http://localhost:3000/main.a79751d0b0c4756024f5.hot-update.js, line 76: unreachable code after return statement
+JavaScript warning: http://localhost:3000/static/js/main.chunk.js, line 2329: unreachable code after return statement
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

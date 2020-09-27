@@ -69,13 +69,8 @@ def test_returns(browser, test_client, db):
     surnom.send_keys('Ag Kaedy')
     submit = browser.find_element_by_id('submit')
     submit.click()
-    # time.sleep(5)
-    # assert browser.find_element_by_id('surnom').get_attribute("value") == 'Ag Kaedy'
     
     """ User returns to main page and verifies change."""
-    artist = browser.find_element_by_id('artists')
-    artist.click()
-    time.sleep(1)
     table = browser.find_element_by_id('artist-table')
     rows = table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
@@ -83,16 +78,12 @@ def test_returns(browser, test_client, db):
 
     """ User goes to the catalog view """
     browser.find_element_by_id('catalog').click()
-    browser.find_element_by_id('view_catalog').click()
 
     assert browser.find_element_by_id('header').text == 'Catalog Items'
 
     """ User clicks to add a new catalog item """
     add_catalog = browser.find_element_by_id('add_catalog')
     add_catalog.click()
-
-    """ Selects Catalog Edit."""
-    browser.find_elements_by_id('edit')[0].click()
 
     """ User fills out catalog info. """
     catalog_number = browser.find_element_by_id('catalog_number')
@@ -107,7 +98,7 @@ def test_returns(browser, test_client, db):
     submit.click()
 
     """ User sees Catalog item in table. """
-    browser.find_element_by_id('view_catalog').click()
+    browser.find_element_by_id('catalog').click()
     catalog_table = browser.find_element_by_id('catalog_table')
     rows = catalog_table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td');
@@ -122,21 +113,20 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('catalog_name').get_attribute("value") == 'Akaline Kidal'
     assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
 
-    """Selects version to edit."""
-    browser.find_elements_by_id('edit')[1].click()
-
     """ Click to add a version. """
     add_version = browser.find_element_by_id('add_version')
     add_version.click()
-    version_number = browser.find_element_by_name('addVersion[0].version_number')
+    version_number = browser.find_element_by_name('newVersion[0].version_number')
     version_number.send_keys('SS-050lp')
-    upc = browser.find_element_by_name('addVersion[0].upc')
+    upc = browser.find_element_by_name('newVersion[0].upc')
     upc.send_keys('123456')
-    format = browser.find_element_by_name('addVersion[0].format')
+    format = browser.find_element_by_name('newVersion[0].format')
     format.send_keys('LP')
-    version_name = browser.find_element_by_name('addVersion[0].version_name')
+    version_name = browser.find_element_by_name('newVersion[0].version_name')
     version_name.send_keys('Limited Edition Vinyl')
-    browser.find_elements_by_id('submit')[1].click()
+
+    time.sleep(10000)
+
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050lp'
 
@@ -256,7 +246,6 @@ def test_returns(browser, test_client, db):
     isrc = browser.find_element_by_name('tracks[0].isrc')
     assert isrc.get_attribute("value") == '1800beansforsale'
     
-    time.sleep(10000)
 
     
 
