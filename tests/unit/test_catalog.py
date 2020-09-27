@@ -142,6 +142,52 @@ def test_can_edit_versions(test_client, db):
     assert q[0].id == 1
     assert q[0].version_number == 'SS-001cd'
 
+def test_can_remove_versions(test_client, db):
+    add_one_catalog(db)
+    data = {'catalog': '1',
+            'version': [
+                {
+                'upc': '123456',
+                'version_number': 'SS-001lp',
+                'version_name': 'Limited Edition',
+                'format': 'LP',
+                },
+                {
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]}
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    data = {'catalog': '1',
+            'version': [
+                {
+                'id': '1',
+                'upc': '333333',
+                'version_number': 'SS-001cd',
+                'version_name': 'Compact Disc',
+                'format': 'CD',
+                },
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/version', data=json_data)
+    assert response.status_code == 200
+    q = db.session.query(Version).order_by(Version.id).all()
+    assert len(q) == 1
+    data = {'catalog': '1',
+            'version': [
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/version', data=json_data)
+    assert response.status_code == 200
+    q = db.session.query(Version).order_by(Version.id).all()
+    assert len(q) == 0
+
 def test_can_get_version(test_client, db):
     add_one_version(db)
     response = test_client.get('/version/1')
