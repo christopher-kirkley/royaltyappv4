@@ -114,6 +114,8 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
 
     """ Click to add a version. """
+    browser.find_element_by_id('edit').click()
+
     add_version = browser.find_element_by_id('add_version')
     add_version.click()
     version_number = browser.find_element_by_name('newVersion[0].version_number')
@@ -125,31 +127,27 @@ def test_returns(browser, test_client, db):
     version_name = browser.find_element_by_name('newVersion[0].version_name')
     version_name.send_keys('Limited Edition Vinyl')
 
-    time.sleep(10000)
-
-    version_number = browser.find_element_by_name('version[0].version_number')
-    assert version_number.get_attribute("value") == 'SS-050lp'
-
-
     """ Adds another version """
-    add_version.click()
-    time.sleep(1)
-    version_number = browser.find_element_by_name('addVersion[0].version_number')
+    browser.find_element_by_id('add_version').click()
+
+    version_number = browser.find_element_by_name('newVersion[1].version_number')
     version_number.send_keys('SS-050cd')
-    upc = browser.find_element_by_name('addVersion[0].upc')
+    upc = browser.find_element_by_name('newVersion[1].upc')
     upc.send_keys('678910')
-    format = browser.find_element_by_name('addVersion[0].format')
+    format = browser.find_element_by_name('newVersion[1].format')
     format.send_keys('CD')
-    version_name = browser.find_element_by_name('addVersion[0].version_name')
+    version_name = browser.find_element_by_name('newVersion[1].version_name')
     version_name.send_keys('Limited Edition CD')
-    browser.find_elements_by_id('submit')[1].click()
+
+    browser.find_element_by_id('submit').click()
+
     browser.get('http://localhost:3000/catalog/1')
     time.sleep(1)
     version_number = browser.find_element_by_name('version[1].version_number')
     assert version_number.get_attribute("value") == 'SS-050cd'
-    
+
     """ User goes to edit versions """
-    browser.find_elements_by_id('edit')[1].click()
+    browser.find_element_by_id('edit').click()
 
     upc = browser.find_element_by_name('version[0].upc')
     version_number = browser.find_element_by_name('version[0].version_number')
@@ -164,7 +162,8 @@ def test_returns(browser, test_client, db):
     version_name.send_keys('Limited Cassette')
     format.clear()
     format.send_keys('Cassette')
-    browser.find_elements_by_id('submit')[1].click()
+
+    browser.find_element_by_id('submit').click()
     
     """ Checks that versions have been updated """
     browser.get('http://localhost:3000/catalog/1')
@@ -173,27 +172,27 @@ def test_returns(browser, test_client, db):
     assert upc.get_attribute("value") == '11111'
 
     """ User goes to edit tracks. """
-    browser.find_elements_by_id('edit')[2].click()
+    browser.find_element_by_id('edit').click()
 
     """ Adds some tracks. """
     add_track = browser.find_element_by_id('add_track')
     add_track.click()
-    track_name = browser.find_element_by_name('addTrack[0].track_name')
+    track_name = browser.find_element_by_name('newTrack[0].track_name')
     track_name.send_keys('Tacos for Sale')
-    isrc = browser.find_element_by_name('addTrack[0].isrc')
+    isrc = browser.find_element_by_name('newTrack[0].isrc')
     isrc.send_keys('qwerty123')
     select = Select(browser.find_element_by_name('artist_id'))
     select.select_by_visible_text('Amanar')
 
-    browser.find_elements_by_id('submit')[2].click()
+    browser.find_element_by_id('submit').click()
     
     browser.get('http://localhost:3000/catalog/1')
     time.sleep(1)
-    track_number = browser.find_element_by_name('tracks[0].track_number')
-    track_name = browser.find_element_by_name('tracks[0].track_name')
-    isrc = browser.find_element_by_name('tracks[0].isrc')
-    artist = browser.find_element_by_name('tracks[0].artist_id')
-    track_id = browser.find_element_by_name('tracks[0].id')
+    track_number = browser.find_element_by_name('track[0].track_number')
+    track_name = browser.find_element_by_name('track[0].track_name')
+    isrc = browser.find_element_by_name('track[0].isrc')
+    artist = browser.find_element_by_name('track[0].artist_id')
+    track_id = browser.find_element_by_name('track[0].id')
     assert track_number.get_attribute("value") == '1'
     assert track_name.get_attribute("value") == 'Tacos for Sale'
     assert isrc.get_attribute("value") == 'qwerty123'
@@ -201,25 +200,25 @@ def test_returns(browser, test_client, db):
     assert track_id.get_attribute("value") == '1'
 
     """ User goes to edit tracks. """
-    browser.find_elements_by_id('edit')[2].click()
+    browser.find_element_by_id('edit').click()
 
     add_track = browser.find_element_by_id('add_track')
     add_track.click()
-    track_name = browser.find_element_by_name('addTrack[0].track_name')
+    track_name = browser.find_element_by_name('newTrack[0].track_name')
     track_name.send_keys('Burritos for Rent')
-    isrc = browser.find_element_by_name('addTrack[0].isrc')
+    isrc = browser.find_element_by_name('newTrack[0].isrc')
     isrc.send_keys('uiop1234')
     select = Select(browser.find_element_by_name('artist_id'))
     select.select_by_visible_text('Amanar')
 
-    browser.find_elements_by_id('submit')[2].click()
+    browser.find_element_by_id('submit').click()
 
     browser.get('http://localhost:3000/catalog/1')
     time.sleep(1)
-    track_number = browser.find_element_by_name('tracks[1].track_number')
-    track_name = browser.find_element_by_name('tracks[1].track_name')
-    isrc = browser.find_element_by_name('tracks[1].isrc')
-    artist = browser.find_element_by_name('tracks[1].artist_id')
+    track_number = browser.find_element_by_name('track[1].track_number')
+    track_name = browser.find_element_by_name('track[1].track_name')
+    isrc = browser.find_element_by_name('track[1].isrc')
+    artist = browser.find_element_by_name('track[1].artist_id')
     assert track_number.get_attribute("value") == '2'
     assert track_name.get_attribute("value") == 'Burritos for Rent'
     assert isrc.get_attribute("value") == 'uiop1234'
@@ -227,24 +226,25 @@ def test_returns(browser, test_client, db):
 
 
     """ User edits the first track and changes the name. """
-    browser.find_elements_by_id('edit')[2].click()
+    browser.find_element_by_id('edit').click()
 
-    track_name = browser.find_element_by_name('tracks[0].track_name')
+    track_name = browser.find_element_by_name('track[0].track_name')
     track_name.clear()
     track_name.send_keys('Tacos for President')
 
-    isrc = browser.find_element_by_name('tracks[0].isrc')
+    isrc = browser.find_element_by_name('track[0].isrc')
     isrc.clear()
     isrc.send_keys('1800beansforsale')
 
-    browser.find_elements_by_id('submit')[2].click()
+    browser.find_element_by_id('submit').click()
 
     browser.get('http://localhost:3000/catalog/1')
     time.sleep(1)
-    track_name = browser.find_element_by_name('tracks[0].track_name')
+    track_name = browser.find_element_by_name('track[0].track_name')
     assert track_name.get_attribute("value") == 'Tacos for President'
-    isrc = browser.find_element_by_name('tracks[0].isrc')
+    isrc = browser.find_element_by_name('track[0].isrc')
     assert isrc.get_attribute("value") == '1800beansforsale'
+
     
 
     
