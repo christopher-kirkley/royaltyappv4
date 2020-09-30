@@ -86,7 +86,19 @@ def test_returns(browser, test_client, db):
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'bandcamp_test_2.csv'
-    
+
+    """ Upload a second statement. """
+    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+    browser.find_element_by_id('file_upload').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('bandcamp').click()
+    browser.find_element_by_id('upload_statement').click()
+    time.sleep(1)
+
+    """ User deletes uploaded second statement. """
+    browser.find_element_by_id('delete-0').click()
+    time.sleep(1)
+
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('matching_errors').text == "You have 4 matching errors."
     browser.find_element_by_id('fix_errors').click()
@@ -117,9 +129,8 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('update').click()
     time.sleep(1)
 
-    """ User returns to page and tries to process payments. """
-    browser.find_element_by_id('process_statements').click()
-    time.sleep(1)
+    """ Process payments. """
+    browser.find_element_by_id('process_errors').click()
 
     """ User goes to view imported income statements. """
     table = browser.find_element_by_id('income_table')
@@ -137,7 +148,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id("delete1").click()
 
     """ Statement dissapears from page. """
-    time.sleep(1)
+    time.sleep(10000)
 
 
     

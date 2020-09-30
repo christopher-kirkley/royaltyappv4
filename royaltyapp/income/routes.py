@@ -73,6 +73,14 @@ def get_pending_statements():
     pending_statements = income_pendings_schema.dumps(query)
     return pending_statements
 
+@income.route('/income/pending-statements/<name>', methods=['DELETE'])
+def delete_pending_statements(name):
+    res = (db.session.query(IncomePending)
+            .filter(IncomePending.statement==name))
+    res.delete()
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
 @income.route('/income/order-settings', methods=['GET'])
 def get_order_fees():
     query = db.session.query(OrderSettings).all()

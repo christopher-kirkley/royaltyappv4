@@ -1,6 +1,7 @@
 import pytest
 import json
 import datetime
+import time
 
 import os
 import io
@@ -89,6 +90,14 @@ def test_can_list_pending_statements(test_client, db):
     assert json.loads(response.data) == [{'distributor' : 'bandcamp',
                                         'statement': 'one_bandcamp_test.csv'
                                         }]
+
+def test_can_delete_pending_statement(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    response = test_client.delete('/income/pending-statements/one_bandcamp_test.csv')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    assert len(db.session.query(IncomePending).all()) == 0
 
 def test_income_distributors_populated(test_client, db):
     query = db.session.query(IncomeDistributor).all()
