@@ -74,7 +74,9 @@ def test_returns(browser, test_client, db):
 
     """ User checks another test file. """
     browser.find_element_by_id('income').click()
-    time.sleep(1)
+
+    time.sleep(10000)
+
     path = os.getcwd() + "/tests/files/bandcamp_test_2.csv"
     browser.find_element_by_id('select_statement').send_keys(path)
     browser.find_element_by_id('source_statement').click()

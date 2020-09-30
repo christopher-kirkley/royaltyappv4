@@ -47,7 +47,15 @@ def update_errors():
             if item.get('medium'):
                 sel = sel.filter(IncomePending.medium == item['medium'])
             if item.get('description'):
-                sel = sel.filter(IncomePending.medium == item['description'])
+                sel = sel.filter(IncomePending.description == item['description'])
+            if item.get('catalog_id'):
+                sel = sel.filter(IncomePending.catalog_id == item['catalog_id'])
+            if item.get('distributor'):
+                sel = sel.filter(IncomePending.distributor == item['distributor'])
+            if item.get('upc_id'):
+                sel = sel.filter(IncomePending.upc_id == item['upc_id'])
+            if item.get('type'):
+                sel = sel.filter(IncomePending.type == item['type'])
         temp = sel.subquery()
         (db.session.query(IncomePending)
             .filter(IncomePending.id == temp.c.id)

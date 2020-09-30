@@ -13294,3 +13294,232 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1601419381554	Marionette	INFO	Listening on port 53511
 1601419381641	Marionette	WARN	TLS certificate errors will be ignored for this session
 1601419402962	Marionette	INFO	Stopped listening on port 53511
+1601419508203	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHYjAvp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601419511178	Marionette	INFO	Listening on port 53885
+1601419511209	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601419519751	Marionette	INFO	Stopped listening on port 53885
+1601419563578	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilev77Z72"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601419566237	Marionette	INFO	Listening on port 53974
+1601419566296	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4172: Error: Cannot find module './TrackForm'
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7293: TypeError: props.importedIncome is undefined
+objc[53050]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x127358f50). One of the two will be used. Which one is undefined.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:415:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79324: Error: Objects are not valid as a React child (found: object with keys {distributor, upc_id}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at MatchingTable.js:104)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at MatchingTable.js:98)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at MatchingTable.js:89)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingTable.js:87)
+    in MatchingTable (at MatchingErrors.js:13)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingErrors.js:11)
+    in MatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:243)
+    in Switch (at Main.js:232)
+    in div (at Main.js:121)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:120)
+    in ThemeProvider (at Main.js:119)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79324: Error: Objects are not valid as a React child (found: object with keys {distributor, upc_id}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at MatchingTable.js:104)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at MatchingTable.js:98)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at MatchingTable.js:89)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingTable.js:87)
+    in MatchingTable (at MatchingErrors.js:13)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingErrors.js:11)
+    in MatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:243)
+    in Switch (at Main.js:232)
+    in div (at Main.js:121)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:120)
+    in ThemeProvider (at Main.js:119)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79324: Error: Objects are not valid as a React child (found: object with keys {distributor, upc_id}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at MatchingTable.js:104)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at MatchingTable.js:98)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at MatchingTable.js:89)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingTable.js:87)
+    in MatchingTable (at MatchingErrors.js:13)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingErrors.js:11)
+    in MatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:243)
+    in Switch (at Main.js:232)
+    in div (at Main.js:121)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:120)
+    in ThemeProvider (at Main.js:119)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 79324: Error: Objects are not valid as a React child (found: object with keys {distributor, upc_id}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at MatchingTable.js:104)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at MatchingTable.js:98)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at MatchingTable.js:89)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingTable.js:87)
+    in MatchingTable (at MatchingErrors.js:13)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at MatchingErrors.js:11)
+    in MatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:243)
+    in Switch (at Main.js:232)
+    in div (at Main.js:121)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:120)
+    in ThemeProvider (at Main.js:119)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8227: TypeError: state is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8227: TypeError: state is not a function
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: resource://activity-stream/lib/PersonalityProvider/PersonalityProvider.jsm, line 92: TypeError: http://%(server)s/dummy/blocklist// is not a valid URL.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1601435914675	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileMJexMh"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601435921064	Marionette	INFO	Listening on port 64237
+1601435921141	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[54320]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x127296f50). One of the two will be used. Which one is undefined.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601486787149	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileD10Pf4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601486791248	Marionette	INFO	Listening on port 58718
+1601486791304	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601486815655	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCu0yAN"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601486818405	Marionette	INFO	Listening on port 58825
+1601486818468	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[58384]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x12cda7f50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601486967470	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecsaa52"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601486970206	Marionette	INFO	Listening on port 59128
+1601486970252	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[58431]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x15084df50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601487095138	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOnoVaj"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601487098085	Marionette	INFO	Listening on port 59292
+1601487098137	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601487390333	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileafa15O"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601487393142	Marionette	INFO	Listening on port 59716
+1601487393196	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[58515]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x159eeff50). One of the two will be used. Which one is undefined.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
