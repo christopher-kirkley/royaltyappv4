@@ -13523,3 +13523,401 @@ objc[58515]: Class FIFinderSyncExtensionHost is implemented in both /System/Libr
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1601488126719	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiWFT3U"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601488129761	Marionette	INFO	Listening on port 60486
+1601488129801	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[58675]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff96e443d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x151278f50). One of the two will be used. Which one is undefined.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://cdn.carbonads.com/carbon.js?serve=CKYIL27L&placement=material-uicom, line 1: TypeError: document.getElementById(...) is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: https://codesandbox.io/static/browserfs12/browserfs.min.js, line 7: TypeError: t is null
+JavaScript error: resource://gre/actors/SelectChild.jsm, line 104: TypeError: this.element is null
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8381: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8381: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8381: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8381: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8393: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8393: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8378: TypeError: e.target.new_upc is undefined
+2020-09-30 11:47:10.205 firefox-bin[58675:2717581] [QL] After retry, preview for <QLPreview 0x154da6d40 614183 file:///Users/ck/Documents/sahel_label/financial/statements/bandcamp/2020/20200301-20200331_bandcamp_raw_data_Sahel-Sounds.csv> can't be progressive on retry
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8106: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8105: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8105: TypeError: props.pendingStatements is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8102: TypeError: props.rows is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8102: TypeError: props.rows is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8102: TypeError: props.rows is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8102: TypeError: props.rows is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8085: ReferenceError: can't access lexical declaration 'rows' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8085: ReferenceError: can't access lexical declaration 'rows' before initialization
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 77: Error: Connection closed, pending request to server0.conn1.child2/longstractor283, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:256:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:47:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:63:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunkWithOptions/</<@resource://devtools/client/shared/redux/middleware/thunk-with-options.js:17:9
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:158:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:258:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:610:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:294:13
+onPacket@resource://devtools/client/devtools-client.js:493:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8372: ReferenceError: can't access lexical declaration 'history' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8372: ReferenceError: can't access lexical declaration 'history' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7923: TypeError: props.getImportedIncome is not a function
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:863:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:638:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601499065878	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevzYABo"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499069557	Marionette	INFO	Listening on port 56422
+1601499069624	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499078218	Marionette	INFO	Stopped listening on port 56422
+1601499086929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0UtpYU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499089808	Marionette	INFO	Listening on port 56556
+1601499089904	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499097482	Marionette	INFO	Stopped listening on port 56556
+1601499124044	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8zGVZl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499126879	Marionette	INFO	Listening on port 56715
+1601499126929	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499132422	Marionette	INFO	Stopped listening on port 56715
+1601499162004	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezxBT7C"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499164774	Marionette	INFO	Listening on port 56968
+1601499164896	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499170605	Marionette	INFO	Stopped listening on port 56968
+1601499201340	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenk1V4X"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499204018	Marionette	INFO	Listening on port 57138
+1601499204105	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499209991	Marionette	INFO	Stopped listening on port 57138
+1601499296098	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileB7JFdz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499298887	Marionette	INFO	Listening on port 57259
+1601499298984	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499304662	Marionette	INFO	Stopped listening on port 57259
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1601499323790	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilemD1fVp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499326844	Marionette	INFO	Listening on port 57341
+1601499326890	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499335064	Marionette	INFO	Stopped listening on port 57341
+1601499581443	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilec2ZsPp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499584314	Marionette	INFO	Listening on port 57627
+1601499584335	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8171: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/income/MatchingTable.js: JSX value should be either an expression or a quoted JSX text (257:10)
+
+[0m [90m 255 | [39m							[33m/[39m[33m>[39m[0m
+[0m [90m 256 | [39m						[33m<[39m[33mTableCell[39m[0m
+[0m[31m[1m>[22m[39m[90m 257 | [39m							id[33m=[39m[32m`distributor${row.id}`[39m[0m
+[0m [90m     | [39m							   [31m[1m^[22m[39m[0m
+[0m [90m 258 | [39m							className[33m=[39m{ distributorChecked [33m?[39m classes[33m.[39mactive [33m:[39m [36mnull[39m }[0m
+[0m [90m 259 | [39m							onClick[33m=[39m{()[33m=>[39mchangeColor([32m'distributor'[39m)}[0m
+[0m [90m 260 | [39m						[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.jsxParseAttributeValue (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4549:20)
+    at Object.jsxParseAttribute (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4587:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4607:28)
+    at Object.jsxParseOpeningElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4600:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4632:33)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4706:17)
+1601499585332	Marionette	INFO	Stopped listening on port 57627
+1601499607600	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekkeC2l"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499610292	Marionette	INFO	Listening on port 57888
+1601499610362	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8171: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/income/MatchingTable.js: JSX value should be either an expression or a quoted JSX text (257:10)
+
+[0m [90m 255 | [39m							[33m/[39m[33m>[39m[0m
+[0m [90m 256 | [39m						[33m<[39m[33mTableCell[39m[0m
+[0m[31m[1m>[22m[39m[90m 257 | [39m							id[33m=[39m[32m`distributor${row.id}`[39m[0m
+[0m [90m     | [39m							   [31m[1m^[22m[39m[0m
+[0m [90m 258 | [39m							className[33m=[39m{ distributorChecked [33m?[39m classes[33m.[39mactive [33m:[39m [36mnull[39m }[0m
+[0m [90m 259 | [39m							onClick[33m=[39m{()[33m=>[39mchangeColor([32m'distributor'[39m)}[0m
+[0m [90m 260 | [39m						[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.jsxParseAttributeValue (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4549:20)
+    at Object.jsxParseAttribute (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4587:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4607:28)
+    at Object.jsxParseOpeningElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4600:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4632:33)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4706:17)
+1601499611345	Marionette	INFO	Stopped listening on port 57888
+1601499661864	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile27KJpu"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499664750	Marionette	INFO	Listening on port 58014
+1601499664835	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499674639	Marionette	INFO	Stopped listening on port 58014
+1601499714436	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVOMmZy"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499717225	Marionette	INFO	Listening on port 58108
+1601499717321	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499727067	Marionette	INFO	Stopped listening on port 58108
+1601499759418	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileO03VO1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499762537	Marionette	INFO	Listening on port 58202
+1601499762595	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499770620	Marionette	INFO	Stopped listening on port 58202
+1601499789962	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile20XcU4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499792632	Marionette	INFO	Listening on port 58297
+1601499792675	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601499822402	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileqh9VKU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499825201	Marionette	INFO	Listening on port 58470
+1601499825287	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601499945726	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileffkbyj"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601499948532	Marionette	INFO	Listening on port 58678
+1601499948612	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601499958162	Marionette	INFO	Stopped listening on port 58678
+1601499999737	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0t0BSF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500002554	Marionette	INFO	Listening on port 58771
+1601500002595	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500012267	Marionette	INFO	Stopped listening on port 58771
+1601500066251	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIxQIQj"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500069039	Marionette	INFO	Listening on port 59048
+1601500069108	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500078731	Marionette	INFO	Stopped listening on port 59048
+1601500173121	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePqKXMD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500176068	Marionette	INFO	Listening on port 59140
+1601500176107	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500185796	Marionette	INFO	Stopped listening on port 59140
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1601500236123	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileClQk6S"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500238904	Marionette	INFO	Listening on port 59236
+1601500238926	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500248786	Marionette	INFO	Stopped listening on port 59236
+1601500307136	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZNWLiF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500310094	Marionette	INFO	Listening on port 59513
+1601500310197	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500319934	Marionette	INFO	Stopped listening on port 59513
+1601500342796	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUIUODS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500345780	Marionette	INFO	Listening on port 59611
+1601500345792	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500356583	Marionette	INFO	Stopped listening on port 59611
+1601500379165	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileLPh6sh"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500381922	Marionette	INFO	Listening on port 59708
+1601500381932	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601500450974	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegEhrxP"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500453714	Marionette	INFO	Listening on port 59812
+1601500453771	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500464059	Marionette	INFO	Stopped listening on port 59812
+1601500474979	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7QUcq9"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500477688	Marionette	INFO	Listening on port 59911
+1601500477758	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500487858	Marionette	INFO	Stopped listening on port 59911
+1601500492179	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilex2IMCa"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500495320	Marionette	INFO	Listening on port 60054
+1601500495357	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500506322	Marionette	INFO	Stopped listening on port 60054
+1601500520061	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZohJRT"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500523022	Marionette	INFO	Listening on port 60286
+1601500523046	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500535510	Marionette	INFO	Stopped listening on port 60286
+1601500567604	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIEUUTK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500570345	Marionette	INFO	Listening on port 60382
+1601500570376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500583899	Marionette	INFO	Stopped listening on port 60382
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1601500738246	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2VnkVI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500740931	Marionette	INFO	Listening on port 60665
+1601500741019	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500754531	Marionette	INFO	Stopped listening on port 60665
+1601500926407	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezryQ6n"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601500929134	Marionette	INFO	Listening on port 60784
+1601500929199	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601500944111	Marionette	INFO	Stopped listening on port 60784
+1601501007850	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezCwlAc"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501010673	Marionette	INFO	Listening on port 61072
+1601501010717	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501025514	Marionette	INFO	Stopped listening on port 61072
+1601501133221	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVZczpq"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501136291	Marionette	INFO	Listening on port 61196
+1601501136297	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501151335	Marionette	INFO	Stopped listening on port 61196
+1601501217710	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJFXuJL"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501220446	Marionette	INFO	Listening on port 61497
+1601501220488	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501235267	Marionette	INFO	Stopped listening on port 61497
+1601501259468	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileLHixew"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501262664	Marionette	INFO	Listening on port 61599
+1601501262883	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501277562	Marionette	INFO	Stopped listening on port 61599
+1601501326681	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile63By4b"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501329485	Marionette	INFO	Listening on port 61707
+1601501329508	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501345168	Marionette	INFO	Stopped listening on port 61707
+1601501390507	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKsjzrq"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501393343	Marionette	INFO	Listening on port 61853
+1601501393371	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501408965	Marionette	INFO	Stopped listening on port 61853
+1601501453563	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileuMk3aj"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501456470	Marionette	INFO	Listening on port 62111
+1601501456543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7924: TypeError: props.getImportedIncome is not a function
+1601501473384	Marionette	INFO	Stopped listening on port 62111
+1601501593585	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecf7DP6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501596302	Marionette	INFO	Listening on port 62222
+1601501596408	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501611997	Marionette	INFO	Stopped listening on port 62222
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1601501642218	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCFsqbC"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501644938	Marionette	INFO	Listening on port 62511
+1601501645006	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501660637	Marionette	INFO	Stopped listening on port 62511
+1601501684740	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileg5cdrC"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501687469	Marionette	INFO	Listening on port 62618
+1601501687530	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1601501731499	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHs8To8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501734388	Marionette	INFO	Listening on port 62728
+1601501734488	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7924: TypeError: props.getImportedIncome is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1601501819774	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegAr8Fz"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501822694	Marionette	INFO	Listening on port 62859
+1601501822745	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501840364	Marionette	INFO	Stopped listening on port 62859
+1601501932857	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilem6522x"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1601501935753	Marionette	INFO	Listening on port 63161
+1601501935849	Marionette	WARN	TLS certificate errors will be ignored for this session
+1601501953515	Marionette	INFO	Stopped listening on port 63161

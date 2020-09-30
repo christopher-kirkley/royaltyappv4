@@ -28,12 +28,12 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_catalog').click()
     path = os.getcwd() + "/tests/files/one_catalog.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
-    time.sleep(2)
+    time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
     msg = browser.find_element_by_id('msg')
     path = os.getcwd() + "/tests/files/one_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
-    time.sleep(2)
+    time.sleep(1)
     browser.find_element_by_id('version_upload').click()
     msg = browser.find_element_by_id('version_msg')
 
@@ -74,11 +74,10 @@ def test_returns(browser, test_client, db):
 
     """ User checks another test file. """
     browser.find_element_by_id('income').click()
-
-    time.sleep(10000)
+    browser.find_element_by_id('import_income').click()
 
     path = os.getcwd() + "/tests/files/bandcamp_test_2.csv"
-    browser.find_element_by_id('select_statement').send_keys(path)
+    browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
     browser.find_element_by_id('upload_statement').click()
@@ -95,56 +94,50 @@ def test_returns(browser, test_client, db):
     """ User updates version number. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    rows[1].find_element_by_id('version_number').click()
-    browser.find_element_by_id('new_upc').click()
+    assert len(rows) == 6
+    browser.find_element_by_id('version_number1').click()
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('update').click()
     time.sleep(1)
+
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 4
+
+    browser.find_element_by_id('version_number3').click()
+    browser.find_element_by_id('medium3').click()
+    browser.find_element_by_id('SS-050cass').click()
+    browser.find_element_by_id('update').click()
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 3
 
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    rows[1].find_element_by_id('medium').click()
+    browser.find_element_by_id('medium4').click()
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('update').click()
     time.sleep(1)
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 2
 
     """ User returns to page and tries to process payments. """
-    browser.find_element_by_id('income').click()
-    time.sleep(1)
     browser.find_element_by_id('process_statements').click()
     time.sleep(1)
 
     """ User goes to view imported income statements. """
-    browser.find_element_by_id('view_imported_income').click()
-    time.sleep(1)
-    table = browser.find_element_by_id('imported_income_table')
+    table = browser.find_element_by_id('income_table')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_elements_by_tag_name('td')[0].text == 'bandcamp_test_2.csv'
-    browser.find_element_by_id('1').click()
+    browser.find_element_by_id('view1').click()
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
-    assert browser.find_element_by_id('statement_summary')
     assert browser.find_element_by_id('number_of_records').text == '4'
 
     """ User decides to go back and delete this statement. """
-    browser.find_element_by_id('view_imported_income').click()
+    browser.get('http://localhost:3000/income')
     time.sleep(1)
-    table = browser.find_element_by_id('imported_income_table')
-    rows = table.find_elements_by_tag_name('tr')
-    rows[1].find_element_by_id("delete").click()
+    browser.find_element_by_id("delete1").click()
 
     """ Statement dissapears from page. """
     time.sleep(1)
-    table = browser.find_element_by_id('imported_income_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 1
 
 
     
