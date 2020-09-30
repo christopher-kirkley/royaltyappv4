@@ -99,6 +99,15 @@ def add_bandcamp_sales(test_client):
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
 
+def add_bandcamp_errors(test_client):
+    path = os.getcwd() + "/tests/files/test_bandcamp_errors.csv"
+    data = {
+            'statement_source': 'bandcamp'
+            }
+    data['file'] = (path, 'test_bandcamp_errors.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+
 def add_two_bandcamp_sales(test_client):
     path = os.getcwd() + "/tests/files/two_bandcamp_test.csv"
     data = {
