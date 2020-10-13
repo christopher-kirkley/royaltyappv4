@@ -21,6 +21,7 @@ def test_returns(browser, test_client, db):
     """ User goes to homepage """ 
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
+
     
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
@@ -103,31 +104,24 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('matching_errors').text == "You have 4 matching errors."
     browser.find_element_by_id('fix_errors').click()
 
-    """ User updates version number. """
+    """ User matches version number. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 6
-    browser.find_element_by_id('version_number1').click()
+    assert len(rows) == 5
+    
+    time.sleep(1000)
+
+    browser.find_element_by_id('match').click()
+
+    browser.find_element_by_id('column').click()
+    browser.find_element_by_id('missingupc').click()
+    browser.find_element_by_id('new_value').click()
     browser.find_element_by_id('SS-050cass').click()
-    browser.find_element_by_id('update').click()
-    time.sleep(1)
+    browser.find_element_by_id('submit').click()
 
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 4
-
-    browser.find_element_by_id('version_number3').click()
-    browser.find_element_by_id('medium3').click()
-    browser.find_element_by_id('SS-050cass').click()
-    browser.find_element_by_id('update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 3
-
-    browser.find_element_by_id('medium4').click()
-    browser.find_element_by_id('SS-050cass').click()
-    browser.find_element_by_id('update').click()
-    time.sleep(1)
+    assert len(rows) == 1
 
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
@@ -148,7 +142,6 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id("delete1").click()
 
     """ Statement dissapears from page. """
-    time.sleep(10000)
 
 
     
