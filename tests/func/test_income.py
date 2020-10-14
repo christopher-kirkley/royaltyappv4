@@ -31,12 +31,11 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
-    msg = browser.find_element_by_id('msg')
+
     path = os.getcwd() + "/tests/files/one_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('version_upload').click()
-    msg = browser.find_element_by_id('version_msg')
 
     # """ User goes to income page and uploads a file."""
     # browser.find_element_by_id('income').click()
@@ -96,6 +95,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
 
+    time.sleep(10000)
     """ User deletes uploaded second statement. """
     browser.find_element_by_id('delete-0').click()
     time.sleep(1)
@@ -109,7 +109,6 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 5
     
-    time.sleep(1000)
 
     browser.find_element_by_id('match').click()
 

@@ -76,11 +76,13 @@ def test_can_update_pending_table(test_client, db):
             'upc_id': '111',
             'data_to_match' :
                 [
-                    {'description': 'package2'}
+                    {'medium': 'physical'}
                 ]
             }
     json_data = json.dumps(data)
     response = test_client.put('/income/update-errors', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'updated': 3}
 
 def test_can_list_pending_statements(test_client, db):
     build_catalog(db, test_client)

@@ -60,11 +60,12 @@ def update_errors():
         (db.session.query(IncomePending)
             .filter(IncomePending.id == temp.c.id)
             .update({IncomePending.upc_id : data['upc_id']}))
+        updated_errors = len(db.session.query(IncomePending).filter(IncomePending.id == temp.c.id).all())
         db.session.commit()
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
+    return jsonify({'updated': updated_errors})
 
 @income.route('/income/pending-statements', methods=['GET'])
 def get_pending_statements():
