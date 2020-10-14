@@ -57,10 +57,10 @@ def update_errors():
             if item.get('type'):
                 sel = sel.filter(IncomePending.type == item['type'])
         temp = sel.subquery()
+        updated_errors = len(db.session.query(IncomePending).filter(IncomePending.id == temp.c.id).all())
         (db.session.query(IncomePending)
             .filter(IncomePending.id == temp.c.id)
             .update({IncomePending.upc_id : data['upc_id']}))
-        updated_errors = len(db.session.query(IncomePending).filter(IncomePending.id == temp.c.id).all())
         db.session.commit()
     except exc.DataError:
         db.session.rollback()
