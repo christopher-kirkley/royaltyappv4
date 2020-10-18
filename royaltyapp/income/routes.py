@@ -6,7 +6,7 @@ from sqlalchemy import exc, func, cast, Numeric
 import pandas as pd
 import json
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema
 
 from .helpers import StatementFactory, find_distinct_matching_errors
 
@@ -179,5 +179,14 @@ def delete_income_statement(id):
     i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
     db.session.execute(i)
     db.session.commit()
+    return jsonify({'success': 'true'})
+
+@income.route('/income/distributors', methods=['GET'])
+def get_distributors():
+    query = db.session.query(IncomeDistributor).all()
+    distributor_schema = IncomeDistributorSchema(many=True)
+    distributors = distributor_schema.dumps(query)
+    return distributors
+
     return jsonify({'success': 'true'})
 

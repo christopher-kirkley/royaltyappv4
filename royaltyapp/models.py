@@ -206,6 +206,14 @@ class IncomeDistributor(db.Model):
                                         backref='income_distributor',
                                         passive_deletes=True)
 
+class IncomeDistributorSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = (
+                "id",
+                "distributor_name",
+                "distributor_statement"
+                )
+
 class ImportedStatement(db.Model):
     __tablename__ = 'imported_statement'
 
