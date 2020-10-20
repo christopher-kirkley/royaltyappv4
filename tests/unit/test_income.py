@@ -11,7 +11,7 @@ import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
-from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
+from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, process_pending_statements
 
 from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors
 
@@ -29,6 +29,22 @@ def test_can_import_bandcamp_sales(test_client, db):
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == '602318137111'
+    assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_import_sddigital_sales(test_client, db):
+    path = os.getcwd() + "/tests/files/sd_digital_test1.csv"
+    data = {
+            'statement_source': 'sddigital'
+            }
+    data['file'] = (path, 'sd_digital_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 13
+    first = db.session.query(IncomePending).first()
+    assert first.date == datetime.date(2020, 1, 25)
+    assert first.upc_id == '602318136800'
     assert json.loads(response.data) == {'success': 'true'}
     
 def test_can_get_matching_errors(test_client, db):
@@ -56,6 +72,37 @@ def test_can_get_matching_errors(test_client, db):
     assert res.distributor == 'bandcamp'
     assert res.upc_id == '602318136817'
     assert len(json.loads(response.data)) == 7
+
+def test_can_get_track_matching_errors(test_client, db):
+    build_catalog(db, test_client)
+    response = test_client.get('/income/track-matching-errors')
+    assert response.status_code == 200
+    assert json.loads(response.data) == []
+    path = os.getcwd() + "/tests/files/sd_digital_test1.csv"
+    data = {
+            'statement_source': 'sddigital'
+            }
+    data['file'] = (path, 'sd_digital_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert db.session.query(IncomePending).all() != 0
+    assert db.session.query(IncomePending).first().distributor == 'sddigital'
+    assert db.session.query(IncomePending).first().upc_id == '602318136800'
+    assert db.session.query(IncomePending).first().isrc_id == 'QZDZE1905001'
+    assert db.session.query(IncomePending).first().catalog_id == None
+    assert db.session.query(IncomePending).first().version_id == None
+
+    query = find_distinct_track_matching_errors()
+    assert len(query.all()) == 1
+
+    """check function"""
+    query = find_distinct_track_matching_errors()
+    res = query.first()
+    assert res.distributor == 'sddigital'
+    assert res.isrc_id == 'QZDZE1905x03'
+
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)

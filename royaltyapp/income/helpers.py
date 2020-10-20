@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import db, IncomePending, Version
+from royaltyapp.models import db, IncomePending, Version, Track
 
 from sqlalchemy import cast
 
@@ -211,6 +211,7 @@ class SDDigitalStatement(Statement):
         super().__init__(file)
         self.name = 'sddigital'
         self.encoding = 'unicode_escape'
+        self.dtype = {}
 
     def clean(self):
         self.df['datePaidlast'] = pd.to_datetime(self.df['datePaidlast'])
@@ -279,25 +280,51 @@ def insert_initial_values():
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()
 
-def find_distinct_matching_errors():
-    sel = db.session.query(IncomePending.catalog_id,
-        IncomePending.distributor,
-        IncomePending.upc_id,
-        IncomePending.isrc_id,
-        IncomePending.version_number,
-        IncomePending.catalog_id,
-        IncomePending.album_name,
-        IncomePending.track_name,
-        IncomePending.type,
-        IncomePending.medium,
-        IncomePending.description,
-        cast(IncomePending.amount, db.Numeric(8, 2)).label('amount'),
-        IncomePending.id,
+def find_distinct_version_matching_errors():
+    version_error = db.session.query(
+            IncomePending.catalog_id,
+            IncomePending.distributor,
+            IncomePending.upc_id,
+            IncomePending.isrc_id,
+            IncomePending.version_number,
+            IncomePending.catalog_id,
+            IncomePending.album_name,
+            IncomePending.track_name,
+            IncomePending.type,
+            IncomePending.medium,
+            IncomePending.description,
+            cast(IncomePending.amount, db.Numeric(8, 2)).label('amount'),
+            IncomePending.id,
         )
-    sel = sel.outerjoin(Version, Version.upc == IncomePending.upc_id)
+    version_error = version_error.outerjoin(Version, Version.upc == IncomePending.upc_id)
+    version_error = version_error.filter(IncomePending.type == 'album')
     # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
-    sel = sel.filter(Version.upc == None)
-    return sel
+    version_error = version_error.filter(Version.upc == None)
+    return version_error
+
+def find_distinct_track_matching_errors():
+
+    track_error = db.session.query(
+            IncomePending.catalog_id,
+            IncomePending.distributor,
+            IncomePending.upc_id,
+            IncomePending.isrc_id,
+            IncomePending.version_number,
+            IncomePending.catalog_id,
+            IncomePending.album_name,
+            IncomePending.track_name,
+            IncomePending.type,
+            IncomePending.medium,
+            IncomePending.description,
+            cast(IncomePending.amount, db.Numeric(8, 2)).label('amount'),
+            IncomePending.id,
+        )
+    track_error = track_error.filter(IncomePending.type == 'track')
+    track_error = track_error.outerjoin(Track, Track.isrc == IncomePending.isrc_id)
+    track_error = track_error.filter(Track.isrc == None)
+
+    return track_error
+
 
 def process_pending_statements():
     return 's'
