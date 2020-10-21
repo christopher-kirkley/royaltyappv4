@@ -46,7 +46,7 @@ def get_track_matching_errors():
 def update_errors():
     data = request.get_json(force=True)
     try:
-        sel = find_distinct_matching_errors()
+        sel = find_distinct_version_matching_errors()
         for item in data['data_to_match']:
             if item.get('version_number'):
                 sel = sel.filter(IncomePending.version_number == item['version_number'])
