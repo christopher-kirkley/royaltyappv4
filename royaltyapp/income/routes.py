@@ -41,6 +41,40 @@ def get_track_matching_errors():
     matching_errors = income_pendings_schema.dumps(query)
     return matching_errors
 
+@income.route('/income/update-track-errors', methods=['PUT'])
+def update_track_errors():
+    data = request.get_json(force=True)
+    try:
+        sel = find_distinct_track_matching_errors()
+        for item in data['data_to_match']:
+            if item.get('isrc_id'):
+                sel = sel.filter(IncomePending.isrc_id == item['isrc_id'])
+            if item.get('version_number'):
+                sel = sel.filter(IncomePending.version_number == item['version_number'])
+            if item.get('album_name'):
+                sel = sel.filter(IncomePending.album_name == item['album_name'])
+            if item.get('medium'):
+                sel = sel.filter(IncomePending.medium == item['medium'])
+            if item.get('description'):
+                sel = sel.filter(IncomePending.description == item['description'])
+            if item.get('catalog_id'):
+                sel = sel.filter(IncomePending.catalog_id == item['catalog_id'])
+            if item.get('distributor'):
+                sel = sel.filter(IncomePending.distributor == item['distributor'])
+            if item.get('upc_id'):
+                sel = sel.filter(IncomePending.upc_id == item['upc_id'])
+            if item.get('type'):
+                sel = sel.filter(IncomePending.type == item['type'])
+        temp = sel.subquery()
+        updated_errors = len(db.session.query(IncomePending).filter(IncomePending.id == temp.c.id).all())
+        (db.session.query(IncomePending)
+            .filter(IncomePending.id == temp.c.id)
+            .update({IncomePending.isrc_id : data['isrc_id']}))
+        db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'updated': updated_errors})
 
 @income.route('/income/update-errors', methods=['PUT'])
 def update_errors():

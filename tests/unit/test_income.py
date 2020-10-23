@@ -103,6 +103,30 @@ def test_can_get_track_matching_errors(test_client, db):
     assert res.distributor == 'sddigital'
     assert res.isrc_id == 'QZDZE1905x03'
 
+def test_can_update_track_matching_errors(test_client, db):
+    build_catalog(db, test_client)
+    path = os.getcwd() + "/tests/files/sd_digital_test1.csv"
+    data = {
+            'statement_source': 'sddigital'
+            }
+    data['file'] = (path, 'sd_digital_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    data = {
+            'isrc_id': 'QZDZE1905003',
+            'data_to_match' :
+                [
+                    {
+                        'isrc_id': 'QZDZE1905x03',
+                        }
+                ]
+
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-track-errors', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'updated': 1}
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
