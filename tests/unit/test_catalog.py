@@ -303,3 +303,10 @@ def test_can_get_all_versions(test_client, db):
     assert len(json_resp) == 1
     assert json_resp == ''
 
+def test_can_get_all_tracks(test_client, db):
+    add_one_track(db)
+    response = test_client.get('/tracks')
+    assert response.status_code == 200
+    json_resp = json.loads(response.data)
+    assert len(json_resp) == 1
+

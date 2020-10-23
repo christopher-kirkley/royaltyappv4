@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
 from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
-        VersionSchema, Track, TrackCatalogTable
+        VersionSchema, Track, TrackCatalogTable, TrackSchema
 
 import pandas as pd
 
@@ -175,8 +175,11 @@ def get_versions():
     version_schema = VersionSchema()
     versions_schema = VersionSchema(many=True)
     return versions_schema.dumps(result)
-    # file = request.files['CSV']
-    # df = pd.read_csv(file.stream)
-    # df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
-    # pending_version_to_version(db)
+
+@catalog.route('/tracks', methods=['GET'])
+def get_tracks():
+    result = Track.query.all()
+    track_schema = TrackSchema()
+    tracks_schema = TrackSchema(many=True)
+    return tracks_schema.dumps(result)
 
