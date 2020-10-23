@@ -52,10 +52,11 @@ def test_returns(browser, test_client, db):
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'sd_digital_test1.csv'
 
-    time.sleep(1000)
     """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('matching_errors').text == "You have 1 matching errors."
-    browser.find_element_by_id('fix_errors').click()
+    assert browser.find_element_by_id('track_matching_errors').text == "You have 1 track matching errors."
+
+    time.sleep(1000)
+    browser.find_element_by_id('fix_isrc_errors').click()
     
 
     """ User matches version number. """
