@@ -52,19 +52,20 @@ def test_returns(browser, test_client, db):
     assert pending_statement.text == 'shopify_test1.csv'
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('upc_matching_errors').text == "You have 40 UPC matching errors."
+    assert browser.find_element_by_id('upc_matching_errors').text == "You have 4 UPC matching errors."
 
     browser.find_element_by_id('fix_upc_errors').click()
 
     """ User matches version number. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 11
+    assert len(rows) == 5
     
     browser.find_element_by_id('match').click()
 
+    time.sleep(100)
     browser.find_element_by_id('distributor').click()
-    browser.find_element_by_id('sdphysical').click()
+    browser.find_element_by_id('shopify').click()
     browser.find_element_by_id('new_value').click()
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('submit').click()
@@ -76,12 +77,12 @@ def test_returns(browser, test_client, db):
     """ User goes to view imported income statements. """
     table = browser.find_element_by_id('income_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_elements_by_tag_name('td')[0].text == 'sd_physical_test1.csv'
+    assert rows[1].find_elements_by_tag_name('td')[0].text == 'shopify_test1.csv'
     browser.find_element_by_id('view1').click()
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
-    assert browser.find_element_by_id('number_of_records').text == '43'
+    assert browser.find_element_by_id('number_of_records').text == '4'
 
     """ User decides to go back and delete this statement. """
     browser.get('http://localhost:3000/income')
