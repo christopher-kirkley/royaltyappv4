@@ -17994,3 +17994,13 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 
 ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
 
+1603578454625	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9YPiSb"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603578457579	Marionette	INFO	Listening on port 62577
+1603578457646	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603578463526	Marionette	INFO	Stopped listening on port 62577
+1603578685443	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHv41Jd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603578688297	Marionette	INFO	Listening on port 62679
+1603578688366	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603578695984	Marionette	INFO	Stopped listening on port 62679
