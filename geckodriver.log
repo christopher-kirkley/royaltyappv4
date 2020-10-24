@@ -18122,3 +18122,21 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1603581944349	Marionette	INFO	Listening on port 64969
 1603581944418	Marionette	WARN	TLS certificate errors will be ignored for this session
 1603582058480	Marionette	INFO	Stopped listening on port 64969
+1603582278386	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1wedxK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603582281797	Marionette	INFO	Listening on port 65134
+1603582281815	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603582288449	Marionette	INFO	Stopped listening on port 65134
+1603582475156	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5O2etq"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603582478294	Marionette	INFO	Listening on port 65254
+1603582478370	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603582484486	Marionette	INFO	Stopped listening on port 65254
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603582504921	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUdZ2C6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603582508356	Marionette	INFO	Listening on port 65341
+1603582508432	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603582516017	Marionette	INFO	Stopped listening on port 65341

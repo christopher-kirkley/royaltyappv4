@@ -116,6 +116,7 @@ class SDSStatement(Statement):
         super().__init__(file)
         self.name = 'sds'
         self.encoding = 'utf-8'
+        self.dtype = { 'UPC/EAN': 'string'}
 
     def clean(self):
         self.df.drop(self.df[self.df['Period'] == 'Totals'].index, inplace=True)
