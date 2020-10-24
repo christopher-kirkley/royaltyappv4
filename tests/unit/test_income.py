@@ -63,6 +63,22 @@ def test_can_import_sdphysical_sales(test_client, db):
     assert first.upc_id == '999990005266'
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_import_shopify_sales(test_client, db):
+    path = os.getcwd() + "/tests/files/shopify_test1.csv"
+    data = {
+            'statement_source': 'shopify'
+            }
+    data['file'] = (path, 'shopify_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 4
+    first = db.session.query(IncomePending).first()
+    assert first.date == datetime.date(2020, 1, 1)
+    assert first.upc_id == None
+    assert json.loads(response.data) == {'success': 'true'}
+
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200

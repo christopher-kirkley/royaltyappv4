@@ -149,6 +149,7 @@ class ShopifyStatement(Statement):
         super().__init__(file)
         self.name = 'shopify'
         self.encoding = 'utf-8'
+        self.dtype = {}
 
     def clean(self):
         self.df.drop(self.df[self.df['Transaction type'] == 'shipping'].index, inplace=True)
