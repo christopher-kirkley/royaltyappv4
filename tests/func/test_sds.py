@@ -72,13 +72,14 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     """ Returns to process page and process payments. """
     browser.find_element_by_id('process_errors').click()
+    time.sleep(1000)
 
     """ User goes to view imported income statements. """
     table = browser.find_element_by_id('income_table')
     rows = table.find_elements_by_tag_name('tr')
     assert rows[1].find_elements_by_tag_name('td')[1].text == 'sds_test1.csv'
     assert rows[1].find_elements_by_tag_name('td')[2].text == '2020-01-01'
-    assert rows[1].find_elements_by_tag_name('td')[3].text == '2020-01-04'
+    assert rows[1].find_elements_by_tag_name('td')[3].text == '2020-01-01'
     browser.find_element_by_id('view1').click()
     
     """ User goes to imported income statement detail to view summa to view summary."""
