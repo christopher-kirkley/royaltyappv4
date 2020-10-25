@@ -206,15 +206,6 @@ class IncomeDistributor(db.Model):
                                         backref='income_distributor',
                                         passive_deletes=True)
 
-class IncomeDistributorSchema(ma.SQLAlchemyAutoSchema):
-    class Meta:
-        fields = (
-                "id",
-                "distributor_name",
-                "distributor_statement"
-                )
-        include_relationships = True
-
 class ImportedStatement(db.Model):
     __tablename__ = 'imported_statement'
 
@@ -228,22 +219,6 @@ class ImportedStatement(db.Model):
 
     # expense_total = relationship('ExpenseTotal', backref='imported_statement', passive_deletes=True)
     income_total = db.relationship('IncomeTotal', backref='imported_statement', passive_deletes=True)
-
-class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
-
-    distributor = ma.Nested("IncomeDistributorSchema")
-
-    class Meta:
-        fields = ("id",
-                "statement_name",
-                "income_distributor_id",
-                "transaction_type",
-                "start_date",
-                "end_date",
-                )
-
-    
-
 
 class IncomeTotal(db.Model):
     __tablename__ = 'income_total'
@@ -266,6 +241,28 @@ class IncomeTotal(db.Model):
     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
     track_id = db.Column(db.Integer, db.ForeignKey('track.id'))
+
+class IncomeDistributorSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        fields = (
+                "id",
+                "distributor_name",
+                "distributor_statement"
+                )
+        include_relationships = True
+
+class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
+
+    class Meta:
+        fields = (
+                "id",
+                "statement_name",
+                "income_distributor_id",
+                "transaction_type",
+                "start_date",
+                "end_date",
+                )
+
 
 class IncomeTotalSchema(ma.SQLAlchemySchema):
     class Meta:
