@@ -72,7 +72,6 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     """ Returns to process page and process payments. """
     browser.find_element_by_id('process_errors').click()
-    time.sleep(1000)
 
     """ User goes to view imported income statements. """
     table = browser.find_element_by_id('income_table')
@@ -85,8 +84,6 @@ def test_returns(browser, test_client, db):
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
     assert browser.find_element_by_id('number_of_records').text == '10'
-
-    time.sleep(1000)
 
     """ User decides to go back and delete this statement. """
     browser.get('http://localhost:3000/income')
