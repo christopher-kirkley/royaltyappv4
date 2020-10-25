@@ -22,7 +22,6 @@ def test_returns(browser, test_client, db):
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
 
-    
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
     time.sleep(1)
@@ -77,12 +76,16 @@ def test_returns(browser, test_client, db):
     """ User goes to view imported income statements. """
     table = browser.find_element_by_id('income_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_elements_by_tag_name('td')[0].text == 'sds_test1.csv'
+    assert rows[1].find_elements_by_tag_name('td')[1].text == 'sds_test1.csv'
+    assert rows[1].find_elements_by_tag_name('td')[2].text == '2020-01-01'
+    assert rows[1].find_elements_by_tag_name('td')[3].text == '2020-01-04'
     browser.find_element_by_id('view1').click()
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
     assert browser.find_element_by_id('number_of_records').text == '10'
+
+    time.sleep(1000)
 
     """ User decides to go back and delete this statement. """
     browser.get('http://localhost:3000/income')

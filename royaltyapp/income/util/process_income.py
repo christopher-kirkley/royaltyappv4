@@ -31,16 +31,24 @@ def normalize_track():
 
 def insert_into_imported_statements():
     submitted_statements = (db.session.query(IncomePending.statement,
-    IncomePending.distributor_id,)
-    .distinct().all()
+        IncomePending.distributor_id,
+        func.min(IncomePending.date).label('start_date'),
+        func.max(IncomePending.date).label('end_date'),
+        )
+        .group_by(IncomePending.statement, IncomePending.distributor_id)
+        .distinct().all()
     )
     for item in submitted_statements:
         try:
             i = (ImportedStatement.__table__
-            .insert().values(statement_name=item.statement,
-            transaction_type='income',
-            income_distributor_id=item.distributor_id)
-            )
+                    .insert().values(
+                        statement_name=item.statement,
+                        transaction_type='income',
+                        income_distributor_id=item.distributor_id,
+                        start_date=item.start_date,
+                        end_date=item.end_date,
+                        )
+                )
             db.session.execute(i)
             db.session.commit()
         except exc.SQLAlchemyError:
