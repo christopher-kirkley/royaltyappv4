@@ -13,7 +13,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors
+from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
 def test_can_import_bandcamp_sales(test_client, db):
     path = os.getcwd() + "/tests/files/bandcamp_test.csv"
@@ -283,16 +283,47 @@ def test_can_view_imported_statements(test_client, db):
     response = test_client.post('/expense/process-pending')
     response = test_client.get('/income/imported-statements')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{
+    assert json.loads(response.data) == {
                                      'bandcamp':
-                                        {
+                                        [{
                                             'id' : 1,
                                             'statement_name' : 'one_bandcamp_test.csv',
                                             'start_date' : '2020-01-01',
                                             'end_date' : '2020-01-04',
                                         }
-                                        }]
-
+                                        ],
+                                    'quickbooks': [],
+                                    'sds': [],
+                                    'sddigital': [],
+                                    'sdphysical': [],
+                                    'shopify': [],
+                                        }
+    add_two_bandcamp_sales(test_client)
+    response = test_client.post('/income/process-pending')
+    response = test_client.post('/expense/process-pending')
+    response = test_client.get('/income/imported-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {
+                                     'bandcamp':
+                                        [{
+                                            'id' : 1,
+                                            'statement_name' : 'one_bandcamp_test.csv',
+                                            'start_date' : '2020-01-01',
+                                            'end_date' : '2020-01-04'
+                                        },
+                                        {
+                                            'id' : 3,
+                                            'statement_name' : 'two_bandcamp_test.csv',
+                                            'start_date' : '2020-01-01',
+                                            'end_date' : '2020-01-01'
+                                        }
+                                        ],
+                                    'quickbooks': [],
+                                    'sds': [],
+                                    'sddigital': [],
+                                    'sdphysical': [],
+                                    'shopify': [],
+                                        }
 
 def test_can_view_imported_statement_detail(test_client, db):
     build_catalog(db, test_client)

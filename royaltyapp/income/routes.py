@@ -170,16 +170,27 @@ def process_pending_income():
 
 @income.route('/income/imported-statements', methods=['GET'])
 def get_imported_statements():
+    """Build object of distributor name."""
+    query = (db.session.query(IncomeDistributor.distributor_name)
+            .filter(ImportedStatement.transaction_type == 'income')
+            .all()
+            )
+    result = {}
+
+    for row in query:
+        result[row.distributor_name] = []
+
+    """Append results to distributor name"""
     query = (db.session.query(
         ImportedStatement.income_distributor_id,
         IncomeDistributor.distributor_name,
         )
             .join(IncomeDistributor)
             .filter(ImportedStatement.transaction_type == 'income')
+            .distinct()
             .all())
-    res = []
-    for distributor in query:
-        entry = {}
+
+    for row in query:
         data = (db.session.query(
             ImportedStatement.id,
             ImportedStatement.statement_name,
@@ -187,23 +198,19 @@ def get_imported_statements():
             ImportedStatement.end_date,
             )
                 .filter(ImportedStatement.transaction_type == 'income')
-                .filter(ImportedStatement.income_distributor_id == distributor.income_distributor_id)
+                .filter(ImportedStatement.income_distributor_id == row.income_distributor_id)
                 .all())
 
-        for row in data:
+        for item in data:
             obj = {
-                    'start_date': row.start_date.strftime("%Y-%m-%d"),
-                    'end_date': row.end_date.strftime("%Y-%m-%d"),
-                    'id': row.id,
-                    'statement_name': row.statement_name
+                    'start_date': item.start_date.strftime("%Y-%m-%d"),
+                    'end_date': item.end_date.strftime("%Y-%m-%d"),
+                    'id': item.id,
+                    'statement_name': item.statement_name
                     }
-            entry[distributor.distributor_name] = obj
-            res.append(entry)
+            result[row.distributor_name].append(obj)
 
-
-
-
-    return jsonify(res)
+    return jsonify(result)
 
 @income.route('/income/statements/<id>', methods=['GET'])
 def get_imported_statement_detail(id):
