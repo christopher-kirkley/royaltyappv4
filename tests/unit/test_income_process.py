@@ -60,6 +60,8 @@ def test_can_insert_into_imported_statements_table(test_client, db):
     assert res.statement_name == 'one_bandcamp_test.csv'
     assert res.transaction_type == 'income'
     assert res.income_distributor_id == 1
+    assert res.start_date.strftime("%Y-%m-%d") == '2020-01-01'
+    assert res.end_date.strftime("%Y-%m-%d") == '2020-01-04'
 
 def test_can_normalize_statement_id(test_client, db):
     build_catalog(db, test_client)

@@ -196,6 +196,7 @@ class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
 
 
 class IncomeDistributor(db.Model):
+    """Table populated with all available income sources. Should rename to income_source"""
     __tablename__ = 'income_distributor'
     
     id = db.Column(db.Integer, primary_key=True)
@@ -220,6 +221,8 @@ class ImportedStatement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     statement_name = db.Column(db.String(255), unique=True)
     transaction_type = db.Column(db.String(255))
+    start_date = db.Column(db.Date)
+    end_date = db.Column(db.Date)
 
     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
 
@@ -231,6 +234,7 @@ class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
         fields = ("id",
                 "statement_name",
                 "income_distributor_id",
+                "distributor_name",
                 "transaction_type")
         include_relationships = True
 
