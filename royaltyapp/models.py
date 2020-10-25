@@ -92,13 +92,11 @@ class VersionSchema(ma.SQLAlchemyAutoSchema):
     catalog_id = ma.auto_field("catalog") 
 
 
-
 class CatalogSchema(ma.SQLAlchemyAutoSchema):
     version = ma.Nested(VersionSchema(many=True))
     artist = ma.Nested("ArtistSchema", exclude=("catalog",))
     tracks = ma.Nested("TrackSchema", many=True)
     
-
     class Meta:
         model = Catalog
         fields = ("id",
@@ -235,7 +233,10 @@ class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
                 "statement_name",
                 "income_distributor_id",
                 "distributor_name",
-                "transaction_type")
+                "transaction_type",
+                "start_date",
+                "end_date",
+                )
         include_relationships = True
 
 class IncomeTotal(db.Model):
