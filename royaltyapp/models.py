@@ -427,6 +427,31 @@ def insert_initial_values(db):
                     expense_type='advance'),
         ExpenseType(id=2,
                     expense_type='recoupable'),
+        OrderSettings(
+            distributor_id='1',
+            order_fee='0',
+            order_percentage='0',
+            ),
+        OrderSettings(
+            distributor_id='2',
+            order_fee='0',
+            order_percentage='0',
+            ),
+        OrderSettings(
+            distributor_id='3',
+            order_fee='0',
+            order_percentage='0',
+            ),
+        OrderSettings(
+            distributor_id='4',
+            order_fee='0',
+            order_percentage='0',
+            ),
+        OrderSettings(
+            distributor_id='5',
+            order_fee='0',
+            order_percentage='0',
+            ),
     ]
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()

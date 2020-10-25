@@ -26,10 +26,11 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('settings').click()
     assert browser.find_element_by_id('header').text == 'Settings'
 
+    time.sleep(1000)
     """User adds setting for bandcamp."""
+    browser.find_element_by_id('add_order_fee').click()
     browser.find_element_by_id('distributor').click()
     browser.find_element_by_id('bandcamp').click()
-    time.sleep(10000)
 
 
     # """ User uploads catalog and versions. """
