@@ -18301,3 +18301,472 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1603640383138	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHNFyoO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603640386484	Marionette	INFO	Listening on port 55479
+1603640386573	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1603640392657	Marionette	INFO	Stopped listening on port 55479
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603640407913	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXCZtel"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603640410784	Marionette	INFO	Listening on port 55584
+1603640410794	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1603640533813	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5oc6xp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603640536602	Marionette	INFO	Listening on port 55697
+1603640536711	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603640537717	Marionette	INFO	Stopped listening on port 55697
+1603640553658	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebw13AV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603640556759	Marionette	INFO	Listening on port 55772
+1603640556894	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7489: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/income/ImportedIncome.js: Unexpected token, expected ";" (32:35)
+
+[0m [90m 30 | [39m		fetch([32m'http://localhost:5000/income/imported-statements'[39m)[0m
+[0m [90m 31 | [39m		[33m.[39mthen(res [33m=>[39m res[33m.[39mjson())[0m
+[0m[31m[1m>[22m[39m[90m 32 | [39m		[33m.[39mthen(json [33m=>[39m {console[33m.[39mlog(json) setImportedIncome(json)})[0m
+[0m [90m    | [39m		                                 [31m[1m^[22m[39m[0m
+[0m [90m 33 | [39m	}[33m,[39m [])[0m
+[0m [90m 34 | [39m[0m
+[0m [90m 35 | [39m	[36mfunction[39m getImportedIncome() {[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8966:16)
+    at Object.semicolon (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8948:40)
+    at Object.parseExpressionStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11971:10)
+    at Object.parseExpressionStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:2617:18)
+    at Object.parseStatementContent (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11567:19)
+    at Object.parseStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:11431:17)
+    at Object.parseStatement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:2590:26)
+1603640557889	Marionette	INFO	Stopped listening on port 55772
+1603640599817	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilea6VSo1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603640602586	Marionette	INFO	Listening on port 55856
+1603640602605	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://devtools/shared/layout/utils.js, line 60: TypeError: win is undefined
+JavaScript error: resource://devtools/shared/layout/utils.js, line 60: TypeError: win is undefined
+JavaScript error: resource://devtools/shared/layout/utils.js, line 60: TypeError: win is undefined
+JavaScript error: resource://devtools/shared/layout/utils.js, line 60: TypeError: win is undefined
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:405:10
+
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/styles.js:989:5\nhandler@resource://devtools/shared/protocol/Actor.js:166:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.child2/pagestyle26 (resource://devtools/server/actors/styles.js:989:5)", "resource://devtools/shared/protocol/Front.js", 327))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8393: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8393: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome[0] is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8450: TypeError: props.importedIncome.map is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {bandcamp, quickbooks, sddigital, sdphysical, sds, shopify}). If you meant to render a collection of children, use an array instead.
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at IncomeTable.js:33)
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {bandcamp, quickbooks, sddigital, sdphysical, sds, shopify}). If you meant to render a collection of children, use an array instead.
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at IncomeTable.js:33)
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+1603641614668	Marionette	INFO	Stopped listening on port 55856
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1603641658223	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiledQxhn1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603641660958	Marionette	INFO	Listening on port 56247
+1603641660991	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8479: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8479: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8479: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8479: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.innerArray is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.innerArray is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+1603642671781	Marionette	INFO	Stopped listening on port 56247
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603642681587	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilehqp5Y5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603642684408	Marionette	INFO	Listening on port 56674
+1603642684469	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://neighbor.report/js/all.js, line 1: Script terminated by timeout at:
+set@https://neighbor.report/js/all.js:1:43237
+r.fn.extend@https://neighbor.report/js/all.js:1:1849
+simulate@https://neighbor.report/js/all.js:1:70083
+c@https://neighbor.report/js/all.js:1:70834
+
+JavaScript error: resource://gre/modules/Finder.jsm, line 58: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 58: TypeError: docShell is null
+JavaScript error: resource://gre/modules/Finder.jsm, line 58: TypeError: docShell is null
+JavaScript warning: http://www.locateancestors.com/js/sortTable.js, line 605: unreachable code after return statement
+1603643695376	Marionette	INFO	Stopped listening on port 56674
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1603643762818	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUr5J8V"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603643765998	Marionette	INFO	Listening on port 57429
+1603643766201	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8451: TypeError: row.map is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {end_date, id, start_date, statement_name}). If you meant to render a collection of children, use an array instead.
+    in p (at IncomeTable.js:44)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at IncomeTable.js:33)
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79366: Error: Objects are not valid as a React child (found: object with keys {end_date, id, start_date, statement_name}). If you meant to render a collection of children, use an array instead.
+    in p (at IncomeTable.js:44)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at IncomeTable.js:33)
+    in IncomeTable (at Income.js:71)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Income.js:61)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:60)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Income.js:59)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Income.js:57)
+    in Income (created by Context.Consumer)
+    in Route (at Main.js:247)
+    in Switch (at Main.js:239)
+    in div (at Main.js:127)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:126)
+    in ThemeProvider (at Main.js:125)
+    in Main (at src/index.js:10)
+1603644777533	Marionette	INFO	Stopped listening on port 57429
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1603645230925	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePw0hSW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603645233938	Marionette	INFO	Listening on port 57846
+1603645234045	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.ampproject.org/rtv/012010122315000/v0/amp-analytics-0.1.js, line 138: SecurityError: Permission denied to access property "frameElement" on cross-origin object
+JavaScript error: https://pippio.com/api/sync?pid=1391&ref=https%3A%2F%2Fwww.wweek.com%2Fnews%2F2016%2F08%2F17%2Fa-hit-man-came-to-kill-susan-kuhnhausen-she-survived-he-didnt%2F&it=1&iv=c3auo5c91cai53s, line 55: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 80342: Error: Row(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+1603646245161	Marionette	INFO	Stopped listening on port 57846
+1603646274013	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebbBeIe"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603646277223	Marionette	INFO	Listening on port 60717
+1603646277317	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8348: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/income/IncomeTable.js: Unexpected token, expected "," (185:1)
+
+[0m [90m 183 | [39m			[33m<[39m[33m/[39m[33mReact[39m[33m.[39m[33mFragment[39m[33m>[39m[0m
+[0m [90m 184 | [39m			[0m
+[0m[31m[1m>[22m[39m[90m 185 | [39m	}[0m
+[0m [90m     | [39m	[31m[1m^[22m[39m[0m
+[0m [90m 186 | [39m[0m
+[0m [90m 187 | [39m	[36mreturn[39m ([0m
+[0m [90m 188 | [39m		    [33m<[39m[33mTableContainer[39m component[33m=[39m{[33mPaper[39m}[33m>[39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8966:16)
+    at Object.expect (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8952:28)
+    at Object.parseParenAndDistinguishExpression (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10457:14)
+    at Object.parseParenAndDistinguishExpression (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:3382:18)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10177:21)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4718:20)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9844:23)
+1603646278287	Marionette	INFO	Stopped listening on port 60717
+1603646293140	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZoq3L4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603646295915	Marionette	INFO	Listening on port 60793
+1603646295959	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8635: TypeError: row is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8635: TypeError: row is undefined
+1603647306789	Marionette	INFO	Stopped listening on port 60793
+1603647313255	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegxZih1"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603647316404	Marionette	INFO	Listening on port 61170
+1603647316475	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8348: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/income/IncomeTable.js: Expected corresponding JSX closing tag for <Table> (214:6)
+
+[0m [90m 212 | [39m								[33m<[39m[33m/[39m[33mTableRow[39m[33m>[39m[0m
+[0m [90m 213 | [39m							[33m<[39m[33mTable[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 214 | [39m						[33m<[39m[33m/[39m[33mCollapse[39m[33m>[39m[0m
+[0m [90m     | [39m						[31m[1m^[22m[39m[0m
+[0m [90m 215 | [39m					[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+[0m [90m 216 | [39m				[33m<[39m[33m/[39m[33mTableRow[39m[33m>[39m[0m
+[0m [90m 217 | [39m[0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4680:16)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElementAt (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4648:32)
+    at Object.jsxParseElement (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4706:17)
+1603647317433	Marionette	INFO	Stopped listening on port 61170
+1603647346717	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileoHWQs0"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603647349417	Marionette	INFO	Listening on port 61246
+1603647349498	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.props is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8714: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8715: TypeError: props.importedIncome is undefined
+1603648360581	Marionette	INFO	Stopped listening on port 61246
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1603648366146	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerda5Ru"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603648369217	Marionette	INFO	Listening on port 61526
+1603648369232	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603648370342	Marionette	INFO	Stopped listening on port 61526
+1603648377945	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileLzyLQN"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603648381099	Marionette	INFO	Listening on port 61603
+1603648381139	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603648382187	Marionette	INFO	Stopped listening on port 61603
+1603648397626	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCIIjzy"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603648400672	Marionette	INFO	Listening on port 61693
+1603648400706	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1603648486771	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7CKJJQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603648489644	Marionette	INFO	Listening on port 61838
+1603648489677	Marionette	WARN	TLS certificate errors will be ignored for this session
+objc[77402]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff9bd643d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x2da7dcf50). One of the two will be used. Which one is undefined.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1603649832038	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileq4ZHmV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603649835036	Marionette	INFO	Listening on port 62331
+1603649835105	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603649848792	Marionette	INFO	Stopped listening on port 62331
+1603650613955	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileufZtjp"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603650616793	Marionette	INFO	Listening on port 62555
+1603650616832	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603650617976	Marionette	INFO	Stopped listening on port 62555
+1603650682117	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileG7nKAF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603650684701	Marionette	INFO	Listening on port 62635
+1603650684785	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603650685897	Marionette	INFO	Stopped listening on port 62635
+1603650877990	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOrsgaD"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603650883199	Marionette	INFO	Listening on port 62799
+1603650883336	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1603650885500	Marionette	INFO	Stopped listening on port 62799
+1603650901271	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileqC293n"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603650904145	Marionette	INFO	Listening on port 62938
+1603650904166	Marionette	WARN	TLS certificate errors will be ignored for this session
+1603650905952	Marionette	INFO	Stopped listening on port 62938
+1603650917493	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileokOVpd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603650920263	Marionette	INFO	Listening on port 63017
+1603650920365	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

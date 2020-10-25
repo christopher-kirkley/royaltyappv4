@@ -285,7 +285,6 @@ class IncomeTotalSchema(ma.SQLAlchemySchema):
     label_net = fields.Decimal()
 
 
-
 class OrderSettings(db.Model):
     __tablename__ = 'order_settings'
 
@@ -297,8 +296,11 @@ class OrderSettings(db.Model):
 
 class OrderSettingsSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
+        json_module = simplejson
         fields = ("id", "order_percentage", "order_fee", "distributor_id")
         include_relationships = True
+    order_percentage = fields.Decimal()
+    order_fee = fields.Decimal()
 
 class ExpensePending(db.Model):
     __tablename__ = 'expense_pending'
