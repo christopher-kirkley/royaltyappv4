@@ -284,12 +284,13 @@ def test_can_view_imported_statements(test_client, db):
     response = test_client.get('/income/imported-statements')
     assert response.status_code == 200
     assert json.loads(response.data) == [{
-                                        'id' : 1,
-                                        'income_distributor_id' : 1,
-                                        'statement_name' : 'one_bandcamp_test.csv',
-                                        'transaction_type' : 'income',
-                                        'start_date' : '2020-01-01',
-                                        'end_date' : '2020-01-04',
+                                     'bandcamp':
+                                        {
+                                            'id' : 1,
+                                            'statement_name' : 'one_bandcamp_test.csv',
+                                            'start_date' : '2020-01-01',
+                                            'end_date' : '2020-01-04',
+                                        }
                                         }]
 
 

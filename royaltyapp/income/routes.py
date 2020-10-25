@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from sqlalchemy import exc, func, cast, Numeric
+from sqlalchemy import exc, func, cast, Numeric, Date
 # from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 #         VersionSchema, Track, TrackCatalogTable
 
@@ -170,13 +170,40 @@ def process_pending_income():
 
 @income.route('/income/imported-statements', methods=['GET'])
 def get_imported_statements():
-    query = (db.session.query(ImportedStatement)
+    query = (db.session.query(
+        ImportedStatement.income_distributor_id,
+        IncomeDistributor.distributor_name,
+        )
+            .join(IncomeDistributor)
+            .filter(ImportedStatement.transaction_type == 'income')
+            .all())
+    res = []
+    for distributor in query:
+        entry = {}
+        data = (db.session.query(
+            ImportedStatement.id,
+            ImportedStatement.statement_name,
+            ImportedStatement.start_date,
+            ImportedStatement.end_date,
+            )
                 .filter(ImportedStatement.transaction_type == 'income')
-                .all()
-                )
-    imported_statement_schema = ImportedStatementSchema(many=True)
-    statements = imported_statement_schema.dumps(query)
-    return statements
+                .filter(ImportedStatement.income_distributor_id == distributor.income_distributor_id)
+                .all())
+
+        for row in data:
+            obj = {
+                    'start_date': row.start_date.strftime("%Y-%m-%d"),
+                    'end_date': row.end_date.strftime("%Y-%m-%d"),
+                    'id': row.id,
+                    'statement_name': row.statement_name
+                    }
+            entry[distributor.distributor_name] = obj
+            res.append(entry)
+
+
+
+
+    return jsonify(res)
 
 @income.route('/income/statements/<id>', methods=['GET'])
 def get_imported_statement_detail(id):
