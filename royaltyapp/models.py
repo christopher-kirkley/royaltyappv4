@@ -200,6 +200,7 @@ class IncomeDistributor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     distributor_name = db.Column(db.String(255), unique=True)
     distributor_statement = db.Column(db.String(255), unique=True)
+
     income_total = db.relationship('IncomeTotal', backref='income_distributor')
     imported_statement = db.relationship('ImportedStatement',
                                         backref='income_distributor',
@@ -212,6 +213,7 @@ class IncomeDistributorSchema(ma.SQLAlchemyAutoSchema):
                 "distributor_name",
                 "distributor_statement"
                 )
+        include_relationships = True
 
 class ImportedStatement(db.Model):
     __tablename__ = 'imported_statement'
@@ -228,16 +230,20 @@ class ImportedStatement(db.Model):
     income_total = db.relationship('IncomeTotal', backref='imported_statement', passive_deletes=True)
 
 class ImportedStatementSchema(ma.SQLAlchemyAutoSchema):
+
+    distributor = ma.Nested("IncomeDistributorSchema")
+
     class Meta:
         fields = ("id",
                 "statement_name",
                 "income_distributor_id",
-                "distributor_name",
                 "transaction_type",
                 "start_date",
                 "end_date",
                 )
-        include_relationships = True
+
+    
+
 
 class IncomeTotal(db.Model):
     __tablename__ = 'income_total'
