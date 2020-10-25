@@ -287,7 +287,9 @@ def test_can_view_imported_statements(test_client, db):
                                         'id' : 1,
                                         'income_distributor_id' : 1,
                                         'statement_name' : 'one_bandcamp_test.csv',
-                                        'transaction_type' : 'income'
+                                        'transaction_type' : 'income',
+                                        'start_date' : '2020-01-01',
+                                        'end_date' : '2020-01-04',
                                         }]
 
 
