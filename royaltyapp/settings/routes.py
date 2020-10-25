@@ -10,10 +10,19 @@ settings = Blueprint('settings', __name__)
 
 @settings.route('/settings/order-fee', methods=['GET'])
 def get_order_fees():
-    query = db.session.query(OrderSettings).all()
-    order_settings_schema = OrderSettingsSchema(many=True)
-    settings = order_settings_schema.dumps(query)
-    return settings
+    query = (db.session.query(
+        OrderSettings.order_fee,
+        OrderSettings.order_percentage,
+        OrderSettings.order_limit,
+        IncomeDistributor.distributor_name)
+            .join(IncomeDistributor,
+                IncomeDistributor.id == OrderSettings.distributor_id)
+            .all())
+    return jsonify(query)
+
+    # order_settings_schema = OrderSettingsSchema(many=True)
+    # settings = order_settings_schema.dumps(query)
+    # return settings
     
 @settings.route('/settings/order-fee', methods=['POST'])
 def add_order_fees():

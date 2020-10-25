@@ -291,16 +291,22 @@ class OrderSettings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     order_percentage = db.Column(db.Float)
     order_fee = db.Column(db.Numeric(8, 2))
+    order_limit = db.Column(db.Numeric(8, 2))
 
     distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'), unique=True)
 
 class OrderSettingsSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         json_module = simplejson
-        fields = ("id", "order_percentage", "order_fee", "distributor_id")
+        fields = ("id",
+                "order_percentage",
+                "order_fee",
+                "distributor_id",
+                "distributor")
         include_relationships = True
     order_percentage = fields.Decimal()
     order_fee = fields.Decimal()
+    distributor = ma.Nested(IncomeDistributorSchema(many=True))
 
 class ExpensePending(db.Model):
     __tablename__ = 'expense_pending'
@@ -431,26 +437,31 @@ def insert_initial_values(db):
             distributor_id='1',
             order_fee='0',
             order_percentage='0',
+            order_limit='0',
             ),
         OrderSettings(
             distributor_id='2',
             order_fee='0',
             order_percentage='0',
+            order_limit='0',
             ),
         OrderSettings(
             distributor_id='3',
             order_fee='0',
             order_percentage='0',
+            order_limit='0',
             ),
         OrderSettings(
             distributor_id='4',
             order_fee='0',
             order_percentage='0',
+            order_limit='0',
             ),
         OrderSettings(
             distributor_id='5',
             order_fee='0',
             order_percentage='0',
+            order_limit='0',
             ),
     ]
     db.session.bulk_save_objects(statements_to_insert)
