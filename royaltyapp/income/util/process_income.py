@@ -71,21 +71,26 @@ def calculate_adjusted_amount():
     sel = (
     db.session.query(IncomePending.order_id.label('order_id'),
     IncomePending.amount.label('amount'),
-    func.coalesce(OrderSettings.order_percentage, 0).label('order_percentage'),
-    func.coalesce(OrderSettings.order_fee, 0).label('order_fee'))
+    OrderSettings.order_percentage.label('order_percentage'),
+    OrderSettings.order_fee.label('order_fee'),
+    OrderSettings.order_limit.label('order_limit'))
     .filter(IncomePending.medium == 'physical')
     .outerjoin(OrderSettings, OrderSettings.distributor_id == IncomePending.distributor_id)
     .subquery()
     )
 
+    """Calculate label fee if greater than limit."""
     sel = (
-    db.session.query(sel.c.order_id,
-    ((func.sum(sel.c.amount) * sel.c.order_percentage + sel.c.order_fee)
-    / func.count(sel.c.order_id)).label('label_fee'))
+    db.session.query(
+        sel.c.order_id,
+        ((func.sum(sel.c.amount) * sel.c.order_percentage + sel.c.order_fee)
+            / func.count(sel.c.order_id)).label('label_fee')
+        )
     .distinct(sel.c.order_id)
-    .group_by(sel.c.order_id,
-    sel.c.order_percentage,
-    sel.c.order_fee)
+    .group_by(
+        sel.c.order_id,
+        sel.c.order_percentage,
+        sel.c.order_fee)
     .subquery()
     )
 
@@ -97,6 +102,7 @@ def calculate_adjusted_amount():
     .values(label_fee=sel.c.label_fee)
     )
     db.session.execute(update)
+
     """ZERO OUT FEE WHERE DOES NOT APPLY. This should be addressed not as a deletion, but a filter on insert."""
     update = (
     IncomePending.__table__
@@ -105,13 +111,16 @@ def calculate_adjusted_amount():
     .values(label_fee=0)
     )
     db.session.execute(update)
+
     update = (
     IncomePending.__table__
     .update()
-    .where(IncomePending.amount < 5)
+    .where(IncomePending.distributor_id == OrderSettings.distributor_id)
+    .where(IncomePending.amount < OrderSettings.order_limit)
     .values(label_fee=0)
     )
     db.session.execute(update)
+
     update = (
     IncomePending.__table__
     .update()
