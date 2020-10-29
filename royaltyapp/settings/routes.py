@@ -11,6 +11,7 @@ settings = Blueprint('settings', __name__)
 @settings.route('/settings/order-fee', methods=['GET'])
 def get_order_fees():
     query = (db.session.query(
+        OrderSettings.distributor_id,
         OrderSettings.order_fee,
         OrderSettings.order_percentage,
         OrderSettings.order_limit,
