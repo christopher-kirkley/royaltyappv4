@@ -19,11 +19,7 @@ def get_order_fees():
                 IncomeDistributor.id == OrderSettings.distributor_id)
             .all())
     return jsonify(query)
-
-    # order_settings_schema = OrderSettingsSchema(many=True)
-    # settings = order_settings_schema.dumps(query)
-    # return settings
-    
+ 
 @settings.route('/settings/order-fee', methods=['POST'])
 def add_order_fees():
     data = request.get_json(force=True)
@@ -37,16 +33,17 @@ def add_order_fees():
     return jsonify({'success': 'true'})
 
 @settings.route('/settings/order-fee', methods=['PUT'])
-def edit_order_fee():
+def update_order_setting():
     data = request.get_json(force=True)
-    distributor_id = data['distributor_id']
-    res = db.session.query(OrderSettings).filter(OrderSettings.distributor_id == distributor_id).first()
-    if res == None:
-        return jsonify({'success': 'false'})
-    id = res.id
-    order_setting = db.session.query(OrderSettings).get(id)
-    order_setting.order_percentage = data['order_percentage']
-    order_setting.order_fee = data['order_fee']
-    db.session.commit()
+    for item in data:
+        distributor_id = item['distributor_id']
+        res = db.session.query(OrderSettings).filter(OrderSettings.distributor_id == distributor_id).first()
+        if res == None:
+            return jsonify({'success': 'false'})
+        id = res.id
+        order_setting = db.session.query(OrderSettings).get(id)
+        order_setting.order_percentage = item['order_percentage']
+        order_setting.order_fee = item['order_fee']
+        db.session.commit()
     return jsonify({'success': 'true'})
 

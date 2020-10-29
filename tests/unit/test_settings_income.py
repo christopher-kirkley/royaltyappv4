@@ -48,11 +48,21 @@ def test_can_get_order_fees(test_client, db):
 #     assert json.loads(response.data)[0]['order_percentage'] == 0.03
 #     assert json.loads(response.data)[0]['order_fee'] == 2.00
 
-def test_can_edit_order_fee(test_client, db):
-    data = {'distributor_id': 1,
-            'order_percentage': 0.04,
-            'order_fee': 3.00
-            }
+def test_can_update_order_fee(test_client, db):
+    data = [
+            {
+                'distributor_id': 1,
+                'order_percentage': 0.04,
+                'order_fee': 3.00, 
+                'order_limit': 5.00
+            },
+            {
+                'distributor_id': 2,
+                'order_percentage': 0.04,
+                'order_fee': 3.00,
+                'order_limit': 5.00
+            },
+            ]
     json_data = json.dumps(data)
     response = test_client.put('/settings/order-fee', data=json_data)
     assert response.status_code == 200
