@@ -25,6 +25,7 @@ def test_can_get_order_fees(test_client, db):
     response = test_client.get('/settings/order-fee')
     assert response.status_code == 200
     assert json.loads(response.data)[0] == {
+            'distributor_id': 1,
             'distributor_name': 'bandcamp',
             'order_fee': 0.0,
             'order_percentage': 0.0,
