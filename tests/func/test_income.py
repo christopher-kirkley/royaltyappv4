@@ -22,7 +22,6 @@ def test_returns(browser, test_client, db):
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
 
-    
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
     time.sleep(1)

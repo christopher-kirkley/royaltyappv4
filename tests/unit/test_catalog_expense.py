@@ -10,7 +10,7 @@ import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType
 
-from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
+from royaltyapp.income.helpers import StatementFactory, process_pending_statements
 
 from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense
 
@@ -45,19 +45,19 @@ def test_can_list_pending_statements(test_client, db):
 def test_can_get_catalog_matching_errors(test_client, db):
     res = db.session.query(ExpenseType).all()
     assert len(res) != 0
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/catalog-matching-errors')
     assert response.status_code == 200
     add_catalog_expense(test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/catalog-matching-errors')
     assert response.status_code == 200
     assert db.session.query(ExpensePending).all() != 0
     assert db.session.query(ExpensePending).first().statement == 'expense_catalog.csv'
-    res = json.loads(response.data)[0]['catalog_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 4
     build_catalog(db, test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/catalog-matching-errors')
     assert response.status_code == 200
-    res = json.loads(response.data)[0]['catalog_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 2
 
 def test_can_update_pending_table(test_client, db):
