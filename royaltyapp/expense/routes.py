@@ -46,25 +46,26 @@ def get_pending_statements():
     pending_statements = expense_pending_schema.dumps(query)
     return pending_statements
 
-@expense.route('/expense/matching-errors', methods=['GET'])
-def get_matching_errors():
+@expense.route('/expense/artist-matching-errors', methods=['GET'])
+def get_artist_matching_errors():
     query = artist_matching_errors()
     expense_pending_schema = ExpensePendingSchema(many=True)
     artist_errors = expense_pending_schema.dumps(query)
+    return artist_errors
+
+@expense.route('/expense/catalog-matching-errors', methods=['GET'])
+def get_catalog_matching_errors():
     query = catalog_matching_errors()
+    expense_pending_schema = ExpensePendingSchema(many=True)
     catalog_errors = expense_pending_schema.dumps(query)
+    return catalog_errors
+
+@expense.route('/expense/type-matching-errors', methods=['GET'])
+def get_type_matching_errors():
     query = expense_type_matching_errors()
+    expense_pending_schema = ExpensePendingSchema(many=True)
     type_errors = expense_pending_schema.dumps(query)
-    total_matching_errors = json.loads(artist_errors) + json.loads(type_errors) + json.loads(catalog_errors)
-    print(catalog_errors)
-    # total_matching_errors = artist_errors + catalog_errors + type_errors
-    return jsonify([{
-                    'total_matching_errors': total_matching_errors,
-                    'artist_matching_errors': json.loads(artist_errors),
-                    'catalog_matching_errors': json.loads(catalog_errors),
-                    'type_matching_errors': json.loads(type_errors)
-                    }])
-    return matching_errors
+    return type_errors
 
 @expense.route('/expense/update-errors', methods=['PUT'])
 def update_errors():

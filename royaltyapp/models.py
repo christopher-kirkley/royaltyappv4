@@ -328,8 +328,11 @@ class ExpensePending(db.Model):
 
 class ExpensePendingSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
+        json_module = simplejson
         fields = ("id",
                 "statement",
+                "date",
+                "net",
                 "catalog_id",
                 "catalog_number",
                 "artist_name",
@@ -339,6 +342,7 @@ class ExpensePendingSchema(ma.SQLAlchemyAutoSchema):
                 "vendor",
                 "description")
         include_relationships = True
+    net = fields.Decimal()
 
 
 class ExpenseType(db.Model):

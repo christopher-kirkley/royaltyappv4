@@ -28,26 +28,21 @@ def test_can_import_type_expense(test_client, db):
     assert len(result) == 4
     assert json.loads(response.data) == {'success': 'true'}
     
-def test_can_get_matching_errors(test_client, db):
-    response = test_client.get('/expense/matching-errors')
+def test_can_get_type_matching_errors(test_client, db):
+    response = test_client.get('/expense/type-matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{
-        'total_matching_errors': 2,
-        'artist_matching_errors': [],
-        'catalog_matching_errors': [],
-        'type_matching_errors': [],
-        }]
+    assert json.loads(response.data) == []
     add_type_expense(test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/type-matching-errors')
     assert response.status_code == 200
     assert db.session.query(ExpensePending).all() != 0
     assert db.session.query(ExpensePending).first().statement == 'expense_type.csv'
-    res = json.loads(response.data)[0]['type_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 2
     build_catalog(db, test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/type-matching-errors')
     assert response.status_code == 200
-    res = json.loads(response.data)[0]['type_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 2
 
 def test_can_update_pending_table(test_client, db):

@@ -20584,3 +20584,504 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1604247138633	Marionette	INFO	Listening on port 52875
 1604247138738	Marionette	WARN	TLS certificate errors will be ignored for this session
 1604247155610	Marionette	INFO	Stopped listening on port 52875
+1604248735056	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiley5nslP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604248738267	Marionette	INFO	Listening on port 53314
+1604248738305	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604248742215	Marionette	INFO	Stopped listening on port 53314
+1604248770711	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenzyi2d"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604248773672	Marionette	INFO	Listening on port 53391
+1604248773745	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604248780120	Marionette	INFO	Stopped listening on port 53391
+1604248915089	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8U7TFF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604248917879	Marionette	INFO	Listening on port 53468
+1604248918000	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604248923421	Marionette	INFO	Stopped listening on port 53468
+1604248961211	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevlV5M8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604248963932	Marionette	INFO	Listening on port 53540
+1604248964011	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604248969726	Marionette	INFO	Stopped listening on port 53540
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604249001706	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9LMH4z"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604249004466	Marionette	INFO	Listening on port 53615
+1604249004551	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604249011794	Marionette	INFO	Stopped listening on port 53615
+1604249044040	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecv8WN3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604249046924	Marionette	INFO	Listening on port 53690
+1604249046998	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604249055578	Marionette	INFO	Stopped listening on port 53690
+1604249090366	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePhGCcQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604249093149	Marionette	INFO	Listening on port 53768
+1604249093273	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604249100550	Marionette	INFO	Stopped listening on port 53768
+1604249190633	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileirxC8R"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604249193593	Marionette	INFO	Listening on port 53847
+1604249193655	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604249201428	Marionette	INFO	Stopped listening on port 53847
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604249393896	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile5hRpx0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604249396717	Marionette	INFO	Listening on port 53985
+1604249396808	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error writing response to: querySelector"
+console.error: "Error while calling actor 'domwalker's method 'querySelector'" "Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIEventListenerService.getListenerInfoFor]"
+console.error: "getDOMListeners@resource://devtools/server/actors/inspector/event-collector.js:266:22\ngetListeners@resource://devtools/server/actors/inspector/event-collector.js:334:28\nhasListeners@resource://devtools/server/actors/inspector/event-collector.js:227:17\nhasEventListeners@resource://devtools/server/actors/inspector/event-collector.js:800:21\nget _hasEventListeners@resource://devtools/server/actors/inspector/node.js:390:33\nform@resource://devtools/server/actors/inspector/node.js:212:7\nwrite@resource://devtools/shared/protocol/types.js:363:32\ntypes.addArrayType/write/<@resource://devtools/shared/protocol/types.js:220:33\nwrite@resource://devtools/shared/protocol/types.js:220:16\nwrite@resource://devtools/shared/protocol/types.js:268:39\nwrite@resource://devtools/shared/protocol/Response.js:102:22\nwrite@resource://devtools/shared/protocol/Response.js:47:28\nsendReturn@resource://devtools/shared/protocol/Actor.js:189:38\n"
+console.error: (new Error("Protocol error (NS_ERROR_ILLEGAL_VALUE): Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIEventListenerService.getListenerInfoFor] from: server0.conn0.child2/domwalker24 (resource://devtools/server/actors/inspector/event-collector.js:266:0)", "resource://devtools/shared/protocol/Front.js", 341))
+1604250404668	Marionette	INFO	Stopped listening on port 53985
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604250415162	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilex3H0U2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604250418083	Marionette	INFO	Listening on port 54263
+1604250418208	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 44: Error: Cannot find module './expense/matching_errors/ArtistMatchingErrors'
+1604251426014	Marionette	INFO	Stopped listening on port 54263
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1604251504573	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2a7ncB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604251507466	Marionette	INFO	Listening on port 54544
+1604251507585	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 150: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 150: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 150: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 150: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8163: Error: Module build failed (from ./node_modules/eslint-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/expense/MatchingTable.js'
+1604252515520	Marionette	INFO	Stopped listening on port 54544
+1604252540162	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNQKvkN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604252543186	Marionette	INFO	Listening on port 54959
+1604252543467	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604255982041	Marionette	INFO	Stopped listening on port 54959
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1D0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1604258069552	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGFhv7v"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604258072597	Marionette	INFO	Listening on port 55777
+1604258072691	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604258728244	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilevVIljg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604258731069	Marionette	INFO	Listening on port 56062
+1604258731195	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604258739077	Marionette	INFO	Stopped listening on port 56062
+1604258799445	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerDwWg0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604258802163	Marionette	INFO	Listening on port 56147
+1604258802282	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604258810197	Marionette	INFO	Stopped listening on port 56147
+1604259236935	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewkGOwl"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259239923	Marionette	INFO	Listening on port 56261
+1604259240040	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1604259247324	Marionette	INFO	Stopped listening on port 56261
+1604259252450	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesikCfp"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259255046	Marionette	INFO	Listening on port 56353
+1604259255132	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604259263050	Marionette	INFO	Stopped listening on port 56353
+1604259328307	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWGdLvH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259331082	Marionette	INFO	Listening on port 56435
+1604259331161	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604259339062	Marionette	INFO	Stopped listening on port 56435
+1604259360762	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWWtXOV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259363783	Marionette	INFO	Listening on port 56514
+1604259363879	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604259367978	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1604259370230	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1604259371512	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1604259373541	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6824: TypeError: artistMatchingErrors is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79424: Error: Objects are not valid as a React child (found: object with keys {statement, artist_name, artist_id, description, catalog_number, item_type, expense_type, vendor, id, catalog_id}). If you meant to render a collection of children, use an array instead.
+    in strong (at PendingImports.js:105)
+    in span (at PendingImports.js:105)
+    in div (created by ForwardRef(Alert))
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Alert))
+    in ForwardRef(Alert) (created by WithStyles(ForwardRef(Alert)))
+    in WithStyles(ForwardRef(Alert)) (at PendingImports.js:103)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:102)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:101)
+    in DisplayMatchingErrors (at PendingImports.js:192)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:191)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:181)
+    in PendingImports (at ExpenseImport.js:97)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at ExpenseImport.js:96)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at ExpenseImport.js:95)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at ExpenseImport.js:84)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseImport.js:82)
+    in ExpenseImport (created by Context.Consumer)
+    in Route (at Main.js:259)
+    in Switch (at Main.js:244)
+    in div (at Main.js:132)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:131)
+    in ThemeProvider (at Main.js:130)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79424: Error: Objects are not valid as a React child (found: object with keys {statement, artist_name, artist_id, description, catalog_number, item_type, expense_type, vendor, id, catalog_id}). If you meant to render a collection of children, use an array instead.
+    in strong (at PendingImports.js:105)
+    in span (at PendingImports.js:105)
+    in div (created by ForwardRef(Alert))
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (created by ForwardRef(Alert))
+    in ForwardRef(Alert) (created by WithStyles(ForwardRef(Alert)))
+    in WithStyles(ForwardRef(Alert)) (at PendingImports.js:103)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:102)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:101)
+    in DisplayMatchingErrors (at PendingImports.js:192)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:191)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at PendingImports.js:181)
+    in PendingImports (at ExpenseImport.js:97)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at ExpenseImport.js:96)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at ExpenseImport.js:95)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at ExpenseImport.js:84)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at ExpenseImport.js:82)
+    in ExpenseImport (created by Context.Consumer)
+    in Route (at Main.js:259)
+    in Switch (at Main.js:244)
+    in div (at Main.js:132)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:131)
+    in ThemeProvider (at Main.js:130)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6824: TypeError: res is undefined
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604259874898	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilerTQ72e"
+1604259881668	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilekMuX9Y"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259884457	Marionette	INFO	Listening on port 56841
+1604259884617	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604259892360	Marionette	INFO	Stopped listening on port 56841
+1604259977908	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilescBs0B"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604259980906	Marionette	INFO	Listening on port 56929
+1604259981026	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604259988807	Marionette	INFO	Stopped listening on port 56929
+1604260158919	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUGxEDC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260161550	Marionette	INFO	Listening on port 57026
+1604260161627	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1604260169141	Marionette	INFO	Stopped listening on port 57026
+1604260174594	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilej7Of2B"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260177458	Marionette	INFO	Listening on port 57117
+1604260177500	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260185406	Marionette	INFO	Stopped listening on port 57117
+1604260222938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVDRTEc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260225771	Marionette	INFO	Listening on port 57210
+1604260225874	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260233743	Marionette	INFO	Stopped listening on port 57210
+1604260282446	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile06YxnC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260285397	Marionette	INFO	Listening on port 57299
+1604260285473	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260293372	Marionette	INFO	Stopped listening on port 57299
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604260339944	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZ3rhfN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260342877	Marionette	INFO	Listening on port 57387
+1604260342965	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260350809	Marionette	INFO	Stopped listening on port 57387
+1604260380535	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletFRmYV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260383229	Marionette	INFO	Listening on port 57471
+1604260383370	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604260391170	Marionette	INFO	Stopped listening on port 57471
+1604260562182	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilejpYLQe"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260564901	Marionette	INFO	Listening on port 57575
+1604260564993	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260572807	Marionette	INFO	Stopped listening on port 57575
+1604260633784	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTdKQ4e"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260636668	Marionette	INFO	Listening on port 57668
+1604260636784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260644562	Marionette	INFO	Stopped listening on port 57668
+1604260668481	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilePEFVUx"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260671409	Marionette	INFO	Listening on port 57756
+1604260671517	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260679304	Marionette	INFO	Stopped listening on port 57756
+1604260810493	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexOgVCf"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260813667	Marionette	INFO	Listening on port 57846
+1604260813790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604260821522	Marionette	INFO	Stopped listening on port 57846
+1604260867822	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezxlzKV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260870651	Marionette	INFO	Listening on port 57941
+1604260870743	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604260878841	Marionette	INFO	Stopped listening on port 57941
+1604260971452	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiyfSUt"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604260974229	Marionette	INFO	Listening on port 58035
+1604260974275	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 5983: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/src/expense/ArtistMatchingErrors.js: Unexpected token (32:2)
+
+[0m [90m 30 | [39m		[33m.[39mthen(json [33m=>[39m setRows(json))[0m
+[0m [90m 31 | [39m		})[0m
+[0m[31m[1m>[22m[39m[90m 32 | [39m	}[33m,[39m rows)[0m
+[0m [90m    | [39m	 [31m[1m^[22m[39m[0m
+[0m [90m 33 | [39m[0m
+[0m [90m 34 | [39m[0m
+[0m [90m 35 | [39m	[36mreturn[39m ([0m
+    at Object._raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:766:17)
+    at Object.raiseWithData (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:759:17)
+    at Object.raise (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:753:17)
+    at Object.unexpected (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:8966:16)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:10282:20)
+    at Object.parseExprAtom (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:4718:20)
+    at Object.parseExprSubscripts (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9844:23)
+    at Object.parseUpdate (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9824:21)
+    at Object.parseMaybeUnary (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9813:17)
+    at Object.parseExprOps (/Users/ck/Documents/programming/projects/frontend_royaltyapp/royalty/node_modules/@babel/parser/lib/index.js:9683:23)
+1604260975196	Marionette	INFO	Stopped listening on port 58035
+1604261014951	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEfTVgl"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261017841	Marionette	INFO	Listening on port 58102
+1604261017955	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261026956	Marionette	INFO	Stopped listening on port 58102
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604261133492	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexW4rnV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261136388	Marionette	INFO	Listening on port 58196
+1604261136466	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261144614	Marionette	INFO	Stopped listening on port 58196
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604261166636	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilefsWrB0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261169459	Marionette	INFO	Listening on port 58288
+1604261169567	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261178495	Marionette	INFO	Stopped listening on port 58288
+1604261217271	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileNQnB4h"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261220039	Marionette	INFO	Listening on port 58382
+1604261220075	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604261270968	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiletwi0JF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261274650	Marionette	INFO	Listening on port 58482
+1604261274690	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261282910	Marionette	INFO	Stopped listening on port 58482
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604261318798	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileedW7Ge"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261321506	Marionette	INFO	Listening on port 58587
+1604261321591	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261329859	Marionette	INFO	Stopped listening on port 58587
+1604261351319	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGxOri8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261354067	Marionette	INFO	Listening on port 58677
+1604261354120	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261362275	Marionette	INFO	Stopped listening on port 58677
+1604261399931	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGJvoXm"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261402731	Marionette	INFO	Listening on port 58766
+1604261402823	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261411006	Marionette	INFO	Stopped listening on port 58766
+1604261433204	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileXdVqlR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261436192	Marionette	INFO	Listening on port 58854
+1604261436313	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261444401	Marionette	INFO	Stopped listening on port 58854
+1604261458153	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6ByG0F"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261461012	Marionette	INFO	Listening on port 58943
+1604261461083	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261469225	Marionette	INFO	Stopped listening on port 58943
+1604261486179	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9KU2f3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261489103	Marionette	INFO	Listening on port 59036
+1604261489178	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261497317	Marionette	INFO	Stopped listening on port 59036
+1604261540209	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileQLlH3j"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261543072	Marionette	INFO	Listening on port 59127
+1604261543114	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261551235	Marionette	INFO	Stopped listening on port 59127
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604261674813	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileGx5YST"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261677844	Marionette	INFO	Listening on port 59227
+1604261677935	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261686149	Marionette	INFO	Stopped listening on port 59227
+1604261703139	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileKpMAFN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261705919	Marionette	INFO	Listening on port 59318
+1604261705962	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261714259	Marionette	INFO	Stopped listening on port 59318
+1604261730201	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile0bfNx0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261732947	Marionette	INFO	Listening on port 59404
+1604261733021	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604261843055	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileDVa6li"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261846008	Marionette	INFO	Listening on port 59499
+1604261846078	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604261854209	Marionette	INFO	Stopped listening on port 59499
+1604261865347	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileo9ZrN7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604261868369	Marionette	INFO	Listening on port 59588
+1604261868465	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604262004684	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegfvraN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604262007584	Marionette	INFO	Listening on port 59690
+1604262007686	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604262015853	Marionette	INFO	Stopped listening on port 59690
+1604262125803	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileH0ziLM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604262128669	Marionette	INFO	Listening on port 59793
+1604262128719	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604262136974	Marionette	INFO	Stopped listening on port 59793
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604262831760	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile77eNII"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604262834662	Marionette	INFO	Listening on port 59951
+1604262834752	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604262843813	Marionette	INFO	Stopped listening on port 59951
+1604262873068	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileyg1I16"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604262875968	Marionette	INFO	Listening on port 60050
+1604262876112	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

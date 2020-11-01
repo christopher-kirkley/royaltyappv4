@@ -44,29 +44,36 @@ def test_can_list_pending_statements(test_client, db):
                 'statement': 'expense_artist.csv'
                                         }]
 
-def test_can_get_matching_errors(test_client, db):
-    response = test_client.get('/expense/matching-errors')
+def test_can_get_artist_matching_errors(test_client, db):
+    response = test_client.get('/expense/artist-matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == [{
-        'total_matching_errors': [],
-        'artist_matching_errors': [],
-        'catalog_matching_errors': [],
-        'type_matching_errors': []
-        }]
+    assert json.loads(response.data) == []
     add_artist_expense(test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/artist-matching-errors')
     assert response.status_code == 200
     assert db.session.query(ExpensePending).all() != 0
     assert db.session.query(ExpensePending).first().statement == 'expense_artist.csv'
-    res = json.loads(response.data)[0]['artist_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 4
     build_catalog(db, test_client)
-    response = test_client.get('/expense/matching-errors')
+    response = test_client.get('/expense/artist-matching-errors')
     assert response.status_code == 200
-    res = json.loads(response.data)[0]['artist_matching_errors']
+    res = json.loads(response.data)
     assert len(res) == 2
-    res = json.loads(response.data)[0]['total_matching_errors']
-    assert len(res) == 2
+    assert res[0] == {
+            'id': 3,
+            'artist_id': None,
+            'artist_name': 'Les Filles de Illighadad',
+            'catalog_number': None,
+            'catalog_id': None,
+            'date': '2020-01-01',
+            'net': 673.47,
+            'description': '10% of Tour – paid out of tour money',
+            'expense_type': 'Advance',
+            'item_type': 'Payout',
+            'statement': 'expense_artist.csv',
+            'vendor': 'Les Filles de Illighadad',
+            }
 
 
 def test_can_update_pending_table(test_client, db):

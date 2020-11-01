@@ -21,7 +21,7 @@ def test_returns(browser, test_client, db):
     """ User goes to homepage """ 
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
-    
+
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
     time.sleep(1)
@@ -30,142 +30,70 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
-    msg = browser.find_element_by_id('msg')
+
     path = os.getcwd() + "/tests/files/one_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('version_upload').click()
-    msg = browser.find_element_by_id('version_msg')
 
-    """ User goes to expense page and uploads a file."""
+    """ User goes to expense. """
     browser.find_element_by_id('expense').click()
-    time.sleep(1)
+    browser.find_element_by_id('expense-data').text == 'No data'
+
+    """ User goes to upload income. """
+    browser.find_element_by_id('import_expense').click()
+
+    """ User selects first file. """
     path = os.getcwd() + "/tests/files/expense_artist.csv"
-    browser.find_element_by_id('select_statement').send_keys(path)
-    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('artist_source').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
-    msg = browser.find_element_by_id('statement_message')
-    assert msg.text == "Uploaded!"
 
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'expense_artist.csv'
     
-    """ User goes to expense page and uploads a second file."""
-    browser.find_element_by_id('expense').click()
-    time.sleep(1)
+    """ User uploads a second file."""
     path = os.getcwd() + "/tests/files/expense_catalog.csv"
-    browser.find_element_by_id('select_statement').send_keys(path)
-    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('catalog_source').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
-    msg = browser.find_element_by_id('statement_message')
-    assert msg.text == "Uploaded!"
 
     """ User sees statement added to the list of pending statements. """
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'expense_artist.csv'
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('matching_errors').text == "You have 2 matching errors."
-    browser.find_element_by_id('fix_errors').click()
-    time.sleep(1)
+    assert browser.find_element_by_id('artist_matching_errors').text == "You have 2 artist matching errors."
 
-    """ User loads matching error page. """
-    assert browser.find_element_by_id('header').text == "Expense Matching Errors"
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    
-    """ User updates type errors and submits. """
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('advance').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 10
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('recoupable').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 9
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('recoupable').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 8
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('recoupable').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 7
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('recoupable').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 6
-    browser.find_element_by_id('new_expense_type').click()
-    browser.find_element_by_id('recoupable').click()
-    browser.find_element_by_id('type_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 5
-    browser.find_element_by_id('artist_update').click()
-    browser.find_element_by_id('artist_update').click()
-    browser.find_element_by_id('catalog_update').click()
-    browser.find_element_by_id('catalog_update').click()
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 1
-    
-    """ User goes to expense page and uploads a file."""
-    browser.find_element_by_id('expense').click()
-    time.sleep(1)
-    browser.find_element_by_id('process_statements').click()
+    assert browser.find_element_by_id('catalog_matching_errors').text == "You have 2 catalog matching errors."
 
-    """ User goes to view imported first income statement. """
-    browser.find_element_by_id('view_imported_expense').click()
-    time.sleep(1)
-    table = browser.find_element_by_id('imported_expense_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert rows[1].find_elements_by_tag_name('td')[0].text == 'expense_catalog.csv'
-    browser.find_element_by_id('1').click()
-    assert browser.find_element_by_id('header').text == "Detail Imported Expense"
-    table = browser.find_element_by_id('imported_expense_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 5
+    assert browser.find_element_by_id('type_matching_errors').text == "You have 6 type matching errors."
 
-    """ User goes to second imported income statement. """
-    browser.find_element_by_id('view_imported_expense').click()
-    time.sleep(1)
-    table = browser.find_element_by_id('imported_expense_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert rows[2].find_elements_by_tag_name('td')[0].text == 'expense_artist.csv'
-    browser.find_element_by_id('2').click()
-    assert browser.find_element_by_id('header').text == "Detail Imported Expense"
-    table = browser.find_element_by_id('imported_expense_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 5
+    """ User fixes artist matching errors. """
+    browser.find_element_by_id('fix_artist_errors').click()
 
-    """ User decides to go back and delete this statement. """
-    browser.find_element_by_id('view_imported_expense').click()
-    time.sleep(1)
-    table = browser.find_element_by_id('imported_expense_table')
+    """ User sees error table. """
+    table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    rows[1].find_element_by_id("delete").click()
+    assert len(rows) == 3
 
-    """ Statement dissapears from page. """
-    time.sleep(1)
-    table = browser.find_element_by_id('imported_expense_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 2
+    rows[0].find_elements_by_tag_name('th')[1].text == 'Date'
 
+    tds = rows[1].find_elements_by_tag_name('td')
+
+    assert tds[1].text == '2019-07-17' 
+    assert tds[2].text == 'Les Filles de Illighadad' 
+
+    browser.find_element_by_id('match').click()
+    browser.find_element_by_id('column').click()
+    time.sleep(1000)
+    browser.find_element_by_id('upc_id').click()
+    browser.find_element_by_id('missingupc').click()
+    browser.find_element_by_id('new_value').click()
+    browser.find_element_by_id('SS-050cass').click()
+    browser.find_element_by_id('submit').click()
     
 
 
