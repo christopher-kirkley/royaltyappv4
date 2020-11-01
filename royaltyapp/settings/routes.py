@@ -36,6 +36,7 @@ def add_order_fees():
 @settings.route('/settings/order-fee', methods=['PUT'])
 def update_order_setting():
     data = request.get_json(force=True)
+    print(data)
     for item in data:
         distributor_id = item['distributor_id']
         res = db.session.query(OrderSettings).filter(OrderSettings.distributor_id == distributor_id).first()
@@ -45,6 +46,7 @@ def update_order_setting():
         order_setting = db.session.query(OrderSettings).get(id)
         order_setting.order_percentage = item['order_percentage']
         order_setting.order_fee = item['order_fee']
+        order_setting.order_limit = item['order_limit']
         db.session.commit()
     return jsonify({'success': 'true'})
 

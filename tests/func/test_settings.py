@@ -26,12 +26,16 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('settings').click()
     assert browser.find_element_by_id('header').text == 'Settings'
 
-    time.sleep(1000)
+    time.sleep(1)
+    
     """User adds setting for bandcamp."""
-    browser.find_element_by_id('add_order_fee').click()
-    browser.find_element_by_id('distributor').click()
-    browser.find_element_by_id('bandcamp').click()
+    browser.find_element_by_name("row[0].order_fee").clear()
+    browser.find_element_by_name("row[0].order_fee").send_keys("5")
 
+    """Update value"""
+    browser.find_element_by_id("update").click()
+
+    
 
     # """ User uploads catalog and versions. """
     # browser.find_element_by_id('catalog').click()
