@@ -89,21 +89,16 @@ def test_returns(browser, test_client, db):
     """ Select row. """
     tds[0].click()
 
-    """ Click update."""
-    browser.find_element_by_id('update').click()
-
-    time.sleep(10000)
     """ Update artist. """
     browser.find_element_by_id('new_value').click()
     browser.find_element_by_id(1).click()
     browser.find_element_by_id('update').click()
 
+    time.sleep(2)
 
     """ User sees error table updated. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 2
-
-
 
 
