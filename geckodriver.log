@@ -21085,3 +21085,270 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1604264867915	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTINjd3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604264870697	Marionette	INFO	Listening on port 60484
+1604264870815	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604264878818	Marionette	INFO	Stopped listening on port 60484
+1604264920867	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilelBNxZ6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604264923552	Marionette	INFO	Listening on port 60583
+1604264923662	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604264931478	Marionette	INFO	Stopped listening on port 60583
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604264946090	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileuId299"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604264948802	Marionette	INFO	Listening on port 60673
+1604264948913	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604264956807	Marionette	INFO	Stopped listening on port 60673
+1604264976386	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilegAQwhh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604264979275	Marionette	INFO	Listening on port 60764
+1604264979388	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604264987203	Marionette	INFO	Stopped listening on port 60764
+1604265015964	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileSq758C"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604265018756	Marionette	INFO	Listening on port 60853
+1604265018863	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604265643553	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileCUzcTy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604265646378	Marionette	INFO	Listening on port 61042
+1604265646454	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604266655198	Marionette	INFO	Stopped listening on port 61042
+1604266660255	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileF1QJmH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604266663189	Marionette	INFO	Listening on port 61320
+1604266663273	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604266670981	Marionette	INFO	Stopped listening on port 61320
+1604266679971	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilen3zzx4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604266682813	Marionette	INFO	Listening on port 61411
+1604266682868	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.robinwieruch.de/component---src-templates-post-js-bad9a75101a8acb90c01.js, line 690: unreachable code after return statement
+1604268267511	Marionette	INFO	Stopped listening on port 61411
+1604268271904	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilecXcoph"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604268274651	Marionette	INFO	Listening on port 61828
+1604268274739	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dco-assets.everestads.net/ics-campaign//5031/t/7939/1/z300x600.html, line 91: ReferenceError: adURL is not defined
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268973133&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268974655&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268975699&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268978746&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268978910&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&268979074&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269014945&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269015159&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269016504&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269016621&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269017691&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269017798&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269059542&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269060827&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269060831&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269061949&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/sync, line 78: TypeError: this.ctInstance is undefined
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269061173&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269062286&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269104261&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269105678&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269105661&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269106767&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269106865&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269107060&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269148920&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269150484&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269151602&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269151614&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269151799&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269152321&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269193752&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269195166&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269196337&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269196451&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269196484&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269197591&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269238238&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269239646&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269240713&z=756817&width=728&height=90, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&269240815&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+1604269283550	Marionette	INFO	Stopped listening on port 61828
+1604269304193	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVzc5uv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604269307083	Marionette	INFO	Listening on port 62749
+1604269307192	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604269308247	Marionette	INFO	Stopped listening on port 62749
+1604269391786	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileidaiQ7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604269394723	Marionette	INFO	Listening on port 62828
+1604269394803	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 89791: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 89791: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 89791: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 89791: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1604272322901	Marionette	INFO	Stopped listening on port 50209
+1604272324688	Marionette	INFO	Stopped listening on port 62828
+1604291340342	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilenhIMUi"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604291344135	Marionette	INFO	Listening on port 64612
+1604291344261	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79424: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in div (at ExpenseMatchingTable.js:199)
+    in ExpenseMatchingTable (at TypeMatchingErrors.js:47)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at TypeMatchingErrors.js:46)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at TypeMatchingErrors.js:43)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at TypeMatchingErrors.js:42)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at TypeMatchingErrors.js:40)
+    in TypeMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:262)
+    in Switch (at Main.js:244)
+    in div (at Main.js:132)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:131)
+    in ThemeProvider (at Main.js:130)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 79424: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+    in div (at ExpenseMatchingTable.js:199)
+    in ExpenseMatchingTable (at TypeMatchingErrors.js:47)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at TypeMatchingErrors.js:46)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at TypeMatchingErrors.js:43)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at TypeMatchingErrors.js:42)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at TypeMatchingErrors.js:40)
+    in TypeMatchingErrors (created by Context.Consumer)
+    in Route (at Main.js:262)
+    in Switch (at Main.js:244)
+    in div (at Main.js:132)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:131)
+    in ThemeProvider (at Main.js:130)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 94285: TypeError: callback is not a function
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 94285: TypeError: callback is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+1604326272942	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilexeSIyU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604326276907	Marionette	INFO	Listening on port 50146
+1604326277207	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604326277598	Marionette	INFO	Stopped listening on port 50146
+1604326305540	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileeInN1F"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604326308602	Marionette	INFO	Listening on port 50239
+1604326308660	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604326317032	Marionette	INFO	Stopped listening on port 50239
+1604326371230	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileL1huR2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604326374162	Marionette	INFO	Listening on port 50339
+1604326374243	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604326382380	Marionette	INFO	Stopped listening on port 50339
+1604326410593	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7StKup"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604326413434	Marionette	INFO	Listening on port 50434
+1604326413525	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9029: TypeError: props.selected is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9029: TypeError: props.selected is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9040: TypeError: props.selected is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9040: TypeError: props.selected is undefined
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327308773&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327309065&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327309204&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327352458&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327353685&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327353756&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327396035&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327397536&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&327399161&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+1604327423341	Marionette	INFO	Stopped listening on port 50434
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x380144,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+1604327435938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilezfTCqm"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604327438810	Marionette	INFO	Listening on port 51250
+1604327438929	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604327447861	Marionette	INFO	Stopped listening on port 51250
+1604327455769	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilei9DAbR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604327458537	Marionette	INFO	Listening on port 51343
+1604327458664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 92985: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 92985: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 92985: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 92985: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 92985: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 92985: TypeError: path is undefined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604330078673	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileuBQ0YP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604330081736	Marionette	INFO	Listening on port 52260
+1604330081814	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604330091055	Marionette	INFO	Stopped listening on port 52260
+1604330109261	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileu5YskK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604330112413	Marionette	INFO	Listening on port 52356
+1604330112495	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604330121646	Marionette	INFO	Stopped listening on port 52356
+1604330143059	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileOLDsC8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604330146269	Marionette	INFO	Listening on port 52455
+1604330146376	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604330200705	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile47ilHn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604330203516	Marionette	INFO	Listening on port 52557
+1604330203626	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604330213050	Marionette	INFO	Stopped listening on port 52557
+1604330250739	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilewC6LtH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604330253727	Marionette	INFO	Listening on port 52647
+1604330253771	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

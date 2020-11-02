@@ -67,8 +67,8 @@ def get_type_matching_errors():
     type_errors = expense_pending_schema.dumps(query)
     return type_errors
 
-@expense.route('/expense/update-errors', methods=['PUT'])
-def update_errors():
+@expense.route('/expense/match-errors', methods=['PUT'])
+def match_errors():
     data = request.get_json(force=True)
     try:
         for item in data['data_to_match']:
@@ -134,4 +134,20 @@ def delete_expense_statement(id):
     db.session.execute(i)
     db.session.commit()
     return jsonify({'success': 'true'})
+
+@expense.route('/expense/update-errors', methods=['PUT'])
+def update_errors():
+    data = request.get_json(force=True)
+    try:
+        for id in data['selected_ids']:
+            obj = db.session.query(ExpensePending).get(id)
+            if data['error_type'] == 'artist':
+                obj.artist_name = data['new_value']
+                db.session.commit()
+            
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
+
 
