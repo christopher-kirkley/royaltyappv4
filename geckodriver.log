@@ -21519,3 +21519,130 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1604358893046	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileR3BjRo"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604358895986	Marionette	INFO	Listening on port 59897
+1604358896074	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604358926246	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileEWM6ll"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604358929094	Marionette	INFO	Listening on port 59996
+1604358929159	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604358938017	Marionette	INFO	Stopped listening on port 59996
+1604359002642	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileG3frhv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359005512	Marionette	INFO	Listening on port 60093
+1604359005568	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359015533	Marionette	INFO	Stopped listening on port 60093
+1604359039792	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileiOAexB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359042880	Marionette	INFO	Listening on port 60190
+1604359042949	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604359086404	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilesf6zMX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359089295	Marionette	INFO	Listening on port 60290
+1604359089406	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359098483	Marionette	INFO	Stopped listening on port 60290
+1604359124555	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiles2gaPY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359127477	Marionette	INFO	Listening on port 60384
+1604359127580	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359137132	Marionette	INFO	Stopped listening on port 60384
+1604359253259	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileS7XKvK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359256220	Marionette	INFO	Listening on port 60481
+1604359256279	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359265887	Marionette	INFO	Stopped listening on port 60481
+1604359301536	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileejEZKN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359304464	Marionette	INFO	Listening on port 60579
+1604359304556	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359314122	Marionette	INFO	Stopped listening on port 60579
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604359363113	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile9bPY2N"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359365948	Marionette	INFO	Listening on port 60672
+1604359366013	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359378618	Marionette	INFO	Stopped listening on port 60672
+1604359411718	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZfEqmc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359414578	Marionette	INFO	Listening on port 60764
+1604359414668	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359423864	Marionette	INFO	Stopped listening on port 60764
+1604359443290	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileUkGO1v"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359446161	Marionette	INFO	Listening on port 60857
+1604359446206	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359455594	Marionette	INFO	Stopped listening on port 60857
+1604359482849	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1RelAU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359485726	Marionette	INFO	Listening on port 60949
+1604359485775	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359496207	Marionette	INFO	Stopped listening on port 60949
+1604359543981	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileJFjuOr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359546760	Marionette	INFO	Listening on port 61052
+1604359546790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359569306	Marionette	INFO	Stopped listening on port 61052
+1604359590139	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileInBLby"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359593248	Marionette	INFO	Listening on port 61154
+1604359593326	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604359617051	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileWaZMfo"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359619883	Marionette	INFO	Listening on port 61251
+1604359619957	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359630175	Marionette	INFO	Stopped listening on port 61251
+1604359660503	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilepN0mL9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359663460	Marionette	INFO	Listening on port 61346
+1604359663546	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359686897	Marionette	INFO	Stopped listening on port 61346
+1604359701590	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilef2yOhV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359704735	Marionette	INFO	Listening on port 61441
+1604359704807	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604359756260	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilespGgrC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359759168	Marionette	INFO	Listening on port 61540
+1604359759302	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359770568	Marionette	INFO	Stopped listening on port 61540
+1604359785042	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileY1Pz2l"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359787902	Marionette	INFO	Listening on port 61635
+1604359787981	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604359799331	Marionette	INFO	Stopped listening on port 61635
+1604359853213	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileM83tbm"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359856073	Marionette	INFO	Listening on port 61729
+1604359856123	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604359863664	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilebROZuU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604359866745	Marionette	INFO	Listening on port 61803
+1604359866902	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
