@@ -21352,3 +21352,170 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1604332026337	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTQ3Q5E"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604332029991	Marionette	INFO	Listening on port 53045
+1604332030080	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:111:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:857:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:632:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 111, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 111))
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1604333404001	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofiles9t3eq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604333407098	Marionette	INFO	Listening on port 53559
+1604333407207	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604333448900	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1Q3RdN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604333451728	Marionette	INFO	Listening on port 53661
+1604333451814	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604356854322	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileY7uz0C"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604356858451	Marionette	INFO	Listening on port 59077
+1604356858578	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604357140843	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileZo6Ja2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604357143937	Marionette	INFO	Listening on port 59245
+1604357144080	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error writing request: getGrids"
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9039: ReferenceError: can't access lexical declaration 'newIds' before initialization
+JavaScript error: https://www.gstatic.com/mysidia/2b5103b5bba5da0df878e1e70b1f06b8.js?tag=video_mra/web_raspberry, line 165: SecurityError: The operation is insecure.
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4314 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.error: "Error while calling actor 'stylesheet's method 'getMediaRules'" "can't access dead object"
+console.error: "get ownerNode@resource://devtools/server/actors/stylesheets.js:271:5\ngetCSSRules@resource://devtools/server/actors/stylesheets.js:381:9\n_getMediaRules@resource://devtools/server/actors/stylesheets.js:519:17\ngetMediaRules@resource://devtools/server/actors/stylesheets.js:509:17\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:16\n"
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4315 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4340 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4322 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4749 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4321 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4333 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4337 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4336 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4334 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4335 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4318 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4329 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4330 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4324 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4328 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4331 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4327 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4319 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4320 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4748 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4747 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4746 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4338 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4332 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4325 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4326 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4317 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4323 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4745 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+console.warn: "fetching media rules failed" (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child2/stylesheet4316 (resource://devtools/server/actors/stylesheets.js:271:5)", "resource://devtools/shared/protocol/Front.js", 341))
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8915: ReferenceError: can't access lexical declaration 'upcs' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 8915: ReferenceError: can't access lexical declaration 'upcs' before initialization
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9023: TypeError: props.getMatchingErrors is not a function
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.

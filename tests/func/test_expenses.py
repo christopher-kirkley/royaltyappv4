@@ -92,12 +92,12 @@ def test_returns(browser, test_client, db):
     """ Click update."""
     browser.find_element_by_id('update').click()
 
+    time.sleep(10000)
     """ Update artist. """
     browser.find_element_by_id('new_value').click()
     browser.find_element_by_id(1).click()
     browser.find_element_by_id('update').click()
 
-    time.sleep(10000)
 
     """ User sees error table updated. """
     table = browser.find_element_by_id('matching_error_table')
