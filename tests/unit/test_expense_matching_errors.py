@@ -45,7 +45,7 @@ def test_can_get_type_matching_errors(test_client, db):
     res = json.loads(response.data)
     assert len(res) == 2
 
-def test_can_update_pending_table(test_client, db):
+def test_can_match_errors_in_pending_table(test_client, db):
     build_catalog(db, test_client)
     add_type_expense(test_client)
     data = {
@@ -58,7 +58,7 @@ def test_can_update_pending_table(test_client, db):
                 ]
             }
     json_data = json.dumps(data)
-    response = test_client.put('/expense/update-errors', data=json_data)
+    response = test_client.put('/expense/match-errors', data=json_data)
     query = (db.session.query(ExpensePending)
                 .filter(ExpensePending.id == 3)
                 .first()
@@ -68,4 +68,20 @@ def test_can_update_pending_table(test_client, db):
     assert query.expense_type == 'recoupable'
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_update_errors_in_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_artist_expense(test_client)
+    data = {
+            'error_type': 'artist',
+            'selected_ids': [ 3 ],
+            'new_value': "Ahmed Ag Kaedy"
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/expense/update-errors', data=json_data)
+    query = (db.session.query(ExpensePending)
+                .filter(ExpensePending.id == 3)
+                .first()
+                )
+    assert response.status_code == 200
+    assert query.artist_name == 'Ahmed Ag Kaedy'
 

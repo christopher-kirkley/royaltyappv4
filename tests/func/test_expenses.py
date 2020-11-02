@@ -86,15 +86,24 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == '2019-07-17' 
     assert tds[2].text == 'Les Filles de Illighadad' 
 
-    browser.find_element_by_id('match').click()
-    browser.find_element_by_id('column').click()
-    time.sleep(1000)
-    browser.find_element_by_id('upc_id').click()
-    browser.find_element_by_id('missingupc').click()
+    """ Select row. """
+    tds[0].click()
+
+    """ Click update."""
+    browser.find_element_by_id('update').click()
+
+    """ Update artist. """
     browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('SS-050cass').click()
-    browser.find_element_by_id('submit').click()
-    
+    browser.find_element_by_id(1).click()
+    browser.find_element_by_id('update').click()
+
+    time.sleep(10000)
+
+    """ User sees error table updated. """
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
+
 
 
 
