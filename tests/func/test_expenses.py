@@ -86,19 +86,39 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == '2019-07-17' 
     assert tds[2].text == 'Les Filles de Illighadad' 
 
-    """ Select row. """
-    tds[0].click()
+    """ Select all rows. """
+    main = rows[0].find_elements_by_tag_name('th')[0].click()
 
     """ Update artist. """
     browser.find_element_by_id('new_value').click()
     browser.find_element_by_id(1).click()
     browser.find_element_by_id('update').click()
 
-    time.sleep(2)
+    """ Returns to expense page."""
+    assert browser.find_element_by_id("header").text == 'Expense Import'
 
-    """ User sees error table updated. """
+    """ User fixes type matching errors. """
+    browser.find_element_by_id('fix_type_errors').click()
+
+    """ User sees error table. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 2
+    assert len(rows) == 7
 
+    rows[0].find_elements_by_tag_name('th')[1].text == 'Date'
 
+    tds = rows[1].find_elements_by_tag_name('td')
+
+    assert tds[1].text == '2019-07-26' 
+    assert tds[2].text == 'Xoom.com' 
+
+    """ Select all rows. """
+    main = rows[0].find_elements_by_tag_name('th')[0].click()
+
+    """ Update type. """
+    browser.find_element_by_id('new_value').click()
+    browser.find_element_by_id(1).click()
+    browser.find_element_by_id('update').click()
+
+    """ Returns to expense page."""
+    assert browser.find_element_by_id("header").text == 'Expense Import'
