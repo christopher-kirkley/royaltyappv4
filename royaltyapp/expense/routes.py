@@ -136,13 +136,16 @@ def delete_expense_statement(id):
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/update-errors', methods=['PUT'])
-def update_errors():
+def update_artist_errors():
     data = request.get_json(force=True)
     try:
         for id in data['selected_ids']:
             obj = db.session.query(ExpensePending).get(id)
             if data['error_type'] == 'artist':
                 obj.artist_name = data['new_value']
+                db.session.commit()
+            if data['error_type'] == 'type':
+                obj.expense_type = data['new_value']
                 db.session.commit()
             
     except exc.DataError:
