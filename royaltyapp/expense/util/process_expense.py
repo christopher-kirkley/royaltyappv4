@@ -33,15 +33,26 @@ def normalize_expense_type():
     db.session.commit()
 
 def insert_into_imported_statements():
-    submitted_statements = (db.session.query(ExpensePending.statement)
-        .distinct().all()
+    submitted_statements = (
+            db.session.query(
+                ExpensePending.statement,
+                func.min(ExpensePending.date).label('start_date'),
+                func.max(ExpensePending.date).label('end_date'),
+                )
+            .group_by(ExpensePending.statement,)
+            .distinct().all()
     )
     for item in submitted_statements:
         try:
-            i = (ImportedStatement.__table__
-            .insert().values(statement_name=item.statement,
-            transaction_type='expense'
-            ))
+            i = (
+                    ImportedStatement.__table__
+                    .insert().values(
+                        statement_name=item.statement,
+                        transaction_type='expense',
+                        start_date=item.start_date,
+                        end_date=item.end_date,
+                        )
+                    )
             db.session.execute(i)
             db.session.commit()
         except exc.SQLAlchemyError:

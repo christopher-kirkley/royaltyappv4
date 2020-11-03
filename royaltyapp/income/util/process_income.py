@@ -30,17 +30,20 @@ def normalize_track():
     db.session.commit()
 
 def insert_into_imported_statements():
-    submitted_statements = (db.session.query(IncomePending.statement,
-        IncomePending.distributor_id,
-        func.min(IncomePending.date).label('start_date'),
-        func.max(IncomePending.date).label('end_date'),
-        )
-        .group_by(IncomePending.statement, IncomePending.distributor_id)
-        .distinct().all()
+    submitted_statements = (
+            db.session.query(
+                IncomePending.statement,
+                IncomePending.distributor_id,
+                func.min(IncomePending.date).label('start_date'),
+                func.max(IncomePending.date).label('end_date'),
+                )
+            .group_by(IncomePending.statement, IncomePending.distributor_id)
+            .distinct().all()
     )
     for item in submitted_statements:
         try:
-            i = (ImportedStatement.__table__
+            i = (
+                    ImportedStatement.__table__
                     .insert().values(
                         statement_name=item.statement,
                         transaction_type='income',

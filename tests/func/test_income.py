@@ -102,9 +102,3 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id("delete1").click()
 
     """ Statement dissapears from page. """
-
-
-    
-
-
-

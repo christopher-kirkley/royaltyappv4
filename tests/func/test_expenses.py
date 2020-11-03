@@ -148,3 +148,28 @@ def test_returns(browser, test_client, db):
 
     """ Returns to expense page."""
     assert browser.find_element_by_id("header").text == 'Expense Import'
+
+    """ Process errors."""
+    browser.find_element_by_id('process_errors').click()
+
+    """ User goes to view imported expense statements. """
+    assert browser.find_element_by_id('header').text == 'Expense'
+    
+    time.sleep(1)
+    table = browser.find_element_by_id('imported_expense_table')
+    rows = table.find_elements_by_tag_name('tr')
+    tds = rows[1].find_elements_by_tag_name('td')
+    assert tds[0].text == 'expense_catalog.csv'
+    assert tds[1].text == '2019-01-01'
+
+
+    browser.find_element_by_id('view1').click()
+    
+    """ User goes to imported expense statement detail to view summa to view summary."""
+    time.sleep(1)
+    assert browser.find_element_by_id('number_of_records').text == '4'
+
+    """ User decides to go back and delete this statement. """
+    browser.get('http://localhost:3000/income')
+    time.sleep(1)
+    browser.find_element_by_id("delete1").click()
