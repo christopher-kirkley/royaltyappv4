@@ -11,7 +11,7 @@ import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
-from royaltyapp.income.helpers import StatementFactory, find_distinct_matching_errors, process_pending_statements
+from royaltyapp.income.helpers import StatementFactory, process_pending_statements
 
 from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors
 
@@ -171,4 +171,38 @@ def test_can_update_pending_table(test_client, db):
     assert json.loads(response.data) == {"success": "true"}
     query = db.session.query(IncomePending).filter(IncomePending.id == 13).first()
     assert query.upc_id == '123'
+
+def test_can_update_upc_errors_in_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    data = {
+            'error_type': 'upc',
+            'selected_ids': [ 1 ],
+            'new_value': '602318136817'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    query = (db.session.query(IncomePending)
+                .filter(IncomePending.id == 1)
+                .first()
+                )
+    assert response.status_code == 200
+    assert query.upc_id == '602318136817'
+
+def test_can_update_isrc_errors_in_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_bandcamp_sales(test_client)
+    data = {
+            'error_type': 'isrc',
+            'selected_ids': [ 1 ],
+            'new_value': 'QZDZE19050016'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    query = (db.session.query(IncomePending)
+                .filter(IncomePending.id == 1)
+                .first()
+                )
+    assert response.status_code == 200
+    assert query.isrc_id == 'QZDZE19050016'
 

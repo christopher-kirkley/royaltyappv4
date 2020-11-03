@@ -76,8 +76,8 @@ def update_track_errors():
         return jsonify({'success': 'false'})
     return jsonify({'updated': updated_errors})
 
-@income.route('/income/update-errors', methods=['PUT'])
-def update_errors():
+@income.route('/income/match-errors', methods=['PUT'])
+def match_errors():
     data = request.get_json(force=True)
     try:
         sel = find_distinct_version_matching_errors()
@@ -123,7 +123,6 @@ def delete_pending_statements(name):
     res.delete()
     db.session.commit()
     return jsonify({'success': 'true'})
-
 
 @income.route('/income/process-pending', methods=['POST'])
 def process_pending_income():
@@ -232,5 +231,23 @@ def get_distributors():
     distributors = distributor_schema.dumps(query)
     return distributors
 
+    return jsonify({'success': 'true'})
+
+@income.route('/income/update-errors', methods=['PUT'])
+def update_errors():
+    data = request.get_json(force=True)
+    try:
+        for id in data['selected_ids']:
+            obj = db.session.query(IncomePending).get(id)
+            if data['error_type'] == 'upc':
+                obj.upc_id = data['new_value']
+                db.session.commit()
+            if data['error_type'] == 'isrc':
+                obj.isrc_id = data['new_value']
+                db.session.commit()
+            
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
