@@ -147,6 +147,9 @@ def update_artist_errors():
             if data['error_type'] == 'type':
                 obj.expense_type = data['new_value']
                 db.session.commit()
+            if data['error_type'] == 'catalog':
+                obj.catalog_number = data['new_value']
+                db.session.commit()
             
     except exc.DataError:
         db.session.rollback()

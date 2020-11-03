@@ -122,3 +122,29 @@ def test_returns(browser, test_client, db):
 
     """ Returns to expense page."""
     assert browser.find_element_by_id("header").text == 'Expense Import'
+
+    """ User fixes catalog matching errors. """
+    browser.find_element_by_id('fix_catalog_errors').click()
+
+    """ User sees error table. """
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 3
+
+    rows[0].find_elements_by_tag_name('th')[1].text == 'Date'
+
+    tds = rows[1].find_elements_by_tag_name('td')
+
+    assert tds[1].text == '2019-07-20' 
+    assert tds[2].text == 'A to Z' 
+
+    """ Select all rows. """
+    main = rows[0].find_elements_by_tag_name('th')[0].click()
+
+    """ Update catalog. """
+    browser.find_element_by_id('new_value').click()
+    browser.find_element_by_id(1).click()
+    browser.find_element_by_id('update').click()
+
+    """ Returns to expense page."""
+    assert browser.find_element_by_id("header").text == 'Expense Import'
