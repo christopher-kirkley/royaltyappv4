@@ -160,10 +160,12 @@ def test_returns(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     tds = rows[1].find_elements_by_tag_name('td')
     assert tds[0].text == 'expense_catalog.csv'
-    assert tds[1].text == '2019-01-01'
-
+    assert tds[1].text == '2019-07-20'
+    assert tds[2].text == '2019-11-26'
 
     browser.find_element_by_id('view1').click()
+
+    time.sleep(1000)
     
     """ User goes to imported expense statement detail to view summa to view summary."""
     time.sleep(1)
