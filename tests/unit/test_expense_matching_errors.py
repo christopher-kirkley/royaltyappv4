@@ -14,7 +14,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingV
 
 from royaltyapp.expense.helpers import expense_matching_errors
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_type_expense
+from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_type_expense
 
 def test_can_import_type_expense(test_client, db):
     path = os.getcwd() + "/tests/files/expense_type.csv"
@@ -101,4 +101,21 @@ def test_can_update_type_errors_in_pending_table(test_client, db):
                 )
     assert response.status_code == 200
     assert query.expense_type == 'Advance'
+
+def test_can_update_catalog_errors_in_pending_table(test_client, db):
+    build_catalog(db, test_client)
+    add_catalog_expense(test_client)
+    data = {
+            'error_type': 'catalog',
+            'selected_ids': [ 3 ],
+            'new_value': 'SS-050'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/expense/update-errors', data=json_data)
+    query = (db.session.query(ExpensePending)
+                .filter(ExpensePending.id == 3)
+                .first()
+                )
+    assert response.status_code == 200
+    assert query.catalog_number == 'SS-050'
 
