@@ -34,6 +34,8 @@ def test_can_view_imported_statements(test_client, db):
     assert json.loads(response.data) == [{
                                         'id' : 1,
                                         'statement_name' : 'expense_artist.csv',
+                                        'start_date' : '2019-01-01',
+                                        'end_date' : '2019-01-01',
                                         'income_distributor_id': None,
                                         'transaction_type' : 'expense'
                                         }]

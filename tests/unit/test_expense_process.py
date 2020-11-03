@@ -60,6 +60,8 @@ def test_can_insert_into_imported_statements_table(test_client, db):
     res = db.session.query(ImportedStatement).first()
     assert res.statement_name == 'expense_artist.csv'
     assert res.transaction_type == 'expense'
+    assert res.start_date.strftime("%Y-%m-%d") == '2020-01-01'
+    assert res.end_date.strftime("%Y-%m-%d") == '2020-01-01'
 
 def test_can_normalize_statement_id(test_client, db):
     build_catalog(db, test_client)
@@ -83,5 +85,4 @@ def test_can_insert_into_total(test_client, db):
     pe.normalize_statement_id()
     pe.move_from_pending_expense_to_total()    
     res = db.session.query(ExpenseTotal).all()
-    time.sleep(100)
-    assert len(res) == 0
+    assert len(res) == 4
