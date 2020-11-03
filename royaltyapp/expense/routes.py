@@ -173,7 +173,7 @@ def delete_expense_statement(id):
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/update-errors', methods=['PUT'])
-def update_artist_errors():
+def update_errors():
     data = request.get_json(force=True)
     try:
         for id in data['selected_ids']:
