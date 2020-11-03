@@ -96,6 +96,8 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     assert browser.find_element_by_id('number_of_records').text == '4'
 
+    time.sleep(1000)
+
     """ User decides to go back and delete this statement. """
     browser.get('http://localhost:3000/income')
     time.sleep(1)

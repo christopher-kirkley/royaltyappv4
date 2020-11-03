@@ -1,10 +1,11 @@
 from flask import Blueprint, jsonify, request
-from sqlalchemy import exc, func, cast, Numeric
+from sqlalchemy import exc, func, cast, Numeric, extract
 # from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 #         VersionSchema, Track, TrackCatalogTable
 
 import pandas as pd
 import json
+import datetime
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, ExpensePending, ExpensePendingSchema, ExpenseTotalSchema, ExpenseTotal
 
@@ -107,13 +108,49 @@ def process_pending():
 
 @expense.route('/expense/imported-statements', methods=['GET'])
 def get_imported_statements():
-    query = (db.session.query(ImportedStatement)
+    # query = (db.session.query(ImportedStatement)
+    #         .filter(ImportedStatement.transaction_type == 'expense')
+    #         .all()
+    #         )
+    # imported_statement_schema = ImportedStatementSchema(many=True)
+    # statements = imported_statement_schema.dumps(query)
+    # return statements
+    result = {}
+
+
+    query = (
+            db.session.query(
+                ImportedStatement.start_date
+                )
             .filter(ImportedStatement.transaction_type == 'expense')
-            .all()
+            .all())
+
+    for row in query:
+        result[row.start_date.strftime("%Y")] = []
+
+
+    for year in result:
+        data = (db.session.query(
+            ImportedStatement.id,
+            ImportedStatement.statement_name,
+            ImportedStatement.start_date,
+            ImportedStatement.end_date,
             )
-    imported_statement_schema = ImportedStatementSchema(many=True)
-    statements = imported_statement_schema.dumps(query)
-    return statements
+                .filter(ImportedStatement.transaction_type == 'expense')
+                .filter(extract('year', ImportedStatement.start_date) == year)
+                .all())
+
+        for item in data:
+            obj = {
+                    'start_date': item.start_date.strftime("%Y-%m-%d"),
+                    'end_date': item.end_date.strftime("%Y-%m-%d"),
+                    'id': item.id,
+                    'statement_name': item.statement_name
+                    }
+            result[year].append(obj)
+
+    return jsonify(result)
+
 
 @expense.route('/expense/statements/<id>', methods=['GET'])
 def get_imported_statement_detail(id):

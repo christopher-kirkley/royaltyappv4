@@ -21948,3 +21948,91 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1604420569213	Marionette	INFO	Listening on port 64905
 1604420569288	Marionette	WARN	TLS certificate errors will be ignored for this session
 1604420582602	Marionette	INFO	Stopped listening on port 64905
+1604421998289	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileyozRnq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604422001216	Marionette	INFO	Listening on port 65133
+1604422001330	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604422014544	Marionette	INFO	Stopped listening on port 65133
+1604422055889	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileHYyO76"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604422058817	Marionette	INFO	Listening on port 65262
+1604422058895	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 351))
+1604422076099	Marionette	INFO	Stopped listening on port 65262
+1604422090227	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofilea6lBR4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604422093014	Marionette	INFO	Listening on port 65425
+1604422093114	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1604422108314	Marionette	INFO	Stopped listening on port 65425
+1604422123597	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile7EGReh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604422126847	Marionette	INFO	Listening on port 49192
+1604422126942	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604422141762	Marionette	INFO	Stopped listening on port 49192
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1604423167569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile6dyV6t"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604423170396	Marionette	INFO	Listening on port 49445
+1604423170504	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1604423258522	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile2mMUMb"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604423261637	Marionette	INFO	Listening on port 49581
+1604423261764	Marionette	WARN	TLS certificate errors will be ignored for this session
+1604423278638	Marionette	INFO	Stopped listening on port 49581
+1604423305225	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileFJ5Q6q"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604423308058	Marionette	INFO	Listening on port 49701
+1604423308142	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 66855, Chrome_ChildThread] WARNING: pipe error: Socket is not connected: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 696
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604423341394	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile1LCsYr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604423344555	Marionette	INFO	Listening on port 49824
+1604423344627	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1604423489863	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileVdjJj6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1604423493017	Marionette	INFO	Listening on port 49960
+1604423493129	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7487: TypeError: can't convert undefined to object
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7487: TypeError: can't convert undefined to object
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7784: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7785: TypeError: Object.size is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7785: TypeError: Object.size is not a function
+objc[66902]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff9d3123d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x2d52caf50). One of the two will be used. Which one is undefined.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
