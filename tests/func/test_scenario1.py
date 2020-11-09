@@ -44,7 +44,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_income').click()
 
     """ Uploads Bandcamp """
-    path = os.getcwd() + "/tests/files/20200101-20200131_bandcamp_raw_data_Sahel-Sounds.csv"
+    path = os.getcwd() + "/tests/files/scenario1/20200101-20200131_bandcamp_raw_data_Sahel-Sounds.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
@@ -52,7 +52,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads Shopify """
-    path = os.getcwd() + "/tests/files/sales_2020-01-01_2020-01-31.csv"
+    path = os.getcwd() + "/tests/files/scenario1/sales_2020-01-01_2020-01-31.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('shopify').click()
@@ -60,7 +60,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads SD Digital """
-    path = os.getcwd() + "/tests/files/SS013120digpd.csv"
+    path = os.getcwd() + "/tests/files/scenario1/SS013120digpd.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sddigital').click()
@@ -68,7 +68,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads SD Physical """
-    path = os.getcwd() + "/tests/files/SS013120physpd.csv"
+    path = os.getcwd() + "/tests/files/scenario1/SS013120physpd.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sdphysical').click()
@@ -76,7 +76,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads SDS """
-    path = os.getcwd() + "/tests/files/Sahel_Sounds_202001_DSR.csv"
+    path = os.getcwd() + "/tests/files/scenario1/Sahel_Sounds_202001_DSR.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sds').click()
@@ -84,13 +84,14 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads Quickbooks (User generated) """
-    path = os.getcwd() + "/tests/files/qb_sales_2020A.csv"
+    path = os.getcwd() + "/tests/files/scenario1/qb_sales_2020A.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('quickbooks').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
 
+    time.sleep(1)
     
 
     """ User sees statement added to the list of pending statements. """
