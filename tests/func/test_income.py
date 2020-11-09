@@ -136,7 +136,6 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('submit').click()
 
-
     time.sleep(1)
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
@@ -153,4 +152,3 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     browser.find_element_by_id("delete1").click()
 
-    """ Statement dissapears from page. """
