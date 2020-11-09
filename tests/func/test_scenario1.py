@@ -57,7 +57,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('shopify').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
+    time.sleep(5)
 
     """ Uploads SD Digital """
     path = os.getcwd() + "/tests/files/scenario1/SS013120digpd.csv"
@@ -65,7 +65,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sddigital').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
+    time.sleep(10)
 
     """ Uploads SD Physical """
     path = os.getcwd() + "/tests/files/scenario1/SS013120physpd.csv"
@@ -73,7 +73,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sdphysical').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
+    time.sleep(5)
 
     """ Uploads SDS """
     path = os.getcwd() + "/tests/files/scenario1/Sahel_Sounds_202001_DSR.csv"
@@ -81,7 +81,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sds').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
+    time.sleep(5)
 
     """ Uploads Quickbooks (User generated) """
     path = os.getcwd() + "/tests/files/scenario1/qb_sales_2020A.csv"
@@ -89,25 +89,12 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('quickbooks').click()
     browser.find_element_by_id('upload_statement').click()
-    time.sleep(1)
+    time.sleep(5)
 
-    time.sleep(1)
-    
-
-    """ User sees statement added to the list of pending statements. """
-    pending_statement = browser.find_element_by_id('pending_statement')
-    assert pending_statement.text == 'bandcamp_test_2.csv'
+    time.sleep(10000)
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('isrc_matching_errors').text == "You have 2 ISRC matching errors."
     browser.find_element_by_id('fix_isrc_errors').click()
-
-    """ User use update function."""
-    table = browser.find_element_by_id('matching_error_table')
-    rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 3
-    assert browser.find_element_by_xpath('//table/thead/tr[1]/th[2]').text == 'ISRC'
-    assert browser.find_element_by_xpath('//table/thead/tr[1]/th[3]').text == 'Distributor'
 
     """ Select first row. """
     browser.find_element_by_xpath('//table/thead/tr[1]/th[1]/div/input').click()
