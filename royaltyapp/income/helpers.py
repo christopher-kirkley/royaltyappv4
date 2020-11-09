@@ -243,6 +243,7 @@ class QuickbooksStatement(Statement):
         super().__init__(file)
         self.name = 'quickbooks'
         self.encoding = 'utf-8'
+        self.dtype = {}
 
     def clean(self):
         self.df['medium'] = 'physical'

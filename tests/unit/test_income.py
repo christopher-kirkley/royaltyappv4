@@ -95,6 +95,20 @@ def test_can_import_sds_sales(test_client, db):
     assert first.upc_id == '889326664840'
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_import_quickbooks_sales(test_client, db):
+    path = os.getcwd() + "/tests/files/qb_test1.csv"
+    data = {
+            'statement_source': 'quickbooks'
+            }
+    data['file'] = (path, 'qb_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 2
+    assert json.loads(response.data) == {'success': 'true'}
+
+
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
