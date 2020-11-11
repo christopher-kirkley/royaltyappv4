@@ -60,13 +60,13 @@ def pending_track_to_catalog(db):
     FROM pending_track LEFT JOIN artist ON pending_track.track_artist = artist.artist_name
     """)
 
-    # db.session.execute("""
-    # INSERT INTO track_catalog_table (track_id, catalog_id)
-    # SELECT DISTINCT(track.id), catalog.id
-    # FROM pending_track
-    # JOIN track ON pending_track.isrc = track.isrc
-    # JOIN catalog ON pending_track.catalog_number = catalog.catalog_number;
-    # """)
+    db.session.execute("""
+    INSERT INTO track_catalog_table (track_id, catalog_id)
+    SELECT DISTINCT(track.id), catalog.id
+    FROM pending_track
+    JOIN track ON pending_track.isrc = track.isrc
+    JOIN catalog ON pending_track.catalog_number = catalog.catalog_number;
+    """)
     db.session.commit()
     return True
 

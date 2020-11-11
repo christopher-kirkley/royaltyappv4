@@ -64,6 +64,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('track_to_upload').send_keys(path)
     time.sleep(2)
     browser.find_element_by_id('track_upload').click()
+    time.sleep(1000)
     
     """ User goes to Catalog Detail page and see the results. """
     browser.get('http://localhost:3000/catalog/1')
@@ -71,7 +72,6 @@ def test_returns(browser, test_client, db):
     track_number = browser.find_element_by_name('track[0].track_number')
     assert track_number.get_attribute("value") == '1'
     
-    time.sleep(1000)
 
 
 
