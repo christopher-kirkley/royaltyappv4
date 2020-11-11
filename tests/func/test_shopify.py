@@ -59,7 +59,7 @@ def test_returns(browser, test_client, db):
     """ User matches version number. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 5
+    assert len(rows) == 3
     
     browser.find_element_by_id('match').click()
 
@@ -89,9 +89,4 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id("delete1").click()
 
     """ Statement dissapears from page. """
-
-
-    
-
-
 

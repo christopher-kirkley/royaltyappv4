@@ -56,6 +56,21 @@ class Statement:
         income_pending.version_number IS NULL
         """)
 
+    def add_missing_upc_number(self):
+        """album"""
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = version.upc
+        FROM
+        version
+        WHERE
+        income_pending.version_number = version.version_number
+        AND
+        income_pending.upc_id IS NULL
+        """)
+
 class BandcampStatement(Statement):
     def __init__(self, file):
         super().__init__(file)

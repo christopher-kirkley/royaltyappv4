@@ -74,10 +74,34 @@ def test_can_import_shopify_sales(test_client, db):
     assert response.status_code == 200
     result = db.session.query(IncomePending).all()
     assert len(result) == 4
-    first = db.session.query(IncomePending).first()
+    assert result[0].date == datetime.date(2020, 1, 1)
+    assert result[0].upc_id == None
+    assert result[0].version_number == 'SS-055lp'
+    assert result[1].date == datetime.date(2020, 1, 6)
+    assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_update_upc_if_matching_version(test_client, db):
+    build_catalog(db, test_client)
+    path = os.getcwd() + "/tests/files/shopify_test1.csv"
+    data = {
+            'statement_source': 'shopify'
+            }
+    data['file'] = (path, 'shopify_test1.csv')
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 4
+    first = db.session.query(IncomePending).filter(IncomePending.id == 1).one()
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == None
+    assert first.version_number == 'SS-055lp'
+    second = db.session.query(IncomePending).filter(IncomePending.id == 2).one()
+    assert second.date == datetime.date(2020, 1, 6)
+    assert second.upc_id == '602318136794'
+    assert second.version_number == 'SS-050lp'
     assert json.loads(response.data) == {'success': 'true'}
+
 
 def test_can_import_sds_sales(test_client, db):
     path = os.getcwd() + "/tests/files/sds_test1.csv"
