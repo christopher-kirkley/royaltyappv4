@@ -51,6 +51,8 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
 
+    time.sleep(1000)
+
     """ Uploads Shopify """
     path = os.getcwd() + "/tests/files/scenario1/sales_2020-01-01_2020-01-31.csv"
     browser.find_element_by_id('file_upload').send_keys(path)

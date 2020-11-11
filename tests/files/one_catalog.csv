@@ -1,14 +1,3 @@
-isrc,track_artist,track_name,track_number,catalog_number,catalog_name,catalog_artist
-QZDZE1905001,Ahmed Ag Kaedy,Adounia,1,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905002,Ahmed Ag Kaedy,Ishilan,2,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905003,Ahmed Ag Kaedy,Imetawan,3,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905004,Ahmed Ag Kaedy,Akaline Kidal,4,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905005,Ahmed Ag Kaedy,Asin Oral,5,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905006,Ahmed Ag Kaedy,Tikaras,6,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905007,Ahmed Ag Kaedy,Azaman,7,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905008,Ahmed Ag Kaedy,Poesie,8,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905009,Ahmed Ag Kaedy,Assouf,9,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905010,Ahmed Ag Kaedy,Tikounen,10,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905011,Ahmed Ag Kaedy,Temet,11,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905012,Ahmed Ag Kaedy,War Tafar,12,SS-050,Akaline Kidal,Ahmed Ag Kaedy
-QZDZE1905013,Bonehead Jones,Chicken,1,SS-051,Compilation,Various Artist
+catalog_number,catalog_name,catalog_artist
+SS-050,Akaline Kidal,Ahmed Ag Kaedy
+SS-051,Compilation,Various Artist

@@ -5,7 +5,7 @@ from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 
 import pandas as pd
 
-from .helpers import clean_df, pending_to_artist, pending_to_catalog, pending_version_to_version
+from .helpers import clean_catalog_df, clean_track_df, pending_catalog_to_artist, pending_catalog_to_catalog, pending_version_to_version, pending_track_to_artist, pending_track_to_catalog
 
 catalog = Blueprint('catalog', __name__)
 
@@ -155,10 +155,20 @@ def edit_track():
 def import_catalog():
     file = request.files['CSV']
     df = pd.read_csv(file.stream)
-    df = clean_df(df)
-    df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
-    pending_to_artist(db)
-    pending_to_catalog(db)
+    df = clean_catalog_df(df)
+    df.to_sql('pending_catalog', con=db.engine, if_exists='append', index_label='id')
+    pending_catalog_to_artist(db)
+    pending_catalog_to_catalog(db)
+    return jsonify({'success': 'true'})
+
+@catalog.route('/catalog/import-track', methods=['POST'])
+def import_track():
+    file = request.files['CSV']
+    df = pd.read_csv(file.stream)
+    df = clean_track_df(df)
+    df.to_sql('pending_track', con=db.engine, if_exists='append', index_label='id')
+    pending_track_to_artist(db)
+    pending_track_to_catalog(db)
     return jsonify({'success': 'true'})
 
 @catalog.route('/catalog/import-version', methods=['POST'])
