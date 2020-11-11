@@ -75,6 +75,8 @@ def test_can_import_tracks(test_client, db):
     assert artists[2].artist_name == 'Bonehead Jones'
     query = db.session.query(Track).all()
     assert len(query) == 13
+    catalog = query[0].catalog
+    assert catalog[0].catalog_number == 'SS-050'
 
 def test_can_import_version(test_client, db):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
@@ -136,8 +138,6 @@ def test_can_make_track_df(test_client, db):
     df = pd.read_csv(path)
     df = clean_track_df(df)
     assert len(df) == 13
-
-
 
 
 
