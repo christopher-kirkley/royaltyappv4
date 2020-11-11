@@ -25,6 +25,8 @@ def import_sales():
     statement.clean()
     statement.modify_columns()
     statement.insert_to_db()
+    statement.add_missing_version_number()
+    statement.add_missing_upc_number()
     return jsonify({'success': 'true'})
 
 @income.route('/income/matching-errors', methods=['GET'])
