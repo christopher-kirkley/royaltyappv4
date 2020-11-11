@@ -32,8 +32,6 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(2)
     browser.find_element_by_id('catalog_upload').click()
-    msg = browser.find_element_by_id('msg')
-    assert msg.text == '1 file uploaded'
 
     """ User returns to catalog and sees it has worked. """
     browser.find_element_by_id('catalog').click()
@@ -51,14 +49,31 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(2)
     browser.find_element_by_id('version_upload').click()
-    msg = browser.find_element_by_id('version_msg')
-    assert msg.text == '1 file uploaded'
     
     """ User goes to Catalog Detail page and see the results. """
     browser.get('http://localhost:3000/catalog/1')
     time.sleep(2)
     version_number = browser.find_element_by_name('version[0].version_number')
     assert version_number.get_attribute("value") == 'SS-050cass'
+
+    """ User uploads track CSV. """
+    browser.find_element_by_id('catalog').click()
+    browser.find_element_by_id('import_catalog').click()
+    time.sleep(1)
+    path = os.getcwd() + "/tests/files/one_track.csv"
+    browser.find_element_by_id('track_to_upload').send_keys(path)
+    time.sleep(2)
+    browser.find_element_by_id('track_upload').click()
+    
+    """ User goes to Catalog Detail page and see the results. """
+    browser.get('http://localhost:3000/catalog/1')
+    time.sleep(2)
+    track_number = browser.find_element_by_name('track[0].track_number')
+    assert track_number.get_attribute("value") == '1'
+    
+    time.sleep(1000)
+
+
 
 
 

@@ -139,7 +139,6 @@ class PendingTrack(db.Model):
     track_number = db.Column(db.Integer)
     catalog_number = db.Column(db.String(255))
 
-
 class PendingVersion(db.Model):
     __tablename__ = 'pending_version'
 

@@ -33,34 +33,40 @@ def pending_catalog_to_catalog(db):
     FROM artist JOIN pending_catalog
     ON pending_catalog.catalog_artist = artist_name
     """)
+    db.session.commit()
+    return True
 
 def pending_track_to_artist(db):
     """Insert track artists to artists table."""
-    sel = select([PendingTrack.track_artist]).distinct()
+    sel1 = select([PendingTrack.track_artist])
+    sel2 = select([Artist.artist_name])
+    sel = sel1.except_(sel2)
+
     ins = Artist.__table__.insert().from_select(['artist_name'], sel)
     db.session.execute(ins)
-    """Insert album artists into artists table"""
-    db.session.execute("""INSERT INTO artist (artist_name) SELECT DISTINCT track_artist FROM pending_track
-    LEFT JOIN artist ON pending_track.track_artist = artist.artist_name
-    WHERE artist.artist_name IS NULL;""")
+    # """Insert album artists into artists table"""
+    # db.session.execute("""
+    # INSERT INTO artist (artist_name)
+    # SELECT DISTINCT track_artist FROM pending_track
+    # LEFT JOIN artist ON pending_track.track_artist = artist.artist_name
+    # WHERE artist.artist_name IS NULL;""")
     db.session.commit()
     return True
 
 def pending_track_to_catalog(db):
     db.session.execute("""
     INSERT INTO track (isrc, track_name, track_number, artist_id)
-    SELECT DISTINCT(pending_track.isrc), pending_track.track_name, track_number, artist.id
-    FROM artist JOIN pending_track
-    ON pending_track.track_artist = artist_name;
+    SELECT DISTINCT(pending_track.isrc), pending_track.track_name, track_number, 2
+    FROM pending_track LEFT JOIN artist ON pending_track.track_artist = artist.artist_name
     """)
 
-    db.session.execute("""
-    INSERT INTO track_catalog_table (track_id, catalog_id)
-    SELECT DISTINCT(track.id), catalog.id
-    FROM pending_track
-    JOIN track ON pending_track.isrc = track.isrc
-    JOIN catalog ON pending_track.catalog_number = catalog.catalog_number;
-    """)
+    # db.session.execute("""
+    # INSERT INTO track_catalog_table (track_id, catalog_id)
+    # SELECT DISTINCT(track.id), catalog.id
+    # FROM pending_track
+    # JOIN track ON pending_track.isrc = track.isrc
+    # JOIN catalog ON pending_track.catalog_number = catalog.catalog_number;
+    # """)
     db.session.commit()
     return True
 

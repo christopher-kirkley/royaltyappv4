@@ -6,6 +6,8 @@ import io
 
 import pandas as pd
 
+import time
+
 from royaltyapp.models import Artist, Catalog, Version, Track, PendingCatalog, PendingTrack, PendingVersion, IncomeDistributor
 
 from .helpers import add_one_artist, add_one_catalog, add_one_version, add_one_track, make_pending_catalog, make_pending_version
@@ -32,6 +34,7 @@ def test_can_import_catalog(test_client, db):
     assert query[0].artist_name == 'Various Artist'
     assert query[1].artist_name == 'Ahmed Ag Kaedy'
     query = db.session.query(Catalog).all()
+    assert len(query) == 2
     assert query[0].catalog_name == 'Akaline Kidal'
     assert query[1].catalog_name == 'Compilation'
 
@@ -59,11 +62,19 @@ def test_can_import_tracks(test_client, db):
     assert query[0].track_artist == 'Ahmed Ag Kaedy'
     assert query[0].track_number == 1
     assert query[0].isrc == 'QZDZE1905001'
+    assert query[0].catalog_number == 'SS-050'
     assert query[1].track_artist == 'Ahmed Ag Kaedy'
     assert query[1].track_number == 2
     assert query[1].isrc == 'QZDZE1905002'
     query = db.session.query(Catalog).first()
     assert query.catalog_name == 'Akaline Kidal'
+    assert len(db.session.query(Artist).all()) == 3
+    artists = db.session.query(Artist).all()
+    assert artists[0].artist_name == 'Various Artist'
+    assert artists[1].artist_name == 'Ahmed Ag Kaedy'
+    assert artists[2].artist_name == 'Bonehead Jones'
+    query = db.session.query(Track).all()
+    assert len(query) == 13
 
 def test_can_import_version(test_client, db):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
@@ -90,7 +101,6 @@ def test_can_import_version(test_client, db):
     query = db.session.query(Catalog).first()
     assert len(query.version) == 3
 
-
 def test_can_clean_catalog_csv(test_client):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
     df = pd.read_csv(path)
@@ -110,17 +120,23 @@ def test_can_load_database(db):
 def test_can_process_df(db):
     make_pending_catalog(db)
     query = db.session.query(PendingCatalog).all()
-    # assert len(query) != 0
-    # pending_catalog_to_artist(db)
-    # query = db.session.query(Artist).all()
-    # assert len(query) == 3
-    # assert query[0].artist_name == 'Ahmed Ag Kaedy'
-    # assert query[2].artist_name == 'Various Artist'
-    # pending_catalog_to_catalog(db)
-    # query = db.session.query(Catalog).all()
-    # assert len(query) == 2
-    # assert query[0].catalog_name == 'Akaline Kidal'
+    assert len(query) != 0
+    pending_catalog_to_artist(db)
+    query = db.session.query(Artist).all()
+    assert len(query) == 2
+    assert query[0].artist_name == 'Various Artist'
+    assert query[1].artist_name == 'Ahmed Ag Kaedy'
+    pending_catalog_to_catalog(db)
+    query = db.session.query(Catalog).all()
+    assert len(query) == 2
+    assert query[0].catalog_name == 'Akaline Kidal'
     
+def test_can_make_track_df(test_client, db):
+    path = os.getcwd() + "/tests/files/one_track.csv"
+    df = pd.read_csv(path)
+    df = clean_track_df(df)
+    assert len(df) == 13
+
 
 
 
