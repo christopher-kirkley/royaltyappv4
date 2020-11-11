@@ -56,7 +56,7 @@ def pending_track_to_artist(db):
 def pending_track_to_catalog(db):
     db.session.execute("""
     INSERT INTO track (isrc, track_name, track_number, artist_id)
-    SELECT DISTINCT(pending_track.isrc), pending_track.track_name, track_number, 2
+    SELECT DISTINCT(pending_track.isrc), pending_track.track_name, track_number, artist.id
     FROM pending_track LEFT JOIN artist ON pending_track.track_artist = artist.artist_name
     """)
 
