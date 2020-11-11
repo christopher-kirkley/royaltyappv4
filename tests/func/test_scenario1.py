@@ -31,6 +31,11 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
 
+    path = os.getcwd() + "/tests/files/tracks.csv"
+    browser.find_element_by_id('track_to_upload').send_keys(path)
+    time.sleep(1)
+    browser.find_element_by_id('track_upload').click()
+
     path = os.getcwd() + "/tests/files/versions.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
@@ -44,17 +49,15 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_income').click()
 
     """ Uploads Bandcamp """
-    path = os.getcwd() + "/tests/files/scenario1/20200101-20200131_bandcamp_raw_data_Sahel-Sounds.csv"
+    path = os.getcwd() + "/tests/files/scenario1/bandcamp_30items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
 
-    time.sleep(1000)
-
     """ Uploads Shopify """
-    path = os.getcwd() + "/tests/files/scenario1/sales_2020-01-01_2020-01-31.csv"
+    path = os.getcwd() + "/tests/files/scenario1/shopify_50items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('shopify').click()
@@ -62,7 +65,7 @@ def test_returns(browser, test_client, db):
     time.sleep(5)
 
     """ Uploads SD Digital """
-    path = os.getcwd() + "/tests/files/scenario1/SS013120digpd.csv"
+    path = os.getcwd() + "/tests/files/scenario1/sddigital_100items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sddigital').click()
@@ -70,7 +73,7 @@ def test_returns(browser, test_client, db):
     time.sleep(10)
 
     """ Uploads SD Physical """
-    path = os.getcwd() + "/tests/files/scenario1/SS013120physpd.csv"
+    path = os.getcwd() + "/tests/files/scenario1/sdphysical_100items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sdphysical').click()
@@ -78,7 +81,7 @@ def test_returns(browser, test_client, db):
     time.sleep(5)
 
     """ Uploads SDS """
-    path = os.getcwd() + "/tests/files/scenario1/Sahel_Sounds_202001_DSR.csv"
+    path = os.getcwd() + "/tests/files/scenario1/sds_30items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sds').click()
@@ -86,45 +89,22 @@ def test_returns(browser, test_client, db):
     time.sleep(5)
 
     """ Uploads Quickbooks (User generated) """
-    path = os.getcwd() + "/tests/files/scenario1/qb_sales_2020A.csv"
+    path = os.getcwd() + "/tests/files/scenario1/qb_50items.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('quickbooks').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(5)
-
-    time.sleep(10000)
-
-    """ User sees prompt for errors, and clicks to fix matching errors. """
-    browser.find_element_by_id('fix_isrc_errors').click()
-
-    """ Select first row. """
-    browser.find_element_by_xpath('//table/thead/tr[1]/th[1]/div/input').click()
-
-    """ Update type. """
-    browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('1').click()
-    browser.find_element_by_id('update').click()
-
-    """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('upc_matching_errors').text == "You have 4 UPC matching errors."
-    browser.find_element_by_id('fix_upc_errors').click()
-
-    """ Select first row. """
-    browser.find_element_by_xpath('//table/thead/tr[1]/th[1]/div/input').click()
-
-    """ Update type. """
-    browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('SS-050lp').click()
-    browser.find_element_by_id('update').click()
-
-    time.sleep(1)
-
+    
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
 
+    time.sleep(1)
+
     """ User goes to generate statement. """
     browser.find_element_by_id('statements').click()
+
+    time.sleep(1)
     browser.find_element_by_id('generate').click()
     assert browser.find_element_by_id('header').text == 'Generate Statement'
     
@@ -135,7 +115,7 @@ def test_returns(browser, test_client, db):
 
     end_date = browser.find_element_by_id('end-date')
     end_date.click()
-    end_date.send_keys('01312020')
+    end_date.send_keys('06302020')
 
     browser.find_element_by_id('previous_balance_id').click()
     time.sleep(1)
@@ -151,10 +131,7 @@ def test_returns(browser, test_client, db):
 
     """ User navigates to first statement to view main statement."""
     browser.find_element_by_id('1').click()
-    time.sleep(2)
-    assert browser.find_element_by_id('header').text == 'Statement Summary'
-    assert browser.find_element_by_id('statement-name').text == 'statement_2020_01_01_2020_01_31'
-    assert browser.find_element_by_id('current-owed').text == 'Current Owed: $0'
+    time.sleep(1000)
 
     # """ User navigates to artist statement detail. """
     # browser.find_element_by_id('1').click()
