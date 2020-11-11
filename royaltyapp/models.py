@@ -121,8 +121,16 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
 
 
 # try to refactor to make this a temp table using ORM core
-class Pending(db.Model):
-    __tablename__ = 'pending'
+class PendingCatalog(db.Model):
+    __tablename__ = 'pending_catalog'
+
+    id = db.Column(db.Integer, primary_key=True)
+    catalog_number = db.Column(db.String(255))
+    catalog_name = db.Column(db.String(255))
+    catalog_artist = db.Column(db.String(255))
+
+class PendingTrack(db.Model):
+    __tablename__ = 'pending_track'
 
     id = db.Column(db.Integer, primary_key=True)
     isrc = db.Column(db.String(255))
@@ -130,8 +138,6 @@ class Pending(db.Model):
     track_name = db.Column(db.String(255))
     track_number = db.Column(db.Integer)
     catalog_number = db.Column(db.String(255))
-    catalog_name = db.Column(db.String(255))
-    catalog_artist = db.Column(db.String(255))
 
 
 class PendingVersion(db.Model):

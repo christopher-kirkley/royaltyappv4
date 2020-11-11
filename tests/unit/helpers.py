@@ -5,7 +5,7 @@ import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track, OrderSettings
 
-from royaltyapp.catalog.helpers import clean_df
+from royaltyapp.catalog.helpers import clean_catalog_df, clean_track_df
 
 from royaltyapp.income.util import process_income as pi
 
@@ -61,11 +61,11 @@ def add_one_track(db):
     obj.tracks.append(new_track)
     db.session.commit()
 
-def make_pending(db):
+def make_pending_catalog(db):
     path = os.getcwd() + "/tests/files/one_catalog.csv"
     df = pd.read_csv(path)
-    df = clean_df(df)
-    df.to_sql('pending', con=db.engine, if_exists='append', index_label='id')
+    df = clean_catalog_df(df)
+    df.to_sql('pending_catalog', con=db.engine, if_exists='append', index_label='id')
     return True
 
 def make_pending_version(db):

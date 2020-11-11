@@ -23078,3 +23078,49 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1605114316522	Marionette	INFO	Listening on port 63624
 1605114316625	Marionette	WARN	TLS certificate errors will be ignored for this session
 1605114324399	Marionette	INFO	Stopped listening on port 63624
+1605115980055	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileIBpwki"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605115983507	Marionette	INFO	Listening on port 63858
+1605115983598	Marionette	WARN	TLS certificate errors will be ignored for this session
+1605115991089	Marionette	INFO	Stopped listening on port 63858
+1605116011929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile8WnGL5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605116014856	Marionette	INFO	Listening on port 63953
+1605116014923	Marionette	WARN	TLS certificate errors will be ignored for this session
+1605116025578	Marionette	INFO	Stopped listening on port 63953
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1605116042183	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile4M56OY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605116045070	Marionette	INFO	Listening on port 64056
+1605116045199	Marionette	WARN	TLS certificate errors will be ignored for this session
+1605116055555	Marionette	INFO	Stopped listening on port 64056
+1605118106474	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofile3gi2Ew"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605118110128	Marionette	INFO	Listening on port 64465
+1605118110176	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:3000"
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1605119145950	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileTh83MR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605119149307	Marionette	INFO	Listening on port 64719
+1605119149377	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1605119803810	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/sy/ftdw_z7943l_lhzvzhtgs7k80000gn/T/rust_mozprofileq11yf3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605119806719	Marionette	INFO	Listening on port 64949
+1605119806823	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
