@@ -59,7 +59,7 @@ def test_can_create_statement_summary_table(test_client, db):
 def test_can_get_statement_by_artist_subquery(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': None,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -67,6 +67,7 @@ def test_can_get_statement_by_artist_subquery(test_client, db):
     end_date = data['end_date']
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
+    assert json.loads(response.data)['statement_index'] == 1
     statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(1)
     statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(1)
     statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(1)
@@ -86,6 +87,7 @@ def test_can_get_statement_by_artist_subquery(test_client, db):
                 Decimal('24.95'), # sales 
                 Decimal('9542.63'), # advance
                 )]
+
 
 def test_can_insert_statement_summary_data_into_table(test_client, db):
     setup_test1(test_client, db)
@@ -123,7 +125,7 @@ def test_can_insert_statement_summary_data_into_table(test_client, db):
 def test_can_link_previous_balance(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': None,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-15'
             }
@@ -131,6 +133,7 @@ def test_can_link_previous_balance(test_client, db):
     response = test_client.post('/statements/generate', data=json_data)
     response = test_client.post('/statements/1/generate-summary')
     assert response.status_code == 200
+    assert json.loads(response.data)['index'] == '1'
 
     data = {
             'previous_balance_id': 1,
@@ -141,10 +144,11 @@ def test_can_link_previous_balance(test_client, db):
     response = test_client.post('/statements/generate', data=json_data)
     response = test_client.post('/statements/2/generate-summary')
     assert response.status_code == 200
+    assert json.loads(response.data)['index'] == '2'
 
     res = db.session.query(StatementGenerated)
     assert len(res.all()) == 2
-    assert res.all()[0].previous_balance_id == None
+    assert res.all()[0].previous_balance_id == 0
     assert res.all()[1].previous_balance_id == 1
 
     metadata = db.MetaData(db.engine, reflect=True)

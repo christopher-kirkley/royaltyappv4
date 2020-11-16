@@ -15,7 +15,6 @@ import time
 
 from royaltyapp.models import StatementGenerated, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, IncomePending
 
-
 from royaltyapp.statements.util import generate_artist_statement as ga
 
 from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement, setup_test1, setup_statement
@@ -45,7 +44,7 @@ def test_can_view_statement_summary(test_client, db):
                     'total_advance': 9542.63,
                     'total_previous_balance': 0,
                     'total_recoupable': 1398.06,
-                    'total_sales': 24.95,
+                    'total_sales': 31.25,
                     'total_to_split': -1373.11
                     }],
             }
@@ -58,20 +57,20 @@ def test_can_view_statement_artist_detail(test_client, db):
             'artist': 'Ahmed Ag Kaedy',
             'statement': 'statement_2020_01_01_2020_01_31',
             'summary': [{
-                'balance_forward': -10229.19,
-                'previous_balance': 0,
-                'sales': 24.95,
-                'split': -686.56,
+                'balance_forward': -10226.04,
+                'previous_balance': 0.0,
+                'sales': 31.25,
+                'split': -683.41,
                 'advances': 9542.63,
                 'recoupables': 1398.06,
-                'total_to_split': -1373.11
+                'total_to_split': -1366.81
                 }],
             'income':
                 [{
                     'catalog_name': 'Akaline Kidal',
-                    'combined_net': 24.15,
+                    'combined_net': 30.45,
                     'digital_net': 0,
-                    'physical_net': 24.15,
+                    'physical_net': 30.45,
                     }],
             'expense':
                 [{
@@ -112,21 +111,21 @@ def test_can_view_statement_artist_detail(test_client, db):
                     'version_number': 'SS-050cass',
                     'format': 'cass',
                     'quantity': 1,
-                    'net': 8.05,
+                    'net': 10.15,
                     },
                 {
                     'catalog_name': 'Akaline Kidal',
                     'version_number': 'SS-050digi',
                     'format': 'digital',
                     'quantity': 1,
-                    'net': 8.05,
+                    'net': 10.15,
                     },
                 {
                     'catalog_name': 'Akaline Kidal',
                     'version_number': 'SS-050lp',
                     'format': 'lp',
                     'quantity': 1,
-                    'net': 8.05,
+                    'net': 10.15,
                     },
                 ],
             'track_sales':
@@ -139,6 +138,25 @@ def test_can_view_statement_artist_detail(test_client, db):
                 ],
 
             }
+
+def test_can_view_statement_artist_detail_two_artists(test_client, db):
+    setup_statement(test_client, db)
+    response = test_client.get('/statements/1/artist/1')
+    assert response.status_code == 200
+    response = test_client.get('/statements/1/artist/2')
+    assert response.status_code == 200
+    data = json.loads(response.data)
+    assert data['artist'] == 'Bonehead Jones'
+    assert data['summary'] == [{
+                'balance_forward': 0,
+                'previous_balance': 0.0,
+                'sales': 0,
+                'split': 0,
+                'advances': 0,
+                'recoupables': 0,
+                'total_to_split': 0
+                }]
+
 
 def test_can_edit_statement_versions(test_client, db):
     setup_statement(test_client, db)

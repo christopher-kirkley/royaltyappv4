@@ -26,17 +26,17 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('catalog').click()
     time.sleep(1)
     browser.find_element_by_id('import_catalog').click()
-    path = os.getcwd() + "/tests/files/catalog.csv"
+    path = os.getcwd() + "/tests/files/scenario2/catalog_dummy.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
 
-    path = os.getcwd() + "/tests/files/tracks.csv"
+    path = os.getcwd() + "/tests/files/scenario2/tracks_dummy.csv"
     browser.find_element_by_id('track_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('track_upload').click()
 
-    path = os.getcwd() + "/tests/files/versions.csv"
+    path = os.getcwd() + "/tests/files/scenario2/versions_dummy.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('version_upload').click()
@@ -49,7 +49,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_income').click()
 
     """ Uploads Bandcamp """
-    path = os.getcwd() + "/tests/files/scenario1/bandcamp_30items.csv"
+    path = os.getcwd() + "/tests/files/scenario2/bandcamp_dummy_2020.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
@@ -57,7 +57,7 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ Uploads Shopify """
-    path = os.getcwd() + "/tests/files/scenario1/shopify_50items.csv"
+    path = os.getcwd() + "/tests/files/scenario2/shopify_dummy_2020.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('shopify').click()
@@ -65,7 +65,7 @@ def test_returns(browser, test_client, db):
     time.sleep(5)
 
     """ Uploads SD Digital """
-    path = os.getcwd() + "/tests/files/scenario1/sddigital_100items.csv"
+    path = os.getcwd() + "/tests/files/scenario2/sddigital_dummy_2020.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sddigital').click()
@@ -73,23 +73,23 @@ def test_returns(browser, test_client, db):
     time.sleep(10)
 
     """ Uploads SD Physical """
-    path = os.getcwd() + "/tests/files/scenario1/sdphysical_100items.csv"
+    path = os.getcwd() + "/tests/files/scenario2/sdphysical_dummy_2020.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('sdphysical').click()
     browser.find_element_by_id('upload_statement').click()
     time.sleep(5)
 
-    """ Uploads SDS """
-    path = os.getcwd() + "/tests/files/scenario1/sds_30items.csv"
-    browser.find_element_by_id('file_upload').send_keys(path)
-    browser.find_element_by_id('source_statement').click()
-    browser.find_element_by_id('sds').click()
-    browser.find_element_by_id('upload_statement').click()
-    time.sleep(5)
+    # """ Uploads SDS """
+    # path = os.getcwd() + "/tests/files/scenario2/sds_dummy_2020.csv"
+    # browser.find_element_by_id('file_upload').send_keys(path)
+    # browser.find_element_by_id('source_statement').click()
+    # browser.find_element_by_id('sds').click()
+    # browser.find_element_by_id('upload_statement').click()
+    # time.sleep(5)
 
     """ Uploads Quickbooks (User generated) """
-    path = os.getcwd() + "/tests/files/scenario1/qb_50items.csv"
+    path = os.getcwd() + "/tests/files/scenario2/qb_dummy_2020.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('quickbooks').click()
@@ -99,7 +99,7 @@ def test_returns(browser, test_client, db):
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
 
-    time.sleep(1)
+    time.sleep(4)
 
     """ User goes to generate statement. """
     browser.find_element_by_id('statements').click()
@@ -118,10 +118,11 @@ def test_returns(browser, test_client, db):
     end_date.send_keys('06302020')
 
     browser.find_element_by_id('previous_balance_id').click()
-    time.sleep(1)
-    browser.find_element_by_id('none').click()
-    browser.find_element_by_id('submit').click()
-    time.sleep(1)
+    # time.sleep(1)
+    # browser.find_element_by_id('none').click()
+    # time.sleep(1)
+    # browser.find_element_by_id('submit').click()
+    # time.sleep(1)
     time.sleep(1000)
 
     """ User goes to view statement. """

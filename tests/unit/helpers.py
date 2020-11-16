@@ -127,13 +127,14 @@ def add_test1_bandcamp_sales(test_client):
             data=data, content_type="multipart/form-data")
 
 def add_order_settings(db):
-    new_order_setting = OrderSettings(
-                    distributor_id = 1,
-                    order_percentage = 0.01,
-                    order_fee = 2.00
-                    )
-    db.session.add(new_order_setting)
-    db.session.commit()
+    # new_order_setting = OrderSettings(
+    #                 distributor_id = 1,
+    #                 order_percentage = 0.01,
+    #                 order_fee = 2.00
+    #                 )
+    # db.session.add(new_order_setting)
+    # db.session.commit()
+    return True
 
 def add_artist_expense(test_client): 
     path = os.getcwd() + "/tests/files/test1_expense_artist.csv"
@@ -198,6 +199,13 @@ def setup_test1(test_client, db):
             }
     response = test_client.post('/catalog/import-catalog',
             data=data)
+    path = os.getcwd() + "/tests/files/test1_track.csv"
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/catalog/import-track',
+            data=data)
     path = os.getcwd() + "/tests/files/test1_version.csv"
     f = open(path, 'rb')
     data = {
@@ -242,7 +250,7 @@ def setup_test1(test_client, db):
 def setup_statement(test_client, db):
     setup_test1(test_client, db)
     data = {
-            'previous_balance_id': None,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
