@@ -66,7 +66,7 @@ def generate_statement_summary(id):
                                                         )
     ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
     ga.insert_into_balance_table(id)
-    return json.dumps({'success': 'true'})
+    return json.dumps({'success': 'true', 'index': id})
 
 
 @statements.route('/statements/view', methods=['GET'])
@@ -169,7 +169,7 @@ def statement_detail_artist(id, artist_id):
                              Numeric(8, 2))
                          .label('balance_forward')
                          )
-    ).filter(artist_id == artist_id)
+    ).filter(statement_summary_table.c.artist_id == artist_id)
 
     summary = []
     
