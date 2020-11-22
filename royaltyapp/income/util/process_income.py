@@ -72,15 +72,16 @@ def normalize_statement_id():
 
 def calculate_adjusted_amount():
     sel = (
-    db.session.query(IncomePending.order_id.label('order_id'),
-    IncomePending.amount.label('amount'),
-    OrderSettings.order_percentage.label('order_percentage'),
-    OrderSettings.order_fee.label('order_fee'),
-    OrderSettings.order_limit.label('order_limit'))
-    .filter(IncomePending.medium == 'physical')
-    .outerjoin(OrderSettings, OrderSettings.distributor_id == IncomePending.distributor_id)
-    .subquery()
-    )
+            db.session.query(
+                IncomePending.order_id.label('order_id'),
+                IncomePending.amount.label('amount'),
+                OrderSettings.order_percentage.label('order_percentage'),
+                OrderSettings.order_fee.label('order_fee'),
+                OrderSettings.order_limit.label('order_limit'))
+            .filter(IncomePending.medium == 'physical')
+            .outerjoin(OrderSettings, OrderSettings.distributor_id == IncomePending.distributor_id)
+            .subquery()
+            )
 
     """Calculate label fee if greater than limit."""
     sel = (
