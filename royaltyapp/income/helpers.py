@@ -102,7 +102,7 @@ class BandcampStatement(Statement):
         self.df['date'] = self.df['date'].dt.strftime('%Y-%m-%d')
         self.df['upc'] = self.df['upc'].astype(str)
         self.df['upc'] = self.df['upc'].str.replace(' ', '')
-        # self.df['upc'] = self.df['upc'].str.replace('.0', '')
+        self.df['upc'] = self.df['upc'].str.replace('.0', '')
         self.df['catalog number'] = self.df['catalog number'].str.replace(' ', '')
 
 
