@@ -115,41 +115,40 @@ def find_track_percentage():
     and make the tracks tied to version rather than catalog, but its a big redesign"""
 
     artist_tracks_per_catalog = (
-    db.session.query(
-    Track.artist_id,
-    TrackCatalogTable.c.catalog_id,
-    func.count(TrackCatalogTable.c.track_id).label('track_count')
-    )
-    .join(Track, Track.id == TrackCatalogTable.c.track_id)
-    .group_by(Track.artist_id, TrackCatalogTable.c.catalog_id)
-    .subquery())
+            db.session.query(
+                Track.artist_id,
+                TrackCatalogTable.c.catalog_id,
+                func.count(TrackCatalogTable.c.track_id).label('track_count')
+                )
+            .join(Track, Track.id == TrackCatalogTable.c.track_id)
+            .group_by(Track.artist_id, TrackCatalogTable.c.catalog_id)
+            .subquery())
 
     tracks_per_catalog = (
-    db.session.query(
-    func.count(TrackCatalogTable.c.track_id).label('total_track_count'),
-    TrackCatalogTable.c.catalog_id
-    )
-    .group_by(TrackCatalogTable.c.catalog_id)
-    .subquery()
-    )
+            db.session.query(
+                func.count(TrackCatalogTable.c.track_id).label('total_track_count'),
+                TrackCatalogTable.c.catalog_id
+                )
+            .group_by(TrackCatalogTable.c.catalog_id)
+            .subquery()
+            )
 
     artist_catalog_percentage = (
-    db.session.query(
-    artist_tracks_per_catalog.c.artist_id,
-    artist_tracks_per_catalog.c.catalog_id,
-    cast(
-    cast(
-    artist_tracks_per_catalog.c.track_count, DECIMAL(4, 2)
-    )
-    /
-    tracks_per_catalog.c.total_track_count, DECIMAL(8, 4)
-    )
-    .label('percentage'))
-    .join(tracks_per_catalog,
-    tracks_per_catalog.c.catalog_id == artist_tracks_per_catalog.c.catalog_id
-    )
-    .subquery()
-    )
+            db.session.query(
+                artist_tracks_per_catalog.c.artist_id,
+                artist_tracks_per_catalog.c.catalog_id,
+                cast(
+                    cast(artist_tracks_per_catalog.c.track_count, DECIMAL(4, 2))
+                    /
+                    tracks_per_catalog.c.total_track_count, DECIMAL(8, 4)
+                    )
+                .label('percentage'))
+            .join(
+                tracks_per_catalog,
+                tracks_per_catalog.c.catalog_id == artist_tracks_per_catalog.c.catalog_id
+                )
+            .subquery()
+            )
 
     return artist_catalog_percentage
 
@@ -158,24 +157,30 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
     between whomever is on the album, tracks are tied to one particular artist only."""
 
     """Query for albums, calculate artist total per catalog item."""
-    sel = db.session.query(IncomeTotal.transaction_type,
-    IncomeTotal.date,
-    IncomeTotal.quantity,
-    (IncomeTotal.label_net * func.coalesce(artist_catalog_percentage.c.percentage, 1)).label('artist_net'),
-    IncomeTotal.type,
-    IncomeTotal.medium,
-    IncomeTotal.income_distributor_id,
-    IncomeTotal.version_id,
-    IncomeTotal.track_id,
-    IncomeTotal.customer,
-    IncomeTotal.city,
-    IncomeTotal.region,
-    IncomeTotal.country,
-    artist_catalog_percentage.c.artist_id,
-    ).filter(IncomeTotal.date.between(start_date, end_date))
-    sel = sel.filter(IncomeTotal.type == 'album')
-    sel = sel.join(Version, Version.id == IncomeTotal.version_id)
-    sel = sel.join(Catalog, Catalog.id == Version.catalog_id)
+    sel = (db.session.query(
+            IncomeTotal.transaction_type,
+            IncomeTotal.date,
+            IncomeTotal.quantity,
+            (IncomeTotal.label_net * func.coalesce(artist_catalog_percentage.c.percentage, 1)).label('artist_net'),
+            IncomeTotal.type,
+            IncomeTotal.medium,
+            IncomeTotal.income_distributor_id,
+            IncomeTotal.version_id,
+            IncomeTotal.track_id,
+            IncomeTotal.customer,
+            IncomeTotal.city,
+            IncomeTotal.region,
+            IncomeTotal.country,
+            func.coalesce(artist_catalog_percentage.c.artist_id, Catalog.artist_id) # this is the problem line, income total not getting artist_id
+            ).join(Version, Version.id == IncomeTotal.version_id)
+            .join(Catalog, Catalog.id == Version.catalog_id)
+            .filter(IncomeTotal.date.between(start_date, end_date))
+            .filter(IncomeTotal.type == 'album'))
+
+    # sel = sel.filter(IncomeTotal.type == 'album')
+    # sel = sel.join(Version, Version.id == IncomeTotal.version_id)
+    # sel = sel.join(Catalog, Catalog.id == Version.catalog_id)
+
     artist_total_catalog = sel.outerjoin(artist_catalog_percentage, artist_catalog_percentage.c.catalog_id == Catalog.id)
 
     """Query for tracks."""
@@ -200,6 +205,10 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
     """Union ALL queries, returning Artist Income By Period. Makes a cool subquery that I can use."""
 
     artist_total = artist_total_catalog.union_all(artist_total_track)
+
+
+
+
 
     return artist_total
 
