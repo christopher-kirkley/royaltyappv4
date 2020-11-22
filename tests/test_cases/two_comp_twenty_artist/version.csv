@@ -1,0 +1,6 @@
+version_number,version_name,upc,format,catalog_number
+TEST-02digi,Digital Album,5555555,digital,TEST-02
+TEST-02lp,Vinyl,6666666,lp,TEST-02
+TEST-04digi,Digital Album,343434,digital,TEST-04
+TEST-04lp,Vinyl,565656,lp,TEST-04
+TEST-04cass,Cassette,787878,cass,TEST-04
