@@ -111,7 +111,7 @@ def get_statement_summary(id):
                 func.sum(statement_for_all_artists.c.balance_forward), 0
                 )
             .label('total'))
-    .filter(statement_for_all_artists.c.balance_forward > 50)
+    # .filter(statement_for_all_artists.c.balance_forward > 50)
     .first())
 
     statement_for_artist = (
