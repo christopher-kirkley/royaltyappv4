@@ -1,0 +1,24 @@
+isrc,track_artist,track_name,track_number,catalog_number
+ABC000000001,Bonehead,Chicken,1,TEST-01
+ABC000000002,Bonehead,Fruitcake,2,TEST-01
+ABC000000003,Bonehead,Pineapples,3,TEST-01
+ABC000000004,Bonehead,Poetry,4,TEST-01
+ABC000000005,Bonehead,New York Dreamin’,5,TEST-01
+ABC000000006,Bonehead,Flashdance,6,TEST-01
+ABC000000007,Bonehead,Potato-ville,7,TEST-01
+ABC000000008,Bonehead,Cheeseburger,8,TEST-01
+ABC000000009,Bonehead,Muffin,9,TEST-01
+ABC000000010,Bonehead,Bagels 4 Sale,10,TEST-01
+ABC000000011,Bonehead,Good New Year!,11,TEST-01
+ABC000000012,Bonehead,What the hell,12,TEST-01
+ABC000000013,Bonehead,It’s my life,13,TEST-01
+DEF000000001,Pop Rocks,Jimi the Hendrix,1,TEST-02
+DEF000000001,Jimi Jeans,Cellophane,2,TEST-02
+DEF000000001,Pop Rocks,Energy Drinks in my mind,3,TEST-02
+DEF000000001,Poor Boy,All the doors,4,TEST-02
+DEF000000001,Bonehead,Tomorrow’s Chicken,5,TEST-02
+DEF000000001,Pineapple Party,Potato Champion,6,TEST-02
+DEF000000001,Poor Boy,Trees,7,TEST-02
+DEF000000001,Chimichanga,Too Many Cooks,8,TEST-02
+DEF000000001,Pop Rocks,What the dance,9,TEST-02
+DEF000000001,Jimi Jeans,Dance burger,10,TEST-02
