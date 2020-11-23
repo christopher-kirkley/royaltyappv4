@@ -1,0 +1,4 @@
+version_number,version_name,upc,format,catalog_number
+TEST-05-small,Small Tshirt,10101010,small tshirt,TEST-05
+TEST-05-medium,Medium Tshirt,11111111,medium tshirt,TEST-05
+TEST-05-large,Large Tshirt,12121212,large tshirt,TEST-05
