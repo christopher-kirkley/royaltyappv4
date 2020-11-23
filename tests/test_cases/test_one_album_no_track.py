@@ -3,9 +3,11 @@ import pytest
 
 import datetime
 import json
+import time
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal
 
+CASE='one_album_no_track'
 
 def import_catalog(test_client, db, case):
     path = os.getcwd() + f'/tests/test_cases/{case}/catalog.csv'
@@ -44,35 +46,35 @@ def import_bandcamp_sales(test_client, db, case):
     return response
 
 def test_can_build_catalog(test_client, db):
-    import_catalog(test_client, db, 'one_album_one_artist')
+    import_catalog(test_client, db, CASE)
     artists = db.session.query(Artist).all()
     assert len(artists) == 1
     catalogs = db.session.query(Catalog).all()
     assert len(catalogs) == 1
     tracks = db.session.query(Track).all()
-    assert len(tracks) == 13
+    assert len(tracks) == 0
 
 def test_can_import_bandcamp(test_client, db):
-    response = import_bandcamp_sales(test_client, db, 'one_album_one_artist')
+    response = import_bandcamp_sales(test_client, db, CASE)
     result = db.session.query(IncomePending).all()
-    assert len(result) == 35
+    assert len(result) == 14
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '2222222222'
+    assert first.upc_id == '10101010'
     assert json.loads(response.data) == {'success': 'true'}
 
 def test_can_process_pending_income(test_client, db):
-    response = import_bandcamp_sales(test_client, db, 'one_album_one_artist')
+    response = import_bandcamp_sales(test_client, db, CASE)
     result = db.session.query(IncomePending).all()
     response = test_client.post('/income/process-pending')
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     res = db.session.query(IncomeTotal).all()
-    assert len(res) == 35
+    assert len(res) == 14
 
 def test_statement_with_no_previous_balance(test_client, db):
-    import_catalog(test_client, db, 'one_album_one_artist')
-    response = import_bandcamp_sales(test_client, db, 'one_album_one_artist')
+    import_catalog(test_client, db, CASE)
+    response = import_bandcamp_sales(test_client, db, CASE) 
     result = db.session.query(IncomePending).all()
     response = test_client.post('/income/process-pending')
     data = {
@@ -89,21 +91,23 @@ def test_statement_with_no_previous_balance(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {
             'summary': {
-                'statement_total': 156.23,
+                'statement_total': 55.22,
                 'previous_balance': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
-                [{
+                [
+                    {
                     'id': 1,
-                    'artist_name': 'Bonehead',
-                    'balance_forward': 156.23,
-                    'split': 156.23,
+                    'artist_name': 'Ratface',
+                    'balance_forward': 55.22,
+                    'split': 55.22,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 312.45,
-                    'total_to_split': 312.45
-                    }],
+                    'total_sales': 110.44,
+                    'total_to_split': 110.44
+                    },
+                    ]
             }
 
