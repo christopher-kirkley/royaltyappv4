@@ -9,18 +9,25 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, process_pending_statements
 
 from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
-def test_can_import_bandcamp_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/bandcamp_test.csv"
+"""IMPORT TESTS"""
+def make_data(filename, import_type):
+    path = os.getcwd() + '/tests/files/' + filename
     data = {
-            'statement_source': 'bandcamp'
+            'statement_source': import_type
             }
-    data['file'] = (path, 'bandcamp_test.csv')
+    data['file'] = (path, filename)
+    return data
+
+def test_can_import_bandcamp(test_client, db):
+    filename = 'import_bandcamp.csv'
+    import_type = 'bandcamp'
+    data = make_data(filename, import_type)
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
     assert response.status_code == 200
@@ -31,12 +38,10 @@ def test_can_import_bandcamp_sales(test_client, db):
     assert first.upc_id == '602318137111'
     assert json.loads(response.data) == {'success': 'true'}
 
-def test_can_import_sddigital_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/sd_digital_test1.csv"
-    data = {
-            'statement_source': 'sddigital'
-            }
-    data['file'] = (path, 'sd_digital_test1.csv')
+def test_can_import_sddigital(test_client, db):
+    filename = 'import_sddigital.csv'
+    import_type = 'sddigital'
+    data = make_data(filename, import_type)
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
     assert response.status_code == 200
@@ -47,12 +52,10 @@ def test_can_import_sddigital_sales(test_client, db):
     assert first.upc_id == '602318136800'
     assert json.loads(response.data) == {'success': 'true'}
     
-def test_can_import_sdphysical_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/sd_physical_test1.csv"
-    data = {
-            'statement_source': 'sdphysical'
-            }
-    data['file'] = (path, 'sd_physical_test1.csv')
+def test_can_import_sdphysical(test_client, db):
+    filename = 'import_sdphysical.csv'
+    import_type = 'sdphysical'
+    data = make_data(filename, import_type)
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
     assert response.status_code == 200
@@ -63,12 +66,10 @@ def test_can_import_sdphysical_sales(test_client, db):
     assert first.upc_id == '999990005266'
     assert json.loads(response.data) == {'success': 'true'}
 
-def test_can_import_shopify_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/shopify_test1.csv"
-    data = {
-            'statement_source': 'shopify'
-            }
-    data['file'] = (path, 'shopify_test1.csv')
+def test_can_import_shopify(test_client, db):
+    filename = 'import_shopify.csv'
+    import_type = 'shopify'
+    data = make_data(filename, import_type)
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
     assert response.status_code == 200
@@ -78,6 +79,31 @@ def test_can_import_shopify_sales(test_client, db):
     assert result[0].upc_id == None
     assert result[0].version_number == 'SS-055lp'
     assert result[1].date == datetime.date(2020, 1, 6)
+    assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_import_sds(test_client, db):
+    filename = 'import_sds.csv'
+    import_type = 'sds'
+    data = make_data(filename, import_type)
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 10
+    first = db.session.query(IncomePending).first()
+    assert first.date == datetime.date(2020, 1, 1)
+    assert first.upc_id == '889326664840'
+    assert json.loads(response.data) == {'success': 'true'}
+
+def test_can_import_quickbooks(test_client, db):
+    filename = 'import_quickbooks.csv'
+    import_type = 'quickbooks'
+    data = make_data(filename, import_type)
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    assert response.status_code == 200
+    result = db.session.query(IncomePending).all()
+    assert len(result) == 2
     assert json.loads(response.data) == {'success': 'true'}
 
 def test_can_update_upc_if_matching_version(test_client, db):
@@ -102,37 +128,6 @@ def test_can_update_upc_if_matching_version(test_client, db):
     assert second.version_number == 'SS-050lp'
     assert json.loads(response.data) == {'success': 'true'}
 
-
-def test_can_import_sds_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/sds_test1.csv"
-    data = {
-            'statement_source': 'sds'
-            }
-    data['file'] = (path, 'sds_test1.csv')
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 10
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '889326664840'
-    assert json.loads(response.data) == {'success': 'true'}
-
-def test_can_import_quickbooks_sales(test_client, db):
-    path = os.getcwd() + "/tests/files/qb_test1.csv"
-    data = {
-            'statement_source': 'quickbooks'
-            }
-    data['file'] = (path, 'qb_test1.csv')
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 2
-    assert json.loads(response.data) == {'success': 'true'}
-
-
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
@@ -153,11 +148,11 @@ def test_can_get_matching_errors(test_client, db):
     assert db.session.query(IncomePending).first().version_id == None
 
     """check function"""
-    query = find_distinct_matching_errors()
+    query = find_distinct_version_matching_errors()
     res = query.first()
     assert res.distributor == 'bandcamp'
     assert res.upc_id == '602318136817'
-    assert len(json.loads(response.data)) == 7
+    assert len(json.loads(response.data)) == 6
 
 def test_can_get_track_matching_errors(test_client, db):
     build_catalog(db, test_client)

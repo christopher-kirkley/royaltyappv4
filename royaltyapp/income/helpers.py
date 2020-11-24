@@ -71,6 +71,15 @@ class Statement:
         income_pending.upc_id IS NULL
         """)
 
+    def find_imported_records(self):
+        res = len(db.session.query(IncomePending)
+                .filter(IncomePending.statement == self.file.filename)
+                .all()
+                )
+        return res
+
+    
+
 class BandcampStatement(Statement):
     def __init__(self, file):
         super().__init__(file)
@@ -100,9 +109,10 @@ class BandcampStatement(Statement):
         # self.df['sku'] = np.where((self.df['item type'] == 'digital') & (self.df['catalog number'].isnull()), self.df['catalog_number'] + 'digi', self.df['sku'])
         self.df['date'] = pd.to_datetime(self.df['date'])
         self.df['date'] = self.df['date'].dt.strftime('%Y-%m-%d')
-        self.df['upc'] = self.df['upc'].astype('Int64')
         self.df['upc'] = self.df['upc'].astype(str)
         self.df['upc'] = self.df['upc'].str.replace(' ', '')
+        # self.df['upc'] = self.df['upc'].astype(int)
+        # self.df['upc'] = self.df['upc'].astype('Int64')
         self.df['catalog number'] = self.df['catalog number'].str.replace(' ', '')
 
 

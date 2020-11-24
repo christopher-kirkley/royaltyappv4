@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, Response
 from sqlalchemy import exc, func, cast, Numeric, Date
 # from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 #         VersionSchema, Track, TrackCatalogTable
@@ -27,7 +27,18 @@ def import_sales():
     statement.insert_to_db()
     statement.add_missing_version_number()
     statement.add_missing_upc_number()
-    return jsonify({'success': 'true'})
+    records = statement.find_imported_records()
+    data = {
+            "data": {
+                "type": "db",
+                "id": filename,
+                "attributes": {
+                    "title": filename,
+                    "length": records
+                    }
+                }
+            }
+    return jsonify(data), 201
 
 @income.route('/income/matching-errors', methods=['GET'])
 def get_matching_errors():
