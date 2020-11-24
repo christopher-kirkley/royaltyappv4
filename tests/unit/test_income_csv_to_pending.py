@@ -156,3 +156,65 @@ def test_can_import_quickbooks(test_client, db, filename, expected):
             .one()[0])
     assert round(float(total), 2) == expected['sum']
 
+
+def test_can_list_one_pending_statement(test_client, db):
+    response = post_data(test_client, 'import_bandcamp.csv', 'bandcamp')
+    response = test_client.get('/income/pending-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [{'distributor' : 'bandcamp',
+                                        'statement': 'import_bandcamp.csv'
+                                        }]
+
+def test_can_list_two_pending_statements_same_distributor(test_client, db):
+    response = post_data(test_client, 'import_bandcamp.csv', 'bandcamp')
+    response = post_data(test_client, 'import_bandcamp_2.csv', 'bandcamp')
+    response = test_client.get('/income/pending-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [
+            {
+                'distributor' : 'bandcamp',
+                'statement': 'import_bandcamp.csv'
+            },
+            {
+                'distributor' : 'bandcamp',
+                'statement': 'import_bandcamp_2.csv'
+            }
+            ]
+
+def test_can_list_two_pending_statements_different_distributor(test_client, db):
+    response = post_data(test_client, 'import_bandcamp.csv', 'bandcamp')
+    response = post_data(test_client, 'import_quickbooks.csv', 'quickbooks')
+    response = test_client.get('/income/pending-statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [
+            {
+                'distributor' : 'bandcamp',
+                'statement': 'import_bandcamp.csv'
+            },
+            {
+                'distributor' : 'quickbooks',
+                'statement': 'import_quickbooks.csv'
+            }
+            ]
+
+def test_can_delete_pending_statement(test_client, db):
+    response = post_data(test_client, 'import_quickbooks.csv', 'quickbooks')
+    response = test_client.delete('/income/pending-statements/import_quickbooks.csv')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    assert len(db.session.query(IncomePending).all()) == 0
+
+def test_can_delete_pending_statement(test_client, db):
+    response = post_data(test_client, 'import_quickbooks.csv', 'quickbooks')
+    response = test_client.delete('/income/pending-statements/import_quickbooks.csv')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    assert len(db.session.query(IncomePending).all()) == 0
+
+def test_can_delete_one_pending_statement(test_client, db):
+    response = post_data(test_client, 'import_bandcamp.csv', 'bandcamp')
+    response = post_data(test_client, 'import_quickbooks.csv', 'quickbooks')
+    response = test_client.delete('/income/pending-statements/import_quickbooks.csv')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    assert len(db.session.query(IncomePending).all()) > 0
