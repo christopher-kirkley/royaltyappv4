@@ -18,27 +18,33 @@ from royaltyapp.income.helpers import StatementFactory, find_distinct_version_ma
 
 from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
-def make_data(filename, import_type):
+def post_data(test_client, filename, import_type):
     path = os.getcwd() + '/tests/files/' + filename
     data = {
             'statement_source': import_type
             }
     data['file'] = (path, filename)
-    return data
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    return response
 
 bandcamp_cases = {
         'import_bandcamp.csv': ('import_bandcamp.csv', {'records': 732, 'sum': 4626.58}),
         'import_bandcamp_2.csv': ('import_bandcamp_2.csv', {'records': 15, 'sum': 111.24}),
         }
 
+sddigital_cases = {
+        'import_sddigital.csv': ('import_sddigital.csv', {'records': 13, 'sum': 7.53}),
+        }
+
 @pytest.mark.parametrize('filename, expected', list(bandcamp_cases.values()), ids=list(bandcamp_cases.keys()))
 def test_can_import_bandcamp(test_client, db, filename, expected):
     import_type = 'bandcamp'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 201
 
+    response = post_data(test_client, filename, import_type)
+
+    """ Check response. """
+    assert response.status_code == 201
     response_data = json.loads(response.data)
     assert response_data['data']['attributes']['length'] == expected['records']
 
@@ -49,29 +55,24 @@ def test_can_import_bandcamp(test_client, db, filename, expected):
             .one()[0])
     assert float(total) == expected['sum']
 
-def test_can_import_sddigital(test_client, db):
-    filename = 'import_sddigital.csv'
-    import_type = 'sddigital'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
 
-    """ Check response """
+@pytest.mark.parametrize('filename, expected', list(sddigital_cases.values()), ids=list(sddigital_cases.keys()))
+def test_can_import_sddigital(test_client, db, filename, expected):
+    import_type = 'sddigital'
+
+    response = post_data(test_client, filename, import_type)
+
+    """ Check response. """
     assert response.status_code == 201
     response_data = json.loads(response.data)
-    records = 13
-    assert response_data['data']['attributes']['length'] == records
-    assert response_data['data']['attributes']['title'] == filename
+    assert response_data['data']['attributes']['length'] == expected['records']
 
     """ Check db """
-    assert len(db.session.query(IncomePending).all()) == records
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 25)
-    assert first.upc_id == '602318136800'
+    assert len(db.session.query(IncomePending).all()) == expected['records']
     total = (db.session
             .query(func.sum(IncomePending.amount))
             .one()[0])
-    assert round(float(total), 2) == 7.53
+    assert round(float(total), 2) == expected['sum']
 
 def test_can_import_sdphysical(test_client, db):
     filename = 'import_sdphysical.csv'
