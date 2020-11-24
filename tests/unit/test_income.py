@@ -15,97 +15,6 @@ from royaltyapp.income.helpers import StatementFactory, find_distinct_version_ma
 
 from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
-"""IMPORT TESTS"""
-def make_data(filename, import_type):
-    path = os.getcwd() + '/tests/files/' + filename
-    data = {
-            'statement_source': import_type
-            }
-    data['file'] = (path, filename)
-    return data
-
-def test_can_import_bandcamp(test_client, db):
-    filename = 'import_bandcamp.csv'
-    import_type = 'bandcamp'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 732
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '602318137111'
-    assert json.loads(response.data) == {'success': 'true'}
-
-def test_can_import_sddigital(test_client, db):
-    filename = 'import_sddigital.csv'
-    import_type = 'sddigital'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 13
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 25)
-    assert first.upc_id == '602318136800'
-    assert json.loads(response.data) == {'success': 'true'}
-    
-def test_can_import_sdphysical(test_client, db):
-    filename = 'import_sdphysical.csv'
-    import_type = 'sdphysical'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 43
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 23)
-    assert first.upc_id == '999990005266'
-    assert json.loads(response.data) == {'success': 'true'}
-
-def test_can_import_shopify(test_client, db):
-    filename = 'import_shopify.csv'
-    import_type = 'shopify'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 4
-    assert result[0].date == datetime.date(2020, 1, 1)
-    assert result[0].upc_id == None
-    assert result[0].version_number == 'SS-055lp'
-    assert result[1].date == datetime.date(2020, 1, 6)
-    assert json.loads(response.data) == {'success': 'true'}
-
-def test_can_import_sds(test_client, db):
-    filename = 'import_sds.csv'
-    import_type = 'sds'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 10
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '889326664840'
-    assert json.loads(response.data) == {'success': 'true'}
-
-def test_can_import_quickbooks(test_client, db):
-    filename = 'import_quickbooks.csv'
-    import_type = 'quickbooks'
-    data = make_data(filename, import_type)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    assert response.status_code == 200
-    result = db.session.query(IncomePending).all()
-    assert len(result) == 2
-    assert json.loads(response.data) == {'success': 'true'}
-
 def test_can_update_upc_if_matching_version(test_client, db):
     build_catalog(db, test_client)
     path = os.getcwd() + "/tests/files/shopify_test1.csv"
@@ -235,23 +144,6 @@ def test_can_update_pending_table(test_client, db):
     response = test_client.put('/income/update-errors', data=json_data)
     assert response.status_code == 200
     assert json.loads(response.data) == {'updated': 3}
-
-def test_can_list_pending_statements(test_client, db):
-    build_catalog(db, test_client)
-    add_bandcamp_sales(test_client)
-    response = test_client.get('/income/pending-statements')
-    assert response.status_code == 200
-    assert json.loads(response.data) == [{'distributor' : 'bandcamp',
-                                        'statement': 'one_bandcamp_test.csv'
-                                        }]
-
-def test_can_delete_pending_statement(test_client, db):
-    build_catalog(db, test_client)
-    add_bandcamp_sales(test_client)
-    response = test_client.delete('/income/pending-statements/one_bandcamp_test.csv')
-    assert response.status_code == 200
-    assert json.loads(response.data) == {'success': 'true'}
-    assert len(db.session.query(IncomePending).all()) == 0
 
 def test_income_distributors_populated(test_client, db):
     query = db.session.query(IncomeDistributor).all()
