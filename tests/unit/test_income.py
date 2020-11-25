@@ -13,7 +13,7 @@ from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, I
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
+from .helpers import build_catalog, add_bandcamp_sales, add_bandcamp_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
 def test_can_update_upc_if_matching_version(test_client, db):
     build_catalog(db, test_client)
@@ -253,7 +253,7 @@ def test_can_view_imported_statements(test_client, db):
 def test_can_view_imported_statement_detail(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
-    add_order_settings(db)
+    add_bandcamp_order_settings(db)
     response = test_client.post('/income/process-pending')
     response = test_client.get('/income/statements/1')
     assert response.status_code == 200
@@ -273,7 +273,7 @@ def test_can_view_imported_statement_detail(test_client, db):
 def test_can_delete_imported_statement(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
-    add_order_settings(db)
+    add_bandcamp_order_settings(db)
     response = test_client.post('/income/process-pending')
     response = test_client.get('/income/imported-statements')
     assert response.status_code == 200
