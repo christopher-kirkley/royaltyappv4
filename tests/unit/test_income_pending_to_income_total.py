@@ -82,7 +82,6 @@ order_fee_cases = {
 
 @pytest.mark.parametrize('statements, expected', list(cases.values()), ids=list(cases.keys()))
 def test_can_normalize_distributor(test_client, db, statements, expected):
-    build_catalog(db, test_client)
     for statement_type, filelist in statements.items():
         for _file in filelist:
             post_data(test_client, _file, statement_type)
@@ -93,28 +92,52 @@ def test_can_normalize_distributor(test_client, db, statements, expected):
                 ).first().distributor_id
         assert income_distributor_id == None
     pi.normalize_distributor()
+    distributors = db.session.query(IncomePending.distributor).distinct().all()
+    for distributor in distributors:
+        income_distributor_id = (
+                db.session.query(IncomePending)
+                .filter(IncomePending.distributor == distributor)
+                ).first().distributor_id
+        id = (db.session.query(IncomeDistributor)
+                .filter(IncomeDistributor.distributor_name == distributor)).one().id
+        assert income_distributor_id == id
     res = db.session.query(IncomePending).first()
-    assert res.distributor_id == 1
 
 def test_can_normalize_version(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
-    res = db.session.query(IncomePending).first()
-    assert res.upc_id == '602318136817'
-    new_version = db.session.query(Version).filter(Version.upc == '602318136817').first().id
+    version_ids = db.session.query(IncomePending.version_id).all()
+    for version_id in version_ids:
+        assert version_id.version_id == None
     pi.normalize_version()
-    res = db.session.query(IncomePending).filter(IncomePending.upc_id == '602318136817').first()
-    assert res.version_id == new_version
-
+    query = db.session.query(IncomePending).all()
+    for row in query:
+        upc_id = row.upc_id
+        version_id = (db.session.query(Version)
+                .filter(Version.upc == upc_id)
+                .first())
+        if version_id:
+            assert row.version_id == version_id.id
+        else:
+            pass
+            
 def test_can_normalize_track(test_client, db):
     build_catalog(db, test_client)
     add_bandcamp_sales(test_client)
-    res = db.session.query(IncomePending).filter(IncomePending.isrc_id == 'QZDZE1905001').first()
-    assert res.isrc_id == 'QZDZE1905001'
-    new_track_id = db.session.query(Track).filter(Track.isrc == 'QZDZE1905001').first().id
+    track_ids = db.session.query(IncomePending.track_id).all()
+    for track_id in track_ids:
+        assert track_id.track_id == None
     pi.normalize_track()
-    res = db.session.query(IncomePending).filter(IncomePending.isrc_id == 'QZDZE1905001').first()
-    assert res.track_id == new_track_id
+    query = db.session.query(IncomePending).all()
+    for row in query:
+        isrc_id = row.isrc_id
+        track_id = (db.session.query(Track)
+                .filter(Track.isrc == isrc_id)
+                .first())
+        if track_id:
+            assert row.track_id == track.id
+        else:
+            pass
 
 def test_can_insert_into_imported_statements_table(test_client, db):
     build_catalog(db, test_client)
@@ -156,7 +179,7 @@ def test_can_calculate_adjusted_label_amount(test_client, db):
     assert res.id == 4
     assert res.label_fee == 0
     assert float(res.label_net) == 6.26
-    add_order_settings(db)
+    add_bandcamp_order_settings(db)
     assert pi.calculate_adjusted_amount() == True
     res = db.session.query(IncomePending).filter(IncomePending.id == 4).first()
     assert res.id == 4
@@ -168,7 +191,7 @@ def test_can_divide_fees_over_order_items(test_client, db):
     add_two_bandcamp_sales(test_client)
     res = db.session.query(IncomePending).all()
     assert len(res) != 0
-    add_order_settings(db)
+    add_bandcamp_order_settings(db)
     pi.normalize_distributor()
     pi.normalize_version()
     pi.normalize_track()
@@ -181,7 +204,7 @@ def test_can_divide_fees_over_order_items(test_client, db):
 def test_zero_out_label_fees(test_client, db):
     build_catalog(db, test_client)
     add_two_bandcamp_sales(test_client)
-    add_order_settings(db)
+    add_bandcamp_order_settings(db)
     pi.normalize_distributor()
     pi.normalize_version()
     pi.normalize_track()
