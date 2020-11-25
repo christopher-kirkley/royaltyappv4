@@ -8,11 +8,11 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType
 
 from royaltyapp.income.helpers import StatementFactory, process_pending_statements
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense
+from .helpers import build_catalog, add_artist_expense, add_catalog_expense
 
 def test_can_import_catalog_expense(test_client, db):
     path = os.getcwd() + "/tests/files/expense_catalog.csv"

@@ -9,11 +9,11 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
 from royaltyapp.income.helpers import StatementFactory, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors
+from .helpers import build_catalog, add_bandcamp_sales, add_bandcamp_order_settings, add_artist_expense, add_bandcamp_errors
 
 def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')

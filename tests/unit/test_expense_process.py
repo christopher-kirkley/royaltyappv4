@@ -10,7 +10,7 @@ import numpy as np
 
 import time
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, IncomeTotal, ExpensePending, ExpenseType, ExpenseTotal
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, IncomeTotal, ExpensePending, ExpenseType, ExpenseTotal
 
 from royaltyapp.expense.util import process_expense as pe
 

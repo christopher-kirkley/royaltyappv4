@@ -10,11 +10,11 @@ import numpy as np
 
 import time
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema
 
 from royaltyapp.expense.helpers import expense_matching_errors
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_type_expense
+from .helpers import build_catalog, add_artist_expense, add_catalog_expense, add_type_expense
 
 def test_can_import_type_expense(test_client, db):
     path = os.getcwd() + "/tests/files/expense_type.csv"

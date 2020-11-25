@@ -8,11 +8,11 @@ import io
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import Artist, Catalog, Version, Track, Pending, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType, ExpenseTotal
+from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal, ExpensePending, ExpensePendingSchema, ExpenseType, ExpenseTotal
 
 from royaltyapp.income.helpers import StatementFactory, process_pending_statements
 
-from .helpers import build_catalog, add_artist_expense_two, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales
+from .helpers import build_catalog, add_artist_expense_two, add_artist_expense, add_catalog_expense, add_bandcamp_sales
 
 def test_can_process_pending_expense(test_client, db):
     build_catalog(db, test_client)

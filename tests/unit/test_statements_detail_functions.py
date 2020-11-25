@@ -16,7 +16,7 @@ from royaltyapp.models import StatementGenerated, Version, Catalog, Track, Track
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
 
-from .helpers import build_catalog, add_artist_expense, add_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement, setup_test1
+from .helpers import build_catalog, add_artist_expense, add_bandcamp_order_settings, add_catalog_expense, add_bandcamp_sales, add_processed_income, add_processed_expense, generate_statement, setup_test1
 
 
 def test_can_list_statements(test_client, db):
