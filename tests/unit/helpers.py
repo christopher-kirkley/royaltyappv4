@@ -12,6 +12,16 @@ from royaltyapp.income.util import process_income as pi
 from royaltyapp.expense.util import process_expense as pe
 
 
+def post_data(test_client, filename, import_type):
+    path = os.getcwd() + '/tests/files/' + filename
+    data = {
+            'statement_source': import_type
+            }
+    data['file'] = (path, filename)
+    response = test_client.post('/income/import-sales',
+            data=data, content_type="multipart/form-data")
+    return response
+
 def add_one_artist(db):
     new_artist = Artist(artist_name='Amanar',
                         prenom='Ahmed',
@@ -126,14 +136,15 @@ def add_test1_bandcamp_sales(test_client):
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
 
-def add_order_settings(db):
-    # new_order_setting = OrderSettings(
-    #                 distributor_id = 1,
-    #                 order_percentage = 0.01,
-    #                 order_fee = 2.00
-    #                 )
-    # db.session.add(new_order_setting)
-    # db.session.commit()
+def add_bandcamp_order_settings(db):
+    order_setting_id = (db.session.query(OrderSettings)
+            .filter(OrderSettings.distributor_id == 1)
+            ).one().id
+    obj = db.session.query(OrderSettings).get(order_setting_id)
+    obj.order_percentage = 0.01
+    obj.order_fee = 2.00
+    obj.order_limit = 5.00
+    db.session.commit()
     return True
 
 def add_artist_expense(test_client): 
