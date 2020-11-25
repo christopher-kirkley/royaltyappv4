@@ -16,17 +16,8 @@ from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, I
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, process_pending_statements
 
-from .helpers import build_catalog, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
+from .helpers import post_data, add_bandcamp_sales, add_order_settings, add_artist_expense, add_bandcamp_errors, add_two_bandcamp_sales
 
-def post_data(test_client, filename, import_type):
-    path = os.getcwd() + '/tests/files/' + filename
-    data = {
-            'statement_source': import_type
-            }
-    data['file'] = (path, filename)
-    response = test_client.post('/income/import-sales',
-            data=data, content_type="multipart/form-data")
-    return response
 
 bandcamp_cases = {
         'import_bandcamp.csv': ('import_bandcamp.csv', {'records': 732, 'sum': 4626.58}),
