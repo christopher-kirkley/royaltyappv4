@@ -11,4 +11,6 @@ This is a flask app for calculating record label royalties. The app serves a RES
 - Numpy
 - Pytest (optional)
 
+NOTE: Functional tests using Selenium require geckodriver, and needs to be included in PATH.
+
 ## Endpoints
