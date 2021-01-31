@@ -49,8 +49,9 @@ def add_artist():
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
-@artists.route('/artists/delete/<id>', methods=['DELETE'])
+@artists.route('/artists/<id>', methods=['DELETE'])
 def delete_artist(id):
     db.session.query(Artist).filter(Artist.id==id).delete()
+    db.session.commit()
     return jsonify({'success': 'true'})
 

@@ -42,6 +42,7 @@ def get_catalog(id):
 @catalog.route('/catalog/<id>', methods=['DELETE'])
 def delete_catalog(id):
     db.session.query(Catalog).filter(Catalog.id==id).delete()
+    db.session.commit()
     return jsonify({'success': 'true'})
 
 @catalog.route('/version', methods=['POST'])
@@ -154,7 +155,7 @@ def edit_track():
 @catalog.route('/catalog/import-catalog', methods=['POST'])
 def import_catalog():
     file = request.files['CSV']
-    df = pd.read_csv(file.stream)
+    df = pd.read_csv(file.stream._file)
     df = clean_catalog_df(df)
     df.to_sql('pending_catalog', con=db.engine, if_exists='append', index_label='id')
     pending_catalog_to_artist(db)
@@ -164,7 +165,7 @@ def import_catalog():
 @catalog.route('/catalog/import-track', methods=['POST'])
 def import_track():
     file = request.files['CSV']
-    df = pd.read_csv(file.stream)
+    df = pd.read_csv(file.stream._file)
     df = clean_track_df(df)
     df.to_sql('pending_track', con=db.engine, if_exists='append', index_label='id')
     pending_track_to_artist(db)
@@ -174,7 +175,7 @@ def import_track():
 @catalog.route('/catalog/import-version', methods=['POST'])
 def import_version():
     file = request.files['CSV']
-    df = pd.read_csv(file.stream)
+    df = pd.read_csv(file.stream._file)
     df.to_sql('pending_version', con=db.engine, if_exists='append', index_label='id')
     pending_version_to_version(db)
     return jsonify({'success': 'true'})
