@@ -146,6 +146,7 @@ def edit_track():
             new_track.track_number = track['track_number']
             new_track.track_name = track['track_name']
             new_track.isrc = track['isrc']
+            new_track.artist_id = track['artist_id']
             db.session.commit()
     except exc.DataError:
         db.session.rollback()

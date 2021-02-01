@@ -23756,3 +23756,42 @@ IPDL protocol error: Handler returned error code!
 
 ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
 
+1612210040500	geckodriver	INFO	Listening on 127.0.0.1:54151
+1612210041504	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4odKeS"
+
+(firefox:91756): IBUS-WARNING **: 12:07:22.773: Unable to connect to ibus: Could not connect: Connection refused
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612210043992	Marionette	INFO	Listening on port 33507
+1612210044025	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612210044216	Marionette	INFO	Stopped listening on port 33507
+1612210075775	geckodriver	INFO	Listening on 127.0.0.1:59101
+1612210075778	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileI56KTv"
+
+(firefox:92467): IBUS-WARNING **: 12:07:56.212: Unable to connect to ibus: Could not connect: Connection refused
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612210077299	Marionette	INFO	Listening on port 33785
+1612210077399	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612210080794	Marionette	INFO	Stopped listening on port 33785
+1612210103530	geckodriver	INFO	Listening on 127.0.0.1:50755
+1612210103533	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6rnoXG"
+
+(firefox:92927): IBUS-WARNING **: 12:08:23.974: Unable to connect to ibus: Could not connect: Connection refused
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612210105054	Marionette	INFO	Listening on port 33849
+1612210105148	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612210108591	Marionette	INFO	Stopped listening on port 33849
+1612210203134	geckodriver	INFO	Listening on 127.0.0.1:36121
+1612210203136	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOFybTQ"
+
+(firefox:93805): IBUS-WARNING **: 12:10:03.571: Unable to connect to ibus: Could not connect: Connection refused
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612210204579	Marionette	INFO	Listening on port 41825
+1612210204658	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612210209732	Marionette	INFO	Stopped listening on port 41825
