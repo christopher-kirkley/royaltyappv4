@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Artist, ArtistSchema
+from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema
 import json
 
 artists = Blueprint('artists', __name__)
@@ -54,4 +54,16 @@ def delete_artist(id):
     db.session.query(Artist).filter(Artist.id==id).delete()
     db.session.commit()
     return jsonify({'success': 'true'})
+
+@artists.route('/artists/<id>/catalog', methods=['GET'])
+def get_catalog_by_artist(id):
+    result = db.session.query(Catalog).filter(Catalog.artist_id==id).all()
+    catalog_schema = CatalogSchema(many=True)
+    return catalog_schema.dumps(result)
+
+@artists.route('/artists/<id>/track', methods=['GET'])
+def get_tracks_by_artist(id):
+    result = db.session.query(Track).filter(Track.artist_id==id).all()
+    track_schema = TrackSchema(many=True)
+    return track_schema.dumps(result)
 
