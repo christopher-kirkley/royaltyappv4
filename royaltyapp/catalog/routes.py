@@ -7,9 +7,13 @@ import pandas as pd
 
 from .helpers import clean_catalog_df, clean_track_df, pending_catalog_to_artist, pending_catalog_to_catalog, pending_version_to_version, pending_track_to_artist, pending_track_to_catalog
 
+from royaltyapp.cache import cache
+
+
 catalog = Blueprint('catalog', __name__)
 
 @catalog.route('/catalog', methods=['GET'])
+#@cache.cached(timeout=30)
 def all_catalog():
     result = Catalog.query.all()
     catalog_schema = CatalogSchema()

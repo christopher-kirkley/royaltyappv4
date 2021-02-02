@@ -2,12 +2,16 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from royaltyapp.models import db, ma
+from royaltyapp.cache import cache
 
 
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
     CORS(royaltyapp)
     
+    royaltyapp.config['CACHE_TYPE']='simple'
+    cache.init_app(royaltyapp)
+
     if config_class==None:
         royaltyapp.config.from_object('config.Config')
     else:
