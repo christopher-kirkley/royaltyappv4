@@ -71,7 +71,7 @@ def edit_version():
     catalog_id = data['catalog']
 
     # remove versions
-    version_list = [version for version, in db.session.query(Version.id).all()]
+    version_list = [version for version, in db.session.query(Version.id).filter(Version.catalog_id==catalog_id).all()]
     new_version_list = [int(version['id']) for version in data['version']]
     ids_to_remove = set(version_list) - set(new_version_list)
     for id in ids_to_remove:

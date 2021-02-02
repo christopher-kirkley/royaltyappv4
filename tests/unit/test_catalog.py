@@ -162,6 +162,26 @@ def test_can_remove_versions(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/version', data=json_data)
     assert response.status_code == 200
+
+    new_catalog = Catalog(catalog_number='SS-002',
+                        catalog_name='Tacos for Sale',
+                        artist_id='1',
+                        )
+    db.session.add(new_catalog)
+    db.session.commit()
+    new_version = Version(catalog_id='2',
+            version_number='SS-002lp',
+            upc='1232',
+            version_name='testlp',
+            format='vinyl',
+            )
+    db.session.add(new_version)
+    db.session.commit()
+
+    res = db.session.query(Version).all()
+    assert len(res)==3
+
+
     data = {'catalog': '1',
             'version': [
                 {
@@ -176,7 +196,7 @@ def test_can_remove_versions(test_client, db):
     json_data = json.dumps(data)
     response = test_client.put('/version', data=json_data)
     assert response.status_code == 200
-    q = db.session.query(Version).order_by(Version.id).all()
+    q = db.session.query(Version).order_by(Version.id).filter(Version.catalog_id==1).all()
     assert len(q) == 1
     data = {'catalog': '1',
             'version': [
@@ -185,8 +205,12 @@ def test_can_remove_versions(test_client, db):
     json_data = json.dumps(data)
     response = test_client.put('/version', data=json_data)
     assert response.status_code == 200
-    q = db.session.query(Version).order_by(Version.id).all()
+    q = db.session.query(Version).order_by(Version.id).filter(Version.catalog_id==1).all()
     assert len(q) == 0
+
+    res = db.session.query(Version).all()
+    assert len(res)==1
+
 
 def test_can_get_version(test_client, db):
     add_one_version(db)
@@ -199,6 +223,90 @@ def test_can_get_version(test_client, db):
             'version_number': 'SS-001lp', 
             'upc': '123456', 
             'version_name': 'Limited Vinyl'}
+
+def test_can_add_second_version(test_client, db):
+    add_one_version(db)
+    new_catalog = Catalog(catalog_number='SS-002',
+                        catalog_name='Tacos for Sale',
+                        artist_id='1',
+                        )
+    db.session.add(new_catalog)
+    db.session.commit()
+    res = db.session.query(Catalog).all()
+    assert len(res) == 2
+    res = db.session.query(Version).all()
+    assert len(res) == 1
+
+    """Add second version."""
+    data = {'catalog': '2',
+            'version': [
+                {
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(Version).all()
+    assert len(res) == 2
+
+def test_can_edit_second_version(test_client, db):
+    add_one_version(db)
+    new_catalog = Catalog(catalog_number='SS-002',
+                        catalog_name='Tacos for Sale',
+                        artist_id='1',
+                        )
+    db.session.add(new_catalog)
+    db.session.commit()
+    res = db.session.query(Catalog).all()
+    assert len(res) == 2
+    res = db.session.query(Version).all()
+    assert len(res) == 1
+
+    """Add second version."""
+    data = {'catalog': '2',
+            'version': [
+                {
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    res = db.session.query(Version).all()
+    assert len(res) == 2
+
+    """Edit second version."""
+    data = {'catalog': '2',
+            'version': [
+                {
+                'id': '2',
+                'upc': '7891011',
+                'version_number': 'SS-001cass',
+                'version_name': 'Limited Cassette',
+                'format': 'Cassette',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+
+    res = db.session.query(Version).all()
+    assert len(res) == 2
+
+
 
 def test_can_get_all_versions_by_catalog(test_client, db):
     add_one_version(db)
