@@ -22,6 +22,7 @@ def create_app(config_class=None):
     from royaltyapp.home.routes import home
     from royaltyapp.artists.routes import artists
     from royaltyapp.catalog.routes import catalog
+    from royaltyapp.bundle.routes import bundle
     from royaltyapp.income.routes import income
     from royaltyapp.expense.routes import expense
     from royaltyapp.statements.routes import statements
@@ -29,6 +30,7 @@ def create_app(config_class=None):
     royaltyapp.register_blueprint(home)
     royaltyapp.register_blueprint(artists)
     royaltyapp.register_blueprint(catalog)
+    royaltyapp.register_blueprint(bundle)
     royaltyapp.register_blueprint(income)
     royaltyapp.register_blueprint(expense)
     royaltyapp.register_blueprint(statements)

@@ -15,6 +15,21 @@ TrackCatalogTable = db.Table('track_catalog_table',
                     db.Column('track_id', db.Integer, db.ForeignKey('track.id')),
                     db.Column('catalog_id', db.Integer, db.ForeignKey('catalog.id')))
 
+BundleVersionTable = db.Table('bundle_version_table',
+        db.Column('bundle_id', db.Integer, db.ForeignKey('bundle.id')),
+        db.Column('version_id', db.Integer, db.ForeignKey('version.id'))
+                           )
+class Bundle(db.Model):
+    """Bundle, containing multiple versions."""
+
+    __tablename__ = 'bundle'
+    id = db.Column(db.Integer, primary_key=True)
+    bundle_number = db.Column(db.String(50), unique=True)
+    bundle_name = db.Column(db.String(30))
+
+    version_bundle = db.relationship("Version",
+                                  secondary=BundleVersionTable,
+                                  back_populates="bundle_version")
 
 class Artist(db.Model):
     __tablename__ = 'artist'
@@ -52,6 +67,10 @@ class Version(db.Model):
     format = db.Column(db.String(30)) 
     
     catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
+
+    bundle_version = db.relationship("Bundle",
+            secondary=BundleVersionTable,
+            back_populates="version_bundle")
 
 
 class Track(db.Model):
@@ -117,6 +136,12 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
         include_relationships = True
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
+
+
+
+
+
+
 
 
 
