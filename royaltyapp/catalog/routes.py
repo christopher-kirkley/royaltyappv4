@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
+from royaltyapp.models import db, Catalog, CatalogSchema, Version, Bundle,\
         VersionSchema, Track, TrackCatalogTable, TrackSchema
 
 import pandas as pd

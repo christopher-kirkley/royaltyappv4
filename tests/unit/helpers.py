@@ -59,6 +59,26 @@ def add_one_version(db):
     db.session.add(new_version)
     db.session.commit()
 
+def add_two_version(db):
+    add_one_catalog(db)
+    new_version = Version(
+                        upc='123456',
+                        version_number='SS-001lp',
+                        version_name='Limited Vinyl',
+                        format='LP',
+                        catalog_id=1
+                        )
+    db.session.add(new_version)
+    new_version = Version(
+                        upc='78910',
+                        version_number='SS-001cd',
+                        version_name='Compact Disk',
+                        format='CD',
+                        catalog_id=1
+                        )
+    db.session.add(new_version)
+    db.session.commit()
+
 def add_one_track(db):
     add_one_catalog(db)
     obj = db.session.query(Catalog).first()
