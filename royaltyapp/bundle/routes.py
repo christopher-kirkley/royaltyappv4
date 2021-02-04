@@ -63,23 +63,3 @@ def delete_bundle(id):
     db.session.commit()
     return jsonify({'success': 'true'})
 
-@bundle.route('/version', methods=['POST'])
-def add_version():
-    data = request.get_json(force=True)
-    bundle_id = data['catalog']
-    try:
-        for version in data['version']:
-            new_version = Version(
-                            version_number=version['version_number'],
-                            version_name=version['version_name'],
-                            upc=version['upc'],
-                            format=version['format'],
-                            bundle_id=catalog_id
-                            )
-            db.session.add(new_version)
-            db.session.commit()
-    except exc.DataError:
-        db.session.rollback()
-        return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
-
