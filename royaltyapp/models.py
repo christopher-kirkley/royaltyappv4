@@ -28,8 +28,9 @@ class Bundle(db.Model):
     bundle_name = db.Column(db.String(30))
 
     version_bundle = db.relationship("Version",
-                                  secondary=BundleVersionTable,
-                                  back_populates="bundle_version")
+            secondary=BundleVersionTable,
+            back_populates="bundle_version")
+
 
 class Artist(db.Model):
     __tablename__ = 'artist'
@@ -140,8 +141,19 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
 
 
 
+class BundleSchema(ma.SQLAlchemyAutoSchema):
 
+    version_bundle = ma.Nested(VersionSchema(many=True))
 
+    class Meta:
+        model = Bundle
+        fields = ("id", "bundle_number", "bundle_name", "version_bundle"
+                )
+
+    def _custom_serializer(self, obj):
+        return 'adfas'
+
+        
 
 
 
