@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Catalog, CatalogSchema, Version, Bundle,\
-        VersionSchema, Track, TrackCatalogTable, TrackSchema
+from royaltyapp.models import db, Catalog, CatalogSchema, Version, Bundle, BundleVersionTable, VersionSchema, Track, TrackCatalogTable, TrackSchema, BundleSchema
 
 import pandas as pd
 
@@ -36,15 +35,31 @@ def add_bundle():
     return jsonify({'success': 'true',
                     'id': new_bundle.id })
 
-@bundle.route('/catalog/<id>', methods=['GET'])
+@bundle.route('/bundle/version', methods=['POST'])
+def add_bundle_version():
+    data = request.get_json(force=True)
+    bundle_id=data['bundle_id']
+    obj = db.session.query(Bundle).get(bundle_id)
+    for version in data['bundle_version']:
+        try:
+            version_obj = db.session.query(Version).get(version['version_id'])
+            obj.version_bundle.append(version_obj)
+            db.session.commit()
+        except exc.DataError:
+            db.session.rollback()
+            return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
+
+@bundle.route('/bundle/<id>', methods=['GET'])
 def get_bundle(id):
-    result = db.session.query(Catalog).filter(Catalog.id==id).one()
-    bundle_schema = CatalogSchema()
+    result = db.session.query(Bundle).filter(Bundle.id==id).one()
+    bundle_schema = BundleSchema()
     return bundle_schema.dumps(result)
 
-@bundle.route('/catalog/<id>', methods=['DELETE'])
+@bundle.route('/bundle/<id>', methods=['DELETE'])
 def delete_bundle(id):
-    db.session.query(Catalog).filter(Catalog.id==id).delete()
+    bundle = db.session.query(Bundle).filter(Bundle.id==1).first()
+    db.session.delete(bundle)
     db.session.commit()
     return jsonify({'success': 'true'})
 

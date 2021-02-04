@@ -291,3 +291,24 @@ def setup_statement(test_client, db):
     response = test_client.post('/statements/generate', data=json_data)
     response = test_client.post('/statements/1/generate-summary', data=json_data)
 
+def add_one_bundle(test_client, db):
+    add_one_catalog(db)
+    add_two_version(db)
+    data = {'bundle_number': 'SS-TESTBUNDLE',
+            'bundle_name': 'Two Versions',
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/bundle', data=json_data)
+    data = {'bundle_id': '1',
+            'bundle_version': [
+                {
+                    'version_id': '1'
+                    },
+                {
+                    'version_id': '2'
+                    },
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/bundle/version', data=json_data)
+
