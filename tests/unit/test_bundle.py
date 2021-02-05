@@ -78,3 +78,34 @@ def test_can_delete_bundle(test_client, db):
     assert len(result) == 0
     assert json.loads(response.data) == {'success': 'true'}
 
+def test_can_edit_bundle(test_client, db):
+    add_one_bundle(test_client, db)
+    result = Bundle.query.all()
+    assert len(result) == 1
+    result = db.session.query(BundleVersionTable).all()
+    assert len(result) == 2
+    """Delete one version"""
+    data = {'bundle_id': '1',
+            'bundle_version': [
+                {
+                'version_id': '2',
+                }
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/bundle/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    result = db.session.query(BundleVersionTable).all()
+    assert len(result) == 1
+    """Delete another version"""
+    data = {'bundle_id': '1',
+            'bundle_version': [
+                ]
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/bundle/version', data=json_data)
+    assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true'}
+    result = db.session.query(BundleVersionTable).all()
+    assert len(result) == 0
