@@ -84,8 +84,11 @@ def test_can_edit_bundle(test_client, db):
     assert len(result) == 1
     result = db.session.query(BundleVersionTable).all()
     assert len(result) == 2
-    """Delete one version"""
+
+    """Edit one version"""
     data = {'bundle_id': '1',
+            'bundle_number': 'SS-MYS1',
+            'bundle_name': 'MYSTERY1',
             'bundle_version': [
                 {
                 'version_id': '2',
@@ -93,19 +96,28 @@ def test_can_edit_bundle(test_client, db):
                 ]
             }
     json_data = json.dumps(data)
-    response = test_client.put('/bundle/version', data=json_data)
+    response = test_client.put('/bundle', data=json_data)
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     result = db.session.query(BundleVersionTable).all()
     assert len(result) == 1
-    """Delete another version"""
+    query = db.session.query(Bundle).filter(Bundle.id==1).first()
+    assert query.bundle_number == 'SS-MYS1'
+    assert query.bundle_name== 'MYSTERY1'
+
+    """Edit again"""
     data = {'bundle_id': '1',
+            'bundle_number': 'SS-MYS2',
+            'bundle_name': 'MYSTERY2',
             'bundle_version': [
                 ]
             }
     json_data = json.dumps(data)
-    response = test_client.put('/bundle/version', data=json_data)
+    response = test_client.put('/bundle', data=json_data)
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     result = db.session.query(BundleVersionTable).all()
     assert len(result) == 0
+    query = db.session.query(Bundle).filter(Bundle.id==1).first()
+    assert query.bundle_number == 'SS-MYS2'
+    assert query.bundle_name== 'MYSTERY2'
