@@ -63,3 +63,23 @@ def delete_bundle(id):
     db.session.commit()
     return jsonify({'success': 'true'})
 
+@bundle.route('/bundle/version', methods=['PUT'])
+def edit_bundle_version():
+    data = request.get_json(force=True)
+    bundle_id=data['bundle_id']
+
+    # remove bundle versions
+    bundle = db.session.query(Bundle).get(1)
+    bundle.version_bundle = []
+    db.session.commit()
+
+    obj = db.session.query(Bundle).get(bundle_id)
+    for version in data['bundle_version']:
+        try:
+            version_obj = db.session.query(Version).get(version['version_id'])
+            obj.version_bundle.append(version_obj)
+            db.session.commit()
+        except exc.DataError:
+            db.session.rollback()
+            return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
