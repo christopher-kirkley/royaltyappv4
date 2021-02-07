@@ -146,12 +146,9 @@ class BundleSchema(ma.SQLAlchemyAutoSchema):
     version_bundle = ma.Nested(VersionSchema(many=True))
 
     class Meta:
-        model = Bundle
         fields = ("id", "bundle_number", "bundle_name", "version_bundle"
                 )
 
-    def _custom_serializer(self, obj):
-        return 'adfas'
 
         
 

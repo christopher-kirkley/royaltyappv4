@@ -9,10 +9,18 @@ def test_can_get_all_bundles(test_client, db):
     response = test_client.get('/bundle')
     assert response.status_code == 200
     assert len(json.loads(response.data)) == 0
-    add_one_catalog(db)
+    add_one_bundle(test_client, db)
     response = test_client.get('/bundle')
     assert response.status_code == 200
+    query = db.session.query(Bundle).filter(Bundle.id==1).first()
+    assert query.bundle_number == 'SS-TESTBUNDLE'
+    assert query.bundle_name== 'Two Versions'
     assert len(json.loads(response.data)) == 1
+    assert json.loads(response.data)[0]['id'] == 1
+    assert json.loads(response.data)[0]['bundle_number'] == 'SS-TESTBUNDLE'
+    assert json.loads(response.data)[0]['bundle_name'] == 'Two Versions'
+    assert json.loads(response.data)[0]['version_bundle'][0]['version_number'] == 'SS-001lp'
+    assert json.loads(response.data)[0]['version_bundle'][1]['version_number'] == 'SS-001cd'
     
 def test_can_add_bundle(test_client, db):
     add_one_artist(db)
