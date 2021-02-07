@@ -24310,3 +24310,151 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1612731789959	Marionette	WARN	TLS certificate errors will be ignored for this session
 1612731789966	Marionette	ERROR	[15] No reply from Marionette:Register
 1612731796486	Marionette	INFO	Stopped listening on port 33577
+1612731907885	geckodriver	INFO	Listening on 127.0.0.1:54581
+1612731907888	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegur7KJ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612731909307	Marionette	INFO	Listening on port 36455
+1612731909408	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612731909416	Marionette	ERROR	[15] No reply from Marionette:Register
+1612731916212	Marionette	INFO	Stopped listening on port 36455
+1612731936171	geckodriver	INFO	Listening on 127.0.0.1:57681
+1612731936174	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileamGFjs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612731937564	Marionette	INFO	Listening on port 35279
+1612731937588	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612731937598	Marionette	ERROR	[15] No reply from Marionette:Register
+1612731944415	Marionette	INFO	Stopped listening on port 35279
+1612731959096	geckodriver	INFO	Listening on 127.0.0.1:59999
+1612731959099	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIo81tp"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612731960540	Marionette	INFO	Listening on port 37837
+1612731960618	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612731960627	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2981: TypeError: json.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3461: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3461: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3461: TypeError: props.bundleVersions is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3461: TypeError: props.bundleVersions is undefined
+1612732552188	Marionette	ERROR	[36] No reply from Marionette:Register
+1612732967457	Marionette	INFO	Stopped listening on port 37837
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1612732969945	geckodriver	INFO	Listening on 127.0.0.1:54269
+1612732969949	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileC3gw5c"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612732971413	Marionette	INFO	Listening on port 33667
+1612732971471	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612732971481	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2755: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/bundle/BundleForm.js: Unexpected token, expected "{" (52:4)
+
+[0m [90m 50 | [39m				{[0m
+[0m [90m 51 | [39m				setBundle(json)[0m
+[0m[31m[1m>[22m[39m[90m 52 | [39m				console[33m.[39mlog(json)[0m
+[0m [90m    | [39m				[31m[1m^[22m[39m[0m
+[0m [90m 53 | [39m				}[0m
+[0m [90m 54 | [39m			))[0m
+[0m [90m 55 | [39m	}}[33m,[39m [])[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:748:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:741:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:735:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9101:16)
+    at _temp.expect (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9087:28)
+    at _temp.parseBlock (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:12227:10)
+    at _temp.parseFunctionBody (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:11221:24)
+    at _temp.parseFunctionBody (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2589:20)
+    at _temp.parseFunctionBodyAndFinish (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:11205:10)
+    at _temp.parseFunctionBodyAndFinish (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2599:13)
+1612732971998	Marionette	INFO	Stopped listening on port 33667
+1612732980500	geckodriver	INFO	Listening on 127.0.0.1:33051
+1612732980503	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNNOoNw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612732981898	Marionette	INFO	Listening on port 36967
+1612732981920	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612732981929	Marionette	ERROR	[15] No reply from Marionette:Register
+1612732990336	Marionette	ERROR	[35] No reply from Marionette:Register
+1612733853787	Marionette	ERROR	[40] No reply from Marionette:Register
+1612733988732	Marionette	INFO	Stopped listening on port 36967
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1612733991337	geckodriver	INFO	Listening on 127.0.0.1:51327
+1612733991340	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHv0Wi2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612733992769	Marionette	INFO	Listening on port 38701
+1612733992865	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612733992875	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3441: TypeError: props.version is undefined
+1612734999739	Marionette	INFO	Stopped listening on port 38701
+1612737567368	geckodriver	INFO	Listening on 127.0.0.1:41457
+1612737567371	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2CnpGv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612737568742	Marionette	INFO	Listening on port 43219
+1612737568790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612737568799	Marionette	ERROR	[15] No reply from Marionette:Register
+1612737715446	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612738416491	Marionette	ERROR	[40] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612738575628	Marionette	INFO	Stopped listening on port 43219
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1612738577629	geckodriver	INFO	Listening on 127.0.0.1:51495
+1612738577632	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKxj2r2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612738579046	Marionette	INFO	Listening on port 37597
+1612738579150	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612738579158	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612738601671	Marionette	ERROR	[35] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612738737759	geckodriver	INFO	Listening on 127.0.0.1:53543
+1612738737762	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqzlA64"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612738739146	Marionette	INFO	Listening on port 37565
+1612738739181	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612738739190	Marionette	ERROR	[15] No reply from Marionette:Register
+1612738749097	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3384: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3384: TypeError: props.version is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3386: TypeError: props.setVersion is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3386: TypeError: props.setVersion is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
