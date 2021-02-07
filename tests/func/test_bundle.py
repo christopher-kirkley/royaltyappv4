@@ -66,7 +66,7 @@ def test_returns(browser, test_client, db):
     tds = rows[1].find_elements_by_tag_name('td');
     assert tds[0].text == 'SS-3MYS'
     assert tds[1].text == 'Three Mystery Items'
-    assert tds[2].text == 'SS-050cass'
+    assert tds[2].text == 'SS-050cass SS-050lp'
     
     # """ Navigate to catalog detail page. """
     # catalog_detail = browser.find_element_by_id('catalog_detail')

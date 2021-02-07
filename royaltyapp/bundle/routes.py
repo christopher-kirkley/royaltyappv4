@@ -12,9 +12,9 @@ bundle = Blueprint('bundle', __name__)
 @bundle.route('/bundle', methods=['GET'])
 #@cache.cached(timeout=30)
 def all_bundle():
-    result = Catalog.query.all()
-    bundle_schema = CatalogSchema()
-    bundles_schema = CatalogSchema(many=True)
+    result = Bundle.query.all()
+    bundle_schema = BundleSchema()
+    bundles_schema = BundleSchema(many=True)
     return bundles_schema.dumps(result)
 
 @bundle.route('/bundle', methods=['POST'])

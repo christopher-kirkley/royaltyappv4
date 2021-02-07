@@ -23980,3 +23980,333 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1612392728960	Marionette	ERROR	[15] No reply from Marionette:Register
 JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
 1612392735532	Marionette	INFO	Stopped listening on port 45649
+1612722983069	geckodriver	INFO	Listening on 127.0.0.1:33449
+1612722984071	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewYGAvA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612722985944	Marionette	INFO	Listening on port 42601
+1612722985994	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612722986003	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612722992587	Marionette	INFO	Stopped listening on port 42601
+1612723402307	geckodriver	INFO	Listening on 127.0.0.1:58923
+1612723402312	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBvWKoG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612723403697	Marionette	INFO	Listening on port 46473
+1612723403729	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612723403738	Marionette	ERROR	[15] No reply from Marionette:Register
+1612723410319	Marionette	INFO	Stopped listening on port 46473
+1612723431562	geckodriver	INFO	Listening on 127.0.0.1:48141
+1612723431566	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKshuSn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612723432939	Marionette	INFO	Listening on port 34127
+1612723432988	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612723432997	Marionette	ERROR	[15] No reply from Marionette:Register
+1612723446911	Marionette	ERROR	[35] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612723842529	geckodriver	INFO	Listening on 127.0.0.1:56951
+1612723842532	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDjICvz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612723843941	Marionette	INFO	Listening on port 43033
+1612723844047	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612723844056	Marionette	ERROR	[15] No reply from Marionette:Register
+1612723850576	Marionette	INFO	Stopped listening on port 43033
+1612724056378	geckodriver	INFO	Listening on 127.0.0.1:42199
+1612724056381	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX0VLtc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612724057747	Marionette	INFO	Listening on port 44489
+1612724057801	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612724057808	Marionette	ERROR	[15] No reply from Marionette:Register
+1612724064385	Marionette	INFO	Stopped listening on port 44489
+1612724159294	geckodriver	INFO	Listening on 127.0.0.1:33847
+1612724159298	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecsFEUS"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612724160685	Marionette	INFO	Listening on port 43067
+1612724160714	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612724160724	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1612724435762	Marionette	ERROR	[35] No reply from Marionette:Register
+1612724436423	Marionette	ERROR	[37] No reply from Marionette:Register
+1612724439151	Marionette	INFO	Stopped listening on port 43067
+1612724580138	geckodriver	INFO	Listening on 127.0.0.1:49553
+1612724580142	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileloBFce"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612724581531	Marionette	INFO	Listening on port 33923
+1612724581557	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612724581566	Marionette	ERROR	[15] No reply from Marionette:Register
+1612724588096	Marionette	INFO	Stopped listening on port 33923
+1612724664927	geckodriver	INFO	Listening on 127.0.0.1:43877
+1612724664931	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileT61vZO"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612724666324	Marionette	INFO	Listening on port 40455
+1612724666347	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612724666361	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612725854289	geckodriver	INFO	Listening on 127.0.0.1:60501
+1612725854292	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebsNUyU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612725855671	Marionette	INFO	Listening on port 38081
+1612725855728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612725855737	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612725893675	geckodriver	INFO	Listening on 127.0.0.1:52119
+1612725893678	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1dIyTZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612725895130	Marionette	INFO	Listening on port 36575
+1612725895197	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612725895207	Marionette	ERROR	[15] No reply from Marionette:Register
+1612725901770	Marionette	INFO	Stopped listening on port 36575
+1612725930438	geckodriver	INFO	Listening on 127.0.0.1:48077
+1612725930441	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4Zmu9n"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612725931774	Marionette	INFO	Listening on port 34007
+1612725931863	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612725931871	Marionette	ERROR	[15] No reply from Marionette:Register
+1612726938522	Marionette	INFO	Stopped listening on port 34007
+1612729313911	geckodriver	INFO	Listening on 127.0.0.1:53049
+1612729313913	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevF2Yfh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612729315276	Marionette	INFO	Listening on port 37273
+1612729315328	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612729315338	Marionette	ERROR	[15] No reply from Marionette:Register
+1612729459683	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81039: Error: Objects are not valid as a React child (found: object with keys {catalog_id, format, id, version_number, version_name, upc}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at BundleTable.js:65)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at BundleTable.js:62)
+    in tbody (created by ForwardRef(TableBody))
+    in ForwardRef(TableBody) (created by WithStyles(ForwardRef(TableBody)))
+    in WithStyles(ForwardRef(TableBody)) (at BundleTable.js:59)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at BundleTable.js:50)
+    in div (created by ForwardRef(TableContainer))
+    in ForwardRef(TableContainer) (created by WithStyles(ForwardRef(TableContainer)))
+    in WithStyles(ForwardRef(TableContainer)) (at BundleTable.js:49)
+    in div (at BundleTable.js:46)
+    in BundleTable (at Bundle.js:74)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Bundle.js:45)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:44)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:43)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Bundle.js:41)
+    in Bundle (created by Context.Consumer)
+    in Route (at Main.js:270)
+    in Switch (at Main.js:262)
+    in div (at Main.js:141)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:140)
+    in ThemeProvider (at Main.js:139)
+    in ApiStore (at Main.js:138)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 81039: Error: Objects are not valid as a React child (found: object with keys {catalog_id, format, id, version_number, version_name, upc}). If you meant to render a collection of children, use an array instead.
+    in td (created by ForwardRef(TableCell))
+    in ForwardRef(TableCell) (created by WithStyles(ForwardRef(TableCell)))
+    in WithStyles(ForwardRef(TableCell)) (at BundleTable.js:65)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at BundleTable.js:62)
+    in tbody (created by ForwardRef(TableBody))
+    in ForwardRef(TableBody) (created by WithStyles(ForwardRef(TableBody)))
+    in WithStyles(ForwardRef(TableBody)) (at BundleTable.js:59)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at BundleTable.js:50)
+    in div (created by ForwardRef(TableContainer))
+    in ForwardRef(TableContainer) (created by WithStyles(ForwardRef(TableContainer)))
+    in WithStyles(ForwardRef(TableContainer)) (at BundleTable.js:49)
+    in div (at BundleTable.js:46)
+    in BundleTable (at Bundle.js:74)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Bundle.js:45)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:44)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:43)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Bundle.js:41)
+    in Bundle (created by Context.Consumer)
+    in Route (at Main.js:270)
+    in Switch (at Main.js:262)
+    in div (at Main.js:141)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:140)
+    in ThemeProvider (at Main.js:139)
+    in ApiStore (at Main.js:138)
+    in Main (at src/index.js:10)
+JavaScript error: http://localhost:3000/static/js/1.chunk.js, line 72377: Error: br is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.
+    in br (at BundleTable.js:67)
+    in tr (created by ForwardRef(TableRow))
+    in ForwardRef(TableRow) (created by WithStyles(ForwardRef(TableRow)))
+    in WithStyles(ForwardRef(TableRow)) (at BundleTable.js:62)
+    in tbody (created by ForwardRef(TableBody))
+    in ForwardRef(TableBody) (created by WithStyles(ForwardRef(TableBody)))
+    in WithStyles(ForwardRef(TableBody)) (at BundleTable.js:59)
+    in table (created by ForwardRef(Table))
+    in ForwardRef(Table) (created by WithStyles(ForwardRef(Table)))
+    in WithStyles(ForwardRef(Table)) (at BundleTable.js:50)
+    in div (created by ForwardRef(TableContainer))
+    in ForwardRef(TableContainer) (created by WithStyles(ForwardRef(TableContainer)))
+    in WithStyles(ForwardRef(TableContainer)) (at BundleTable.js:49)
+    in div (at BundleTable.js:46)
+    in BundleTable (at Bundle.js:74)
+    in div (created by ForwardRef(Paper))
+    in ForwardRef(Paper) (created by WithStyles(ForwardRef(Paper)))
+    in WithStyles(ForwardRef(Paper)) (at Bundle.js:45)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:44)
+    in div (created by ForwardRef(Grid))
+    in ForwardRef(Grid) (created by WithStyles(ForwardRef(Grid)))
+    in WithStyles(ForwardRef(Grid)) (at Bundle.js:43)
+    in div (created by ForwardRef(Container))
+    in ForwardRef(Container) (created by WithStyles(ForwardRef(Container)))
+    in WithStyles(ForwardRef(Container)) (at Bundle.js:41)
+    in Bundle (created by Context.Consumer)
+    in Route (at Main.js:270)
+    in Switch (at Main.js:262)
+    in div (at Main.js:141)
+    in Router (created by BrowserRouter)
+    in BrowserRouter (at Main.js:140)
+    in ThemeProvider (at Main.js:139)
+    in ApiStore (at Main.js:138)
+    in Main (at src/index.js:10)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612729710800	geckodriver	INFO	Listening on 127.0.0.1:39525
+1612729710803	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4iFFNP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612729712179	Marionette	INFO	Listening on port 37755
+1612729712223	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612729712232	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3163: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/bundle/BundleTable.js: Expected corresponding JSX closing tag for <TableCell> (81:6)
+
+[0m [90m 79 | [39m								[33m<[39m[33m/[39m[33mButton[39m[33m>[39m[0m
+[0m [90m 80 | [39m							[33m<[39m[33m/[39m[33mTableCell[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 81 | [39m						[33m<[39m[33m/[39m[33mTableRow[39m[33m>[39m[0m
+[0m [90m    | [39m						[31m[1m^[22m[39m[0m
+[0m [90m 82 | [39m					)[0m
+[0m [90m 83 | [39m				})}[0m
+[0m [90m 84 | [39m			[33m<[39m[33m/[39m[33mTableBody[39m[33m>[39m[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:748:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:741:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:735:17)
+    at _temp.jsxParseElementAt (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:4725:16)
+    at _temp.jsxParseElementAt (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:4693:32)
+    at _temp.jsxParseElement (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:4751:17)
+    at _temp.parseExprAtom (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:4758:19)
+    at _temp.parseExprSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10150:23)
+    at _temp.parseUpdate (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10130:21)
+    at _temp.parseMaybeUnary (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10119:17)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612729832831	geckodriver	INFO	Listening on 127.0.0.1:48217
+1612729832835	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileF7L0V6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612729834282	Marionette	INFO	Listening on port 39655
+1612729834349	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612729834358	Marionette	ERROR	[15] No reply from Marionette:Register
+1612729849565	Marionette	ERROR	[35] No reply from Marionette:Register
+1612730189031	Marionette	ERROR	[40] No reply from Marionette:Register
+1612730218066	Marionette	ERROR	[42] No reply from Marionette:Register
+1612730840942	Marionette	INFO	Stopped listening on port 39655
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1612730843417	geckodriver	INFO	Listening on 127.0.0.1:50275
+1612730843420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebCMYSp"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612730844827	Marionette	INFO	Listening on port 41441
+1612730844938	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612730844947	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 96161: TypeError: data.slice is not a function
+JavaScript error: http://localhost:3000/static/js/0.chunk.js, line 96161: TypeError: data.slice is not a function
+1612731335247	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1612731788540	geckodriver	INFO	Listening on 127.0.0.1:55365
+1612731788543	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilel6Lpwm"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612731789927	Marionette	INFO	Listening on port 33577
+1612731789959	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612731789966	Marionette	ERROR	[15] No reply from Marionette:Register
+1612731796486	Marionette	INFO	Stopped listening on port 33577
