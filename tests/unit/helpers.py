@@ -296,10 +296,6 @@ def add_one_bundle(test_client, db):
     add_two_version(db)
     data = {'bundle_number': 'SS-TESTBUNDLE',
             'bundle_name': 'Two Versions',
-            }
-    json_data = json.dumps(data)
-    response = test_client.post('/bundle', data=json_data)
-    data = {'bundle_id': '1',
             'bundle_version': [
                 {
                     'version_id': '1'
@@ -310,5 +306,5 @@ def add_one_bundle(test_client, db):
                 ]
             }
     json_data = json.dumps(data)
-    response = test_client.post('/bundle/version', data=json_data)
+    response = test_client.post('/bundle', data=json_data)
 

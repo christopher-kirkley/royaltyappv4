@@ -4,8 +4,6 @@ from royaltyapp.models import db, Catalog, CatalogSchema, Version, Bundle, Bundl
 
 import pandas as pd
 
-from .helpers import clean_catalog_df, clean_track_df, pending_catalog_to_artist, pending_catalog_to_catalog, pending_version_to_version, pending_track_to_artist, pending_track_to_catalog
-
 from royaltyapp.cache import cache
 
 
@@ -32,13 +30,7 @@ def add_bundle():
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
-    return jsonify({'success': 'true',
-                    'id': new_bundle.id })
-
-@bundle.route('/bundle/version', methods=['POST'])
-def add_bundle_version():
-    data = request.get_json(force=True)
-    bundle_id=data['bundle_id']
+    bundle_id = new_bundle.id
     obj = db.session.query(Bundle).get(bundle_id)
     for version in data['bundle_version']:
         try:
@@ -48,7 +40,9 @@ def add_bundle_version():
         except exc.DataError:
             db.session.rollback()
             return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
+    return jsonify({'success': 'true',
+                    'id': new_bundle.id })
+
 
 @bundle.route('/bundle/<id>', methods=['GET'])
 def get_bundle(id):
