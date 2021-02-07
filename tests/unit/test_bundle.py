@@ -20,43 +20,22 @@ def test_can_add_bundle(test_client, db):
     add_two_version(db)
     data = {'bundle_number': 'SS-TESTBUNDLE',
             'bundle_name': 'Two Versions',
-            }
-    json_data = json.dumps(data)
-    response = test_client.post('/bundle', data=json_data)
-    assert response.status_code == 200
-    result = Bundle.query.all()
-    assert len(result) == 1
-    assert json.loads(response.data) == {'id': 1, 'success': 'true'}
-
-def test_can_add_bundle_versions(test_client, db):
-    add_one_artist(db)
-    add_one_catalog(db)
-    add_two_version(db)
-    data = {'bundle_number': 'SS-TESTBUNDLE',
-            'bundle_name': 'Two Versions',
-            }
-    json_data = json.dumps(data)
-    response = test_client.post('/bundle', data=json_data)
-    assert response.status_code == 200
-    result = Bundle.query.all()
-    assert len(result) == 1
-    assert json.loads(response.data) == {'id': 1, 'success': 'true'}
-    data = {'bundle_id': '1',
             'bundle_version': [
                 {
                     'version_id': '1'
                     },
                 {
                     'version_id': '2'
-                    },
-                ]
-            }
+                    }
+                ]}
     json_data = json.dumps(data)
-    response = test_client.post('/bundle/version', data=json_data)
+    response = test_client.post('/bundle', data=json_data)
     assert response.status_code == 200
+    result = Bundle.query.all()
+    assert len(result) == 1
+    assert json.loads(response.data) == {'id': 1, 'success': 'true'}
     result = db.session.query(BundleVersionTable).all()
     assert len(result) == 2
-    assert json.loads(response.data) == {'success': 'true'}
 
 def test_can_get_bundle(test_client, db):
     add_one_bundle(test_client, db)
