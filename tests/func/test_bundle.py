@@ -68,15 +68,16 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == 'Three Mystery Items'
     assert tds[2].text == 'SS-050cass SS-050lp'
     
-    # """ Navigate to catalog detail page. """
-    # catalog_detail = browser.find_element_by_id('catalog_detail')
-    # catalog_detail.click()
-    # assert browser.find_element_by_id('catalog_number').get_attribute("value") == 'SS-050'
-    # assert browser.find_element_by_id('catalog_name').get_attribute("value") == 'Akaline Kidal'
-    # assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
-    # # """ User goes to income. """
-    # # browser.find_element_by_id('income').click()
-    # # browser.find_element_by_id('income-data').text == 'No data'
+    """ Navigate to bundle detail page. """
+    bundle_detail = browser.find_element_by_id('bundle_detail')
+    bundle_detail.click()
+    time.sleep(1000)
+    assert browser.find_element_by_id('bundle_number').get_attribute("value") == 'SS-3MYS'
+    assert browser.find_element_by_id('bundle_name').get_attribute("value") == 'Three Mystery Items'
+
+    # """ User goes to income. """
+    # browser.find_element_by_id('income').click()
+    # browser.find_element_by_id('income-data').text == 'No data'
 
     # # """ User goes to upload income. """
     # # browser.find_element_by_id('import_income').click()
