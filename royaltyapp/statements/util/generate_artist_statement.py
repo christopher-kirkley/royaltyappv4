@@ -10,7 +10,8 @@ def get_statement_table(statement_id):
         .filter(StatementGenerated.id == statement_id)
         .first()
         ).statement_detail_table
-    metadata = MetaData(db.engine, reflect=True)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
     table = metadata.tables.get(statement_detail_table)
     db.session.commit()
     return table
@@ -22,7 +23,8 @@ def lookup_statement_summary_table(statement_id):
         .filter(StatementGenerated.id == statement_id)
         .first()
         ).statement_summary_table
-    metadata = MetaData(db.engine, reflect=True)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
     table = metadata.tables.get(statement_name)
     db.session.commit()
     return table
@@ -41,7 +43,8 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
                               .first()
                               ).statement_balance_table
 
-    metadata = MetaData(db.engine, reflect=True)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
 
     previous_balance_table = metadata.tables.get(previous_balance_name)
 
@@ -154,7 +157,8 @@ def insert_into_statement_summary(
 def insert_into_balance_table(statement_id): 
     statement_index = db.session.query(StatementGenerated).filter(StatementGenerated.id == statement_id).first()
     # lookup balance statement
-    metadata = MetaData(db.engine, reflect=True)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
     statement_balance_table = metadata.tables.get(statement_index.statement_balance_table)
     statement_summary_table = metadata.tables.get(statement_index.statement_summary_table)
 
