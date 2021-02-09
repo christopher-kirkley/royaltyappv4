@@ -63,7 +63,7 @@ class Version(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     #upc = db.Column(db.String(30), unique=True)
-    upc = db.Column(db.BigInteger, unique=True)
+    upc = db.Column(db.Numeric, unique=True)
     version_number = db.Column(db.String(50))
     version_name = db.Column(db.String(30))
     format = db.Column(db.String(30)) 
@@ -181,10 +181,22 @@ class PendingVersion(db.Model):
     version_number = db.Column(db.String(255))
     version_name = db.Column(db.String(255))
     #upc = db.Column(db.String(255))
-    upc = db.Column(db.BigInteger)
+    upc = db.Column(db.Numeric)
     format = db.Column(db.String(255))
     catalog_number = db.Column(db.String(255))
 
+#work on this
+class PendingBundle(db.Model):
+    __tablename__ = 'pending_bundle'
+
+    id = db.Column(db.Integer, primary_key=True)
+    bundle_number = db.Column(db.String(255))
+    bundle_name = db.Column(db.String(255))
+    version_number = db.Column(db.String(255))
+    #upc = db.Column(db.String(255))
+    #upc = db.Column(db.Numeric)
+    #format = db.Column(db.String(255))
+    #catalog_number = db.Column(db.String(255))
 
 class IncomePending(db.Model):
     __tablename__ = 'income_pending'
@@ -195,7 +207,7 @@ class IncomePending(db.Model):
     date = db.Column(db.Date)
     order_id = db.Column(db.String(255))
     # upc_id = db.Column(db.String(255))
-    upc_id = db.Column(db.BigInteger)
+    upc_id = db.Column(db.Numeric)
     isrc_id = db.Column(db.String(255))
     version_number = db.Column(db.String(255))
     catalog_id = db.Column(db.String(255))

@@ -1,6 +1,56 @@
 from sqlalchemy import exc, func, cast
 
-from royaltyapp.models import db, IncomePending, ImportedStatement, OrderSettings, IncomeTotal
+from royaltyapp.models import db, IncomePending, ImportedStatement, OrderSettings, IncomeTotal, Bundle, BundleVersionTable
+
+
+def split_bundle_into_versions():
+    """If version is in bundle, split it into multiple."""
+    count_per_bundle = (db.session.query(BundleVersionTable.c.bundle_id,
+                                         func.count(BundleVersionTable.c.bundle_id)
+                                         .label('version_count'))
+                        .group_by(BundleVersionTable.c.bundle_id)
+                        .subquery()
+                        )
+
+    joins = (db.session.query(IncomePending.id.label('income_pending_id'),
+                              (IncomePending.amount / count_per_bundle.c.version_count).label('amount'),
+                              BundleVersionTable.c.version_id.label('version_id'))
+             .join(Bundle, Bundle.bundle_number == IncomePending.version_number)
+             .join(count_per_bundle, count_per_bundle.c.bundle_id == Bundle.id)
+             .join(BundleVersionTable, BundleVersionTable.c.bundle_id == Bundle.id)
+             .subquery()
+             )
+
+    next = (db.session.query(IncomePending,
+                             joins.c.amount,
+                             joins.c.version_id
+                             )
+            .join(joins, joins.c.income_pending_id == IncomePending.id)
+            ).all()
+
+    for row in next:
+        ins = (IncomePending.__table__
+               .insert()
+               .values(statement=row.IncomePending.statement,
+                       distributor=row.IncomePending.distributor,
+                       date=row.IncomePending.date,
+                       order_id=row.IncomePending.order_id,
+                       quantity=row.IncomePending.quantity,
+                       amount=row.amount,
+                       customer=row.IncomePending.customer,
+                       city=row.IncomePending.city,
+                       region=row.IncomePending.region,
+                       country=row.IncomePending.country,
+                       type=row.IncomePending.type,
+                       medium=row.IncomePending.medium,
+                       product=row.IncomePending.product,
+                       description=row.IncomePending.description,
+                       version_id=row.version_id
+                       ))
+
+        db.session.execute(ins)
+        db.session.commit()
+
 
 def normalize_distributor():
     db.session.execute("""

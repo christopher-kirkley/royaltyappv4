@@ -4,7 +4,7 @@ import pytest
 import datetime
 import json
 
-from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal
+from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle, BundleVersionTable
 
 CASE='two_comp_one_album_two_bundle'
 
@@ -64,15 +64,30 @@ def test_can_build_catalog(test_client, db):
     assert len(catalogs) == 2
     tracks = db.session.query(Track).all()
     assert len(tracks) == 23
+    bundles = db.session.query(Bundle).all()
+    assert len(bundles) == 2
+    bundles = db.session.query(BundleVersionTable).all()
+    assert len(bundles) == 4
+    assert bundles[0].bundle_id == 2
+    assert bundles[0].version_id == 1 
+
+    assert bundles[1].bundle_id == 2
+    assert bundles[1].version_id == 3
+
+    assert bundles[2].bundle_id == 1
+    assert bundles[2].version_id == 5
+
+    assert bundles[3].bundle_id == 1
+    assert bundles[3].version_id == 3
 
 def test_can_import_bandcamp(test_client, db):
     response = import_bandcamp_sales(test_client, db, CASE)
     result = db.session.query(IncomePending).all()
-    assert len(result) == 31
+    assert len(result) == 34
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == 5555555
-    assert json.loads(response.data)['data']['attributes']['length'] == 31
+    assert json.loads(response.data)['data']['attributes']['length'] == 34
 
 def test_can_process_pending_income(test_client, db):
     response = import_bandcamp_sales(test_client, db, CASE)
@@ -81,10 +96,11 @@ def test_can_process_pending_income(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     res = db.session.query(IncomeTotal).all()
-    assert len(res) == 31
+    assert len(res) == 34
 
 def test_statement_with_no_previous_balance(test_client, db):
     import_catalog(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
     response = import_bandcamp_sales(test_client, db, CASE) 
     result = db.session.query(IncomePending).all()
     response = test_client.post('/income/process-pending')
@@ -102,7 +118,7 @@ def test_statement_with_no_previous_balance(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {
             'summary': {
-                'statement_total': 134.6,
+                'statement_total': 142.29,
                 'previous_balance': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
@@ -111,13 +127,13 @@ def test_statement_with_no_previous_balance(test_client, db):
                     {
                     'id': 1,
                     'artist_name': 'Bonehead',
-                    'balance_forward': 84.53,
-                    'split': 84.53,
+                    'balance_forward': 91.08,
+                    'split': 91.08,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 169.05,
-                    'total_to_split': 169.05,
+                    'total_sales': 182.16,
+                    'total_to_split': 182.16,
                     },
                     {
                     'id': 2,
@@ -133,57 +149,57 @@ def test_statement_with_no_previous_balance(test_client, db):
                     {
                     'id': 3,
                     'artist_name': 'Jimi Jeans',
-                    'balance_forward': 11.13,
-                    'split': 11.13,
+                    'balance_forward': 11.38,
+                    'split': 11.38,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 22.25,
-                    'total_to_split': 22.25,
+                    'total_sales': 22.76,
+                    'total_to_split': 22.76,
                     },
                     {
                     'id': 4,
                     'artist_name': 'Pop Rocks',
-                    'balance_forward': 16.69,
-                    'split': 16.69,
+                    'balance_forward': 17.07,
+                    'split': 17.07,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 33.37,
-                    'total_to_split': 33.37
+                    'total_sales': 34.14,
+                    'total_to_split': 34.14
                     },
                     {
                     'id': 5,
                     'artist_name': 'Poor Boy',
-                    'balance_forward': 11.13,
-                    'split': 11.13,
+                    'balance_forward': 11.38,
+                    'split': 11.38,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 22.25,
-                    'total_to_split': 22.25,
+                    'total_sales': 22.76,
+                    'total_to_split': 22.76,
                     },
                     {
                     'id': 6,
                     'artist_name': 'Pineapple Party',
-                    'balance_forward': 5.56,
-                    'split': 5.56,
+                    'balance_forward': 5.69,
+                    'split': 5.69,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 11.12,
-                    'total_to_split': 11.12,
+                    'total_sales': 11.38,
+                    'total_to_split': 11.38,
                     },
                     {
                     'id': 7,
                     'artist_name': 'Chimichanga',
-                    'balance_forward': 5.56,
-                    'split': 5.56,
+                    'balance_forward': 5.69,
+                    'split': 5.69,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 11.12,
-                    'total_to_split': 11.12,
+                    'total_sales': 11.38,
+                    'total_to_split': 11.38,
                     },
                     ]
             }

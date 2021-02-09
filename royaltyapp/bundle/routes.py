@@ -6,11 +6,11 @@ import pandas as pd
 
 from royaltyapp.cache import cache
 
+from .helpers import pending_bundle_to_bundle
 
 bundle = Blueprint('bundle', __name__)
 
 @bundle.route('/bundle', methods=['GET'])
-#@cache.cached(timeout=30)
 def all_bundle():
     result = Bundle.query.all()
     bundle_schema = BundleSchema()
@@ -84,3 +84,12 @@ def edit_bundle_version():
             db.session.rollback()
             return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
+
+@bundle.route('/bundle/import-bundle', methods=['POST'])
+def import_bundle():
+    file = request.files['CSV']
+    df = pd.read_csv(file.stream._file)
+    df.to_sql('pending_bundle', con=db.engine, if_exists='append', index_label='id')
+    pending_bundle_to_bundle(db)
+    return jsonify({'success': 'true'})
+
