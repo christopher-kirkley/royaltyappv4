@@ -71,5 +71,40 @@ def test_can_get_bundle_matching_errors(test_client, db):
     assert db.session.query(Bundle).first().upc == '999111'
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
+    assert len(json.loads(response.data)) == 3
+
+def test_can_update_matching_errors(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
+    assert len(db.session.query(Bundle).all()) != 0
+    assert db.session.query(Bundle).first().upc == '999111'
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert len(json.loads(response.data)) == 3
+
+    """Update bundle matching errors."""
+    data = {
+            'error_type': 'upc',
+            'selected_ids': [15],
+            'new_value' : '999111'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    assert json.loads(response.data) == {"success": "true"}
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
     assert len(json.loads(response.data)) == 2
 
+    """Update version matching errors."""
+    data = {
+            'error_type': 'upc',
+            'selected_ids': [11, 5],
+            'new_value' : '999111'
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    assert json.loads(response.data) == {"success": "true"}
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert len(json.loads(response.data)) == 0
