@@ -67,6 +67,7 @@ def edit_bundle_version():
     bundle_obj = db.session.query(Bundle).get(bundle_id)
     bundle_obj.bundle_number = data['bundle_number']
     bundle_obj.bundle_name = data['bundle_name']
+    bundle_obj.upc = data['upc']
     db.session.commit()
 
     # remove bundle versions
