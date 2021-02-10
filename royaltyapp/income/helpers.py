@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 
-from royaltyapp.models import db, IncomePending, Version, Track
+from royaltyapp.models import db, IncomePending, Version, Track, Bundle
 
-from sqlalchemy import cast
+from sqlalchemy import cast, or_
 
 class Statement:
     def __init__(self, file):
@@ -85,7 +85,7 @@ class BandcampStatement(Statement):
         super().__init__(file)
         self.name = 'bandcamp'
         self.encoding = 'utf_16'
-        self.dtype = { 'catalog number': 'string', 'sku': 'string' }
+        self.dtype = { 'catalog number': 'string', 'sku': 'string', 'upc': 'string' }
 
     def clean(self):
         self.df.drop(self.df[self.df['item type'] == 'payout'].index, inplace=True)
@@ -109,14 +109,12 @@ class BandcampStatement(Statement):
         # self.df['sku'] = np.where((self.df['item type'] == 'digital') & (self.df['catalog number'].isnull()), self.df['catalog_number'] + 'digi', self.df['sku'])
         self.df['date'] = pd.to_datetime(self.df['date'])
         self.df['date'] = self.df['date'].dt.strftime('%Y-%m-%d')
-        try:
-            self.df['upc'] = self.df['upc'].astype(int)
-        except ValueError:
-            self.df['upc'] = self.df['upc'].astype(str)
-            self.df['upc'] = self.df['upc'].str.replace(' ', '')
-            self.df['upc'] = self.df['upc'].str.replace('.0', '')
 
+        self.df['upc'] = self.df['upc'].str.replace(' ', '')
+        #self.df['upc'] = self.df['upc'].astype(float)
         #self.df['upc'] = self.df['upc'].astype('Int64')
+        #self.df['upc'] = self.df['upc'].astype(str)
+
         self.df['catalog number'] = self.df['catalog number'].str.replace(' ', '')
 
 
@@ -329,11 +327,14 @@ def find_distinct_version_matching_errors():
             cast(IncomePending.amount, db.Numeric(8, 2)).label('amount'),
             IncomePending.id,
         )
-    version_error = version_error.outerjoin(Version, Version.upc == IncomePending.upc_id)
     version_error = version_error.filter(IncomePending.type == 'album')
-    # sel = sel.outerjoin(Bundle, Bundle.bundle_number == IncomePending.version_number)
+    version_error = version_error.outerjoin(Version, Version.upc == IncomePending.upc_id)
     version_error = version_error.filter(Version.upc == None)
+    version_error = version_error.outerjoin(Bundle, Bundle.upc == IncomePending.upc_id)
+    version_error = version_error.filter(Bundle.upc == None)
+
     return version_error
+
 
 def find_distinct_track_matching_errors():
 

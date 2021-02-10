@@ -5,8 +5,8 @@ from royaltyapp.models import PendingCatalog, PendingTrack, Artist, db, PendingB
 
 def pending_bundle_to_bundle(db):
     db.session.execute("""
-    INSERT INTO bundle (bundle_number, bundle_name)
-    SELECT DISTINCT(pending_bundle.bundle_number), pending_bundle.bundle_name
+    INSERT INTO bundle (bundle_number, bundle_name, upc)
+    SELECT DISTINCT(pending_bundle.bundle_number), pending_bundle.bundle_name, pending_bundle.upc
     FROM pending_bundle
     """)
 

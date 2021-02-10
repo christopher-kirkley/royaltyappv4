@@ -42,7 +42,7 @@ def import_sales():
 
 @income.route('/income/matching-errors', methods=['GET'])
 def get_matching_errors():
-    query = find_distinct_version_matching_errors().all()
+    query = find_distinct_version_matching_errors()
     income_pendings_schema = IncomePendingSchema(many=True)
     matching_errors = income_pendings_schema.dumps(query)
     return matching_errors

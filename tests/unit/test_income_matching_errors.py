@@ -11,7 +11,7 @@ import numpy as np
 
 from royaltyapp.models import Artist, Catalog, Version, Track, PendingVersion, IncomePending, ImportedStatement, IncomeDistributor, OrderSettings, IncomeTotal
 
-from royaltyapp.income.helpers import StatementFactory, process_pending_statements
+from royaltyapp.income.helpers import StatementFactory, process_pending_statements, find_distinct_version_matching_errors, find_distinct_track_matching_errors
 
 from .helpers import build_catalog, add_bandcamp_sales, add_bandcamp_order_settings, add_artist_expense, add_bandcamp_errors
 
@@ -19,27 +19,27 @@ def test_can_get_matching_errors(test_client, db):
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
     assert json.loads(response.data) == []
-    path = os.getcwd() + "/tests/files/test_bandcamp_errors.csv"
+    path = os.getcwd() + "/tests/files/test1_bandcamp.csv"
     data = {
             'statement_source': 'bandcamp'
             }
     data['file'] = (path, 'test_bandcamp_errors.csv')
     response = test_client.post('/income/import-sales',
             data=data, content_type="multipart/form-data")
+    assert db.session.query(IncomePending).first().distributor == 'bandcamp'
+    assert db.session.query(IncomePending).first().upc_id == '602318136817'
+    assert db.session.query(IncomePending).first().catalog_id == 'SS-050'
+    assert db.session.query(IncomePending).first().version_id == None
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
     assert len(db.session.query(IncomePending).all()) != 0
-    assert db.session.query(IncomePending).first().distributor == 'bandcamp'
-    assert db.session.query(IncomePending).first().upc_id == '1'
-    assert db.session.query(IncomePending).first().catalog_id == '1'
-    assert db.session.query(IncomePending).first().version_id == None
 
     """check function"""
-    query = find_distinct_matching_errors()
+    query = find_distinct_version_matching_errors()
     res = query.first()
     assert res.distributor == 'bandcamp'
-    assert res.upc_id == '1'
-    assert len(json.loads(response.data)) == 14
+    assert res.upc_id == '602318136817'
+    assert len(json.loads(response.data)) == 3  
 
 def test_can_update_pending_table(test_client, db):
     build_catalog(db, test_client)
