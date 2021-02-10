@@ -90,86 +90,48 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
 
     """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('upc_matching_errors').text == "You have 1 UPC matching errors."
+    assert browser.find_element_by_id('upc_matching_errors').text == "You have 3 UPC matching errors."
     browser.find_element_by_id('fix_upc_errors').click()
 
-    # # """ User use update function."""
-    # # table = browser.find_element_by_id('matching_error_table')
-    # # rows = table.find_elements_by_tag_name('tr')
-    # # assert len(rows) == 3
-    # # assert browser.find_element_by_xpath('//table/thead/tr[1]/th[2]').text == 'ISRC'
-    # # assert browser.find_element_by_xpath('//table/thead/tr[1]/th[3]').text == 'Distributor'
+    """ User use update function."""
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 4
 
-    # # """ Select first row. """
-    # # browser.find_element_by_xpath('//table/tbody/tr[1]/td[1]/div/input').click()
+    browser.find_elements_by_tag_name('th')[1].text == 'UPC'
+    browser.find_elements_by_tag_name('th')[2].text == 'Distributor'
 
-    # # """ Update type. """
-    # # browser.find_element_by_id('new_value').click()
-    # # browser.find_element_by_id('1').click()
-    # # browser.find_element_by_id('update').click()
+    """ Select first row. """
+    rows[1].find_elements_by_tag_name('td')[0].click()
 
-    # # """ User matches version number. """
-    # # table = browser.find_element_by_id('matching_error_table')
-    # # rows = table.find_elements_by_tag_name('tr')
-    # # assert len(rows) == 2
-
-    # # browser.find_element_by_id('match').click()
-    # # browser.find_element_by_id('column').click()
-    # # browser.find_element_by_id('isrc_id').click()
-    # # browser.find_element_by_id('missingisrc').click()
-    # # browser.find_element_by_id('new_value').click()
-    # # browser.find_element_by_id('QZDZE1905001').click()
-    # # browser.find_element_by_id('submit').click()
-
-    # # time.sleep(1)
-    # # """ User sees prompt for errors, and clicks to fix matching errors. """
-    # # assert browser.find_element_by_id('upc_matching_errors').text == "You have 4 UPC matching errors."
-    # # browser.find_element_by_id('fix_upc_errors').click()
-
-    # # """ User use update function."""
-    # # table = browser.find_element_by_id('matching_error_table')
-    # # rows = table.find_elements_by_tag_name('tr')
-    # # assert len(rows) == 5
-
-    # # browser.find_elements_by_tag_name('th')[1].text == 'UPC'
-    # # browser.find_elements_by_tag_name('th')[2].text == 'Distributor'
-
-    # # tds = rows[1].find_elements_by_tag_name('td')
-
-    # # assert tds[1].text == 'missingupc' 
-    # # assert tds[2].text == 'bandcamp' 
-
-    # # """ Select first row. """
-    # # rows[1].find_elements_by_tag_name('td')[0].click()
-
-    # # """ Update type. """
-    # # browser.find_element_by_id('new_value').click()
-    # # browser.find_element_by_id('SS-050lp').click()
-    # # browser.find_element_by_id('update').click()
+    """ Update type. """
+    browser.find_element_by_id('new_value').click()
+    browser.find_element_by_id('SS-3MYS').click()
+    browser.find_element_by_id('update').click()
 
     # # """ User matches version number. """
     # # table = browser.find_element_by_id('matching_error_table')
     # # rows = table.find_elements_by_tag_name('tr')
     # # assert len(rows) == 4
     
-    # # browser.find_element_by_id('match').click()
-    # # browser.find_element_by_id('column').click()
-    # # browser.find_element_by_id('upc_id').click()
-    # # browser.find_element_by_id('missingupc').click()
-    # # browser.find_element_by_id('new_value').click()
-    # # browser.find_element_by_id('SS-050cass').click()
-    # # browser.find_element_by_id('submit').click()
+    browser.find_element_by_id('match').click()
+    browser.find_element_by_id('column').click()
+    browser.find_element_by_id('catalog_id').click()
+    browser.find_element_by_id('BUNDLEERROR').click()
+    browser.find_element_by_id('new_value').click()
+    browser.find_element_by_id('SS-3MYS').click()
+    browser.find_element_by_id('submit').click()
 
-    # # time.sleep(1)
-    # # """ Process payments. """
-    # # browser.find_element_by_id('process_errors').click()
+    time.sleep(1)
+    """ Process payments. """
+    browser.find_element_by_id('process_errors').click()
 
-    # # """ User goes to view imported income statements. """
-    # # browser.find_element_by_id('view1').click()
+    """ User goes to view imported income statements. """
+    browser.find_element_by_id('view1').click()
     
-    # # """ User goes to imported income statement detail to view summa to view summary."""
-    # # time.sleep(1)
-    # # assert browser.find_element_by_id('number_of_records').text == '6'
+    """ User goes to imported income statement detail to view summa to view summary."""
+    time.sleep(1)
+    assert browser.find_element_by_id('number_of_records').text == '6'
 
     # # """ User decides to go back and delete this statement. """
     # # browser.get('http://localhost:3000/income')
