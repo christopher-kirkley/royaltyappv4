@@ -296,6 +296,7 @@ def add_one_bundle(test_client, db):
     add_two_version(db)
     data = {'bundle_number': 'SS-TESTBUNDLE',
             'bundle_name': 'Two Versions',
+            'upc': '999111',
             'bundle_version': [
                 {
                     'version_id': '1'

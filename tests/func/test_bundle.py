@@ -50,6 +50,8 @@ def test_returns(browser, test_client, db):
     bundle_number.send_keys('SS-3MYS')
     bundle_name = browser.find_element_by_id('bundle_name')
     bundle_name.send_keys('Three Mystery Items')
+    upc = browser.find_element_by_id('upc')
+    upc.send_keys('999111')
 
     browser.find_element_by_id('add_version').click()
     browser.find_element_by_id('1').click()
@@ -71,42 +73,25 @@ def test_returns(browser, test_client, db):
     """ Navigate to bundle detail page. """
     bundle_detail = browser.find_element_by_id('bundle_detail')
     bundle_detail.click()
-    time.sleep(1000)
     assert browser.find_element_by_id('bundle_number').get_attribute("value") == 'SS-3MYS'
     assert browser.find_element_by_id('bundle_name').get_attribute("value") == 'Three Mystery Items'
 
-    # """ User goes to income. """
-    # browser.find_element_by_id('income').click()
-    # browser.find_element_by_id('income-data').text == 'No data'
+    """ User goes to income. """
+    browser.find_element_by_id('income').click()
+    browser.find_element_by_id('income-data').text == 'No data'
 
-    # # """ User goes to upload income. """
-    # # browser.find_element_by_id('import_income').click()
-    # # path = os.getcwd() + "/tests/files/bandcamp_test_2.csv"
-    # # browser.find_element_by_id('file_upload').send_keys(path)
-    # # browser.find_element_by_id('source_statement').click()
-    # # browser.find_element_by_id('bandcamp').click()
-    # # browser.find_element_by_id('upload_statement').click()
-    # # time.sleep(1)
+    """ User goes to upload income. """
+    browser.find_element_by_id('import_income').click()
+    path = os.getcwd() + "/tests/files/bandcamp_test_3.csv"
+    browser.find_element_by_id('file_upload').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('bandcamp').click()
+    browser.find_element_by_id('upload_statement').click()
+    time.sleep(1)
 
-    # # """ User sees statement added to the list of pending statements. """
-    # # pending_statement = browser.find_element_by_id('pending_statement')
-    # # assert pending_statement.text == 'bandcamp_test_2.csv'
-
-    # # """ Upload a second statement. """
-    # # path = os.getcwd() + "/tests/files/bandcamp_test.csv"
-    # # browser.find_element_by_id('file_upload').send_keys(path)
-    # # browser.find_element_by_id('source_statement').click()
-    # # browser.find_element_by_id('bandcamp').click()
-    # # browser.find_element_by_id('upload_statement').click()
-    # # time.sleep(1)
-
-    # # """ User deletes uploaded second statement. """
-    # # browser.find_element_by_id('delete-0').click()
-    # # time.sleep(1)
-
-    # # """ User sees prompt for errors, and clicks to fix matching errors. """
-    # # assert browser.find_element_by_id('isrc_matching_errors').text == "You have 2 ISRC matching errors."
-    # # browser.find_element_by_id('fix_isrc_errors').click()
+    """ User sees prompt for errors, and clicks to fix matching errors. """
+    assert browser.find_element_by_id('upc_matching_errors').text == "You have 1 UPC matching errors."
+    browser.find_element_by_id('fix_upc_errors').click()
 
     # # """ User use update function."""
     # # table = browser.find_element_by_id('matching_error_table')

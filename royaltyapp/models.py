@@ -148,7 +148,7 @@ class BundleSchema(ma.SQLAlchemyAutoSchema):
     version_bundle = ma.Nested(VersionSchema(many=True))
 
     class Meta:
-        fields = ("id", "bundle_number", "bundle_name", "version_bundle"
+        fields = ("id", "bundle_number", "bundle_name", "upc", "version_bundle"
                 )
 
 

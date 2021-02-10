@@ -28,6 +28,7 @@ def test_can_add_bundle(test_client, db):
     add_two_version(db)
     data = {'bundle_number': 'SS-TESTBUNDLE',
             'bundle_name': 'Two Versions',
+            'upc': '999111',
             'bundle_version': [
                 {
                     'version_id': '1'
@@ -40,6 +41,7 @@ def test_can_add_bundle(test_client, db):
     response = test_client.post('/bundle', data=json_data)
     assert response.status_code == 200
     result = Bundle.query.all()
+    assert db.session.query(Bundle).first().upc == '999111'
     assert len(result) == 1
     assert json.loads(response.data) == {'id': 1, 'success': 'true'}
     result = db.session.query(BundleVersionTable).all()
@@ -53,6 +55,7 @@ def test_can_get_bundle(test_client, db):
     assert response.status_code == 200
     assert (json.loads(response.data)['id']) == 1
     assert (json.loads(response.data)['bundle_number']) == 'SS-TESTBUNDLE'
+    assert (json.loads(response.data)['upc']) == '999111'
     assert len(json.loads(response.data)['version_bundle']) == 2
 
 def test_can_delete_bundle(test_client, db):

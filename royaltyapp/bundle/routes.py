@@ -24,6 +24,7 @@ def add_bundle():
         new_bundle = Bundle(
                         bundle_number=data['bundle_number'],
                         bundle_name=data['bundle_name'],
+                        upc=data['upc'],
                         )
         db.session.add(new_bundle)
         db.session.commit()
