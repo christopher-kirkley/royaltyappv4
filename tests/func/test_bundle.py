@@ -45,13 +45,13 @@ def test_returns(browser, test_client, db):
     add_bundle = browser.find_element_by_id('add_bundle')
     add_bundle.click()
 
-    """ User fills out catalog info. """
+    """ User fills out bundle info. """
     bundle_number = browser.find_element_by_id('bundle_number')
     bundle_number.send_keys('SS-3MYS')
     bundle_name = browser.find_element_by_id('bundle_name')
     bundle_name.send_keys('Three Mystery Items')
     upc = browser.find_element_by_id('upc')
-    upc.send_keys('999111')
+    upc.send_keys('999222')
 
     browser.find_element_by_id('add_version').click()
     browser.find_element_by_id('1').click()
@@ -75,6 +75,22 @@ def test_returns(browser, test_client, db):
     bundle_detail.click()
     assert browser.find_element_by_id('bundle_number').get_attribute("value") == 'SS-3MYS'
     assert browser.find_element_by_id('bundle_name').get_attribute("value") == 'Three Mystery Items'
+
+    """ User edits bundle """
+    browser.find_element_by_id('edit').click()
+
+    upc = browser.find_element_by_name('upc')
+
+    upc.clear()
+    upc.send_keys('999111')
+
+    browser.find_element_by_id('submit').click()
+    
+    """ Checks that bundles have been updated """
+    browser.get('http://localhost:3000/bundle/1')
+    time.sleep(1)
+    upc = browser.find_element_by_name('upc')
+    assert upc.get_attribute("value") == '999111'
 
     """ User goes to income. """
     browser.find_element_by_id('income').click()
@@ -133,8 +149,4 @@ def test_returns(browser, test_client, db):
     time.sleep(1)
     assert browser.find_element_by_id('number_of_records').text == '6'
 
-    # # """ User decides to go back and delete this statement. """
-    # # browser.get('http://localhost:3000/income')
-    # # time.sleep(1)
-    # # browser.find_element_by_id("delete1").click()
 

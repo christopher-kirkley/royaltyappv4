@@ -79,6 +79,7 @@ def test_can_edit_bundle(test_client, db):
     data = {'bundle_id': '1',
             'bundle_number': 'SS-MYS1',
             'bundle_name': 'MYSTERY1',
+            'upc': '999222',
             'bundle_version': [
                 {
                 'version_id': '2',
@@ -94,11 +95,13 @@ def test_can_edit_bundle(test_client, db):
     query = db.session.query(Bundle).filter(Bundle.id==1).first()
     assert query.bundle_number == 'SS-MYS1'
     assert query.bundle_name== 'MYSTERY1'
+    assert query.upc== '999222'
 
     """Edit again"""
     data = {'bundle_id': '1',
             'bundle_number': 'SS-MYS2',
             'bundle_name': 'MYSTERY2',
+            'upc': '999333',
             'bundle_version': [
                 ]
             }
@@ -111,3 +114,4 @@ def test_can_edit_bundle(test_client, db):
     query = db.session.query(Bundle).filter(Bundle.id==1).first()
     assert query.bundle_number == 'SS-MYS2'
     assert query.bundle_name== 'MYSTERY2'
+    assert query.upc == '999333'
