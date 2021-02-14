@@ -6,7 +6,7 @@ from sqlalchemy import exc, func, cast, Numeric, Date
 import pandas as pd
 import json
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema, Track
 
 from .helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors
 
@@ -217,18 +217,33 @@ def get_imported_statement_detail(id):
 
     digital_versions_res = income_total_schema.dumps(digital_versions)
     physical_versions_res = income_total_schema.dumps(physical_versions)
- 
 
+    tracks_sold = (db.session.query
+            (func.sum(IncomeTotal.amount).label('amount'),
+            func.sum(IncomeTotal.quantity).label('quantity'),
+            Track.track_name)
+    .join(Track, IncomeTotal.track_id == Track.id)
+    .filter(IncomeTotal.imported_statement_id == id)
+    .group_by(Track.track_name)
+    ).all()
+
+    track_res = income_total_schema.dumps(tracks_sold)
+ 
     query = db.session.query(IncomeTotal).filter(IncomeTotal.imported_statement_id == id).all()
     statement_detail = income_total_schema.dumps(query)
 
-    return jsonify([{'number_of_records': number_of_records,
-                    'amount': total_income.amount,
-                    'label_fee': total_income.label_fee,
-                    'label_net': total_income.label_net,
-                    'data': json.loads(statement_detail),
-                    'digital': json.loads(digital_versions_res),
-                    'physical': json.loads(physical_versions_res)
+    statement_name = db.session.query(ImportedStatement).filter(ImportedStatement.id == id).one().statement_name
+
+    return jsonify([{
+        'statement_name': statement_name,
+        'number_of_records': number_of_records,
+        'amount': total_income.amount,
+        'label_fee': total_income.label_fee,
+        'label_net': total_income.label_net,
+        'data': json.loads(statement_detail),
+        'digital': json.loads(digital_versions_res),
+        'track': json.loads(track_res),
+        'physical': json.loads(physical_versions_res)
                     }])
 
 @income.route('/income/statements/<id>', methods=['DELETE'])
