@@ -59,7 +59,7 @@ def test_returns(browser, test_client, db):
     bundle_name = browser.find_element_by_id('bundle_name')
     bundle_name.send_keys('Three Mystery Items')
     upc = browser.find_element_by_id('upc')
-    upc.send_keys('999222')
+    upc.send_keys('999111')
 
     browser.find_element_by_id('add_version').click()
     browser.find_element_by_id('1').click()
@@ -68,37 +68,6 @@ def test_returns(browser, test_client, db):
 
     submit = browser.find_element_by_id('submit')
     submit.click()
-
-    """ User sees Bundle item in table. """
-    browser.find_element_by_id('bundle').click()
-    bundle_table = browser.find_element_by_id('bundle_table')
-    rows = bundle_table.find_elements_by_tag_name('tr')
-    tds = rows[1].find_elements_by_tag_name('td');
-    assert tds[0].text == 'SS-3MYS'
-    assert tds[1].text == 'Three Mystery Items'
-    assert tds[2].text == 'TEST-01cass TEST-01lp'
-    
-    """ Navigate to bundle detail page. """
-    bundle_detail = browser.find_element_by_id('bundle_detail')
-    bundle_detail.click()
-    assert browser.find_element_by_id('bundle_number').get_attribute("value") == 'SS-3MYS'
-    assert browser.find_element_by_id('bundle_name').get_attribute("value") == 'Three Mystery Items'
-
-    """ User edits bundle """
-    browser.find_element_by_id('edit').click()
-
-    upc = browser.find_element_by_name('upc')
-
-    upc.clear()
-    upc.send_keys('999111')
-
-    browser.find_element_by_id('submit').click()
-    
-    """ Checks that bundles have been updated """
-    browser.get('http://localhost:3000/bundle/1')
-    time.sleep(1)
-    upc = browser.find_element_by_name('upc')
-    assert upc.get_attribute("value") == '999111'
 
     """ User goes to income. """
     browser.find_element_by_id('income').click()
@@ -127,24 +96,20 @@ def test_returns(browser, test_client, db):
 
     """ User deletes item """
     rows[1].find_elements_by_tag_name('td')[0].click()
-
-    """ Delete type. """
     browser.find_element_by_id('delete').click()
 
-    """ User matches version number. """
+    browser.get('http://localhost:3000/income/matching-errors')
+    time.sleep(1)
+
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 4
+    assert len(rows) == 3
     
-    browser.find_element_by_id('match').click()
-    browser.find_element_by_id('column').click()
-    browser.find_element_by_id('upc_id').click()
-    browser.find_element_by_id('missingupc').click()
-    browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('SS-050cass').click()
-    browser.find_element_by_id('submit').click()
+    """ User deletes two items """
+    rows[1].find_elements_by_tag_name('td')[0].click()
+    rows[2].find_elements_by_tag_name('td')[0].click()
+    browser.find_element_by_id('delete').click()
 
-    time.sleep(1)
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
 
@@ -153,11 +118,7 @@ def test_returns(browser, test_client, db):
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
-    assert browser.find_element_by_id('number_of_records').text == '6'
+    assert browser.find_element_by_id('number_of_records').text == '31'
 
-    """ User decides to go back and delete this statement. """
-    browser.get('http://localhost:3000/income')
-    time.sleep(1)
-    browser.find_element_by_id("delete1").click()
 
 
