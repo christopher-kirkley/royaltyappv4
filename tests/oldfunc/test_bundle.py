@@ -10,9 +10,6 @@ import os
 
 from royaltyapp.models import Artist
 
-base = os.path.basename(__file__)
-CASE = base.split('.')[0]
-
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
@@ -29,20 +26,15 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('catalog').click()
     time.sleep(1)
     browser.find_element_by_id('import_catalog').click()
-    path = os.getcwd() + f"/tests/func/{CASE}/catalog.csv"
+    path = os.getcwd() + "/tests/files/one_catalog.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
 
-    path = os.getcwd() + f"/tests/func/{CASE}/version.csv"
+    path = os.getcwd() + "/tests/files/one_version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('version_upload').click()
-
-    path = os.getcwd() + f"/tests/func/{CASE}/track.csv"
-    browser.find_element_by_id('track_to_upload').send_keys(path)
-    time.sleep(1)
-    browser.find_element_by_id('track_upload').click()
 
     """ User goes to the bundle view """
     browser.find_element_by_id('bundle').click()
@@ -76,7 +68,7 @@ def test_returns(browser, test_client, db):
     tds = rows[1].find_elements_by_tag_name('td');
     assert tds[0].text == 'SS-3MYS'
     assert tds[1].text == 'Three Mystery Items'
-    assert tds[2].text == 'TEST-01cass TEST-01lp'
+    assert tds[2].text == 'SS-050cass SS-050lp'
     
     """ Navigate to bundle detail page. """
     bundle_detail = browser.find_element_by_id('bundle_detail')
@@ -106,7 +98,7 @@ def test_returns(browser, test_client, db):
 
     """ User goes to upload income. """
     browser.find_element_by_id('import_income').click()
-    path = os.getcwd() + f"/tests/func/{CASE}/bandcamp.csv"
+    path = os.getcwd() + "/tests/files/bandcamp_test_3.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('source_statement').click()
     browser.find_element_by_id('bandcamp').click()
@@ -133,11 +125,6 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('SS-3MYS').click()
     browser.find_element_by_id('update').click()
 
-    # # """ User matches version number. """
-    # # table = browser.find_element_by_id('matching_error_table')
-    # # rows = table.find_elements_by_tag_name('tr')
-    # # assert len(rows) == 4
-    
     browser.find_element_by_id('match').click()
     browser.find_element_by_id('column').click()
     browser.find_element_by_id('catalog_id').click()
@@ -147,6 +134,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('submit').click()
 
     time.sleep(1)
+
     """ Process payments. """
     browser.find_element_by_id('process_errors').click()
 

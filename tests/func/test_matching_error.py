@@ -117,7 +117,7 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('upc_matching_errors').text == "You have 3 UPC matching errors."
     browser.find_element_by_id('fix_upc_errors').click()
 
-    """ User use update function."""
+    """ User goes to view error detail."""
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 4
@@ -125,25 +125,23 @@ def test_returns(browser, test_client, db):
     browser.find_elements_by_tag_name('th')[1].text == 'UPC'
     browser.find_elements_by_tag_name('th')[2].text == 'Distributor'
 
-    """ Select first row. """
+    """ User deletes item """
     rows[1].find_elements_by_tag_name('td')[0].click()
 
-    """ Update type. """
-    browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('SS-3MYS').click()
-    browser.find_element_by_id('update').click()
+    """ Delete type. """
+    browser.find_element_by_id('delete').click()
 
-    # # """ User matches version number. """
-    # # table = browser.find_element_by_id('matching_error_table')
-    # # rows = table.find_elements_by_tag_name('tr')
-    # # assert len(rows) == 4
+    """ User matches version number. """
+    table = browser.find_element_by_id('matching_error_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 4
     
     browser.find_element_by_id('match').click()
     browser.find_element_by_id('column').click()
-    browser.find_element_by_id('catalog_id').click()
-    browser.find_element_by_id('BUNDLEERROR').click()
+    browser.find_element_by_id('upc_id').click()
+    browser.find_element_by_id('missingupc').click()
     browser.find_element_by_id('new_value').click()
-    browser.find_element_by_id('SS-3MYS').click()
+    browser.find_element_by_id('SS-050cass').click()
     browser.find_element_by_id('submit').click()
 
     time.sleep(1)
@@ -155,6 +153,11 @@ def test_returns(browser, test_client, db):
     
     """ User goes to imported income statement detail to view summa to view summary."""
     time.sleep(1)
-    assert browser.find_element_by_id('number_of_records').text == '36'
+    assert browser.find_element_by_id('number_of_records').text == '6'
+
+    """ User decides to go back and delete this statement. """
+    browser.get('http://localhost:3000/income')
+    time.sleep(1)
+    browser.find_element_by_id("delete1").click()
 
 

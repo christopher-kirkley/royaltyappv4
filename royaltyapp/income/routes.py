@@ -247,6 +247,18 @@ def get_distributors():
 
     return jsonify({'success': 'true'})
 
+@income.route('/income/errors', methods=['DELETE'])
+def delete_errors():
+    data = request.get_json(force=True)
+    try:
+        for id in data['selected_ids']:
+            db.session.query(IncomePending).filter(IncomePending.id==id).delete()
+            db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})
+
 @income.route('/income/update-errors', methods=['PUT'])
 def update_errors():
     data = request.get_json(force=True)

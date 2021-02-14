@@ -64,7 +64,6 @@ class Version(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     upc = db.Column(db.String(30), unique=True)
-    #upc = db.Column(db.Numeric, unique=True)
     version_number = db.Column(db.String(50))
     version_name = db.Column(db.String(30))
     format = db.Column(db.String(30)) 
@@ -182,7 +181,6 @@ class PendingVersion(db.Model):
     version_number = db.Column(db.String(255))
     version_name = db.Column(db.String(255))
     upc = db.Column(db.String(255))
-    #upc = db.Column(db.Numeric)
     format = db.Column(db.String(255))
     catalog_number = db.Column(db.String(255))
 
@@ -525,3 +523,8 @@ def insert_initial_values(db):
     ]
     db.session.bulk_save_objects(statements_to_insert)
     db.session.commit()
+
+def init_new_instance(db):
+    db.drop_all()
+    db.create_all()
+    insert_initial_values(db)
