@@ -39,7 +39,7 @@ class Statement:
         self.df = self.df.reindex(columns=self.columns_for_db)  # Add needed columns, drop extraneous columns
 
     def insert_to_db(self):
-        self.df.to_sql('income_pending', con=db.engine, if_exists='append', index=False)
+        self.df.to_sql('income_pending', con=db.engine, chunksize=100000, method='multi', if_exists='append', index=False)
 
     def add_missing_version_number(self):
         """album"""
@@ -242,7 +242,8 @@ class SDDigitalStatement(Statement):
         self.name = 'sddigital'
         self.encoding = 'unicode_escape'
         self.dtype = {}
-
+        print('init sd')
+        
     def clean(self):
         self.df['datePaidlast'] = pd.to_datetime(self.df['datePaidlast'])
         # self.df['UPC'] = np.where(self.df['Product ID'].notnull(), np.nan, self.df['Product ID'])
@@ -261,9 +262,11 @@ class SDDigitalStatement(Statement):
                                 'Country Code': 'country',
                                 'Transaction Type': 'type',
                                 'Title_Description': 'description',
+                                'Product Title': 'track_name',
                                 },
                        inplace=True)
 
+        print('clean sd')
 
 class QuickbooksStatement(Statement):
     def __init__(self, file):
