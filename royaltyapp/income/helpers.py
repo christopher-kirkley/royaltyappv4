@@ -39,7 +39,10 @@ class Statement:
         self.df = self.df.reindex(columns=self.columns_for_db)  # Add needed columns, drop extraneous columns
 
     def insert_to_db(self):
-        self.df.to_sql('income_pending', con=db.engine, chunksize=100000, method='multi', if_exists='append', index=False)
+        
+        """Method works for working CSV, but for larger df will timeout"""
+        """Better method to convert to StringIO or temporary CSV then use bulk insert."""
+        self.df.to_sql('income_pending', chunksize=1000, method='multi', con=db.engine, if_exists='append', index=False)
 
     def add_missing_version_number(self):
         """album"""
