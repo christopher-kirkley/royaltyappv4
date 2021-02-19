@@ -18,6 +18,7 @@ class Statement:
             'version_number',
             'catalog_id',
             'album_name',
+            'artist_name',
             'track_name',
             'quantity',
             'amount',
@@ -212,14 +213,9 @@ class SDPhysicalStatement(Statement):
         self.dtype = { 'UPC': 'string' }
 
     def clean(self):
-        # """SELECT DESCRIPTION, WHERE Version is SS-000, clip the first characters of Description and MOVE INTO version."""
-        # self.index_to_put_dash = index_where_to_put_dash(self.df['Catalog Number'][1])
-        # self.df['Catalog Number'] = np.where(self.df['Catalog Number'].str[-3:] == '000',
-        #                                      self.df['Title_Description'].str.split(' ', expand=True)[0],
-        #                                      self.df['Catalog Number'])
-
-        # """This only works with two letter catalog numbers, very specific to Sahel Sounds."""
-        # self.df['Catalog Number'] = self.df['Catalog Number'].str.upper().str[:2] + '-' + self.df['Catalog Number'].str.lower().str[2:]
+        self.df['Catalog Number'] = np.where(self.df['Artist'].str.contains('Label Credit'),
+                                             self.df['Title_Description'].str.split(' ', expand=True)[0],
+                                             self.df['Catalog Number'])
 
 
         self.df['datePaidlast'] = pd.to_datetime(self.df['datePaidlast'])
@@ -235,6 +231,7 @@ class SDPhysicalStatement(Statement):
                                 'Customer': 'customer',
                                 'Country Code': 'country',
                                 'Title_Description': 'description',
+                                'Artist': 'artist_name',
                                 },
                        inplace=True)
 
@@ -244,8 +241,7 @@ class SDDigitalStatement(Statement):
         super().__init__(file)
         self.name = 'sddigital'
         self.encoding = 'unicode_escape'
-        self.dtype = {}
-        print('init sd')
+        self.dtype = { 'UPC': 'string' }
         
     def clean(self):
         self.df['datePaidlast'] = pd.to_datetime(self.df['datePaidlast'])

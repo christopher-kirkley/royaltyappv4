@@ -7,9 +7,9 @@ from flask_marshmallow import Marshmallow
 from marshmallow import fields
 from sqlalchemy import create_engine
 
-
 db = SQLAlchemy()
 ma = Marshmallow()
+
 
 TrackCatalogTable = db.Table('track_catalog_table',
                     db.Column('track_id', db.Integer, db.ForeignKey('track.id')),
@@ -94,11 +94,12 @@ class Track(db.Model):
 class TrackSchema(ma.SQLAlchemySchema):
     class Meta:
         model = 'Track'
-        fields = ('track_number',
+        fields = (
+                'track_number',
                 'track_name',
                 'isrc',
                 'artist_id',
-                'id'
+                'id',
                 )
 
 class VersionSchema(ma.SQLAlchemyAutoSchema):
@@ -211,6 +212,7 @@ class IncomePending(db.Model):
     version_number = db.Column(db.String(255))
     catalog_id = db.Column(db.String(255))
     album_name = db.Column(db.String(255))
+    artist_name = db.Column(db.String(255))
     track_name = db.Column(db.String(255))
     quantity = db.Column(db.Integer)
     amount = db.Column(db.Numeric(23, 18))
