@@ -53,7 +53,7 @@ def get_bundle(id):
 
 @bundle.route('/bundle/<id>', methods=['DELETE'])
 def delete_bundle(id):
-    bundle = db.session.query(Bundle).filter(Bundle.id==1).first()
+    bundle = db.session.query(Bundle).filter(Bundle.id==id).first()
     db.session.delete(bundle)
     db.session.commit()
     return jsonify({'success': 'true'})
