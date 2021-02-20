@@ -18,5 +18,10 @@ def pending_bundle_to_bundle(db):
     JOIN version ON pending_bundle.version_number = version.version_number;
     """)
     db.session.commit()
+
+    db.session.execute("""
+    DELETE FROM pending_bundle
+    """)
+
     return True
 
