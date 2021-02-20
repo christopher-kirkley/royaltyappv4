@@ -45,11 +45,26 @@ def import_sales(test_client, db, case):
             data=data, content_type="multipart/form-data")
     return response
 
-def test_can_get_matching_errors(test_client, db):
+def test_can_update_version_on_hyphen_label_credit(test_client, db):
     import_catalog(test_client, db, CASE)
     import_sales(test_client, db, CASE)
-    query = db.session.query(IncomePending).one()
+    query = db.session.query(IncomePending).filter(IncomePending.order_id=='11111').one()
     assert query.artist_name == 'Label Credit'
-    assert query.version_number == 'TEST01cd'
+    assert query.version_number == 'TEST-01lp'
+    assert query.upc_id == '3333333333'
 
+def test_can_update_version_on_case_label_credit(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_sales(test_client, db, CASE)
+    query = db.session.query(IncomePending).filter(IncomePending.order_id=='22222').one()
+    assert query.artist_name == 'Label Credit'
+    assert query.upc_id == '3333333333'
+    assert query.version_number == 'TEST-01lp'
+
+# def test_can_get_matching_errors(test_client, db):
+#     import_catalog(test_client, db, CASE)
+#     import_sales(test_client, db, CASE)
+#     response = test_client.get('/income/matching-errors')
+#     assert response.status_code == 200
+#     assert len(json.loads(response.data)) == 0
 

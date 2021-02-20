@@ -28,8 +28,8 @@ def import_sales():
     print('begin insert')
     statement.insert_to_db()
     print('inserted, begin clean')
-    statement.add_missing_version_number()
     statement.add_missing_upc_number()
+    statement.add_missing_version_number()
     records = statement.find_imported_records()
     data = {
             "data": {

@@ -3,7 +3,7 @@ import numpy as np
 
 from royaltyapp.models import db, IncomePending, Version, Track, Bundle
 
-from sqlalchemy import cast, or_
+from sqlalchemy import cast, or_, update
 
 class Statement:
     def __init__(self, file):
@@ -56,12 +56,26 @@ class Statement:
         version
         WHERE
         income_pending.upc_id = version.upc
+        """)
+
+        """
         AND
         income_pending.version_number IS NULL
-        """)
+        """
 
     def add_missing_upc_number(self):
         """album"""
+
+        # stmt = (
+        #         update(IncomePending).
+        #         where(IncomePending.__table__.c.version_number.
+        #             replace(Column('version_number', '-', 'version_number'))== Version.__table__.c.version_number).
+        #         # where(IncomePending.__table__.c.upc_id == '').
+        #         values(upc_id = Version.upc)
+        #         )
+        # db.session.execute(stmt)
+        # db.session.commit()
+
         db.engine.execute("""
         UPDATE
         income_pending
@@ -70,7 +84,7 @@ class Statement:
         FROM
         version
         WHERE
-        income_pending.version_number = version.version_number
+        LOWER(REPLACE(version.version_number, '-', '')) = LOWER(income_pending.version_number)
         AND
         income_pending.upc_id IS NULL
         """)
@@ -140,6 +154,8 @@ class BandcampStatement(Statement):
                                 'package': 'description',
                                 },
                        inplace=True)
+
+        self.df['track_name'] = self.df['album_name']
 
 
 class SDSStatement(Statement):
