@@ -2,3 +2,5 @@ Internal Invoice Number,Customer,Catalog Number,UPC,Title_Description,Artist,Pro
 11111,Cargo Germ. Consignment Account,SS000,,TEST01lp - 2019.05 - Logistics for May from Cargo DE,Label Credit,,Germany,DE,OVERSEAS,consignment pay,-1,-0.65877759408,-0.65877759408,-0.65877759408,0,0,-0.65877759408,8/27/2019,8/30/2019,1,5993056,Sahel Sounds,Recharge 617499-F19
 22222,Cargo Germ. Consignment Account,SS000,,TEST01LP - 2019.05 - Logistics for May from Cargo DE,Label Credit,,Germany,DE,OVERSEAS,consignment pay,-1,-0.65877759408,-0.65877759408,-0.65877759408,0,0,-0.65877759408,8/27/2019,8/30/2019,1,5993056,Sahel Sounds,Recharge 617499-F19
 33333,Cargo Germ. Consignment Account,TEST-01lp,,,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,123,0,0,123,8/27/2019,8/30/2019,1,5993056,Sahel Sounds,Recharge 617499-F19
+4,Cargo Germ. Consignment Account,TEST01lp,,,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,123,0,0,123,8/27/2019,8/30/2019,1,5993056,Sahel Sounds,Recharge 617499-F19
+5,Cargo Germ. Consignment Account,TEST-01-lp,,,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,123,0,0,123,8/27/2019,8/30/2019,1,5993056,Sahel Sounds,Recharge 617499-F19

@@ -84,9 +84,24 @@ class Statement:
         FROM
         version
         WHERE
-        LOWER(REPLACE(version.version_number, '-', '')) = LOWER(income_pending.version_number)
+        LOWER(REPLACE(version.version_number, '-', '')) =
+        LOWER(REPLACE(income_pending.version_number, '-', ''))
         AND
-        income_pending.upc_id IS NULL
+        income_pending.upc_id is NULL
+        """)
+
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = version.upc
+        FROM
+        version
+        WHERE
+        LOWER(REPLACE(version.version_number, '-', '')) =
+        LOWER(REPLACE(income_pending.version_number, '-', ''))
+        AND
+        income_pending.upc_id = ''
         """)
 
         db.engine.execute("""
@@ -99,9 +114,21 @@ class Statement:
         WHERE
         LOWER(version.version_number) = LOWER(income_pending.version_number)
         AND
-        income_pending.upc_id IS NULL
+        income_pending.upc_id is NULL
         """)
 
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = version.upc
+        FROM
+        version
+        WHERE
+        LOWER(version.version_number) = LOWER(income_pending.version_number)
+        AND
+        income_pending.upc_id = ''
+        """)
         
         """Update bundle upc"""
         db.engine.execute("""
@@ -115,6 +142,20 @@ class Statement:
         bundle.bundle_number = income_pending.version_number
         AND
         income_pending.upc_id IS NULL
+        """)
+
+        """Update bundle upc"""
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = bundle.upc
+        FROM
+        bundle
+        WHERE
+        bundle.bundle_number = income_pending.version_number
+        AND
+        income_pending.upc_id = ''
         """)
 
         """Smart matching, might want this to be in another route, option to choose in app"""
@@ -180,12 +221,11 @@ class BandcampStatement(Statement):
         self.df['date'] = self.df['date'].dt.strftime('%Y-%m-%d')
 
         self.df['upc'] = self.df['upc'].str.replace(' ', '')
-        #self.df['upc'] = self.df['upc'].astype(float)
-        #self.df['upc'] = self.df['upc'].astype('Int64')
-        #self.df['upc'] = self.df['upc'].astype(str)
+
+        """Zero out upc column for physical items, these are inconsitent for matching."""
+        self.df['upc'] = np.where(self.df['item type'] == 'physical', '', self.df['upc'])
 
         self.df['catalog number'] = self.df['catalog number'].str.replace(' ', '')
-
 
         self.df.rename(columns={'date': 'date',
                                 'bandcamp transaction id': 'order_id',

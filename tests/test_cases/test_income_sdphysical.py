@@ -58,8 +58,8 @@ def test_can_update_version_on_case_label_credit(test_client, db):
     import_sales(test_client, db, CASE)
     query = db.session.query(IncomePending).filter(IncomePending.order_id=='22222').one()
     assert query.artist_name == 'Label Credit'
-    assert query.upc_id == '3333333333'
     assert query.version_number == 'TEST-01lp'
+    assert query.upc_id == '3333333333'
 
 def test_can_update_upc_on_version(test_client, db):
     import_catalog(test_client, db, CASE)
@@ -68,10 +68,14 @@ def test_can_update_upc_on_version(test_client, db):
     assert query.version_number == 'TEST-01lp'
     # assert query.upc_id == '3333333333'
 
-# def test_can_get_matching_errors(test_client, db):
-#     import_catalog(test_client, db, CASE)
-#     import_sales(test_client, db, CASE)
-#     response = test_client.get('/income/matching-errors')
-#     assert response.status_code == 200
-#     assert len(json.loads(response.data)) == 0
+def test_can_update_upc_on_version_with_no_dashes(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_sales(test_client, db, CASE)
+    query = db.session.query(IncomePending).filter(IncomePending.order_id=='4').one()
+    assert query.version_number == 'TEST-01lp'
 
+def test_can_update_upc_on_version_with_two_dashes(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_sales(test_client, db, CASE)
+    query = db.session.query(IncomePending).filter(IncomePending.order_id=='5').one()
+    assert query.version_number == 'TEST-01lp'
