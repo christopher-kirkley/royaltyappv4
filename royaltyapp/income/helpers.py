@@ -102,7 +102,7 @@ class Statement:
         LOWER(REPLACE(income_pending.version_number, '-', ''))
         AND
         income_pending.upc_id = ''
-        """)
+        """
 
         db.engine.execute("""
         UPDATE
