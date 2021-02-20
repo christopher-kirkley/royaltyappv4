@@ -97,10 +97,47 @@ class Statement:
         FROM
         version
         WHERE
-        version.version_number = income_pending.version_number
+        LOWER(version.version_number) = LOWER(income_pending.version_number)
         AND
         income_pending.upc_id IS NULL
         """)
+
+        
+        """Update bundle upc"""
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = bundle.upc
+        FROM
+        bundle
+        WHERE
+        bundle.bundle_number = income_pending.version_number
+        AND
+        income_pending.upc_id IS NULL
+        """)
+
+        """Smart matching, might want this to be in another route, option to choose in app"""
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = version.upc
+        FROM
+        version
+        JOIN
+        catalog
+        ON version.catalog_id = Catalog.id
+        WHERE
+        version.format = income_pending.medium
+        AND
+        LOWER(catalog.catalog_name) = LOWER(income_pending.album_name)
+        AND
+        income_pending.type = 'album'
+        AND
+        income_pending.upc_id IS NULL
+        """)
+        
 
     def find_imported_records(self):
         res = len(db.session.query(IncomePending)
@@ -120,6 +157,7 @@ class BandcampStatement(Statement):
 
     def clean(self):
         self.df.drop(self.df[self.df['item type'] == 'payout'].index, inplace=True)
+        self.df.drop(self.df[self.df['item type'] == 'adjustment'].index, inplace=True)
         types_to_change = ['refund', 'reversal']
         self.df['type'] = np.where(self.df['item type'] == 'track', 'track', self.df['item type'])
         self.df['type'] = np.where(self.df['item type'] != 'track', 'album', self.df['item type'])

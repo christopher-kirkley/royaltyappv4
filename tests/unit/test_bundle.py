@@ -60,6 +60,8 @@ def test_can_get_bundle(test_client, db):
 
 def test_can_delete_bundle(test_client, db):
     add_one_bundle(test_client, db)
+    result = db.session.query(BundleVersionTable).all()
+    assert len(result) == 2
     response = test_client.delete('/bundle/1')
     assert response.status_code == 200
     result = Bundle.query.all()
