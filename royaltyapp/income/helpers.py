@@ -89,6 +89,19 @@ class Statement:
         income_pending.upc_id IS NULL
         """)
 
+        db.engine.execute("""
+        UPDATE
+        income_pending
+        SET
+        upc_id = version.upc
+        FROM
+        version
+        WHERE
+        version.version_number = income_pending.version_number
+        AND
+        income_pending.upc_id IS NULL
+        """)
+
     def find_imported_records(self):
         res = len(db.session.query(IncomePending)
                 .filter(IncomePending.statement == self.file.filename)
@@ -229,9 +242,10 @@ class SDPhysicalStatement(Statement):
         self.dtype = { 'UPC': 'string' }
 
     def clean(self):
-        self.df['Catalog Number'] = np.where(self.df['Artist'].str.contains('Label Credit'),
-                                             self.df['Title_Description'].str.split(' ', expand=True)[0],
-                                             self.df['Catalog Number'])
+        self.df['Catalog Number'] = np.where(
+                self.df['Artist'].str.contains('Label Credit'),
+                self.df['Title_Description'].str.split(' ', expand=True)[0],
+                self.df['Catalog Number'])
 
 
         self.df['datePaidlast'] = pd.to_datetime(self.df['datePaidlast'])
