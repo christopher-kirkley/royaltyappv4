@@ -26,7 +26,7 @@ def import_sales():
     statement.clean()
     statement.modify_columns()
     statement.insert_to_db()
-    po.add_missing_upc_number_by_version_number()
+    po.add_missing_upc()
     po.match_upc_on_catalog_name()
     po.add_missing_version_number()
     records = statement.find_imported_records()

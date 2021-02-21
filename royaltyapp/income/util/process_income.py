@@ -15,7 +15,7 @@ def split_bundle_into_versions():
     joins = (db.session.query(IncomePending.id.label('income_pending_id'),
                               (IncomePending.amount / count_per_bundle.c.version_count).label('amount'),
                               BundleVersionTable.c.version_id.label('version_id'))
-             .join(Bundle, Bundle.bundle_number == IncomePending.version_number)
+             .join(Bundle, Bundle.upc == IncomePending.upc_id)
              .join(count_per_bundle, count_per_bundle.c.bundle_id == Bundle.id)
              .join(BundleVersionTable, BundleVersionTable.c.bundle_id == Bundle.id)
              .subquery()
@@ -51,6 +51,10 @@ def split_bundle_into_versions():
         db.session.execute(ins)
         db.session.commit()
 
+    """delete bundles in income pending"""
+    db.session.execute("""
+        DELETE FROM income_pending WHERE income_pending.id IN (SELECT income_pending.id FROM income_pending JOIN bundle ON bundle.upc = income_pending.upc_id)
+    """)
 
 def normalize_distributor():
     db.session.execute("""

@@ -80,6 +80,7 @@ order_fee_cases = {
             ),
         }
 
+
 @pytest.mark.parametrize('statements, expected', list(cases.values()), ids=list(cases.keys()))
 def test_can_normalize_distributor(test_client, db, statements, expected):
     for statement_type, filelist in statements.items():
@@ -263,3 +264,4 @@ def test_can_insert_into_total_order_fee(test_client, db, statements, expected):
             .query(func.sum(IncomeTotal.label_net))
             .one()[0])
     assert round(float(label_net_total), 2) == expected['label_net_total']
+

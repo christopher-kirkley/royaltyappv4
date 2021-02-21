@@ -1,0 +1,6 @@
+Order ID,Sale ID,Date,Order,Transaction type,Sale type,Sales channel,POS location,Billing country,Billing region,Billing city,Shipping country,Shipping region,Shipping city,Product type,Product vendor,Product,Variant,Variant SKU,Net quantity,Gross sales,Discounts,Returns,Net sales,Shipping,Taxes,Total sales
+864230998059,2422258204715,2019-01-01T10:42:15-08:00,#1434,shipping,order,Online Store,,Germany,,Berlin,Germany,,Berlin,,,,,,0,0,0,0,0,35,0,35
+864230998059,2422258171947,2019-01-01T10:42:15-08:00,#1434,product,order,Online Store,,Germany,,Berlin,Germany,,Berlin,Album,shop,,Vinyl,TEST-01lp,1,15,0,0,15,0,0,15
+864230998059,2422258139179,2019-01-01T10:42:15-08:00,#1434,product,order,Online Store,,Germany,,Berlin,Germany,,Berlin,Album,shop,,Vinyl,TEST-01lp,1,15,0,0,15,0,0,15
+1886655447125,5864697069653,2019-11-18T17:21:19-08:00,#1956,product,order,Online Store,,United States,Kentucky,Louisville,United States,Kentucky,Louisville,Album,shop,,,BUNDLE1,1,30,0,0,30,0,0,30
+1234234234,123421341234,2019-11-18T17:21:19-08:00,#1957,product,order,Online Store,,United States,Kentucky,Louisville,United States,Kentucky,Louisville,Album,shop,,,unnamed bundle,1,30,0,0,30,0,0,30
