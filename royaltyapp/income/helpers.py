@@ -45,140 +45,7 @@ class Statement:
         """Better method to convert to StringIO or temporary CSV then use bulk insert."""
         self.df.to_sql('income_pending', chunksize=1000, method='multi', con=db.engine, if_exists='append', index=False)
 
-    def add_missing_version_number(self):
-        """album"""
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        version_number = version.version_number
-        FROM
-        version
-        WHERE
-        income_pending.upc_id = version.upc
-        """)
 
-        """
-        AND
-        income_pending.version_number IS NULL
-        """
-
-    def add_missing_upc_number(self):
-        """album"""
-
-        # stmt = (
-        #         update(IncomePending).
-        #         where(IncomePending.__table__.c.version_number.
-        #             replace(Column('version_number', '-', 'version_number'))== Version.__table__.c.version_number).
-        #         # where(IncomePending.__table__.c.upc_id == '').
-        #         values(upc_id = Version.upc)
-        #         )
-        # db.session.execute(stmt)
-        # db.session.commit()
-
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = version.upc
-        FROM
-        version
-        WHERE
-        LOWER(REPLACE(version.version_number, '-', '')) =
-        LOWER(REPLACE(income_pending.version_number, '-', ''))
-        AND
-        income_pending.upc_id is NULL
-        """)
-
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = version.upc
-        FROM
-        version
-        WHERE
-        LOWER(REPLACE(version.version_number, '-', '')) =
-        LOWER(REPLACE(income_pending.version_number, '-', ''))
-        AND
-        income_pending.upc_id = ''
-        """
-
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = version.upc
-        FROM
-        version
-        WHERE
-        LOWER(version.version_number) = LOWER(income_pending.version_number)
-        AND
-        income_pending.upc_id is NULL
-        """)
-
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = version.upc
-        FROM
-        version
-        WHERE
-        LOWER(version.version_number) = LOWER(income_pending.version_number)
-        AND
-        income_pending.upc_id = ''
-        """)
-        
-        """Update bundle upc"""
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = bundle.upc
-        FROM
-        bundle
-        WHERE
-        bundle.bundle_number = income_pending.version_number
-        AND
-        income_pending.upc_id IS NULL
-        """)
-
-        """Update bundle upc"""
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = bundle.upc
-        FROM
-        bundle
-        WHERE
-        bundle.bundle_number = income_pending.version_number
-        AND
-        income_pending.upc_id = ''
-        """)
-
-        """Smart matching, might want this to be in another route, option to choose in app"""
-        db.engine.execute("""
-        UPDATE
-        income_pending
-        SET
-        upc_id = version.upc
-        FROM
-        version
-        JOIN
-        catalog
-        ON version.catalog_id = Catalog.id
-        WHERE
-        version.format = income_pending.medium
-        AND
-        LOWER(catalog.catalog_name) = LOWER(income_pending.album_name)
-        AND
-        income_pending.type = 'album'
-        AND
-        income_pending.upc_id IS NULL
-        """)
-        
 
     def find_imported_records(self):
         res = len(db.session.query(IncomePending)
@@ -472,7 +339,6 @@ def find_distinct_track_matching_errors():
 
 def process_pending_statements():
     return 's'
-
 
 
 

@@ -11,6 +11,7 @@ from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, O
 from .helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors
 
 from .util import process_income as pi
+from .util import pending_operations as po
 
 
 income = Blueprint('income', __name__)
@@ -23,13 +24,11 @@ def import_sales():
     statement = StatementFactory.get_statement(file, statement_source)
     statement.create_df()
     statement.clean()
-    print('modify')
     statement.modify_columns()
-    print('begin insert')
     statement.insert_to_db()
-    print('inserted, begin clean')
-    statement.add_missing_upc_number()
-    statement.add_missing_version_number()
+    po.add_missing_upc_number_by_version_number()
+    po.match_upc_on_catalog_name()
+    po.add_missing_version_number()
     records = statement.find_imported_records()
     data = {
             "data": {
