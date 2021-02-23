@@ -270,7 +270,7 @@ def statement_detail_artist(id, artist_id):
 
 @statements.route('/statements/<id>/versions', methods=['GET'])
 def statement_versions(id):
-    statement_detail_table = ga.get_statement_table(1)
+    statement_detail_table = ga.get_statement_table(id)
     
     query = (
         db.session.query(Version.id.label('id'),
