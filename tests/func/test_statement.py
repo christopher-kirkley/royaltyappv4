@@ -116,11 +116,28 @@ def test_returns(browser, test_client, db):
     assert len(rows) == 1
 
     """ User navigates to first statement to view main statement."""
-    browser.find_element_by_id('1').click()
+    browser.find_element_by_id('view-1').click()
     time.sleep(2)
     assert browser.find_element_by_id('header').text == 'Statement Summary'
     assert browser.find_element_by_id('statement-name').text == 'statement_2020_01_01_2020_01_31'
     assert browser.find_element_by_id('current-owed').text == 'Current Owed: $0'
+
+    """ User goes to edit statement. """
+    browser.find_element_by_id('statements').click()
+    browser.find_element_by_id('edit-1').click()
+    assert browser.find_element_by_id('header').text == 'Edit Statement'
+
+    """ User deletes statement."""
+    browser.find_element_by_id('delete-statement').click()
+    time.sleep(1)
+
+    """ User redirected to statement page, verfies statement is gone."""
+    assert browser.find_element_by_id('header').text == 'Statements'
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 0
+
+
 
     # """ User navigates to artist statement detail. """
     # browser.find_element_by_id('1').click()

@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from sqlalchemy import exc, func, cast, Numeric
+from sqlalchemy import exc, func, cast, Numeric, MetaData
 
 import pandas as pd
 import json
@@ -319,4 +319,18 @@ def edit_statement(id):
     db.session.commit()
     return jsonify({'success': 'true'})
 
-
+@statements.route('/statements/<id>', methods=['DELETE'])
+def delete_statement(id):
+    query = db.session.query(StatementGenerated).filter(StatementGenerated.id==id).one()
+    table_list = []
+    table_list.append(query.statement_summary_table)
+    table_list.append(query.statement_detail_table)
+    table_list.append(query.statement_balance_table)
+    db.session.query(StatementGenerated).filter(StatementGenerated.id==id).delete()
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+    for table_name in table_list:
+        table = metadata.tables.get(table_name)
+        table.drop()
+    db.session.commit()
+    return jsonify({'success': 'true'})
