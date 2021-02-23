@@ -218,5 +218,5 @@ def test_statement_with_data(browser, test_client, db):
     browser.find_element_by_id('view-1').click()
     time.sleep(2)
     
-    assert browser.find_element_by_id('summary-sales').text == "1"
+    assert browser.find_element_by_id('summary-sales').text == "5.9"
     
