@@ -61,18 +61,17 @@ def add_statement_to_index(statement_detail_table, statement_summary_table):
         return "already exists"
     return statement_generated
 
-def create_statement_balance_table(statement_table):
-
-    statement_name = statement_table.__table__
+def create_statement_balance_table(statement_name):
 
     class StatementBalanceForward(db.Model):
         __tablename__ = f'{statement_name}_balance'
         __table_args__ = {'extend_existing': True}
         id = db.Column(db.Integer, primary_key=True)
-        artist_id = db.Column(db.String(255))
+        # artist_id = db.Column(db.String(255))
         balance_forward = db.Column(db.Numeric(8, 2))
+        artist_name = db.Column(db.String(255))
 
-        # artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
+        artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
 
     try:
         db.Model.metadata.create_all(bind=db.engine)

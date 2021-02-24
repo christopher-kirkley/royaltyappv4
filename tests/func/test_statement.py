@@ -154,6 +154,22 @@ def test_statement_generate(browser, test_client, db):
     # """ User returns to statement and sees it has been updated. """
     
     
+def test_opening_balance(browser, test_client, db):
+    """ User goes to homepage """ 
+    browser.get('http://localhost:3000/')
+    assert browser.title == 'Royalty App'
+    
+    browser.find_element_by_id('settings').click()
+
+    browser.find_element_by_id('settings').click()
+    
+    path = os.getcwd() + f"/tests/func/{CASE}/opening_balance.csv"
+    browser.find_element_by_id('opening-balance-to-upload').send_keys(path)
+    time.sleep(1)
+    browser.find_element_by_id('opening-balance-upload').click()
+
+
+    # build_catalog(browser, test_client, db)
 
 
 def test_statement_with_data(browser, test_client, db):
@@ -220,3 +236,5 @@ def test_statement_with_data(browser, test_client, db):
     
     assert browser.find_element_by_id('summary-sales').text == "5.9"
     
+    """ User exports statement."""
+

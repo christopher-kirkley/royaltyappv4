@@ -34,7 +34,7 @@ def generate_statement():
     statement_summary_table = ga.create_statement_summary_table(date_range)
     statement_index = ge.add_statement_to_index(table, statement_summary_table)
     
-    statement_balance_table = ge.create_statement_balance_table(table)
+    statement_balance_table = ge.create_statement_balance_table(table.__table__)
     ge.add_statement_balance_to_index(statement_index.id, statement_balance_table)
     
     ge.add_previous_balance_id_to_index(statement_index.id, previous_balance_id)
@@ -333,4 +333,48 @@ def delete_statement(id):
         table = metadata.tables.get(table_name)
         table.drop()
     db.session.commit()
+    return jsonify({'success': 'true'})
+
+@statements.route('/statements/import-opening-balance', methods=['POST'])
+def import_opening_balance():
+    file = request.files['CSV']
+    # check_statement = (
+    #     db.session.query(StatementBalanceGenerated)
+    #         .filter(StatementBalanceGenerated.statement_balance_name == 'statement_balance_opening')
+    #         .all())
+
+    # if len(check_statement) == 0:
+    """Create table."""
+    statement_balance_table = ge.create_statement_balance_table('opening')
+    db.session.commit()
+
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+    opening_balance_table = metadata.tables.get('opening_balance')
+    # """Clear current values."""
+    # db_session.execute("""DELETE FROM statement_balance_opening""")
+    # db_session.commit()
+    """Add new values from CSV."""
+    df = pd.read_csv(file)
+    df.to_sql('opening_balance', con=db.engine, if_exists='append', index=False)
+
+    update = (
+        opening_balance_table
+            .update()
+            .where(opening_balance_table.c.artist_name == Artist.artist_name)
+            .values(artist_id=Artist.id)
+    )
+    db.session.execute(update)
+    db.session.commit()
+    # sel = (
+    #     db.session.query(opening_balance_table, Artist.artist_name)
+    #         .outerjoin(Artist, Artist.artist_name == opening_balance_table.c.artist_name).all()
+    # )
+    errors = (
+        db.session.query(opening_balance_table)
+            .outerjoin(Artist, Artist.artist_name == opening_balance_table.c.artist_name)
+            .filter(Artist.artist_name == None).all()
+    )
+    if len(errors) > 0:
+        return jsonify({'errors': len(errors)})
     return jsonify({'success': 'true'})
