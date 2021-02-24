@@ -189,10 +189,10 @@ def test_opening_balance(browser, test_client, db):
 
     browser.find_element_by_id('previous_balance_id').click()
     time.sleep(1)
-    time.sleep(100)
-    browser.find_element_by_id('none').click()
+    browser.find_element_by_id('opening_balance').click()
     browser.find_element_by_id('submit').click()
-    time.sleep(1)
+    time.sleep(2)
+
 
     
 def test_opening_balance_errors(browser, test_client, db):

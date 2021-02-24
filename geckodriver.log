@@ -26032,3 +26032,33 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1614149720157	geckodriver	INFO	Listening on 127.0.0.1:47599
+1614149720160	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilem7SUIm"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614149721580	Marionette	INFO	Listening on port 38069
+1614149721682	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614149721690	Marionette	ERROR	[15] No reply from Marionette:Register
+1614149736280	Marionette	INFO	Stopped listening on port 38069
+1614149747910	geckodriver	INFO	Listening on 127.0.0.1:57645
+1614149747913	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCkz1UR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614149749255	Marionette	INFO	Listening on port 45511
+1614149749335	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614149749343	Marionette	ERROR	[15] No reply from Marionette:Register
+1614149763945	Marionette	INFO	Stopped listening on port 45511
+1614149908940	geckodriver	INFO	Listening on 127.0.0.1:51051
+1614149908943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4qVqV6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614149910323	Marionette	INFO	Listening on port 39907
+1614149910359	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614149910368	Marionette	ERROR	[15] No reply from Marionette:Register
+1614149927340	Marionette	INFO	Stopped listening on port 39907
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
