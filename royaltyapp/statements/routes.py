@@ -37,7 +37,10 @@ def generate_statement():
     statement_balance_table = ge.create_statement_balance_table(table.__table__)
     ge.add_statement_balance_to_index(statement_index.id, statement_balance_table)
     
-    ge.add_previous_balance_id_to_index(statement_index.id, previous_balance_id)
+    if previous_balance_id == 'opening_balance':
+        ge.add_opening_balance_to_index(id)
+    else:
+        ge.add_previous_balance_id_to_index(statement_index.id, previous_balance_id)
 
     artist_catalog_percentage = ge.find_track_percentage()
     artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
@@ -346,6 +349,12 @@ def import_opening_balance():
     # if len(check_statement) == 0:
     """Create table."""
     statement_balance_table = ge.create_statement_balance_table('opening')
+    db.session.commit()
+    """Add to statement balance table"""
+    statement_generated_entry = StatementGenerated(
+            statement_balance_table='opening_balance'
+    )
+    db.session.add(statement_generated_entry)
     db.session.commit()
 
     metadata = MetaData(db.engine)

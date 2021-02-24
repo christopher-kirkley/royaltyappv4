@@ -253,3 +253,19 @@ def test_opening_balance_import_no_error(test_client, db):
     assert db.session.query(table).all()[0].artist_id == 1
 
     assert json.loads(response.data) == {'success': 'true'}
+    
+    """ Check table was added to Statement Generated """
+    res = db.session.query(StatementGenerated).one()
+    assert res.statement_balance_table == 'opening_balance'
+
+    date_range = '2020_01_01_2020_01_31'
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    assert response.status_code == 200
+    res = db.session.query(StatementGenerated).all()[1]
+    assert res.previous_balance_id == 1 

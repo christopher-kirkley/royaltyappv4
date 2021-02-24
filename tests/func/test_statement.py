@@ -153,8 +153,49 @@ def test_statement_generate(browser, test_client, db):
 
     # """ User returns to statement and sees it has been updated. """
     
-    
 def test_opening_balance(browser, test_client, db):
+    """ User goes to homepage """ 
+    browser.get('http://localhost:3000/')
+    assert browser.title == 'Royalty App'
+    
+    build_catalog(browser, test_client, db)
+
+    browser.find_element_by_id('settings').click()
+
+    browser.find_element_by_id('settings').click()
+    
+    path = os.getcwd() + f"/tests/func/{CASE}/opening_balance.csv"
+    browser.find_element_by_id('opening-balance-to-upload').send_keys(path)
+    time.sleep(1)
+    browser.find_element_by_id('opening-balance-upload').click()
+
+    time.sleep(2)
+    
+    assert browser.find_element_by_id('header').text == 'Statements'
+
+    """ User goes to generate statement. """
+    browser.find_element_by_id('statements').click()
+    browser.find_element_by_id('generate').click()
+    assert browser.find_element_by_id('header').text == 'Generate Statement'
+    
+    """ Define statement. """
+    start_date = browser.find_element_by_id('start-date')
+    start_date.click()
+    start_date.send_keys('01012020')
+
+    end_date = browser.find_element_by_id('end-date')
+    end_date.click()
+    end_date.send_keys('01312020')
+
+    browser.find_element_by_id('previous_balance_id').click()
+    time.sleep(1)
+    time.sleep(100)
+    browser.find_element_by_id('none').click()
+    browser.find_element_by_id('submit').click()
+    time.sleep(1)
+
+    
+def test_opening_balance_errors(browser, test_client, db):
     """ User goes to homepage """ 
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
@@ -168,8 +209,10 @@ def test_opening_balance(browser, test_client, db):
     time.sleep(1)
     browser.find_element_by_id('opening-balance-upload').click()
 
+    time.sleep(2)
+    
+    assert browser.find_element_by_id('header').text == 'Edit Statement'
 
-    # build_catalog(browser, test_client, db)
 
 
 def test_statement_with_data(browser, test_client, db):
