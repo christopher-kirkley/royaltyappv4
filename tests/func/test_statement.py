@@ -207,19 +207,31 @@ def test_opening_balance_errors(browser, test_client, db):
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
     
-    browser.find_element_by_id('settings').click()
+    build_catalog(browser, test_client, db)
+    
+    browser.get('http://localhost:3000/artists')
 
     browser.find_element_by_id('settings').click()
     
-    path = os.getcwd() + f"/tests/func/{CASE}/opening_balance.csv"
+    path = os.getcwd() + f"/tests/func/{CASE}/opening_balance_errors.csv"
     browser.find_element_by_id('opening-balance-to-upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('opening-balance-upload').click()
 
-    time.sleep(2)
-    
-    assert browser.find_element_by_id('header').text == 'Edit Statement'
+    time.sleep(1)
 
+    assert browser.find_element_by_id('header').text == 'Fix Opening Balance Errors'
+    table = browser.find_element_by_id('opening-balance-errors')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
+
+    browser.find_element_by_id('update-2').click()
+
+    time.sleep(1)
+
+    table = browser.find_element_by_id('opening-balance-errors')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
 
 
 def test_statement_with_data(browser, test_client, db):

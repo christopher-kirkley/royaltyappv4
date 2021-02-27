@@ -390,3 +390,69 @@ def import_opening_balance():
     if len(errors) > 0:
         return jsonify({'errors': len(errors)})
     return jsonify({'success': 'true'})
+
+@statements.route('/statements/opening-balance-errors', methods=['GET'])
+def opening_balance_errors():
+    
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+
+    opening_balance_table = metadata.tables.get('opening_balance')
+
+    errors = (
+            db.session.query(
+                opening_balance_table.c.artist_name.label('artist_name'),
+                opening_balance_table.c.id.label('id'),
+                opening_balance_table.c.artist_id.label('artist_id'),
+                opening_balance_table.c.balance_forward.label('balance_forward'),
+                Artist.id.label('artist_table_id'))
+            .outerjoin(Artist, Artist.artist_name == opening_balance_table.c.artist_name)
+            .filter(Artist.id == None).all()
+    )
+
+    data = []
+
+    for error in errors:
+        artist_name = error.artist_name
+        artist_id = error.artist_id
+        id = error.id
+        balance_forward = error.balance_forward
+        entry = {
+                'artist_name': artist_name,
+                'id': id,
+                'balance_forward': str(balance_forward),
+                }
+        data.append(entry)
+
+    return json.dumps(data)
+
+@statements.route('/statements/opening-balance-errors', methods=['POST'])
+def fix_opening_balance_errors():
+    data = request.get_json(force=True)
+    opening_balance_id = int(data['id'])
+    new_artist_id = int(data['artist_id'])
+
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+
+    opening_balance_table = metadata.tables.get('opening_balance')
+
+    update = (
+        opening_balance_table
+            .update()
+            .where(opening_balance_table.c.id == opening_balance_id)
+            .values(artist_id=new_artist_id)
+    )
+    db.session.execute(update)
+    db.session.commit()
+
+    db.session.execute("""
+    UPDATE opening_balance
+    SET artist_name = artist.artist_name
+    FROM artist
+    WHERE opening_balance.artist_id = artist.id
+    """)
+
+    db.session.commit()
+
+    return jsonify({'success': 'true'})

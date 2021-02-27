@@ -270,6 +270,48 @@ def test_opening_balance_import_errors(test_client, db):
 
     assert json.loads(response.data) == {'errors': 1}
 
+    response = test_client.get('/statements/opening-balance-errors')
+    assert response.status_code == 200
+    assert json.loads(response.data) == [
+            {
+                'id': 1,
+                'artist_name': 'Bonehead',
+                'balance_forward': '100.00',
+                }]
+
+def test_opening_balance_fix_import_errors(test_client, db):
+    import_catalog(test_client, db, CASE)
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance_errors.csv'
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/statements/import-opening-balance',
+            data=data)
+    assert response.status_code == 200
+
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+    table = metadata.tables.get('opening_balance')
+
+    assert len(db.session.query(table).all()) == 2
+    id = db.session.query(table).filter(table.c.artist_name == 'Bondhead').first().id
+    assert db.session.query(table).filter(table.c.id == id).first().artist_id == None
+
+    """ Fix error."""
+    data = {
+            'id': 2,
+            'artist_id': '1'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/opening-balance-errors',
+            data=json_data)
+    assert response.status_code == 200
+
+    assert db.session.query(table).filter(table.c.id == id).first().artist_id == 1
+
+
+
 def test_opening_balance_import_no_error(test_client, db):
     import_catalog(test_client, db, CASE)
     path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'

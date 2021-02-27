@@ -26128,3 +26128,965 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1614445824531	Marionette	WARN	TLS certificate errors will be ignored for this session
 1614445824541	Marionette	ERROR	[15] No reply from Marionette:Register
 1614445841541	Marionette	INFO	Stopped listening on port 34233
+1614447444895	geckodriver	INFO	Listening on 127.0.0.1:51619
+1614447444898	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6ZoboG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447446290	Marionette	INFO	Listening on port 39447
+1614447446313	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447446322	Marionette	ERROR	[15] No reply from Marionette:Register
+1614447450641	Marionette	INFO	Stopped listening on port 39447
+1614447651983	geckodriver	INFO	Listening on 127.0.0.1:52795
+1614447651986	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerYSSwr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447653370	Marionette	INFO	Listening on port 36217
+1614447653404	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447653412	Marionette	ERROR	[15] No reply from Marionette:Register
+1614447657739	Marionette	INFO	Stopped listening on port 36217
+1614447717068	geckodriver	INFO	Listening on 127.0.0.1:60353
+1614447717072	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecvoTmC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447718536	Marionette	INFO	Listening on port 38455
+1614447718591	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447718598	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 264: Error: Cannot find module './settings/OpeningBalanceFix'
+1614447719086	Marionette	INFO	Stopped listening on port 38455
+1614447770957	geckodriver	INFO	Listening on 127.0.0.1:34707
+1614447770960	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQc2H69"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447772304	Marionette	INFO	Listening on port 44983
+1614447772379	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447772388	Marionette	ERROR	[15] No reply from Marionette:Register
+1614447776741	Marionette	INFO	Stopped listening on port 44983
+1614447889501	geckodriver	INFO	Listening on 127.0.0.1:49969
+1614447889503	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiler3UV1h"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447890818	Marionette	INFO	Listening on port 45307
+1614447890919	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447890926	Marionette	ERROR	[15] No reply from Marionette:Register
+1614447895287	Marionette	INFO	Stopped listening on port 45307
+1614447932941	geckodriver	INFO	Listening on 127.0.0.1:45339
+1614447932943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiqiWPq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614447934365	Marionette	INFO	Listening on port 34861
+1614447934459	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614447934469	Marionette	ERROR	[15] No reply from Marionette:Register
+1614447938829	Marionette	INFO	Stopped listening on port 34861
+1614448011983	geckodriver	INFO	Listening on 127.0.0.1:50161
+1614448011985	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZPFsA9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448013331	Marionette	INFO	Listening on port 39873
+1614448013404	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448013413	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448017748	Marionette	INFO	Stopped listening on port 39873
+1614448110265	geckodriver	INFO	Listening on 127.0.0.1:53223
+1614448110268	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefLzgwB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448111682	Marionette	INFO	Listening on port 38217
+1614448111786	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448111795	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448116147	Marionette	INFO	Stopped listening on port 38217
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1614448150528	geckodriver	INFO	Listening on 127.0.0.1:35681
+1614448150530	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRV8UJ3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448151877	Marionette	INFO	Listening on port 35215
+1614448151950	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448151958	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448158285	Marionette	INFO	Stopped listening on port 35215
+1614448193137	geckodriver	INFO	Listening on 127.0.0.1:57853
+1614448193140	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegyf78H"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448194478	Marionette	INFO	Listening on port 44025
+1614448194558	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448194567	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448200877	Marionette	INFO	Stopped listening on port 44025
+1614448238512	geckodriver	INFO	Listening on 127.0.0.1:40185
+1614448238515	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQhPUX9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448239856	Marionette	INFO	Listening on port 37117
+1614448239935	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448239947	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614448249370	geckodriver	INFO	Listening on 127.0.0.1:53195
+1614448249373	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0wZUC9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448250712	Marionette	INFO	Listening on port 41639
+1614448250796	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448250804	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448257145	Marionette	INFO	Stopped listening on port 41639
+1614448277058	geckodriver	INFO	Listening on 127.0.0.1:48225
+1614448277062	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile46md5O"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448278444	Marionette	INFO	Listening on port 39313
+1614448278476	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448278485	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448280671	Marionette	ERROR	[35] No reply from Marionette:Register
+Handler function _httpStopRequest threw an exception: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsITraceableChannel.setNewListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _setupResponseListener :: line 1086"  data: no]
+Stack: _setupResponseListener@resource://devtools/server/actors/network-monitor/network-observer.js:1086:38
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:912:12
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:409:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1086, column: 0
+console.error: ({})
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614448316786	geckodriver	INFO	Listening on 127.0.0.1:53587
+1614448316790	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0d3di8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448318266	Marionette	INFO	Listening on port 44569
+1614448318306	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448318318	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614448342946	geckodriver	INFO	Listening on 127.0.0.1:48187
+1614448342949	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileILjrK8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448344295	Marionette	INFO	Listening on port 37593
+1614448344371	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448344380	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448356680	Marionette	INFO	Stopped listening on port 37593
+1614448386436	geckodriver	INFO	Listening on 127.0.0.1:48477
+1614448386439	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9oD1Lg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448387850	Marionette	INFO	Listening on port 36575
+1614448387971	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448387979	Marionette	ERROR	[15] No reply from Marionette:Register
+1614448404923	Marionette	INFO	Stopped listening on port 36575
+1614448414366	geckodriver	INFO	Listening on 127.0.0.1:53953
+1614448414368	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileAZD9tg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448415727	Marionette	INFO	Listening on port 41905
+1614448415789	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448415799	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614448449589	geckodriver	INFO	Listening on 127.0.0.1:46857
+1614448449591	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWITlBy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614448450984	Marionette	INFO	Listening on port 34011
+1614448451011	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614448451018	Marionette	ERROR	[15] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1614449453423	Marionette	INFO	Stopped listening on port 34011
+1614449461789	geckodriver	INFO	Listening on 127.0.0.1:60721
+1614449461792	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7dn2rv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614449463200	Marionette	INFO	Listening on port 39127
+1614449463315	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614449463323	Marionette	ERROR	[15] No reply from Marionette:Register
+1614449543933	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/main.3589b1efb7fb5de6bf75.hot-update.js, line 121: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.3589b1efb7fb5de6bf75.hot-update.js, line 121: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.13b49358f3c11edf2365.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.13b49358f3c11edf2365.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.7e212c3b8c652ab46851.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.7e212c3b8c652ab46851.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.8e4593a1cd33688c22f9.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+JavaScript error: http://localhost:3000/main.8e4593a1cd33688c22f9.hot-update.js, line 123: ReferenceError: ExpenseMatchingTable is not defined
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: http://localhost:3000/main.5af85ed5391b065fe7a4.hot-update.js, line 94: ReferenceError: can't access lexical declaration 'artistsContext' before initialization
+JavaScript error: http://localhost:3000/main.5af85ed5391b065fe7a4.hot-update.js, line 94: ReferenceError: can't access lexical declaration 'artistsContext' before initialization
+JavaScript error: http://localhost:3000/main.03ec72c61b81693c029f.hot-update.js, line 96: ReferenceError: Context is not defined
+JavaScript error: http://localhost:3000/main.03ec72c61b81693c029f.hot-update.js, line 96: ReferenceError: Context is not defined
+JavaScript error: http://localhost:3000/main.0a29cd910d666d016a49.hot-update.js, line 113: ReferenceError: setUpcs is not defined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1614451141314	Marionette	ERROR	[39] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614451152884	geckodriver	INFO	Listening on 127.0.0.1:57985
+1614451152887	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3OechL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614451154292	Marionette	INFO	Listening on port 38473
+1614451154406	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614451154416	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1614451156735	Marionette	INFO	Stopped listening on port 38473
+1614451175639	geckodriver	INFO	Listening on 127.0.0.1:59759
+1614451175642	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileetCtNK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614451177030	Marionette	INFO	Listening on port 32977
+1614451177064	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614451177073	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1614451180324	Marionette	INFO	Stopped listening on port 32977
+1614453601676	geckodriver	INFO	Listening on 127.0.0.1:58285
+1614453601679	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilel786zB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614453603153	Marionette	INFO	Listening on port 37925
+1614453603196	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614453603209	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1614453606510	Marionette	INFO	Stopped listening on port 37925
+1614453613929	geckodriver	INFO	Listening on 127.0.0.1:50639
+1614453613932	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCmfvZ4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614453615370	Marionette	INFO	Listening on port 37157
+1614453615453	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614453615461	Marionette	ERROR	[15] No reply from Marionette:Register
+1614453618739	Marionette	INFO	Stopped listening on port 37157
+1614453756051	geckodriver	INFO	Listening on 127.0.0.1:59873
+1614453756054	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileW3oYgU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614453757460	Marionette	INFO	Listening on port 36085
+1614453757585	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614453757593	Marionette	ERROR	[15] No reply from Marionette:Register
+1614453761634	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor43, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614454166250	geckodriver	INFO	Listening on 127.0.0.1:44479
+1614454166253	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLneCDs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614454167679	Marionette	INFO	Listening on port 36149
+1614454167773	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614454167783	Marionette	ERROR	[15] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1614454568151	Marionette	ERROR	[37] No reply from Marionette:Register
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor134, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor152, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+1614455170766	Marionette	ERROR	[42] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614456304668	geckodriver	INFO	Listening on 127.0.0.1:46337
+1614456304671	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevYz8nN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614456306086	Marionette	INFO	Listening on port 39915
+1614456306189	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614456306198	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614456582054	geckodriver	INFO	Listening on 127.0.0.1:40363
+1614456582058	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8MYHwE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614456583485	Marionette	INFO	Listening on port 34251
+1614456583580	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614456583588	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614456668597	geckodriver	INFO	Listening on 127.0.0.1:43753
+1614456668601	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYVfZma"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614456670007	Marionette	INFO	Listening on port 43545
+1614456670124	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614456670134	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614456798513	geckodriver	INFO	Listening on 127.0.0.1:58103
+1614456798517	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3Ndgt9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614456799940	Marionette	INFO	Listening on port 37961
+1614456800036	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614456800050	Marionette	ERROR	[18] No reply from Marionette:Register
+1614456811435	Marionette	INFO	Stopped listening on port 37961
+1614456858453	geckodriver	INFO	Listening on 127.0.0.1:42375
+1614456858456	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRoR95A"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614456859839	Marionette	INFO	Listening on port 45161
+1614456859875	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614456859884	Marionette	ERROR	[15] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1614457871505	Marionette	INFO	Stopped listening on port 45161
+1614457920386	geckodriver	INFO	Listening on 127.0.0.1:43523
+1614457920391	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile19DWCi"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614457921851	Marionette	INFO	Listening on port 45755
+1614457921910	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614457921917	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614458214487	geckodriver	INFO	Listening on 127.0.0.1:57417
+1614458214490	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOr32Bs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614458215898	Marionette	INFO	Listening on port 45755
+1614458216010	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614458216020	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 22930: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/settings/OpeningBalanceFix.js: Unexpected token, expected "]" (98:28)
+
+[0m [90m  96 | [39m			body[33m:[39m [33mJSON[39m[33m.[39mstringify([0m
+[0m [90m  97 | [39m				[32m'id'[39m[33m:[39m id[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m  98 | [39m				[32m'new_artist_name'[39m[33m:[39m data[[32m'new_name'[39m][0m
+[0m [90m     | [39m				                        [31m[1m^[22m[39m[0m
+[0m [90m  99 | [39m			)})[0m
+[0m [90m 100 | [39m	}[0m
+[0m [90m 101 | [39m[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9675:16)
+    at _temp.expect (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9661:28)
+    at _temp.flowParsePostfixType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2802:14)
+    at _temp.flowParsePrefixType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2816:21)
+    at _temp.flowParseAnonFunctionWithoutParens (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2821:26)
+    at _temp.flowParseIntersectionType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2838:25)
+    at _temp.flowParseUnionType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2851:25)
+1614458216557	Marionette	INFO	Stopped listening on port 45755
+1614458285410	geckodriver	INFO	Listening on 127.0.0.1:47673
+1614458285413	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileufMT0C"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614458286923	Marionette	INFO	Listening on port 44161
+1614458287035	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614458287057	Marionette	ERROR	[15] No reply from Marionette:Register
+1614458287716	Marionette	INFO	Stopped listening on port 44161
+1614458400260	geckodriver	INFO	Listening on 127.0.0.1:37897
+1614458400263	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqzVdPd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614458401632	Marionette	INFO	Listening on port 40747
+1614458401683	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614458401690	Marionette	ERROR	[15] No reply from Marionette:Register
+1614458413319	Marionette	INFO	Stopped listening on port 40747
+1614458528059	geckodriver	INFO	Listening on 127.0.0.1:43149
+1614458528062	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerOnzwF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614458529462	Marionette	INFO	Listening on port 45709
+1614458529484	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614458529492	Marionette	ERROR	[15] No reply from Marionette:Register
+1614458540879	Marionette	INFO	Stopped listening on port 45709
+1614458566447	geckodriver	INFO	Listening on 127.0.0.1:58613
+1614458566451	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLyTkIY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614458567772	Marionette	INFO	Listening on port 45315
+1614458567874	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614458567884	Marionette	ERROR	[15] No reply from Marionette:Register
+1614458599195	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor43, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor628, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3400, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3450, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3980, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor5081, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 93283: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 93283: TypeError: path is undefined
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 89995: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Controller`.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614460983464	geckodriver	INFO	Listening on 127.0.0.1:50633
+1614460983467	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX1B2uz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614460984847	Marionette	INFO	Listening on port 35511
+1614460984887	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614460984894	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614461031255	geckodriver	INFO	Listening on 127.0.0.1:43993
+1614461031258	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePa1YNE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461032659	Marionette	INFO	Listening on port 42401
+1614461032680	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461032689	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461043070	Marionette	INFO	Stopped listening on port 42401
+1614461119989	geckodriver	INFO	Listening on 127.0.0.1:34557
+1614461119992	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4n9ks5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461121394	Marionette	INFO	Listening on port 37915
+1614461121413	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461121422	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 22930: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/settings/OpeningBalanceFix.js: Unexpected token, expected "]" (97:15)
+
+[0m [90m  95 | [39m			method[33m:[39m [32m'POST'[39m[33m,[39m[0m
+[0m [90m  96 | [39m			body[33m:[39m [33mJSON[39m[33m.[39mstringify([0m
+[0m[31m[1m>[22m[39m[90m  97 | [39m				[32m'id'[39m[33m:[39m data[[32m'id'[39m][33m,[39m[0m
+[0m [90m     | [39m				           [31m[1m^[22m[39m[0m
+[0m [90m  98 | [39m				[32m'artist_id'[39m[33m:[39m data[[32m'artist_id'[39m][0m
+[0m [90m  99 | [39m			)})[0m
+[0m [90m 100 | [39m	}[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9675:16)
+    at _temp.expect (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9661:28)
+    at _temp.flowParsePostfixType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2802:14)
+    at _temp.flowParsePrefixType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2816:21)
+    at _temp.flowParseAnonFunctionWithoutParens (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2821:26)
+    at _temp.flowParseIntersectionType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2838:25)
+    at _temp.flowParseUnionType (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:2851:25)
+1614461121955	Marionette	INFO	Stopped listening on port 37915
+1614461168389	geckodriver	INFO	Listening on 127.0.0.1:42389
+1614461168391	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefgZMC3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461169732	Marionette	INFO	Listening on port 37107
+1614461169807	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461169817	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 22930: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/settings/OpeningBalanceFix.js: The type cast expression is expected to be wrapped with parenthesis (99:8)
+
+[0m [90m  97 | [39m			method[33m:[39m [32m'POST'[39m[33m,[39m[0m
+[0m [90m  98 | [39m			body[33m:[39m [33mJSON[39m[33m.[39mstringify([0m
+[0m[31m[1m>[22m[39m[90m  99 | [39m				[32m'id'[39m[33m:[39m id[33m,[39m[0m
+[0m [90m     | [39m				    [31m[1m^[22m[39m[0m
+[0m [90m 100 | [39m				[32m'artist_id'[39m[33m:[39m artist_id[0m
+[0m [90m 101 | [39m			)})[0m
+[0m [90m 102 | [39m	}[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.toReferencedList (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3344:16)
+    at _temp.toReferencedListDeep (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10068:10)
+    at _temp.toReferencedArguments (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10775:10)
+    at _temp.parseCoverCallAndAsyncArrowHead (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10767:12)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10688:19)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3889:20)
+    at _temp.parseSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10661:19)
+1614461170327	Marionette	INFO	Stopped listening on port 37107
+1614461183465	geckodriver	INFO	Listening on 127.0.0.1:59765
+1614461183468	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCd3ksd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461184802	Marionette	INFO	Listening on port 43297
+1614461184888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461184895	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 22930: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/settings/OpeningBalanceFix.js: The type cast expression is expected to be wrapped with parenthesis (99:8)
+
+[0m [90m  97 | [39m			method[33m:[39m [32m'POST'[39m[33m,[39m[0m
+[0m [90m  98 | [39m			body[33m:[39m [33mJSON[39m[33m.[39mstringify([0m
+[0m[31m[1m>[22m[39m[90m  99 | [39m				[32m'id'[39m[33m:[39m new_id[33m,[39m[0m
+[0m [90m     | [39m				    [31m[1m^[22m[39m[0m
+[0m [90m 100 | [39m				[32m'artist_id'[39m[33m:[39m artist_id[0m
+[0m [90m 101 | [39m			)})[0m
+[0m [90m 102 | [39m	}[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.toReferencedList (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3344:16)
+    at _temp.toReferencedListDeep (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10068:10)
+    at _temp.toReferencedArguments (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10775:10)
+    at _temp.parseCoverCallAndAsyncArrowHead (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10767:12)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10688:19)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3889:20)
+    at _temp.parseSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10661:19)
+1614461185412	Marionette	INFO	Stopped listening on port 43297
+1614461222924	geckodriver	INFO	Listening on 127.0.0.1:55877
+1614461222927	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewkdBJY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461224382	Marionette	INFO	Listening on port 46709
+1614461224446	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461224456	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461234795	Marionette	INFO	Stopped listening on port 46709
+1614461263006	geckodriver	INFO	Listening on 127.0.0.1:36253
+1614461263010	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejPY2Eg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461264392	Marionette	INFO	Listening on port 33115
+1614461264426	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461264437	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461274860	Marionette	INFO	Stopped listening on port 33115
+1614461346793	geckodriver	INFO	Listening on 127.0.0.1:47021
+1614461346796	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesywMwh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461348161	Marionette	INFO	Listening on port 37009
+1614461348217	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461348225	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461358597	Marionette	INFO	Stopped listening on port 37009
+1614461371082	geckodriver	INFO	Listening on 127.0.0.1:56651
+1614461371085	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiC5XwJ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461372464	Marionette	INFO	Listening on port 42037
+1614461372505	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461372513	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461382857	Marionette	INFO	Stopped listening on port 42037
+1614461415633	geckodriver	INFO	Listening on 127.0.0.1:49419
+1614461415637	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0xv7Uj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461417048	Marionette	INFO	Listening on port 44101
+1614461417156	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461417165	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461429772	Marionette	INFO	Stopped listening on port 44101
+1614461439556	geckodriver	INFO	Listening on 127.0.0.1:33399
+1614461439559	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefScXGT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614461440972	Marionette	INFO	Listening on port 45399
+1614461441080	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614461441089	Marionette	ERROR	[15] No reply from Marionette:Register
+1614461446957	Marionette	ERROR	[35] No reply from Marionette:Register
+1614461588261	Marionette	ERROR	[40] No reply from Marionette:Register
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor165, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor320, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor539, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:678:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:216:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:74:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614462149304	geckodriver	INFO	Listening on 127.0.0.1:33091
+1614462149307	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebDJj7O"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614462150710	Marionette	INFO	Listening on port 45979
+1614462150822	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614462150830	Marionette	ERROR	[15] No reply from Marionette:Register
+1614462169551	Marionette	ERROR	[35] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614462417715	geckodriver	INFO	Listening on 127.0.0.1:58341
+1614462417718	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRaZkCW"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614462419077	Marionette	INFO	Listening on port 42197
+1614462419142	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614462419151	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614462778558	geckodriver	INFO	Listening on 127.0.0.1:51877
+1614462778561	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoLc8yV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614462779989	Marionette	INFO	Listening on port 32987
+1614462780080	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614462780092	Marionette	ERROR	[15] No reply from Marionette:Register
+1614462791692	Marionette	INFO	Stopped listening on port 32987
+1614462805534	geckodriver	INFO	Listening on 127.0.0.1:57663
+1614462805538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecPVRgq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614462806886	Marionette	INFO	Listening on port 38295
+1614462806960	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614462806969	Marionette	ERROR	[15] No reply from Marionette:Register
+1614462819547	Marionette	INFO	Stopped listening on port 38295

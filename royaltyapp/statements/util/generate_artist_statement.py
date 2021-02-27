@@ -50,6 +50,7 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
 
     previous_balance_by_artist = db.session.query(previous_balance_table).subquery()
     
+
     return previous_balance_by_artist
 
 def create_statement_sales_by_artist_subquery(statement_id):
