@@ -72,12 +72,15 @@ def generate_statement_summary(id):
     return json.dumps({'success': 'true', 'index': id})
 
 
-@statements.route('/statements/view', methods=['GET'])
+@statements.route('/statements', methods=['GET'])
 def get_generated_statements():
-    query = db.session.query(
+    query = (
+            db.session.query(
             StatementGenerated.id,
             StatementGenerated.statement_detail_table,
-            StatementGenerated.statement_summary_table).all()
+            StatementGenerated.statement_summary_table)
+            .filter(StatementGenerated.statement_summary_table != None)
+                .all())
     statement_generated_schema = StatementGeneratedSchema(many=True)
     statements = statement_generated_schema.dumps(query)
     return statements

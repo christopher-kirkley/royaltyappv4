@@ -193,6 +193,13 @@ def test_opening_balance(browser, test_client, db):
     browser.find_element_by_id('submit').click()
     time.sleep(2)
 
+    """ User goes to view statement and confirms created. """
+
+    assert browser.find_element_by_id('header').text == 'Statements'
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
+
 
     
 def test_opening_balance_errors(browser, test_client, db):

@@ -23,9 +23,8 @@ base = os.path.basename(__file__)
 CASE = base.split('.')[0]
 
 def test_can_generate_statement(test_client, db):
-    date_range = '2020_01_01_2020_01_31'
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -40,6 +39,45 @@ def test_can_generate_statement(test_client, db):
     assert 'statement_2020_01_01_2020_01_31' in table_list
     assert 'statement_2020_01_01_2020_01_31_balance' in table_list
     assert 'statement_summary_2020_01_01_2020_01_31' in table_list
+
+def test_can_list_generated_statements(test_client, db):
+    """ Check empty list of statements. """
+    response = test_client.get('/statements')
+    assert response.status_code == 200
+    assert json.loads(response.data) == []
+
+    """ Check list with generated statement. """
+    data = {
+            'previous_balance_id': 0,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    assert response.status_code == 200
+    response = test_client.get('/statements')
+    assert json.loads(response.data) == [{
+        'id': 1,
+        'statement_detail_table': 'statement_2020_01_01_2020_01_31',
+        'statement_summary_table': 'statement_summary_2020_01_01_2020_01_31'
+        }]
+
+    """ Add opening balance statement, verify opening doesn't show up """
+    import_catalog(test_client, db, CASE)
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/statements/import-opening-balance',
+            data=data)
+    assert response.status_code == 200
+    response = test_client.get('/statements')
+    assert json.loads(response.data) == [{
+        'id': 1,
+        'statement_detail_table': 'statement_2020_01_01_2020_01_31',
+        'statement_summary_table': 'statement_summary_2020_01_01_2020_01_31'
+        }]
 
 def test_can_delete_statement(test_client, db):
     date_range = '2020_01_01_2020_01_31'
@@ -105,7 +143,7 @@ def test_can_view_statement_versions(test_client, db):
 def test_story(test_client, db):
     date_range = '2020_01_01_2020_01_31'
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -115,7 +153,7 @@ def test_story(test_client, db):
     response = test_client.delete('/statements/1')
     date_range = '2020_01_01_2020_01_31'
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -130,14 +168,13 @@ def test_story(test_client, db):
     assert len(versions) == 0
 
 
-def test_statement_with_data(test_client, db):
+def test_statement_with_data_no_previous_balance(test_client, db):
     import_catalog(test_client, db, CASE)
     import_bandcamp_sales(test_client, db, CASE)
-    response = test_client.post('/income/process-pending')
     assert len(db.session.query(IncomeTotal).all()) > 0
 
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -151,7 +188,7 @@ def test_statement_with_data(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 25.0,
-                'previous_balance': 1,
+                'previous_balance': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
@@ -217,7 +254,7 @@ def test_statement_with_data(test_client, db):
             }
 
 def test_opening_balance_import_errors(test_client, db):
-    path = os.getcwd() + f'/tests/test_cases/{CASE}/opening_balance.csv'
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -235,7 +272,7 @@ def test_opening_balance_import_errors(test_client, db):
 
 def test_opening_balance_import_no_error(test_client, db):
     import_catalog(test_client, db, CASE)
-    path = os.getcwd() + f'/tests/test_cases/{CASE}/opening_balance.csv'
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -258,7 +295,6 @@ def test_opening_balance_import_no_error(test_client, db):
     res = db.session.query(StatementGenerated).one()
     assert res.statement_balance_table == 'opening_balance'
 
-    date_range = '2020_01_01_2020_01_31'
     data = {
             'previous_balance_id': 1,
             'start_date': '2020-01-01',
@@ -269,3 +305,51 @@ def test_opening_balance_import_no_error(test_client, db):
     assert response.status_code == 200
     res = db.session.query(StatementGenerated).all()[1]
     assert res.previous_balance_id == 1 
+
+def test_statement_with_data_with_previous_balance(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/statements/import-opening-balance',
+            data=data)
+    assert response.status_code == 200
+    data = {
+            'previous_balance_id': 1,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    assert response.status_code == 200
+    res = db.session.query(StatementGenerated).all()[1]
+    assert res.previous_balance_id == 1 
+    assert res.id == 2
+
+    response = test_client.post('/statements/2/generate-summary')
+    assert response.status_code == 200
+
+    response = test_client.get('/statements/2')
+    assert json.loads(response.data) == {
+            'summary': {
+                'statement_total': 125.0,
+                'previous_balance': 1,
+                'statement': 'statement_2020_01_01_2020_01_31',
+                },
+            'detail':
+                [{
+                    'id': 1,
+                    'artist_name': 'Bonehead',
+                    'balance_forward': 125.0,
+                    'split': 25.0,
+                    'total_advance': 0.0,
+                    'total_previous_balance': 100.0,
+                    'total_recoupable': 0.0,
+                    'total_sales': 50.0,
+                    'total_to_split': 50.0
+                    }],
+            }

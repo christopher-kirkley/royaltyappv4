@@ -20,16 +20,12 @@ from .helpers import build_catalog, add_artist_expense, add_bandcamp_order_setti
 
 
 def test_can_list_statements(test_client, db):
-    build_catalog(db, test_client)
-    add_processed_income(test_client, db)
-    add_processed_expense(test_client, db)
     response = test_client.get('/statements/view-balances')
     assert response.status_code == 200
     assert json.loads(response.data) == [
         ]
 
 def test_can_generate_statement_with_no_previous_balance(test_client, db):
-    setup_test1(test_client, db)
     data = {
             'previous_balance_id': 0,
             'start_date': '2020-01-01',
@@ -42,8 +38,8 @@ def test_can_generate_statement_with_no_previous_balance(test_client, db):
     response = test_client.post('/statements/1/generate-summary', data=json_data)
     assert response.status_code == 200
 
-def test_can_generate_statement(test_client, db):
-    setup_test1(test_client, db)
+def test_can_generate_statement_with_previous_balance(test_client, db):
+    
     data = {
             'previous_balance_id': 1,
             'start_date': '2020-01-01',
@@ -120,20 +116,6 @@ def test_can_add_previous_balance_id_to_index(test_client, db):
     assert res.previous_balance_id == 1
     
 
-def test_can_list_generated_statements(test_client, db):
-    build_catalog(db, test_client)
-    add_processed_income(test_client, db)
-    add_processed_expense(test_client, db)
-    response = test_client.get('/statements/view')
-    assert response.status_code == 200
-    assert json.loads(response.data) == []
-    generate_statement(test_client)
-    response = test_client.get('/statements/view')
-    assert json.loads(response.data) == [{
-        'id': 1,
-        'statement_detail_table': 'statement_2020_01_01_2020_01_31',
-        'statement_summary_table': 'statement_summary_2020_01_01_2020_01_31'
-        }]
 
 
 def test_can_find_track_percentage(test_client, db):
