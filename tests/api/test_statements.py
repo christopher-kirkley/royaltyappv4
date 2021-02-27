@@ -310,9 +310,27 @@ def test_opening_balance_fix_import_errors(test_client, db):
 
     assert db.session.query(table).filter(table.c.id == id).first().artist_id == 1
 
+def test_opening_balance_import_second_import(test_client, db):
+    import_catalog(test_client, db, CASE)
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/statements/import-opening-balance',
+            data=data)
+    assert response.status_code == 200
 
+    path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
+    f = open(path, 'rb')
+    data = {
+            'CSV': f
+            }
+    response = test_client.post('/statements/import-opening-balance',
+            data=data)
+    assert response.status_code == 200
 
-def test_opening_balance_import_no_error(test_client, db):
+def test_opening_balance_import(test_client, db):
     import_catalog(test_client, db, CASE)
     path = os.getcwd() + f'/tests/api/{CASE}/opening_balance.csv'
     f = open(path, 'rb')
@@ -395,3 +413,15 @@ def test_statement_with_data_with_previous_balance(test_client, db):
                     'total_to_split': 50.0
                     }],
             }
+
+def test_can_export_csv(test_client, db):
+    data = {
+            'previous_balance_id': 0,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    assert response.status_code == 200
+    response = test_client.get('/statements/export-csv')
+    assert response.status_code == 200

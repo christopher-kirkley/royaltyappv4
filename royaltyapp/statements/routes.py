@@ -344,28 +344,29 @@ def delete_statement(id):
 @statements.route('/statements/import-opening-balance', methods=['POST'])
 def import_opening_balance():
     file = request.files['CSV']
-    # check_statement = (
-    #     db.session.query(StatementBalanceGenerated)
-    #         .filter(StatementBalanceGenerated.statement_balance_name == 'statement_balance_opening')
-    #         .all())
+    check_statement = (
+            db.session.query(StatementGenerated)
+            .filter(StatementGenerated.statement_balance_table == 'opening_balance')
+            .all())
 
-    # if len(check_statement) == 0:
-    """Create table."""
-    statement_balance_table = ge.create_statement_balance_table('opening')
-    db.session.commit()
-    """Add to statement balance table"""
-    statement_generated_entry = StatementGenerated(
-            statement_balance_table='opening_balance'
-    )
-    db.session.add(statement_generated_entry)
-    db.session.commit()
+    if len(check_statement) == 0:
+        """Create table."""
+        statement_balance_table = ge.create_statement_balance_table('opening')
+        db.session.commit()
+
+        """Add to statement balance table"""
+        statement_generated_entry = StatementGenerated(
+                statement_balance_table='opening_balance'
+        )
+        db.session.add(statement_generated_entry)
+        db.session.commit()
 
     metadata = MetaData(db.engine)
     metadata.reflect()
     opening_balance_table = metadata.tables.get('opening_balance')
-    # """Clear current values."""
-    # db_session.execute("""DELETE FROM statement_balance_opening""")
-    # db_session.commit()
+    """Clear current values."""
+    db.session.execute("""DELETE FROM opening_balance""")
+    db.session.commit()
     """Add new values from CSV."""
     df = pd.read_csv(file)
     df.to_sql('opening_balance', con=db.engine, if_exists='append', index=False)
@@ -454,5 +455,10 @@ def fix_opening_balance_errors():
     """)
 
     db.session.commit()
+
+    return jsonify({'success': 'true'})
+
+@statements.route('/statements/export-csv', methods=['GET'])
+def export_csv():
 
     return jsonify({'success': 'true'})
