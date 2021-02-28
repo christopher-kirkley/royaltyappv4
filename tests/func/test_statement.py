@@ -441,7 +441,6 @@ def test_generate_statement_with_open_balance_errors_and_sales(browser, test_cli
     assert len(rows) == 4
 
     browser.find_element_by_id('updatebutton-2').click()
-    time.sleep(1000)
     browser.find_element_by_id('updatebutton-3').click()
     browser.find_element_by_id('updatebutton-4').click()
 
@@ -473,4 +472,63 @@ def test_generate_statement_with_open_balance_errors_and_sales(browser, test_cli
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 1
 
-    time.sleep(1000)
+def test_delete_version_in_statement(browser, test_client, db):
+    """ User goes to homepage """ 
+    browser.get('http://localhost:3000/')
+    assert browser.title == 'Royalty App'
+    
+    build_catalog(browser, test_client, db)
+
+    browser.get('http://localhost:3000/artists')
+
+
+    """ User goes to upload income. """
+    browser.find_element_by_id('income').click()
+
+    time.sleep(1)
+    browser.find_element_by_id('import_income').click()
+    path = os.getcwd() + f"/tests/func/{CASE}/bandcamp-2.csv"
+    browser.find_element_by_id('file_upload').send_keys(path)
+    browser.find_element_by_id('source_statement').click()
+    browser.find_element_by_id('bandcamp').click()
+    browser.find_element_by_id('upload_statement').click()
+    time.sleep(1)
+
+    """ Process payments. """
+    browser.find_element_by_id('process_errors').click()
+    time.sleep(1)
+
+    """ User goes to generate statement. """
+    browser.find_element_by_id('statements').click()
+    browser.find_element_by_id('generate').click()
+    assert browser.find_element_by_id('header').text == 'Generate Statement'
+    
+    """ Define statement. """
+    start_date = browser.find_element_by_id('start-date')
+    start_date.click()
+    start_date.send_keys('01012020')
+
+    end_date = browser.find_element_by_id('end-date')
+    end_date.click()
+    end_date.send_keys('01312020')
+
+    browser.find_element_by_id('previous_balance_id').click()
+    time.sleep(1)
+    browser.find_element_by_id('none').click()
+    browser.find_element_by_id('submit').click()
+    time.sleep(1)
+
+    """ User goes to view statement. """
+    assert browser.find_element_by_id('header').text == 'Statements'
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
+
+    browser.find_element_by_id('edit-1').click()
+
+    time.sleep(1)
+
+    browser.find_element_by_id('delete-1').click()
+
+    time.sleep(100)
+

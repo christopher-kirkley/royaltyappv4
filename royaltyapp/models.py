@@ -469,7 +469,7 @@ class StatementBalanceNone(db.Model):
     __tablename__ = 'statement_balance_none'
     __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
-    artist_name = db.Column(db.String(255))
+    artist_id = db.Column(db.Integer)
     balance_forward = db.Column(db.Numeric(8, 2))
 
 

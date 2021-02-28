@@ -48,7 +48,13 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
 
     previous_balance_table = metadata.tables.get(previous_balance_name)
 
-    previous_balance_by_artist = db.session.query(previous_balance_table).subquery()
+    previous_balance_by_artist = (
+            db.session.query(
+                previous_balance_table.c.artist_id.label('artist_id'),
+                cast(func.sum(previous_balance_table.c.balance_forward), Numeric(8, 2)).label('balance_forward')
+            )
+            .group_by(previous_balance_table.c.artist_id)
+            .subquery())
     
 
     return previous_balance_by_artist
