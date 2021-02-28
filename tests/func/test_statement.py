@@ -481,7 +481,6 @@ def test_delete_version_in_statement(browser, test_client, db):
 
     browser.get('http://localhost:3000/artists')
 
-
     """ User goes to upload income. """
     browser.find_element_by_id('income').click()
 
@@ -528,7 +527,37 @@ def test_delete_version_in_statement(browser, test_client, db):
 
     time.sleep(1)
 
-    browser.find_element_by_id('delete-1').click()
+    table = browser.find_element_by_id('edit-versions')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 3
 
-    time.sleep(100)
+    browser.find_element_by_id('1').click()
 
+    table = browser.find_element_by_id('edit-versions')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
+
+    """ User goes to view statement, sees it is unchanged. """
+    browser.find_element_by_id('statements').click()
+    assert browser.find_element_by_id('header').text == 'Statements'
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
+
+    browser.find_element_by_id('edit-1').click()
+
+    time.sleep(1)
+
+    table = browser.find_element_by_id('edit-versions')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 3
+
+    browser.find_element_by_id('1').click()
+
+    time.sleep(1)
+
+    browser.find_element_by_id('save').click()
+
+    time.sleep(1)
+
+    assert browser.find_element_by_id('header').text == 'Statements'

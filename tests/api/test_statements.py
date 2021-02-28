@@ -141,7 +141,6 @@ def test_can_view_statement_versions(test_client, db):
     assert len(versions) == 0
 
 def test_story(test_client, db):
-    date_range = '2020_01_01_2020_01_31'
     data = {
             'previous_balance_id': 0,
             'start_date': '2020-01-01',
@@ -425,3 +424,37 @@ def test_can_export_csv(test_client, db):
     assert response.status_code == 200
     response = test_client.get('/statements/export-csv')
     assert response.status_code == 200
+
+def test_can_edit_versions_in_statement(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    data = {
+            'previous_balance_id': 0,
+            'start_date': '2020-01-01',
+            'end_date': '2020-01-31'
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/statements/generate', data=json_data)
+    response = test_client.post('/statements/1/generate-summary', data=json_data)
+    response = test_client.get('/statements/1/versions')
+    assert response.status_code == 200
+    versions = json.loads(response.data)['versions']
+    assert len(versions) == 2
+
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+    table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+    res = db.session.query(table).all()
+    assert len(res) == 2
+
+    """ Send list of versions to delete to route. """
+    data = [
+            '1'
+            ]
+    json_data = json.dumps(data)
+    response = test_client.delete('/statements/1/versions', data=json_data)
+    assert response.status_code == 200
+
+    res = db.session.query(table).all()
+    assert len(res) == 1
+

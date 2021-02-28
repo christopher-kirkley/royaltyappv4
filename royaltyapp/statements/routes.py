@@ -143,6 +143,7 @@ def get_statement_summary(id):
     summary = {
             'statement_total': statement_total.total,
             'previous_balance': previous_balance_table,
+            'previous_balance_id': previous_balance_id,
             'statement': statement_detail_table,
             }
 
@@ -319,6 +320,16 @@ def statement_versions(id):
 
     return jsonify(json_res)
     
+@statements.route('/statements/<id>/versions', methods=['DELETE'])
+def delete_statement_multiple_versions(id):
+    data = request.get_json(force=True)
+    for version_id in data:
+        statement_detail_table = ga.get_statement_table(id)
+        i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
+        db.session.execute(i)
+        db.session.commit()
+    return jsonify({'success': 'true'})
+
 @statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
 def delete_statement_versions(id, version_id):
     statement_detail_table = ga.get_statement_table(id)
