@@ -433,6 +433,10 @@ def fix_opening_balance_errors():
     opening_balance_id = int(data['id'])
     new_artist_id = int(data['artist_id'])
 
+    print(data)
+    print(opening_balance_id)
+    print(new_artist_id)
+
     metadata = MetaData(db.engine)
     metadata.reflect()
 
@@ -445,6 +449,7 @@ def fix_opening_balance_errors():
             .values(artist_id=new_artist_id)
     )
     db.session.execute(update)
+
     db.session.commit()
 
     db.session.execute("""

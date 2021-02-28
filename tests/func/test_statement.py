@@ -161,8 +161,6 @@ def test_opening_balance(browser, test_client, db):
     build_catalog(browser, test_client, db)
 
     browser.find_element_by_id('settings').click()
-
-    browser.find_element_by_id('settings').click()
     
     path = os.getcwd() + f"/tests/func/{CASE}/opening_balance.csv"
     browser.find_element_by_id('opening-balance-to-upload').send_keys(path)
@@ -223,7 +221,7 @@ def test_opening_balance_errors(browser, test_client, db):
     assert browser.find_element_by_id('header').text == 'Fix Opening Balance Errors'
     table = browser.find_element_by_id('opening-balance-errors')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 2
+    assert len(rows) == 4
 
     browser.find_element_by_id('update-2').click()
 
@@ -231,7 +229,7 @@ def test_opening_balance_errors(browser, test_client, db):
 
     table = browser.find_element_by_id('opening-balance-errors')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 1
+    assert len(rows) == 3
 
 
 def test_statement_with_data(browser, test_client, db):
