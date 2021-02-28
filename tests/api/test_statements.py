@@ -397,7 +397,7 @@ def test_statement_with_data_with_previous_balance(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 125.0,
-                'previous_balance': 1,
+                'previous_balance': 'opening_balance',
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':

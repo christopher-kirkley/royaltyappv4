@@ -125,10 +125,24 @@ def get_statement_summary(id):
             .join(Artist, Artist.id == statement_for_all_artists.c.artist_id)
             .all()
     ) 
+
+    # lazy code, refactor this
+    previous_balance_table_query = (
+            db.session.query(StatementGenerated)
+            .filter(StatementGenerated.id == previous_balance_id)
+            .all())
+
+    if len(previous_balance_table_query) > 0:
+        previous_balance_table = (
+                db.session.query(StatementGenerated)
+                .filter(StatementGenerated.id == previous_balance_id)
+                .first().statement_balance_table)
+    else:
+        previous_balance_table = 'statement_balance_none'
     
     summary = {
             'statement_total': statement_total.total,
-            'previous_balance': previous_balance_id,
+            'previous_balance': previous_balance_table,
             'statement': statement_detail_table,
             }
 

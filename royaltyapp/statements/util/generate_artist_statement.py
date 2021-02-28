@@ -127,7 +127,7 @@ def create_statement_by_artist_subquery(
                          func.coalesce(statement_sales_by_artist.c.net, 0).label('statement_sales_by_artist'),
                          func.coalesce(statement_advances_by_artist.c.net, 0).label('statement_advances_by_artist'),
                          )
-            .outerjoin(statement_previous_balance_by_artist, statement_previous_balance_by_artist.c.id == Artist.id)
+            .outerjoin(statement_previous_balance_by_artist, statement_previous_balance_by_artist.c.artist_id == Artist.id)
             .outerjoin(statement_advances_by_artist, statement_advances_by_artist.c.artist_id == Artist.id)
             .outerjoin(statement_recoupables_by_artist, statement_recoupables_by_artist.c.artist_id == Artist.id)
             .outerjoin(statement_sales_by_artist, statement_sales_by_artist.c.artist_id == Artist.id)

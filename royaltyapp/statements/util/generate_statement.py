@@ -67,11 +67,11 @@ def create_statement_balance_table(statement_name):
         __tablename__ = f'{statement_name}_balance'
         __table_args__ = {'extend_existing': True}
         id = db.Column(db.Integer, primary_key=True)
-        # artist_id = db.Column(db.String(255))
+        # artist_id = db.Column(db.Integer, unique)
         balance_forward = db.Column(db.Numeric(8, 2))
         artist_name = db.Column(db.String(255))
 
-        artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
+        artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'), unique=True)
 
     try:
         db.Model.metadata.create_all(bind=db.engine)
