@@ -28796,3 +28796,168 @@ createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/
 setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
 
 1614545374551	Marionette	INFO	Stopped listening on port 45791
+1614547034142	geckodriver	INFO	Listening on 127.0.0.1:42049
+1614547034145	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1pSmQL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547035494	Marionette	INFO	Listening on port 43005
+1614547035568	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547035577	Marionette	ERROR	[18] No reply from Marionette:Register
+1614547058003	Marionette	INFO	Stopped listening on port 43005
+1614547127699	geckodriver	INFO	Listening on 127.0.0.1:35355
+1614547127703	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilep20wgg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547129071	Marionette	INFO	Listening on port 40747
+1614547129124	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547129134	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 25508: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/statements/StatementEdit.js: Unexpected token, expected "," (132:2)
+
+[0m [90m 130 | [39m		[33m.[39mthen(res [33m=>[39m history[33m.[39mpush([32m'/statements/'[39m)[0m
+[0m [90m 131 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 132 | [39m		console[33m.[39mlog(previousStatement)[0m
+[0m [90m     | [39m		[31m[1m^[22m[39m[0m
+[0m [90m 133 | [39m[0m
+[0m [90m 134 | [39m[0m
+[0m [90m 135 | [39m	}[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9675:16)
+    at _temp.expect (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9661:28)
+    at _temp.parseCallExpressionArguments (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10828:14)
+    at _temp.parseCoverCallAndAsyncArrowHead (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10752:29)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10688:19)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3889:20)
+    at _temp.parseSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10661:19)
+1614547129677	Marionette	INFO	Stopped listening on port 40747
+1614547153021	geckodriver	INFO	Listening on 127.0.0.1:50687
+1614547153024	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEvK4zK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547154418	Marionette	INFO	Listening on port 40495
+1614547154442	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547154452	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 25508: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/statements/StatementEdit.js: Unexpected token, expected "," (132:2)
+
+[0m [90m 130 | [39m		[33m.[39mthen(res [33m=>[39m history[33m.[39mpush([32m'/statements/'[39m)[0m
+[0m [90m 131 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 132 | [39m		console[33m.[39mlog(previousStatement)[0m
+[0m [90m     | [39m		[31m[1m^[22m[39m[0m
+[0m [90m 133 | [39m[0m
+[0m [90m 134 | [39m[0m
+[0m [90m 135 | [39m	}[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9675:16)
+    at _temp.expect (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9661:28)
+    at _temp.parseCallExpressionArguments (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10828:14)
+    at _temp.parseCoverCallAndAsyncArrowHead (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10752:29)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10688:19)
+    at _temp.parseSubscript (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3889:20)
+    at _temp.parseSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10661:19)
+1614547154914	Marionette	INFO	Stopped listening on port 40495
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1614547186836	geckodriver	INFO	Listening on 127.0.0.1:46107
+1614547186839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQ2Li3k"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547188184	Marionette	INFO	Listening on port 43575
+1614547188264	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547188274	Marionette	ERROR	[15] No reply from Marionette:Register
+1614547210683	Marionette	INFO	Stopped listening on port 43575
+1614547247579	geckodriver	INFO	Listening on 127.0.0.1:46037
+1614547247582	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJ8OhC3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547248943	Marionette	INFO	Listening on port 45527
+1614547249006	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547249015	Marionette	ERROR	[15] No reply from Marionette:Register
+1614547272684	Marionette	INFO	Stopped listening on port 45527
+1614547417943	geckodriver	INFO	Listening on 127.0.0.1:51951
+1614547417946	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJtIfPj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547419315	Marionette	INFO	Listening on port 34941
+1614547419365	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547419374	Marionette	ERROR	[15] No reply from Marionette:Register
+1614547443007	Marionette	INFO	Stopped listening on port 34941
+1614547470146	geckodriver	INFO	Listening on 127.0.0.1:43819
+1614547470149	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSDS8na"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547471522	Marionette	INFO	Listening on port 40297
+1614547471563	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547471573	Marionette	ERROR	[15] No reply from Marionette:Register
+1614547504407	Marionette	ERROR	[35] No reply from Marionette:Register
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor43, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+1614547643130	Marionette	ERROR	[40] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor171, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:46:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:36:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+netProviderEnhancer@resource://devtools/client/webconsole/enhancers/net-provider.js:42:31
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:314:15
+
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614547959464	geckodriver	INFO	Listening on 127.0.0.1:45765
+1614547959467	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWEcCXK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614547960869	Marionette	INFO	Listening on port 33581
+1614547960985	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614547960992	Marionette	ERROR	[15] No reply from Marionette:Register
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1614548001810	geckodriver	INFO	Listening on 127.0.0.1:35869
+1614548001813	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileU68hAc"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1614548003220	Marionette	INFO	Listening on port 41441
+1614548003335	Marionette	WARN	TLS certificate errors will be ignored for this session
+1614548003343	Marionette	ERROR	[15] No reply from Marionette:Register
+1614548025942	Marionette	INFO	Stopped listening on port 41441

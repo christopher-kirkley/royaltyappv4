@@ -448,9 +448,12 @@ def test_can_edit_versions_in_statement(test_client, db):
     assert len(res) == 2
 
     """ Send list of versions to delete to route. """
-    data = [
+    data = {
+            'versions':
+            [
             '1'
             ]
+            }
     json_data = json.dumps(data)
     response = test_client.delete('/statements/1/versions', data=json_data)
     assert response.status_code == 200

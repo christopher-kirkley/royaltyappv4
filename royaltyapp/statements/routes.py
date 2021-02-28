@@ -323,7 +323,7 @@ def statement_versions(id):
 @statements.route('/statements/<id>/versions', methods=['DELETE'])
 def delete_statement_multiple_versions(id):
     data = request.get_json(force=True)
-    for version_id in data:
+    for version_id in data['versions']:
         statement_detail_table = ga.get_statement_table(id)
         i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
         db.session.execute(i)

@@ -554,10 +554,16 @@ def test_delete_version_in_statement(browser, test_client, db):
 
     browser.find_element_by_id('1').click()
 
-    time.sleep(1)
-
     browser.find_element_by_id('save').click()
 
     time.sleep(1)
 
     assert browser.find_element_by_id('header').text == 'Statements'
+
+    browser.find_element_by_id('edit-1').click()
+
+    time.sleep(1)
+
+    table = browser.find_element_by_id('edit-versions')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 2
