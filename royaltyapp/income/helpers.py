@@ -70,7 +70,7 @@ class BandcampStatement(Statement):
         self.df['type'] = np.where(self.df['item type'] == 'track', 'track', self.df['item type'])
         self.df['type'] = np.where(self.df['item type'] != 'track', 'album', self.df['item type'])
 
-        # self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
+        self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
 
         self.df.loc[self.df['item type'] == 'refund', 'item type'] = 'physical'
         self.df.loc[self.df['item type'] == 'reversal', 'item type'] = 'physical'
