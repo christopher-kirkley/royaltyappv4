@@ -175,7 +175,7 @@ def insert_into_balance_table(statement_id):
 
     sel = db.session.query(
             statement_summary_table.c.artist_id,
-            statement_summary_table.c.previous_balance + statement_summary_table.c.sales - statement_summary_table.c.recoupables/2 - statement_summary_table.c.advances)
+            statement_summary_table.c.previous_balance + (statement_summary_table.c.sales - statement_summary_table.c.recoupables)/2 - statement_summary_table.c.advances)
     ins = (statement_balance_table
            .insert().from_select(['artist_id',
                                   'balance_forward'],
