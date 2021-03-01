@@ -102,9 +102,8 @@ def test_can_delete_statement(test_client, db):
 
 
 def test_can_view_statement_summary(test_client, db):
-    date_range = '2020_01_01_2020_01_31'
     data = {
-            'previous_balance_id': 1,
+            'previous_balance_id': 0,
             'start_date': '2020-01-01',
             'end_date': '2020-01-31'
             }
@@ -116,7 +115,8 @@ def test_can_view_statement_summary(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 0,
-                'previous_balance': 1,
+                'previous_balance_id': 0,
+                'previous_balance': 'statement_balance_none',
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
@@ -186,21 +186,22 @@ def test_statement_with_data_no_previous_balance(test_client, db):
     response = test_client.get('/statements/1')
     assert json.loads(response.data) == {
             'summary': {
-                'statement_total': 25.0,
-                'previous_balance': 0,
+                'statement_total': 50.0,
+                'previous_balance': 'statement_balance_none',
+                'previous_balance_id': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
                 [{
                     'id': 1,
                     'artist_name': 'Bonehead',
-                    'balance_forward': 25.0,
-                    'split': 25.0,
+                    'balance_forward': 50.0,
+                    'split': 50.0,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 50.0,
-                    'total_to_split': 50.0
+                    'total_sales': 100.0,
+                    'total_to_split': 100.0
                     }],
             }
 
@@ -208,7 +209,7 @@ def test_statement_with_data_no_previous_balance(test_client, db):
     assert response.status_code == 200
 
     versions = json.loads(response.data)['versions']
-    assert len(versions) == 1
+    assert len(versions) == 2
 
     """Get artist statement info"""
     response = test_client.get('/statements/1/artist/1', data=json_data)
@@ -217,21 +218,23 @@ def test_statement_with_data_no_previous_balance(test_client, db):
             'artist': 'Bonehead',
             'statement': 'statement_2020_01_01_2020_01_31',
             'summary': [{
-                'balance_forward': 25.0,
+                'balance_forward': 50.0,
                 'previous_balance': 0.0,
-                'sales': 50.0,
-                'split': 25.0,
+                'sales': 100.0,
+                'split': 50.0,
                 'advances': 0.0,
                 'recoupables': 0.0,
-                'total_to_split': 50.0
+                'total_to_split': 100.0
                 }],
             'income':
-                [{
+                [
+                    {
                     'catalog_name': 'Amazing',
-                    'combined_net': 50.0,
+                    'combined_net': 100.0,
                     'digital_net': 0,
-                    'physical_net': 50.0,
-                    }],
+                    'physical_net': 100.0,
+                    },
+                    ],
             'expense':
                 [],
             'advance':
@@ -242,6 +245,13 @@ def test_statement_with_data_no_previous_balance(test_client, db):
                     'catalog_name': 'Amazing',
                     'version_number': 'TEST-01cass',
                     'format': 'cass',
+                    'quantity': 1,
+                    'net': 50.0,
+                    },
+                {
+                    'catalog_name': 'Amazing',
+                    'version_number': 'TEST-01lp',
+                    'format': 'lp',
                     'quantity': 1,
                     'net': 50.0,
                     },

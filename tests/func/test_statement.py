@@ -102,57 +102,6 @@ def test_statement_generate(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 0
 
-
-
-    # """ User navigates to artist statement detail. """
-    # browser.find_element_by_id('1').click()
-    # assert browser.find_element_by_id('header').text == 'Statement Detail'
-    # time.sleep(1)
-    # table = browser.find_element_by_id('artist-statement-income')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('catalog_name').text == 'Akaline Kidal'
-    # assert rows[1].find_element_by_id('digital_net').text == '0'
-    # assert rows[1].find_element_by_id('physical_net').text == '30.45'
-    # assert rows[1].find_element_by_id('combined_net').text == '30.45'
-
-    # table = browser.find_element_by_id('artist-statement-expense')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('date').text == '2020-01-01'
-
-    # table = browser.find_element_by_id('artist-statement-advance')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('date').text == '2020-01-01'
-
-    # table = browser.find_element_by_id('album-sales')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('catalog_name').text == 'Akaline Kidal'
-
-    # table = browser.find_element_by_id('track-sales')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('track_name').text == 'Adounia'
-
-    # table = browser.find_element_by_id('artist-statement-summary')
-
-    # """ User goes to edit statement. """
-    # browser.find_element_by_id('statements_view').click()
-    # browser.find_element_by_id('edit').click()
-    # assert browser.find_element_by_id('header').text == 'Edit Statement'
-
-    # time.sleep(2)
-    # table = browser.find_element_by_id('edit-statement')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('version_number').text == 'SS-050cass'
-    
-    # rows[1].find_element_by_id('1').click()
-    # time.sleep(1)
-    # table = browser.find_element_by_id('edit-statement')
-    # rows = table.find_elements_by_tag_name('tr')
-    # assert rows[1].find_element_by_id('version_number').text == 'SS-050digi'
-
-    # browser.find_element_by_id('update').click()
-
-    # """ User returns to statement and sees it has been updated. """
-    
 def test_opening_balance(browser, test_client, db):
     """ User goes to homepage """ 
     browser.get('http://localhost:3000/')
@@ -202,7 +151,7 @@ def test_opening_balance(browser, test_client, db):
 
     time.sleep(1)
 
-    assert browser.find_element_by_id('current-owed').text == 'Current Owed: $100'
+    assert browser.find_element_by_id('current-owed').text == 'Current Owed: $150'
     assert browser.find_element_by_id('previous-balance').text == 'Previous Balance Table: opening_balance'
 
 def test_opening_balance_errors(browser, test_client, db):
