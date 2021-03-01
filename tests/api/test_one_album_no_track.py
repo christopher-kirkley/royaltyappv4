@@ -7,10 +7,11 @@ import time
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal
 
-CASE='one_album_no_track'
+base = os.path.basename(__file__)
+CASE = base.split('.')[0]
 
 def import_catalog(test_client, db, case):
-    path = os.getcwd() + f'/tests/test_cases/{case}/catalog.csv'
+    path = os.getcwd() + f'/tests/api/{case}/catalog.csv'
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -18,7 +19,7 @@ def import_catalog(test_client, db, case):
     response = test_client.post('/catalog/import-catalog',
             data=data)
     assert response.status_code == 200
-    path = os.getcwd() + f"/tests/test_cases/{case}/version.csv"
+    path = os.getcwd() + f"/tests/api/{case}/version.csv"
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -26,7 +27,7 @@ def import_catalog(test_client, db, case):
     response = test_client.post('/catalog/import-version',
             data=data)
     assert response.status_code == 200
-    path = os.getcwd() + f"/tests/test_cases/{case}/track.csv"
+    path = os.getcwd() + f"/tests/api/{case}/track.csv"
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -36,7 +37,7 @@ def import_catalog(test_client, db, case):
     assert response.status_code == 200
 
 def import_bandcamp_sales(test_client, db, case):
-    path = os.getcwd() + f"/tests/test_cases/{case}/bandcamp.csv"
+    path = os.getcwd() + f"/tests/api/{case}/bandcamp.csv"
     data = {
             'statement_source': 'bandcamp'
             }

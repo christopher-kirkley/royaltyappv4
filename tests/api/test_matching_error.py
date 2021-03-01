@@ -7,10 +7,11 @@ import time
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle
 
-CASE='matching_error'
+base = os.path.basename(__file__)
+CASE = base.split('.')[0]
 
 def import_catalog(test_client, db, case):
-    path = os.getcwd() + f'/tests/test_cases/{case}/catalog.csv'
+    path = os.getcwd() + f'/tests/api/{case}/catalog.csv'
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -18,7 +19,7 @@ def import_catalog(test_client, db, case):
     response = test_client.post('/catalog/import-catalog',
             data=data)
     assert response.status_code == 200
-    path = os.getcwd() + f"/tests/test_cases/{case}/version.csv"
+    path = os.getcwd() + f"/tests/api/{case}/version.csv"
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -26,7 +27,7 @@ def import_catalog(test_client, db, case):
     response = test_client.post('/catalog/import-version',
             data=data)
     assert response.status_code == 200
-    path = os.getcwd() + f"/tests/test_cases/{case}/track.csv"
+    path = os.getcwd() + f"/tests/api/{case}/track.csv"
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -36,7 +37,7 @@ def import_catalog(test_client, db, case):
     assert response.status_code == 200
 
 def import_bandcamp_sales(test_client, db, case):
-    path = os.getcwd() + f"/tests/test_cases/{case}/bandcamp.csv"
+    path = os.getcwd() + f"/tests/api/{case}/bandcamp.csv"
     data = {
             'statement_source': 'bandcamp'
             }
@@ -46,7 +47,7 @@ def import_bandcamp_sales(test_client, db, case):
     return response
 
 def import_bundle(test_client, db, case):
-    path = os.getcwd() + f'/tests/test_cases/{case}/bundle.csv'
+    path = os.getcwd() + f'/tests/api/{case}/bundle.csv'
     f = open(path, 'rb')
     data = {
             'CSV': f
@@ -71,7 +72,7 @@ def test_can_get_bundle_matching_errors(test_client, db):
     assert db.session.query(Bundle).first().upc == '999111'
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 3
+    assert len(json.loads(response.data)) == 4
 
 def test_can_update_matching_errors(test_client, db):
     import_catalog(test_client, db, CASE)
@@ -81,7 +82,7 @@ def test_can_update_matching_errors(test_client, db):
     assert db.session.query(Bundle).first().upc == '999111'
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 3
+    assert len(json.loads(response.data)) == 4
 
     """Update bundle matching errors."""
     data = {
@@ -94,7 +95,7 @@ def test_can_update_matching_errors(test_client, db):
     assert json.loads(response.data) == {"success": "true"}
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 2
+    assert len(json.loads(response.data)) == 3
 
     """Update version matching errors."""
     data = {
@@ -107,4 +108,4 @@ def test_can_update_matching_errors(test_client, db):
     assert json.loads(response.data) == {"success": "true"}
     response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert len(json.loads(response.data)) == 0
+    assert len(json.loads(response.data)) == 1
