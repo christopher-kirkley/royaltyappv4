@@ -70,7 +70,7 @@ class BandcampStatement(Statement):
         self.df['type'] = np.where(self.df['item type'] == 'track', 'track', self.df['item type'])
         self.df['type'] = np.where(self.df['item type'] != 'track', 'album', self.df['item type'])
 
-        self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
+        # self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
 
         self.df.loc[self.df['item type'] == 'refund', 'item type'] = 'physical'
         self.df.loc[self.df['item type'] == 'reversal', 'item type'] = 'physical'
@@ -339,6 +339,38 @@ def find_distinct_track_matching_errors():
 
 def process_pending_statements():
     return 's'
+
+
+def find_distinct_refund_matching_errors():
+
+    query = (db.session.query(
+            IncomePending.order_id)
+            .filter(IncomePending.amount == None)
+            .all())
+    order_ids = [ order.order_id for order in query ]
+
+    refund_error = db.session.query(
+            IncomePending.catalog_id,
+            IncomePending.order_id,
+            IncomePending.distributor,
+            IncomePending.amount,
+            IncomePending.upc_id,
+            IncomePending.isrc_id,
+            IncomePending.version_number,
+            IncomePending.catalog_id,
+            IncomePending.album_name,
+            IncomePending.track_name,
+            IncomePending.type,
+            IncomePending.medium,
+            IncomePending.description,
+            cast(IncomePending.amount, db.Numeric(8, 2)).label('amount'),
+            IncomePending.id,
+        )
+    refund_error = refund_error.filter(IncomePending.order_id.in_(order_ids))
+
+    return refund_error
+
+
 
 
 

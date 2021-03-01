@@ -45,43 +45,49 @@ def import_bandcamp_sales(test_client, db, case):
             data=data, content_type="multipart/form-data")
     return response
 
-def test_can_build_catalog(test_client, db):
+
+def add_order_fees(test_client, db, case):
+    data = [
+            {
+                'distributor_id': 1,
+                'order_percentage': 0,
+                'order_fee': 3.00, 
+                'order_limit': 5.00
+            },
+            ]
+    json_data = json.dumps(data)
+    response = test_client.put('/settings/order-fee', data=json_data)
+
+def test_statement(test_client, db):
     import_catalog(test_client, db, case)
-    artists = db.session.query(Artist).all()
-    assert len(artists) == 1
-    catalogs = db.session.query(Catalog).all()
-    assert len(catalogs) == 1
-    tracks = db.session.query(Track).all()
-    assert len(tracks) == 13
-
-def test_can_import_bandcamp(test_client, db):
-    response = import_bandcamp_sales(test_client, db, case)
+    add_order_fees(test_client, db, case)
+    import_bandcamp_sales(test_client, db, case)
     result = db.session.query(IncomePending).all()
-    assert len(result) == 35
-    first = db.session.query(IncomePending).first()
-    assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '2222222222'
-    assert json.loads(response.data) == {
-            'success': 'true',
-            'data': {'attributes': {'length': 35, 'title': 'bandcamp.csv'},
-            'id': 'bandcamp.csv',
-            'type': 'db'}}
-            
 
-
-def test_can_process_pending_income(test_client, db):
-    response = import_bandcamp_sales(test_client, db, case)
-    result = db.session.query(IncomePending).all()
-    response = test_client.post('/income/process-pending')
+    response = test_client.get('/income/refund-matching-errors')
     assert response.status_code == 200
-    assert json.loads(response.data) == {'success': 'true'}
-    res = db.session.query(IncomeTotal).all()
-    assert len(res) == 35
+    assert len(json.loads(response.data)) == 2
+    id1 = json.loads(response.data)[0]['id']
+    id2 = json.loads(response.data)[1]['id']
 
-def test_statement_with_no_previous_balance(test_client, db):
-    import_catalog(test_client, db, case)
-    response = import_bandcamp_sales(test_client, db, case)
-    result = db.session.query(IncomePending).all()
+    data = {
+            'error_type': 'refund',
+            'selected_ids': [id1],
+            'new_value' : '-8.57'
+            }
+    json_data=json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    assert response.status_code == 200
+
+    data = {
+            'error_type': 'refund',
+            'selected_ids': [id2],
+            'new_value' : '0'
+            }
+    json_data=json.dumps(data)
+    response = test_client.put('/income/update-errors', data=json_data)
+    assert response.status_code == 200
+
     response = test_client.post('/income/process-pending')
     data = {
             'previous_balance_id': 0,
@@ -97,7 +103,7 @@ def test_statement_with_no_previous_balance(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {
             'summary': {
-                'statement_total': 156.23,
+                'statement_total': 131.15,
                 'previous_balance': 'statement_balance_none',
                 'previous_balance_id': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
@@ -106,13 +112,13 @@ def test_statement_with_no_previous_balance(test_client, db):
                 [{
                     'id': 1,
                     'artist_name': 'Bonehead',
-                    'balance_forward': 156.23,
-                    'split': 156.23,
+                    'balance_forward': 131.15,
+                    'split': 131.15,
                     'total_advance': 0.0,
                     'total_previous_balance': 0.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 312.45,
-                    'total_to_split': 312.45
+                    'total_sales': 262.3,
+                    'total_to_split': 262.3
                     }],
             }
 

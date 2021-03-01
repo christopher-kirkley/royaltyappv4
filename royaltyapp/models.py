@@ -233,8 +233,11 @@ class IncomePending(db.Model):
 
 class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
+        json_module = simplejson
         fields = ("id",
                 "distributor",
+                "order_id",
+                "amount",
                 "statement",
                 "isrc_id",
                 "upc_id",
@@ -247,6 +250,7 @@ class IncomePendingSchema(ma.SQLAlchemyAutoSchema):
                 "description")
         include_relationships = True
 
+    amount = fields.Decimal()
 
 class IncomeDistributor(db.Model):
     """Table populated with all available income sources. Should rename to income_source"""

@@ -8,7 +8,7 @@ import json
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema, Track
 
-from .helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors
+from .helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, find_distinct_refund_matching_errors
 
 from .util import process_income as pi
 from .util import pending_operations as po
@@ -31,6 +31,7 @@ def import_sales():
     po.add_missing_version_number()
     records = statement.find_imported_records()
     data = {
+            "success": 'true',
             "data": {
                 "type": "db",
                 "id": filename,
@@ -288,9 +289,18 @@ def update_errors():
             if data['error_type'] == 'isrc':
                 obj.isrc_id = data['new_value']
                 db.session.commit()
+            if data['error_type'] == 'refund':
+                obj.amount = data['new_value']
+                db.session.commit()
             
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
 
+@income.route('/income/refund-matching-errors', methods=['GET'])
+def get_refund_matching_errors():
+    query = find_distinct_refund_matching_errors()
+    income_pendings_schema = IncomePendingSchema(many=True)
+    matching_errors = income_pendings_schema.dumps(query)
+    return matching_errors

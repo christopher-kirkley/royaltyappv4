@@ -405,21 +405,22 @@ def test_statement_with_data_with_previous_balance(test_client, db):
     response = test_client.get('/statements/2')
     assert json.loads(response.data) == {
             'summary': {
-                'statement_total': 125.0,
+                'statement_total': 150.0,
                 'previous_balance': 'opening_balance',
+                'previous_balance_id': 1,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
                 [{
                     'id': 1,
                     'artist_name': 'Bonehead',
-                    'balance_forward': 125.0,
-                    'split': 25.0,
+                    'balance_forward': 150.0,
+                    'split': 50.0,
                     'total_advance': 0.0,
                     'total_previous_balance': 100.0,
                     'total_recoupable': 0.0,
-                    'total_sales': 50.0,
-                    'total_to_split': 50.0
+                    'total_sales': 100.0,
+                    'total_to_split': 100.0
                     }],
             }
 

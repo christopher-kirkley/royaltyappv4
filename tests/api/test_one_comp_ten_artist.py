@@ -6,7 +6,8 @@ import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal
 
-CASE='one_comp_ten_artist'
+base = os.path.basename(__file__)
+CASE = base.split('.')[0]
 
 def import_catalog(test_client, db, case):
     path = os.getcwd() + f'/tests/api/{case}/catalog.csv'
@@ -60,7 +61,12 @@ def test_can_import_bandcamp(test_client, db):
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == '5555555'
-    assert json.loads(response.data) == {'success': 'true'}
+    assert json.loads(response.data) == {
+            'success': 'true',
+            'data': {'attributes': {'length': 31, 'title': 'bandcamp.csv'},
+                       'id': 'bandcamp.csv',
+                       'type': 'db'}}
+
 
 def test_can_process_pending_income(test_client, db):
     response = import_bandcamp_sales(test_client, db, CASE)
@@ -91,7 +97,8 @@ def test_statement_with_no_previous_balance(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 134.6,
-                'previous_balance': 0,
+                'previous_balance': 'statement_balance_none',
+                'previous_balance_id': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':

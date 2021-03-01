@@ -61,8 +61,14 @@ def test_can_import_bandcamp(test_client, db):
     assert len(result) == 14
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
-    assert first.upc_id == '10101010'
-    assert json.loads(response.data) == {'success': 'true'}
+    assert first.upc_id == ''
+    assert json.loads(response.data) == {
+            'success': 'true',
+            'data': {'attributes':
+                {'length': 14, 'title': 'bandcamp.csv'},
+                'id': 'bandcamp.csv',
+                'type': 'db'}}
+
 
 def test_can_process_pending_income(test_client, db):
     response = import_bandcamp_sales(test_client, db, CASE)
@@ -93,7 +99,8 @@ def test_statement_with_no_previous_balance(test_client, db):
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 55.22,
-                'previous_balance': 0,
+                'previous_balance': 'statement_balance_none',
+                'previous_balance_id': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
