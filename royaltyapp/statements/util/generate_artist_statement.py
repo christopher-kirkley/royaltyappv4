@@ -1,5 +1,7 @@
 from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECIMAL, Date, Numeric
 
+from sqlalchemy.schema import Table
+
 from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
 
 from sqlalchemy import MetaData, cast, func, exc
@@ -16,7 +18,8 @@ def get_statement_table(statement_id, metadata):
         .first()
         ).statement_detail_table
 
-    table = metadata.tables.get(statement_detail_table)
+    table = Table(statement_detail_table, metadata, autoload=True, autoload_with=db.engine)
+    # table = metadata.tables.get(statement_detail_table)
     db.session.commit()
 
     end_time = datetime.now()

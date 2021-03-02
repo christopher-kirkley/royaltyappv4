@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc, func, cast, Numeric, MetaData
+from sqlalchemy.schema import Table
 
 import pandas as pd
 import json
@@ -99,13 +100,20 @@ def get_generated_statements():
 def get_statement_summary(id):
     start_time = datetime.now()
 
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
+    # metadata.reflect(bind=db.engine)
 
     print('db operation')
 
-    """lookup statement summary table in index table with statement summary id"""
-    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
+
+    statement_name = (
+        db.session.query(StatementGenerated.statement_summary_table)
+        .filter(StatementGenerated.id == id)
+        .first()
+        ).statement_summary_table
+
+    statement_summary_table = Table(statement_name, metadata, autoload=True, autoload_with=db.engine)
+    # """lookup statement summary table in index table with statement summary id"""
+    # statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
 
@@ -192,10 +200,16 @@ def get_statement_summary(id):
 
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
 def statement_detail_artist(id, artist_id):
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
+    start_time = datetime.now()
 
-    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
+    statement_name = (
+        db.session.query(StatementGenerated.statement_summary_table)
+        .filter(StatementGenerated.id == id)
+        .first()
+        ).statement_summary_table
+
+    statement_summary_table = Table(statement_name, metadata, autoload=True, autoload_with=db.engine)
+    # statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_for_artist = (
         db.session.query(statement_summary_table.c.artist_id,
@@ -309,6 +323,8 @@ def statement_detail_artist(id, artist_id):
             'album_sales': album_sales,
             'track_sales': track_sales,
             }
+    end_time = datetime.now()
+    print(f'artist load time: {end_time - start_time}')
 
     return jsonify(json_res)
 
