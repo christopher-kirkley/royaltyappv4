@@ -59,8 +59,7 @@ def generate_statement():
 
 @statements.route('/statements/<id>/generate-summary', methods=['POST'])
 def generate_statement_summary(id):
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
+    start_time = datetime.now()
 
     statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
     i = statement_summary_table.delete()
@@ -80,6 +79,10 @@ def generate_statement_summary(id):
                                                         )
     ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
     ga.insert_into_balance_table(id, metadata)
+
+    end_time = datetime.now()
+    print(f'generate summary: {end_time - start_time}')
+
     return json.dumps({'success': 'true', 'index': id})
 
 
@@ -100,20 +103,14 @@ def get_generated_statements():
 def get_statement_summary(id):
     start_time = datetime.now()
 
-    # metadata.reflect(bind=db.engine)
-
-    print('db operation')
-
-
     statement_name = (
         db.session.query(StatementGenerated.statement_summary_table)
         .filter(StatementGenerated.id == id)
         .first()
         ).statement_summary_table
 
-    statement_summary_table = Table(statement_name, metadata, autoload=True, autoload_with=db.engine)
-    # """lookup statement summary table in index table with statement summary id"""
-    # statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
+    """lookup statement summary table in index table with statement summary id"""
+    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
 
@@ -202,14 +199,7 @@ def get_statement_summary(id):
 def statement_detail_artist(id, artist_id):
     start_time = datetime.now()
 
-    statement_name = (
-        db.session.query(StatementGenerated.statement_summary_table)
-        .filter(StatementGenerated.id == id)
-        .first()
-        ).statement_summary_table
-
-    statement_summary_table = Table(statement_name, metadata, autoload=True, autoload_with=db.engine)
-    # statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
+    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_for_artist = (
         db.session.query(statement_summary_table.c.artist_id,
@@ -330,9 +320,8 @@ def statement_detail_artist(id, artist_id):
 
 @statements.route('/statements/<id>/versions', methods=['GET'])
 def statement_versions(id):
-    print('get version metadata obj')
-    metadata.reflect(bind=db.engine)
-    print('get version end metadata obj')
+
+    start_time = datetime.now()
 
     statement_detail_table = ga.get_statement_table(id, metadata)
     
@@ -361,16 +350,15 @@ def statement_versions(id):
 
     json_res = ({'versions': versions})
 
+    end_time = datetime.now()
+    print(f'version load time: {end_time - start_time}')
+
     return jsonify(json_res)
     
 @statements.route('/statements/<id>/versions', methods=['DELETE'])
 def delete_statement_multiple_versions(id):
     start_time = datetime.now()
-    metadata.reflect(bind=db.engine)
-    end_time = datetime.now()
-    print(f'end metadata obj: {end_time-start_time}')
 
-    start_time = datetime.now()
     data = request.get_json(force=True)
     for version_id in data['versions']:
         statement_detail_table = ga.get_statement_table(id, metadata)
@@ -381,13 +369,15 @@ def delete_statement_multiple_versions(id):
     print(f'end delete: {end_time-start_time}')
     return jsonify({'success': 'true'})
 
-@statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
-def delete_statement_versions(id, version_id):
-    statement_detail_table = ga.get_statement_table(id, metadata)
-    i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
-    db.session.execute(i)
-    db.session.commit()
-    return jsonify({'success': 'true'})
+# @statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
+# def delete_statement_versions(id, version_id):
+#     start_time = datetime.now()
+
+#     statement_detail_table = ga.get_statement_table(id, metadata)
+#     i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
+#     db.session.execute(i)
+#     db.session.commit()
+#     return jsonify({'success': 'true'})
 
 @statements.route('/statements/previous', methods=['GET'])
 def get_previous_balances():
@@ -408,6 +398,8 @@ def edit_statement(id):
 
 @statements.route('/statements/<id>', methods=['DELETE'])
 def delete_statement(id):
+    start_time = datetime.now()
+
     query = db.session.query(StatementGenerated).filter(StatementGenerated.id==id).one()
     table_list = []
     table_list.append(query.statement_summary_table)
@@ -420,6 +412,10 @@ def delete_statement(id):
         table = metadata.tables.get(table_name)
         table.drop()
     db.session.commit()
+
+    end_time = datetime.now()
+    print(f'delete statement: {end_time-start_time}')
+
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/import-opening-balance', methods=['POST'])
@@ -442,9 +438,8 @@ def import_opening_balance():
         db.session.add(statement_generated_entry)
         db.session.commit()
 
-    metadata = MetaData(db.engine)
-    metadata.reflect()
-    opening_balance_table = metadata.tables.get('opening_balance')
+    opening_balance_table = Table('opening_balance', metadata, autoload=True, autoload_with=db.engine)
+
     """Clear current values."""
     db.session.execute("""DELETE FROM opening_balance""")
     db.session.commit()
@@ -476,10 +471,7 @@ def import_opening_balance():
 @statements.route('/statements/opening-balance-errors', methods=['GET'])
 def opening_balance_errors():
     
-    metadata = MetaData(db.engine)
-    metadata.reflect()
-
-    opening_balance_table = metadata.tables.get('opening_balance')
+    opening_balance_table = Table('opening_balance', metadata, autoload=True, autoload_with=db.engine)
 
     errors = (
             db.session.query(
@@ -518,10 +510,7 @@ def fix_opening_balance_errors():
     print(opening_balance_id)
     print(new_artist_id)
 
-    metadata = MetaData(db.engine)
-    metadata.reflect()
-
-    opening_balance_table = metadata.tables.get('opening_balance')
+    opening_balance_table = Table('opening_balance', metadata, autoload=True, autoload_with=db.engine)
 
     update = (
         opening_balance_table

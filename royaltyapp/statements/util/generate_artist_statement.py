@@ -9,7 +9,6 @@ from sqlalchemy import MetaData, cast, func, exc
 from datetime import datetime
 
 def get_statement_table(statement_id, metadata):
-    print('get_statement')
     start_time = datetime.now()
 
     statement_detail_table = (
@@ -19,7 +18,6 @@ def get_statement_table(statement_id, metadata):
         ).statement_detail_table
 
     table = Table(statement_detail_table, metadata, autoload=True, autoload_with=db.engine)
-    # table = metadata.tables.get(statement_detail_table)
     db.session.commit()
 
     end_time = datetime.now()
@@ -37,7 +35,9 @@ def lookup_statement_summary_table(statement_id, metadata):
         .filter(StatementGenerated.id == statement_id)
         .first()
         ).statement_summary_table
-    table = metadata.tables.get(statement_name)
+    
+    table = Table(statement_name, metadata, autoload=True, autoload_with=db.engine)
+
     db.session.commit()
 
     end_time = datetime.now()
@@ -63,7 +63,7 @@ def create_statement_previous_balance_by_artist_subquery(statement_id, metadata)
                               .first()
                               ).statement_balance_table
 
-    previous_balance_table = metadata.tables.get(previous_balance_name)
+    previous_balance_table = Table(previous_balance_name, metadata, autoload=True, autoload_with=db.engine)
 
     previous_balance_by_artist = (
             db.session.query(
@@ -220,9 +220,8 @@ def insert_into_balance_table(statement_id, metadata):
 
     statement_index = db.session.query(StatementGenerated).filter(StatementGenerated.id == statement_id).first()
 
-    # lookup balance statement
-    statement_balance_table = metadata.tables.get(statement_index.statement_balance_table)
-    statement_summary_table = metadata.tables.get(statement_index.statement_summary_table)
+    statement_balance_table = Table(statement_index.statement_balance_table, metadata, autoload=True, autoload_with=db.engine)
+    statement_summary_table = Table(statement_index.statement_summary_table, metadata, autoload=True, autoload_with=db.engine)
 
     entries_to_delete = statement_balance_table.delete()
     db.session.execute(entries_to_delete)

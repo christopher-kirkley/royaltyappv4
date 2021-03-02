@@ -210,10 +210,6 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
 
     artist_total = artist_total_catalog.union_all(artist_total_track)
 
-
-
-
-
     return artist_total
 
 def insert_into_table(artist_total, statement_table):
