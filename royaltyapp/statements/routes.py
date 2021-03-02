@@ -10,15 +10,21 @@ from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
 from royaltyapp.statements.util import view_artist_statement as va
 
+from datetime import datetime
+
 statements = Blueprint('statements', __name__)
+
+metadata = MetaData()
 
 @statements.route('/statements/view-balances', methods=['GET'])
 def get_statements():
+    print('view balances')
     query = db.session.query(
             StatementGenerated.id,
             StatementGenerated.statement_balance_table).all()
     statement_generated_schema = StatementGeneratedSchema(many=True)
     statements = statement_generated_schema.dumps(query)
+    print('query end')
     return statements
 
 @statements.route('/statements/generate', methods=['POST'])
@@ -91,8 +97,12 @@ def get_generated_statements():
 
 @statements.route('/statements/<id>', methods=['GET'])
 def get_statement_summary(id):
+    start_time = datetime.now()
+
     metadata = MetaData()
     metadata.reflect(bind=db.engine)
+
+    print('db operation')
 
     """lookup statement summary table in index table with statement summary id"""
     statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
@@ -174,6 +184,9 @@ def get_statement_summary(id):
             'summary': summary,
             'detail': detail,
             }
+
+    end_time = datetime.now()
+    print(f'load time: {end_time - start_time}')
 
     return jsonify(json_res)
 
@@ -301,8 +314,9 @@ def statement_detail_artist(id, artist_id):
 
 @statements.route('/statements/<id>/versions', methods=['GET'])
 def statement_versions(id):
-    metadata = MetaData(db.engine)
-    metadata.reflect()
+    print('get version metadata obj')
+    metadata.reflect(bind=db.engine)
+    print('get version end metadata obj')
 
     statement_detail_table = ga.get_statement_table(id, metadata)
     
@@ -335,15 +349,20 @@ def statement_versions(id):
     
 @statements.route('/statements/<id>/versions', methods=['DELETE'])
 def delete_statement_multiple_versions(id):
-    metadata = MetaData(db.engine)
-    metadata.reflect()
+    start_time = datetime.now()
+    metadata.reflect(bind=db.engine)
+    end_time = datetime.now()
+    print(f'end metadata obj: {end_time-start_time}')
 
+    start_time = datetime.now()
     data = request.get_json(force=True)
     for version_id in data['versions']:
         statement_detail_table = ga.get_statement_table(id, metadata)
         i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
         db.session.execute(i)
         db.session.commit()
+    end_time = datetime.now()
+    print(f'end delete: {end_time-start_time}')
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
@@ -360,10 +379,15 @@ def get_previous_balances():
 
 @statements.route('/statements/<id>', methods=['PUT'])
 def edit_statement(id):
+    start_time = datetime.now()
+
     data = request.get_json(force=True)
     statement_generated_obj = db.session.query(StatementGenerated).get(id)
     statement_generated_obj.previous_balance_id = data['previous_balance_id']
     db.session.commit()
+
+    end_time = datetime.now()
+    print(f'put statement id: {end_time-start_time}')
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/<id>', methods=['DELETE'])
