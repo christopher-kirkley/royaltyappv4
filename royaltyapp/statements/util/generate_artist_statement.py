@@ -4,32 +4,49 @@ from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement,
 
 from sqlalchemy import MetaData, cast, func, exc
 
-def get_statement_table(statement_id):
+from datetime import datetime
+
+def get_statement_table(statement_id, metadata):
+    print('get_statement')
+    start_time = datetime.now()
+
     statement_detail_table = (
         db.session.query(StatementGenerated.statement_detail_table)
         .filter(StatementGenerated.id == statement_id)
         .first()
         ).statement_detail_table
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
+
     table = metadata.tables.get(statement_detail_table)
     db.session.commit()
+
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return table
 
 
-def lookup_statement_summary_table(statement_id):
+def lookup_statement_summary_table(statement_id, metadata):
+    print('lookup_statement_summary_table')
+    start_time = datetime.now()
+
     statement_name = (
         db.session.query(StatementGenerated.statement_summary_table)
         .filter(StatementGenerated.id == statement_id)
         .first()
         ).statement_summary_table
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
     table = metadata.tables.get(statement_name)
     db.session.commit()
+
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return table
 
-def create_statement_previous_balance_by_artist_subquery(statement_id):
+
+def create_statement_previous_balance_by_artist_subquery(statement_id, metadata):
+    print('create_statement_previous_balance')
+    start_time = datetime.now()
+
     previous_balance_id = (db.session.query(StatementGenerated.previous_balance_id)
                            .filter(StatementGenerated.id == statement_id)
                            .first()
@@ -43,9 +60,6 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
                               .first()
                               ).statement_balance_table
 
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
-
     previous_balance_table = metadata.tables.get(previous_balance_name)
 
     previous_balance_by_artist = (
@@ -55,12 +69,17 @@ def create_statement_previous_balance_by_artist_subquery(statement_id):
             )
             .group_by(previous_balance_table.c.artist_id)
             .subquery())
-    
+
+    end_time = datetime.now()
+    print(end_time - start_time)
 
     return previous_balance_by_artist
 
-def create_statement_sales_by_artist_subquery(statement_id):
-    statement_table = get_statement_table(statement_id)
+def create_statement_sales_by_artist_subquery(statement_id, metadata):
+    print('create_statement_sales')
+    start_time = datetime.now()
+
+    statement_table = get_statement_table(statement_id, metadata)
     statement_sales_by_artist = (
         db.session.query(statement_table.c.artist_id.label('artist_id'),
                          cast(func.sum(statement_table.c.artist_net), Numeric(8, 2)).label('net')
@@ -69,10 +88,17 @@ def create_statement_sales_by_artist_subquery(statement_id):
             .group_by(statement_table.c.artist_id)
             .subquery()
     )
+
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return statement_sales_by_artist
 
-def create_statement_advances_by_artist_subquery(statement_id):
-    statement_table = get_statement_table(statement_id)
+def create_statement_advances_by_artist_subquery(statement_id, metadata):
+    print('create_statement_advances')
+    start_time = datetime.now()
+
+    statement_table = get_statement_table(statement_id, metadata)
     statement_advances_by_artist = (
         db.session.query(statement_table.c.artist_id.label('artist_id'),
                          cast(func.sum(statement_table.c.artist_net), Numeric(8, 2)).label('net')
@@ -81,10 +107,17 @@ def create_statement_advances_by_artist_subquery(statement_id):
             .group_by(statement_table.c.artist_id)
             .subquery()
     )
+
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return statement_advances_by_artist
 
-def create_statement_recoupables_by_artist_subquery(statement_id):
-    statement_table = get_statement_table(statement_id)
+def create_statement_recoupables_by_artist_subquery(statement_id, metadata):
+    print('create_statement_sales')
+    start_time = datetime.now()
+
+    statement_table = get_statement_table(statement_id, metadata)
     statement_recoupables_by_artist = (
         db.session.query(statement_table.c.artist_id.label('artist_id'),
         cast(func.sum(
@@ -94,6 +127,10 @@ def create_statement_recoupables_by_artist_subquery(statement_id):
         .group_by(statement_table.c.artist_id)
         .subquery()
     )
+
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return statement_recoupables_by_artist
 
 def create_statement_summary_table(date_range):
@@ -126,6 +163,9 @@ def create_statement_by_artist_subquery(
         statement_recoupables_by_artist,
         ):
 
+    print('create_statement_by_artist_sub')
+    start_time = datetime.now()
+
     sel = (
         db.session.query(Artist.id.label('artist_id'),
                          func.coalesce(statement_previous_balance_by_artist.c.balance_forward, 0).label('statement_previous_balance_by_artist'),
@@ -139,6 +179,9 @@ def create_statement_by_artist_subquery(
             .outerjoin(statement_sales_by_artist, statement_sales_by_artist.c.artist_id == Artist.id)
     )
 
+    end_time = datetime.now()
+    print(end_time - start_time)
+
     return sel
 
 
@@ -146,6 +189,9 @@ def insert_into_statement_summary(
         statement_by_artist,
         statement_summary_table
         ):
+
+    print('insert_into_statement')
+    start_time = datetime.now()
 
     ins = (
             statement_summary_table.insert().from_select([
@@ -158,14 +204,20 @@ def insert_into_statement_summary(
 
     db.session.execute(ins)
     db.session.commit()
+
+    end_time = datetime.now()
+    print(end_time - start_time)
     
     return True
 
-def insert_into_balance_table(statement_id): 
+def insert_into_balance_table(statement_id, metadata): 
+
+    print('insert_into_balance')
+    start_time = datetime.now()
+
     statement_index = db.session.query(StatementGenerated).filter(StatementGenerated.id == statement_id).first()
+
     # lookup balance statement
-    metadata = MetaData()
-    metadata.reflect(bind=db.engine)
     statement_balance_table = metadata.tables.get(statement_index.statement_balance_table)
     statement_summary_table = metadata.tables.get(statement_index.statement_summary_table)
 
@@ -185,4 +237,6 @@ def insert_into_balance_table(statement_id):
     db.session.execute(ins)
     db.session.commit()
 
+    end_time = datetime.now()
+    print(end_time - start_time)
     

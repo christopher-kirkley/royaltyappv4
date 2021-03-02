@@ -52,15 +52,19 @@ def generate_statement():
 
 @statements.route('/statements/<id>/generate-summary', methods=['POST'])
 def generate_statement_summary(id):
-    statement_summary_table = ga.lookup_statement_summary_table(id)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
+
+    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
     i = statement_summary_table.delete()
     db.session.execute(i)
     db.session.commit()
 
-    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(id)
-    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(id)
-    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(id)
-    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(id)
+    statement_previous_balance_by_artist = ga.create_statement_previous_balance_by_artist_subquery(id, metadata)
+
+    statement_sales_by_artist = ga.create_statement_sales_by_artist_subquery(id, metadata)
+    statement_advances_by_artist = ga.create_statement_advances_by_artist_subquery(id, metadata)
+    statement_recoupables_by_artist = ga.create_statement_recoupables_by_artist_subquery(id, metadata)
     statement_by_artist = ga.create_statement_by_artist_subquery(
                                                         statement_previous_balance_by_artist,
                                                         statement_sales_by_artist,
@@ -68,7 +72,7 @@ def generate_statement_summary(id):
                                                         statement_recoupables_by_artist,
                                                         )
     ga.insert_into_statement_summary(statement_by_artist, statement_summary_table)
-    ga.insert_into_balance_table(id)
+    ga.insert_into_balance_table(id, metadata)
     return json.dumps({'success': 'true', 'index': id})
 
 
@@ -87,8 +91,11 @@ def get_generated_statements():
 
 @statements.route('/statements/<id>', methods=['GET'])
 def get_statement_summary(id):
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
+
     """lookup statement summary table in index table with statement summary id"""
-    statement_summary_table = ga.lookup_statement_summary_table(id)
+    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
 
@@ -172,7 +179,10 @@ def get_statement_summary(id):
 
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
 def statement_detail_artist(id, artist_id):
-    statement_summary_table = ga.lookup_statement_summary_table(id)
+    metadata = MetaData()
+    metadata.reflect(bind=db.engine)
+
+    statement_summary_table = ga.lookup_statement_summary_table(id, metadata)
 
     statement_for_artist = (
         db.session.query(statement_summary_table.c.artist_id,
@@ -206,7 +216,7 @@ def statement_detail_artist(id, artist_id):
                 }
         summary.append(obj)
 
-    table = ga.get_statement_table(id)
+    table = ga.get_statement_table(id, metadata)
 
     artist_name = db.session.query(Artist).filter(Artist.id == artist_id).first().artist_name
 
@@ -291,7 +301,10 @@ def statement_detail_artist(id, artist_id):
 
 @statements.route('/statements/<id>/versions', methods=['GET'])
 def statement_versions(id):
-    statement_detail_table = ga.get_statement_table(id)
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+
+    statement_detail_table = ga.get_statement_table(id, metadata)
     
     query = (
         db.session.query(Version.id.label('id'),
@@ -322,9 +335,12 @@ def statement_versions(id):
     
 @statements.route('/statements/<id>/versions', methods=['DELETE'])
 def delete_statement_multiple_versions(id):
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+
     data = request.get_json(force=True)
     for version_id in data['versions']:
-        statement_detail_table = ga.get_statement_table(id)
+        statement_detail_table = ga.get_statement_table(id, metadata)
         i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
         db.session.execute(i)
         db.session.commit()
@@ -332,7 +348,7 @@ def delete_statement_multiple_versions(id):
 
 @statements.route('/statements/<id>/versions/<version_id>', methods=['DELETE'])
 def delete_statement_versions(id, version_id):
-    statement_detail_table = ga.get_statement_table(id)
+    statement_detail_table = ga.get_statement_table(id, metadata)
     i = statement_detail_table.delete().where(statement_detail_table.c.version_id == version_id)
     db.session.execute(i)
     db.session.commit()
