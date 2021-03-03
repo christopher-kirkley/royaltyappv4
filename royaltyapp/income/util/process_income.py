@@ -209,6 +209,7 @@ def move_from_pending_income_to_total():
     IncomePending.statement_id,
     IncomePending.distributor_id,
     IncomePending.customer,
+    IncomePending.notes,
     IncomePending.city,
     IncomePending.region,
     IncomePending.country)
@@ -225,6 +226,7 @@ def move_from_pending_income_to_total():
     'imported_statement_id',
     'income_distributor_id',
     'customer',
+    'notes',
     'city',
     'region',
     'country'],

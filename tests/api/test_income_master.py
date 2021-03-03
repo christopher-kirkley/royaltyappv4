@@ -61,6 +61,7 @@ def test_can_import_master(test_client, db):
     import_catalog(test_client, db, CASE)
     import_sales(test_client, db, CASE)
     query = db.session.query(IncomePending).all()
+    assert (db.session.query(IncomePending).first().notes) == 'Sync for film No More Chicken'
     assert len(query) == 1
 
 def test_can_process_pending(test_client, db):
@@ -76,6 +77,7 @@ def test_can_process_pending(test_client, db):
     assert res.first().type == 'track'
     assert res.first().amount == Decimal('1500')
     assert res.first().label_net == Decimal('1500')
+    assert res.first().notes == 'Sync for film No More Chicken'
 
 def test_can_make_statement_summary(test_client, db):
     import_catalog(test_client, db, CASE)
@@ -101,6 +103,7 @@ def test_can_make_statement_summary(test_client, db):
 
     res =  db.session.query(table)
     assert len(res.all()) == 1
+    assert res.first().notes == 'Sync for film No More Chicken'
 
     response = test_client.get('/statements/1')
     assert response.status_code == 200

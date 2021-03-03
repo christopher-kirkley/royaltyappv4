@@ -104,12 +104,11 @@ def get_track_sales_detail(statement_table, artist_id):
 def get_master_sales_detail(statement_table, artist_id):
     income_master_detail = (
         db.session.query(
-            cast(func.sum(statement_table.c.artist_net), Numeric(8, 2)).label('net'),
+            cast((statement_table.c.artist_net), Numeric(8, 2)).label('net'),
             Track.track_name.label('track_name'),
-            func.sum(statement_table.c.quantity).label('quantity'),
+            statement_table.c.notes.label('notes'),
         )
             .join(Track, statement_table.c.track_id == Track.id)
-            .group_by(Track.track_name)
             .filter(statement_table.c.artist_id == artist_id)
     )
 

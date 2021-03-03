@@ -23,6 +23,7 @@ class Statement:
             'quantity',
             'amount',
             'customer',
+            'notes',
             'city',
             'region',
             'country',

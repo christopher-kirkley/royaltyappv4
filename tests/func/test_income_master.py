@@ -54,6 +54,8 @@ def test_import_master(browser, test_client, db):
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
 
+    build_catalog(browser, test_client, db)
+
     """ User goes to upload income. """
     browser.find_element_by_id('income').click()
 
@@ -109,7 +111,7 @@ def test_import_master(browser, test_client, db):
     browser.find_element_by_id('view-1').click()
     time.sleep(2)
     
-    assert browser.find_element_by_id('summary-sales').text == "5.9"
+    assert browser.find_element_by_id('summary-sales').text == "1500"
     
-    """ User exports statement."""
+    time.sleep(1000)
 

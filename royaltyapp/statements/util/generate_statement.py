@@ -21,6 +21,7 @@ def create_statement_table(date_range):
         quantity = db.Column(db.Integer)
         artist_net = db.Column(Numeric(23, 18))
         customer = db.Column(db.String(255))
+        notes = db.Column(db.String(255))
         city = db.Column(db.String(255))
         region = db.Column(db.String(255))
         country = db.Column(db.String(255))
@@ -172,6 +173,7 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
             IncomeTotal.version_id,
             IncomeTotal.track_id,
             IncomeTotal.customer,
+            IncomeTotal.notes,
             IncomeTotal.city,
             IncomeTotal.region,
             IncomeTotal.country,
@@ -199,6 +201,7 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
     IncomeTotal.version_id,
     IncomeTotal.track_id,
     IncomeTotal.customer,
+    IncomeTotal.notes,
     IncomeTotal.city,
     IncomeTotal.region,
     IncomeTotal.country,
@@ -220,6 +223,7 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
         IncomeTotal.version_id,
         IncomeTotal.track_id,
         IncomeTotal.customer,
+        IncomeTotal.notes,
         IncomeTotal.city,
         IncomeTotal.region,
         IncomeTotal.country,
@@ -252,6 +256,7 @@ def insert_into_table(artist_total, statement_table):
                 'version_id',
                 'track_id',
                 'customer',
+                'notes',
                 'city',
                 'region',
                 'country',

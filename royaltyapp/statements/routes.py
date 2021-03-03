@@ -311,7 +311,7 @@ def statement_detail_artist(id, artist_id):
     for row in master_sales_detail:
         obj = {
                 'track_name': row.track_name,
-                'quantity': row.quantity,
+                'notes': row.notes,
                 'net': row.net,
                 }
         master_sales.append(obj)
