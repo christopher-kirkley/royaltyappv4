@@ -247,6 +247,7 @@ def statement_detail_artist(id, artist_id):
                 'combined_net': row.combined_net,
                 'physical_net': row.physical_net,
                 'digital_net': row.digital_net,
+                'master_net': row.master_net,
                 }
         income.append(obj)
 
@@ -303,6 +304,18 @@ def statement_detail_artist(id, artist_id):
                 }
         track_sales.append(obj)
 
+    master_sales_detail = va.get_master_sales_detail(table, artist_id)
+    
+    master_sales = []
+
+    for row in master_sales_detail:
+        obj = {
+                'track_name': row.track_name,
+                'quantity': row.quantity,
+                'net': row.net,
+                }
+        master_sales.append(obj)
+
     json_res = {
             'artist': artist_name,
             'statement': statement_detail_table,
@@ -312,6 +325,7 @@ def statement_detail_artist(id, artist_id):
             'advance': advance,
             'album_sales': album_sales,
             'track_sales': track_sales,
+            'master_sales': master_sales,
             }
     end_time = datetime.now()
     print(f'artist load time: {end_time - start_time}')

@@ -173,6 +173,14 @@ def calculate_adjusted_amount():
     update = (
     IncomePending.__table__
     .update()
+    .where(IncomePending.medium == 'master')
+    .values(label_fee=0)
+    )
+    db.session.execute(update)
+
+    update = (
+    IncomePending.__table__
+    .update()
     .where(IncomePending.distributor_id == OrderSettings.distributor_id)
     .where(IncomePending.amount < OrderSettings.order_limit)
     .values(label_fee=0)

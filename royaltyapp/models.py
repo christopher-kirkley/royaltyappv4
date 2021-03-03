@@ -492,6 +492,8 @@ def insert_initial_values(db):
                           distributor_name='quickbooks'),
         IncomeDistributor(distributor_statement='sds_statement',
                           distributor_name='sds'),
+        IncomeDistributor(distributor_statement='master',
+                          distributor_name='master'),
         ExpenseType(id=1,
                     expense_type='advance'),
         ExpenseType(id=2,

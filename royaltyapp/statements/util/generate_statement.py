@@ -179,7 +179,8 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
             ).join(Version, Version.id == IncomeTotal.version_id)
             .join(Catalog, Catalog.id == Version.catalog_id)
             .filter(IncomeTotal.date.between(start_date, end_date))
-            .filter(IncomeTotal.type == 'album'))
+            .filter(IncomeTotal.type == 'album')
+            .filter(IncomeTotal.medium != 'master'))
 
     # sel = sel.filter(IncomeTotal.type == 'album')
     # sel = sel.join(Version, Version.id == IncomeTotal.version_id)
@@ -204,31 +205,58 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
     Track.artist_id,
     ).filter(IncomeTotal.date.between(start_date, end_date))
     sel = sel.join(Track, Track.id == IncomeTotal.track_id)
-    artist_total_track = sel.filter(IncomeTotal.type != 'album')
+    sel = sel.filter(IncomeTotal.type != 'album')
+    artist_total_track = sel.filter(IncomeTotal.medium != 'master')
+
+    """Query for master."""
+    sel = (db.session.query(
+        IncomeTotal.transaction_type,
+        IncomeTotal.date,
+        IncomeTotal.quantity,
+        IncomeTotal.label_net.label('artist_net'),
+        IncomeTotal.type,
+        IncomeTotal.medium,
+        IncomeTotal.income_distributor_id,
+        IncomeTotal.version_id,
+        IncomeTotal.track_id,
+        IncomeTotal.customer,
+        IncomeTotal.city,
+        IncomeTotal.region,
+        IncomeTotal.country,
+        Track.artist_id,
+        )
+        .filter(
+            IncomeTotal.date.between(start_date, end_date)
+            )
+        )
+    sel = sel.join(Track, Track.id == IncomeTotal.track_id)
+    artist_total_master = sel.filter(IncomeTotal.medium == 'master')
 
     """Union ALL queries, returning Artist Income By Period. Makes a cool subquery that I can use."""
 
-    artist_total = artist_total_catalog.union_all(artist_total_track)
+    artist_total = artist_total_catalog.union_all(artist_total_track).union_all(artist_total_master)
 
     return artist_total
 
 def insert_into_table(artist_total, statement_table):
     """Populate variable table with query result."""
-    ins = (statement_table.insert().from_select(['transaction_type',
-        'date',
-        'quantity',
-        'artist_net',
-        'type',
-        'medium',
-        'income_distributor_id',
-        'version_id',
-        'track_id',
-        'customer',
-        'city',
-        'region',
-        'country',
-        'artist_id',
-        ]
+    ins = (statement_table.insert()
+            .from_select([
+                'transaction_type',
+                'date',
+                'quantity',
+                'artist_net',
+                'type',
+                'medium',
+                'income_distributor_id',
+                'version_id',
+                'track_id',
+                'customer',
+                'city',
+                'region',
+                'country',
+                'artist_id',
+                ]
     , artist_total))
 
     db.session.execute(ins)

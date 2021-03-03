@@ -55,6 +55,16 @@ class Statement:
         return res
 
     
+class MasterStatement(Statement):
+    def __init__(self, file):
+        super().__init__(file)
+        self.name = 'master'
+        self.encoding = 'utf-8'
+        self.dtype = {}
+
+    def clean(self):
+        self.df['medium'] = 'master'
+        self.df['type'] = 'track'
 
 class BandcampStatement(Statement):
     def __init__(self, file):
@@ -267,6 +277,8 @@ class StatementFactory:
             return SDDigitalStatement(file)
         if type == 'quickbooks':
             return QuickbooksStatement(file)
+        if type == 'master':
+            return MasterStatement(file)
 
 
 def insert_initial_values():
