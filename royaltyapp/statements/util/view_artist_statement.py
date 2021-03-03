@@ -4,7 +4,11 @@ from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement,
 
 from sqlalchemy import MetaData, cast, func, exc
 
+from datetime import datetime
+
 def get_income_summary(statement_table, artist_id):
+
+    start_time = datetime.now()
 
     join_on_track = (
             db.session.query(
@@ -32,6 +36,10 @@ def get_income_summary(statement_table, artist_id):
 
     joined_table = join_on_track.union_all(join_on_version).subquery()
 
+    end_time = datetime.now()
+    print(f'get income summary/join tables: {end_time - start_time}')
+    start_time = datetime.now()
+
     statement_detail = (
                 db.session.query(
                     cast(func.sum(joined_table.c.net), Numeric(8, 2)).label('net'),
@@ -48,6 +56,10 @@ def get_income_summary(statement_table, artist_id):
                     )
             )
 
+    end_time = datetime.now()
+    print(f'get income summary/statement_detail table: {end_time - start_time}')
+
+    start_time = datetime.now()
 
     """Income"""
     combined_sales = statement_detail.filter(joined_table.c.transaction_type == 'income').subquery()
@@ -55,6 +67,10 @@ def get_income_summary(statement_table, artist_id):
     digital_sales = statement_detail.filter(joined_table.c.medium == 'digital').subquery()
     master_sales = statement_detail.filter(joined_table.c.medium == 'master').subquery()
 
+    end_time = datetime.now()
+    print(f'get income summary/make subqueries: {end_time - start_time}')
+
+    start_time = datetime.now()
     artist_income = (
                 db.session.query(
                     combined_sales.c.catalog_name,
@@ -71,6 +87,9 @@ def get_income_summary(statement_table, artist_id):
                         func.coalesce(master_sales.c.net, 0).label('master_net'),
                         func.coalesce(digital_sales.c.net, 0).label('digital_net'))
                 ).all()
+
+    end_time = datetime.now()
+    print(f'get income summary: {end_time - start_time}')
 
     return artist_income
 
