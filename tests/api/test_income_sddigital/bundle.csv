@@ -1,0 +1,5 @@
+bundle_number,version_number,upc
+BUNDLE1,TEST-01cass,4
+BUNDLE1,TEST-01lp,4
+BUNDLE2,TEST-01lp,5
+BUNDLE2,TEST-02lp,5
