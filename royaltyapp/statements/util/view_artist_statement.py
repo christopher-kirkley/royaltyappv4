@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECI
 
 from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
 
-from sqlalchemy import MetaData, cast, func, exc
+from sqlalchemy import MetaData, cast, func, exc, or_
 
 from datetime import datetime
 
@@ -10,88 +10,128 @@ def get_income_summary(statement_table, artist_id):
 
     start_time = datetime.now()
 
-    join_on_track = (
+    statement_table = (
+            db.session.query(statement_table).filter(statement_table.c.artist_id == artist_id)).subquery()
+
+    join_master = (
             db.session.query(
-                cast((statement_table.c.artist_net), Numeric(8, 2)).label('net'),
+                statement_table.c.artist_net.label('net'),
                 statement_table.c.quantity.label('quantity'),
-                statement_table.c.transaction_type.label('transaction_type'),
+                statement_table.c.type.label('type'),
+                statement_table.c.medium.label('medium'),
+                TrackCatalogTable.c.catalog_id.label('catalog_id')
+                )
+            .join(TrackCatalogTable, TrackCatalogTable.c.track_id == statement_table.c.track_id)
+                .filter(statement_table.c.artist_id == artist_id)
+                .filter(statement_table.c.medium == 'master')
+            )
+
+    join_track = (
+            db.session.query(
+                statement_table.c.artist_net.label('net'),
+                statement_table.c.quantity.label('quantity'),
+                statement_table.c.type.label('type'),
                 statement_table.c.medium.label('medium'),
                 TrackCatalogTable.c.catalog_id.label('catalog_id')
                 )
                 .join(TrackCatalogTable, TrackCatalogTable.c.track_id == statement_table.c.track_id)
-                .filter(statement_table.c.artist_id == artist_id)
+                .filter(or_(
+                        statement_table.c.type != 'album',
+                        statement_table.c.type !='master')
+                        )
+                .filter(statement_table.c.medium == 'digital')
             )
 
-    join_on_version = (
+    join_version = (
         db.session.query(
-            cast((statement_table.c.artist_net), Numeric(8, 2)).label('net'),
+            statement_table.c.artist_net.label('net'),
             statement_table.c.quantity.label('quantity'),
-            statement_table.c.transaction_type.label('transaction_type'),
+            statement_table.c.type.label('type'),
             statement_table.c.medium.label('medium'),
             Version.catalog_id.label('catalog_id')
             )
             .join(Version, statement_table.c.version_id == Version.id)
-            .filter(statement_table.c.artist_id == artist_id)
+            .filter(statement_table.c.type == 'album')
         )
 
-    joined_table = join_on_track.union_all(join_on_version).subquery()
+    joined_table = join_master.union_all(join_version, join_track).subquery()
 
-    end_time = datetime.now()
-    print(f'get income summary/join tables: {end_time - start_time}')
-    start_time = datetime.now()
-
-    statement_detail = (
+    """ Sum net by catalog id"""
+    sum_by_catalog_name = (
                 db.session.query(
-                    cast(func.sum(joined_table.c.net), Numeric(8, 2)).label('net'),
-                    Catalog.catalog_name.label('catalog_name'),
-                    func.sum(joined_table.c.quantity.label('quantity')),
-                    joined_table.c.transaction_type.label('transaction_type'),
+                    func.sum(joined_table.c.net).label('net'),
+                    func.sum(joined_table.c.quantity).label('quantity'),
+                    Catalog.catalog_name,
                     joined_table.c.medium.label('medium'),
                 )
                 .join(Catalog, joined_table.c.catalog_id == Catalog.id)
                 .group_by(
                     Catalog.catalog_name,
-                    joined_table.c.transaction_type,
                     joined_table.c.medium,
                     )
-            )
+            ).subquery()
 
-    end_time = datetime.now()
-    print(f'get income summary/statement_detail table: {end_time - start_time}')
 
-    start_time = datetime.now()
+    query = db.session.query(
+            sum_by_catalog_name.c.catalog_name.distinct()).all()
 
-    """Income"""
-    combined_sales = statement_detail.filter(joined_table.c.transaction_type == 'income').subquery()
-    physical_sales = statement_detail.filter(joined_table.c.medium == 'physical').subquery()
-    digital_sales = statement_detail.filter(joined_table.c.medium == 'digital').subquery()
-    master_sales = statement_detail.filter(joined_table.c.medium == 'master').subquery()
+    catalog_names = [item for t in query for item in t]
 
-    end_time = datetime.now()
-    print(f'get income summary/make subqueries: {end_time - start_time}')
+    summary = []
 
-    start_time = datetime.now()
-    artist_income = (
+    for catalog_name in catalog_names:
+
+        combined_sales = (
                 db.session.query(
-                    combined_sales.c.catalog_name,
-                    func.coalesce(func.sum(combined_sales.c.net), 0).label('combined_net'),
-                    func.coalesce(physical_sales.c.net, 0).label('physical_net'),
-                    func.coalesce(master_sales.c.net, 0).label('master_net'),
-                    func.coalesce(digital_sales.c.net, 0).label('digital_net'))
-                    .outerjoin(physical_sales, combined_sales.c.catalog_name == physical_sales.c.catalog_name)
-                    .outerjoin(digital_sales, combined_sales.c.catalog_name == digital_sales.c.catalog_name)
-                    .outerjoin(master_sales, combined_sales.c.catalog_name == master_sales.c.catalog_name)
-                    .group_by(
-                        combined_sales.c.catalog_name,
-                        func.coalesce(physical_sales.c.net, 0).label('physical_net'),
-                        func.coalesce(master_sales.c.net, 0).label('master_net'),
-                        func.coalesce(digital_sales.c.net, 0).label('digital_net'))
-                ).all()
+                    func.coalesce(
+                        cast(func.sum(sum_by_catalog_name.c.net), Numeric(8, 2)), 0)
+                    )
+                .filter(sum_by_catalog_name.c.catalog_name == catalog_name)
+                .one())[0]
+
+        digital_sales = (
+                db.session.query(
+                    func.coalesce(
+                        cast(func.sum(sum_by_catalog_name.c.net), Numeric(8,2))
+                        , 0)
+                    )
+                .filter(sum_by_catalog_name.c.catalog_name == catalog_name)
+                .filter(sum_by_catalog_name.c.medium == 'digital')
+                .one())[0]
+
+        master_sales = (
+                db.session.query(
+                    func.coalesce(
+                        cast(func.sum(sum_by_catalog_name.c.net), Numeric(8,2))
+                        , 0)
+                    )
+                .filter(sum_by_catalog_name.c.catalog_name == catalog_name)
+                .filter(sum_by_catalog_name.c.medium == 'master')
+                .one())[0]
+
+        physical_sales = (
+                db.session.query(
+                    func.coalesce(
+                        cast(func.sum(sum_by_catalog_name.c.net), Numeric(8,2))
+                        , 0)
+                    )
+                .filter(sum_by_catalog_name.c.catalog_name == catalog_name)
+                .filter(sum_by_catalog_name.c.medium == 'physical')
+                .one())[0]
+
+        summary.append(
+                {
+                'catalog_name': catalog_name,
+                'combined_net': combined_sales,
+                'digital_net': digital_sales,
+                'physical_net': physical_sales,
+                'master_net': master_sales,
+                })
 
     end_time = datetime.now()
     print(f'get income summary: {end_time - start_time}')
 
-    return artist_income
+    return summary
 
 def get_expense_detail(statement_table, artist_id):
 

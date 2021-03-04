@@ -1,0 +1,4 @@
+Internal Invoice Number,Customer,Catalog Number,UPC,Title_Description,Artist,Product Title,Customer Region,Country Code,CustomerClassification,digest invoiceform,signedQuantity,Gross Unit Price,Label Net Unit Price,Total Gross Income,Distribution Fee Total,MnD Fee Total,Label Net Total,datePaidlast,dateProcessedlast,flag for mech obligation,internal serial number,Label,Invoice_Description
+33333,Cargo Germ. Consignment Account,TEST-01lp,3333333333,asdf,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,10,0,0,10,1/1/2020,1/1/2020,1,5993056,TEST,Recharge 617499-F19
+4,Cargo Germ. Consignment Account,TEST01lp,3333333333,asdfa,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,10,0,0,10,1/1/2020,1/1/2020,1,5993056,TEST,Recharge 617499-F19
+5,Cargo Germ. Consignment Account,TEST-01-lp,3333333333,sdf,test,,Germany,DE,OVERSEAS,consignment pay,1,1,1,10,0,0,10,1/1/2020,1/1/2020,1,5993056,TEST,Recharge 617499-F19

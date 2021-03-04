@@ -239,17 +239,17 @@ def statement_detail_artist(id, artist_id):
 
     statement_detail_table = db.session.query(StatementGenerated).filter(StatementGenerated.id == id).first().statement_detail_table
     
-    income_summary = va.get_income_summary(table, artist_id)
-    income = []
-    for row in income_summary:
-        obj = {
-                'catalog_name': row.catalog_name,
-                'combined_net': row.combined_net,
-                'physical_net': row.physical_net,
-                'digital_net': row.digital_net,
-                'master_net': row.master_net,
-                }
-        income.append(obj)
+    income = va.get_income_summary(table, artist_id)
+    # income = []
+    # for row in income_summary:
+    #     obj = {
+    #             'catalog_name': row.catalog_name,
+    #             'combined_net': row.combined_net,
+    #             'physical_net': row.physical_net,
+    #             'digital_net': row.digital_net,
+    #             'master_net': row.master_net,
+    #             }
+    #     income.append(obj)
 
     expense_detail = va.get_expense_detail(table, artist_id)
     expense = []
