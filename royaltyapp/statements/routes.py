@@ -1,11 +1,15 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, send_file
 from sqlalchemy import exc, func, cast, Numeric, MetaData
 from sqlalchemy.schema import Table
 
 import pandas as pd
 import json
+import csv
+import io
 
-from royaltyapp.models import db, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog  
+import time
+
+from royaltyapp.models import db, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
@@ -547,7 +551,15 @@ def fix_opening_balance_errors():
 
     return jsonify({'success': 'true'})
 
-@statements.route('/statements/export-csv', methods=['GET'])
-def export_csv():
 
-    return jsonify({'success': 'true'})
+@statements.route('/statements/<id>/artist/<artist_id>/export-csv', methods=['GET'])
+def export_csv(id, artist_id):
+    f = open('files/temp.csv', 'w')
+    outcsv = csv.writer(f)
+    records = db.session.query(Artist).all()
+    [outcsv.writerow([getattr(curr, column.name) for column in Artist.__mapper__.columns]) for curr in records]
+    f.close()
+
+
+    # return send_file('../files/temp.csv', mimetype="text/csv", as_attachment=True)
+    return send_file('../files/temp.csv')
