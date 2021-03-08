@@ -6,10 +6,11 @@ import pandas as pd
 import json
 import csv
 import io
+import uuid
 
 import time
 
-from royaltyapp.models import db, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog
+from royaltyapp.models import db, StatementGenerated, StatementGeneratedSchema, Artist, ArtistSchema, Version, Catalog, IncomeDistributor, Track
 
 from royaltyapp.statements.util import generate_statement as ge
 from royaltyapp.statements.util import generate_artist_statement as ga
@@ -552,14 +553,83 @@ def fix_opening_balance_errors():
     return jsonify({'success': 'true'})
 
 
-@statements.route('/statements/<id>/artist/<artist_id>/export-csv', methods=['GET'])
+@statements.route('/statements/<id>/artist/<artist_id>/export-csv', methods=['POST'])
 def export_csv(id, artist_id):
-    f = open('files/temp.csv', 'w')
+
+    filename = str(uuid.uuid4())
+
+    f = open(f'files/{filename}.csv', 'w')
     outcsv = csv.writer(f)
-    records = db.session.query(Artist).all()
-    [outcsv.writerow([getattr(curr, column.name) for column in Artist.__mapper__.columns]) for curr in records]
+
+    # records = db.session.query(Artist).all()
+
+    # get table
+    table = ga.get_statement_table(id, metadata)
+    # filter by artist
+    table = (db.session.query(table)
+            .filter(table.c.artist_id == artist_id)
+            .filter(table.c.transaction_type == 'income')
+            ).subquery()
+
+    query = (db.session.query(
+        table.c.date,
+        IncomeDistributor.distributor_name,
+        Catalog.catalog_number,
+        Catalog.catalog_name,
+        Version.version_number,
+        Track.track_name,
+        table.c.quantity,
+        table.c.artist_net,
+        table.c.customer,
+        table.c.city,
+        table.c.region,
+        table.c.country,
+        table.c.type,
+        table.c.medium)
+        .join(IncomeDistributor, IncomeDistributor.id == table.c.income_distributor_id)
+        .outerjoin(Version, Version.id == table.c.version_id)
+        .outerjoin(Track, Track.id == table.c.track_id)
+        .join(Catalog, Version.catalog_id == Catalog.id)
+        .order_by(table.c.date)
+        ).all()
+
+    outcsv.writerow([
+        'date',
+        'distributor',
+        'Catalog Number',
+        'Catalog Name',
+        'Version Number',
+        'Track Name',
+        'Quantity',
+        'Net',
+        'Customer',
+        'City',
+        'Region',
+        'Country',
+        'Type',
+        'Medium',
+        ])
+
+    for item in query:
+        outcsv.writerow(
+                [
+                    item.date,
+                    item.distributor_name,
+                    item.catalog_number,
+                    item.catalog_name,
+                    item.version_number,
+                    item.track_name,
+                    item.quantity,
+                    item.artist_net,
+                    item.customer,
+                    item.city,
+                    item.region,
+                    item.country,
+                    item.type,
+                    item.medium
+                    ]
+                )
+    
     f.close()
 
-
-    # return send_file('../files/temp.csv', mimetype="text/csv", as_attachment=True)
-    return send_file('../files/temp.csv')
+    return send_file(f'../files/{filename}.csv')
