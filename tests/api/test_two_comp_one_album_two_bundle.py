@@ -68,6 +68,22 @@ def import_bandcamp_sales(test_client, db, case):
             data=data, content_type="multipart/form-data")
     return response
 
+def test_can_view_imported_income(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
+    response = import_bandcamp_sales(test_client, db, CASE)
+    result = db.session.query(IncomePending).all()
+    response = test_client.post('/income/process-pending')
+    response = test_client.get('/income/statements/1')
+    assert response.status_code == 200
+    assert json.loads(response.data)[0]['statement_name'] == 'bandcamp.csv'
+    assert json.loads(response.data)[0]['number_of_records'] == 34
+    assert json.loads(response.data)[0]['amount'] == 284.59
+    assert len(json.loads(response.data)[0]['physical']) == 3
+    assert len(json.loads(response.data)[0]['digital']) == 2
+    assert len(json.loads(response.data)[0]['bundles']) == 2
+
+
 def test_can_build_catalog(test_client, db):
     import_catalog(test_client, db, CASE)
     import_bundle(test_client, db, CASE)

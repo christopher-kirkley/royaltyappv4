@@ -20,7 +20,6 @@ def import_catalog(test_client, db, case):
             }
     response = test_client.post('/catalog/import-catalog',
             data=data)
-    assert response.status_code == 200
     path = os.getcwd() + f"/tests/api/{case}/version.csv"
     f = open(path, 'rb')
     data = {
@@ -28,7 +27,6 @@ def import_catalog(test_client, db, case):
             }
     response = test_client.post('/catalog/import-version',
             data=data)
-    assert response.status_code == 200
     path = os.getcwd() + f"/tests/api/{case}/track.csv"
     f = open(path, 'rb')
     data = {
@@ -36,7 +34,6 @@ def import_catalog(test_client, db, case):
             }
     response = test_client.post('/catalog/import-track',
             data=data)
-    assert response.status_code == 200
     path = os.getcwd() + f"/tests/api/{case}/bundle.csv"
     f = open(path, 'rb')
     data = {
@@ -44,9 +41,8 @@ def import_catalog(test_client, db, case):
             }
     response = test_client.post('/bundle/import-bundle',
             data=data)
-    assert response.status_code == 200
 
-def import_bandcamp_sales(test_client, db, case):
+def import_sales(test_client, db, case):
     path = os.getcwd() + f"/tests/api/{case}/bandcamp.csv"
     data = {
             'statement_source': 'bandcamp'
@@ -56,32 +52,14 @@ def import_bandcamp_sales(test_client, db, case):
             data=data, content_type="multipart/form-data")
     return response
 
-def test_can_match_version(test_client, db):
-    import_catalog(test_client, db, CASE)
-    import_bandcamp_sales(test_client, db, CASE)
-    assert len(db.session.query(IncomePending).all()) == 10
-    res = db.session.query(IncomePending).filter(IncomePending.order_id == '123').one()
-    assert res.medium == 'digital'
-    assert res.type == 'album'
-    assert res.album_name == 'Amazing'
-    assert res.upc_id == '2222222222'
-    res = db.session.query(IncomePending).filter(IncomePending.order_id == '456').one()
-    assert res.medium == 'physical'
-    assert res.upc_id is ''
-    res = db.session.query(IncomePending).filter(IncomePending.order_id == '789').one()
-    assert res.version_number == 'BUNDLE1'
-    assert res.upc_id =='4'
-
-def test_can_process_pending(test_client, db):
-    import_catalog(test_client, db, CASE)
-    import_bandcamp_sales(test_client, db, CASE)
-    response = test_client.post('/income/process-pending')
+def test_can_get_matching_errors(test_client, db):
+    response = test_client.get('/income/matching-errors')
     assert response.status_code == 200
-    assert len(db.session.query(IncomeTotal).all()) == 10
-    id = db.session.query(Bundle.id).filter(Bundle.bundle_number == 'BUNDLE1').one()
-    assert len(db.session.query(IncomeTotal).filter(IncomeTotal.bundle_id==id).all()) == 2
+    assert json.loads(response.data) == []
+    import_catalog(test_client, db, CASE)
+    import_sales(test_client, db, CASE)
 
+    response = test_client.get('/income/matching-errors')
+    assert response.status_code == 200
+    assert len(json.loads(response.data)) == 2
 
-
-
-    

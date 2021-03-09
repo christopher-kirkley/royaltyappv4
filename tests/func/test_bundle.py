@@ -113,6 +113,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('upload_statement').click()
     time.sleep(1)
 
+
     """ User sees prompt for errors, and clicks to fix matching errors. """
     assert browser.find_element_by_id('upc_matching_errors').text == "You have 3 UPC matching errors."
     browser.find_element_by_id('fix_upc_errors').click()

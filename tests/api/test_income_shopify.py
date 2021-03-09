@@ -86,7 +86,7 @@ def test_can_update_bundle_number(test_client, db):
     """Process errors"""
     response = test_client.post('/income/process-pending')
     assert response.status_code == 200
-    assert len(db.session.query(IncomeTotal).all()) == 6
+    assert len(db.session.query(IncomeTotal).all()) == 4
 
     
 def test_can_process_pending(test_client, db):
@@ -94,12 +94,7 @@ def test_can_process_pending(test_client, db):
     import_sales(test_client, db, CASE)
     response = test_client.post('/income/process-pending')
     assert response.status_code == 200
-    assert len(db.session.query(IncomeTotal).all()) == 5
-    id = db.session.query(Version.id).filter(Version.version_number=='TEST-01cass') 
-    assert len(db.session.query(IncomeTotal).filter(IncomeTotal.version_id==id).all()) == 1
-
-    id = db.session.query(Version.id).filter(Version.version_number=='TEST-01lp') 
-    assert len(db.session.query(IncomeTotal).filter(IncomeTotal.version_id==id).all()) == 3
+    assert len(db.session.query(IncomeTotal).all()) == 4
 
 
 

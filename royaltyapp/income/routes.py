@@ -6,7 +6,7 @@ from sqlalchemy import exc, func, cast, Numeric, Date
 import pandas as pd
 import json
 
-from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema, Track
+from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema, Track, Bundle
 
 from .helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, find_distinct_refund_matching_errors
 
@@ -239,6 +239,17 @@ def get_imported_statement_detail(id):
     ).all()
 
     track_res = income_total_schema.dumps(tracks_sold)
+
+    bundles_sold = (db.session.query
+            (func.sum(IncomeTotal.amount).label('amount'),
+            func.sum(IncomeTotal.quantity).label('quantity'),
+            Bundle.bundle_number)
+    .join(Bundle, IncomeTotal.bundle_id == Bundle.id)
+    .filter(IncomeTotal.imported_statement_id == id)
+    .group_by(Bundle.bundle_number)
+    ).all()
+
+    bundle_res = income_total_schema.dumps(bundles_sold)
  
     query = db.session.query(IncomeTotal).filter(IncomeTotal.imported_statement_id == id).all()
     statement_detail = income_total_schema.dumps(query)
@@ -254,7 +265,9 @@ def get_imported_statement_detail(id):
         'data': json.loads(statement_detail),
         'digital': json.loads(digital_versions_res),
         'track': json.loads(track_res),
-        'physical': json.loads(physical_versions_res)
+        'physical': json.loads(physical_versions_res),
+        'bundles': json.loads(bundle_res),
+
                     }])
 
 @income.route('/income/statements/<id>', methods=['DELETE'])
