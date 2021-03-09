@@ -30,17 +30,24 @@ def import_sales():
     po.match_upc_on_catalog_name()
     po.add_missing_version_number()
     records = statement.find_imported_records()
-    data = {
-            "success": 'true',
-            "data": {
-                "type": "db",
-                "id": filename,
-                "attributes": {
-                    "title": filename,
-                    "length": records
+
+    """Check to verify total df is imported without problems"""
+    if records == len(statement.df):
+        data = {
+                "success": 'true',
+                "data": {
+                    "type": "db",
+                    "id": filename,
+                    "attributes": {
+                        "title": filename,
+                        "length": records
+                        }
                     }
                 }
-            }
+    else:
+        data = {
+                'success': 'false'
+                }
     return jsonify(data), 201
 
 @income.route('/income/matching-errors', methods=['GET'])

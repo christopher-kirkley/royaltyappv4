@@ -7,6 +7,8 @@ import time
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle
 
+from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, find_distinct_refund_matching_errors
+
 base = os.path.basename(__file__)
 CASE = base.split('.')[0]
 
@@ -81,7 +83,6 @@ def test_can_process_pending(test_client, db):
 
     id = db.session.query(Version.id).filter(Version.version_number=='TEST-01lp') 
     assert len(db.session.query(IncomeTotal).filter(IncomeTotal.version_id==id).all()) == 4
-
 
 
     

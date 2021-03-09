@@ -47,7 +47,6 @@ class Statement:
         self.df.to_sql('income_pending', chunksize=1000, method='multi', con=db.engine, if_exists='append', index=False)
 
 
-
     def find_imported_records(self):
         res = len(db.session.query(IncomePending)
                 .filter(IncomePending.statement == self.file.filename)
@@ -151,6 +150,7 @@ class SDSStatement(Statement):
                                 'ISRC': 'isrc_id',
                                 'Quantity Net': 'quantity',
                                 'US$ After Fees': 'amount',
+                                'Amount After Fees': 'amount',
                                 'Territory': 'country',
                                 'Retailer': 'customer',
                                 'Sales Description': 'description',
