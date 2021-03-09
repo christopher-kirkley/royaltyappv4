@@ -10,6 +10,11 @@ from sqlalchemy import func, MetaData
 
 from decimal import Decimal
 
+
+from royaltyapp.statements.util import generate_statement as ge
+from royaltyapp.statements.util import generate_artist_statement as ga
+from royaltyapp.statements.util import view_artist_statement as va
+
 import time
 
 base = os.path.basename(__file__)
@@ -108,13 +113,131 @@ def test_can_process_pending_income(test_client, db):
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     res = db.session.query(IncomeTotal).all()
-    assert len(res) == 37   
+    assert len(res) == 34
 
-    bundles = db.session.query(IncomeTotal).filter(IncomeTotal.version_id == None).all()
-    assert len(bundles) == 0
+    bundles = db.session.query(IncomeTotal).filter(IncomeTotal.bundle_id != None).all()
+    assert len(bundles) == 3
+
+    assert bundles[0].bundle_id == 2
+    assert bundles[1].bundle_id == 2
+    assert bundles[2].bundle_id == 1
 
     sum = db.session.query(func.sum(IncomeTotal.amount)).one()[0]
     assert sum == Decimal('284.59')
+
+def test_make_subquery_to_generate_statement(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
+    response = import_bandcamp_sales(test_client, db, CASE) 
+    result = db.session.query(IncomePending).all()
+    response = test_client.post('/income/process-pending')
+
+    """ Unit tests."""
+    start_date = '2020-01-01'
+    end_date = '2020-01-31'
+    previous_balance_id = 0
+    date_range = (str(start_date) + '_' + str(end_date)).replace('-', '_')
+    table = ge.create_statement_table(date_range)
+    table_obj = table.__table__
+    statement_summary_table = ga.create_statement_summary_table(date_range)
+    statement_index = ge.add_statement_to_index(table, statement_summary_table)
+
+    statement_balance_table = ge.create_statement_balance_table(table.__table__)
+    ge.add_statement_balance_to_index(statement_index.id, statement_balance_table)
+
+    if previous_balance_id == 'opening_balance':
+        ge.add_opening_balance_to_index(id)
+    else:
+        ge.add_previous_balance_id_to_index(statement_index.id, previous_balance_id)
+
+    assert len(db.session.query(IncomeTotal).all()) == 34
+
+
+    # artist_catalog_percentage = ge.find_track_percentage()
+    # artist_total = ge.find_artist_total(start_date, end_date, artist_catalog_percentage)
+
+    """ Make IncomeTotal subquery with split bundles into versions """
+    count_per_bundle = (db.session.query(BundleVersionTable.c.bundle_id,
+                                     func.count(BundleVersionTable.c.bundle_id)
+                                     .label('version_count'))
+                    .group_by(BundleVersionTable.c.bundle_id)
+                    .subquery()
+                    )
+
+    sel = (db.session
+            .query(
+                (IncomeTotal.transaction_type).label('transaction_type'),
+                IncomeTotal.date.label('date'),
+                IncomeTotal.quantity.label('quantity'),
+                (IncomeTotal.label_net / count_per_bundle.c.version_count).label('label_net'),
+                IncomeTotal.type.label('type'),
+                IncomeTotal.medium.label('medium'),
+                IncomeTotal.income_distributor_id.label('distributor_id'),
+                (BundleVersionTable.c.version_id).label('version_id'),
+                IncomeTotal.track_id.label('track_id'),
+                IncomeTotal.customer.label('customer'),
+                IncomeTotal.notes.label('notes'),
+                IncomeTotal.city.label('city'),
+                IncomeTotal.region.label('region'),
+                IncomeTotal.country.label('country'),
+                )
+            .join(count_per_bundle, count_per_bundle.c.bundle_id == IncomeTotal.bundle_id)
+            .join(BundleVersionTable, BundleVersionTable.c.bundle_id == IncomeTotal.bundle_id)
+         )
+
+    assert len(sel.all()) == 6
+    assert sel.all()[0].label_net == Decimal('2.57')
+    assert sel.all()[0].version_id == 1
+    assert sel.all()[1].label_net == Decimal('2.57')
+    assert sel.all()[1].version_id == 1
+    assert sel.all()[2].label_net == Decimal('2.57')
+    assert sel.all()[2].version_id == 3
+    assert sel.all()[3].label_net == Decimal('2.57')
+    assert sel.all()[3].version_id == 3
+    assert sel.all()[4].label_net == Decimal('2.57')
+    assert sel.all()[4].version_id == 5
+    assert sel.all()[5].label_net == Decimal('2.57')
+    assert sel.all()[5].version_id == 3
+
+    """Query for albums, calculate artist total per catalog item."""
+    albums = (db.session.query(
+            IncomeTotal.transaction_type.label('transaction_type'),
+            IncomeTotal.date,
+            IncomeTotal.quantity,
+            IncomeTotal.label_net,
+            IncomeTotal.type,
+            IncomeTotal.medium,
+            IncomeTotal.income_distributor_id,
+            IncomeTotal.version_id,
+            IncomeTotal.track_id,
+            IncomeTotal.customer,
+            IncomeTotal.notes,
+            IncomeTotal.city,
+            IncomeTotal.region,
+            IncomeTotal.country
+            )
+            .filter(IncomeTotal.bundle_id == None))
+
+    joined = sel.union_all(albums).subquery()
+
+    assert len(db.session.query(joined).all()) == 37
+
+    assert db.session.query(func.sum(joined.c.label_net)).first()[0] == Decimal('284.59')
+    assert db.session.query(joined.c.transaction_type).first()[0] == 'income'
+
+def test_subquery_function(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
+    response = import_bandcamp_sales(test_client, db, CASE) 
+    result = db.session.query(IncomePending).all()
+    response = test_client.post('/income/process-pending')
+
+    subquery = ge.split_bundles_to_versions()
+
+    assert len(db.session.query(subquery).all()) == 37
+
+    assert len(db.session.query(subquery.c.label_net).all()) == 37
+    assert len(db.session.query(subquery.c.date).all()) == 37
 
 def test_statement_with_no_previous_balance(test_client, db):
     import_catalog(test_client, db, CASE)

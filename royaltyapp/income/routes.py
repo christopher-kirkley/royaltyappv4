@@ -149,7 +149,8 @@ def delete_pending_statements(name):
 
 @income.route('/income/process-pending', methods=['POST'])
 def process_pending_income():
-    pi.split_bundle_into_versions()
+    # pi.split_bundle_into_versions()
+    pi.normalize_bundle()
     pi.normalize_distributor()
     pi.normalize_version()
     pi.normalize_track()

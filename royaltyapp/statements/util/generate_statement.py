@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Numeric, String, ForeignKey, Table, DECIMAL, Date, Numeric
 
-from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal
+from royaltyapp.models import db, StatementGenerated, Artist, ImportedStatement, Version, Catalog, Track, TrackCatalogTable, IncomeTotal, ExpenseTotal, BundleVersionTable
 
 from sqlalchemy import MetaData, cast, func, exc
 
@@ -157,16 +157,43 @@ def find_track_percentage():
 
     return artist_catalog_percentage
 
-def find_artist_total(start_date, end_date, artist_catalog_percentage):
-    """All items are either album or track. Need to add merch as well. The difference being, albums are split
-    between whomever is on the album, tracks are tied to one particular artist only."""
+def split_bundles_to_versions():
+
+    """ Make IncomeTotal subquery with split bundles into versions """
+    count_per_bundle = (db.session.query(BundleVersionTable.c.bundle_id,
+                                     func.count(BundleVersionTable.c.bundle_id)
+                                     .label('version_count'))
+                    .group_by(BundleVersionTable.c.bundle_id)
+                    .subquery()
+                    )
+
+    sel = (db.session
+            .query(
+                (IncomeTotal.transaction_type).label('transaction_type'),
+                IncomeTotal.date.label('date'),
+                IncomeTotal.quantity.label('quantity'),
+                (IncomeTotal.label_net / count_per_bundle.c.version_count).label('label_net'),
+                IncomeTotal.type.label('type'),
+                IncomeTotal.medium.label('medium'),
+                IncomeTotal.income_distributor_id.label('income_distributor_id'),
+                (BundleVersionTable.c.version_id).label('version_id'),
+                IncomeTotal.track_id.label('track_id'),
+                IncomeTotal.customer.label('customer'),
+                IncomeTotal.notes.label('notes'),
+                IncomeTotal.city.label('city'),
+                IncomeTotal.region.label('region'),
+                IncomeTotal.country.label('country'),
+                )
+            .join(count_per_bundle, count_per_bundle.c.bundle_id == IncomeTotal.bundle_id)
+            .join(BundleVersionTable, BundleVersionTable.c.bundle_id == IncomeTotal.bundle_id)
+         )
 
     """Query for albums, calculate artist total per catalog item."""
-    sel = (db.session.query(
+    albums = (db.session.query(
             IncomeTotal.transaction_type,
             IncomeTotal.date,
             IncomeTotal.quantity,
-            (IncomeTotal.label_net * func.coalesce(artist_catalog_percentage.c.percentage, 1)).label('artist_net'),
+            IncomeTotal.label_net,
             IncomeTotal.type,
             IncomeTotal.medium,
             IncomeTotal.income_distributor_id,
@@ -176,13 +203,40 @@ def find_artist_total(start_date, end_date, artist_catalog_percentage):
             IncomeTotal.notes,
             IncomeTotal.city,
             IncomeTotal.region,
-            IncomeTotal.country,
+            IncomeTotal.country
+            )
+            .filter(IncomeTotal.bundle_id == None))
+
+    joined = sel.union_all(albums).subquery()
+    
+    return joined
+
+def find_artist_total(start_date, end_date, artist_catalog_percentage):
+
+    subquery = split_bundles_to_versions()
+    
+    """Query for albums, calculate artist total per catalog item."""
+    sel = (db.session.query(
+            subquery.c.transaction_type,
+            subquery.c.date,
+            subquery.c.quantity,
+            (subquery.c.label_net * func.coalesce(artist_catalog_percentage.c.percentage, 1)).label('artist_net'),
+            subquery.c.type,
+            subquery.c.medium,
+            subquery.c.income_distributor_id,
+            subquery.c.version_id,
+            subquery.c.track_id,
+            subquery.c.customer,
+            subquery.c.notes,
+            subquery.c.city,
+            subquery.c.region,
+            subquery.c.country,
             func.coalesce(artist_catalog_percentage.c.artist_id, Catalog.artist_id) # this is the problem line, income total not getting artist_id
-            ).join(Version, Version.id == IncomeTotal.version_id)
+            ).join(Version, Version.id == subquery.c.version_id)
             .join(Catalog, Catalog.id == Version.catalog_id)
-            .filter(IncomeTotal.date.between(start_date, end_date))
-            .filter(IncomeTotal.type == 'album')
-            .filter(IncomeTotal.medium != 'master'))
+            .filter(subquery.c.date.between(start_date, end_date))
+            .filter(subquery.c.type == 'album')
+            .filter(subquery.c.medium != 'master'))
 
     # sel = sel.filter(IncomeTotal.type == 'album')
     # sel = sel.join(Version, Version.id == IncomeTotal.version_id)

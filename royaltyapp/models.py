@@ -229,6 +229,7 @@ class IncomePending(db.Model):
     description = db.Column(db.String(255))
     track_id = db.Column(db.Integer)
     version_id = db.Column(db.Integer)
+    bundle_id = db.Column(db.Integer)
     distributor_id = db.Column(db.Integer)
     statement_id = db.Column(db.Integer)
 
@@ -301,6 +302,7 @@ class IncomeTotal(db.Model):
     imported_statement_id = db.Column(db.Integer, db.ForeignKey('imported_statement.id', ondelete='CASCADE'))
     income_distributor_id = db.Column(db.Integer, db.ForeignKey('income_distributor.id'))
     version_id = db.Column(db.Integer, db.ForeignKey('version.id'))
+    bundle_id = db.Column(db.Integer, db.ForeignKey('bundle.id'))
     track_id = db.Column(db.Integer, db.ForeignKey('track.id'))
 
 class IncomeDistributorSchema(ma.SQLAlchemyAutoSchema):

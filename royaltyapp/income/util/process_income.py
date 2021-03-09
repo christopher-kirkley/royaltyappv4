@@ -66,6 +66,15 @@ def normalize_distributor():
     """)
     db.session.commit()
 
+def normalize_bundle():
+    db.session.execute("""
+    UPDATE income_pending
+    set bundle_id = bundle.id
+    FROM bundle
+    WHERE income_pending.upc_id = bundle.upc;
+    """)
+    db.session.commit()
+
 def normalize_version():
     db.session.execute("""
     UPDATE income_pending
@@ -205,6 +214,7 @@ def move_from_pending_income_to_total():
     IncomePending.label_net,
     IncomePending.track_id,
     IncomePending.version_id,
+    IncomePending.bundle_id,
     IncomePending.medium,
     IncomePending.type,
     IncomePending.statement_id,
@@ -222,6 +232,7 @@ def move_from_pending_income_to_total():
     'label_net',
     'track_id',
     'version_id',
+    'bundle_id',
     'medium',
     'type',
     'imported_statement_id',
