@@ -77,6 +77,7 @@ def test_can_process_pending(test_client, db):
     assert len(res.all()) == 1
     assert res.first().medium == 'master'
     assert res.first().type == 'track'
+
     assert res.first().amount == Decimal('1500')
     assert res.first().label_net == Decimal('1500')
     assert res.first().notes == 'Sync for film No More Chicken'

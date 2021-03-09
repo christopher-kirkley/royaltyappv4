@@ -55,6 +55,7 @@ def split_bundle_into_versions():
     db.session.execute("""
         DELETE FROM income_pending WHERE income_pending.id IN (SELECT income_pending.id FROM income_pending JOIN bundle ON bundle.upc = income_pending.upc_id)
     """)
+    db.session.commit()
 
 def normalize_distributor():
     db.session.execute("""

@@ -1,5 +1,5 @@
-bundle_number,version_number
-BUNDLE1,TEST-01cass
-BUNDLE1,TEST-01lp
-BUNDLE2,TEST-01lp
-BUNDLE2,TEST-02lp
+bundle_number,version_number,upc
+BUNDLE1,TEST-01cass,77
+BUNDLE1,TEST-01lp,77
+BUNDLE2,TEST-01lp,88
+BUNDLE2,TEST-02lp,88

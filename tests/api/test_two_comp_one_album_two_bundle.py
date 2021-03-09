@@ -6,6 +6,12 @@ import json
 
 from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle, BundleVersionTable, PendingBundle
 
+from sqlalchemy import func, MetaData
+
+from decimal import Decimal
+
+import time
+
 base = os.path.basename(__file__)
 CASE = base.split('.')[0]
 
@@ -86,19 +92,29 @@ def test_can_import_bandcamp(test_client, db):
     response = import_bandcamp_sales(test_client, db, CASE)
     result = db.session.query(IncomePending).all()
     assert len(result) == 34
+    sum = db.session.query(func.sum(IncomePending.amount)).one()[0]
+    assert sum == Decimal('284.59')
     first = db.session.query(IncomePending).first()
     assert first.date == datetime.date(2020, 1, 1)
     assert first.upc_id == '5555555'
     assert json.loads(response.data)['data']['attributes']['length'] == 34
 
 def test_can_process_pending_income(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bundle(test_client, db, CASE)
     response = import_bandcamp_sales(test_client, db, CASE)
     result = db.session.query(IncomePending).all()
     response = test_client.post('/income/process-pending')
     assert response.status_code == 200
     assert json.loads(response.data) == {'success': 'true'}
     res = db.session.query(IncomeTotal).all()
-    assert len(res) == 34
+    assert len(res) == 37   
+
+    bundles = db.session.query(IncomeTotal).filter(IncomeTotal.version_id == None).all()
+    assert len(bundles) == 0
+
+    sum = db.session.query(func.sum(IncomeTotal.amount)).one()[0]
+    assert sum == Decimal('284.59')
 
 def test_statement_with_no_previous_balance(test_client, db):
     import_catalog(test_client, db, CASE)
@@ -116,12 +132,23 @@ def test_statement_with_no_previous_balance(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/statements/generate', data=json_data)
     response = test_client.post('/statements/1/generate-summary', data=json_data)
+
+
+    metadata = MetaData(db.engine)
+    metadata.reflect()
+    statement_table = metadata.tables.get('statement_2020_01_01_2020_01_31')
+
+    sum = db.session.query(func.sum(statement_table.c.artist_net)).one()[0]
+    assert sum == Decimal('284.59')
+
+
     response = test_client.get('/statements/1')
     assert response.status_code == 200
     assert json.loads(response.data) == {
             'summary': {
                 'statement_total': 142.29,
-                'previous_balance': 0,
+                'previous_balance': 'statement_balance_none',
+                'previous_balance_id': 0,
                 'statement': 'statement_2020_01_01_2020_01_31',
                 },
             'detail':
