@@ -340,6 +340,7 @@ class IncomeTotalSchema(ma.SQLAlchemySchema):
                 "label_fee",
                 "label_net",
                 "version_number",
+                "bundle_number",
                 "amount",
                 )
         include_relationships = True

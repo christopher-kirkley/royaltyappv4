@@ -29601,3 +29601,36 @@ JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1615318528856	geckodriver	INFO	Listening on 127.0.0.1:57483
+1615318528859	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevqZ5sd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615318530459	Marionette	INFO	Listening on port 35829
+1615318530479	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+1615318543422	Marionette	INFO	Stopped listening on port 35829
+1615318561162	geckodriver	INFO	Listening on 127.0.0.1:47317
+1615318561165	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2vb6Ni"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615318562643	Marionette	INFO	Listening on port 39163
+1615318562683	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1615318576169	geckodriver	INFO	Listening on 127.0.0.1:43591
+1615318576172	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZxd5BG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615318577654	Marionette	INFO	Listening on port 35635
+1615318577692	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/main.11603b410e4e25232bca.hot-update.js, line 83: ReferenceError: can't access lexical declaration 'physical' before initialization
+JavaScript error: http://localhost:3000/main.aa362eb151acd1bf7e48.hot-update.js, line 83: ReferenceError: can't access lexical declaration 'physical' before initialization
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
