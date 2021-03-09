@@ -49,8 +49,8 @@ class Catalog(db.Model):
     __tablename__ = 'catalog'
 
     id = db.Column(db.Integer, primary_key=True)
-    catalog_number = db.Column(db.String(100))
-    catalog_name = db.Column(db.String)
+    catalog_number = db.Column(db.String(100), unique=True)
+    catalog_name = db.Column(db.String, unique=True)
 
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
     version = db.relationship('Version', backref='catalog')
