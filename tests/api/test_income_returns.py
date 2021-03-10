@@ -26,12 +26,46 @@ def import_bandcamp_sales(test_client, db, case):
     return response
 
 def test_reversal_errors(test_client, db):
-
     import_catalog(test_client, db, CASE)
     import_bandcamp_sales(test_client, db, CASE)
     sel = db.session.query(IncomePending).filter(IncomePending.description == 'REVERSAL').subquery()
     assert len(db.session.query(sel).all()) == 10
     assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('0')
+
+def test_refund_third_party(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    sel = db.session.query(IncomePending).filter(IncomePending.description == 'REFUND THIRD PARTY').subquery()
+    assert len(db.session.query(sel).all()) == 2
+    assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('0')
+
+def test_refund_multiple_items(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    sel = db.session.query(IncomePending).filter(IncomePending.description == 'REFUND MULT ALBUMS').subquery()
+    assert len(db.session.query(sel).all()) == 4
+    assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('0')
+
+def test_refund_one_album_digital(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    sel = db.session.query(IncomePending).filter(IncomePending.description == 'REFUND 1 ALBUM DIGI').subquery()
+    assert len(db.session.query(sel).all()) == 2
+    assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('0')
+
+def test_refund_one_album_physical(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    sel = db.session.query(IncomePending).filter(IncomePending.description == 'REFUND 1 ALBUM PHY').subquery()
+    assert len(db.session.query(sel).all()) == 2
+    assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('0')
+
+def test_refund_partial(test_client, db):
+    import_catalog(test_client, db, CASE)
+    import_bandcamp_sales(test_client, db, CASE)
+    sel = db.session.query(IncomePending).filter(IncomePending.description == 'PARTIAL REFUND').subquery()
+    assert len(db.session.query(sel).all()) == 2
+    assert db.session.query(func.sum(sel.c.amount)).first()[0] == Decimal('10.13')
 
 
 # def test_can_import_refund(test_client, db):
