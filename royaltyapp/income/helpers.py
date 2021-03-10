@@ -76,14 +76,25 @@ class BandcampStatement(Statement):
     def clean(self):
         self.df.drop(self.df[self.df['item type'] == 'payout'].index, inplace=True)
         self.df.drop(self.df[self.df['item type'] == 'adjustment'].index, inplace=True)
-        types_to_change = ['refund', 'reversal']
         self.df['type'] = np.where(self.df['item type'] == 'track', 'track', self.df['item type'])
         self.df['type'] = np.where(self.df['item type'] != 'track', 'album', self.df['item type'])
 
-        self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
+        # types_to_change = ['refund', 'reversal']
+        # self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
 
-        self.df.loc[self.df['item type'] == 'refund', 'item type'] = 'physical'
-        self.df.loc[self.df['item type'] == 'reversal', 'item type'] = 'physical'
+#         self.df.loc[self.df['item type'] == 'refund', 'item type'] = 'physical'
+#         self.df.loc[self.df['item type'] == 'reversal', 'item type'] = 'physical'
+
+        """ Handle reversals """
+
+        self.df['new_net'] = self.df['sub total']-self.df['assessed revenue share'].replace(np.nan, 0)-self.df['transaction fee'].replace(np.nan, 0)
+        self.df.loc[self.df['item type'] == 'reversal', 'net amount'] = self.df['new_net']
+
+
+        """ End reversal """
+
+
+
         self.df.loc[self.df['item type'] == 'album', 'item type'] = 'digital'
         self.df.loc[self.df['item type'] == 'track', 'item type'] = 'digital'
         self.df.loc[self.df['item type'] == 'package', 'item type'] = 'physical'
