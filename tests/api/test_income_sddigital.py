@@ -121,5 +121,40 @@ def test_can_generate_statement(test_client, db):
 
     response = test_client.get('/statements/1/artist/1')
     assert response.status_code == 200
-    assert json.loads(response.data) == {}
+    assert json.loads(response.data) == {
+                       'advance': [],
+           'album_sales': [],
+           'artist': 'Bonehead',
+           'expense': [],
+           'income': [{'catalog_name': 'Amazing',
+                       'combined_net': 0.08,
+                       'digital_net': 0.08,
+                       'master_net': 0,
+                       'physical_net': 0}],
+           'master_sales': [],
+           'statement': 'statement_2020_01_01_2020_01_31',
+           'summary': [{'advances': 0.0,
+                        'balance_forward': 0.04,
+                        'previous_balance': 0.0,
+                        'recoupables': 0.0,
+                        'sales': 0.08,
+                        'split': 0.04,
+                        'total_to_split': 0.08}],
+           'track_sales': [{'net': 0.01,
+                            'quantity': 1,
+                            'track_name': 'Chicken'},
+                           {'net': 0.02,
+                            'quantity': 2,
+                            'track_name': 'Fruitcake'},
+                           {'net': 0.02,
+                            'quantity': 2,
+                            'track_name': 'New York Dreamin’'},
+                           {'net': 0.01,
+                            'quantity': 1,
+                            'track_name': 'Pineapples'},
+                           {'net': 0.01,
+                            'quantity': 1,
+                            'track_name': 'Poetry'}],
+           }
+
 

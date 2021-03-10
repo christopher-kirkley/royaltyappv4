@@ -79,8 +79,6 @@ class BandcampStatement(Statement):
         self.df['type'] = np.where(self.df['item type'] == 'track', 'track', self.df['item type'])
         self.df['type'] = np.where(self.df['item type'] != 'track', 'album', self.df['item type'])
 
-        # types_to_change = ['refund', 'reversal']
-        # self.df.loc[self.df['item type'].isin(types_to_change), 'net amount'] = self.df['item total']
 
 #         self.df.loc[self.df['item type'] == 'refund', 'item type'] = 'physical'
 #         self.df.loc[self.df['item type'] == 'reversal', 'item type'] = 'physical'
@@ -94,10 +92,14 @@ class BandcampStatement(Statement):
         """ Handle refunds """
 
         """ Third party refund """
-        # self.df.loc[(self.df['item type'] == 'refund') & (self.df['quantity'].isnull())]
         groupdf = self.df.loc[self.df['item type'] == 'refund'].groupby(['bandcamp transaction id']).sum().reset_index()
-        transaction_id = groupdf.loc[groupdf['assessed revenue share'] == 0, 'bandcamp transaction id'].values[0]
-        self.df.loc[self.df['bandcamp transaction id'] == transaction_id, 'net amount'] = 0
+        groupdf = groupdf.loc[groupdf['assessed revenue share'] == 0, 'bandcamp transaction id']
+        if len(groupdf) > 0:
+            transaction_id = groupdf.values[0]
+            self.df.loc[self.df['bandcamp transaction id'] == transaction_id, 'net amount'] = 0
+        else:
+            pass
+
 
         """ Refund multiple items. """
         groupdf = self.df.loc[self.df['item type'] == 'refund'].groupby(['bandcamp transaction id']).sum().reset_index()
