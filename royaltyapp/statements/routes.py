@@ -561,8 +561,6 @@ def export_csv(id, artist_id):
     f = open(f'files/{filename}.csv', 'w')
     outcsv = csv.writer(f)
 
-    # records = db.session.query(Artist).all()
-
     # get table
     table = ga.get_statement_table(id, metadata)
     # filter by artist
