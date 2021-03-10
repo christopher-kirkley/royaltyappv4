@@ -47,6 +47,14 @@ def get_pending_statements():
     pending_statements = expense_pending_schema.dumps(query)
     return pending_statements
 
+@expense.route('/expense/pending-statements/<name>', methods=['DELETE'])
+def delete_pending_statements(name):
+    res = (db.session.query(ExpensePending)
+            .filter(ExpensePending.statement==name))
+    res.delete()
+    db.session.commit()
+    return jsonify({'success': 'true'})
+
 @expense.route('/expense/artist-matching-errors', methods=['GET'])
 def get_artist_matching_errors():
     query = artist_matching_errors()
