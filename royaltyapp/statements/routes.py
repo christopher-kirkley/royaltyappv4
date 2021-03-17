@@ -587,7 +587,7 @@ def export_csv(id, artist_id):
         .join(IncomeDistributor, IncomeDistributor.id == table.c.income_distributor_id)
         .outerjoin(Version, Version.id == table.c.version_id)
         .outerjoin(Track, Track.id == table.c.track_id)
-        .join(Catalog, Version.catalog_id == Catalog.id)
+        .outerjoin(Catalog, Version.catalog_id == Catalog.id)
         .order_by(table.c.date)
         ).all()
 
