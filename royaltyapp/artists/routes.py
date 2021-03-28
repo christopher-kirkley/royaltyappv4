@@ -89,3 +89,28 @@ def add_contact():
         db.session.rollback()
         return jsonify({'success': 'false'})
     return jsonify({'success': 'true'})
+
+@artists.route('/contacts/<id>', methods=['PUT'])
+def edit_contact(id):
+    data = request.get_json(force=True)
+    obj = db.session.query(Contact).get(id)
+
+    if data['contact_prenom']:
+        obj.prenom = data['contact_prenom']
+    if data['contact_middle']:
+        obj.middle = data['contact_middle']
+    if data['contact_surnom']:
+        obj.surnom = data['contact_surnom']
+    if data['address']:
+        obj.address = data['address']
+    if data['phone']:
+        obj.phone = data['phone']
+    if data['bank_name']:
+        obj.bank_name = data['bank_name']
+    if data['bban']:
+        obj.bban = data['bban']
+    if data['notes']:
+        obj.notes = data['notes']
+
+    db.session.commit()
+    return jsonify({'success': 'true'})
