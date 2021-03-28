@@ -24,7 +24,7 @@ def test_can_get_all_artists(test_client, db):
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
                                         "catalog": [],
-                                        "contact": {},
+                                        "contact": [],
                                         }]
 
 
@@ -83,7 +83,7 @@ def test_can_get_one_artist(test_client, db):
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
                                         "catalog": [],
-                                        "contact": {}
+                                        "contact": []
                                         }
 
     
@@ -135,3 +135,33 @@ def test_can_add_contact(test_client, db):
                                             'bban': 'ML12312341242345',
                                             }]
                                         }
+
+def test_can_edit_contact(test_client, db):
+    add_one_artist(db)
+    data = {
+            'contact_prenom': 'Bobo',
+            'contact_middle': 'Bo',
+            'contact_surnom': 'Nono',
+            'address': '100 Main Bamako',
+            'phone': '+22312312314',
+            'bank_name': 'Bank of World',
+            'bban': 'ML12312341242345',
+            'notes': 'Wire',
+            'artist_id': 1,
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/contacts', data=json_data)
+    assert response.status_code == 200
+    data = {
+            'contact_prenom': 'Bobo',
+            'contact_middle': 'Bo',
+            'contact_surnom': 'Nono',
+            'address': '100 Main Bamako',
+            'phone': '+22312312314',
+            'bank_name': 'Bank of World',
+            'bban': 'ML12312341242345',
+            'notes': 'Wire',
+            }
+    json_data = json.dumps(data)
+    response = test_client.put('/contacts/1', data=json_data)
+    assert response.status_code == 200

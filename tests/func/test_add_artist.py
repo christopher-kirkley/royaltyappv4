@@ -70,10 +70,10 @@ def test_returns(browser, test_client, db):
     assert tds[1].text == 'Bob'
     assert tds[2].text == 'Nono'
 
-
     """ User clicks on artist detail and goes to artist page """
     artist_detail = browser.find_element_by_id('artist-detail')
     artist_detail.click()
+
     assert browser.find_element_by_id('prenom')
     heading = browser.find_element_by_id('header')
     assert heading.text == 'Artist Detail'
@@ -82,23 +82,32 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('surnom').get_attribute("value") == 'Nono'
 
     """ User can now see that contact was added. """
-    assert browser.find_element_by_id('contact_prenom').get_attribute("value") == 'Bobo'
+    assert browser.find_element_by_id('contact_prenom').get_attribute("value") == 'Bob'
     assert browser.find_element_by_id('contact_middle').get_attribute("value") == 'Bo'
     assert browser.find_element_by_id('contact_surnom').get_attribute("value") == 'Nono'
 
-    """ User realizes they made a mistake in the name,
-    and updates spelling"""
+    """ User realizes they made mistake in the name, and updates spelling"""
     browser.find_element_by_id('edit').click()
 
     surnom = browser.find_element_by_id('surnom')
     surnom.clear()
-    surnom.send_keys('Ag Kaedy')
+    surnom.send_keys('Jones')
+
+    contact_surnom = browser.find_element_by_id('contact_surnom')
+    contact_surnom.clear()
+    contact_surnom.send_keys('Jones')
+    
     submit = browser.find_element_by_id('submit')
     submit.click()
     
-    """ User returns to main page and verifies change."""
-    table = browser.find_element_by_id('artist-table')
-    rows = table.find_elements_by_tag_name('tr')
-    tds = rows[1].find_elements_by_tag_name('td');
-    assert tds[2].text == 'Ag Kaedy'
+    artist_detail = browser.find_element_by_id('artist-detail')
+    artist_detail.click()
+    assert browser.find_element_by_id('surnom').get_attribute("value") == 'Jones'
+    assert browser.find_element_by_id('contact_surnom').get_attribute("value") == 'Jones'
+
+    # """ User returns to main page and verifies change."""
+    # table = browser.find_element_by_id('artist-table')
+    # rows = table.find_elements_by_tag_name('tr')
+    # tds = rows[1].find_elements_by_tag_name('td');
+    # assert tds[2].text == 'Jones'
 

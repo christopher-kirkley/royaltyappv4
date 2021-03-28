@@ -163,6 +163,7 @@ class ContactSchema(ma.SQLAlchemyAutoSchema):
                 "phone",
                 "bban",
                 "bank_name",
+                "notes",
                 )
 
 class ArtistSchema(ma.SQLAlchemyAutoSchema):
