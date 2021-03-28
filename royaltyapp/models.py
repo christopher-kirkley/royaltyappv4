@@ -62,6 +62,7 @@ class Contact(db.Model):
     artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
 
 
+
 class Catalog(db.Model):
     __tablename__ = 'catalog'
 
@@ -149,14 +150,29 @@ class CatalogSchema(ma.SQLAlchemyAutoSchema):
     def _custom_serializer(self, obj):
         return 'adfas'
 
+class ContactSchema(ma.SQLAlchemyAutoSchema):
+
+    class Meta:
+        model = Contact
+        fields = (
+                "id",
+                "prenom",
+                "middle",
+                "surnom",
+                "address",
+                "phone",
+                "bban",
+                "bank_name",
+                )
 
 class ArtistSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        fields = ("id", "artist_name", "prenom", "surnom", "catalog")
+        fields = ("id", "artist_name", "prenom", "surnom", "catalog", "contact")
         include_relationships = True
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
 
+    contact = ma.Nested(ContactSchema, many=True)
 
 
 

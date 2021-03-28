@@ -102,9 +102,3 @@ def test_returns(browser, test_client, db):
     tds = rows[1].find_elements_by_tag_name('td');
     assert tds[2].text == 'Ag Kaedy'
 
-
-    
-    
-
-    
-

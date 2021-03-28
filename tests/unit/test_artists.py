@@ -24,6 +24,7 @@ def test_can_get_all_artists(test_client, db):
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
                                         "catalog": [],
+                                        "contact": {},
                                         }]
 
 
@@ -35,9 +36,9 @@ def test_can_add_artist(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/artists', data=json_data)
     assert response.status_code == 200
+    assert json.loads(response.data) == {'success': 'true', 'id': 1}
     result = Artist.query.all()
     assert len(result) == 1
-    assert json.loads(response.data) == {'success': 'true'}
 
 def test_one(test_client, db):
     add_one_artist(db)
@@ -81,7 +82,8 @@ def test_can_get_one_artist(test_client, db):
                                         "artist_name": "Amanar",
                                         "prenom": "Ahmed",
                                         "surnom": "Ag Kaedi",
-                                        "catalog": []
+                                        "catalog": [],
+                                        "contact": {}
                                         }
 
     
@@ -103,5 +105,33 @@ def test_can_add_contact(test_client, db):
     assert response.status_code == 200
     result = Contact.query.all()
     assert len(result) == 1
+    assert result[0].id == 1
+    assert result[0].artist_id == 1
+    assert result[0].prenom == 'Bobo'
     assert json.loads(response.data) == {'success': 'true'}
 
+    result = Artist.query.all()
+    assert result[0].id == 1
+    contact_1 = result[0].contact[0]
+    assert contact_1.id == 1
+    assert contact_1.prenom == 'Bobo'
+
+    response = test_client.get('/artists/1')
+    assert response.status_code == 200
+    assert json.loads(response.data) == {
+                                        "id": 1,
+                                        "artist_name": "Amanar",
+                                        "prenom": "Ahmed",
+                                        "surnom": "Ag Kaedi",
+                                        "catalog": [],
+                                        "contact": [{
+                                            'id': 1,
+                                            'prenom': 'Bobo',
+                                            'middle': 'Bo',
+                                            'surnom': 'Nono',
+                                            'address': '100 Main Bamako',
+                                            'phone': '+22312312314',
+                                            'bank_name': 'Bank of World',
+                                            'bban': 'ML12312341242345',
+                                            }]
+                                        }

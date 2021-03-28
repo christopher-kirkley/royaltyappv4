@@ -47,7 +47,8 @@ def add_artist():
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
+    return jsonify({'success': 'true',
+                    'id': new_artist.id })
 
 @artists.route('/artists/<id>', methods=['DELETE'])
 def delete_artist(id):
@@ -80,6 +81,7 @@ def add_contact():
                         bank_name=data['bank_name'],
                         bban=data['bban'],
                         notes=data['notes'],
+                        artist_id=data['artist_id'],
                         )
         db.session.add(new_contact)
         db.session.commit()
