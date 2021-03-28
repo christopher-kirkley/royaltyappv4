@@ -2,7 +2,7 @@ import pytest
 import json
 from flask import jsonify
 
-from royaltyapp.models import Artist
+from royaltyapp.models import Artist, Contact
 
 def add_one_artist(db):
     new_artist = Artist(artist_name='Amanar',
@@ -48,7 +48,7 @@ def test_can_delete_artist(test_client, db):
     add_one_artist(db)
     q = db.session.query(Artist).first()
     id_to_delete = q.id
-    resp = test_client.delete(f'/artists/delete/{id_to_delete}')
+    resp = test_client.delete(f'/artists/{id_to_delete}')
     assert resp.status_code == 200
     result = db.session.query(Artist).all()
     assert len(result) == 0
@@ -85,4 +85,23 @@ def test_can_get_one_artist(test_client, db):
                                         }
 
     
+def test_can_add_contact(test_client, db):
+    add_one_artist(db)
+    data = {
+            'contact_prenom': 'Bobo',
+            'contact_middle': 'Bo',
+            'contact_surnom': 'Nono',
+            'address': '100 Main Bamako',
+            'phone': '+22312312314',
+            'bank_name': 'Bank of World',
+            'bban': 'ML12312341242345',
+            'notes': 'Wire',
+            'artist_id': 1,
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/contacts', data=json_data)
+    assert response.status_code == 200
+    result = Contact.query.all()
+    assert len(result) == 1
+    assert json.loads(response.data) == {'success': 'true'}
 

@@ -43,6 +43,23 @@ class Artist(db.Model):
 
     catalog = db.relationship('Catalog', backref='artist')
     track = db.relationship('Track', backref='artist')
+    contact = db.relationship('Contact', backref='artist')
+
+
+class Contact(db.Model):
+    __tablename__ = 'contact'
+
+    id = db.Column(db.Integer, primary_key=True)
+    prenom = db.Column(db.String)
+    middle = db.Column(db.String)
+    surnom = db.Column(db.String)
+    address = db.Column(db.String)
+    phone = db.Column(db.String)
+    bank_name = db.Column(db.String)
+    bban = db.Column(db.String)
+    notes = db.Column(db.String)
+
+    artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
 
 
 class Catalog(db.Model):

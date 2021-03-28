@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema
+from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema, Contact
 import json
 
 artists = Blueprint('artists', __name__)
@@ -67,3 +67,23 @@ def get_tracks_by_artist(id):
     track_schema = TrackSchema(many=True)
     return track_schema.dumps(result)
 
+@artists.route('/contacts', methods=['POST'])
+def add_contact():
+    data = request.get_json(force=True)
+    try:
+        new_contact = Contact(
+                        prenom=data['contact_prenom'],
+                        middle=data['contact_middle'],
+                        surnom=data['contact_surnom'],
+                        address=data['address'],
+                        phone=data['phone'],
+                        bank_name=data['bank_name'],
+                        bban=data['bban'],
+                        notes=data['notes'],
+                        )
+        db.session.add(new_contact)
+        db.session.commit()
+    except exc.DataError:
+        db.session.rollback()
+        return jsonify({'success': 'false'})
+    return jsonify({'success': 'true'})

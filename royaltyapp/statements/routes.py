@@ -619,6 +619,7 @@ def export_csv(id, artist_id):
                     item.track_name,
                     item.quantity,
                     item.artist_net,
+                    # f'{item.artist_net:.9f}',
                     item.customer,
                     item.city,
                     item.region,
