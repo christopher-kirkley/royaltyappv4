@@ -34,6 +34,7 @@ def test_returns(browser, test_client, db):
     artist_name = browser.find_element_by_id('artist_name')
     prenom = browser.find_element_by_id('prenom')
     surnom = browser.find_element_by_id('surnom')
+    time.sleep(10000000)
 
     contact_prenom = browser.find_element_by_id('contact_prenom')
     contact_middle = browser.find_element_by_id('contact_middle')
@@ -71,7 +72,7 @@ def test_returns(browser, test_client, db):
     assert tds[2].text == 'Nono'
 
     """ User clicks on artist detail and goes to artist page """
-    artist_detail = browser.find_element_by_id('artist-detail')
+    artist_detail = browser.find_element_by_id('view-1')
     artist_detail.click()
 
     assert browser.find_element_by_id('prenom')
@@ -100,10 +101,38 @@ def test_returns(browser, test_client, db):
     submit = browser.find_element_by_id('submit')
     submit.click()
     
-    artist_detail = browser.find_element_by_id('artist-detail')
+    artist_detail = browser.find_element_by_id('view-1')
     artist_detail.click()
     assert browser.find_element_by_id('surnom').get_attribute("value") == 'Jones'
     assert browser.find_element_by_id('contact_surnom').get_attribute("value") == 'Jones'
+
+    """ User adds another artist. """
+    artist = browser.find_element_by_id('artists')
+    artist.click()
+    add_artist = browser.find_element_by_id('add_artist')
+    add_artist.click()
+    time.sleep(1)
+
+    """ User arrives at new page to add artist """
+    artist_name = browser.find_element_by_id('artist_name')
+    prenom = browser.find_element_by_id('prenom')
+    surnom = browser.find_element_by_id('surnom')
+    submit = browser.find_element_by_id('submit')
+
+    artist_name.send_keys('SpeakerBass')
+    prenom.send_keys('Jo')
+    surnom.send_keys('Jimi')
+
+    submit.click()
+
+    """ User can now see that artist was added. """
+    table = browser.find_element_by_id('artist-table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(db.session.query(Artist).all()) == 2
+    artist_detail = browser.find_element_by_id('view-2')
+    artist_detail.click()
+
+
 
     # """ User returns to main page and verifies change."""
     # table = browser.find_element_by_id('artist-table')

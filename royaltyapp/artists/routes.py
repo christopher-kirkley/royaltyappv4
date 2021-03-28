@@ -120,3 +120,9 @@ def edit_contact(id):
 
     db.session.commit()
     return jsonify({'success': 'true'})
+
+@artists.route('/contacts/<id>', methods=['GET'])
+def get_one_contact(id):
+    result = db.session.query(Contact).filter(Contact.id==id).one()
+    contact_schema = ContactSchema()
+    return contact_schema.dumps(result)
