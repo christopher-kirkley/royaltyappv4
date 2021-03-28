@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
-from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema, Contact
+from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema, Contact, ContactSchema
 import json
 
 artists = Blueprint('artists', __name__)
@@ -67,6 +67,12 @@ def get_tracks_by_artist(id):
     result = db.session.query(Track).filter(Track.artist_id==id).all()
     track_schema = TrackSchema(many=True)
     return track_schema.dumps(result)
+
+@artists.route('/contacts', methods=['GET'])
+def get_contacts():
+    result = Contact.query.all()
+    contact_schema = ContactSchema(many=True)
+    return contact_schema.dumps(result)
 
 @artists.route('/contacts', methods=['POST'])
 def add_contact():
