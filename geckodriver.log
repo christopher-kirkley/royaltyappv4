@@ -32366,3 +32366,503 @@ JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: 
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 2184: TypeError: json.contact is null
 1616995847601	Marionette	INFO	Stopped listening on port 45821
+1616997366507	geckodriver	INFO	Listening on 127.0.0.1:55723
+1616997366510	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejbKazC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616997367966	Marionette	INFO	Listening on port 42429
+1616997368030	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 37ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1616997369286	Marionette	INFO	Stopped listening on port 42429
+1616997379938	geckodriver	INFO	Listening on 127.0.0.1:36181
+1616997379941	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegvGZqS"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616997381476	Marionette	INFO	Listening on port 34587
+1616997381556	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/main.92ac308e0f2e6225d795.hot-update.js, line 84: TypeError: json.contact[0] is undefined
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor23, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: "<Provider> does not support changing `store` on the fly. It is most likely that you see this error because you updated to Redux 2.x and React Redux 2.x which no longer hot reload reducers automatically. See https://github.com/reactjs/react-redux/releases/tag/v2.0.0 for the migration instructions."
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor279, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:310:15
+
+JavaScript error: http://localhost:3000/main.be71c50f7dd9f6126fc3.hot-update.js, line 127: TypeError: res is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1601: TypeError: res is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1601: TypeError: res is undefined
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor708, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor1591, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:310:15
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3012, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3215, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor3540, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1484: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/artists/ArtistDetail.js: Unexpected token (83:4)
+
+[0m [90m 81 | [39m					})[0m
+[0m [90m 82 | [39m			})[0m
+[0m[31m[1m>[22m[39m[90m 83 | [39m			})[0m
+[0m [90m    | [39m			 [31m[1m^[22m[39m[0m
+[0m [90m 84 | [39m		})[0m
+[0m [90m 85 | [39m	}[0m
+[0m [90m 86 | [39m[0m
+    at _temp._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:776:17)
+    at _temp.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:769:17)
+    at _temp.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:737:17)
+    at _temp.unexpected (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9675:16)
+    at _temp.parseExprAtom (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:11069:20)
+    at _temp.parseExprAtom (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:5177:20)
+    at _temp.parseExprSubscripts (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10644:23)
+    at _temp.parseUpdate (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10624:21)
+    at _temp.parseMaybeUnary (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10602:23)
+    at _temp.parseExprOps (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:10463:23)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1617000782087	geckodriver	INFO	Listening on 127.0.0.1:43691
+1617000782090	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuFFqpq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617000783585	Marionette	INFO	Listening on port 37475
+1617000783604	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 56ms)
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/main.0d7f053d4493e5429b7c.hot-update.js, line 130: ReferenceError: artist is not defined
+JavaScript error: http://localhost:3000/main.0d7f053d4493e5429b7c.hot-update.js, line 130: ReferenceError: artist is not defined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor339, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 193572: TypeError: methods is null
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor474, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor1195, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor1450, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:310:15
+
+JavaScript error: http://localhost:3000/main.cf5cfc3160286ffc25c3.hot-update.js, line 104: ReferenceError: contact is not defined
+JavaScript error: http://localhost:3000/main.cf5cfc3160286ffc25c3.hot-update.js, line 104: ReferenceError: contact is not defined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+console.error: "<Provider> does not support changing `store` on the fly. It is most likely that you see this error because you updated to Redux 2.x and React Redux 2.x which no longer hot reload reducers automatically. See https://github.com/reactjs/react-redux/releases/tag/v2.0.0 for the migration instructions."
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child3/longstractor2481, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:288:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:11
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:663:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:332:13
+onPacket@resource://devtools/client/devtools-client.js:489:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1617003852111	Marionette	INFO	Stopped listening on port 37475

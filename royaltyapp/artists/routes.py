@@ -21,6 +21,7 @@ def one_artist(id):
 @artists.route('/artists/<id>', methods=['PUT'])
 def edit_artist(id):
     data = request.get_json(force=True)
+    print(data)
     obj = db.session.query(Artist).get(id)
 
     if data['artist_name']:
@@ -29,6 +30,8 @@ def edit_artist(id):
         obj.prenom = data['prenom']
     if data['surnom']:
         obj.surnom = data['surnom']
+    if data['contact_id']:
+        obj.contact_id = data['contact_id']
 
     db.session.commit()
     return jsonify({'success': 'true'})
@@ -97,7 +100,7 @@ def add_contact():
     except exc.DataError:
         db.session.rollback()
         return jsonify({'success': 'false'})
-    return jsonify({'success': 'true'})
+    return jsonify({'success': 'true', 'id': contact_id })
 
 @artists.route('/contacts/<id>', methods=['PUT'])
 def edit_contact(id):
