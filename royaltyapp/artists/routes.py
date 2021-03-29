@@ -87,9 +87,12 @@ def add_contact():
                         bank_name=data['bank_name'],
                         bban=data['bban'],
                         notes=data['notes'],
-                        artist_id=data['artist_id'],
                         )
         db.session.add(new_contact)
+        db.session.commit()
+        contact_id = new_contact.id
+        artist_obj = db.session.query(Artist).get(data['artist_id'])
+        artist_obj.contact_id = contact_id
         db.session.commit()
     except exc.DataError:
         db.session.rollback()

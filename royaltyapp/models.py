@@ -43,7 +43,8 @@ class Artist(db.Model):
 
     catalog = db.relationship('Catalog', backref='artist')
     track = db.relationship('Track', backref='artist')
-    contact = db.relationship('Contact', backref='artist')
+
+    contact_id = db.Column(db.Integer, db.ForeignKey('contact.id'))
 
 
 class Contact(db.Model):
@@ -59,7 +60,7 @@ class Contact(db.Model):
     bban = db.Column(db.String)
     notes = db.Column(db.String)
 
-    artist_id = db.Column(db.Integer, db.ForeignKey('artist.id'))
+    artist = db.relationship('Artist', backref='contact')
 
 
 
@@ -173,7 +174,7 @@ class ArtistSchema(ma.SQLAlchemyAutoSchema):
     
     catalog = ma.Nested(CatalogSchema, many=True, only=("id", "catalog_number", "catalog_name", "version"))
 
-    contact = ma.Nested(ContactSchema, many=True)
+    contact = ma.Nested(ContactSchema)
 
 
 
