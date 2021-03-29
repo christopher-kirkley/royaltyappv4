@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from flask_cors import CORS
 from royaltyapp.models import db, ma
 from royaltyapp.cache import cache
@@ -17,6 +18,8 @@ def create_app(config_class=None):
     else:
         royaltyapp.config.from_object(config_class)
     
+    migrate = Migrate(royaltyapp, db)
+
     db.init_app(royaltyapp)
 
     from royaltyapp.home.routes import home
