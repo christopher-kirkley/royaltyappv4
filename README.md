@@ -28,12 +28,12 @@ PUT	Changes and/or replaces resources or collections
 DELETE	Deletes resources  
 
 ### Artists
-`/artists`
-`/artists/{artistId}`
-`/artists/{artistId}/catalog`
-`/artists/{artistId}/track`
-`/contacts`
-`/contacts/{contactId}`
+`/artists`  
+`/artists/{artistId}`  
+`/artists/{artistId}/catalog`  
+`/artists/{artistId}/track`  
+`/contacts`  
+`/contacts/{contactId}`  
 
 
 ### Catalog
