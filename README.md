@@ -24,7 +24,7 @@ DELETE	Deletes resources
 
 ### Catalog
 
-`/catalog`                - All catalog items
+`/catalog`                - All catalog items  
 `/catalog/{catalogId}`    - Catalog by record id
 /version                - Version items (belonging to catalog)
 /version/{versionId}    - Version by version id
