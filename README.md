@@ -30,7 +30,7 @@ DELETE	Deletes resources
 `/version/{versionId}`     
 `/track`                   
 `/track/{trackId}`     
-`/catalog/import-catalog`
-`/catalog/import-version` 
-`/catalog/import-track`   
+`/catalog/import-catalog`  
+`/catalog/import-version`  
+`/catalog/import-track` 
 
