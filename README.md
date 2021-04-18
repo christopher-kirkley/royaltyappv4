@@ -14,3 +14,12 @@ This is a flask app for calculating record label royalties. The app serves a RES
 NOTE: Functional tests using Selenium require geckodriver, and needs to be included in PATH.
 
 ## Endpoints
+
+The API is based on REST principles,accessed via standard HTTPS requests in UTF-8 format to an API endpoint. API uses HTTP verbs for each action:
+
+GET	Retrieves resources
+POST	Creates resources
+PUT	Changes and/or replaces resources or collections
+DELETE	Deletes resources
+
+### Catalog
