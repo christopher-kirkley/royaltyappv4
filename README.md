@@ -24,13 +24,13 @@ DELETE	Deletes resources
 
 ### Catalog
 
-`/catalog`                All catalog items  
-`/catalog/{catalogId}`    Catalog by record id  
-`/version`                  Version items (belonging to catalog)  
-`/version/{versionId}`      Version by version id  
-`/track`                    All tracks  
-/track/{trackId}          Track by track id
-/catalog/import-catalog - Import CSV in template of catalog items
-/catalog/import-version - Import CSV in template of version items
-/catalog/import-track   - Import CSV in template for track items
+`/catalog`     
+`/catalog/{catalogId}`    
+`/version`                 
+`/version/{versionId}`     
+`/track`                   
+`/track/{trackId}`     
+`/catalog/import-catalog`
+`/catalog/import-version` 
+`/catalog/import-track`   
 
