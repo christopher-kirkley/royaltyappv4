@@ -5,11 +5,15 @@ from flask_cors import CORS
 from royaltyapp.models import db, ma
 from royaltyapp.cache import cache
 
+import jwt
+from flask_jwt_extended import JWTManager
 
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
-    CORS(royaltyapp)
+    CORS(royaltyapp, supports_credentials='true')
     
+    jwt = JWTManager(royaltyapp)
+
     royaltyapp.config['CACHE_TYPE']='simple'
     cache.init_app(royaltyapp)
 
