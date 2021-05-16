@@ -33452,3 +33452,144 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1621176771107	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
 1621176774635	Marionette	INFO	Stopped listening on port 41389
+1621182277577	geckodriver	INFO	Listening on 127.0.0.1:53921
+1621182277582	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileamMjEa"
+1621182277936	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621182279022	Marionette	INFO	Listening on port 34445
+1621182279097	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621182282643	Marionette	INFO	Stopped listening on port 34445
+1621182283177	geckodriver	INFO	Listening on 127.0.0.1:43085
+1621182283179	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileT2xRzm"
+1621182283528	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621182284641	Marionette	INFO	Listening on port 46627
+1621182284698	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621182288218	Marionette	INFO	Stopped listening on port 46627
+1621182404514	geckodriver	INFO	Listening on 127.0.0.1:60039
+1621182404517	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5lsXuD"
+1621182404868	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621182406027	Marionette	INFO	Listening on port 38883
+1621182406165	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621182409670	Marionette	INFO	Stopped listening on port 38883
+1621182410199	geckodriver	INFO	Listening on 127.0.0.1:36319
+1621182410202	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWDZxnW"
+1621182410557	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621182411719	Marionette	INFO	Listening on port 39685
+1621182411860	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621182415400	Marionette	INFO	Stopped listening on port 39685
+1621182445353	geckodriver	INFO	Listening on 127.0.0.1:54151
+1621182445358	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1ZfqF4"
+1621182445724	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621182446885	Marionette	INFO	Listening on port 35351
+1621182447023	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.911: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.912: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.927: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.927: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-WARNING **: 09:35:37.928: ../../../gobject/gsignal.c:3600: signal name 'load_complete' is invalid for instance '0x7f6f8dc6f7d0' of type 'MaiAtkType139'
+
+(firefox:45694): GLib-GObject-WARNING **: 09:35:37.928: ../../../gobject/gsignal.c:3600: signal name 'load_complete' is invalid for instance '0x7f6f8dc6f650' of type 'MaiAtkType139'
+
+(firefox:45694): GLib-GObject-WARNING **: 09:35:37.928: ../../../gobject/gsignal.c:3600: signal name 'load_complete' is invalid for instance '0x7f6f8dc6f0b0' of type 'MaiAtkType139'
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.955: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:37.981: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:35:43.395: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:36:39.540: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:36:41.082: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:36:41.174: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:37:51.826: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:37:51.826: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:45694): GLib-GObject-CRITICAL **: 09:37:57.367: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: https://s0.2mdn.net/8388726/1617820291603/index.html, line 151: TypeError: a.a is null
+JavaScript error: https://s0.2mdn.net/8388726/1617820291603/index.html, line 166: TypeError: this.a is null
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: https://apps.sascdn.com/rtb/transparency/handler/st.min.html?%7b%22bid%22%3a%22736444784935356885%22%2c%22adomain%22%3a%22purple.com%22%2c%22page%22%3a%221170907%22%2c%22format%22%3a%2276023%22%2c%22crid%22%3a%22147-623058_2_S%22%2c%22dsp%22%3a%22349%22%2c%22buyer%22%3a%22137998%22%2c%22cid%22%3a%22147-623058%22%2c%22adid%22%3a%222d858a2aa53c%22%2c%22hash%22%3a%22-1178823109671958071%22%7d, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567731&width=300&height=250, line 2: TypeError: this.log is not a function
+JavaScript error: https://ap.lijit.com/www/delivery/fpi.js?{random}&_ADTIME_&z=567733&width=300&height=250, line 2: TypeError: this.log is not a function
+1621183268058	Marionette	INFO	Stopped listening on port 35351
+1621183270903	geckodriver	INFO	Listening on 127.0.0.1:38219
+1621183270906	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezAPveq"
+1621183271272	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621183272433	Marionette	INFO	Listening on port 39627
+1621183272576	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621183283006	Marionette	INFO	Stopped listening on port 39627
+1621183288537	geckodriver	INFO	Listening on 127.0.0.1:60975
+1621183288540	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDZ0OzL"
+1621183288900	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621183290082	Marionette	INFO	Listening on port 34503
+1621183290211	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621183293789	Marionette	INFO	Stopped listening on port 34503
+1621183294321	geckodriver	INFO	Listening on 127.0.0.1:46845
+1621183294323	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMP42C3"
+1621183294668	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621183295859	Marionette	INFO	Listening on port 35459
+1621183295968	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621183299498	Marionette	INFO	Stopped listening on port 35459

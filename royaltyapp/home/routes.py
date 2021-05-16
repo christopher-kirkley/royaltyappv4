@@ -29,16 +29,16 @@ def login():
     user = User.query.filter_by(email=data['email']).first()
 
     if not user:
-        return make_response('Could not verify', 401)
+        return make_response('Could not verify', 400)
 
     if check_password_hash(user.password, data['password']):
-        response = jsonify({"msg": "login successful"})
+        response = jsonify({"success": "true"})
         access_token = create_access_token(identity=data['email'])
         set_access_cookies(response, access_token)
         response.set_cookie("session", "true", samesite="Lax", max_age=60)
         return response
 
-    return make_response('Could not verify', 401)
+    return make_response('Could not verify', 402)
 
 @home.route('/register', methods=['POST'])
 def create_user():
