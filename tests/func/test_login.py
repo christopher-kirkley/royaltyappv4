@@ -41,8 +41,11 @@ def test_login_admin_user(browser, test_client, db):
 
     artist = browser.find_element_by_id('artists')
     artist.click()
-    time.sleep(1000)
 
+    logout = browser.find_element_by_id('logout')
+    logout.click()
+
+    assert browser.title == 'Royalty App'
 
 # def test_login_no_user(browser, test_client, db):
 #     """ User goes to landing page """ 

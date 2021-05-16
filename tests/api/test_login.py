@@ -47,7 +47,6 @@ def test_can_add_user(test_client, db):
     hashed_password = res.password
     assert check_password_hash(hashed_password, 'password')
 
-
 def test_can_generate_user_cookies(test_client, db):
     add_admin_user(db)
     data = {'email': 'admin@admin.com',
@@ -58,3 +57,19 @@ def test_can_generate_user_cookies(test_client, db):
     assert response.status_code == 200
     assert response.headers['Set-Cookie']
     
+def test_can_logout(test_client, db):
+    add_admin_user(db)
+    res = db.session.query(User).all()
+    assert len(res) != 0
+    assert res[0].email == 'admin@admin.com'
+    hashed_password = res[0].password 
+    assert check_password_hash(hashed_password, 'password')
+
+    data = {'email': 'admin@admin.com',
+            'password': 'password',
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/login', data=json_data)
+    assert response.status_code == 200
+    response = test_client.post('/logout')
+    assert response.status_code == 200

@@ -52,3 +52,9 @@ def create_user():
     db.session.commit()
 
     return jsonify({'message': 'New user created'})
+
+@home.route('/logout', methods=['POST'])
+def logout():
+    response = jsonify({"success": "true"})
+    response.set_cookie("session", "false", samesite="Lax", max_age=0)
+    return response
