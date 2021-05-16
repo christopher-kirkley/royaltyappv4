@@ -35,7 +35,7 @@ def test_login_no_user(browser, test_client, db):
     submit.click()
 
     alert = browser.find_element_by_id('alert')
-    assert alert.text == 'Invalid Login'
+    assert alert.text == 'Invalid Login!'
 
 
 def test_login_valid_user(browser, test_client, db):

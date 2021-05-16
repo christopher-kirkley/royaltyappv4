@@ -33420,3 +33420,35 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1621118699966	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
 1621118703524	Marionette	INFO	Stopped listening on port 38727
+1621176713450	geckodriver	INFO	Listening on 127.0.0.1:36081
+1621176714453	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileB8uFZN"
+1621176715105	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621176716352	Marionette	INFO	Listening on port 35721
+1621176716377	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+1621176719898	Marionette	INFO	Stopped listening on port 35721
+1621176720440	geckodriver	INFO	Listening on 127.0.0.1:56907
+1621176720443	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuJ5Rij"
+1621176720810	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621176721893	Marionette	INFO	Listening on port 39247
+1621176721960	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621176725459	Marionette	INFO	Stopped listening on port 39247
+1621176763866	geckodriver	INFO	Listening on 127.0.0.1:50655
+1621176763869	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemSWfc0"
+1621176764229	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621176765406	Marionette	INFO	Listening on port 39989
+1621176765484	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621176769054	Marionette	INFO	Stopped listening on port 39989
+1621176769587	geckodriver	INFO	Listening on 127.0.0.1:49793
+1621176769589	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKENugb"
+1621176769933	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621176771056	Marionette	INFO	Listening on port 41389
+1621176771107	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621176774635	Marionette	INFO	Stopped listening on port 41389

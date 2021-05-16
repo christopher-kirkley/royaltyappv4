@@ -7,6 +7,9 @@ from flask_marshmallow import Marshmallow
 from marshmallow import fields
 from sqlalchemy import create_engine
 
+from werkzeug.security import generate_password_hash, check_password_hash
+import uuid
+
 db = SQLAlchemy()
 ma = Marshmallow()
 
@@ -36,8 +39,11 @@ class Bundle(db.Model):
 class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
+    public_id = db.Column(db.String(50))
     email = db.Column(db.String(50))
-    password = db.Column(db.String(50))
+    password = db.Column(db.String(100))
+    admin = db.Column(db.Boolean, default=False)
+
 
 class Artist(db.Model):
     __tablename__ = 'artist'
@@ -582,3 +588,16 @@ def init_new_instance(db):
     db.drop_all()
     db.create_all()
     insert_initial_values(db)
+
+def add_admin_user(db):
+    user = User(
+            public_id=str(uuid.uuid4()),
+            email="admin@admin.com",
+            password=generate_password_hash("password", method='sha256'),
+            admin=True
+            )
+    db.session.add(user)
+    db.session.commit()
+
+
+

@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
-from royaltyapp.models import db, ma
+from royaltyapp.models import db, ma, add_admin_user
 from royaltyapp.cache import cache
 
 import jwt
