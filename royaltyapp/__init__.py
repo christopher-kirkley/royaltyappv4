@@ -10,7 +10,7 @@ from flask_jwt_extended import JWTManager
 
 def create_app(config_class=None):
     royaltyapp = Flask(__name__)
-    CORS(royaltyapp, supports_credentials='true')
+    CORS(royaltyapp, supports_credentials=True)
     
     jwt = JWTManager(royaltyapp)
 

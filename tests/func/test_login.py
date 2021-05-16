@@ -29,7 +29,6 @@ def test_login_admin_user(browser, test_client, db):
     email = browser.find_element_by_id('email')
     password = browser.find_element_by_id('password')
     submit = browser.find_element_by_id('submit')
-    time.sleep(1)
 
     email.send_keys('admin@admin.com')
     password.send_keys('password')
@@ -40,26 +39,31 @@ def test_login_admin_user(browser, test_client, db):
     header = browser.find_element_by_id('header')
     assert header.text == 'Dashboard'
 
-def test_login_no_user(browser, test_client, db):
-    """ User goes to landing page """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    artist = browser.find_element_by_id('artists')
+    artist.click()
+    time.sleep(1000)
 
-    """ User sees button for login, and clicks """
-    browser.find_element_by_id('login').click()
-    time.sleep(1)
+
+# def test_login_no_user(browser, test_client, db):
+#     """ User goes to landing page """ 
+#     browser.get('http://localhost:3000/')
+#     assert browser.title == 'Royalty App'
+
+#     """ User sees button for login, and clicks """
+#     browser.find_element_by_id('login').click()
+#     time.sleep(1)
     
-    email = browser.find_element_by_id('email')
-    password = browser.find_element_by_id('password')
-    submit = browser.find_element_by_id('submit')
-    time.sleep(1)
+#     email = browser.find_element_by_id('email')
+#     password = browser.find_element_by_id('password')
+#     submit = browser.find_element_by_id('submit')
+#     time.sleep(1)
 
-    email.send_keys('user@hotmail.com')
-    password.send_keys('password')
+#     email.send_keys('user@hotmail.com')
+#     password.send_keys('password')
     
-    submit.click()
+#     submit.click()
 
-    alert = browser.find_element_by_id('alert')
-    assert alert.text == 'Invalid Login!'
+#     alert = browser.find_element_by_id('alert')
+#     assert alert.text == 'Invalid Login!'
 
 

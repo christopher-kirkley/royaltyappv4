@@ -18,6 +18,7 @@ from flask_jwt_extended import JWTManager
 from flask_jwt_extended import set_access_cookies
 from flask_jwt_extended import unset_jwt_cookies
 
+
 @home.route('/login', methods=['POST'])
 def login():
 
@@ -29,7 +30,7 @@ def login():
     user = User.query.filter_by(email=data['email']).first()
 
     if not user:
-        return make_response('Could not verify', 400)
+        return make_response('Could not verify', 401)
 
     if check_password_hash(user.password, data['password']):
         response = jsonify({"success": "true"})
@@ -38,7 +39,7 @@ def login():
         response.set_cookie("session", "true", samesite="Lax", max_age=60)
         return response
 
-    return make_response('Could not verify', 402)
+    return make_response('Could not verify', 401)
 
 @home.route('/register', methods=['POST'])
 def create_user():

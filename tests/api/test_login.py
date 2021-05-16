@@ -11,6 +11,8 @@ from royaltyapp.income.helpers import StatementFactory, find_distinct_version_ma
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
+from flask import request
+
 base = os.path.basename(__file__)
 CASE = base.split('.')[0]
 
@@ -46,5 +48,13 @@ def test_can_add_user(test_client, db):
     assert check_password_hash(hashed_password, 'password')
 
 
-
+def test_can_generate_user_cookies(test_client, db):
+    add_admin_user(db)
+    data = {'email': 'admin@admin.com',
+            'password': 'password',
+            }
+    json_data = json.dumps(data)
+    response = test_client.post('/login', data=json_data)
+    assert response.status_code == 200
+    assert response.headers['Set-Cookie']
     
