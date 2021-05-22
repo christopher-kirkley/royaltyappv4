@@ -42,6 +42,7 @@ def test_login_and_logout_admin_user(browser, test_client, db):
     artist = browser.find_element_by_id('artists')
     artist.click()
 
+    time.sleep(100000)
     logout = browser.find_element_by_id('logout')
     logout.click()
 

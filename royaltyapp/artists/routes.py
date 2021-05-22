@@ -1,11 +1,26 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, make_response
 from sqlalchemy import exc
-from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema, Contact, ContactSchema
 import json
+
+from flask_jwt_extended import create_access_token
+from flask_jwt_extended import get_jwt
+from flask_jwt_extended import get_jwt_identity
+from flask_jwt_extended import jwt_required
+from flask_jwt_extended import JWTManager
+from flask_jwt_extended import set_access_cookies
+from flask_jwt_extended import unset_jwt_cookies
+
+from datetime import datetime
+from datetime import timedelta
+from datetime import timezone
+
+from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, Track, TrackSchema, Contact, ContactSchema
 
 artists = Blueprint('artists', __name__)
 
+
 @artists.route('/artists', methods=['GET'])
+@jwt_required()
 def all_artists():
     result = Artist.query.all()
     artist_schema = ArtistSchema()
@@ -13,6 +28,7 @@ def all_artists():
     return artists_schema.dumps(result)
 
 @artists.route('/artists/<id>', methods=['GET'])
+@jwt_required()
 def one_artist(id):
     result = db.session.query(Artist).filter(Artist.id==id).one()
     artist_schema = ArtistSchema()

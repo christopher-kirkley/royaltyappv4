@@ -73,3 +73,6 @@ def test_can_logout(test_client, db):
     assert response.status_code == 200
     response = test_client.post('/logout')
     assert response.status_code == 200
+    assert response.headers['Set-Cookie']
+
+# Flask request needed for JWT decorator

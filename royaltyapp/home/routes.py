@@ -3,6 +3,10 @@ from sqlalchemy import exc, func, cast, Numeric, Date
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 
+from datetime import datetime
+from datetime import timedelta
+from datetime import timezone
+
 from royaltyapp.models import db, User
 
 import pandas as pd
@@ -17,6 +21,7 @@ from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import set_access_cookies
 from flask_jwt_extended import unset_jwt_cookies
+
 
 
 @home.route('/login', methods=['POST'])
@@ -36,7 +41,7 @@ def login():
         response = jsonify({"success": "true"})
         access_token = create_access_token(identity=data['email'])
         set_access_cookies(response, access_token)
-        response.set_cookie("session", "true", samesite="Lax", max_age=60)
+        response.set_cookie("session", "true", samesite="Lax", max_age=900)
         return response
 
     return make_response('Could not verify', 401)
@@ -58,3 +63,4 @@ def logout():
     response = jsonify({"success": "true"})
     response.set_cookie("session", "false", samesite="Lax", max_age=0)
     return response
+

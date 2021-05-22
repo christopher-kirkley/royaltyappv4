@@ -5,6 +5,7 @@ from sqlalchemy import exc, func, cast, Numeric, Date
 
 import pandas as pd
 import json
+from flask_jwt_extended import jwt_required
 
 from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, OrderSettings, OrderSettingsSchema, ImportedStatement, ImportedStatementSchema, IncomeTotal, IncomeTotalSchema, IncomeDistributor, IncomeDistributorSchema, Track, Bundle
 
@@ -17,6 +18,7 @@ from .util import pending_operations as po
 income = Blueprint('income', __name__)
 
 @income.route('/income/import-sales', methods=['POST'])
+@jwt_required()
 def import_sales():
     file = request.files['file']
     filename = file.filename
@@ -51,6 +53,7 @@ def import_sales():
     return jsonify(data), 201
 
 @income.route('/income/matching-errors', methods=['GET'])
+@jwt_required()
 def get_matching_errors():
     query = find_distinct_version_matching_errors()
     income_pendings_schema = IncomePendingSchema(many=True)
@@ -58,6 +61,7 @@ def get_matching_errors():
     return matching_errors
 
 @income.route('/income/track-matching-errors', methods=['GET'])
+@jwt_required()
 def get_track_matching_errors():
     query = find_distinct_track_matching_errors().all()
     income_pendings_schema = IncomePendingSchema(many=True)
@@ -65,6 +69,7 @@ def get_track_matching_errors():
     return matching_errors
 
 @income.route('/income/update-track-errors', methods=['PUT'])
+@jwt_required()
 def update_track_errors():
     data = request.get_json(force=True)
     try:
@@ -100,6 +105,7 @@ def update_track_errors():
     return jsonify({'updated': updated_errors})
 
 @income.route('/income/match-errors', methods=['PUT'])
+@jwt_required()
 def match_errors():
     data = request.get_json(force=True)
     try:
@@ -133,6 +139,7 @@ def match_errors():
     return jsonify({'updated': updated_errors})
 
 @income.route('/income/pending-statements', methods=['GET'])
+@jwt_required()
 def get_pending_statements():
     query = db.session.query(IncomePending.statement, IncomePending.distributor).distinct(IncomePending.statement).all()
     income_pendings_schema = IncomePendingSchema(many=True)
@@ -140,6 +147,7 @@ def get_pending_statements():
     return pending_statements
 
 @income.route('/income/pending-statements/<name>', methods=['DELETE'])
+@jwt_required()
 def delete_pending_statements(name):
     res = (db.session.query(IncomePending)
             .filter(IncomePending.statement==name))
@@ -148,6 +156,7 @@ def delete_pending_statements(name):
     return jsonify({'success': 'true'})
 
 @income.route('/income/process-pending', methods=['POST'])
+@jwt_required()
 def process_pending_income():
     # pi.split_bundle_into_versions()
     pi.normalize_bundle()
@@ -161,6 +170,7 @@ def process_pending_income():
     return jsonify({'success': 'true'})
 
 @income.route('/income/imported-statements', methods=['GET'])
+@jwt_required()
 def get_imported_statements():
     """Build object of distributor name."""
     query = (db.session.query(IncomeDistributor.distributor_name)
@@ -205,6 +215,7 @@ def get_imported_statements():
     return jsonify(result)
 
 @income.route('/income/statements/<id>', methods=['GET'])
+@jwt_required()
 def get_imported_statement_detail(id):
     income_total_schema = IncomeTotalSchema(many=True)
 
@@ -271,6 +282,7 @@ def get_imported_statement_detail(id):
                     }])
 
 @income.route('/income/statements/<id>', methods=['DELETE'])
+@jwt_required()
 def delete_income_statement(id):
     i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
     db.session.execute(i)
@@ -278,6 +290,7 @@ def delete_income_statement(id):
     return jsonify({'success': 'true'})
 
 @income.route('/income/distributors', methods=['GET'])
+@jwt_required()
 def get_distributors():
     query = db.session.query(IncomeDistributor).all()
     distributor_schema = IncomeDistributorSchema(many=True)
@@ -287,6 +300,7 @@ def get_distributors():
     return jsonify({'success': 'true'})
 
 @income.route('/income/errors', methods=['DELETE'])
+@jwt_required()
 def delete_errors():
     data = request.get_json(force=True)
     try:
@@ -299,6 +313,7 @@ def delete_errors():
     return jsonify({'success': 'true'})
 
 @income.route('/income/update-errors', methods=['PUT'])
+@jwt_required()
 def update_errors():
     data = request.get_json(force=True)
     try:
@@ -320,6 +335,7 @@ def update_errors():
     return jsonify({'success': 'true'})
 
 @income.route('/income/refund-matching-errors', methods=['GET'])
+@jwt_required()
 def get_refund_matching_errors():
     query = find_distinct_refund_matching_errors()
     income_pendings_schema = IncomePendingSchema(many=True)
