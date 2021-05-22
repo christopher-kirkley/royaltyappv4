@@ -34042,3 +34042,420 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1621202625967	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
 1621202628923	Marionette	INFO	Stopped listening on port 41189
+1621203388246	geckodriver	INFO	Listening on 127.0.0.1:40491
+1621203388250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiled7eW16"
+1621203388592	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621203389698	Marionette	INFO	Listening on port 36111
+1621203389767	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621203392748	Marionette	INFO	Stopped listening on port 36111
+1621518028619	geckodriver	INFO	Listening on 127.0.0.1:43629
+1621518029623	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZgPs4d"
+1621518030279	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621518031561	Marionette	INFO	Listening on port 37081
+1621518031667	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621518034214	Marionette	INFO	Stopped listening on port 37081
+1621518096378	geckodriver	INFO	Listening on 127.0.0.1:36019
+1621518096381	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5Gl6Xj"
+1621518096732	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621518097873	Marionette	INFO	Listening on port 43421
+1621518097893	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+1621518358035	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child4/longstractor23, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:20
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:674:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:329:13
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621523003576	geckodriver	INFO	Listening on 127.0.0.1:60167
+1621523003580	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledrja96"
+1621523003928	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621523005064	Marionette	INFO	Listening on port 45983
+1621523005095	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621523006046	Marionette	INFO	Stopped listening on port 45983
+1621523013412	geckodriver	INFO	Listening on 127.0.0.1:39131
+1621523013416	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileF7yITY"
+1621523013762	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621523014909	Marionette	INFO	Listening on port 46189
+1621523014935	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+1621523015893	Marionette	INFO	Stopped listening on port 46189
+1621523052018	geckodriver	INFO	Listening on 127.0.0.1:45439
+1621523052023	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegiIVWV"
+1621523052363	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621523053458	Marionette	INFO	Listening on port 34033
+1621523053538	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+1621524056255	Marionette	INFO	Stopped listening on port 34033
+1621525096870	geckodriver	INFO	Listening on 127.0.0.1:44619
+1621525096874	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileafDLaq"
+1621525097224	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621525098357	Marionette	INFO	Listening on port 46409
+1621525098390	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621525133281	Marionette	INFO	Stopped listening on port 46409
+1621693802601	geckodriver	INFO	Listening on 127.0.0.1:40417
+1621693803604	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRyQxqf"
+1621693804241	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621693805587	Marionette	INFO	Listening on port 36065
+1621693805665	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+console.error: "Tried to send a 'target-destroyed-form' event on an already destroyed actor 'watcher'"
+1621694483090	Marionette	INFO	Stopped listening on port 36065
+1621695071873	geckodriver	INFO	Listening on 127.0.0.1:50101
+1621695071876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile048i1e"
+1621695072231	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621695073363	Marionette	INFO	Listening on port 38891
+1621695073388	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: http://localhost:3000/main.49e83ef7a39cbdd03fa6.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.7d89605cc9aba764757e.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 192690: Script terminated by timeout at:
+n@http://localhost:3000/static/js/vendors~main.chunk.js:192690:35
+n@http://localhost:3000/static/js/vendors~main.chunk.js:192694:10
+n@http://localhost:3000/static/js/vendors~main.chunk.js:192694:28
+./node_modules/react-error-overlay/lib/index.js/</</</t.quickSort@http://localhost:3000/static/js/vendors~main.chunk.js:192701:8
+./node_modules/react-error-overlay/lib/index.js/</</</c.prototype._parseMappings@http://localhost:3000/static/js/vendors~main.chunk.js:192487:82
+get@http://localhost:3000/static/js/vendors~main.chunk.js:192387:49
+./node_modules/react-error-overlay/lib/index.js/</</</c.prototype.originalPositionFor@http://localhost:3000/static/js/vendors~main.chunk.js:192512:15
+value@http://localhost:3000/static/js/vendors~main.chunk.js:193117:37
+e/</<@http://localhost:3000/static/js/vendors~main.chunk.js:193275:27
+e/<@http://localhost:3000/static/js/vendors~main.chunk.js:193266:43
+s@http://localhost:3000/static/js/vendors~main.chunk.js:192027:20
+c/a._invoke</<@http://localhost:3000/static/js/vendors~main.chunk.js:192007:24
+S/</<@http://localhost:3000/static/js/vendors~main.chunk.js:192064:25
+N@http://localhost:3000/static/js/vendors~main.chunk.js:193079:21
+i@http://localhost:3000/static/js/vendors~main.chunk.js:193096:14
+promise callback*N@http://localhost:3000/static/js/vendors~main.chunk.js:193085:42
+i@http://localhost:3000/static/js/vendors~main.chunk.js:193096:14
+j/</<@http://localhost:3000/static/js/vendors~main.chunk.js:193103:12
+j/<@http://localhost:3000/static/js/vendors~main.chunk.js:193092:16
+B@http://localhost:3000/static/js/vendors~main.chunk.js:193220:16
+Y@http://localhost:3000/static/js/vendors~main.chunk.js:193379:62
+X/<@http://localhost:3000/static/js/vendors~main.chunk.js:193393:10
+K/<@http://localhost:3000/static/js/vendors~main.chunk.js:193410:16
+o@http://localhost:3000/static/js/vendors~main.chunk.js:192879:30
+EventListener.handleEvent*a@http://localhost:3000/static/js/vendors~main.chunk.js:192884:47
+K@http://localhost:3000/static/js/vendors~main.chunk.js:193409:15
+de@http://localhost:3000/static/js/vendors~main.chunk.js:193497:248
+./node_modules/react-dev-utils/webpackHotDevClient.js@http://localhost:3000/static/js/vendors~main.chunk.js:166374:14
+__webpack_require__@http://localhost:3000/static/js/bundle.js:857:31
+fn@http://localhost:3000/static/js/bundle.js:151:20
+1@http://localhost:3000/static/js/main.chunk.js:31498:20
+__webpack_require__@http://localhost:3000/static/js/bundle.js:857:31
+checkDeferredModules@http://localhost:3000/static/js/bundle.js:46:23
+webpackJsonpCallback@http://localhost:3000/static/js/bundle.js:33:19
+@http://localhost:3000/static/js/main.chunk.js:1:67
+
+JavaScript error: http://localhost:3000/main.44ef2542587b18ec1f61.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.1fb54daa93a44917a444.hot-update.js, line 211: ReferenceError: Cookies is not defined
+JavaScript error: http://localhost:3000/main.3e143aea7221e216a5a2.hot-update.js, line 220: ReferenceError: handleLogout is not defined
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child4/longstractor127, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:20
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:674:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:329:13
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621695800799	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1621696076133	Marionette	INFO	Stopped listening on port 38891
+1621696145690	geckodriver	INFO	Listening on 127.0.0.1:36135
+1621696145695	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoBkax1"
+1621696146068	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621696147179	Marionette	INFO	Listening on port 35259
+1621696147207	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 225417: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
+1621696147973	Marionette	INFO	Stopped listening on port 35259
+1621697190116	geckodriver	INFO	Listening on 127.0.0.1:59621
+1621697190119	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5gRqAT"
+1621697190469	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621697191638	Marionette	INFO	Listening on port 37249
+1621697191784	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+1621698194504	Marionette	INFO	Stopped listening on port 37249
+1621701452513	geckodriver	INFO	Listening on 127.0.0.1:40925
+1621701452516	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4yfoh6"
+1621701452871	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621701454055	Marionette	INFO	Listening on port 36391
+1621701454187	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+1621702457169	Marionette	INFO	Stopped listening on port 36391
+1621702481355	geckodriver	INFO	Listening on 127.0.0.1:42379
+1621702481360	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEURiVZ"
+1621702481723	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621702482899	Marionette	INFO	Listening on port 37847
+1621702482977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 165: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 11105: Error: Cannot find module './history'
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+console.error: "<Provider> does not support changing `store` on the fly. It is most likely that you see this error because you updated to Redux 2.x and React Redux 2.x which no longer hot reload reducers automatically. See https://github.com/reactjs/react-redux/releases/tag/v2.0.0 for the migration instructions."
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn1.child4/longstractor25, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:20
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:674:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:329:13
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621705000532	geckodriver	INFO	Listening on 127.0.0.1:60547
+1621705000535	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX9nMZO"
+1621705000881	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621705002092	Marionette	INFO	Listening on port 38355
+1621705002167	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621705005236	Marionette	INFO	Stopped listening on port 38355
+1621705028666	geckodriver	INFO	Listening on 127.0.0.1:60677
+1621705028670	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1CxAd9"
+1621705029027	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621705030167	Marionette	INFO	Listening on port 33607
+1621705030186	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621705163818	geckodriver	INFO	Listening on 127.0.0.1:48203
+1621705163821	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX4PiS8"
+1621705164171	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621705165285	Marionette	INFO	Listening on port 43899
+1621705165336	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621705176592	geckodriver	INFO	Listening on 127.0.0.1:37593
+1621705176596	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilem2TDZc"
+1621705176954	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621705178064	Marionette	INFO	Listening on port 37597
+1621705178114	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621705181057	Marionette	INFO	Stopped listening on port 37597

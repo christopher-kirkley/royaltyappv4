@@ -16,7 +16,7 @@ def browser(db):
     db.session.rollback()
     browser.quit()
 
-def test_login_admin_user(browser, test_client, db):
+def test_login_and_logout_admin_user(browser, test_client, db):
     """ User goes to landing page """ 
     browser.get('http://localhost:3000/')
     assert browser.title == 'Royalty App'
@@ -45,7 +45,8 @@ def test_login_admin_user(browser, test_client, db):
     logout = browser.find_element_by_id('logout')
     logout.click()
 
-    assert browser.title == 'Royalty App'
+    logo = browser.find_element_by_id('logo')
+    assert logo.text == 'Cordel'
 
 # def test_login_no_user(browser, test_client, db):
 #     """ User goes to landing page """ 
