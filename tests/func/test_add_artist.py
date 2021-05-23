@@ -6,20 +6,22 @@ import json
 
 import time
 
-from royaltyapp.models import Artist
+from royaltyapp.models import Artist, add_admin_user
+
+from helpers import login
 
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
+    add_admin_user(db)
     yield browser
     db.session.rollback()
     browser.quit()
 
 def test_returns(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
-    
+
+    login(browser)
+
     """ User navigates to view artist page """
     artist = browser.find_element_by_id('artists')
     artist.click()
@@ -28,22 +30,22 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id("artists-data").text == 'No data'
     add_artist = browser.find_element_by_id('add_artist')
     add_artist.click()
-    time.sleep(1)
-
+    
     """ User arrives at new page to add artist """
     artist_name = browser.find_element_by_id('artist_name')
     prenom = browser.find_element_by_id('prenom')
     surnom = browser.find_element_by_id('surnom')
-    time.sleep(10000000)
 
-    contact_prenom = browser.find_element_by_id('contact_prenom')
-    contact_middle = browser.find_element_by_id('contact_middle')
-    contact_surnom = browser.find_element_by_id('contact_surnom')
-    address = browser.find_element_by_id('address')
-    phone = browser.find_element_by_id('phone')
-    bank_name = browser.find_element_by_id('bank_name')
-    bban = browser.find_element_by_id('bban')
-    notes = browser.find_element_by_id('notes')
+    browser.find_element_by_id('contact_id').click()
+    browser.find_element_by_id('new').click()
+    contact_prenom = browser.find_element_by_id('new_contact_prenom')
+    contact_middle = browser.find_element_by_id('new_contact_middle')
+    contact_surnom = browser.find_element_by_id('new_contact_surnom')
+    address = browser.find_element_by_id('new_address')
+    phone = browser.find_element_by_id('new_phone')
+    bank_name = browser.find_element_by_id('new_bank_name')
+    bban = browser.find_element_by_id('new_bban')
+    notes = browser.find_element_by_id('new_notes')
 
     submit = browser.find_element_by_id('submit')
 
@@ -68,8 +70,7 @@ def test_returns(browser, test_client, db):
     assert len(db.session.query(Artist).all()) == 1
     tds = rows[1].find_elements_by_tag_name('td');
     assert tds[0].text == 'Fishstick'
-    assert tds[1].text == 'Bob'
-    assert tds[2].text == 'Nono'
+    assert tds[1].text == 'Bob Bo Nono'
 
     """ User clicks on artist detail and goes to artist page """
     artist_detail = browser.find_element_by_id('view-1')
@@ -100,6 +101,10 @@ def test_returns(browser, test_client, db):
     
     submit = browser.find_element_by_id('submit')
     submit.click()
+
+    """ User navigates to view artist page """
+    artist = browser.find_element_by_id('artists')
+    artist.click()
     
     artist_detail = browser.find_element_by_id('view-1')
     artist_detail.click()
@@ -132,6 +137,7 @@ def test_returns(browser, test_client, db):
     artist_detail = browser.find_element_by_id('view-2')
     artist_detail.click()
 
+    time.sleep(10000)
 
 
     # """ User returns to main page and verifies change."""

@@ -18,6 +18,11 @@ from royaltyapp.models import db, Artist, ArtistSchema, Catalog, CatalogSchema, 
 
 artists = Blueprint('artists', __name__)
 
+@artists.route('/test', methods=['POST'])
+@jwt_required()
+def test():
+    return 'test success'
+
 
 @artists.route('/artists', methods=['GET'])
 @jwt_required()
@@ -35,6 +40,7 @@ def one_artist(id):
     return artist_schema.dumps(result)
 
 @artists.route('/artists/<id>', methods=['PUT'])
+@jwt_required()
 def edit_artist(id):
     data = request.get_json(force=True)
     print(data)
@@ -53,6 +59,7 @@ def edit_artist(id):
     return jsonify({'success': 'true'})
 
 @artists.route('/artists', methods=['POST'])
+@jwt_required()
 def add_artist():
     data = request.get_json(force=True)
     try:
@@ -70,30 +77,35 @@ def add_artist():
                     'id': new_artist.id })
 
 @artists.route('/artists/<id>', methods=['DELETE'])
+@jwt_required()
 def delete_artist(id):
     db.session.query(Artist).filter(Artist.id==id).delete()
     db.session.commit()
     return jsonify({'success': 'true'})
 
 @artists.route('/artists/<id>/catalog', methods=['GET'])
+@jwt_required()
 def get_catalog_by_artist(id):
     result = db.session.query(Catalog).filter(Catalog.artist_id==id).all()
     catalog_schema = CatalogSchema(many=True)
     return catalog_schema.dumps(result)
 
 @artists.route('/artists/<id>/track', methods=['GET'])
+@jwt_required()
 def get_tracks_by_artist(id):
     result = db.session.query(Track).filter(Track.artist_id==id).all()
     track_schema = TrackSchema(many=True)
     return track_schema.dumps(result)
 
 @artists.route('/contacts', methods=['GET'])
+@jwt_required()
 def get_contacts():
     result = Contact.query.all()
     contact_schema = ContactSchema(many=True)
     return contact_schema.dumps(result)
 
 @artists.route('/contacts', methods=['POST'])
+@jwt_required()
 def add_contact():
     data = request.get_json(force=True)
     try:
@@ -119,6 +131,7 @@ def add_contact():
     return jsonify({'success': 'true', 'id': contact_id })
 
 @artists.route('/contacts/<id>', methods=['PUT'])
+@jwt_required()
 def edit_contact(id):
     data = request.get_json(force=True)
     obj = db.session.query(Contact).get(id)
@@ -144,6 +157,7 @@ def edit_contact(id):
     return jsonify({'success': 'true'})
 
 @artists.route('/contacts/<id>', methods=['GET'])
+@jwt_required()
 def get_one_contact(id):
     result = db.session.query(Contact).filter(Contact.id==id).one()
     contact_schema = ContactSchema()

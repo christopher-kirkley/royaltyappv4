@@ -1,9 +1,12 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc
+import pandas as pd
+from flask_jwt_extended import jwt_required
+
+
 from royaltyapp.models import db, Catalog, CatalogSchema, Version, Bundle,\
         VersionSchema, Track, TrackCatalogTable, TrackSchema
 
-import pandas as pd
 
 from .helpers import clean_catalog_df, clean_track_df, pending_catalog_to_artist, pending_catalog_to_catalog, pending_version_to_version, pending_track_to_artist, pending_track_to_catalog
 
@@ -14,6 +17,7 @@ catalog = Blueprint('catalog', __name__)
 
 @catalog.route('/catalog', methods=['GET'])
 #@cache.cached(timeout=30)
+@jwt_required()
 def all_catalog():
     result = Catalog.query.all()
     catalog_schema = CatalogSchema()
@@ -21,6 +25,7 @@ def all_catalog():
     return catalogs_schema.dumps(result)
 
 @catalog.route('/catalog', methods=['POST'])
+@jwt_required()
 def add_catalog():
     data = request.get_json(force=True)
     try:
@@ -38,18 +43,21 @@ def add_catalog():
                     'id': new_catalog.id })
 
 @catalog.route('/catalog/<id>', methods=['GET'])
+@jwt_required()
 def get_catalog(id):
     result = db.session.query(Catalog).filter(Catalog.id==id).one()
     catalog_schema = CatalogSchema()
     return catalog_schema.dumps(result)
 
 @catalog.route('/catalog/<id>', methods=['DELETE'])
+@jwt_required()
 def delete_catalog(id):
     db.session.query(Catalog).filter(Catalog.id==id).delete()
     db.session.commit()
     return jsonify({'success': 'true'})
 
 @catalog.route('/version', methods=['POST'])
+@jwt_required()
 def add_version():
     data = request.get_json(force=True)
     catalog_id = data['catalog']
@@ -70,6 +78,7 @@ def add_version():
     return jsonify({'success': 'true'})
 
 @catalog.route('/version', methods=['PUT'])
+@jwt_required()
 def edit_version():
     data = request.get_json(force=True)
     catalog_id = data['catalog']
@@ -98,6 +107,7 @@ def edit_version():
     return jsonify({'success': 'true'})
 
 @catalog.route('/version/<id>', methods=['GET'])
+@jwt_required()
 def get_version(id):
     result = db.session.query(Version).filter(Version.id==id).one()
     version_schema = VersionSchema()
@@ -105,6 +115,7 @@ def get_version(id):
 
 
 @catalog.route('/catalog/<id>', methods=['PUT'])
+@jwt_required()
 def edit_catalog(id):
     data = request.get_json(force=True)
     obj = db.session.query(Catalog).get(id)
@@ -119,6 +130,7 @@ def edit_catalog(id):
     return jsonify({'success': 'true'})
 
 @catalog.route('/track', methods=['POST'])
+@jwt_required()
 def add_track():
     data = request.get_json(force=True)
     catalog_id = data['catalog']
@@ -140,6 +152,7 @@ def add_track():
     return jsonify({'success': 'true'})
 
 @catalog.route('/track', methods=['PUT'])
+@jwt_required()
 def edit_track():
     data = request.get_json(force=True)
     catalog_id = data['catalog']
@@ -158,6 +171,7 @@ def edit_track():
     return jsonify({'success': 'true'})
 
 @catalog.route('/catalog/import-catalog', methods=['POST'])
+@jwt_required()
 def import_catalog():
     file = request.files['CSV']
     df = pd.read_csv(file.stream._file)
@@ -168,6 +182,7 @@ def import_catalog():
     return jsonify({'success': 'true'})
 
 @catalog.route('/catalog/import-track', methods=['POST'])
+@jwt_required()
 def import_track():
     file = request.files['CSV']
     df = pd.read_csv(file.stream._file)
@@ -178,6 +193,7 @@ def import_track():
     return jsonify({'success': 'true'})
 
 @catalog.route('/catalog/import-version', methods=['POST'])
+@jwt_required()
 def import_version():
     file = request.files['CSV']
     df = pd.read_csv(file.stream._file)
@@ -186,6 +202,7 @@ def import_version():
     return jsonify({'success': 'true'})
 
 @catalog.route('/version', methods=['GET'])
+@jwt_required()
 def get_versions():
     result = Version.query.all()
     version_schema = VersionSchema()
@@ -193,6 +210,7 @@ def get_versions():
     return versions_schema.dumps(result)
 
 @catalog.route('/tracks', methods=['GET'])
+@jwt_required()
 def get_tracks():
     result = Track.query.all()
     track_schema = TrackSchema()
