@@ -36673,3 +36673,1117 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1621811565426	Marionette	INFO	Stopped listening on port 34693
+1621830115323	geckodriver	INFO	Listening on 127.0.0.1:59757
+1621830116326	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileVRHPBi"
+1621830117001	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621830118433	Marionette	INFO	Listening on port 37633
+1621830118547	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: http://localhost:3000/main.1b50f20222f1be190072.hot-update.js, line 64: ReferenceError: loading is not defined
+JavaScript error: http://localhost:3000/main.1b50f20222f1be190072.hot-update.js, line 64: ReferenceError: loading is not defined
+JavaScript error: http://localhost:3000/main.a32d262b484862c2fcd7.hot-update.js, line 79: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.a32d262b484862c2fcd7.hot-update.js, line 79: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.ef671de585fbe2e4f44f.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.ef671de585fbe2e4f44f.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 29ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.360c29074501bec4b69d.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.360c29074501bec4b69d.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 3073: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.0bdaa70b24918a86e2d0.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.0bdaa70b24918a86e2d0.hot-update.js, line 82: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.7323afef0a17ad224b3d.hot-update.js, line 88: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.7323afef0a17ad224b3d.hot-update.js, line 88: TypeError: artists is undefined
+JavaScript error: http://localhost:3000/main.d7f897705bdab5f9da05.hot-update.js, line 138: TypeError: artists.map is not a function
+JavaScript error: http://localhost:3000/main.d7f897705bdab5f9da05.hot-update.js, line 138: TypeError: artists.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 10567: TypeError: artists.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 10567: TypeError: artists.map is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 4493: ReferenceError: updateArtists is not defined
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621831593084	geckodriver	INFO	Listening on 127.0.0.1:46731
+1621831593087	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileExX0GH"
+1621831593459	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621831594575	Marionette	INFO	Listening on port 38493
+1621831594600	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181325: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
+1621832146346	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.clarity.ms/eus2/s/0.6.13/clarity.js, line 2: Script terminated by timeout at:
+y@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:2926
+qe@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:23321
+In/</<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:29055
+u/</<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:1564
+u/<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:1669
+n/<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:606
+n@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:351
+In@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:28832
+ce@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:17741
+le/</<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:17682
+u/</<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:1564
+u/<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:1669
+n/<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:606
+n@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:351
+le@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:17451
+cn@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:27112
+pa/<@https://www.clarity.ms/eus2/s/0.6.13/clarity.js:2:33988
+
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service.getArtists is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service.getArtists is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service.getArtists is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service.getArtists is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621832672033	geckodriver	INFO	Listening on 127.0.0.1:48033
+1621832672036	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4aLdyV"
+1621832672400	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621832673533	Marionette	INFO	Listening on port 42701
+1621832673551	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621832677650	Marionette	INFO	Stopped listening on port 42701
+1621832683300	geckodriver	INFO	Listening on 127.0.0.1:54759
+1621832683303	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilec2g9re"
+1621832683669	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621832684791	Marionette	INFO	Listening on port 35285
+1621832684818	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+1621832688904	Marionette	INFO	Stopped listening on port 35285
+1621832730729	geckodriver	INFO	Listening on 127.0.0.1:35329
+1621832730732	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7B9wwP"
+1621832731099	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621832732301	Marionette	INFO	Listening on port 43077
+1621832732351	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/main.420e0ab515ab9a4ab9ab.hot-update.js, line 52: unreachable code after return statement
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child4/longstractor155, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+dispatchMessagesClear@resource://devtools/client/webconsole/webconsole-wrapper.js:160:20
+dispatchTabWillNavigate@resource://devtools/client/webconsole/webconsole-wrapper.js:243:12
+handleTabWillNavigate@resource://devtools/client/webconsole/webconsole-ui.js:674:18
+_onTabWillNavigate@resource://devtools/client/webconsole/webconsole-connection-proxy.js:173:23
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_onTabNavigated@resource://devtools/client/fronts/targets/browsing-context.js:78:12
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+onPacket@resource://devtools/shared/protocol/Front.js:329:13
+onPacket@resource://devtools/client/devtools-client.js:482:13
+send/<@resource://devtools/shared/transport/local-transport.js:68:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621833087339	geckodriver	INFO	Listening on 127.0.0.1:49613
+1621833087341	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileh8JeQL"
+1621833087711	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621833088797	Marionette	INFO	Listening on port 45955
+1621833088856	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621833102317	geckodriver	INFO	Listening on 127.0.0.1:37503
+1621833102321	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileK1tjNM"
+1621833102693	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621833103879	Marionette	INFO	Listening on port 45977
+1621833103938	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+console.error: "<Provider> does not support changing `store` on the fly. It is most likely that you see this error because you updated to Redux 2.x and React Redux 2.x which no longer hot reload reducers automatically. See https://github.com/reactjs/react-redux/releases/tag/v2.0.0 for the migration instructions."
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 190394: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Main`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 190394: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Main`.
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child4/longstractor24, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:310:15
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621833673679	geckodriver	INFO	Listening on 127.0.0.1:53369
+1621833673684	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBJxjvT"
+1621833674040	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621833675166	Marionette	INFO	Listening on port 35565
+1621833675197	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621834359056	geckodriver	INFO	Listening on 127.0.0.1:36509
+1621834359058	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEouvXj"
+1621834359413	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621834360513	Marionette	INFO	Listening on port 34571
+1621834360573	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621834361639	Marionette	INFO	Stopped listening on port 34571
+1621834443320	geckodriver	INFO	Listening on 127.0.0.1:36267
+1621834443323	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3ePlXo"
+1621834443682	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621834444802	Marionette	INFO	Listening on port 38157
+1621834444839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6587: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6587: TypeError: bundleVersions.map is not a function
+1621834453224	Marionette	INFO	Stopped listening on port 38157
+1621835025321	geckodriver	INFO	Listening on 127.0.0.1:47977
+1621835025324	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8IV7dV"
+1621835025680	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621835026820	Marionette	INFO	Listening on port 45523
+1621835026850	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621835725685	geckodriver	INFO	Listening on 127.0.0.1:38469
+1621835725689	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehpw10o"
+1621835726039	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621835727225	Marionette	INFO	Listening on port 46007
+1621835727306	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/main.94e525f2191efbd42638.hot-update.js, line 106: TypeError: res is undefined
+JavaScript error: http://localhost:3000/main.55ccc95e9eef81db75c5.hot-update.js, line 106: TypeError: res is undefined
+JavaScript error: http://localhost:3000/main.ee37aa228cacba5e95e5.hot-update.js, line 106: TypeError: res is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service is undefined
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 110: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_1__.service is undefined
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 99: Error: Connection closed, pending request to server0.conn0.child4/longstractor24, type release failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:285:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:62:19
+enableActorReleaser/</</releaseActorsEnhancer/<@resource://devtools/client/webconsole/enhancers/actor-releaser.js:40:33
+releaseActorsEnhancer@resource://devtools/client/webconsole/enhancers/actor-releaser.js:30:40
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:21:18
+batchingReducer@resource://devtools/client/webconsole/enhancers/batching.js:19:33
+messagesCacheClearingEnhancer@resource://devtools/client/webconsole/enhancers/message-cache-clearing.js:17:15
+ensureErrorReportingEnhancer@resource://devtools/client/webconsole/enhancers/css-error-reporting.js:21:15
+dispatch@resource://devtools/client/shared/vendor/redux.js:256:22
+eventTelemetryMiddleware/</<@resource://devtools/client/webconsole/middleware/event-telemetry.js:25:21
+historyPersistenceMiddleware/</<@resource://devtools/client/webconsole/middleware/history-persistence.js:37:21
+thunk/</</<@resource://devtools/client/shared/redux/middleware/thunk.js:18:11
+ignore/</<@resource://devtools/client/shared/redux/middleware/ignore.js:31:12
+createPerformanceMarkerMiddleware/</</<@resource://devtools/client/shared/redux/middleware/performance-marker.js:50:28
+setTimeoutIfNeeded/this.throttledDispatchPromise</<@resource://devtools/client/webconsole/webconsole-wrapper.js:310:15
+
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1833: TypeError: res.json is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621837168342	geckodriver	INFO	Listening on 127.0.0.1:34515
+1621837168346	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile69Xdci"
+1621837168719	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621837169859	Marionette	INFO	Listening on port 40471
+1621837169963	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621837174196	Marionette	INFO	Stopped listening on port 40471
+1621837224277	geckodriver	INFO	Listening on 127.0.0.1:57271
+1621837224280	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXL1FMs"
+1621837224645	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621837225787	Marionette	INFO	Listening on port 40881
+1621837225946	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621837230076	Marionette	INFO	Stopped listening on port 40881
+1621837264580	geckodriver	INFO	Listening on 127.0.0.1:60883
+1621837264583	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevVSz74"
+1621837264936	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621837266111	Marionette	INFO	Listening on port 37075
+1621837266235	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621837740219	geckodriver	INFO	Listening on 127.0.0.1:40875
+1621837740223	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileP3LWg8"
+1621837740587	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621837741737	Marionette	INFO	Listening on port 43117
+1621837741840	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6575: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6575: TypeError: bundleVersions.map is not a function
+1621837750261	Marionette	INFO	Stopped listening on port 43117
+1621838125239	geckodriver	INFO	Listening on 127.0.0.1:45967
+1621838125243	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6ceReg"
+1621838125605	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838126779	Marionette	INFO	Listening on port 38563
+1621838126905	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postData is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postData is not a function
+1621838134081	Marionette	INFO	Stopped listening on port 38563
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1621838151794	geckodriver	INFO	Listening on 127.0.0.1:53233
+1621838151798	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemyRjvi"
+1621838152151	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838153330	Marionette	INFO	Listening on port 40513
+1621838153416	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postData is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postData is not a function
+1621838160692	Marionette	INFO	Stopped listening on port 40513
+1621838180806	geckodriver	INFO	Listening on 127.0.0.1:51251
+1621838180810	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileik2FoX"
+1621838181176	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838182336	Marionette	INFO	Listening on port 35487
+1621838182428	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postFile is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 9021: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_8__.service.postFile is not a function
+1621838189813	Marionette	INFO	Stopped listening on port 35487
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1621838210296	geckodriver	INFO	Listening on 127.0.0.1:49045
+1621838210301	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSgTIY0"
+1621838210663	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838211796	Marionette	INFO	Listening on port 41339
+1621838211814	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838220140	Marionette	INFO	Stopped listening on port 41339
+1621838243334	geckodriver	INFO	Listening on 127.0.0.1:55751
+1621838243339	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileo68aJY"
+1621838243701	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838244867	Marionette	INFO	Listening on port 35659
+1621838245010	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838253334	Marionette	INFO	Stopped listening on port 35659
+1621838549722	geckodriver	INFO	Listening on 127.0.0.1:49777
+1621838549725	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileezXsYv"
+1621838550086	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838551299	Marionette	INFO	Listening on port 42927
+1621838551389	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838559752	Marionette	INFO	Stopped listening on port 42927
+1621838634031	geckodriver	INFO	Listening on 127.0.0.1:58815
+1621838634035	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilefpgQHr"
+1621838634456	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838635861	Marionette	INFO	Listening on port 37895
+1621838635952	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838644300	Marionette	INFO	Stopped listening on port 37895
+1621838691372	geckodriver	INFO	Listening on 127.0.0.1:37303
+1621838691375	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileU5DaPI"
+1621838691741	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838692904	Marionette	INFO	Listening on port 44175
+1621838692993	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838701497	Marionette	INFO	Stopped listening on port 44175
+1621838744258	geckodriver	INFO	Listening on 127.0.0.1:52911
+1621838744262	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqPpsp6"
+1621838744633	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621838745781	Marionette	INFO	Listening on port 38897
+1621838745880	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6589: TypeError: bundleVersions.map is not a function
+1621838754278	Marionette	INFO	Stopped listening on port 38897
+1621868946088	geckodriver	INFO	Listening on 127.0.0.1:39393
+1621868946969	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilee8A2p3"
+1621868952347	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621868955584	Marionette	INFO	Listening on port 46447
+1621868955614	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621869241651	geckodriver	INFO	Listening on 127.0.0.1:34161
+1621869241655	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCNyoKz"
+1621869242003	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869243121	Marionette	INFO	Listening on port 44245
+1621869243172	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+1621869245780	Marionette	INFO	Stopped listening on port 44245
+1621869252919	geckodriver	INFO	Listening on 127.0.0.1:44729
+1621869252923	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJXA7Z8"
+1621869253261	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869254398	Marionette	INFO	Listening on port 36807
+1621869254440	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+1621869257045	Marionette	INFO	Stopped listening on port 36807
+1621869262998	geckodriver	INFO	Listening on 127.0.0.1:36441
+1621869263002	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletQQ05n"
+1621869263340	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869264475	Marionette	INFO	Listening on port 41071
+1621869264517	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621869494962	geckodriver	INFO	Listening on 127.0.0.1:54955
+1621869494966	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesqrxVI"
+1621869495325	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869496489	Marionette	INFO	Listening on port 39385
+1621869496593	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621869625451	geckodriver	INFO	Listening on 127.0.0.1:35321
+1621869625454	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWvnYNy"
+1621869625820	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869626905	Marionette	INFO	Listening on port 46327
+1621869626971	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 190394: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Main`.
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 190394: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Main`.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621869920680	geckodriver	INFO	Listening on 127.0.0.1:58133
+1621869920684	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesiGesh"
+1621869921045	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869922232	Marionette	INFO	Listening on port 36493
+1621869922300	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621869982911	geckodriver	INFO	Listening on 127.0.0.1:58329
+1621869982914	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFZchTZ"
+1621869983280	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621869984448	Marionette	INFO	Listening on port 37345
+1621869984589	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 36ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621870344974	geckodriver	INFO	Listening on 127.0.0.1:57401
+1621870344977	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoxXCky"
+1621870345324	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870346497	Marionette	INFO	Listening on port 41389
+1621870346648	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: asm.js type error: Disabled by debugger
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621870702490	geckodriver	INFO	Listening on 127.0.0.1:48491
+1621870702495	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiledu078r"
+1621870702853	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870703984	Marionette	INFO	Listening on port 45127
+1621870704012	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621870711028	geckodriver	INFO	Listening on 127.0.0.1:43855
+1621870711032	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQsA59F"
+1621870711383	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870712505	Marionette	INFO	Listening on port 44765
+1621870712550	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6597: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6597: TypeError: bundleVersions.map is not a function
+1621870720985	Marionette	INFO	Stopped listening on port 44765
+1621870799486	geckodriver	INFO	Listening on 127.0.0.1:58943
+1621870799489	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSM3NWO"
+1621870799816	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870800898	Marionette	INFO	Listening on port 36311
+1621870801007	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6597: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6597: TypeError: bundleVersions.map is not a function
+1621870809407	Marionette	INFO	Stopped listening on port 36311
+1621870866848	geckodriver	INFO	Listening on 127.0.0.1:48951
+1621870866851	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehh3uvJ"
+1621870867209	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870868338	Marionette	INFO	Listening on port 43009
+1621870868372	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+1621870876987	Marionette	INFO	Stopped listening on port 43009
+console.error: "Exception while calling a ResourceWatcher" "updated" "callback" ":" (new TypeError("this.hud is null", "resource://devtools/client/webconsole/webconsole-ui.js", 430))
+console.warn: "IGNORED REDUX ACTION:" "AUTOCOMPLETE_CLEAR"
+1621870944299	geckodriver	INFO	Listening on 127.0.0.1:33877
+1621870944302	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletLzDpV"
+1621870944634	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870945985	Marionette	INFO	Listening on port 43759
+1621870946020	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621870947093	Marionette	INFO	Stopped listening on port 43759
+1621870969123	geckodriver	INFO	Listening on 127.0.0.1:33707
+1621870969126	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqZE9oh"
+1621870969457	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621870970578	Marionette	INFO	Listening on port 41847
+1621870970643	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+1621870978907	Marionette	INFO	Stopped listening on port 41847
+1621871791030	geckodriver	INFO	Listening on 127.0.0.1:43181
+1621871791034	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexrqNSr"
+1621871791368	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621871792482	Marionette	INFO	Listening on port 43675
+1621871792553	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+1621871800927	Marionette	INFO	Stopped listening on port 43675
+1621872635414	geckodriver	INFO	Listening on 127.0.0.1:57065
+1621872635417	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDYfRPq"
+1621872635756	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621872636834	Marionette	INFO	Listening on port 33547
+1621872636933	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 7448: Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ck/Documents/programming/frontend_royaltyapp/src/catalog/CatalogDetail.js: Missing semicolon. (49:34)
+
+[0m [90m 47 |[39m 			obj [33m=[39m {[0m
+[0m [90m 48 |[39m 				[32m'catalog'[39m[33m:[39m id[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 49 |[39m 				[32m'version'[39m[33m:[39m data[[32m'newVersion'[39m]})[0m
+[0m [90m    |[39m 				                              [31m[1m^[22m[39m[0m
+[0m [90m 50 |[39m 			service[33m.[39mpostItem([32m'version'[39m[33m,[39m obj)[0m
+[0m [90m 51 |[39m 		}[0m
+[0m [90m 52 |[39m[0m
+    at Object._raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:810:17)
+    at Object.raiseWithData (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:803:17)
+    at Object.raise (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:764:17)
+    at Object.semicolon (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:9935:10)
+    at Object.parseExpressionStatement (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:13089:10)
+    at Object.parseExpressionStatement (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3032:18)
+    at Object.parseStatementContent (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:12678:19)
+    at Object.parseStatement (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:12542:17)
+    at Object.parseStatement (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:3006:24)
+    at Object.parseBlockOrModuleBlockBody (/home/ck/Documents/programming/frontend_royaltyapp/node_modules/@babel/parser/lib/index.js:13131:25)
+1621872637676	Marionette	INFO	Stopped listening on port 33547
+1621872726066	geckodriver	INFO	Listening on 127.0.0.1:34829
+1621872726071	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile59PZ2z"
+1621872726419	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621872727581	Marionette	INFO	Listening on port 46687
+1621872727737	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6600: TypeError: bundleVersions.map is not a function
+1621872736066	Marionette	INFO	Stopped listening on port 46687
+1621873000942	geckodriver	INFO	Listening on 127.0.0.1:60255
+1621873000946	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4i1gjB"
+1621873001286	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873002445	Marionette	INFO	Listening on port 33927
+1621873002461	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6250: Error: Cannot find module './_services/services.js'
+1621873003286	Marionette	INFO	Stopped listening on port 33927
+1621873045550	geckodriver	INFO	Listening on 127.0.0.1:36807
+1621873045554	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilep4XBgF"
+1621873045899	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873047021	Marionette	INFO	Listening on port 46535
+1621873047072	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+1621873055405	Marionette	INFO	Stopped listening on port 46535
+1621873169048	geckodriver	INFO	Listening on 127.0.0.1:41773
+1621873169051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1RneEF"
+1621873169395	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873170541	Marionette	INFO	Listening on port 35225
+1621873170568	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+1621873178987	Marionette	INFO	Stopped listening on port 35225
+1621873203644	geckodriver	INFO	Listening on 127.0.0.1:39979
+1621873203648	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4zUuux"
+1621873204017	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873205157	Marionette	INFO	Listening on port 46093
+1621873205314	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621873249075	geckodriver	INFO	Listening on 127.0.0.1:35065
+1621873249077	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSuGfp3"
+1621873249440	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873250576	Marionette	INFO	Listening on port 39767
+1621873250593	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+1621873260028	Marionette	INFO	Stopped listening on port 39767
+1621873277677	geckodriver	INFO	Listening on 127.0.0.1:49163
+1621873277681	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7L0Hgg"
+1621873278011	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873279111	Marionette	INFO	Listening on port 36049
+1621873279196	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 6602: TypeError: bundleVersions.map is not a function
+1621873310396	Marionette	INFO	Stopped listening on port 36049
+1621873351988	geckodriver	INFO	Listening on 127.0.0.1:57069
+1621873351992	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileN1HWQr"
+1621873352316	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873353430	Marionette	INFO	Listening on port 38803
+1621873353508	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+1621873354597	Marionette	INFO	Stopped listening on port 38803
+1621873375529	geckodriver	INFO	Listening on 127.0.0.1:53705
+1621873375532	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewadIGn"
+1621873375882	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873377000	Marionette	INFO	Listening on port 46025
+1621873377048	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+1621873414218	Marionette	INFO	Stopped listening on port 46025
+1621873424258	geckodriver	INFO	Listening on 127.0.0.1:43129
+1621873424262	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDOh6H5"
+1621873424638	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621873425758	Marionette	INFO	Listening on port 36201
+1621873425776	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19391: TypeError: distributors.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19391: TypeError: distributors.map is not a function
+1621873439552	Marionette	INFO	Stopped listening on port 36201
+1621874012467	geckodriver	INFO	Listening on 127.0.0.1:40865
+1621874012471	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKFiULT"
+1621874012835	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874013963	Marionette	INFO	Listening on port 36223
+1621874013986	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19375: TypeError: distributors.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19375: TypeError: distributors.map is not a function
+1621874027894	Marionette	INFO	Stopped listening on port 36223
+1621874072873	geckodriver	INFO	Listening on 127.0.0.1:38747
+1621874072875	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile281ewL"
+1621874073231	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874074396	Marionette	INFO	Listening on port 35379
+1621874074535	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19375: TypeError: distributors.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19375: TypeError: distributors.map is not a function
+1621874106684	Marionette	INFO	Stopped listening on port 35379
+1621874148785	geckodriver	INFO	Listening on 127.0.0.1:41977
+1621874148787	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegDvrPZ"
+1621874149125	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874150259	Marionette	INFO	Listening on port 41729
+1621874150305	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621874176219	geckodriver	INFO	Listening on 127.0.0.1:53211
+1621874176222	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileV93dxw"
+1621874176584	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874177743	Marionette	INFO	Listening on port 39441
+1621874177882	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+1621874193484	Marionette	INFO	Stopped listening on port 39441
+1621874672205	geckodriver	INFO	Listening on 127.0.0.1:54733
+1621874672209	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile60Y97Y"
+1621874672567	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874673685	Marionette	INFO	Listening on port 33589
+1621874673726	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21640: Error: Cannot find module './_services/services.js'
+1621874674552	Marionette	INFO	Stopped listening on port 33589
+1621874714944	geckodriver	INFO	Listening on 127.0.0.1:37583
+1621874714948	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexub6oU"
+1621874715311	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874716431	Marionette	INFO	Listening on port 39329
+1621874716459	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 30ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21695: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21699: TypeError: res.json is not a function
+1621874730322	Marionette	INFO	Stopped listening on port 39329
+1621874807972	geckodriver	INFO	Listening on 127.0.0.1:47977
+1621874807977	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilep470VX"
+1621874808310	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874809412	Marionette	INFO	Listening on port 46661
+1621874809494	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21695: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21699: TypeError: res.json is not a function
+1621874823319	Marionette	INFO	Stopped listening on port 46661
+1621874845926	geckodriver	INFO	Listening on 127.0.0.1:57029
+1621874845929	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileP2cT8n"
+1621874846280	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874847415	Marionette	INFO	Listening on port 43957
+1621874847443	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 37ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21695: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 21699: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/main.6d607092c148cc5ba4da.hot-update.js, line 82: TypeError: res.json is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621874910844	geckodriver	INFO	Listening on 127.0.0.1:42409
+1621874910848	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGuEKvB"
+1621874911207	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621874912411	Marionette	INFO	Listening on port 39603
+1621874912516	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621874927108	Marionette	INFO	Stopped listening on port 39603
+1621875778571	geckodriver	INFO	Listening on 127.0.0.1:57473
+1621875778575	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKhOmvK"
+1621875778952	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621875780067	Marionette	INFO	Listening on port 37543
+1621875780087	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621875794653	Marionette	INFO	Stopped listening on port 37543
+1621875831182	geckodriver	INFO	Listening on 127.0.0.1:36907
+1621875831187	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewI6Syw"
+1621875831547	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621875832643	Marionette	INFO	Listening on port 43325
+1621875832704	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 41ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 26143: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 26143: TypeError: upcs.map is not a function
+1621875847489	Marionette	INFO	Stopped listening on port 43325
+1621875986656	geckodriver	INFO	Listening on 127.0.0.1:39475
+1621875986660	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIfm2zR"
+1621875987009	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621875988130	Marionette	INFO	Listening on port 34111
+1621875988176	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 26143: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 26143: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/main.d4d7c46359a26dc3d693.hot-update.js, line 68: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/main.d4d7c46359a26dc3d693.hot-update.js, line 68: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/main.8d9f7a467bda05ff9160.hot-update.js, line 66: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/main.8d9f7a467bda05ff9160.hot-update.js, line 66: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/main.8d9f7a467bda05ff9160.hot-update.js, line 66: TypeError: res.json is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 24045: TypeError: upcs.map is not a function
+JavaScript error: http://localhost:3000/main.48518892be4beccd817d.hot-update.js, line 227: ReferenceError: service is not defined
+JavaScript error: http://localhost:3000/main.48518892be4beccd817d.hot-update.js, line 227: ReferenceError: service is not defined
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/static/js/vendors~main.chunk.js, line 181349: TypeError: nextDeps.join is not a function
+JavaScript error: http://localhost:3000/main.a1258c162fbdaee28e3e.hot-update.js, line 56: ReferenceError: service is not defined
+JavaScript error: http://localhost:3000/main.a1258c162fbdaee28e3e.hot-update.js, line 56: ReferenceError: service is not defined
+JavaScript error: http://localhost:3000/main.75a45e9482b3264606d3.hot-update.js, line 58: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_12__.service.getAllfetch is not a function
+JavaScript error: http://localhost:3000/main.75a45e9482b3264606d3.hot-update.js, line 58: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_12__.service.getAllfetch is not a function
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 23639: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_12__.service.getAllfetch is not a function
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 23639: TypeError: _services_services_js__WEBPACK_IMPORTED_MODULE_12__.service.getAllfetch is not a function
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621876420417	geckodriver	INFO	Listening on 127.0.0.1:34139
+1621876420420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFwf1mr"
+1621876420775	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621876421931	Marionette	INFO	Listening on port 36739
+1621876422079	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621876447830	geckodriver	INFO	Listening on 127.0.0.1:45363
+1621876447833	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMBwhNz"
+1621876448184	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621876449319	Marionette	INFO	Listening on port 40037
+1621876449349	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621876464065	Marionette	INFO	Stopped listening on port 40037
+1621876485992	geckodriver	INFO	Listening on 127.0.0.1:45269
+1621876485996	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiletyfLgz"
+1621876486360	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621876487471	Marionette	INFO	Listening on port 36637
+1621876487511	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 12891: TypeError: json is not iterable
+1621876502614	Marionette	INFO	Stopped listening on port 36637
+1621876589671	geckodriver	INFO	Listening on 127.0.0.1:52269
+1621876589675	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5xj0tf"
+1621876590041	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621876591202	Marionette	INFO	Listening on port 46303
+1621876591343	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 12891: TypeError: json is not iterable
+1621876606412	Marionette	INFO	Stopped listening on port 46303
+1621876624712	geckodriver	INFO	Listening on 127.0.0.1:48083
+1621876624717	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileblLfXs"
+1621876625064	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621876626220	Marionette	INFO	Listening on port 38627
+1621876626367	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 12891: TypeError: json is not iterable
+JavaScript error: http://localhost:3000/main.3a1aad75a32f29e84798.hot-update.js, line 112: TypeError: json is not iterable
+JavaScript error: http://localhost:3000/main.f6245d2a95cf317a230e.hot-update.js, line 111: TypeError: res.json is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621877230224	geckodriver	INFO	Listening on 127.0.0.1:35475
+1621877230226	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQEGxOq"
+1621877230589	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877231689	Marionette	INFO	Listening on port 39123
+1621877231742	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621877250075	Marionette	INFO	Stopped listening on port 39123
+1621877417862	geckodriver	INFO	Listening on 127.0.0.1:37435
+1621877417864	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileavRgyw"
+1621877418212	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877419298	Marionette	INFO	Listening on port 44035
+1621877419379	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 29ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621877437692	Marionette	INFO	Stopped listening on port 44035
+1621877477872	geckodriver	INFO	Listening on 127.0.0.1:53081
+1621877477876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLuamUs"
+1621877478232	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877479325	Marionette	INFO	Listening on port 33509
+1621877479398	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 39ms)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1621877497748	Marionette	INFO	Stopped listening on port 33509
+1621877561597	geckodriver	INFO	Listening on 127.0.0.1:50077
+1621877561599	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilephKY1p"
+1621877561958	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877563115	Marionette	INFO	Listening on port 36801
+1621877563259	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+1621877581667	Marionette	INFO	Stopped listening on port 36801
+1621877609291	geckodriver	INFO	Listening on 127.0.0.1:45143
+1621877609294	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecKAIl2"
+1621877609646	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877610820	Marionette	INFO	Listening on port 46037
+1621877610926	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621877834525	geckodriver	INFO	Listening on 127.0.0.1:52089
+1621877834529	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile17lXSO"
+1621877834893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877835997	Marionette	INFO	Listening on port 35167
+1621877836047	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621877850867	Marionette	INFO	Stopped listening on port 35167
+1621877867430	geckodriver	INFO	Listening on 127.0.0.1:56621
+1621877867433	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQ8WTve"
+1621877867789	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877868861	Marionette	INFO	Listening on port 36359
+1621877868950	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621877927539	geckodriver	INFO	Listening on 127.0.0.1:49309
+1621877927543	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMgL7bi"
+1621877927899	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621877929060	Marionette	INFO	Listening on port 36367
+1621877929205	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 1690: ReferenceError: _delete is not defined
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621878442394	geckodriver	INFO	Listening on 127.0.0.1:55663
+1621878442398	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilec9NY3D"
+1621878442754	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878443880	Marionette	INFO	Listening on port 42645
+1621878443913	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1621878455937	geckodriver	INFO	Listening on 127.0.0.1:47803
+1621878455939	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJusQj8"
+1621878456317	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878457498	Marionette	INFO	Listening on port 39409
+1621878457613	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+1621878476842	Marionette	INFO	Stopped listening on port 39409
+1621878739373	geckodriver	INFO	Listening on 127.0.0.1:32787
+1621878739376	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJtwbEc"
+1621878739715	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878740826	Marionette	INFO	Listening on port 44523
+1621878740891	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19716: TypeError: json[0] is undefined
+1621878761380	Marionette	INFO	Stopped listening on port 44523
+1621878846185	geckodriver	INFO	Listening on 127.0.0.1:47371
+1621878846188	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9bCnFi"
+1621878846548	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878847641	Marionette	INFO	Listening on port 38217
+1621878847706	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621878848762	Marionette	INFO	Stopped listening on port 38217
+1621878881773	geckodriver	INFO	Listening on 127.0.0.1:57353
+1621878881777	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilee0zNJy"
+1621878882122	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878883268	Marionette	INFO	Listening on port 39235
+1621878883294	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 31ms)
+JavaScript error: http://localhost:3000/static/js/main.chunk.js, line 19673: Error: Cannot find module './_services/services.js'
+1621878884136	Marionette	INFO	Stopped listening on port 39235
+1621878908495	geckodriver	INFO	Listening on 127.0.0.1:58023
+1621878908498	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileopPcWo"
+1621878908841	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878909981	Marionette	INFO	Listening on port 37619
+1621878910013	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 35ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 29ms)
+1621878930531	Marionette	INFO	Stopped listening on port 37619
+1621878967291	geckodriver	INFO	Listening on 127.0.0.1:41753
+1621878967294	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9CUOhY"
+1621878967634	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621878968748	Marionette	INFO	Listening on port 41709
+1621878968812	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 32ms)
+JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 33ms)
+1621878989257	Marionette	INFO	Stopped listening on port 41709

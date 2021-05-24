@@ -48,6 +48,7 @@ def test_returns(browser, test_client, db):
     notes = browser.find_element_by_id('new_notes')
 
     submit = browser.find_element_by_id('submit')
+    time.sleep(10000)
 
     artist_name.send_keys('Fishstick')
     prenom.send_keys('Bob')

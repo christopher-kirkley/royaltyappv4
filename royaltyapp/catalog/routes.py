@@ -173,13 +173,18 @@ def edit_track():
 @catalog.route('/catalog/import-catalog', methods=['POST'])
 @jwt_required()
 def import_catalog():
-    file = request.files['CSV']
-    df = pd.read_csv(file.stream._file)
-    df = clean_catalog_df(df)
-    df.to_sql('pending_catalog', con=db.engine, if_exists='append', index_label='id')
-    pending_catalog_to_artist(db)
-    pending_catalog_to_catalog(db)
-    return jsonify({'success': 'true'})
+    try:
+        file = request.files['CSV']
+        df = pd.read_csv(file.stream._file)
+        df = clean_catalog_df(df)
+        df.to_sql('pending_catalog', con=db.engine, if_exists='append', index_label='id')
+        pending_catalog_to_artist(db)
+        pending_catalog_to_catalog(db)
+        return jsonify({'success': 'true'})
+    except Exception:
+        print('except')
+    return jsonify({'success': 'true'}), 405
+
 
 @catalog.route('/catalog/import-track', methods=['POST'])
 @jwt_required()
