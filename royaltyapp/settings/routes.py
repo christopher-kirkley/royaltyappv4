@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import exc, func, cast, Numeric, Date
+from flask_jwt_extended import jwt_required
 
 import pandas as pd
 import json
@@ -9,6 +10,7 @@ from royaltyapp.models import db, IncomePending, Version, IncomePendingSchema, O
 settings = Blueprint('settings', __name__)
 
 @settings.route('/settings/order-fee', methods=['GET'])
+@jwt_required()
 def get_order_fees():
     query = (db.session.query(
         OrderSettings.distributor_id,
@@ -22,6 +24,7 @@ def get_order_fees():
     return jsonify(query)
  
 @settings.route('/settings/order-fee', methods=['POST'])
+@jwt_required()
 def add_order_fees():
     data = request.get_json(force=True)
     new_order_setting = OrderSettings(
@@ -34,6 +37,7 @@ def add_order_fees():
     return jsonify({'success': 'true'})
 
 @settings.route('/settings/order-fee', methods=['PUT'])
+@jwt_required()
 def update_order_setting():
     data = request.get_json(force=True)
     print(data)

@@ -8,7 +8,9 @@ import time
 
 import os
 
-from royaltyapp.models import Artist
+from royaltyapp.models import Artist, add_admin_user
+
+from helpers import login
 
 base = os.path.basename(__file__)
 CASE = base.split('.')[0]
@@ -45,14 +47,13 @@ def build_catalog(browser, test_client, db):
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
+    add_admin_user(db)
     yield browser
     db.session.rollback()
     browser.quit()
 
 def test_statement_generate(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
     
     """ User goes to generate statement. """
     browser.find_element_by_id('statements').click()
@@ -90,6 +91,7 @@ def test_statement_generate(browser, test_client, db):
     """ User goes to edit statement. """
     browser.find_element_by_id('statements').click()
     browser.find_element_by_id('edit-1').click()
+
     assert browser.find_element_by_id('header').text == 'Edit Statement'
 
     """ User deletes statement."""
@@ -103,9 +105,7 @@ def test_statement_generate(browser, test_client, db):
     assert len(rows) == 0
 
 def test_opening_balance(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
     
     build_catalog(browser, test_client, db)
 
@@ -155,9 +155,7 @@ def test_opening_balance(browser, test_client, db):
     assert browser.find_element_by_id('previous-balance').text == 'Previous Balance Table: opening_balance'
 
 def test_opening_balance_errors(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
     
     build_catalog(browser, test_client, db)
     
@@ -177,7 +175,9 @@ def test_opening_balance_errors(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 4
 
-    browser.find_element_by_id('update-2').click()
+    time.sleep(1)
+    
+    browser.find_element_by_id('updatebutton-2').click()
 
     time.sleep(1)
 
@@ -187,9 +187,7 @@ def test_opening_balance_errors(browser, test_client, db):
 
 
 def test_statement_with_data(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
 
     build_catalog(browser, test_client, db)
 
@@ -248,15 +246,14 @@ def test_statement_with_data(browser, test_client, db):
     browser.find_element_by_id('view-1').click()
     time.sleep(2)
     
-    assert browser.find_element_by_id('summary-sales').text == "5.9"
+    assert browser.find_element_by_id('summary-sales').text == "$5.9"
     
     """ User exports statement."""
 
 def test_generate_statement_with_open_balance_and_sales(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
     
+    login(browser)
+
     build_catalog(browser, test_client, db)
 
     """ Add opening balance. """
@@ -316,10 +313,9 @@ def test_generate_statement_with_open_balance_and_sales(browser, test_client, db
     assert browser.find_element_by_id('statement-name').text == 'statement_2020_01_01_2020_01_31'
 
 def test_generate_statement_with_open_balance_errors_and_sales(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
     
+    login(browser)
+
     build_catalog(browser, test_client, db)
 
     browser.get('http://localhost:3000/artists')
@@ -422,10 +418,9 @@ def test_generate_statement_with_open_balance_errors_and_sales(browser, test_cli
     assert len(rows) == 1
 
 def test_delete_version_in_statement(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
     
+    login(browser)
+
     build_catalog(browser, test_client, db)
 
     browser.get('http://localhost:3000/artists')

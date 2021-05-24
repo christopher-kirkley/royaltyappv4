@@ -2,6 +2,8 @@ from flask import Blueprint, jsonify, request, send_file
 from sqlalchemy import exc, func, cast, Numeric, MetaData
 from sqlalchemy.schema import Table
 
+from flask_jwt_extended import jwt_required
+
 import pandas as pd
 import json
 import csv
@@ -23,6 +25,7 @@ statements = Blueprint('statements', __name__)
 metadata = MetaData()
 
 @statements.route('/statements/view-balances', methods=['GET'])
+@jwt_required()
 def get_statements():
     print('view balances')
     query = db.session.query(
@@ -34,6 +37,7 @@ def get_statements():
     return statements
 
 @statements.route('/statements/generate', methods=['POST'])
+@jwt_required()
 def generate_statement():
     data = request.get_json(force=True)
     previous_balance_id = data['previous_balance_id']
@@ -63,6 +67,7 @@ def generate_statement():
     return json.dumps({'success': 'True', 'statement_index': statement_index.id})
 
 @statements.route('/statements/<id>/generate-summary', methods=['POST'])
+@jwt_required()
 def generate_statement_summary(id):
     start_time = datetime.now()
 
@@ -92,6 +97,7 @@ def generate_statement_summary(id):
 
 
 @statements.route('/statements', methods=['GET'])
+@jwt_required()
 def get_generated_statements():
     query = (
             db.session.query(
@@ -105,6 +111,7 @@ def get_generated_statements():
     return statements
 
 @statements.route('/statements/<id>', methods=['GET'])
+@jwt_required()
 def get_statement_summary(id):
     start_time = datetime.now()
 
@@ -201,6 +208,7 @@ def get_statement_summary(id):
     return jsonify(json_res)
 
 @statements.route('/statements/<id>/artist/<artist_id>', methods=['GET'])
+@jwt_required()
 def statement_detail_artist(id, artist_id):
     start_time = datetime.now()
 
@@ -338,6 +346,7 @@ def statement_detail_artist(id, artist_id):
     return jsonify(json_res)
 
 @statements.route('/statements/<id>/versions', methods=['GET'])
+@jwt_required()
 def statement_versions(id):
 
     start_time = datetime.now()
@@ -375,6 +384,7 @@ def statement_versions(id):
     return jsonify(json_res)
     
 @statements.route('/statements/<id>/versions', methods=['DELETE'])
+@jwt_required()
 def delete_statement_multiple_versions(id):
     start_time = datetime.now()
 
@@ -399,10 +409,12 @@ def delete_statement_multiple_versions(id):
 #     return jsonify({'success': 'true'})
 
 @statements.route('/statements/previous', methods=['GET'])
+@jwt_required()
 def get_previous_balances():
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/<id>', methods=['PUT'])
+@jwt_required()
 def edit_statement(id):
     start_time = datetime.now()
 
@@ -416,6 +428,7 @@ def edit_statement(id):
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/<id>', methods=['DELETE'])
+@jwt_required()
 def delete_statement(id):
     start_time = datetime.now()
 
@@ -438,6 +451,7 @@ def delete_statement(id):
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/import-opening-balance', methods=['POST'])
+@jwt_required()
 def import_opening_balance():
     file = request.files['CSV']
     check_statement = (
@@ -488,6 +502,7 @@ def import_opening_balance():
     return jsonify({'success': 'true'})
 
 @statements.route('/statements/opening-balance-errors', methods=['GET'])
+@jwt_required()
 def opening_balance_errors():
     
     opening_balance_table = Table('opening_balance', metadata, autoload=True, autoload_with=db.engine)
@@ -520,6 +535,7 @@ def opening_balance_errors():
     return json.dumps(data)
 
 @statements.route('/statements/opening-balance-errors', methods=['POST'])
+@jwt_required()
 def fix_opening_balance_errors():
     data = request.get_json(force=True)
     opening_balance_id = int(data['id'])
@@ -554,6 +570,7 @@ def fix_opening_balance_errors():
 
 
 @statements.route('/statements/<id>/artist/<artist_id>/export-csv', methods=['POST'])
+@jwt_required()
 def export_csv(id, artist_id):
 
     filename = str(uuid.uuid4())
