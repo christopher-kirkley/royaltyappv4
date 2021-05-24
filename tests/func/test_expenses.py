@@ -8,33 +8,42 @@ import time
 
 import os
 
-from royaltyapp.models import Artist
+from royaltyapp.models import Artist, add_admin_user
+
+from helpers import login
+
+base = os.path.basename(__file__)
+CASE = base.split('.')[0]
 
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
+    add_admin_user(db)
     yield browser
     db.session.rollback()
     browser.quit()
 
 def test_returns(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
 
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()
     time.sleep(1)
     browser.find_element_by_id('import_catalog').click()
-    path = os.getcwd() + "/tests/files/one_catalog.csv"
+    path = os.getcwd() + f"/tests/func/{CASE}/catalog.csv"
     browser.find_element_by_id('catalog_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('catalog_upload').click()
 
-    path = os.getcwd() + "/tests/files/one_version.csv"
+    path = os.getcwd() + f"/tests/func/{CASE}/version.csv"
     browser.find_element_by_id('version_to_upload').send_keys(path)
     time.sleep(1)
     browser.find_element_by_id('version_upload').click()
+
+    path = os.getcwd() + f"/tests/func/{CASE}/track.csv"
+    browser.find_element_by_id('track_to_upload').send_keys(path)
+    time.sleep(1)
+    browser.find_element_by_id('track_upload').click()
 
     """ User goes to expense. """
     browser.find_element_by_id('expense').click()
@@ -44,7 +53,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('import_expense').click()
 
     """ User selects first file. """
-    path = os.getcwd() + "/tests/files/expense_artist.csv"
+    path = os.getcwd() + f"/tests/func/{CASE}/expense_artist.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('artist_source').click()
     browser.find_element_by_id('upload_statement').click()
@@ -55,7 +64,7 @@ def test_returns(browser, test_client, db):
     assert pending_statement.text == 'expense_artist.csv'
     
     """ User uploads a second file."""
-    path = os.getcwd() + "/tests/files/expense_catalog.csv"
+    path = os.getcwd() + f"/tests/func/{CASE}/expense_catalog.csv"
     browser.find_element_by_id('file_upload').send_keys(path)
     browser.find_element_by_id('catalog_source').click()
     browser.find_element_by_id('upload_statement').click()
@@ -64,10 +73,12 @@ def test_returns(browser, test_client, db):
     pending_statement = browser.find_element_by_id('pending_statement')
     assert pending_statement.text == 'expense_artist.csv'
 
-    """ User sees prompt for errors, and clicks to fix matching errors. """
-    assert browser.find_element_by_id('artist_matching_errors').text == "You have 2 artist matching errors."
+    time.sleep(1)
 
-    assert browser.find_element_by_id('catalog_matching_errors').text == "You have 2 catalog matching errors."
+    """ User sees prompt for errors, and clicks to fix matching errors. """
+    assert browser.find_element_by_id('artist_matching_errors').text == "You have 4 artist matching errors."
+
+    assert browser.find_element_by_id('catalog_matching_errors').text == "You have 4 catalog matching errors."
 
     assert browser.find_element_by_id('type_matching_errors').text == "You have 6 type matching errors."
 
@@ -77,20 +88,21 @@ def test_returns(browser, test_client, db):
     """ User sees error table. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 3
+    assert len(rows) == 5
 
     rows[0].find_elements_by_tag_name('th')[1].text == 'Date'
 
     tds = rows[1].find_elements_by_tag_name('td')
 
-    assert tds[1].text == '2019-07-17' 
-    assert tds[2].text == 'Les Filles de Illighadad' 
+    assert tds[1].text == '2019-10-21' 
+    assert tds[2].text == 'Artists:Ahmed Ag Kaedy'
 
     """ Select all rows. """
     main = rows[0].find_elements_by_tag_name('th')[0].click()
 
     """ Update artist. """
     browser.find_element_by_id('new_value').click()
+    time.sleep(1000)
     browser.find_element_by_id(1).click()
     browser.find_element_by_id('update').click()
 

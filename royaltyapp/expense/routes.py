@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 from sqlalchemy import exc, func, cast, Numeric, extract
 # from royaltyapp.models import db, Catalog, CatalogSchema, Version,\
 #         VersionSchema, Track, TrackCatalogTable
+from flask_jwt_extended import jwt_required
 
 import pandas as pd
 import json
@@ -16,6 +17,7 @@ from .util import process_expense as pe
 expense = Blueprint('expense', __name__)
 
 @expense.route('/expense/import-statement', methods=['POST'])
+@jwt_required()
 def import_statement():
     file = request.files['file']
     filename = file.filename
@@ -41,6 +43,7 @@ def import_statement():
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/pending-statements', methods=['GET'])
+@jwt_required()
 def get_pending_statements():
     query = db.session.query(ExpensePending.statement).distinct(ExpensePending.statement).all()
     expense_pending_schema = ExpensePendingSchema(many=True)
@@ -48,6 +51,7 @@ def get_pending_statements():
     return pending_statements
 
 @expense.route('/expense/pending-statements/<name>', methods=['DELETE'])
+@jwt_required()
 def delete_pending_statements(name):
     res = (db.session.query(ExpensePending)
             .filter(ExpensePending.statement==name))
@@ -56,6 +60,7 @@ def delete_pending_statements(name):
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/artist-matching-errors', methods=['GET'])
+@jwt_required()
 def get_artist_matching_errors():
     query = artist_matching_errors()
     expense_pending_schema = ExpensePendingSchema(many=True)
@@ -63,6 +68,7 @@ def get_artist_matching_errors():
     return artist_errors
 
 @expense.route('/expense/catalog-matching-errors', methods=['GET'])
+@jwt_required()
 def get_catalog_matching_errors():
     query = catalog_matching_errors()
     expense_pending_schema = ExpensePendingSchema(many=True)
@@ -70,6 +76,7 @@ def get_catalog_matching_errors():
     return catalog_errors
 
 @expense.route('/expense/type-matching-errors', methods=['GET'])
+@jwt_required()
 def get_type_matching_errors():
     query = expense_type_matching_errors()
     expense_pending_schema = ExpensePendingSchema(many=True)
@@ -77,6 +84,7 @@ def get_type_matching_errors():
     return type_errors
 
 @expense.route('/expense/match-errors', methods=['PUT'])
+@jwt_required()
 def match_errors():
     data = request.get_json(force=True)
     try:
@@ -105,6 +113,7 @@ def match_errors():
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/process-pending', methods=['POST'])
+@jwt_required()
 def process_pending():
     pe.normalize_artist()
     pe.normalize_catalog()
@@ -115,6 +124,7 @@ def process_pending():
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/imported-statements', methods=['GET'])
+@jwt_required()
 def get_imported_statements():
     # query = (db.session.query(ImportedStatement)
     #         .filter(ImportedStatement.transaction_type == 'expense')
@@ -161,6 +171,7 @@ def get_imported_statements():
 
 
 @expense.route('/expense/statements/<id>', methods=['GET'])
+@jwt_required()
 def get_imported_statement_detail(id):
     expense_total_schema = ExpenseTotalSchema(many=True)
 
@@ -174,6 +185,7 @@ def get_imported_statement_detail(id):
                     }])
 
 @expense.route('/expense/statements/<id>', methods=['DELETE'])
+@jwt_required()
 def delete_expense_statement(id):
     i = ImportedStatement.__table__.delete().where(ImportedStatement.id == id)
     db.session.execute(i)
@@ -181,6 +193,7 @@ def delete_expense_statement(id):
     return jsonify({'success': 'true'})
 
 @expense.route('/expense/update-errors', methods=['PUT'])
+@jwt_required()
 def update_errors():
     data = request.get_json(force=True)
     try:
