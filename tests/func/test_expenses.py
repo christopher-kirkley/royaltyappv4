@@ -102,7 +102,6 @@ def test_returns(browser, test_client, db):
 
     """ Update artist. """
     browser.find_element_by_id('new_value').click()
-    time.sleep(1000)
     browser.find_element_by_id(1).click()
     browser.find_element_by_id('update').click()
 
@@ -141,13 +140,13 @@ def test_returns(browser, test_client, db):
     """ User sees error table. """
     table = browser.find_element_by_id('matching_error_table')
     rows = table.find_elements_by_tag_name('tr')
-    assert len(rows) == 3
+    assert len(rows) == 5
 
     rows[0].find_elements_by_tag_name('th')[1].text == 'Date'
 
     tds = rows[1].find_elements_by_tag_name('td')
 
-    assert tds[1].text == '2019-07-20' 
+    assert tds[1].text == '2019-09-26' 
     assert tds[2].text == 'A to Z' 
 
     """ Select all rows. """
