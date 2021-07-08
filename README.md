@@ -34,7 +34,7 @@ Each statement can be viewed as a summary, including all artists, and in detail,
 
 ## Endpoints
 
-The API is based on REST principles,accessed via standard HTTPS requests in UTF-8 format to an API endpoint. API uses HTTP verbs for each action:  
+The API is based on REST principles, accessed via standard HTTPS requests in UTF-8 format to an API endpoint. API uses HTTP verbs for each action:  
 
 GET	Retrieves resources  
 POST	Creates resources  
