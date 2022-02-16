@@ -5,7 +5,7 @@ import datetime
 import json
 import time
 
-from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle, User, db, add_admin_user
+from royaltyapp.models import Artist, Catalog, Version, Track, IncomePending, IncomeTotal, Bundle, Users, db, add_admin_user
 
 from royaltyapp.income.helpers import StatementFactory, find_distinct_version_matching_errors, find_distinct_track_matching_errors, find_distinct_refund_matching_errors
 
@@ -18,7 +18,7 @@ CASE = base.split('.')[0]
 
 def test_can_login_admin(test_client, db):
     add_admin_user(db)
-    res = db.session.query(User).all()
+    res = db.session.query(Users).all()
     assert len(res) != 0
     assert res[0].email == 'admin@admin.com'
     hashed_password = res[0].password 
@@ -30,7 +30,7 @@ def test_can_login_admin(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/login', data=json_data)
     assert response.status_code == 200
-    res = db.session.query(User).first()
+    res = db.session.query(Users).first()
     assert res.email == 'admin@admin.com'
     hashed_password = res.password
     assert check_password_hash(hashed_password, 'password')
@@ -42,7 +42,7 @@ def test_can_add_user(test_client, db):
     json_data = json.dumps(data)
     response = test_client.post('/register', data=json_data)
     assert response.status_code == 200
-    res = db.session.query(User).first()
+    res = db.session.query(Users).first()
     assert res.email == 'bob@bob.com'
     hashed_password = res.password
     assert check_password_hash(hashed_password, 'password')
@@ -59,7 +59,7 @@ def test_can_generate_user_cookies(test_client, db):
     
 def test_can_logout(test_client, db):
     add_admin_user(db)
-    res = db.session.query(User).all()
+    res = db.session.query(Users).all()
     assert len(res) != 0
     assert res[0].email == 'admin@admin.com'
     hashed_password = res[0].password 

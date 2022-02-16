@@ -3,12 +3,16 @@ from selenium.webdriver.support.ui import Select
 
 import pytest
 import json
+import os
 
 import time
 
 from royaltyapp.models import Artist, add_admin_user
 
 from helpers import login
+
+base = os.path.basename(__file__)
+CASE = base.split('.')[0]
 
 @pytest.fixture
 def browser(db):
@@ -106,9 +110,14 @@ def test_returns(browser, test_client, db):
     assert browser.find_element_by_id('catalog_name').get_attribute("value") == 'Akaline Kidal'
     assert browser.find_element_by_id('artist_name').get_attribute("value") == '1'
 
+    """ Clicks to add image """
+    browser.find_element_by_id('edit').click()
+    path = os.getcwd() + f"/tests/func/{CASE}/test01.jpg"
+    browser.find_element_by_id('image_to_upload').send_keys(path)
+    time.sleep(1000)
+
     """ Click to add a version. """
     browser.find_element_by_id('edit').click()
-
     add_version = browser.find_element_by_id('add_version')
     add_version.click()
     version_number = browser.find_element_by_name('newVersion[0].version_number')

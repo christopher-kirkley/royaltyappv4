@@ -7,7 +7,7 @@ from datetime import datetime
 from datetime import timedelta
 from datetime import timezone
 
-from royaltyapp.models import db, User
+from royaltyapp.models import db, Users
 
 import pandas as pd
 import json
@@ -32,7 +32,7 @@ def login():
     if not data or not data['email'] or not data['password']:
         return make_response('Could not verify', 401)
 
-    user = User.query.filter_by(email=data['email']).first()
+    user = Users.query.filter_by(email=data['email']).first()
 
     if not user:
         return make_response('Could not verify', 401)
@@ -52,7 +52,7 @@ def create_user():
 
     hashed_password = generate_password_hash(data['password'], method='sha256')
 
-    new_user = User(public_id=str(uuid.uuid4()), email=data['email'], password=hashed_password, admin=False)
+    new_user = Users(public_id=str(uuid.uuid4()), email=data['email'], password=hashed_password, admin=False)
     db.session.add(new_user)
     db.session.commit()
 

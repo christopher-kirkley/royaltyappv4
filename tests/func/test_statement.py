@@ -54,6 +54,7 @@ def browser(db):
 
 def test_statement_generate(browser, test_client, db):
     login(browser)
+    time.sleep(3)
     
     """ User goes to generate statement. """
     browser.find_element_by_id('statements').click()

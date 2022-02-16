@@ -177,8 +177,17 @@ def test_returns(browser, test_client, db):
     assert tds[3].text == '2019-11-26'
 
     browser.find_element_by_id('view1').click()
+    time.sleep(1000)
 
     """ User decides to go back and delete this statement. """
     browser.get('http://localhost:3000/expense')
     time.sleep(1)
     browser.find_element_by_id("delete1").click()
+
+    time.sleep(1)
+
+
+    """ User goes to view imported expense statements. """
+    assert browser.find_element_by_id('header').text == 'Expense'
+
+    time.sleep(1)

@@ -34,6 +34,7 @@ def test_login_and_logout_admin_user(browser, test_client, db):
     password.send_keys('password')
 
     submit.click()
+    time.sleep(3)
 
     """ Successful login redirects to dashboard """
     header = browser.find_element_by_id('header')

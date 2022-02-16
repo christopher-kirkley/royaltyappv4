@@ -8,7 +8,9 @@ import time
 
 import os
 
-from royaltyapp.models import Artist
+from royaltyapp.models import Artist, add_admin_user
+
+from helpers import login
 
 base = os.path.basename(__file__)
 CASE = base.split('.')[0]
@@ -16,14 +18,13 @@ CASE = base.split('.')[0]
 @pytest.fixture
 def browser(db):
     browser = webdriver.Firefox()
+    add_admin_user(db)
     yield browser
     db.session.rollback()
     browser.quit()
 
 def test_returns(browser, test_client, db):
-    """ User goes to homepage """ 
-    browser.get('http://localhost:3000/')
-    assert browser.title == 'Royalty App'
+    login(browser)
 
     """ User uploads catalog and versions. """
     browser.find_element_by_id('catalog').click()

@@ -36,8 +36,8 @@ class Bundle(db.Model):
             back_populates="bundle_version")
 
 
-class User(db.Model):
-    __tablename__ = 'user'
+class Users(db.Model):
+    __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     public_id = db.Column(db.String(50))
     email = db.Column(db.String(50))
@@ -590,7 +590,7 @@ def init_new_instance(db):
     insert_initial_values(db)
 
 def add_admin_user(db):
-    user = User(
+    user = Users(
             public_id=str(uuid.uuid4()),
             email="admin@admin.com",
             password=generate_password_hash("password", method='sha256'),

@@ -17,3 +17,4 @@ def login(browser):
     password.send_keys('password')
 
     submit.click()
+    time.sleep(3)

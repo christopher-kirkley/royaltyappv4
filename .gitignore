@@ -7,3 +7,4 @@ tests/pytest/
 tests/unit/__pycache__/
 tests/__pycache__/
 tests/files/
+files/
