@@ -39751,3 +39751,6 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript warning: http://localhost:3000/static/js/vendors~main.chunk.js, line 0: Successfully compiled asm.js code (total compilation time 34ms)
 JavaScript error: resource://devtools/client/shared/source-map/index.js, line 209: Error: Line numbers must be >= 1
 console.error: "Tried to send a 'target-destroyed-form' event on an already destroyed actor 'watcher'"
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
