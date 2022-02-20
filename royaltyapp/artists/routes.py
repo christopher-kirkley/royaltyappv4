@@ -108,6 +108,8 @@ def get_contacts():
 @jwt_required()
 def add_contact():
     data = request.get_json(force=True)
+    print('hit')
+    print(data)
     try:
         new_contact = Contact(
                         prenom=data['contact_prenom'],
@@ -122,7 +124,7 @@ def add_contact():
         db.session.add(new_contact)
         db.session.commit()
         contact_id = new_contact.id
-        artist_obj = db.session.query(Artist).get(data['artist_id'])
+        artist_obj = db.session.query(Artist).get(data['id'])
         artist_obj.contact_id = contact_id
         db.session.commit()
     except exc.DataError:
