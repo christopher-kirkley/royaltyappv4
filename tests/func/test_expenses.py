@@ -22,6 +22,7 @@ def browser(db):
     yield browser
     db.session.rollback()
     browser.quit()
+ 
 
 def test_returns(browser, test_client, db):
     login(browser)
@@ -49,7 +50,7 @@ def test_returns(browser, test_client, db):
     browser.find_element_by_id('expense').click()
     browser.find_element_by_id('expense-data').text == 'No data'
 
-    """ User goes to upload income. """
+    """ User goes to upload expense. """
     browser.find_element_by_id('import_expense').click()
 
     """ User selects first file. """

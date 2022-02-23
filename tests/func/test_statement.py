@@ -513,3 +513,78 @@ def test_delete_version_in_statement(browser, test_client, db):
     rows = table.find_elements_by_tag_name('tr')
     assert len(rows) == 2
 
+def test_can_generate_expense_with_no_version(browser, test_client, db):
+    login(browser)
+
+    """ User uploads catalog and versions. """
+    browser.find_element_by_id('catalog').click()
+    time.sleep(1)
+    browser.find_element_by_id('import_catalog').click()
+    path = os.getcwd() + f"/tests/func/{CASE}/catalog.csv"
+    browser.find_element_by_id('catalog_to_upload').send_keys(path)
+    time.sleep(1)
+    browser.find_element_by_id('catalog_upload').click()
+
+    """ User goes to expense. """
+    browser.find_element_by_id('expense').click()
+
+    """ User goes to upload expense. """
+    browser.find_element_by_id('import_expense').click()
+
+    """ User uploads a expense file."""
+    path = os.getcwd() + f"/tests/func/{CASE}/expense_catalog.csv"
+    browser.find_element_by_id('file_upload').send_keys(path)
+    browser.find_element_by_id('catalog_source').click()
+    browser.find_element_by_id('upload_statement').click()
+
+    """ User sees statement added to the list of pending statements. """
+    pending_statement = browser.find_element_by_id('pending_statement')
+    assert pending_statement.text == 'expense_catalog.csv'
+
+    """ Process payments. """
+    browser.find_element_by_id('process_errors').click()
+    time.sleep(1)
+
+    """ User goes to generate statement. """
+    browser.find_element_by_id('statements').click()
+    browser.find_element_by_id('generate').click()
+    assert browser.find_element_by_id('header').text == 'Generate Statement'
+    
+    """ Define statement. """
+    start_date = browser.find_element_by_id('start-date')
+    start_date.click()
+    start_date.send_keys('07012019')
+
+    end_date = browser.find_element_by_id('end-date')
+    end_date.click()
+    end_date.send_keys('12312019')
+
+    browser.find_element_by_id('previous_balance_id').click()
+    time.sleep(1)
+    browser.find_element_by_id('none').click()
+    browser.find_element_by_id('submit').click()
+    time.sleep(1)
+
+    """ User goes to view statement. """
+    assert browser.find_element_by_id('header').text == 'Statements'
+    table = browser.find_element_by_id('statement_table')
+    rows = table.find_elements_by_tag_name('tr')
+    assert len(rows) == 1
+
+    """ User navigates to first statement to view main statement."""
+    browser.find_element_by_id('view-1').click()
+    time.sleep(2)
+    assert browser.find_element_by_id('header').text == 'Statement Summary'
+    assert browser.find_element_by_id('statement-name').text == 'statement_2019_07_01_2019_12_31'
+
+    """ User navigates to first artist on statement """
+    browser.find_element_by_id('view-1').click()
+    time.sleep(2)
+    
+    assert browser.find_element_by_id('summary-sales').text == "$5.9"
+    
+    """ User exports statement."""
+
+    time.sleep(1000)
+
+

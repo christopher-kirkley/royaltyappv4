@@ -1,0 +1,3 @@
+date,artist_name,catalog_number,vendor,expense_type,description,net,item_type
+2019-09-26,,TEST-01,A to Z,Recoupable,test1,1398.06,Manufacturing
+2019-11-06,,TEST-01,A to Z,Recoupable,test2,8544.67,Manufacturing
